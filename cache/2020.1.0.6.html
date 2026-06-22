@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2020.1.0.6</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2019.11.14<br />
+  ApInetAp.dll [2020.1.2.1]<br />
+  - poprawa wczytywania faktur podpisanych elektronicznie. Problemem było<br />
+    zawieszanie modułu Apw13 w wersji 2020 podczas przyjmowania faktury<br />
+    elektronicznej.<br />
+  slowniki.dll [2020.1.2.1]<br />
+  - poprawa edycji karty dostawcy - opcja "Dostawca obsługuje KS-PUSH".<br />
+  apwharm.dll [2020.1.2.2]<br />
+  - dodanie dodatkowej weryfikacji czy dokument jest wczytany do systemu<br />
+    na podstawie NIP-u i numeru faktury. W przypadku gdy dostawca posiadał<br />
+    kilka oddziałów lecz faktury były wystawiane przez centralę,<br />
+    dochodziło do dublowania dokumentów w buforze. <br />
+  - poprawa wczytywania dokumentów faktur dostarczanych w imieniu innych<br />
+    podmiotów.<br />
+  ApwHarmPush.dll [2020.1.2.2]<br />
+  - dodanie dodatkowej weryfikacji czy dokument jest wczytany do systemu<br />
+    na podstawie NIP-u i numeru faktury. W przypadku gdy dostawca posiadał<br />
+    kilka oddziałów lecz faktury były wystawiane przez centralę,<br />
+    dochodziło do dublowania dokumentów w buforze. <br />
+  - poprawa wczytywania dokumentów faktur dostarczanych w imieniu innych<br />
+    podmiotów.<br />
+<br />
+2019.11.12<br />
+  wautil.exe [2020.1.2.0]<br />
+  - Aktualizacja bibliotek.<br />
+<br />
+2019.11.12<br />
+  apwharm.dll [2020.1.2.1]<br />
+  - Uwzględnienie zmiany daty sprzedaży na dokumencie w wysyłce raportów<br />
+    księgowych. Jeżeli użytkownik zmienił datę sprzedaży na dzień, w którym<br />
+    raport księgowy został już wysłany, w kolejnym cyklu, raport zostanie<br />
+    wysłany ponownie.<br />
+  ApwHarmPush.dll [2020.1.2.1]<br />
+  - Uwzględnienie zmiany daty sprzedaży na dokumencie w wysyłce raportów<br />
+    księgowych. Jeżeli użytkownik zmienił datę sprzedaży na dzień, w którym<br />
+    raport księgowy został już wysłany, w kolejnym cyklu, raport zostanie<br />
+    wysłany ponownie.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2019.11.14 [2020.1.2.1]<br />
+  - e-Recepta: poprawa realizacji e-Recept z holenderskim identyfikatorem <br />
+    pacjenta. Program na sztywno wykazywaĹ‚ w DRR "inny identyfikator w kraju",<br />
+    zamiast wskazanego typu identyfikatora - paszport/dowod osobisty;<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2019.11.14 [2020.1.2.2]<br />
+  - Dodanie dodatkowej weryfikacji czy dokument jest wczytany do systemu<br />
+    na podstawie NIP-u i numeru faktury. W przypadku gdy dostawca posiadaĹ‚<br />
+    kilka oddziaĹ‚Ăłw lecz faktury byĹ‚y wystawiane przez centralÄ™, <br />
+    dochodziĹ‚o do dublowania dokumentĂłw w buforze. <br />
+<br />
+2019.11.12 [2020.1.2.1]<br />
+  - UwzglÄ™dnienie zmiany daty sprzedaĹĽy na dokumencie w wysyĹ‚ce raportĂłw<br />
+    ksiÄ™gowych. JeĹĽeli uĹĽytkownik zmieniĹ‚ datÄ™ sprzedaĹĽy na dzieĹ„, w ktĂłrym<br />
+    raport ksiÄ™gowy zostaĹ‚ juĹĽ wysĹ‚any, w kolejnym cyklu, raport zostanie<br />
+    wysĹ‚any ponownie.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW14 -----------------------------</h3><br />
+2019.11.12 [2020.1.2.1]<br />
+  - Zabezpieczenie bufora remanentowego przed zatwierdzeniem rĂłĹĽnic dla towarĂłw<br />
+    raportowanych do ZSMOPL, ktĂłre nie posiadajÄ… uzupeĹ‚nionej serii bÄ…dĹş daty<br />
+	waĹĽnoĹ›ci.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2019.11.12 [2020.1.2.1]<br />
+  - Dostosowano eksport SCV do zmian w KS-PPS.<br />
+  - Uwzględnienie zmiany daty sprzedaży na dokumencie w wysyłce raportów<br />
+    księgowych. Jeżeli użytkownik zmienił datę sprzedaży na dzień, w którym<br />
+    raport księgowy został już wysłany, w kolejnym cyklu, raport zostanie<br />
+    wysłany ponownie.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW23 -----------------------------</h3><br />
+2019.11.14 [2020.1.2.1]<br />
+  - Aktualizacja interfejsów<br />
+  <br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2019.11.14 [2020.1.2.1]<br />
+  - Aktualizacja interfejsĂłw<br />
+<br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2019.11.14 [2020.1.2.1]<br />
+  - zabezpieczenie usuwania dokumentĂłw ktĂłre nie sÄ… dokumentami typu <br />
+    rezerwacja (IDDEDF=27).<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2019.11.13<br />
+  Apwplus.exe [2020.1.2.0]<br />
+  - Uaktualniono strukturÄ™ bazy danych<br />
+<br />
+</body></html>

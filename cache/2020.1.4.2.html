@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2020.1.4.2</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2020.01.29<br />
+  mvserver.exe [2020.1.2.6] <br />
+  - Poprawa synchronizacji stanów magazynowych dla automatu do wydawnia leków<br />
+    MACH4.<br />
+  apwharm.dll [2020.1.4.3]<br />
+  - Wdrożenie poprawki dla zadania Generowania raportu dla ZSMOPL dla harmonogramu<br />
+    aptecznego (apwplan). Program błędnie wyznaczał datę generowanego raportu<br />
+	w zadaniach opóźnionych czasowo, dla aptek całodobowych. <br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2020.01.29 [2020.1.7.2]<br />
+  - e-Recepta: Wgrano aktualną transformatę CSIOZ. Nowa wizualizacja e-Recept <br />
+    zawiera poprawkę wyświetlania numeru PESEL dla techika farm. oraz <br />
+    prezentuje numer umowy usługodawcy z NFZ w przypadku e-Recept zawierających <br />
+    dane asystenta medycznego.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW23 -----------------------------</h3><br />
+2020.01.29 [2020.1.2.11]<br />
+  - Raport spójności danych AOW/DRR: poprawa weryfikacji identyfikatora pacjenta<br />
+    w przypadku wystąpieniu na e-Recepcie nr PESEL zarówno w danych pacjenta jak<br />
+    i opiekuna. Program do porównania pobierał PESEL opiekuna, zamiast pobrać <br />
+    dane faktycznego pacjenta.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW68 -----------------------------</h3><br />
+2020.01.29 [2020.1.3.1]<br />
+  - Dodano obsługę REGON 14 znaków dla rodzaju podmiotu PW.<br />
+  - Dodano obsługę kontroli daty i czasu transakcji dla raportów braków. <br />
+    W przypadku przesuniecia czasu na komputerze o parę minut do przodu raporty<br />
+	braków przesyłane do ZSMOPL zwracały błąd TRZB4 - podana data transakcji <br />
+	odnosi się do przyszłości.<br />
+  - Zabezpieczono pól typu NIP, REGON, identyfikator z P2 i inne przed <br />
+    przesyłaniem znaku tabulatora do ZSMOPL. Obecność tego znaku powodowała<br />
+	niezgodnośc raportu ze schemą i błąd wysyłki.<br />
+  - Poprawa uzupełniania numeru zapotrzebowania na leki z importu docelowego <br />
+    podczas tworzenia raportu weryfikacji stanów magazynowych. <br />
+<br />
+</body></html>

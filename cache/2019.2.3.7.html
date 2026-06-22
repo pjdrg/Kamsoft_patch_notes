@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2019.2.3.7</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2019.03.25<br />
+  apwharm.dll [2019.2.1.4]<br />
+  - Dodano opcję "Informuj o ukryciu towaru jeśli produktu nie ma na stanie".<br />
+    Opcja ta pozwala zarządzać dostepnością oferty int. w momencie eksportu<br />
+    produktów na stronę WWW. Towar zostanie ukryty na stronie, jeśli jest<br />
+    dostępny w aptece ale stan magazynowy jego jest zerowy. Opcja jest dostępna<br />
+    w module APW45/Komunikacja/Ustawienia/Oferta.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2019.03.26 [2019.2.3.1] <br />
+  - Poprawiono błąd przy dodawaniu leku z BLOZ do zaliczki zerowej<br />
+  - Poprawiono wyszukiwanie sprzedaży po numerze recepty, dodano wyszukiwanie<br />
+    również po numerze nadanym automatycznie (dla recept 100%)<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2019.03.26 [2019.2.2.6]<br />
+  - Poprawki w mechanizmie łączenia pozycji (dotyczy przenoszenia informacji<br />
+    o zamiennikach)<br />
+  - Poprawki w imporcie szablonu do raportu LEK 2.6<br />
+<br />
+<h3>---------------------------- Zmiany w module APW23 -----------------------------</h3><br />
+2019.03.26 [2019.2.2.6]<br />
+  - Poprawki w funkcji Raport spólności danych AOW i wysłanych DRR<br />
+  - W funkcji Retaksacja recept poprawiono porównywanie kodów EAN 13-to<br />
+    i 14-cyfrowych (z 0 na początku)<br />
+<br />
+<h3>---------------------------- Zmiany w module APW45 -----------------------------</h3><br />
+2019.03.25 [2019.2.1.4] <br />
+  - Dodano opcję "Informuj o ukryciu towaru jeśli produktu nie ma na stanie".<br />
+    Opcja ta pozwala zarządzać dostepnością oferty int. w momencie eksportu<br />
+    produktów na stronę WWW. Towar zostanie ukryty na stronie, jeśli jest<br />
+    dostępny w aptece ale stan magazynowy jego jest zerowy. Opcja jest dostępna<br />
+    w module APW45/Komunikacja/Ustawienia/Oferta.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW68 -----------------------------</h3><br />
+2019.03.26 [2019.2.0.7]<br />
+  - poprawa błędu: EUniError: index FK_KZAK_TOWR cannot be used<br />
+    in the specified plan<br />
+  - poprawa generowania IBO z ilościami równymi zero.<br />
+<br />
+</body></html>

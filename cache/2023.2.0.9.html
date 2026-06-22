@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2023.2.0.9</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2023.09.25<br />
+  Slowniki.dll [2023.2.0.9]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji<br />
+  ApwFN.dll [2023.2.0.9]<br />
+  - Aktualizacja komponentów bazodanowych<br />
+  ApiService:<br />
+  - Usprawniono działanie i stabilność usługi<br />
+  <br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2023.09.25 [2023.2.0.9]<br />
+  - Dostosowanie programu do nowej wersji usługi służącej realizacji e-Recept <br />
+    transgranicznych w wersji W23, która dostępna będzie w SIM od 2.10.2023. <br />
+    W nowej wersji usługi prowadzono dodatkowe komunikaty błędów zwracane przez <br />
+    SIM oraz rozszerzono komunikaty błędów o informacje zwracane z KPK kraju <br />
+    przynależności pacjenta.<br />
+  - Zmiana sposobu pozycjonowania okna dla usługi Podobniki<br />
+  - Ograniczenie wyświetlania komunikatów z kontroli cen sprzedaży,<br />
+  - Dodanie funkcjonalności kontrolującej poprawność cen, poprawność danych <br />
+    dostawcy oraz poprawność przypisania do BLOZa na potrzeby projektów pharmind<br />
+    Dodanie blokady na realizację e-Recepty wystawionej przez felczera z <br />
+    uprawnieniem DZ i C. <br />
+  - Usunięcie błędnego, w specyficznych warunkach, działania okienka do <br />
+    wczytywania serializacji leków (kodów QR) podczas edycji dostaw rezerwacji<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2023.09.25 [2023.2.0.9]<br />
+  - Raportowanie danych do Pharmind: poprawa jakości raportowanych danych<br />
+  - Ograniczenie wyświetlania komunikatów z kontroli cen sprzedaży<br />
+  - Dodanie funkcjonalności kontrolującej poprawność cen, poprawność danych <br />
+    dostawcy oraz poprawność przypisania do BLOZa na potrzeby projektów pharmind<br />
+<br />
+<h3>---------------------------- Zmiany w module APW14 -----------------------------</h3><br />
+2023.09.25 [2023.2.0.9]<br />
+  - W buforze przeceny poprawiono anulowanie wyrównania ceny detalicznej <br />
+    po wybraniu Nie w oknie dialogowym z pytaniem o potwierdzenie. Ceny były <br />
+    wyrównywane pomimo anulowania funkcjonalności.<br />
+  - W funkcji Dostawy zalegające poprawiono anulowanie dodania towaru do listy <br />
+    dostaw zalegających po wybraniu Nie w oknie z pytaniem o potwierdzenie. <br />
+    Towar był dodawany pomimo anulowania.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2023.09.25 [2023.2.0.9]<br />
+  - Eksport do Edi++. Dostosowanie do wersji eksportu 1.11. Rozwiązanie problemu <br />
+    z brakiem znacznika FP dla oznaczeń JPK.<br />
+<br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2023.09.25 [2023.2.0.9]<br />
+  - Raportowanie danych do Pharmind: poprawa jakości raportowanych danych<br />
+  - Dodanie funkcjonalności kontrolującej poprawność cen, poprawność danych <br />
+    dostawcy oraz poprawność przypisania do BLOZa na potrzeby projektów pharmind<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2023.09.25<br />
+  ApwPlus [2023.2.0.9]<br />
+  - Aktualizacja struktury bazy danych<br />
+  <br />
+  IbPack [2023.2.0.9]<br />
+  - Uaktualniono do najnowszej struktury bazy danych<br />
+<br />
+  OraPack [2023.2.0.9]  <br />
+  - Uaktualniono do najnowszej struktury bazy danych<br />
+<br />
+</body></html>

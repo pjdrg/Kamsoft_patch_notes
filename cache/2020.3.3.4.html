@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2020.3.3.4</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2020.06.04<br />
+  apwharm.dll [2020.3.3.4]<br />
+  - Funkcja wysyłania kategorii poprawnie jest już ograniczana<br />
+    do odpowiedniego nagłówka oferty internetowej <br />
+  - Funkcja wysyłania pozycji kategorii sprawdza na pozycji kategorii<br />
+    poprawność zdefiniowanego nagłówka oferty internetowej względem<br />
+    nagłówkiem oferty do kategorii. <br />
+  - Funkcja budowania ofert dla dostawców oraz aptek własnych sprawdza<br />
+    teraz poprawnie dostępność na karatach dostawców, dostępność dla apteki<br />
+    internetowej oraz poprawiono działanie dla funkcji sprawdzającej<br />
+    dostępność  w przypadku włączenia opcji że mogą być pozycje dodane do oferty<br />
+    powiązane z baza apteczna. Wcześniej takie pozycje powodowały nie właściwie<br />
+    ukrywanie produktów z hurtowni. <br />
+  - Poprawiono generowanie plików ofert dla kategorii jeśli pozycja dla kategorii<br />
+    nie jest dodawana do wysyłki. Wcześniej z tego powodu był generowany błąd<br />
+    i przekroczeniu indeksu w tablicy.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW45 -----------------------------</h3><br />
+2020.06.02 [2020.3.3.4]<br />
+ - Funkcja wysyłania kategorii poprawnie jest już ograniczana<br />
+   do odpowiedniego nagłówka oferty internetowej <br />
+ - Funkcja wysyłania pozycji kategorii sprawdza na pozycji kategorii<br />
+   poprawność zdefiniowanego nagłówka oferty internetowej względem<br />
+   nagłówkiem oferty do kategorii. <br />
+ - Funkcja budowania ofert dla dostawców oraz aptek własnych sprawdza<br />
+   teraz poprawnie dostępność na karatach dostawców, dostępność dla apteki<br />
+   internetowej oraz poprawiono działanie dla funkcji sprawdzającej<br />
+   dostępność  w przypadku włączenia opcji że mogą być pozycje dodane do oferty<br />
+   powiązane z baza apteczna. Wcześniej takie pozycje powodowały nie właściwie<br />
+   ukrywanie produktów z hurtowni.<br />
+ - Dodano prezentację ostrzeżenia na pozycji kategorii jeśli pozycja<br />
+   nie odpowiada nagłówkowi oferty z kategorii.<br />
+ - Dodano prezentację w przeglądzie nagłówków ofert internetowych, która oferta<br />
+   jest ofertą GLOBALNĄ w systemie internetowym.<br />
+ - Poprawiono generowanie plików ofert dla kategorii jeśli pozycja dla kategorii<br />
+   nie jest dodawana do wysyłki. Wcześniej z tego powodu był generowany błąd<br />
+   i przekroczeniu indeksu w tablicy.<br />
+ - Poprawiono zarządzanie serwerami internetowymi. Wyszukiwanie serwerów pomija<br />
+   serwery wyłączone oraz dla funkcji odświeżania serwerów jest poprawiona<br />
+   kontrola prezentowanego serwera WWW dla apteki internetowej.<br />
+ - Poprawiono zarządzanie domyślnymi parametrami ostrzeżeń dla funkcji budowania<br />
+   oferty oraz aktualizacji cen.<br />
+<br />
+</body></html>

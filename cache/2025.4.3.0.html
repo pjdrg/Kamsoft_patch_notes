@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2025.4.3.0</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2025.11.20<br />
+  Slowniki.dll [2025.4.3.0]<br />
+  - Rozbudowano kartotekę kontrahentów o identyfikator wewnętrzny na potrzeby<br />
+    KSeF.<br />
+  - Poprawa informacji o statusie leku L (lek na wykazie leków refundowanych)<br />
+    w lokalnym BLOZ. Dla niektórych leków nie wyświetlał się odpowiedni status.<br />
+  - Wyeliminowano sprawdzanie domyślnych haseł do bazy EDE podczas logowania<br />
+    do modułów.<br />
+<br />
+  Zasoby.dll [2025.4.3.0]<br />
+  - Dodano opisy opcji związanych z KSeF.<br />
+<br />
+  pharmindEdiLib.dll [2025.11.18.1]<br />
+  - Rozbudowa biblioteki o obsługę środowisk KSeF 2.0.<br />
+<br />
+  ApwHarm.dll [2025.4.3.0]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2025.11.20 [2025.4.3.0]<br />
+  - Dodano możliwość wystawienia faktury ustrukturyzowanej i wysłania jej do<br />
+    przedprodukcyjnej wersji KSeF 2.0. (DEMO) z wykorzystaniem pharmind XF.<br />
+  - E-Recepta farmaceutyczna: Zabezpieczenie przed zapisaniem w bazie danych<br />
+    niepodpisanej kopii dokumentu. Wykryto, że po edycji w poprawie sprzedaży,<br />
+    system niepotrzebnie zapisuje wersję recepty zanim dokument ten zostanie<br />
+    podpisany i wysłany do SIM.<br />
+  - Rozbudowa komunikatów wyświetlanych przy aktualizacji karty pacjenta z<br />
+    poziomu okna e-Recepty farmaceutycznej. Zmianę dodano w celu zabezpieczenia<br />
+    przed nieprzemyślaną aktualizacją danych pacjenta.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW12 -----------------------------</h3><br />
+2025.11.20 [2025.4.3.0]<br />
+  - Dodano opcję automatycznego oznaczania zamówień centralnych jako<br />
+    zrealizowane przy wejściu na listę zamówień po upływie określonego czasu<br />
+    do APW12 -> Reguły -> Zamówienia -> Przekazywanie zamówień.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2025.11.20 [2025.4.3.0]<br />
+  - Dodano możliwość pobrania i przypisania do faktury numeru KSeF, jak również<br />
+    pobrania metadanych faktury z przedprodukcyjnej wersji KSeF 2.0 (DEMO) na<br />
+    podstawie numeru księgowego faktury i numeru NIP dostawcy z wykorzystaniem<br />
+    pharmind XF.<br />
+  - Rozwiązano problem z wyświetlaniem ikonki "N" w buforze dokumentów dla<br />
+    nowych dokumentów.<br />
+  - Poprawiono szybkość działania programu w oknie "Przeglądanie i poprawki<br />
+    wprowadzonych dokumentów".<br />
+  - Poprawiono wyświetlane informacje na formularzu "Informacja o fakturze".<br />
+<br />
+<h3>---------------------------- Zmiany w module APW14 -----------------------------</h3><br />
+2025.11.20 [2025.4.3.0]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW23 -----------------------------</h3><br />
+2025.11.20 [2025.4.3.0]<br />
+  - Retaksacja recept: Poprawa odczytu (podglądu) e-Recepty farmaceutycznej<br />
+    w przypadku gdy doszło do zapisania kopii dokumentu w wersji przed jego<br />
+    podpisaniem.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW31 -----------------------------</h3><br />
+2025.11.20 [2025.4.3.0]<br />
+  - Poprawa wyświetlanych informacji na formularzu "Informacja o fakturze"<br />
+    w przypadku płatności odbiorcy. Dotychczas wyświetlane były wartości<br />
+    detaliczne co nie zawsze miało odzwierciedlenie w kwocie jaką płacił<br />
+    odbiorca. Poprawną kwotą jest kwota transakcji.<br />
+  - Poprawa zapłaty VAT w Płatności dostawcy. W przypadku płatności częściowych<br />
+    z sieci (ZSA lub Omnipharm) nie był poprawnie uwzględniany VAT.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2025.11.20 [2025.4.3.0]<br />
+  - Dodano opcję wyboru środowiska dla KSeF:<br />
+    * środowisko testowe KSeF 2.0,<br />
+    * środowisko przedprodukcyjne KSeF 2.0,<br />
+    * środowisko produkcyjne KSeF 2.0 (dostępne od 1.02.2026).<br />
+  - Dodano opcję odpowiedzialną za możliwość wystawiania faktury w KSeF dla<br />
+    osoby fizycznej (bez NIP).<br />
+    Ustawienia związane z KSeF dostępne są w nowym menu:<br />
+    Opcje modułów -> Wspólne -> 15. KSeF.<br />
+  - Dodano opcję automatycznego oznaczania zamówień centralnych jako<br />
+    zrealizowane przy wejściu na listę zamówień po upływie określonego czasu<br />
+    Opcje modułów -> APW12-> Ustawienia globalne -> 53. Zaznaczaj automatycznie<br />
+    zamówienia centralne jako zrealizowane po ustalonym czasie.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW42 -----------------------------</h3><br />
+2025.11.20 [2025.4.3.0]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW43 -----------------------------</h3><br />
+2025.11.20 [2025.4.3.0]<br />
+  - Rozwiązano problem z automatycznym wyłączaniem systemu Windows po<br />
+    zakończonej archiwizacji.<br />
+<br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2025.11.20 [2025.4.3.0]<br />
+  - Pharmind grid: optymalizacja raportowania historycznych stanów magazynowych.<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2025.11.20<br />
+  ApwPlus [2025.4.3.0]<br />
+  - Aktualizacja struktury bazy danych.<br />
+<br />
+  ApwBase.dll [2025.4.3.0]<br />
+  - Uaktualniono bazę kart serwisowych.<br />
+<br />
+  DBCopy [2025.4.3.0]<br />
+  - Poprawiono wydajność operacji kopiowania danych.<br />
+<br />
+  IBPack [2025.4.3.0]<br />
+  - Poprawiono wydajność operacji kopiowania danych.<br />
+<br />
+</body></html>

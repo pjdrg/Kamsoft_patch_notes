@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2020.2.0.3</title>
+</head>
+<body>
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2020.03.02 [2020.2.0.2]<br />
+  - e-Recepta: Wgrano aktualną transformatę CSIOZ. Nowa wizualizacja e-Recept <br />
+    zawiera poprawkę wyświetlania na DRR numeru oddziału NFZ z którym apteka <br />
+    zawarła umowę. Przed poprawką dla recept refundowanych na DRR wyświetlano <br />
+    "Umowa (nieznany Oddział NFZ)".<br />
+  - e-Recepta: poprawiono obsługę e-Recept z pacjentem i opiekunem posiadającymi <br />
+    podany numer PESEL. W przypadku gdy karta pacjenta była założona, program <br />
+    przepisywał na DRR dane pacjenta w sekcje opiekuna. Program zignoruje <br />
+	informację o opiekunie w przypadku gdy pacjent identyfikowany jest nr PESEL. <br />
+  - e-Recepta: poprawiono weryfikację id świadczeniodawcy dla e-Recept <br />
+    pielęgniarskich pro auctore. Program niesłusznie kolorował na czerwono NPWZ <br />
+	pielęgniarki wpisany w id świadczeniodawcy w oknie kodów recept.<br />
+  - Poprawiono drukowanie numeru NIP na drukarkach Mera FE. W niektórych <br />
+    wypadkach następowało anulowanie paragonu.   <br />
+    <br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2020.03.02 [2020.2.0.3]<br />
+  - W Kontroli zakupów zoptymalizowano zapytanie dla baz oracle.<br />
+  - Poprawa błędu podczas zamykania okna "Pozycje dokumentu zakupu".<br />
+<br />
+<h3>---------------------------- Zmiany w module APW68 -----------------------------</h3><br />
+2020.03.02 [2020.2.0.1]<br />
+  - Poprawiono generowanie numeru dokumentu korygowanego. Brak numeru powodował<br />
+    błąd raportu - TROS21.<br />
+<br />
+</body></html>

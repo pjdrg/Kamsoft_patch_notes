@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2022.2.1.3</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2022.04.28<br />
+  Slowniki.dll [2022.2.1.3]<br />
+  - KS-OmniPharm: Dodano wizytówkę sieci. Jest ona dostępna w APW41 <br />
+    Administrator -> [Ctrl+4] Wizytówka -> [Ctrl+4] Licencja -> <br />
+    [F6] KS-OMNIPHARM.<br />
+  - Zadanie z Giełdy Pomysłów: Dodano uprawnienie do weryfikacji w retaksacji<br />
+    recept. Uprawnienie pozwala na uniemożliwienie weryfikacji danemu<br />
+    operatorowi.<br />
+<br />
+  MVServer.exe [2022.2.1.3]<br />
+  - Automat do wydawania leków Fablox II, dodanie zabezpieczeń przed <br />
+    zawieszaniem się modułu podczas załadunku.<br />
+<br />
+  ApwiAp.dll [2022.2.1.3]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+  ApwMain.exe [2022.2.1.3]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+  ApwPlan.exe [2022.2.1.3]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+  Zasoby.dll [2022.2.1.3]<br />
+  - Dodano nowe zasoby graficzne.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2022.04.28 [2022.2.1.3]<br />
+  - Nagłówek dokumentu faktury sprzedaży. Poprawiono działanie uprawnienia <br />
+    11_0022 dotyczące możliwości zmiany form płatności dla faktur wystawionych<br />
+    w dniu dzisiejszym.<br />
+  - Aktualizacja interfejsów APTIX.<br />
+  - Dodano wycofywanie DRR z SIM przy przenoszeniu sprzedaży do kolejki.<br />
+    W sytuacji gdy SIM odrzucił jeden z wielu DRR, a sprzedaż została<br />
+    przeniesiona do kolejki, niektóre DRR mogły zostać zapisane w SIM.<br />
+    Powodowało to problemy z wysyłaniem DRR po wyciągnięciu z kolejki lub przy <br />
+    kolejnej realizacji tych samych recept.<br />
+  - Okno e-Recepty. Dodano możliwość zapisywania danych lekarza i<br />
+    świadczeniodawcy w podglądzie e-Recepty w trybie "tylko do odczytu".<br />
+  - Poprawa komunikatu przy powtórnej realizacji e-Recepty na lek recepturowy.<br />
+    System informował, że zrealizowano już daną e-Receptę nawet jeżeli wszystkie<br />
+    wcześniejsze realizacje zostały wycofane.<br />
+  - KtoMaLek: poprawa wyświetlania informacji o nowych rezerwacjach.<br />
+  - Usunięto problem z zawieszaniem się drukarki fiskalnej Mera+ przy <br />
+    wystawieniu faktury sprzedaży.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW12 -----------------------------</h3><br />
+2022.04.28 [2022.2.1.3]<br />
+  - Rozszerzenie informacji o zamówieniu w przypadku, gdy zamówienie pochodzi<br />
+    z systemu centralnego KS-OmniPharm lub KS-ZSA.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2022.04.28 [2022.2.1.3]<br />
+  - KS-OmniPharm: włączono wysyłkę dokumentów kosztowych w przypadku, gdy<br />
+    aktywna jest usługa centralnych płatności.<br />
+  - Aktualizacja interfejsów APTIX.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW14 -----------------------------</h3><br />
+2022.04.28 [2022.2.1.3]<br />
+  - Aktualizacja interfejsów APTIX.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2022.04.28 [2022.2.1.3]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW22 -----------------------------</h3><br />
+2022.04.28 [2022.2.1.3]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW23 -----------------------------</h3><br />
+2022.04.28 [2022.2.1.3]<br />
+  - Retaksacja recept: poprawiono anulowanie ładowania raportu.<br />
+    Nie działał klawisz ESCAPE.<br />
+  - Zadanie z Giełdy Pomysłów: Dodano weryfikację negatywną w retaksacji recept.<br />
+    Rozszerzono filtr weryfikacji.<br />
+  - Zadanie z Giełdy Pomysłów: Weryfikacja z poziomu okna podglądu recepty<br />
+    i realizacji w retaksacji recept.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW24 -----------------------------</h3><br />
+2022.04.28 [2022.2.1.3]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW31 -----------------------------</h3><br />
+2022.04.28 [2022.2.1.3]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW35 -----------------------------</h3><br />
+2022.04.28 [2022.2.1.3]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW42 -----------------------------</h3><br />
+2022.04.28 [2022.2.1.3]<br />
+  - Poprawa błędu podczas usuwania nieaktywnych umów UMX.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW45 -----------------------------</h3><br />
+2022.04.28 [2022.2.1.3]<br />
+  - Dodano zarządzanie domyślnym ubezpieczeniem dla kuriera DHL w zależności od<br />
+    typu transportu oraz płatności za przesyłkę. Nowa opcja "Warunek" dla<br />
+    ubezpieczenia jest dostępna z poziomu okna do zarządzania parametrami dla<br />
+    firmy kurierskiej DHL.<br />
+  - Uporządkowano formy transportu w module APW45 - Apteka Internetowa.<br />
+  - Dodano poprawkę do zarządzania komunikatami dla generowania listów<br />
+    przewozowych dla firmy kurierskiej DHL.<br />
+  - Poprawiono mechanizm zarządzania sprawdzaniem dostępności produktów w<br />
+    ofertach dostawców na pozycjach zamówień apteki internetowych w przypadku<br />
+    braków na stanie.<br />
+<br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2022.04.28 [2022.2.1.3]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2022.04.28<br />
+  ApwPlus.exe [2022.2.1.3]<br />
+  - Uaktualniono strukturę bazy danych.<br />
+<br />
+  Apwbase.dll [2022.2.1.3]<br />
+  - Uaktualniono bazę kart serwisowych.<br />
+<br />
+</body></html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2024.1.0.7</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2024.06.13<br />
+  Slowniki.dll [2024.1.0.7]<br />
+  - Dodano uprawnienie [42-0056] Dostęp do narzędzia umożliwiającego<br />
+    rejestrowanie logów komunikacji SIM.<br />
+    <br />
+  ApwMain.exe [2024.0.0.7]<br />
+  - W teście systemu aptecznego dodano ostrzeżenia jeśli hasła na użytkowników<br />
+    baz danych są domyślne.<br />
+    <br />
+  Zasoby.dll [2024.1.0.7]<br />
+  - Uaktualniono zasoby graficzne.<br />
+  <br />
+  ApwHarm.dll [2024.1.0.7]<br />
+  - Rozwiązano problem wolnego działania automatu dla funkcji generowania oferty<br />
+    internetowej na podstawie bazy aptecznej w module APW45 – Apteka Internetowa<br />
+    dla bazy danych Oracle.<br />
+<br />
+  P1*.dll [2024.1.0.7]<br />
+  - Aktualizacja interfejsów  <br />
+    <br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2024.06.13 [2024.1.0.7]<br />
+  - Obsługa rezerwacji z KtoMaLek: dostosowanie treści wyświetlanych komunikatów<br />
+    do różnych rozdzielczości ekranów.<br />
+  - Poprawiono funkcję sprzedaży na Import docelowy, w niektórych przypadkach,<br />
+    gdy podczas przyjmowania dokumentu zakupu nie została prawidłowo określona <br />
+    cena sprzedaży (refundowany import docelowy) program nie korygował zapłaty <br />
+    zgodnie z tabelą marż urzędowych.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW12 -----------------------------</h3><br />
+2024.06.13 [2024.1.0.7]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2024.06.13 [2024.1.0.7]<br />
+  - Zadanie z Giełdy Pomysłów: dodanie ostrzeżenia o braku numeru potwierdzenia<br />
+    na import docelowy. Ostrzeżenie wyświetlane jest podczas zatwierdzania<br />
+    dokumentu zakupu oraz w podglądzie pozycji dokumentów zakupu.<br />
+    Informacja ta istotna jest w raporcie ZSMOPL.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW14 -----------------------------</h3><br />
+2024.06.13 [2024.1.0.7]<br />
+  - Dodano blokadę czasową w zatwierdzaniu buforów utworzonych na podstawie BLOZ<br />
+    buforowy jeśli jego data obowiązywania jest z przyszłości. Blokada ma<br />
+    zapobiegać mylnemu zatwierdzaniu zmian które jeszcze nie obowiązują.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2024.06.13 [2024.1.0.7]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2024.06.13 [2024.1.0.7]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW42 -----------------------------</h3><br />
+2024.06.13 [2024.1.0.7]<br />
+  - Dodano narzędzie do rejestrowania komunikacji z SIM (APW42 -> Narzędzia -><br />
+    Rejestrowanie komunikacji z SIM). Program służy do przygotowania<br />
+    zabezpieczonej hasłem paczki z logami dla podmiotu weryfikującego (CeZ)<br />
+    w przypadku wystąpienia błędów w trakcie realizacji recepty, gdy zajdzie<br />
+    potrzeba analizy komunikacji z SIM.<br />
+    <br />
+<h3>---------------------------- Zmiany w module APW45 -----------------------------</h3><br />
+2024.06.13 [2024.1.0.7]<br />
+  - Rozwiązano problem wolnego działania automatu dla funkcji generowania oferty<br />
+    internetowej na podstawie bazy aptecznej w module APW45 – Apteka Internetowa<br />
+    dla bazy danych Oracle. Problem objawiał się tym, że dla różnych wersji<br />
+    systemu bazy danych Oracle, silnik Oracle wybierał różne i często<br />
+    nieprawidłowe plany zapytań pomimo przeliczenia statystyk oraz odpowiedniego<br />
+    ustawienia optymalizatora, doprowadzało to do bardzo dużego spowalniania<br />
+    realizacji zapytań do bazy. W tym celu dostosowałem plany zapytań oraz same<br />
+    zapytania, żeby tak samo działały na dowolnych wersjach i ustawieniach<br />
+    systemów bazodanowych Oracle. Funkcje generowania oferty uruchamiamy<br />
+    w module APW45 – Apteka Internetowa -> Towary -> Odśwież ofertę<br />
+    oraz w module APWPLAN – Harmonogram zadań w zadaniu "Aktualizacja oferty<br />
+    dla Apteki Internetowej" z włączoną funkcją odświeżania oferty.<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2024.06.13<br />
+  ApwPlus [2024.1.0.7]<br />
+  - Uaktualniono strukturę tabel.<br />
+<br />
+  ApwBase.dll [2024.1.0.7]<br />
+  - Uaktualniono bazę kart serwisowych.<br />
+<br />
+</body></html>

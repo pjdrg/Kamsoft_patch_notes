@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2019.2.5.8</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2019.04.24<br />
+  slowniki.dll [2019.2.0.31]<br />
+  - Dodano weryfikacje wprowadzenia numeru NIP lub REGON w zależnosci od <br />
+	wybranego rodzaju podmiotu dla ZSMOPL na karcie	'Pacjenta/Odbiorcy'. <br />
+	Weryfikacja wykonywana podczas zapisu danych.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2019.04.29 [2019.3.0.0]<br />
+  - Programy partnerskie OSOZ: Reguły koszykowe - obsługa nowych parametrów <br />
+    w definicji reguły<br />
+  -	E-Recepta: Prezentacja Oddziały NFZ na formatce e-Recepty. Pozwala <br />
+	porównać informację o oddziale NFZ zawartą w części wizualnej recepty <br />
+	z informacją, która przekazana została w części technicznej. <br />
+	Istnieje możliwość zmiany oddziału w przypadku gdy w części wizualnej <br />
+	znajdą się inne dane niż podpowiadane. Wprowadzono komunikat <br />
+	zabezpieczający w przypadku braku informacji o oddziale NFZ (w części <br />
+	technicznej), gdy na recepcie będzie wskazane uprawnienie dodatkowe lub <br />
+	odpłatność inna niż 100% <br />
+  -	E-Recepta: Dodano propagowanie informacji o numerze importu docelowego na <br />
+	podstawie kart zakupu/leku. Do tej pory możliwe było jedynie wskazanie <br />
+	wniosku rejestrowanego na pacjenta. <br />
+  -	E-Recepta: dodano automatyczne suwaki w okienku wizualizacji e-Recepty, <br />
+    co rozwiązuje problem długich recept, których dane wychodziły poza ramy <br />
+	okienka (najczęściej nie było widać sekcji „Dane o ubezpieczeniu i <br />
+	uprawnieniach”).<br />
+  - Poprawiono sprawdzanie wykrywania włączonego klawisza CapsLock przy <br />
+    odczytywaniu kodów QR podczas skanowania na formatce kodów recept przy realizacji procesu weryfikacji kodów w NMVS. Włączony CapsLock powodował wysyłanie do NMVS zmienionych wielkości literek dla serii.	<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2019.04.29 [2019.3.0.0]<br />
+  - Poprawa wydruku dla dokumentu TaxFree. Zmieniono podpis:<br />
+    Podpis funkcjonariusza Służby Celno-Skarbowej oraz stempel „Polska-Cło”  <br />
+<br />
+2019.04.18 [2019.2.2.8]<br />
+  - Poprawka w zestawieniu 'Bilans operacji magazynowych'. Nie pojawia?y sie <br />
+    w raporcie dokumenty przychodu dodane przez u?ytkownika.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW23 -----------------------------</h3><br />
+2019.04.09 [2019.2.2.8]<br />
+  - Kompilacja w związku ze zmianami w E-Recepta<br />
+<br />
+<h3>---------------------------- Zmiany w module APW68 -----------------------------</h3><br />
+2019.04.29 [2019.3.0.0]<br />
+  - Na etapie generowania raportu do ZSMOPL dodano kontrolę wykrywania braku <br />
+    numeru dokumentu źródłowego dla dokumentu sprzedaży. Brak tego numeru <br />
+    powodował błąd "TROS18".<br />
+  - MAR01 - dodano nowe statusy przetwarzania dla pobranych komunikatów błędów.<br />
+    System błędnie interpretował status dla raportu, który nie został <br />
+    przetworzony przez ZMOPL lub nie pojawił się na portalu.<br />
+  - Wyłączono sprawdzanie numeru zapotrzebowania na import docelowy z BLOZ. <br />
+    Numer ten nie zawsze był aktualny co powodował wysyłkę komunikatu z błędnym <br />
+    numerem.	<br />
+<br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2019.04.29 [2019.3.0.0]<br />
+  - Programy partnerskie OSOZ: Reguły koszykowe - obsługa nowych parametrów <br />
+    w definicji reguły<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2019.04.29<br />
+  Apwplus.exe [2019.3.0.0]<br />
+  - Uaktualniono strukturę bazy danych<br />
+<br />
+2019.04.18<br />
+  DbCopy.exe [2019.2.1.0] <br />
+  - Dodano możliwość usunięcia zawartości wszystkich tabel bazy docelowej.<br />
+    Nowa funkcja umożliwia usunięcie danych z tabel, które nie znalazły <br />
+    się na liście tabel do zaznaczenia (np. CNTRL, EZKRT).<br />
+<br />
+</body></html>

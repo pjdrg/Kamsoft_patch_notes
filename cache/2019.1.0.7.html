@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2019.1.0.7</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2018.11.19  <br />
+  slowniki.dll [2019.1.0.5]<br />
+  - Zmodyfikowano mechanizmy Kompedium Suplementów Diety<br />
+  - Modyfikacja weryfikacji numeru recept w zamówieniach <br />
+  - Usunięto opcje "archiwalne" na filtrze bazy BLOZ. <br />
+    Produkty archiwalne nie są publikowane w bazie BLOZ. <br />
+  - Na karcie Personelu dodano opcję "Logowania do sprzedaży bez rozpoczynanie <br />
+    zmiany". Opcja dział w trybie pracy zmianowym. <br />
+  - Dodano możliwość określania numerów stanowisk na których uruchamiany jest <br />
+    moduł Podpisywanie podpisem elektronicznym <br />
+	<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2018.11.19 [2018.1.1.4]<br />
+  - Dodano możliwość posortowania wydruk graficznej Specyfikacji sprzedaży <br />
+    po nazwie towaru (Apw41, Opcje modułów, Apw11.3.4.17)<br />
+  - W podglądzie sprzedaży w kolejce dodano kolumnę z imieniem i nazwiskiem<br />
+    pacjenta<br />
+  - W szablonie graficznej specyfikacji sprzedaży dodano pola zapłatą do limitu<br />
+    i zapłatą powyżej limitu<br />
+  - Dodano wydruk korekty faktury VAT dla Opieki<br />
+  - Dodano kontrolę stanowisk na których uruchamiany jest moduł Podpisywanie <br />
+    podpisem elektronicznym <br />
+<br />
+<h3>---------------------------- Zmiany w module APW12 -----------------------------</h3><br />
+2018.11.19 [2019.1.0.1]<br />
+  - Modyfikacja weryfikacji numeru recept w zamówieniach <br />
+  - Obsługa komunikatów z OSOZ w zamówieniach <br />
+  <br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2018.11.19 [2019.1.0.1]<br />
+  - W "Kontroli dokumentów zakupu" dodano kolumny z ceną z ostatniej dostawy. <br />
+  - Poprawiono protokół reklamacji (wzór: Farmacol). <br />
+  - W buforze dokumentów dodano możliwość wyeksportowania pliku do kolektora <br />
+    (prawym przyciskiem myszki na wybranym dokumencie). <br />
+  - W buforze dokumentów dodano ostrzeżenie o dokumentach starszych niż ilość <br />
+    dni zdefiniowana w parametrze: apw13.2.89. <br />
+  - Podczas przyjęcia dokumentu na magazyn wyświetlone zostanie ostrzeżenie <br />
+    jeśli numer przyjmowanego dokumentu jest taki sam co numer dokumentu <br />
+	przyjętego już na magazyn. <br />
+  - W oknie "Wybierz dokument" dodano możliwość filtrowania (okno otwierane jest<br />
+    z pozycji: "Bufor dokumentów->F6 Korekty").<br />
+  -	Modyfikacja zdalnego potwierdzania realizacji zakupu  w zadaniu komunikacji <br />
+    z dostawcami. <br />
+  - Ustawiono jako domyślny typ dokumentu na niekredytowany przy przyjmowaniu <br />
+    korekty przesunięcia  MM. <br />
+  - Poprawki w wyliczaniu wartości VAT na dokumencie. <br />
+  <br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2018.11.19 [2019.1.2.0]<br />
+  - Poprawa generowania eksportu do Optima, błąd SQL-a <br />
+  - Zmieniono sposób generowania korekt zestawień refundacyjnych: podczas <br />
+    tworzenia korekty system sprawdza, czy korygowano również sprzedaż, jeśli <br />
+	tak, to przy tworzeniu korekty uwzględni zmiany w sprzedaży. <br />
+  - Dodano kontrolę kodu EAN dla składników leków robionych poza opakowaniem <br />
+    (kod EAN dla składników nie jest obowiązkowy, jednak niektóre oddziały NFZ <br />
+	go wymagają) <br />
+	<br />
+<h3>---------------------------- Zmiany w module APW23 -----------------------------</h3><br />
+2018.11.19 [2019.1.0.1]<br />
+  - Dodano kontrolę kodu EAN dla składników leków robionych poza opakowaniem <br />
+    (kod EAN dla składników nie jest obowiązkowy, jednak niektóre oddziały NFZ <br />
+	go wymagają) <br />
+  - Dostosowano do aktualnych przepisów zasady dzielenia opakowań.<br />
+  - W funkcji Retaksacja e-recept:<br />
+    * dodano wydruk zestawienia  <br />
+    * na przeglądzie dodano kolumnę z osobą realizującą receptę<br />
+	<br />
+<h3>---------------------------- Zmiany w module APW24 -----------------------------</h3><br />
+2018.11.19 [2019.1.0.2]<br />
+  - W zestawieniu: 'Analiza dziennych zyskĂłw' - 'Sumy dzienne' moduĹ‚u Analizy, <br />
+    uwzglÄ™dniono przy obliczaniu zyskĂłw: Taxa Laborum oraz marĹĽe dla lekĂłw <br />
+	robionych. <br />
+  - Poprawa zestawienia 'Analiza sprzedaĹĽy z podziaĹ‚em na grupy asortymentowe'. <br />
+    Wyeliminowanie z zestawienia usuniÄ™tych grup asortymentowych. <br />
+<br />
+<h3>---------------------------- Zmiany w module APW31 -----------------------------</h3><br />
+2018.11.19  [2019.1.1.1]<br />
+  - Poprawka w Płatnościach (zaliczanie faktur jako zapłacone i niezapłacone) <br />
+  - Dodano zapis oraz wyświetlanie historii zmian terminu i kwoty do zapłaty na <br />
+    zestawieniach płatności. <br />
+	<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2018.11.19 [2019.1.0.1]<br />
+  - Dodanie parametru apw13.2.88: <br />
+    "Ostrzegaj, jeśli dokument w buforze starszy niż". <br />
+  - Dodanie parametru apw13.2.89: <br />
+    "Blokuj wczytywanie korekt w niepoprawnej kolejności". <br />
+  - Dodano możliwość określenia stanowisk na których uruchamiany jest moduł<br />
+    "Podpisywanie podpisem elektronicznym". Domyślnie system przypisze <br />
+	licencję najpierw do stanowisk sprzedażowych potem do pozostałych wg<br />
+	kolejności stanowisk.<br />
+  - Dodano możliwość zdefiniowania parametru "Dostępne rodzaje sprzedaży" na <br />
+    różnych stanowiskach. <br />
+	<br />
+<h3>---------------------------- Zmiany w module APW43 -----------------------------</h3><br />
+2018.11.19 [2019.1.0.0]<br />
+ - Poprawiono archiwizację bazy EDE (FireBird). <br />
+   Program nie wykonywał archiwizacji bazy po zmianie domyślnego hasła. <br />
+   <br />
+<h3>---------------------------- Zmiany w module APW61 -----------------------------</h3><br />
+2018.11.19 [2019.0.1.0]<br />
+  - Poprawa wyglądu wygenerowanych dokumentów w formacie PDF.<br />
+  - Modyfikacja uruchamiania modułu KS-BDO i weryfikacji uprawnień.<br />
+  - Publikacja dokumentów dodatkowych wraz z umową powierzenia przetwarzania <br />
+    danych osobowych.<br />
+  - Ujednolicenie i modyfikacja treści dokumentacji.<br />
+  - Modyfikacja zatwierdzania dokumentacji Polityki Bezpieczeństwa. <br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2018.11.19 <br />
+  Apwplus.exe [2019.1.4.0]<br />
+  - Uaktualniono strukturę bazy danych<br />
+  <br />
+</body></html>

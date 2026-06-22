@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2025.0.1.8</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2025.01.16<br />
+  Slowniki.dll [2025.0.1.8]<br />
+  - Modyfikacja w zakresie aktualizacji i anonimizacji danych w Centralnej Bazie<br />
+    Hurtowni.<br />
+<br />
+  ApwIap.dll [2025.0.1.8]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+  Zasoby.dll [2025.0.1.8]<br />
+  - Aktualizacja opisów opcji.<br />
+<br />
+  Apwfn.dll [2025.0.1.7]<br />
+  - Zoptymalizowano mechanizm komunikacji z bazą danych.<br />
+<br />
+  Moduł integracyjny - sprzedaż samoobsługowa [2025.0.1.0]<br />
+  - Dodano możliwość rejestracji sprzedaży na wskazanego w żądaniu pracownika<br />
+    apteki.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2025.01.16 [2025.0.1.8]<br />
+  - Dodano opcję pomijania wydruku potwierdzenia zapłaty kartą dla apteki.<br />
+    W przypadku pomyślnego zakończenia transakcji wydruk potwierdzenia<br />
+    dla apteki zostanie pominięty, natomiast potwierdzenie dla pacjenta będzie<br />
+    drukowane tak jak dotychczas, po akceptacji przez farmaceutę. W przypadku<br />
+    odrzucenia transakcji wydruk dla apteki zostanie wygenerowany zgodnie<br />
+    z dotychczasowym procesem. Nowa opcja ma zastosowanie tylko do terminali,<br />
+    w których wydruki realizowane są za pośrednictwem systemu KS-AOW oraz do<br />
+    transakcji, które nie wymagają weryfikacji podpisu posiadacza karty.<br />
+  - Usunięto problem nieprawidłowego nadawania numerów recept podczas realizacji<br />
+    kilku recept, z których część umieszczono wcześniej w kolejce z pobraną<br />
+    zaliczką zerową.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW12 -----------------------------</h3><br />
+2025.01.16 [2025.0.1.8]<br />
+  - Zamówienia KS-OmniPharm – Poprawiono generowanie listy braków na potrzeby<br />
+    komunikatu przesyłanego do KS-OmniPharm.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2025.01.16 [2025.0.1.8]<br />
+  - Poprawa ustawiania statusu karty zakupu na 'W' – Wstrzymana w przypadku<br />
+    wstrzymania całej dostawy w wyniku reklamacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2025.01.16 [2025.0.1.8]<br />
+  - Usprawniono proces wczytywania szablonu rachunku refundacyjnego dla korekt<br />
+    obejmujących wyłącznie część B zestawienia refundacyjnego.<br />
+  - Eksport danych do Optimy, dostosowanie formatu do prawidłowego raportowania<br />
+    pozycji faktur z refundacją. Podczas importu danych do Optimy program<br />
+    odrzucał faktury, gdzie zapłata była mniejsza od wartości faktury.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW22 -----------------------------</h3><br />
+2025.01.16 [2025.0.1.8]<br />
+  - Kartoteki -> Towary -> Zapotrzebowania na towary -> Dodaj z bazy BLOZ:<br />
+    w przypadku nieustalonej w bazie BLOZ stawki podatku VAT wymuszono<br />
+    ustawienie stawki przez operatora. Poprzednio ustawiana była błędnie przez<br />
+    system na zerową.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW24 -----------------------------</h3><br />
+2025.01.16 [2025.0.1.8]<br />
+  - Zadanie z Giełdy Pomysłów: dodano filtr leków OTC oraz RX dla struktury<br />
+    magazynu wg. dat ważności.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW31 -----------------------------</h3><br />
+2025.01.16 [2025.0.1.8]<br />
+  - Operacje kasowe: generowanie bilansu dnia w przypadku gdy w danym dniu nie<br />
+    występowały płatności gotówkowe a jedynie bezgotówkowe. W przypadku gdy<br />
+    w danym dniu nie występowały płatności gotówkowe tylko np. płatności kartą<br />
+    nie generował się bilans dnia w przypadku wybrania opcji 'Operacje<br />
+    bezgotówkowe zsumowane z gotówką'.<br />
+  - Płatności -> Płatności – dostawcy -> [F4] -Zmień: usunięto każdorazowy reset<br />
+    terminu płatności podczas edycji w polu daty i przejściu do pola kwoty<br />
+    zapłaty. Obecnie reset do pierwotnego terminu płatności następuje tylko<br />
+    jeżeli zostanie wprowadzona błędna data.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2025.01.16 [2025.0.1.8]<br />
+  - W konfiguracji systemów pomiarowych dodano możliwość definiowania maili osób<br />
+    dla powiadomień technicznych związanych z obsługą systemu pomiarowego<br />
+    w aptece. System będzie wysyłał powiadomienia, o kończącej się licencji<br />
+    na czujnik, o zbliżającym się terminie kalibracji czujnika, o stanie baterii<br />
+    lub utracie połączenia czujnika z gateway-em (urządzenie zarządzające<br />
+    czujnikami).<br />
+  - Dodano brakujące uprawnienie do obsługi funkcjonalności APW21/Obrót<br />
+    całkowity oraz towarowy/Dla wybranej grupy asortymentowej.<br />
+  - Dostosowanie interfejsów pharmind APIM do wdrożonych modyfikacji i zmian<br />
+    w porozumieniach.<br />
+  - Dodano opcję APW11.12.13: Pomiń wydruk potwierdzenia zapłaty kartą dla<br />
+    apteki na drukarce fiskalnej.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW42 -----------------------------</h3><br />
+2025.01.16 [2025.0.1.8]<br />
+  - Aktualizacja struktury bazy danych.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW45 -----------------------------</h3><br />
+2025.01.16 [2025.0.1.8]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2025.01.16 [2025.0.1.8]<br />
+  - Pharmind grid: Raportowanie do pharmind wyników z działania funkcji, która<br />
+    automatycznie generuje zamówienia u dostawców.<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2025.01.16<br />
+  ApwPlus [2025.0.1.8]<br />
+  - Aktualizacja struktury bazy danych.<br />
+<br />
+</body></html>

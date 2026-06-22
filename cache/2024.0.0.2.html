@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2024.0.0.2</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2023.10.26<br />
+  ApwMain.exe [2024.0.0.2]<br />
+  - Rozwiązano problem objawiający się wystąpieniem błędu Access Violation<br />
+    podczas próby pobrania klucza aktywacyjnego licencji.<br />
+  - Test systemu aptecznego: dodana weryfikacja minimalnej wspieranej wersji<br />
+    Firebird.<br />
+<br />
+  Slowniki.dll, ApwHarm.dll, APW_SC.exe, ApwOPH.dll [2024.0.0.2]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+  Zasoby.dll [2024.0.0.2]<br />
+  - Aktualizacja opisów opcji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2023.10.26 [2024.0.0.2]<br />
+  - Dostosowanie oprogramowania do nowelizacji ustawy o refundacji w zakresie<br />
+    zmian obowiązujących od 1 listopada 2023 roku:<br />
+    * Wprowadzono blokadę realizacji recept papierowych na leki o kategorii<br />
+      dostępności Rpw oraz leki z grupy II-N, III-P, IV-P.<br />
+      Blokadę można zmienić na ostrzeżenie lub wyłączyć (opcja APW11.2.170<br />
+      Blokada sprzedaży leków Rpw na receptę papierową).<br />
+    * Zmiana w sposobie wyliczania terminu ważności recept wystawionych<br />
+      z uprawnieniem C (ciąża) na 30 dni od daty wystawienia<br />
+      lub daty realizacji od.<br />
+    * Wprowadzono nową tabelę marż urzędowych, wykorzystywaną przy określaniu<br />
+      ceny detalicznej leków nierefundowanych realizowanych z uprawnieniem<br />
+      IB/import docelowy oraz od 1 listopada 2023 również z uprawnieniem ZK. <br />
+      System od 1 listopada 2023 zacznie używać nowej tabeli, zmiana nie wymaga <br />
+      ingerencji apteki w konfiguracje.<br />
+    * Usunięcie ostrzeżenia o umieszczeniu informacji "nie zamieniaj"<br />
+      na recepcie, wyświetlanego przy realizacji recepty.<br />
+    * Zastosowanie ograniczenia marży leków recepturowych refundowanych.<br />
+      Marża ta nie powinna być większa od kosztu wykonania leku recepturowego<br />
+      w warunkach aseptycznych.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2023.10.26 [2024.0.0.2]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW14 -----------------------------</h3><br />
+2023.10.26 [2024.0.0.2]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW23 -----------------------------</h3><br />
+2023.10.26 [2024.0.0.2]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2023.10.26 [2024.0.0.2]<br />
+  - Wprowadzono opcję APW11.6.1.7 Maksymalna kwota marży dla refundowanych leków<br />
+    recepturowych.<br />
+  - Wprowadzono opcję APW11.2.170 Blokada sprzedaży leków Rpw na receptę<br />
+    papierową.<br />
+<br />
+<h3>--------------------------------- ZMIANY.IRAP ----------------------------------</h3><br />
+2023.10.26 [2024.0.0.2]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+</body></html>

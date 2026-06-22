@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2023.2.0.0</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2023.08.16<br />
+  KS-AOW [2023.2.0.0]<br />
+  - Aktualizacja komponentów obsługi połączenia do bazy danych.<br />
+<br />
+  Slowniki.dll [2023.2.0.0]<br />
+  - Dodanie obsługi centralnego rabatu (producenta, dostawcy) mającego<br />
+    zastosowanie między innymi przy wyznaczaniu cen detalicznych ze strategii<br />
+    marżowych KS-Omnipharm z poziomu systemu KS-Omnipharm.<br />
+  - Optymalizacja działania usługi Podobniki.<br />
+<br />
+  ApwiAp.dll [2023.2.0.0]<br />
+  - Rozwiązano problem z błędem w aplikacji i zatrzymaniem modułu Apw45 – Apteka<br />
+    Internetowa w momencie realizowania kilkukrotnie akcji zdejmowania<br />
+    z rezerwacji pozycji zamówienia internetowego.<br />
+    Funkcję zdejmowania rezerwacji z zamówienia internetowego realizujemy<br />
+    z poziomu "APW45 - Apteka internetowa -> Zamówienia -> [F11] Rezerwuj -><br />
+    Zdejmij rezerwację".<br />
+<br />
+  ApwHarm.dll [2023.2.0.0]<br />
+  - Rozbudowano ustawienia dla automatycznych rezerwacji o opcję kontroli<br />
+    działania. Opcja jest dostępna w module internetowym "APW45 - Apteka<br />
+    internetowa -> Reguły -> Zamówienia -> Tryb pracy". Możemy tą opcją sterować<br />
+    czy mechanizm automatycznych rezerwacji ma działać z zadaniem z aplikacji<br />
+    ApwPlan "Aktualizacja zamówień ze stroną sklepu WWW", czy akcją "Pobierz<br />
+    zamówienia internetowe" z modułu APW45 – Apteka Internetowa.<br />
+  - Rozwiązano problem dla mechanizmu zarządzania statusem dla zadania<br />
+    automatycznych rezerwacji w zadaniu "Aktualizacja zamówień ze stroną sklepu<br />
+    WWW" w aplikacji ApwPlan - Harmonogram zadań. Podczas ponownej realizacji<br />
+    funkcji automatycznej rezerwacji po realizacji przesunięć międzymagazynowych<br />
+    status nie był ustawiany według opcji "Zamówienia w trakcie rezerwacji<br />
+    otrzymują status" dostępnej w module internetowym "APW45 - Apteka<br />
+    internetowa -> Reguły -> Zamówienia -> Inne".<br />
+  - Rozwiązano problem z kontrolą lecznictwa zamkniętego dla mechanizmów<br />
+    budowania oferty apteki internetowej oraz aktualizacji cen.<br />
+    Mechanizmy te są wywoływane funkcjami "[F11] Odśwież ofertę" oraz "[F12]<br />
+    Aktualizuj ceny" w module APW45 – Apteka Internetowa (APW45 -> Towary)<br />
+    oraz w aplikacji ApwPlan – Harmonogram zadań w zadaniu "Aktualizacja oferty<br />
+    dla apteki internetowej".<br />
+  - Rozwiązano problem z kontrola ceny urzędowej dla pozycji pobieranych z ofert<br />
+    od dostawców dla mechanizmów budowania oferty apteki internetowej<br />
+    oraz aktualizacji cen. Mechanizmy te są wywoływane funkcjami "[F11] Odśwież<br />
+    ofertę" oraz "[F12] Aktualizuj ceny" w module APW45 – Apteka Internetowa<br />
+    (APW45 -> Towary) oraz w aplikacji ApwPlan – Harmonogram zadań w zadaniu <br />
+    "Aktualizacja oferty dla apteki internetowej".<br />
+  - Przebudowano automaty dla mechanizmów budowania oferty i aktualizacji cen<br />
+    dla oferty internetowej w celu poprawy wydajności.<br />
+    Mechanizmy te są wywoływane funkcjami "[F11] Odśwież ofertę" oraz "[F12]<br />
+    Aktualizuj ceny" w module APW45 – Apteka Internetowa (APW45 -> Towary)<br />
+    oraz w aplikacji ApwPlan – Harmonogram zadań w zadaniu "Aktualizacja oferty<br />
+    dla apteki internetowej".<br />
+  - Poprawiono pracę z cennikami dla mechanizmów budowania oferty i aktualizacji<br />
+    cen dla oferty internetowej. Mechanizmy te są wywoływane funkcjami "[F11]<br />
+    Odśwież ofertę" oraz "[F12] Aktualizuj ceny" w module APW45 – Apteka<br />
+    Internetowa (APW45 -> Towary) oraz w aplikacji ApwPlan – Harmonogram zadań<br />
+    w zadaniu "Aktualizacja oferty dla apteki internetowej".<br />
+  - Przebudowano mechanizm wysyłania oferty internetowej na stronę WWW w celu<br />
+    poprawy wydajności. Mechanizm ten jest wywoływany akcją "Aktualizuj ofertę<br />
+    internetową" w module APW45 – Apteka Internetowa oraz w aplikacji ApwPlan –<br />
+    Harmonogram zadań w zadaniu "Aktualizacja oferty dla apteki internetowej".<br />
+  - Rozwiązano problem wysyłaniem kodu EAN dla pozycji pobieranych z ofert<br />
+    od dostawców. Mechanizm ten jest wywoływany akcją "Aktualizuj ofertę<br />
+    internetową" w module APW45 – Apteka Internetowa oraz w aplikacji ApwPlan –<br />
+    Harmonogram zadań w zadaniu "Aktualizacja oferty dla apteki internetowej".<br />
+  - Rozbudowano zarządzanie magazynami dla zadania "Aktualizacja zamówień<br />
+    ze stroną sklepu WWW" w aplikacji ApwPlan - Harmonogram zadań.<br />
+    Opcja "Wybierz magazyn:" odpowiedzialna za zarządzanie magazynami została<br />
+    rozbudowana o opcję "wg opcji modułów (APW41))". Nowa opcja umożliwia pracę<br />
+    z globalnym ustawieniem magazynu dla aplikacji ApwPlan – Harmonogram zadań.<br />
+  - Rozwiązano problem zarządzania ilością zarezerwowanych zamówień<br />
+    dla mechanizmu automatycznych rezerwacji w zadaniu "Aktualizacja zamówień<br />
+    ze stroną sklepu WWW" w aplikacji ApwPlan - Harmonogram zadań oraz dla akcji<br />
+    "Pobierz zamówienia internetowe" w module APW45 – Apteka Internetowa.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2023.08.16 [2023.2.0.0]<br />
+  - Pharmind GRID: Ujednolicenie raportowanych danych o kartotekach towarów<br />
+    w transakcjach zakupu i sprzedaży.<br />
+  - Optymalizacja działania usługi Podobniki.<br />
+  - Usunięto problem z wyświetlaniem kwoty do zapłaty po podsumowaniu sprzedaży<br />
+    na drukarce fiskalnej Novitus HD II online<br />
+  - Dodano obsługę uprawnień 41-0050 i 41-0051 (Definiowanie powodów straty/<br />
+    nadwyżki) w oknie przyczyny straty/nadwyżki podczas wybierania jej powodu <br />
+    w Operacjach magazynowych.<br />
+  - Dodano opcję modyfikującą minimalny wiek pacjenta dla uprawnienia Senior<br />
+    (domyślnie 75).<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2023.08.16 [2023.2.0.0]<br />
+  - Dodanie obsługi centralnego rabatu (producenta, dostawcy) mającego<br />
+    zastosowanie między innymi przy wyznaczaniu cen detalicznych ze strategii<br />
+    marżowych KS-Omnipharm z poziomu systemu KS-Omnipharm.<br />
+  - Pharmind GRID: Ujednolicenie raportowanych danych o kartotekach towarów<br />
+    w transakcjach zakupu i sprzedaży.<br />
+  - Kontrola dokumentów zakupu:dodano możliwość ponownej weryfikacji opakowania<br />
+    w systemie NMVS, jeśli było już zweryfikowane w innym dokumencie zakupu.<br />
+  - Kontrola dokumentów zakupu: dodano możliwość wyszukania dokumentu w którym<br />
+    zweryfikowano opakowanie na podstawie kodu 2D (Kontrola dokumentów zakupu -><br />
+    Ctrl+L -> Opakowanie w dokumentach).<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2023.08.16 [2023.2.0.0]<br />
+  - Zestawienie wniosków na środki pomocnicze: rozwiązano problem z blokowaniem<br />
+    w niektórych przypadkach możliwości edycji potwierdzenia ubezpieczenia<br />
+    pacjenta dla zleceń elektronicznych.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2023.08.16 [2023.2.0.0]<br />
+  - Dodanie obsługi centralnego rabatu (producenta, dostawcy) mającego<br />
+    zastosowanie między innymi przy wyznaczaniu cen detalicznych ze strategii<br />
+    marżowych KS-Omnipharm z poziomu systemu KS-Omnipharm.<br />
+  - Dodano opcję modyfikującą minimalny wiek pacjenta dla uprawnienia Senior<br />
+    (domyślnie 75).<br />
+<br />
+<h3>---------------------------- Zmiany w module APW45 -----------------------------</h3><br />
+2023.08.16 [2023.2.0.0]<br />
+  - Rozbudowano specyfikację wymiany danych dla komunikacji z modułem<br />
+    APW45 – Apteka Internetowa o możliwość przekazywania daty ostatniego importu<br />
+    dla usługi sieciowej pobierającej zamówienia internetowe.<br />
+  - Rozbudowano ustawienia dla importu zamówień internetowych o opcje "Przekazuj<br />
+    w komunikacji id ostatniego pobranego zamówienia" oraz "Przekazuj<br />
+    w komunikacji datę ostatniego importu zamówień".<br />
+    Opcje są dostępne w module internetowym "APW45 - Apteka internetowa -><br />
+    Komunikacja -> Ustawienia -> Ustawienia" w zakładce "Zamówienia".<br />
+  - Rozbudowano funkcję wysyłania produktów o kontrolę sklepów WWW.<br />
+    Funkcja jest dostępna w module internetowym "APW45 - Apteka internetowa -><br />
+    Towary -> [F5] Wyślij produkt". Jeśli mamy aktywnych więcej niż jedną<br />
+    konfigurację połączeń, to program teraz pilnuje z którego połączenia chcemy<br />
+    skorzystać dla akcji wysyłania produktów na stronę WWW.<br />
+  - Rozbudowano ustawienia dla automatycznych rezerwacji o opcję kontroli<br />
+    działania. Opcja jest dostępna w module internetowym "APW45 - Apteka<br />
+    internetowa -> Reguły -> Zamówienia -> Tryb pracy". Możemy tą opcją sterować<br />
+    czy mechanizm automatycznych rezerwacji ma działać z zadaniem z aplikacji<br />
+    ApwPlan "Aktualizacja zamówień ze stroną sklepu WWW", czy akcją "Pobierz<br />
+    zamówienia internetowe" z modułu APW45 – Apteka Internetowa.<br />
+  - Rozwiązano problem z kontrolą lecznictwa zamkniętego dla mechanizmów<br />
+    budowania oferty apteki internetowej oraz aktualizacji cen.<br />
+    Mechanizmy te są wywoływane funkcjami "[F11] Odśwież ofertę" oraz "[F12]<br />
+    Aktualizuj ceny" w module APW45 – Apteka Internetowa (APW45 -> Towary)<br />
+    oraz w aplikacji ApwPlan – Harmonogram zadań w zadaniu "Aktualizacja oferty<br />
+    dla apteki internetowej".<br />
+  - Rozwiązano problem z kontrola ceny urzędowej dla pozycji pobieranych z ofert<br />
+    od dostawców dla mechanizmów budowania oferty apteki internetowej<br />
+    oraz aktualizacji cen. Mechanizmy te są wywoływane funkcjami "[F11] Odśwież<br />
+    ofertę" oraz "[F12] Aktualizuj ceny" w module APW45 – Apteka Internetowa<br />
+    (APW45 -> Towary) oraz w aplikacji ApwPlan – Harmonogram zadań w zadaniu<br />
+    "Aktualizacja oferty dla apteki internetowej".<br />
+  - Przebudowano automaty dla mechanizmów budowania oferty i aktualizacji cen<br />
+    dla oferty internetowej w celu poprawy wydajności.<br />
+    Mechanizmy te są wywoływane funkcjami "[F11] Odśwież ofertę" oraz "[F12]<br />
+    Aktualizuj ceny" w module APW45 – Apteka Internetowa (APW45 -> Towary)<br />
+    oraz w aplikacji ApwPlan – Harmonogram zadań w zadaniu "Aktualizacja oferty<br />
+    dla apteki internetowej".<br />
+  - Poprawiono pracę z cennikami dla mechanizmów budowania oferty i aktualizacji<br />
+    cen dla oferty internetowej. Mechanizmy te są wywoływane funkcjami "[F11]<br />
+    Odśwież ofertę" oraz "[F12] Aktualizuj ceny" w module APW45 – Apteka<br />
+    Internetowa (APW45 -> Towary) oraz w aplikacji ApwPlan – Harmonogram zadań<br />
+    w zadaniu "Aktualizacja oferty dla apteki internetowej".<br />
+  - Przebudowano mechanizm wysyłania oferty internetowej na stronę WWW w celu<br />
+    poprawy wydajności. Mechanizm ten jest wywoływany akcją "Aktualizuj ofertę<br />
+    internetową" w module APW45 – Apteka Internetowa oraz w aplikacji ApwPlan –<br />
+    Harmonogram zadań w zadaniu "Aktualizacja oferty dla apteki internetowej".<br />
+  - Rozwiązano problem wysyłaniem kodu EAN dla pozycji pobieranych z ofert<br />
+    od dostawców. Mechanizm ten jest wywoływany akcją "Aktualizuj ofertę<br />
+    internetową" w module APW45 – Apteka Internetowa oraz w aplikacji ApwPlan –<br />
+    Harmonogram zadań w zadaniu "Aktualizacja oferty dla apteki internetowej".<br />
+  - Rozwiązano problem zarządzania ilością zarezerwowanych zamówień<br />
+    dla mechanizmu automatycznych rezerwacji w zadaniu "Aktualizacja zamówień<br />
+    ze stroną sklepu WWW" w aplikacji ApwPlan - Harmonogram zadań oraz dla akcji<br />
+    "Pobierz zamówienia internetowe" w module APW45 – Apteka Internetowa.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW68 -----------------------------</h3><br />
+2023.08.16 [2023.2.0.0]<br />
+  - optymalizacja procesu generowania stanów magazynowych.<br />
+    Zoptymalizowano ścieżkę postępowania w przypadku tworzenia korekty stanów.<br />
+    Dodano nowe filtry. Poprawiono instrukcję postępowania w przypadku korekty<br />
+    stanów magazynowych.<br />
+<br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2023.08.16 [2023.2.0.0]<br />
+  - Pharmind GRID: Ujednolicenie raportowanych danych o kartotekach towarów<br />
+    w transakcjach zakupu i sprzedaży.<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2023.08.16<br />
+  ApwPlus [2023.2.0.0]<br />
+  - Aktualizacja struktury bazy danych.<br />
+<br />
+</body></html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2020.1.2.10</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2020.01.13<br />
+  slowniki.dll [2020.1.3.0]<br />
+  - Na karcie refundatora dodano pozycje: "Refundator inny niż NFZ" oraz "REGON".<br />
+	<br />
+  mvserver.exe [2020.1.2.5]  <br />
+  - Poprawa ładowania towarów poprzez dokument przychód wewnętrzny dla automatem <br />
+    do wydawania leków z protokołem WWKS2.<br />
+<br />
+2020.01.13<br />
+  APWMAIN.EXE [2020.1.2.2]<br />
+  - Poprawki do wskaźnika Poziomu Bezpieczeństwa.<br />
+  <br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2020.01.13 [2020.1.6.4]<br />
+  - eZWM - dodano możliwość realizacji zleceń dla aptek, które są podwykonawcami:<br />
+    Na karcie refundatora dodano pozycje: "Refundator inny niż NFZ" oraz "REGON".<br />
+    W przypadku, gdy apteka jako podwykonawca, realizuje sprzedaż zleceń<br />
+	poprzez moduł eZWM, na karcie refundatora musi uzupełnić pozycje:<br />
+	a) Nazwę (firmy, dla której apteka jest podwykonawcą)<br />
+	b) Adres firmy (opcjonalnie)<br />
+	c) REGON firmy<br />
+	d) Identyfikator w NFZ - identyfikator firmy, która zawarła umowę z NFZ<br />
+	e) Umowa na środ. pom. - numer oddziału NFZ z którą firma zawarła umowę<br />
+	f) Nr umowy środ. pom - numer umowy z NFZ<br />
+	g) Miejsce wydania - numer miejsca wydania wynikający z umowy z NFZ. <br />
+	   Każda apteka/punkt apteczny/sklep ma swój własny numer wydania.   <br />
+    W sprzedaży, przed realizacją zlecenia w eZWM, należy wybrać właściwego <br />
+	refundatora, czyli Oddział NFZ lub firmę, która zawarła umowę z NFZ.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW12 -----------------------------</h3><br />
+2020.01.13 [2020.1.2.3]<br />
+  - UniemoĹĽliwienie rÄ™cznego oznaczania zamĂłwieĹ„ z kontraktu (dystrybucji <br />
+    numerycznej) jako zrealizowanych. ZamĂłwienia oznaczajÄ… siÄ™ jako zrealizowane <br />
+	tylko podczas powiÄ…zania faktury z zamĂłwieniem. RÄ™czne oznaczanie zamĂłwienia <br />
+	jako zrealizowanego powoduje bĹ‚Ä™dnÄ… informacjÄ™ o towarach "w drodze" <br />
+	(zamĂłwienia zrealizowane nie sÄ… w drodze) i ponowne zamawianie towaru, <br />
+	ktĂłry jeszcze nie zostaĹ‚ zrealizowany przez hurtownie.<br />
+<br />
+<h3>----------------------------- ZMIANY.KS-MEDIVERIS ------------------------------</h3><br />
+2020.01.13 [2020.1.2.2]<br />
+  - Poprawa mechanizmu ustawiania aktywnych stanowisk dla KS-MediVeris w procesie <br />
+    podmiany licencji. Wyeliminowanie efektu domyĹ›lnych przyporzÄ…dkowaĹ„ <br />
+    stanowisk oraz pustej listy stanowisk.<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2020.01.13<br />
+  Apwplus.exe [2020.1.18.0]<br />
+  - Uaktualniono strukturÄ™ bazy danych<br />
+<br />
+</body></html>

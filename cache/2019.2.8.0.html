@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2019.2.8.0</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2019.06.25<br />
+  mvserver.exe [2019.3.0.1] <br />
+  - Poprawa działania szybkości synchronizacji stanów magazynowych dla automatów<br />
+    ROWA z protokołem WWKS2.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2019.06.25 [2019.3.4.0]<br />
+ - Poprawiono mechanizm promocji krzyżowych. Po dodaniu pozycji spełniających <br />
+   warunki promocji krzyżowej do kolejki i pobraniu zaliczki, przy podsumowaniu <br />
+   wartość zaliczki przeliczała się zgodnie z promocją. Zablokowano przeliczanie<br />
+   zaliczek, przeliczać będą się tylko towary<br />
+ - Przy odczycie kodu kreskowego odpisu i wypełnieniu danych na podstawie <br />
+   pierwotnej recepty, dodano przenoszenie wskaźnika proautore<br />
+ - Poprawiono przyporządkowywanie dostaw w oknie podglądu kolejki - zablokowano<br />
+   ustawienie dostaw dla pozycji podsumowującej kolejkę.<br />
+ - Usunięto kontrolę realizacji leku recepturowego na receptę wystawioną przez<br />
+   pielęgniarkę/położną jako kontynuację (interpretacja NFZ)<br />
+ - Zablokowano możliwość usunięcia pozycji zafiskalizowanej z poprawy sprzedaży<br />
+   (można było to zrobić, jeśli usuwało się pozycję niezafiskalizowaną, a <br />
+   pozycja zafiskalizowana była częścią usuwanej pozycji niefiskalnej<br />
+ - Poprawiono mechanizm zaliczek: przy wyciągnięciu pozycji z kolejki, zamianie<br />
+   towaru na inny (usunięcie i zastąpienie innym towarem) program zawsze robił <br />
+   korektę zaliczki i ponowną sprzedaż nowego paragonu. Po zmianach, jeśli <br />
+   podsumowanie w stawkach sprzedaży będzie równe lub większe od sumy zaliczek, <br />
+   program wydrukuje paragon z rozliczeniem zaliczek i nowymi pozycjami na <br />
+   wartość różnicy. Zmiana ta nie dotyczy drukarek POSNET - drukarki te nie mają<br />
+   możliwości wydruku STORNO.<br />
+ - Poprawiono błąd pojawiający się przy próbie podsumowania pełnopłatnego leku<br />
+   robionego bez składu<br />
+ - Dodano przekazywanie informacji o zaliczkach fiskalnych do systemu <br />
+   KS-OmniPharm<br />
+ - Na wydruku tekstowym recepty farmaceutycznej dodano linię przy podpisie<br />
+   z osobą wystawiającą i numerem PWZ<br />
+<br />
+<h3>---------------------------- Zmiany w module APW12 -----------------------------</h3><br />
+2019.06.25 [2019.3.0.4]<br />
+  - Modyfikacja naprawia problem, który występował podczas przenoszenia pozycji<br />
+    zamówienia w oknie "Zamawianie z listy braków" po przypisaniu promocji. <br />
+	Gdy użytkownik przypisał promocję i chciał przenieść pozycje do innego <br />
+	zamówienia, czasami pozycje te nie zostawały przenoszone i nie były usuwane <br />
+	z listy braków.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2019.06.25 [2019.3.0.2]<br />
+ - Dodano możliwość kopiowania zawartości komórek w edycji zestawienia <br />
+   refundacyjnego<br />
+ - Poprawiono liczenie sumy wartości recept i refundacji na liście rachunków<br />
+   refundacyjnych.<br />
+ - Poprawiono wyświetlanie wartości podsumowania stawek VAT dla dokumentów <br />
+   TaxFree dla sprzedazy z promocji 1+1.<br />
+<br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2019.06.07 [2019.3.5.1]<br />
+  - OSOZ: Dodanie obsługi procesu uzupełnienia danych w zaraportowanej już <br />
+    transakcji sprzedaży<br />
+<br />
+<h3>----------------------------- ZMIANY.KS-MEDIVERIS ------------------------------</h3><br />
+2019.06.26 [2019.2.6.1]<br />
+  - Do okienka NMVS (Alt+m) dla zakładki "Leki sprzedane z negatywną weryfikacją"<br />
+    dodano kolumnę z kodem opakowania (S/N). Kod ten jest wymagany przy zgłaszaniu<br />
+	alertu do KOWAL-a.<br />
+  - Poprawa działania funkcji, która powodowała aletry podwójnego zeskanownaia <br />
+    kodów. System w pewnych przypadkach pozostawiał w pamieci raz zczytany kod <br />
+	na liście kodów do wycofania i przy zapłacie próbował go wycofywać 2 razy.<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2019.06.18<br />
+  Apwplus.exe [2019.3.7.0]<br />
+  - Uaktualniono strukturę bazy danych<br />
+<br />
+</body></html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2023.1.4.4</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2023.06.01<br />
+  Slowniki.dll [2023.1.4.4]<br />
+  - Dodanie mechanizmów walidujących kartoteki dostawców na potrzeby projektów<br />
+    pharmind GRID.<br />
+  - Optymalizacja działania usługi "Podobniki".<br />
+  - poprawka umożliwiająca wpisanie NIP odbiorcy zawierający litery dla odbiorcy<br />
+    dla którego wybrano kraj inny niż Polska. Dotychczas pole NIP mogło zawierać<br />
+    tylko cyfry. Warunkiem możliwości wpisania liter jest wybranie w polu "Kraj<br />
+    zamieszk." kraju innego niż Polska.<br />
+<br />
+  ApwPlan.exe, ApwPlanWorker.exe [2023.1.4.4]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+  Osozmok.dll [2023.2.3.0]<br />
+  - Dodanie mechanizmów walidujących kartoteki dostawców na potrzeby projektów<br />
+    pharmind GRID.<br />
+  - Optymalizacja działania usługi "Podobniki".<br />
+<br />
+  RepoCloud [2023.2.0.0]<br />
+  - Optymalizacja działania usługi.<br />
+<br />
+  CopyCloud [2023.1.4.4]<br />
+  - Wyeliminowanie problemu z odnajdywaniem metody w bibliotekach .Net.<br />
+    Problem w niektórych przypadkach ujawniał się podczas wysyłania kopii<br />
+    do chmury.<br />
+  - Umożliwienie zmiany hasła EWD w ustawieniach usługi.<br />
+    Dotychczas zmiana hasła była niemożliwa ze względu na autoryzację<br />
+    nieaktualnym hasłem przy wchodzeniu do ustawień usługi.<br />
+  - Dodano automatyczne kasowanie zadań wysyłania do chmury plików kopii<br />
+    usuniętych z kopii lokalnej przez użytkownika. Usługa w nieskończoność<br />
+    próbowała wysyłać kopie, których brakowało lokalnie.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2023.06.01 [2023.1.4.4]<br />
+  - Dodanie mechanizmów walidujących kartoteki dostawców na potrzeby projektów<br />
+    pharmind GRID.<br />
+  - Optymalizacja działania usługi "Podobniki".<br />
+  - Pharmind GRID: Optymalizacja raportowania sprzedaży z "Operacji<br />
+    magazynowych".<br />
+  - Promocje: obsługa przypadku gdy sprzedawany jest towar posiadający kilka<br />
+    dostaw i na poszczególne dostawy towaru obowiązują różne promocje.<br />
+    Program wcześniej mógł nie pokazać wszystkich promocji gdy wyłączona była<br />
+    opcja "Apw11.2.60 Automatycznie wybieraj promocję z najniższą ceną".<br />
+    Teraz w przypadku gdy kolejne dostawy na liście mają inny zestaw promocji<br />
+    użytkownik zostanie poproszony o wybranie właściwej promocji.<br />
+  - Rozwiązano problem objawiający się brakiem możliwości wysłania DRR przez<br />
+    stażystę z poziomu poprawy sprzedaży.<br />
+  - Dostosowano eZWM do wersji 2.1.8, która obowiązywać będzie od 1 lipca 2023r.<br />
+    Moduł eZWM realizować będzie zlecenia wystawione w wersji tradycyjnej<br />
+    (papierowej) jak również w wersji elektronicznej.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW12 -----------------------------</h3><br />
+2023.06.01 [2023.1.4.4]<br />
+  - Dodanie mechanizmów walidujących kartoteki dostawców na potrzeby projektów<br />
+    pharmind GRID.<br />
+  - Optymalizacja działania usługi "Podobniki".<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2023.06.01 [2023.1.4.4]<br />
+  - Dodanie mechanizmów walidujących kartoteki dostawców na potrzeby projektów<br />
+    pharmind GRID.<br />
+  - Optymalizacja działania usługi "Podobniki".<br />
+  - Rozwiązano problem objawiający się komunikatem: "violation of FOREIGN KEY<br />
+    constraint FK_WPPZ_KZAK on table WPPZ", który występował podczas próby<br />
+    usunięcia korekty w buforze dokumentów.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW14 -----------------------------</h3><br />
+2023.06.01 [2023.1.4.4]<br />
+  - Przyśpieszono proces wczytywania i wyświetlania listy różnic remanentowych<br />
+    na bazie danych Firebird.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW42 -----------------------------</h3><br />
+2023.06.01 [2023.1.4.4]<br />
+  - Rozbudowano "Raport stanu Oracle" o wyliczenie zajętości miejsca w tabelach.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW55 -----------------------------</h3><br />
+2023.06.01 [2023.1.4.4]<br />
+  - Dodanie mechanizmów walidujących kartoteki dostawców na potrzeby projektów<br />
+    pharmind GRID.<br />
+  - Optymalizacja działania usługi "Podobniki".<br />
+<br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2023.06.01 [2023.1.4.4]<br />
+  - Dodanie mechanizmów walidujących kartoteki dostawców na potrzeby projektów<br />
+    pharmind GRID.<br />
+  - Optymalizacja działania usługi "Podobniki".<br />
+  - Pharmind GRID: Optymalizacja raportowania sprzedaży z "Operacji<br />
+    magazynowych".<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2023.06.01<br />
+  ApwPlus [2023.1.4.4]<br />
+  - Aktualizacja struktury bazy danych.<br />
+<br />
+  ApwBase.dll [2023.1.4.4]<br />
+  - Uaktualniono bazę kart serwisowych.<br />
+<br />
+</body></html>

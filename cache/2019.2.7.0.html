@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2019.2.7.0</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2019.05.21<br />
+  apwharm.dll [2019.3.0.2]<br />
+  - Dodanie do logów komunikatu błędu podczas nieudanej próby<br />
+    wysyłki potwierdzenia zamówienia.<br />
+  - Zmiana harmonogramu automatycznego wysyłania potwierdzeń zamówień.<br />
+  - Poprawiono zarządzanie datą oferty dla produktów wysyłanych na stronę<br />
+    WWW dla źródła powstania hurtownia lub apteka własna. <br />
+  - Poprawiono błąd pojawiający się podczas uruchamiania okna pakuj<br />
+    z włączoną funkcją analizy zarezerowanych dostaw dla okna pakuj.<br />
+  - Poprawiono zarządzanie stanami magazynowymi dla aptek własnych<br />
+    dla procesu wysyłania oferty internetowej na stronę WWW.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2019.05.27 [2019.3.2.0]<br />
+  - E-recepta: Poprawiono wybór oddziału NFZ na formatce e-Recepty. <br />
+    Problem uniemożliwiający poprawę oddziału NFZ występował na bazie FB.<br />
+  - Dodano obsługę stawki ZW ustawionej na dowolnej literze w drukarce fiskalnej<br />
+    (wg rozporządzenia o kasach rejestrujących stawka ZW powinna znajdować się<br />
+    na literze E)<br />
+<br />
+<h3>---------------------------- Zmiany w module APW12 -----------------------------</h3><br />
+2019.05.23 [2019.3.0.1]<br />
+  - W podglądzie promocji poprawiono wyświetlanie ceny dla promocji zawierającej <br />
+    kilka tych samych towarów w różnych cenach. Problemem było wyświetlanie tej <br />
+	samej ceny dla różnych pozycji promocji dla tego samego towaru.<br />
+  - Wyświetlenie w Analizie Potencjału pozycji zamówienia informacji o liczbie <br />
+    nieudanych prób wysyłki zamówienia oraz komunikatu błędu.	<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2019.05.22 [2019.3.1.0]<br />
+   - W "Pozycjach dokumentu zakupu" dodano kolumnę "Podlega serial.".<br />
+     Pozycja ma charakter informacyjny, wartość pobrana z karty towaru:<br />
+     "Podlega serializacji".<br />
+   - W "Pozycjach dokumentu zakupu" dodano kolumnę "Ost. cena zakupu".<br />
+     Kolumnę włącza się w opcjach: "F11 Opcje".<br />
+     Kolumna widoczna jest tylko w buforze dokumentów.<br />
+     Oznaczenie w kolumnie: <br />
+       - strzałka do góry - ostatnia cena zakupu wyższa od bieżącej ceny zakupu<br />
+       - strzałka w dół - ostatnia cena zakupu niższa od bieżącej ceny zakupu<br />
+   - W "Pozycjach dokumentu zakupu" dodano kolumnę "Ost. cena detaliczna"<br />
+     Kolumnę włącza się w opcjach: "F11 Opcje".<br />
+     Kolumna widoczna jest tylko w buforze dokumentów.<br />
+     Oznaczenie w kolumnie: <br />
+       - strzałka do góry - ostatnia cena detaliczna wyższa od bieżącej <br />
+         ceny detalicznej<br />
+       - strzałka w dół - ostatnia cena detaliczna niższa od bieżącej <br />
+         ceny detalicznej<br />
+   - Włączenie lokalnych kartotek towarów w centralnej strategi marżowej SRM.<br />
+   - Optymalizacja zapytania, podczas filtrowania, w oknie "Odczyty <br />
+     z kolektora".<br />
+   - Zliczanie liczby prób wysyłki potwierdzenia realizacji zamówienia.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2019.05.27 [2019.3.0.1]<br />
+  - Eksport danych do Optimy. Poprawa wyliczania wartości refundacji dla <br />
+    leków recepturowych przy włączonej opcji "Obliczaj wartość składników <br />
+	recepturowych metodą proporcjonalną". Opcja: Admin.APW11.6.5.12<br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2019.05.23 [2019.3.4.0]<br />
+  - Zmieniono okno definicji stawek podatku VAT dla drukarki fiskalnej:<br />
+    umożliwiono ustawienie stawki VAT zwolnionej na wybranej literze. Zmiana<br />
+    ta umożliwia dostosowanie kolejności stawek VAT zgodnie z Rozporządzeniem<br />
+    Ministra Finansów z dnia 29 kwietnia 2019 r. w sprawie kas rejestrujących<br />
+<br />
+<h3>---------------------------- Zmiany w module APW42 -----------------------------</h3><br />
+2019.05.22 [2019.3.1.0]<br />
+  - Uproszczono funkcję "Czytnik kodów 2D" (w Apw42->Testy). <br />
+    Obecnie, po sczytaniu wzorcowego kodu umieszczonego w oknie, program <br />
+    wyświetli informację o nieprawidłowo ustawionej opcji Wspólne.1.13 <br />
+    i zasugeruje jej zmianę.<br />
+  - Dodano nową funkcję "Czytnik kodów 2D - rozszerzony test" (w Apw42->Testy).<br />
+    Po zeskanowaniu kodu 2D, umieszczonego w oknie, program wyświetli <br />
+    informację o sczytanych danych i poinformuje o zgodności z wzorcem.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW45 -----------------------------</h3><br />
+2019.05.21 [2019.3.0.2]<br />
+  - Poprawiono zarządzanie datą oferty dla produktów wysyłanych na stronę<br />
+    WWW dla źródła powstania hurtownia lub apteka własna. <br />
+  - Poprawiono błąd pojawiający się podczas uruchamiania okna pakuj<br />
+    z włączoną funkcją analizy zarezerowanych dostaw dla okna pakuj.<br />
+  - Poprawiono zarządzanie stanami magazynowymi dla aptek własnych<br />
+    dla procesu wysyłania oferty internetowej na stronę WWW.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW68 -----------------------------</h3><br />
+2019.05.27 [2019.3.0.6]<br />
+  - Dla generowanych raportów dodano funkcję sprawdzania poprawności kodu EAN.<br />
+    Błędny kod EAN (niepoprawna suma kontrolna kodu EAN) powodował błąd <br />
+	raportu TROSPOZ70 - "Podany kod EAN jest niepoprawny".<br />
+<br />
+<h3>----------------------------- ZMIANY.KS-MEDIVERIS ------------------------------</h3><br />
+2019.05.23 [2019.2.6.0]<br />
+  - Poprawa działania funkcji wycofywania kodów z NMVS w kolejce sprzedaży.<br />
+    System błędnie, po wrzuceniu tylko częsci towarów do kolejki (np. 1 recepta)<br />
+	błędnie próbował wycofywać wszsytkie pozycje sprzedażowe dla danego klienta.<br />
+  - Optymalizacja statusów weryfikacji autentyczności leków.<br />
+	Zmiana statusów ma na celu bardziej intuicyjny odczyt przez farmaceutów <br />
+	znaczenia czy proces serializacji danej pozycji przebiegł prawidłowo czy <br />
+	negatywnie.<br />
+    Następuję zmiana znaczenia trójkącika:<br />
+    - zielony: wszystkie kody z danej pozycji sprzedaży wycofane poprawnie<br />
+    - czerwony: choć jeden kod z danej pozycji miał negatywną weryfikację<br />
+    - żółty: że dla danej pozycji jest jakieś ostrzeżenie, np kod się w ogóle <br />
+	  nie wycofał lub kod w kolejce do wycofania.<br />
+  - Poprawa działania funkcji, która powodowała aletry podwójnego zeskanownaia <br />
+    kodów. System w pewnych przypadkach pozostawiał w pamieci raz zczytany kod <br />
+	na liście kodów do wycofania i przy zapłacie próbował go wycofywać 2 razy.<br />
+  - Poprawa działania funkcji, która podczas przyjmowania zwrotu towaru i <br />
+    skanowaniu kodu 2D informowała nas o wysprzedanej dostawie.<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2019.05.24<br />
+  Apwplus.exe [2019.3.5.0]<br />
+  - Uaktualniono strukturę bazy danych<br />
+<br />
+2019.05.21<br />
+  Apwplus.exe [2019.3.3.0]<br />
+  - Uaktualniono strukturę bazy danych<br />
+<br />
+</body></html>

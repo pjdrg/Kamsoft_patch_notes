@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2021.0.2.2</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2020.09.22<br />
+  APWMAIN.EXE [2021.0.2.2]<br />
+  - Poprawki do aktualizatora.<br />
+  <br />
+  Biblioteki P1 [2021.0.2.2]<br />
+  - Apw23: Przez błędny odczyt kodu państwa z DRR wykazywana była różnica w <br />
+    "Raporcie spójności dany KS-AOW i wysłanych DRR".<br />
+  <br />
+  KSUSInstaller.exe [2020.3.0.0]<br />
+  - Usunięcie problemu dototyczącego reinstalacji usługi aktualizacji.<br />
+  <br />
+  zasoby.dll [2021.0.2.2]<br />
+  - Dodano nowe zasoby graficzne.<br />
+  <br />
+  OphOneRepoSvc.exe [2020.3.1.3]<br />
+  - poprawiono obsługę zmiany hasła do EWD <br />
+  - sygnalizacja problemu z uszkodzonymi dokumentami w bazie danych (ikona + tooltip w monitorze)<br />
+  - zmieniono sposób parametryzowania usługi w zakresie czasu przechowywania dokumentów - <br />
+    w przypadku zmiany na wyższą wartość dokumenty nie są  przywracane z "chmury" <br />
+    lecz dłużej kolekcjonowane.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2020.09.22 [2021.0.2.2]<br />
+  - KtoMaLek: obsługa dodatkowych ostrzeżeń przy usuwaniu rezerwacji pacjentów<br />
+  - Rozdzielono uprawnienia do wydawania leków z grup A, N, I-P, II-P na dwa<br />
+    oddzielne uprawnienia: do wykazu A i grupy N i I-P, II-P <br />
+  - Dodano ostrzeżenie wyświetlające się przy wydawaniu leków z wykazu A przez<br />
+    osobę nie będącą magistrem farmacji (rola biznesowa na karcie personelu)<br />
+    Ostrzeżenie wyświetli się, jeśli osoba nie będąca magistrem otrzyma <br />
+    uprawnienie do wydawania leków z wykazu A. Ostrzeżenie można wyłączyć opcją <br />
+    Apw11.2.152<br />
+  - Dodano ostrzeżenia przy wystawianiu faktury VAT na podstawie paragonu.<br />
+    W przypadku, gdy system nie zarejestrował numeru NIP przy wystawianiu <br />
+    paragonu a wystawiamy fakturę dla podmiotu gospodarczego lub gdy <br />
+    zarejestrowany numer NIP różni się od numeru NIP wybranego nabywcy.    <br />
+<br />
+<h3>---------------------------- Zmiany w module APW12 -----------------------------</h3><br />
+2020.09.22 [2021.0.2.2]<br />
+  - Obsługa usługi Radar Szans Biznesowych<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2020.09.22 [2021.0.2.2]<br />
+  - Poprawa aktualizacji statusu reklamacji poprzez "Aktualizuj wszystkie", <br />
+    tak by status reklamacji nie był pobierany dla pozycji jeszcze nie wysłanych. <br />
+    Pobieranie statusu reklamacji utworzonych powodował wygenerowanie błędu po <br />
+    stronie hurtowni, jak również przestawienie statusu na wysłane.<br />
+  - Poprawa wyboru pozycji reklamowanych odczytanych kodem kreskowym.<br />
+  - Poprawiono przyjęcie dokumentu na magazyn. Poprawa dotyczy braku <br />
+    podsumowania pod dokumentem.<br />
+  <br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2020.09.22 [2021.0.2.2]<br />
+  - Dodano możliwość eksportu oznaczen dla JPK dla Comarch Optimy i Insert Edi++<br />
+  - Dodano nowy eksport "Przekazanie raportu do FK w formacie DBF". Format ten <br />
+    umożliwia przekazywanie oznaczenia dla JPK.<br />
+<br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2020.09.22 [2021.0.2.2]<br />
+ - Obsługa usługi Radar Szans Biznesowych<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2020.09.22<br />
+  Apwplus.exe [2021.0.2.2]<br />
+  - Przepisano domyślne uprawnienia dla funkcji w Apw11<br />
+<br />
+</body></html>

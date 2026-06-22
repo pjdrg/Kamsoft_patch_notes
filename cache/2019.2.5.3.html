@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2019.2.5.3</title>
+</head>
+<body>
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2019.04.11 [2019.2.4.0]<br />
+  - E-Recepta: Poprawa błędu w automatycznym łączeniu pozycji dla recept <br />
+    papierowych. Efekty łączenia nie były w całości zapisywane w bazie <br />
+	danych, gdy dochodziło do błędów przy próbie wysłania DRR. Błąd <br />
+	powodował niepoprawne przypisanie różnych leków do tej samej pozycji <br />
+	recepty.<br />
+  - E-Recepta: Poprawa błędu w automatycznym łączeniu pozycji e-Recepty. <br />
+    Program dla wydania różnych towarów (w ramach jednej e-Recepty) tworzył <br />
+	DRR dla kolejnych pozycji. Przy czym e-Recepta wystawiana jest zawsze <br />
+	na jedną pozycję, a realizacje powinny się odnosić wyłącznie do tej <br />
+	jednej pozycji. Błąd uwidaczniał się przy wydaniu tego samego leku w <br />
+	innych opakowaniach niż tych przepisanych na e-Recepcie. Przykładowo <br />
+	zamiast 1 op. 90 tabl. wydawano 1 op. 60 tabl. + 1 op. 30 tabl.<br />
+	SIM odrzucał drugi DRR z powodu błędnego numeru pozycji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW68 -----------------------------</h3><br />
+2019.04.11 [2019.2.2.4]<br />
+  - Poprawiono przekazywanie identyfikatora pierwotnego dla<br />
+    raportu korekty wysyłanej do serwisu ZSMOPL. W niektórych <br />
+	przypadkach generowało to błąd serwisu "KM3 - przekazano<br />
+	błędny identyfikator komunikatu pierwotnego."<br />
+<br />
+</body></html>

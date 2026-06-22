@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2024.1.2.1</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2024.09.26<br />
+  Slowniki.dll [2024.1.2.1]<br />
+  - Dostosowanie modułu do obsługi KS-MediVeris w wersji V5.<br />
+  - Rozwiązano problem wysyłki jednej pozycji zamówienia podczas zamawiania<br />
+    z zapytania o stan i cenę towaru, gdy złączono zamówienia przy weryfikacji<br />
+    limitu logistycznego.<br />
+<br />
+  ApwMain, Apman, ApwPlan.exe, ApwPlanWorker.exe, ApwHarm.dll,<br />
+  ApwIap.dll [2024.1.2.1]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+  Zasoby.dll [2024.1.2.1]<br />
+  - Aktualizacja opisów opcji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2024.09.26 [2024.1.2.1]<br />
+  - Dostosowanie modułu do obsługi KS-MediVeris w wersji V5.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW12 -----------------------------</h3><br />
+2024.09.26 [2024.1.2.1]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+  - Rozwiązano problem wysyłki jednej pozycji podczas zamawiania z promocji<br />
+    dostawcy, gdy złączono zamówienia przy weryfikacji limitu logistycznego.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2024.09.26 [2024.1.2.1]<br />
+  - Dostosowanie modułu do obsługi KS-MediVeris w wersji V5.<br />
+  - Modyfikacja strategii centralnej. Usunięcie blokady edycji ceny detalicznej<br />
+    przy wprowadzaniu. Poprawka, która usuwa blokadą tylko jeżeli cena została<br />
+    ustalona na podstawie strategii KS-OmniPharm.<br />
+  - Reklamacje -> F6 Filtrowanie reklamacji – dodano opcję filtrowania wg numeru<br />
+    zamówienia centralnego.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW14 -----------------------------</h3><br />
+2024.09.26 [2024.1.2.1]<br />
+  - Zbiorczy raport różnic remanentowych - optymalizacja zapytań SQL.<br />
+  - Rozwiązano problem z automatycznym rozliczaniem skanów w inwentaryzacji,<br />
+    poprzez rozszerzenie sposobu odczytu numeru magazynu w przypadku braku<br />
+    możliwości odczytu numeru stanowiska z rejestru dla działających usług.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2024.09.26 [2024.1.2.1]<br />
+  - Eksport do KS-FKW(xml) do sekcji kartoteka kontrahenta został dodany nowy<br />
+    węzeł "nr-fk", w którym będzie przekazywany identyfikator kontrahenta<br />
+    w systemie FK.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW23 -----------------------------</h3><br />
+2024.09.26 [2024.1.2.1]<br />
+  - Dostosowanie modułu do obsługi KS-MediVeris w wersji V5.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW25 -----------------------------</h3><br />
+2024.09.26 [2024.1.2.1]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW31 -----------------------------</h3><br />
+2024.09.26 [2024.1.2.1]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2024.09.26 [2024.1.2.1]<br />
+  - Dostosowanie modułu do obsługi KS-MediVeris w wersji V5.<br />
+  - Wysyłanie maili poprzez konto mailowe Google: dodano obsługę nowej formy<br />
+    autoryzacji oAuth2.0. Szczegóły rozwiązania wraz z poradnikiem można znaleźć<br />
+    w dokumencie "Autoryzacja oAuth 2 w systemie KS-AOW".<br />
+<br />
+<h3>---------------------------- Zmiany w module APW44 -----------------------------</h3><br />
+2024.09.26 [2024.1.2.1]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW45 -----------------------------</h3><br />
+2024.09.26 [2024.1.2.1]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW68 -----------------------------</h3><br />
+2024.09.26 [2024.1.2.1]<br />
+   - Rozwiązano problem z pojawianiem się statusu TROSPOZ77 "Stan wstrzymany<br />
+     serii nie może być większy od stanu wstrzymanego produktu", w pewnych<br />
+     przypadkach w pole ilość wpisywała się wartość wstrzymanej serii.<br />
+<br />
+<h3>--------------------------------- Zmiany w EDE ---------------------------------</h3><br />
+2024.09.26 [2024.1.2.1]<br />
+  - Usunięcie problemów występujących podczas ręcznej wymiany licencji w KS-EDE.<br />
+<br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2024.09.26 [2024.1.2.1]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>----------------------------- ZMIANY.KS-MEDIVERIS ------------------------------</h3><br />
+2024.09.26<br />
+  MVCommunication.dll [2024.1.2.0]<br />
+  - Wdrożenie interfejsu w wersji V5 dla użytkowników końcowych dla systemu<br />
+    PLMVS (KOWAL). Aktualnie PLMVS działa w wersji V4, która zostanie wyłączona<br />
+    15.10.2024. Wdrożenie nowej wersji podyktowane jest<br />
+    zmianami systemowymi po stronie PLMVS. Brak nowej wersji V5 uniemożliwi<br />
+    skuteczne podłączenie do systemu KOWAL a tym samym spełnianie obowiązków<br />
+    serializacyjnych.<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2024.09.26<br />
+  ApwPlus [2024.1.2.1]<br />
+  - Zaktualizowano strukturę bazy danych.<br />
+<br />
+  DBCopy [2024.1.2.1]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+</body></html>

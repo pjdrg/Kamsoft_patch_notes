@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2021.1.4.5</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2021.03.24<br />
+  - CopyCloud - pilotaż<br />
+<br />
+  OphOneCopySvc.exe [2021.1.4.5]<br />
+   - Poprawa automatycznego tworzenia sie ustawień usługi - nie we wszystkich <br />
+     przypadkach usługa tworzyła ustawienia automatycznie.<br />
+   - Dodano weryfikację pod względem spełniania wymagań klucza syfrującego<br />
+     generowanego przy automatycznym tworzeniu ustawień usługi.<br />
+<br />
+  OphOneCopyCloudMonitor.exe [2021.1.4.5]<br />
+   - Przebudowa panelu zawierającego informacje o stanie usługi.<br />
+<br />
+  Slowniki.dll [2021.1.4.5]<br />
+  - TurboBLOZ: optymalizacja czasu parsowania danych uzyskanych z usługi.<br />
+  - Zmiana wyglądu okna z komunikatem (Nęcik) w zamówieniach.<br />
+<br />
+2021.03.17 <br />
+  OphOneRepoSvc.exe [2021.1.0.3]<br />
+  - KS-OmniPharm One - RepoCloud - usprawniono mechanizm weryfikacji obecności<br />
+    dokumentów w chmurze<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2021.03.24 [2021.1.4.5]<br />
+  - Modyfikacja wydruku raportu dobowego dla drukarek Novitus z kopią <br />
+    elektroniczną: Po wywołaniu wydruku z Apw11 drukarka nie będzie prosić<br />
+    o potwierdzenie daty<br />
+  - W poprawie sprzedaży poprawiono wyświetlanie jednostki dla korekty zaliczki: <br />
+    Zamiast 'op' będzie wyświetlane 'zal'<br />
+  - Ujednolicono opisy uprawnień w polach wyboru w Apw11, Apw21 i Apw23 <br />
+  - Na wydruku graficznym recepty farmaceutycznej dodano imię, nazwisko, tytuł<br />
+    i numer PWZ  osoby wystawiającej<br />
+  - Wydruk faktury: optymalizacja niektórych zapytań do bazy danych.<br />
+  - Optymalizacja zapytań do pobierania i wyświetlania KOMINów.<br />
+  - eZWM: w Sprzedaży w oknie "Dokumenty realizacji" dodano możliwość pobrania <br />
+    wydruku części II.<br />
+  - eZWM: w Sprzedaży w "Kody eZWM"->"[F8] Przegląd"->"[F5] Ostatnia sprzedaż" <br />
+    dodano możliwość podglądu sprzedaży wybranego pacjenta.<br />
+  - CopyCloud - pilotaż - poprawa raportu o stanie usługi OnmiPharm One CopyCloud <br />
+    wykonywanego po raporcie kasowym fiskalnym jeśli był wywoływany na stanowisku <br />
+    nieserwerowym. Wyświetlane było nieaktualne ostrzeżenie o braku zabezpieczenia <br />
+    klucza szyfrującego oraz niewykonaniu kopii w harmonogramie.<br />
+  - Sprzedaż podstawowa->NMVS->Leki sprzedane z alertami/komunikatami - dodanie <br />
+    możliwości kopiowania alertu do schowka Ctrl+C.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW12 -----------------------------</h3><br />
+2021.03.24 [2021.1.4.5]<br />
+  - Optymalizacja zapytań do pobierania i wyświetlania KOMINów.<br />
+  - Zmiana wyglądu okna z komunikatem (Nęcik) w zamówieniach.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2021.03.24 [2021.1.4.5]<br />
+  - W oknie "Kontrola dokumentów zakupu" dodano kolumnę "Dostawca" (domyślnie ukryta).<br />
+  - W oknie "Kontrola dokumentów zakupu" dodano możliwość wyboru <br />
+    widoczności kolumn (przycisk: "[F12] Opcje").<br />
+  - Optymalizacja zapytań do pobierania i wyświetlania KOMINów.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW14 -----------------------------</h3><br />
+2021.03.24 [2021.1.4.5]<br />
+  -  Poprawka do aktualizacji karty zakupu przy zmianie towaru. Nie tworzyła się <br />
+     "Historia karty zakupu" oraz dokument raportu z Aktualizacji.<br />
+  - Optymalizacja zapytań do pobierania i wyświetlania KOMINów.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2021.03.24 [2021.1.4.5]<br />
+  - Poprawiono filtr w Zbiorczej ewidencji recept: dodano możliwość <br />
+    odfiltrowania recept bez wpisanego oddziału NFZ<br />
+  - W zestawieniach środków pomocniczych dodano możliwość powiązania <br />
+    lub zmiany powiązania towaru z pozycją produktu z umowy z NFZ.<br />
+    Prawym przyciskiem myszki na pozycji wniosku: "Pozycja w umowie NFZ (UMX)"<br />
+  - Eksport do StreamSoft ALA - poprawa pola nazwa krótka. Nazwa krótka będzie <br />
+    pobierania z pola skrót na karcie odbiorcy. W przypadku braku uzupełnionego <br />
+    pola skrót, nazwa krótka będzie pobierana z pierwszego pola - Nazwisko.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW23 -----------------------------</h3><br />
+2021.03.24 [2021.1.4.5]<br />
+  - Ujednolicono opisy uprawnień w polach wyboru w Apw11, Apw21 i Apw23.<br />
+  - Książka kontroli narkotyków i psychotropów: umożliwienie wykonania wydruku<br />
+    bez pozycji, z dodatkowym opisem o braku przychodów i rozchodów w danym<br />
+    okresie.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2021.03.24 [2021.1.4.5]<br />
+  - CopyCloud - pilotaż - poprawa raportu o stanie usługi OnmiPharm One CopyCloud <br />
+    jeśli był wywoływany na stanowisku nieserwerowym. Wyświetlane było nieaktualne<br />
+    ostrzeżenie o braku zabezpieczenia klucza szyfrującego oraz niewykonaniu kopii<br />
+    w harmonogramie.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW45 -----------------------------</h3><br />
+2021.03.24 [2021.1.4.5]<br />
+  -  Dodano możliwość edycji form transportu w aptece internetowej uproszczonej.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW55 -----------------------------</h3><br />
+2021.03.24 [2021.1.4.5]<br />
+  - Kompilacja w związku ze zmianami interfejsów w module Slowniki.dll.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW68 -----------------------------</h3><br />
+2021.03.24 [2021.1.4.5]<br />
+  - Generowanie raportu obrotów i stanów. Dodanie zabezpieczeń przed <br />
+    wygenerowaniem korekty raportu do korekty lub raportu pierwotnego, <br />
+    który nigdy nie był wysłany.<br />
+<br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2021.03.24 [2021.1.4.5]<br />
+  - Kompilacja w związku ze zmianami interfejsów w module Slowniki.dll.<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2021.03.24<br />
+  ApwPlus.exe [2021.1.4.5]<br />
+  - Uaktualniono strukturę bazy danych.<br />
+  <br />
+</body></html>

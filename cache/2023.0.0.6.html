@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2023.0.0.6</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2022.09.02<br />
+  ApwMain.exe [2023.0.0.6]<br />
+  - Test systemu aptecznego: dla bazy danych Oracle dodano w czynności<br />
+    sprawdzającej dostęp do bazy danych weryfikację kompatybilności wersji<br />
+    klienta Oracle, wykorzystanego do ustanowienia połączenia do serwera<br />
+    bazy danych, z wersją serwera bazodanowego Oracle.<br />
+    Weryfikacja przeprowadzana jest jedynie w sytuacji, kiedy połączenie<br />
+    do bazy danych odbywa się w trybie OCI.<br />
+  - Dodana sygnalizacja wykrytego braku kompatybilności wersji klienta<br />
+    zainstalowanego na stanowisku aptecznym i wersji serwera bazodanowego<br />
+    zainstalowanego na serwerze aptecznym.<br />
+    Brak kompatybilności sygnalizowany jest w postaci ikonki uwagi umieszczonej<br />
+    u dołu ekranu, zaraz obok informacji o połączeniu do bazy danych.<br />
+    Ikonka wyświetlana jest jedynie w sytuacji, kiedy połączenie do bazy danych<br />
+    odbywa się w trybie OCI i do ustanowienia połączenia wykorzystano klienta<br />
+    Oracle w wersji niekompatybilnej z wersją serwera bazodanowego Oracle.<br />
+    Najechanie i kliknięcie w ikonkę uwagi pozwoli uzyskać szczegółową<br />
+    informację o braku kompatybilności.<br />
+<br />
+</body></html>

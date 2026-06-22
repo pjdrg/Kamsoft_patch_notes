@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2026.2.0.6</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2026.06.18<br />
+  Slowniki.dll [2026.2.0.6]<br />
+  - Zmiany w Zapytaniu o stan i cenę towaru. Rozwiązano problem objawiający się<br />
+    wyświetleniem zdublowanych komunikatów potwierdzających wysłanie zamówienia<br />
+    ze sprzedaży. Obecnie dla każdego zamówienia generowany jest pojedynczy<br />
+    komunikat.<br />
+  - Karta pacjenta: dodano do raportu użycia danych osobowych informację<br />
+    o weryfikacji historii recept pacjenta.<br />
+  - Dodano nową funkcjonalność zgłaszania działań niepożądanych.<br />
+  - Pharmind GRID: optymalizacja raportowania danych transakcyjnych.<br />
+  - Dostosowano mechanizmy logowania i polityki haseł do wymagań bezpieczeństwa<br />
+    (NIS2). Dodano nowe opcje modułów umożliwiające konfigurację:<br />
+    * okna czasowego zliczania nieudanych prób logowania,<br />
+    * maksymalnej liczby nieudanych prób logowania,<br />
+    * czasu blokady konta po przekroczeniu limitu prób,<br />
+    * liczby dni przed wygaśnięciem hasła, od której wyświetlane jest<br />
+      powiadomienie.<br />
+    Rozszerzono proces logowania o:<br />
+    * blokowanie kont użytkowników po przekroczeniu limitu nieudanych prób<br />
+      logowania,<br />
+    * informowanie o zbliżającym się terminie wygaśnięcia hasła,<br />
+    * weryfikację zgodności aktualnego hasła z obowiązującą polityką haseł.<br />
+<br />
+  ApwHarm.dll [2026.2.0.6]<br />
+  - Zmiany w pharmind GRID Zamówienia Automatyczne. Modyfikacja uszczelniająca<br />
+    proces aktualizacji promocji oraz tworzenia na jej podstawie zamówień.<br />
+<br />
+  RepoCloud [2026.2.0.6]<br />
+  - Optymalizacja działania usługi.<br />
+<br />
+  OSOZMOK.dll [2026.1.2.4]<br />
+  - Dodano nową funkcjonalność zgłaszania działań niepożądanych.<br />
+<br />
+  P1*.dll [2026.2.0.6]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+  ApwMain.exe [2026.2.0.6]<br />
+  - Modyfikacja obliczania wartości punktów wskaźnika bezpieczeństwa.<br />
+<br />
+  Zasoby.dll [2026.2.0.6]<br />
+  - Aktualizacja opisów opcji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2026.06.18 [2026.2.0.6]<br />
+  - Dodano możliwość weryfikacji historii recept pacjenta podczas wystawiania<br />
+    e-recepty farmaceutycznej na refundowane preparaty immunologiczne<br />
+    z uprawnieniem "Senior". Funkcja została wprowadzona w celu spełnienia<br />
+    ustawowego obowiązku weryfikacji historii ordynacji wynikającego z ustawy<br />
+    o świadczeniach opieki zdrowotnej finansowanych ze środków publicznych<br />
+    (art. 43b).<br />
+  - Operacje magazynowe: usprawniono obsługę numeracji dokumentów.<br />
+    Dokumenty bez nadanego numeru otrzymają go automatycznie lub użytkownik<br />
+    zostanie poinformowany o konieczności nadania go ręcznie.<br />
+  - Dokument utylizacji: poprawiono prezentację daty sporządzenia dokumentu<br />
+    na wydruku tekstowym, ujednolicając ją z pozostałymi formatami wydruku.<br />
+  - Sprzedaż wiązana KS-OmniPharm: rozwiązano problem związany z niedziałającym<br />
+    przyciskiem F11 – Odrzuć dla okna sprzedaży wiązanej komplementarnej<br />
+    z możliwością wyboru większej ilości towarów sugerowanych (sprzedaż<br />
+    wielokrotna).<br />
+  - Dodano nową funkcjonalność zgłaszania działań niepożądanych.<br />
+  - Udostępniono możliwość skopiowania z systemu aptecznego danych potrzebnych<br />
+    do wypełnienia protokołu sporządzania leku, tak aby farmaceuta mógł<br />
+    je wkleić do używanego przez siebie dokumentu i samodzielnie uzupełnić<br />
+    pozostałą część. Funkcja dostępna jest w oknie wyceny receptury<br />
+    pod klawiszem F10 Drukuj -> Dane do raportu sporządzania leku.<br />
+  - Pharmind GRID: optymalizacja raportowania danych transakcyjnych.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW12 -----------------------------</h3><br />
+2026.06.18 [2026.2.0.6]<br />
+  - Zmiany w pharmind GRID Zamówienia Automatyczne: zapewnienie użytkownikowi<br />
+    natychmiastowego wglądu w stan procesu zamówień automatycznych, tak by móc<br />
+    szybciej reagować i utrzymywać ciągłość działania systemu zamówień<br />
+    automatycznych.<br />
+  - Zmiany w pharmind GRID Zamówienia Automatyczne: dodano możliwość ręcznego<br />
+    uruchamiania zamówień automatycznych dla wybranych akcji sprzedażowych.<br />
+  - Pharmind GRID: optymalizacja raportowania danych transakcyjnych.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2026.06.18 [2026.2.0.6]<br />
+  - Rozwiązano problem wolnego odświeżania bufora dokumentów zakupów<br />
+    na instalacjach pracujących z bazą Oracle.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW14 -----------------------------</h3><br />
+2026.06.18 [2026.2.0.6]<br />
+  - Wydruk zmienionych pozycji z bufora: poprawiono formatowanie wydruku<br />
+    oraz sposób prezentacji danych, eliminując problemy z nieprawidłowym układem<br />
+    tabeli.<br />
+  - Poprawa precyzji liczenia wartości magazynu na wydruku "Raporty różnic<br />
+    remanentowych" -> "Wydruk pozycji zmienionych(uproszczony)".<br />
+    Z powodu nieodpowiednich zaokrągleń wartości odbiegały od wykazanych<br />
+    w pozostałych dokumentach różnic remanentowych.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2026.06.18 [2026.2.0.6]<br />
+  - Rozwiązano problem wolnego wczytywania umów UMX.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW35 -----------------------------</h3><br />
+2026.06.18 [2026.2.0.6]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2026.06.18 [2026.2.0.6]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW42 -----------------------------</h3><br />
+2026.06.18 [2026.2.0.6]<br />
+  - Aktualizacja struktury bazy danych.<br />
+<br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2026.06.18 [2026.2.0.6]<br />
+  - Pharmind GRID: optymalizacja raportowania danych transakcyjnych.<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2026.06.18<br />
+  ApwPlus [2026.2.0.6]<br />
+  - Aktualizacja struktury bazy danych.<br />
+<br />
+  OraPack [2026.2.0.6]<br />
+  - Optymalizacja obcięcia bazy.<br />
+<br />
+  WaUtil [2026.2.0.6]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+</body></html>

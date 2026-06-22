@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2021.1.3.5</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2021.02.03 <br />
+  Apwharm.dll [2021.1.3.5]<br />
+  - Rozbudowano realizację rezerwacji dla apteki internetowej<br />
+    o aktualziację wskaźnika dla apteki internetowej<br />
+    oraz wartości przed rabatem.<br />
+  - Rozudowano eksport oferty przyrostowej o możliwość<br />
+    weryfikacji stanów magazynowych.<br />
+  - Porpawiono proces importowania zamówień internetowych na bazie danych.<br />
+    Poprawka dodaje dodatkową ochronę przed możliwością występowania<br />
+    zdublowanych zamówień w procesie pobierania zamówień.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2021.02.03 [2021.1.3.5]<br />
+  - Wprowadzono obsługę nowych kodów uprawnień dodatkowych: <br />
+    1) 472AŻ30 - weteran poszkodowany - żołnierz, którego ustalony procentowy <br />
+       uszczerbek na zdrowiu wynosi co najmniej 30%,<br />
+    2) 472AF30 - weteran poszkodowany - funkcjonariusz i zwolniony ze służby <br />
+       funkcjonariusz Policji, Straży Granicznej, Biura Ochrony Rządu, Służby <br />
+       Ochrony Państwa, Agencji Bezpieczeństwa Wewnętrznego, Agencji Wywiadu <br />
+       oraz strażak i zwolniony ze służby strażak Państwowej Straży Pożarnej, <br />
+       którego ustalony procentowy uszczerbek na zdrowiu wynosi co najmniej 30%.<br />
+  - eZWM: Kody eZWM ->F8 Przegląd - Wybór ograniczony do zleceń zrealizowanych<br />
+    w ostatnich 3 miesiącach.<br />
+  - Rozbudowa funkcji do podania numeru NIP przed wydrukiem paragonu (N po<br />
+    pierwszej gwiazdce): dodano możliwość sprawdzenia numeru NIP w bazie BIR,<br />
+    wybrania kontrahenta z bazy oraz założenia nowego kontrahenta na podstawie<br />
+    bazy BIR.<br />
+  - Dodano ostrzeżenie o niepodsumowanej sprzedaży przy wyjściu z podstawowej<br />
+    sprzedaży leku oraz blokadę dodania nowego dokumentu w operacjach <br />
+    magazynowych.<br />
+  - e-Recepta: poprawka pobierania e-Recepty z SIM, próba odczytu z recepty<br />
+    nieprawidłowej wartości daty urodzenia mogła zakończyć się błędem.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2021.02.03 [2021.1.3.5]<br />
+  - W buforze dokumentów skrócono informacje o statusie weryfikacji dokumentu.<br />
+    Informacja o weryfikacji dokumentu są istotne dla aptek, które <br />
+    korzystają z funkcji: "Weryfikacja Shift+F5".<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2021.02.03 [2021.1.3.5]<br />
+  - Eksport do KS-PPS. Poprawiono eksport danych za okres od stycznia 2021.<br />
+    Wprowadzono obsługę nowych kodów uprawnień dodatkowych: 472AŻ30 oraz 472AF30.<br />
+  - Poprawiono wykonywanie korekty zestawienia refundacyjnego: w przypadku<br />
+    korekty pozycji z zamiennikiem system nie pobierał nowych wartości <br />
+    zamiennika ze sprzedaży.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW23 -----------------------------</h3><br />
+2021.02.03 [2021.1.3.5]<br />
+  - Wprowadzono obsługę nowych kodów uprawnień dodatkowych: 472AŻ30 oraz 472AF30.<br />
+  - Retaksacja: poprawka ładowania danych e-Recepty, próba odczytu z recepty<br />
+    nieprawidłowej wartości daty urodzenia mogła zakończyć się błędem.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW45 -----------------------------</h3><br />
+2021.02.03 [2021.1.3.5]<br />
+  - Poprawa aktualizacji formy transportu o wskaźnik<br />
+    dla apteki internetowej dla generowania dokumentów<br />
+    sprzedaży.<br />
+  - Rozbudowano realizację rezerwacji dla apteki internetowej<br />
+    o aktualziację wskaźnika dla apteki internetowej<br />
+    oraz wartości pozycji sprzedaży przed rabatem.<br />
+  - Dodano nową opcję dla weryfikacji stanów magazynowych dla eksportu<br />
+    oferty przyrostowej. Opcja jest dostępna w APW45/Komunikacja<br />
+    /ustawienia/ustawienia/oferta/opcje dodatkowe.<br />
+  - Dodano nowe opcje do zarządzania kodami kreskowymi<br />
+    dla zamówień interentowych. Opcje są dostępne w APW45/Reguły<br />
+    /Zamówienia/Kody Kreskowe. Teraz można zarządzać procesem<br />
+    wyszukiwania, rejestracji zbierania oraz pakowania za pomocą<br />
+    skanowania kodu kreskowego z numerem zamówienia. Kod ten drukujemy<br />
+    w dolnej cześci zamówienia internetowego.<br />
+  - Porpawiono proces importowania zamówień internetowych na bazie danych.<br />
+    Poprawka dodaje dodatkową ochronę przed możliwością występowania<br />
+    zdublowanych zamówień w procesie pobierania zamówień.<br />
+  - Poprawiono wydajnośc oraz pracę z wieloma ofertami w oknie<br />
+    do dodawania nowych pozycji do zamówień internetowych na podstawie<br />
+    bazy interentowej.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW68 -----------------------------</h3><br />
+2021.02.03 [2021.1.3.5]<br />
+  - Dodano wykluczenie z raportowania MM-ek do innego magazynu dla tej samej jednostki.<br />
+    Raportowanie tych transakcji powodowało ostrzeżenie<br />
+    TROS55 - Raportujący i kontrahent to ten sam podmiot.<br />
+<br />
+</body></html>

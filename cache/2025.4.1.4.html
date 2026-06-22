@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2025.4.1.4</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2025.10.23<br />
+  ApwHarm.dll [2025.4.1.4]<br />
+  - Modyfikacja w zakresie zamówień automatycznych pharmind GRID. Dodano <br />
+    funkcjonalność podglądu, porównania i akceptacji nowych warunków zamówień <br />
+    automatycznych. Modyfikacja algorytmu zamówień automatycznych <br />
+    uwzględniającego nowe parametry takie jak Ilość opakowań do wzbudzenia <br />
+    sprzedaży, ilość dni warunkująca zamówienia do minimum, ilość dni bez <br />
+    średniej sprzedaży, minimum logistyczne.<br />
+<br />
+  Slowniki.dll, Zasoby.dll [2025.4.1.4]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+  APWMain.exe [2025.4.1.4]<br />
+  - Modyfikacja w zakresie testu KS-EDE w systemie aptecznym.<br />
+<br />
+  KSBDOApwDD.dll<br />
+  - Poprawa wyliczania wskaźnika bezpieczeństwa.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2025.10.23 [2025.4.1.4]<br />
+  - eZWM: Wprowadzono zmiany umożliwiające wycofywanie realizacji i pobrań<br />
+    przez podwykonawców, zgodnie z nową specyfikacją obowiązującą od <br />
+    1 listopada 2025 r.<br />
+  - KtoMaLek: Obsługa rezerwacji, które posiadają jednocześnie pozycje do <br />
+    realizacji z aktualnych stanów magazynowych oraz pozycje realizowane <br />
+    z dedykowanych dokumentów zakupu.<br />
+  - Rozwiązanie problemu podwójnego wycofywania kodu 2D dla leku umieszczonego<br />
+    w kolejce i wycofanego, dla którego została pobrana zaliczka a po 10 dniach<br />
+    została jeszcze zamieniona recepta. W przypadku gdy wartość pobranej <br />
+    zaliczki była większa niż nowa wartość zapłaty to w systemie generowała się<br />
+    korekta i nowa sprzedaż. W wyniku tej nowej sprzedaży kod 2D był ponownie <br />
+    wycofywany. Wycofywanie powodowało alert w NAMS.<br />
+  - Dostosowanie programu do wersji usługi internetowej umożliwiającej<br />
+    realizację jednej e-Recepty w różnych aptekach, zgodnie z dokumentacją<br />
+    integracyjną systemu P1 w wersji W28.0.2 z dnia 2025-09-10. Wprowadzono <br />
+    obsługę Dokumentu Stanu Realizacji (DSR) oraz mechanizm zapisu referencji <br />
+    do tego dokumentu na Dokumencie Realizacji Recepty (DRR), zgodnie z <br />
+    wymaganiami systemu P1.  <br />
+    Funkcjonalność dostępna będzie dopiero po jej uruchomieniu przez Centrum<br />
+    e-Zdrowia. Opis procesu oraz scenariusze użycia zostaną opublikowane<br />
+    w instrukcji systemowej "E-Recepta P1 w systemie KS-AOW". <br />
+	<br />
+<h3>---------------------------- Zmiany w module APW12 -----------------------------</h3><br />
+2025.10.23 [2025.4.1.4]<br />
+  - Modyfikacja w zakresie zamówień automatycznych pharmind GRID. <br />
+    Dodano funkcjonalność podglądu, porównania i akceptacji nowych warunków <br />
+    zamówień automatycznych. Modyfikacja algorytmu zamówień automatycznych <br />
+    uwzględniającego nowe parametry takie jak Ilość opakowań do wzbudzenia <br />
+    sprzedaży, ilość dni warunkująca zamówienia do minimum, ilość dni bez <br />
+    średniej sprzedaży, minimum logistyczne.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2025.10.23 [2025.4.1.4]<br />
+  - Rozwiązano problemy wpływające na stabilność i szybkość działania modułu, <br />
+    w tym sytuacje skutkujące komunikatem Access Violation.<br />
+  - Modyfikacja w zakresie zamówień automatycznych pharmind GRID. Dodano <br />
+    funkcjonalność podglądu, porównania i akceptacji nowych warunków zamówień<br />
+    automatycznych.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2025.10.23 [2025.4.1.4]<br />
+  - Dodano obsługę refundacji recept poprzez usługi udostępnione przez NFZ.<br />
+    Więcej szczegółów w "Podręczniku użytkownika KS-AOW", rozdział "Realizacja <br />
+    refundacji recept poprzez usługi udostępnione przez NFZ".<br />
+  - Raport sprzedaży KASA i VAT – uwzględniono kaucję w zarówno w sprzedaży <br />
+    gotówkowej jak i odroczonej (przelew, kredyt).<br />
+  - Ewidencja recept farmaceutycznych - zmodyfikowano sposób prezentacji adresu<br />
+    pacjenta na wydruku. W przypadku braku ulicy (np. dla miejscowości <br />
+    wiejskich) nazwa miejscowości jest teraz przenoszona do pola adresu, dzięki<br />
+    czemu ewidencja zawiera pełny adres pacjenta.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW23 -----------------------------</h3><br />
+2025.10.23 [2025.4.1.4]<br />
+  - Rozwiązano problem, w wyniku którego raport "Faktury z odchyleniem różnym <br />
+    od zera" uwzględniał jedynie odchylenia z zaokrągleń. Obecnie raport <br />
+    prezentuje wszystkie odchylenia, w tym również wynikające z kosztów.<br />
+  - Dostosowanie programu do wersji usługi internetowej umożliwiającej<br />
+    realizację jednej e-Recepty w różnych aptekach, zgodnie z dokumentacją<br />
+    integracyjną systemu P1 w wersji W28.0.2 z dnia 2025-09-10. Wprowadzono <br />
+    obsługę Dokumentu Stanu Realizacji (DSR) oraz mechanizm zapisu referencji <br />
+    do tego dokumentu na Dokumencie Realizacji Recepty (DRR), zgodnie z <br />
+    wymaganiami systemu P1.<br />
+    Funkcjonalność dostępna będzie dopiero po jej uruchomieniu przez Centrum<br />
+    e-Zdrowia. Opis procesu oraz scenariusze użycia zostaną opublikowane<br />
+    w instrukcji systemowej "E-Recepta P1 w systemie KS-AOW". <br />
+<br />
+<h3>---------------------------- Zmiany w module APW31 -----------------------------</h3><br />
+2025.10.23 [2025.4.1.4]<br />
+ – Bilans dnia – uwzględniono kaucję w kwocie sprzedaży.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2025.10.23 [2025.4.1.4]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW45 -----------------------------</h3><br />
+2025.10.23 [2025.4.1.4]<br />
+  - Rozwiązano problem dotyczący kopiowania produktów pomiędzy ofertami <br />
+    internetowymi dla systemu kaucyjnego. Produkty kopiujemy pomiędzy ofertami <br />
+    internetowymi z poziomu "APW45 - Apteka internetowa ->Towary".<br />
+<br />
+<h3>---------------------------- Zmiany w module APW55 -----------------------------</h3><br />
+2025.10.23 [2025.4.1.4]<br />
+  - Modyfikacja w zakresie zamówień automatycznych pharmind GRID. Dodano <br />
+    funkcjonalność podglądu, porównania i akceptacji nowych warunków zamówień <br />
+    automatycznych.<br />
+<br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2025.10.23 [2025.4.1.4]<br />
+  - KtoMaLek: Obsługa rezerwacji, które posiadają jednocześnie pozycje do <br />
+    realizacji z aktualnych stanów magazynowych oraz pozycje realizowane <br />
+    z dedykowanych dokumentów zakupu.<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2025.10.23 <br />
+  ApwPlus [2025.4.1.4]<br />
+  - Aktualizacja struktury bazy danych.<br />
+<br />
+</body></html>

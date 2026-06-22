@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2019.2.14.3</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2019.12.09<br />
+  mvserver.exe [2019.3.1.3]  <br />
+  - Poprawa algorytmu pomniejszania stanów dla towarów<br />
+    ręcznie wyjmowanych z automatu do wydawnia leków z protokołem WWKS2.<br />
+  <br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2019.12.09 [2019.3.10.1]<br />
+  - Poprawiono działanie blokady dodawania towarów z określonej grupy <br />
+    asortymentowej (konfigurowane na definicji dokumentu finansowego). Funkcja<br />
+    powodowała wyświetlenie błędu, jeśli w konfiguracji nie wybrano grupy<br />
+    asortymentowej<br />
+  - W funkcji poprawy kodów na recepcie dodano ostrzeżenie, gdy aktualizowana<br />
+    recepta znajduje się na wygenerowanym już rachunku refundacyjnym<br />
+<br />
+<h3>---------------------------- Zmiany w module APW14 -----------------------------</h3><br />
+2019.12.09 [2019.3.2.0]<br />
+  - Remanent przy pomocy czytnika kodów kreskowych. Dodano wyszukiwanie<br />
+    i przyporządkowanie zliczanego towaru do odpowiedniej karty zakupu,<br />
+	uwzględniając serie, jeśli został odczytany kod 2D. Funkcjonalnośc działa<br />
+	przy wyszukiwaniu kodu kreskowego na kartoach zakupu, czyli jeśli<br />
+	NIE jest zaznaczona w Ustawieniach opcja: 'Obsługa kodów z kart towaru<br />
+	podczas remanentu czytnikiem koeów kreskowych'.<br />
+	<br />
+<h3>---------------------------- Zmiany w module APW23 -----------------------------</h3><br />
+2019.12.09 [2019.3.3.3]<br />
+  - Retaksacja recept: Poprawiono kolorowanie różnych kodów EAN na recepcie<br />
+    i realizacji: W przypadku, gdy kody różnią się występowaniem cyfry "0" na <br />
+    początku, wtedy nie kolorujemy EANów na czerwono. W przypadku, gdy na <br />
+    recepcie jest pusty EAN (0000000000000), wtedy kolorujemy go na niebiesko<br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2019.12.21 [2019.3.18.1]<br />
+  - Rozszerzono opcję APW11.2.1 Najczęściej występujący typ recepty o pozycję<br />
+    eZWM (e-zlecenia). W przypadku problemów z działaniem tej opcji w sprzedaży<br />
+    (wybór innej niż ustawiona), należy ponownie wybrać właściwą pozycję.<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2019.12.06<br />
+  Apwplus.exe [2019.3.34.0]<br />
+  - Uaktualniono strukturę bazy danych<br />
+<br />
+2019.12.04<br />
+  Apwplus.exe [2019.3.33.0]<br />
+  - Uaktualniono strukturę bazy danych<br />
+<br />
+</body></html>

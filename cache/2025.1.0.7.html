@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2025.1.0.7</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2025.03.17<br />
+  Slowniki.dll [2025.1.0.7]<br />
+  - Modyfikacja w zakresie KS-APTIX. Zmodyfikowano opcje ustawiania i zmiany<br />
+    PINu na karcie pracownika, z jawnym podziałem PINu do aplikacji KS-Aptix<br />
+    oraz PINu do kas samoobsługowych.<br />
+  - Zmiany w obsłudze zapotrzebowań na centralne karty towarowe:<br />
+    * usunięto pole PKWiU,<br />
+    * zablokowano tworzenie zapotrzebowań z numerem BLOZid, dla którego istnieje<br />
+      karta w CKT,<br />
+    * dodano kolumnę z BLOZid w oknie wyszukiwania kart centralnych.<br />
+  - Rozwiązano problem objawiający się niepoprawnym wyświetlaniem okna kontroli<br />
+    cen sprzedaży.<br />
+<br />
+  ApwHarm.dll [2025.1.0.7]<br />
+  - Usunięto błąd podczas realizacji zadania wysyłania zamówień automatycznych<br />
+    występujący przy próbie wysłania zamówienia do systemu KS-ZSA.<br />
+<br />
+  Apwfn.dll [2025.1.0.7]<br />
+  - Usprawniono mechanizm ładowania biblioteki i jej inicjalizacji.<br />
+<br />
+  ApwMain [2025.1.0.7]<br />
+  - Usprawniono mechanizm ładowania i inicjalizacji biblioteki apwfn.dll.<br />
+<br />
+  ApwIap.dll, KSOPH.dll [2025.1.0.7]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+  Moduł integracyjny - sprzedaż samoobsługowa [2025.0.2.2]<br />
+  - Zablokowanie możliwości zatwierdzania OTC przez stażystę.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2025.03.17 [2025.1.0.7]<br />
+  - Modyfikacja w zakresie KS-APTIX. Zmodyfikowano proces tworzenia nowych<br />
+    profili KS-APTIX dla użytkowników z ustawionym PINem. Zamieniono komunikat<br />
+    sugerujący ustawienie nowego PINu na komunikat wymogu wprowadzenia PINu<br />
+    z karty pracownika.<br />
+  - Poprawa wydruku recepty farmaceutycznej papierowej. Na dokumencie brakowało<br />
+    informacji o przepisanym towarze, w przypadku próby wydrukowania recepty<br />
+    w trakcie sprzedaży (nie z poziomu poprawy sprzedaży).<br />
+  - Dodano przepisywanie rodzaju realizacji recepty na DRR dla leku robionego<br />
+    z dokumentu w wersji poprzedniej. Do tej pory program domyślnie ustawiał<br />
+    na DRR status realizacji - częściowa, nawet jeżeli była to kolejna wersja<br />
+    DRR zamykającego realizację.<br />
+  - Poprawiono wyliczenie terminu realizowalności recept z uprawnieniem<br />
+    C (ciąża). W przypadku, gdy miesiąc w którym wystawiono receptę trwał<br />
+    31 dni, program wydłużał termin ważności recepty o 1 dzień, zamiast stosować<br />
+    ograniczenie 30 dni od wystawienia, wynikające z ustawy Prawo Farmaceutyczne<br />
+    (art. 96a ust 7).<br />
+  - Rozwiązanie problemu z zapętlaniem się procesu weryfikacji w NMVS podczas<br />
+    skanowania kodu 2D, który zawiera niedozwolony znak. Program blokował<br />
+    możliwość zamknięcia okna "Skanuj kod 2D", uniemożliwiając rezygnację<br />
+    ze sprzedaży opakowania.<br />
+  - Wnioski/eZWM: Poprawa liczenia limitu dla wyrobu medycznego o kodzie R.03.02<br />
+    z uprawnieniem 47ZN.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW12 -----------------------------</h3><br />
+2025.03.17 [2025.1.0.7]<br />
+  - Modyfikacja w zakresie tworzenia oraz edycji listy braków. Zintegrowano<br />
+    aplikację KS-APTIX z listą braków. Umożliwiono edycję listy braków z poziomu<br />
+    KS-APTIX - nowe źródło "AX". Dodano do reguł tworzenia listy braków obsługę<br />
+    dla nowego źródła "AX".<br />
+  - Usprawniono mechanizm ładowania i inicjalizacji biblioteki apwfn.dll.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2025.03.17 [2025.1.0.7]<br />
+  - Modyfikacja w zakresie KS-APTIX. Zmodyfikowano proces tworzenia nowych<br />
+    profili KS-APTIX dla użytkowników z ustawionym PINem. Zamieniono komunikat<br />
+    sugerujący ustawienie nowego PINu na komunikat wymogu wprowadzenia PINu<br />
+    z karty pracownika.<br />
+  - Dodano logowanie zdarzenia usuwania dokumentów z bufora zakupów do Dziennika<br />
+    zdarzeń.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW14 -----------------------------</h3><br />
+2025.03.17 [2025.1.0.7]<br />
+  - Modyfikacja w zakresie KS-APTIX. Zmodyfikowano proces tworzenia nowych<br />
+    profili KS-APTIX dla użytkowników z ustawionym PINem. Zamieniono komunikat<br />
+    sugerujący ustawienie nowego PINu na komunikat wymogu wprowadzenia PINu<br />
+    z karty pracownika.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2025.03.17 [2025.1.0.7]<br />
+  - Poprawiono wyliczenie terminu realizowalności recept z uprawnieniem<br />
+    C (ciąża). W przypadku, gdy miesiąc w którym wystawiono receptę trwał<br />
+    31 dni, program wydłużał termin ważności recepty o 1 dzień, zamiast stosować<br />
+    ograniczenie 30 dni od wystawienia, wynikające z ustawy Prawo Farmaceutyczne<br />
+    (art. 96a ust 7).<br />
+  - Środki pomocnicze: "Umowy i aneksy" oraz "Zestawienie wniosków" - dodano<br />
+    weryfikację uprawnia 22-0014 do edycji bazy refundatorów przy wyborze<br />
+    refundatora.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW22 -----------------------------</h3><br />
+2025.03.17 [2025.1.0.7]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW23 -----------------------------</h3><br />
+2025.03.17 [2025.1.0.7]<br />
+  - Dodano przepisywanie rodzaju realizacji recepty na DRR dla leku robionego<br />
+    z dokumentu w wersji poprzedniej. Do tej pory program domyślnie ustawiał<br />
+    na DRR status realizacji - częściowa, nawet jeżeli była to kolejna wersja<br />
+    DRR zamykającego realizację.<br />
+  - Poprawiono wyliczenie terminu realizowalności recept z uprawnieniem<br />
+    C (ciąża). W przypadku, gdy miesiąc w którym wystawiono receptę trwał<br />
+    31 dni, program wydłużał termin ważności recepty o 1 dzień, zamiast stosować<br />
+    ograniczenie 30 dni od wystawienia, wynikające z ustawy Prawo Farmaceutyczne<br />
+    (art. 96a ust 7).<br />
+<br />
+<h3>---------------------------- Zmiany w module APW24 -----------------------------</h3><br />
+2025.03.17 [2025.1.0.7]<br />
+  - Analiza sprzedaży z podziałem na leki – dodano możliwość wykonania wydruku<br />
+    ograniczonego do wskazanej ilości rekordów.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW42 -----------------------------</h3><br />
+2025.03.17 [2025.1.0.7]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW45 -----------------------------</h3><br />
+2025.03.17 [2025.1.0.7]<br />
+  - Modyfikacja w zakresie KS-APTIX. Zmodyfikowano proces tworzenia nowych<br />
+    profili KS-APTIX dla użytkowników z ustawionym PINem. Zamieniono komunikat<br />
+    sugerujący ustawienie nowego PINu na komunikat wymogu wprowadzenia PINu<br />
+    z karty pracownika.<br />
+<br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2025.03.17 [2025.1.0.7]<br />
+  - Pharmind grid: optymalizacja procesu raportowania informacji o zamówieniach<br />
+    u dostawców.<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2025.03.17<br />
+  ApwPlus [2025.1.0.7]<br />
+  - Aktualizacja struktury bazy danych.<br />
+<br />
+</body></html>

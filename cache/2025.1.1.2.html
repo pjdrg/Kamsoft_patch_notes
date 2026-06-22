@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2025.1.1.2</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2025.03.31<br />
+  Slowniki.dll, KSOPH.dll [2025.1.1.2]<br />
+  - Zamówienia centralne KS-OmniPharm – przesyłanie komunikatu do KS-OmniPharm<br />
+    zawierającego informacje o minimalnej wartości zamówienia i koszcie<br />
+    logistycznym podczas aktualizacji warunków handlowych na karcie dostawcy.<br />
+<br />
+  KSBlozAzure.dll [2020.8.0.0]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+  Apwfn.dll [2025.1.1.1]<br />
+  - Uwzględniono pole "Ident. tech. farm." podczas realizacji zlecenia:<br />
+    "Dodawanie użytkownika".<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2025.03.31 [2025.1.1.2]<br />
+  - Aktualizacja nadruku recept. Wprowadzono na wydruk identyfikator technika<br />
+    zamiast numeru PESEL.<br />
+  - Dodano pole z kodem EAN do kreatora raportów wydruku zapotrzebowania oraz<br />
+    wyceny zapotrzebowania.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW12 -----------------------------</h3><br />
+2025.03.31 [2025.1.1.2]<br />
+  - Pharmind grid: Obsługa blokady zmiany dostawcy w konfiguracji zamówień<br />
+    automatycznych.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2025.03.31 [2025.1.1.2]<br />
+  - Dodano możliwość wysyłania reklamacji do hurtowni za wskazany okres dat<br />
+    poprzez KS-EWD.<br />
+  - Dodano ostrzeżenie wyświetlane podczas zatwierdzania korekty wewnętrznej,<br />
+    jeśli korekt ta nie wprowadza żadnych zmian.<br />
+  - Zablokowano możliwość wczytania korekty dokumentu zakupu, jeżeli zawiera<br />
+    ona inne dane dotyczące cen lub ilości przed korektą niż te zarejestrowane<br />
+    w systemie KS-AOW.<br />
+  - W oknie „Poprawa pozycji” karty zakupu dodano:<br />
+    * weryfikację uprawnienia 13-0007 – Tworzenie korekty,<br />
+    * możliwość zmiany karty towaru, która skutkuje automatycznym utworzeniem<br />
+      korekty wewnętrznej,<br />
+    * informację o marży detalicznej i marży zakupowej.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2025.03.31 [2025.1.1.2]<br />
+  - Rozszerzono strukturę eksportu KS-FKW (xml) o dodatkowe informacje:<br />
+    * w przypadku faktury sprzedaży dodano informacje niezbędne do prawidłowego<br />
+      rozliczenia refundacji w ramach opieki społecznej,<br />
+    * dodano informacje o dziennych kwotach refundacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW35 -----------------------------</h3><br />
+2025.03.31 [2025.1.1.2]<br />
+  - Rozwiązano problem powodujący niepoprawne wyświetlanie aktywnych cenników<br />
+    w strategii UCC.<br />
+<br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2025.03.31 [2025.1.1.2]<br />
+  - Pharmind grid: Obsługa blokady zmiany dostawcy w konfiguracji zamówień<br />
+    automatycznych.<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2025.03.31<br />
+  ApwPlus [2025.1.1.2]<br />
+  - Aktualizacja struktury bazy danych.<br />
+<br />
+  IBPack [2025.1.1.2]<br />
+  - Zoptymalizowano działanie funkcji usuwania starych dokumentów.<br />
+<br />
+</body></html>

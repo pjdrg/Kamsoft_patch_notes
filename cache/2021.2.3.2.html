@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2021.2.3.2</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2021.10.05 <br />
+  MVServer.exe [2021.2.3.2]<br />
+  - Poprawa działania funkcji Weryfikacja stanów magazynowych. Poprawa<br />
+    wyliczania stanów magazynowych, poprawa przypisywania dat ważności.<br />
+  - Generowanie raportu braków: W funkcji Dodaj wszystkie pozycje z listy braków<br />
+    dodano filtr odrzucający pozycje nie podlegające obowiązkowi zgłaszania<br />
+    braku (OTC).<br />
+  - Generowanie raportu braków: poprawiono przekazywanie ilości braków. Ilość<br />
+    będzie przekazywana jako liczba całkowita.<br />
+<br />
+  Slowniki.dll [2021.2.3.2]<br />
+  - Dodanie do historii zmian kartoteki pacjenta informacji o jej założeniu.<br />
+<br />
+  OsozNews.dll [2021.2.3.2]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+  Resman.dll [2021.2.3.2]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+  Events.dll [2021.2.3.2]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2021.10.05 [2021.2.3.2]<br />
+  - Terminale płatnicze eService: Dostosowanie integracji do obsługi terminali<br />
+    bezprzewodowych.<br />
+  - Na formatce Kody e-Recept, w funkcji [F12] Lista kodów e-recept, dodano<br />
+    możliwość zaznaczenia kilku pozycji kodów.<br />
+  - Operacje magazynowe -> tworzenie faktury zbiorczej - dodano zabezpieczenie<br />
+    przed przypadkowym dopisywaniem pozycji poprzez odczyt kodu czytnikiem.<br />
+  - Poprawiono błąd Reg.Wer 466, który występował po zmianie licencji przy<br />
+    wysyłaniu DRR korygującego do SIM. Dodano przepisywanie identyfikatora<br />
+    zbioru na podstawie dokumentu korygowanego.<br />
+  - Poprawiono nagłówek HTTP (Content-type) w komunikacji z SIM.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2021.10.05 [2021.2.3.2]<br />
+  - Poprawa błędu w weryfikacji dostawy z wykorzystaniem kolektora.<br />
+  - Modyfikacja potwierdzenia otrzymania dokumentu, tak by potwierdzenia<br />
+    wysyłały się również w przypadku zmienionego dostawcy na dokumencie<br />
+    magazynowym.<br />
+    <br />
+<h3>---------------------------- Zmiany w module APW14 -----------------------------</h3><br />
+2021.10.05 [2021.2.3.2]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2021.10.05 [2021.2.3.2]<br />
+  - Raporty do księgowości w formacie xml. Poprawiono tworzenie raportu<br />
+    rozliczenie drukarek fiskalnych. Nie generował się raport za ostatni dzień<br />
+    miesiąca.<br />
+  - Eksport do Optimy. Poprawiono błąd pojawiający się na bazie Oracle<br />
+    w przypadku wyboru dużej ilości dni za które tworzony jest raport.<br />
+  - Poprawa błędu w raporcie "Analiza" dostępnego w oknie "Produkty handlowe<br />
+    środków pomocniczych z umowy".<br />
+<br />
+<h3>---------------------------- Zmiany w module APW23 -----------------------------</h3><br />
+2021.10.05 [2021.2.3.2]<br />
+  - Poprawiono błąd Reg.Wer 466, który występował po zmianie licencji przy<br />
+    wysyłaniu DRR korygującego do SIM. Dodano przepisywanie identyfikatora<br />
+    zbioru na podstawie dokumentu korygowanego.<br />
+  - Poprawiono nagłówek HTTP (Content-type) w komunikacji z SIM.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW68 -----------------------------</h3><br />
+2021.10.05 [2021.2.3.2]<br />
+  - Poprawa działania funkcji Weryfikacja stanów magazynowych. Poprawa<br />
+    wyliczania stanów magazynowych, poprawa przypisywania dat ważności.<br />
+  - Generowanie raportu braków: W funkcji Dodaj wszystkie pozycje z listy braków<br />
+    dodano filtr odrzucający pozycje nie podlegające obowiązkowi zgłaszania<br />
+    braku (OTC).<br />
+  - Generowanie raportu braków: poprawiono przekazywanie ilości braków. Ilość<br />
+    będzie przekazywana jako liczba całkowita.<br />
+<br />
+<h3>--------------------------------- Zmiany w EDE ---------------------------------</h3><br />
+2021.10.05<br />
+  - Poprawa mechanizmu wyboru certyfikatu do podpisu.<br />
+<br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2021.10.05 [2021.2.3.2]<br />
+  - Programy Partnerskie: poprawa obsługi parametrów konfiguracji.<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2021.10.05 <br />
+  ApwPlus.exe [2021.2.3.2]<br />
+  - Uaktualniono strukturę bazy danych.<br />
+<br />
+  Apwbase.dll [2021.2.3.2]<br />
+  - Uaktualniono bazę kart serwisowych.<br />
+<br />
+</body></html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2019.2.7.4</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2019.05.30<br />
+  apwharm.dll [2019.3.0.3]<br />
+  - Wdrożono poprawkę dla generatora oferty dla mechanizmu budowania<br />
+    oferty na podstawie bazy hurtownianej.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2019.05.31 [2019.3.3.0]<br />
+  - E-recepta: Poprawa w automacie łączącym pozycje: zabezpieczono błędne <br />
+  łączenie przy ponownej sprzedaży do zrealizowanej wcześniej recepty.  <br />
+  W widoku raportu aktualizacji (R.aktualizZ ) dodano kolumnę „źródło zmian” <br />
+  oraz uruchomiono rejestrowanie zmiany numeru pozycji wykonanej przez automat <br />
+  łączący. Wprowadzono dodatkową weryfikację połączonych pozycji, przed <br />
+  wyświetleniem DRR do zatwierdzenia. W razie wykrycia różnych leków na jednej <br />
+  pozycji wyświetli się okno umożliwiające weryfikację i ewentualną poprawę <br />
+  numeru pozycji dla sprzedaży, które jeszcze nie zostały wysłane do SIM.   <br />
+<br />
+<h3>---------------------------- Zmiany w module APW12 -----------------------------</h3><br />
+2019.05.31 [2019.3.0.2]<br />
+  - Wdrożono obsługę odczytu parametrów dla centralnego parametryzowania <br />
+    zamówień oraz rozszerzono obsługę licencji dla systemu KS-Omnipharm<br />
+    o usługę "CentralneParametryzowanieZamowien".<br />
+<br />
+<h3>---------------------------- Zmiany w module APW23 -----------------------------</h3><br />
+2019.05.28 [2019.3.1.0]<br />
+  - Kontrola poprawności kodów recept: Wprowadzono dodatkową weryfikację <br />
+  połączonych pozycji, przed wyświetleniem DRR do zatwierdzenia. W razie <br />
+  wykrycia różnych leków na jednej pozycji wyświetli się okno umożliwiające <br />
+  weryfikację i ewentualną poprawę numeru pozycji dla sprzedaży, które jeszcze <br />
+  nie zostały wysłane do SIM.  <br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2019.05.31 [2019.3.4.3]<br />
+  - Wdrożono obsługę odczytu parametrów dla centralnego parametryzowania <br />
+    zamówień oraz rozszerzono obsługę licencji dla systemu KS-Omnipharm<br />
+    o usługę "CentralneParametryzowanieZamowien".<br />
+<br />
+<h3>---------------------------- Zmiany w module APW45 -----------------------------</h3><br />
+2019.05.30 [2019.3.0.3]<br />
+  - Wdrożono poprawkę dla generatora oferty dla mechanizmu budowania<br />
+    oferty na podstawie bazy hurtownianej. <br />
+  - Wdrożono obsługę zarządzania odczytem parametrów dla mechanizmu centralne<br />
+    parametryzowanie zamowień.<br />
+  - Wdrożono funkcję odczytu kodów kreskowych z opakowań w oknie pakuj<br />
+    w aptece internetowej o mozliwość korzystania z czytników kodów 2D,<br />
+    dla odczytu kodów kreskowych liniowych.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW68 -----------------------------</h3><br />
+2019.05.31 [2019.3.0.9]<br />
+  - Poprawa generowania listy leków podlegających raportowaniu do ZSMOPL <br />
+    bez daty   ważności. Program generował nadmierną ilość pozycji.<br />
+<br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2019.04.29 [2019.3.2.0]<br />
+  - Komunikacja z OSOZ: Dodanie informacji o zablokowanej komunikacji z OSOZ<br />
+<br />
+</body></html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2024.1.2.2</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2024.10.14 <br />
+  Slowniki.dll [2024.1.2.2] <br />
+  - Rozwiązano problem wysyłki jednej pozycji zamówienia podczas zamawiania <br />
+    z zapytania o stan i cenę towaru, gdy złączono zamówienia przy weryfikacji <br />
+    limitu logistycznego.<br />
+  - Rozwiązano problem z występowaniem komunikatu "ORA-01861 literal does not<br />
+    match format string" występującego sporadycznie na bazie Oracle podczas<br />
+    wejścia na listę Grup VAT.<br />
+  - Rozwiązano problem dotyczący nieprawidłowego skalowania okna dla edycji <br />
+    punktów transportu. Okno jest dostępne z poziomu <br />
+    APW45 - Apteka internetowa -> Definicje -> Punkty -> Formy transportu.<br />
+  <br />
+  ApwHarm [2024.1.2.2]<br />
+  - Zmiana w algorytmie "pharmind GRID zamówienia automatyczne" wyliczającym <br />
+    zapotrzebowanie na podstawie ilości "W realizacji"<br />
+  - Dodanie nowego zadania do harmonogramu zadań: Przekazywania raportu<br />
+    do KS-FKW-XML (zip).<br />
+  - Zoptymalizowano wydajnościowo funkcję odświeżania oferty i aktualizacji cen <br />
+    dla systemu bazodanowego Oracle. Dodatkowo zaktualizowano plany zapytań dla<br />
+    wersji systemu Oracle XE18c oraz XE21c.<br />
+    Akcja jest wywoływana zadaniem "Aktualizacja oferty dla apteki internetowej"<br />
+    w aplikacji ApwPlan – Harmonogram zadań.<br />
+  - Rozbudowano interfejs komunikacyjny dla akcji "Aktualizacja zamówień ze <br />
+    stroną sklepu WWW" w aplikacji ApwPlan – Harmonogram zadań o obsługę punktów<br />
+    odbioru DPD Services dla usługi pobierającej zamówienia ze sklepu.<br />
+<br />
+  ApwIap.dll [2024.1.2.2]<br />
+  - Rozbudowano mechanizm w oknie tworzenia listów przewozowych dla DPD Services<br />
+    o możliwość wykorzystania usługi DPD Pickup, która odpowiada za generowanie<br />
+    listów przewozowych dla punktów odbioru DPD. Funkcja jest dostępna w module <br />
+    internetowym APW45 - Apteka internetowa -> Zamówienia, Listy przewozowe <br />
+    oraz w module APW11 – Sprzedaż w momencie realizacji zamówień internetowych.<br />
+  - Zaktualizowano interfejsy komunikacyjne dla DPD Services odpowiedzialne za <br />
+    pobierania protokołów dla kuriera, generowania listów przewozowych oraz <br />
+    pobierania etykiet listów przewozowych do najnowszej wersji.<br />
+  - Rozwiązano problem dotyczący nieprawidłowego skalowania okna dla edycji <br />
+    zamówień internetowych. Okno jest dostępne z poziomu <br />
+    APW45 - Apteka internetowa -> Zamówienia.<br />
+  - Rozwiązano problem dotyczący opóźnionego ustawiania cen za transport oraz <br />
+    niefiltrowania punktów odbioru dla firm transportowych w momencie zmiany <br />
+    formy transportu. Funkcja jest dostępne w oknie zarządzania zamówieniem <br />
+    internetowym wywoływanym z poziomu APW45 - Apteka internetowa -> Zamówienia.<br />
+<br />
+  Mvserver [2024.1.2.2]<br />
+  - Dla automatu Fablox rozwiązano problem z przypisywaniem miejsca składowania<br />
+    dla nowo ładowanych towarów.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2024.10.14 [2024.1.2.2]<br />
+  - Usprawniono realizację e-Recepty z uprawnieniem senior. W przypadku gdy <br />
+    w pierwszej kolejności wybrano lek, który nie mógł być wydany z uprawnieniem<br />
+    Senior, to uprawnienie było pomijane przy wydawaniu kolejnych leków w ramach<br />
+    tej samej transakcji oraz recepty - choć nie zawsze było to słuszne. <br />
+  - Dodanie obsługi zamówień automatycznych dla projektów Navicon<br />
+  - Dodanie blokady przy zatwierdzaniu dokumentów zawierających pozycje z lekiem<br />
+    przeterminowanym. Wystawienie dokumentu z lekiem przeterminowanym powoduje<br />
+    błąd TROSPOZ78 (Podano nieprawidłową datę ważności serii) podczas próby<br />
+    wygenerowania raportu do ZSMOPL.<br />
+  - W operacjach magazynowych rozwiązano problem z brakiem możliwości <br />
+    wydrukowania ponownie faktury bez dopisku "Duplikat". Odznaczenie w nagłówku<br />
+    dokumentu [Shift+F5] opcji "Drukuj duplikat faktury" spowoduje wydruk <br />
+    faktury bez dopisku.  <br />
+<br />
+<h3>---------------------------- Zmiany w module APW12 -----------------------------</h3><br />
+2024.10.14 [2024.1.2.2]<br />
+  - Zmiana w algorytmie "pharmind GRID zamówienia automatyczne" wyliczającym <br />
+    zapotrzebowanie na podstawie ilości "W realizacji".<br />
+  - Modyfikacja okna historii zamówień automatycznych. Uwzględnienie towarów <br />
+    "W realizacji", dodanie informacji o ilości zamówionych towarów, dodanie <br />
+    statusów zamówień, dodanie filtrowania po BLOZid, id towaru, projekcie <br />
+    pharmind GRID.<br />
+  - Dodanie obsługi zamówień automatycznych dla projektów Navicon.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2024.10.14 [2024.1.2.2]<br />
+  - Dodanie ostrzeżenia przy zatwierdzaniu dokumentów zawierających pozycje<br />
+    z lekiem przeterminowanym. Przyjęcie dokumentu z lekiem przeterminowanym<br />
+    powoduje błąd TROSPOZ78 (Podano nieprawidłową datę ważności serii) podczas<br />
+    próby wygenerowania raportu do ZSMOPL.<br />
+  - Dodanie obsługi zamówień automatycznych dla projektów Navicon.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW14 -----------------------------</h3><br />
+2024.10.14 [2024.1.2.2]<br />
+  - Dodanie blokady przy zatwierdzaniu dokumentów zawierających pozycje z lekiem<br />
+    przeterminowanym. Wystawienie dokumentu z lekiem przeterminowanym powoduje<br />
+    błąd TROSPOZ78 (Podano nieprawidłową datę ważności serii) podczas próby<br />
+    wygenerowania raportu do ZSMOPL.<br />
+    <br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2024.10.14 [2024.1.2.2]<br />
+  - Reorganizacja menu z funkcjonalnościami przekazywania raportów do systemów<br />
+    księgowych. Nowa opcja nazywa się: Raporty do księgowości i została<br />
+    podzielona na dwie grupy: Dla korzystających z KS-FKW/KS-Puzzle<br />
+    i Dla korzystających z innych systemów FK.<br />
+  - Dodanie obsługi nowego typu raportu w formacie KS-FKW-XML (zip).<br />
+    Nowa funkcjonalność posiada rejestr zawierający listę wszystkich <br />
+    wygenerowanych raportów za dane dni. Raport umożliwia dołączanie obrazów <br />
+    faktur i e-faktur z repozytorium KS-EDE. Raporty te można też generować <br />
+    za pomocą nowego zadania w harmonogramie zadań: Przekazywanie raportu <br />
+    do KS-FKW-XML (zip).<br />
+  - Przekazanie raportu do CDN Optima: dodanie parametru do prawidłowego<br />
+    przekazania daty transakcji dla zakupów.<br />
+  - Przekazanie raportu do CDN Optima: rozszerzenie pola opisującego grupę<br />
+    do 20 znaków.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW23 -----------------------------</h3><br />
+2024.10.14 [2024.1.2.2]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2024.10.14 [2024.1.2.2]<br />
+  - Kompilacja modułu w związku z dodaniem obsługi nowego zadania do <br />
+    harmonogramu zadań: Przekazywania raportu do KS-FKW-XML (zip).<br />
+    <br />
+<h3>---------------------------- Zmiany w module APW45 -----------------------------</h3><br />
+2024.10.14 [2024.1.2.2]<br />
+  - Zoptymalizowano wydajnościowo funkcję odświeżania oferty i aktualizacji <br />
+    cen dla systemu bazodanowego Oracle. Dodatkowo zaktualizowano plany zapytań<br />
+    dla wersji systemu Oracle XE18c oraz XE21c.<br />
+    Funkcje są dostępne w module APW45 – Apteka Internetowa -> Towary, <br />
+    "[F11] Odśwież ofertę" i "[F12] Aktualizuj ceny" oraz "Odśwież produkt" <br />
+    i "Aktualizuj cenę" są dostępne z poziomu "[F3] Karta".<br />
+  - Rozbudowano okno do zarządzania punktami odbioru dla apteki internetowej <br />
+    o funkcje wyszukiwania. Funkcja jest dostępna w module internetowym <br />
+    APW45 - Apteka internetowa -> Definicje -> Punkty odbioru.<br />
+  - Rozbudowano okno dla edycji punktów odbioru dla transportu w module apteki<br />
+    internetowej o możliwość ustawienia typu przewoźnika oraz możliwość <br />
+    tworzenia własnoręcznie punktów odbiorów dla firm kurierskich. Funkcja jest<br />
+    dostępna w module internetowym APW45 - Apteka internetowa -> Definicje -> <br />
+    Punkty odbioru -> Edycja/Karta/Nowa, wymaga aktywowania zarządzania punktami<br />
+    odbioru dla transportu w oknie prezentacji punktów odbioru.<br />
+  - Rozbudowano interfejs komunikacyjny SOAP dla modułu APW45 – Apteka <br />
+    Internetowa o obsługę punktów odbioru DPD Services dla usługi "GetOrders" <br />
+    pobierającej zamówienia ze sklepu.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW68 -----------------------------</h3><br />
+2024.10.14 [2024.1.2.2]<br />
+  - Rozwiązanie problemu z błędem TROSPOZ36 (Nie podano jednego lub więcej pól<br />
+    informacyjnych składających się na charakterystykę produktu leczniczego<br />
+    z importu docelowego lub interwencyjnego). Błąd się pojawiał przy <br />
+    raportowaniu dokumentu WUT zawierający pozycję z lekiem z importu <br />
+    docelowego, któremu minął termin ważności.<br />
+  - Generowanie komunikatów braków: dla opcji "Dodaj wszystkie pozycje z listy <br />
+    braków" dodano filtr na produkty podlegające raportowaniu do ZSMOPL, ale <br />
+    mające kategorię OTC. Zaraportowanie takiego leku generowało ostrzeżenie<br />
+    TRZB7 - Produkty o kategorii OTC nie podlegają obowiązkowi zgłaszania <br />
+    braków.<br />
+    <br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2024.10.14 [2024.1.2.2]<br />
+  - Pharmind grid: Raportowanie transakcji sprzedaży – optymalizacja <br />
+    raportowania korekty.<br />
+  - Dodanie obsługi zamówień automatycznych dla projektów Navicon.<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2024.10.14<br />
+  ApwPlus [2024.1.2.2]<br />
+  - Zaktualizowano strukturę bazy danych.<br />
+<br />
+</body></html>

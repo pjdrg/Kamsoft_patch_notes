@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2020.3.8.7</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2020.09.30<br />
+  OphOneRepoSvc.exe [2020.3.1.6]<br />
+  - dodano obsługę schematu host:port/serviceName w trybie ORA_DIRECT<br />
+  <br />
+2020.09.29<br />
+  slowniki.dll [2020.3.8.7]<br />
+  - Poprawka do Anonimizacji danych pacjenta - zakładka 'Rodo'.<br />
+<br />
+2020.09.28<br />
+  zasoby.dll [2020.3.8.7]<br />
+  - poprawa aktualizacji na angielskojęzycznych systemach gdzie aktualizator wykrywał <br />
+    niepoprawną wersje pliku zasoby.dll<br />
+<br />
+2020.09.25<br />
+  OphOneRepoSvc.exe [2020.3.1.5]<br />
+  - obsługa podwójnych aliasów w pliku tsnnames.ora<br />
+  - poprawa działania aplikacji monitorującej w przypadku gdy usługa jest w starszej wersji  <br />
+  - poprawa sygnalizacji problemu braku licencji <br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2020.09.30 [2020.3.8.7]<br />
+  - e-Recepta: dodano możliwość podglądu kodu pakietu/Pinu poszczególnych recept <br />
+    wczytanych w trakcie realizacji w oknie e-Recepty. Funkcja dostępna z menu <br />
+	podręcznego „Pokaż PIN/Klucz”. Ze względów bezpieczeństwa w  systemie KS-AOW<br />
+	nie przechowujemy informacji o pakietach, funkcjonalność ta nie będzie więc<br />
+	dostępna z poziomu okna e-Recepty wywoływanego z poprawy sprzedaży [Ctrl+R] <br />
+  - e-Recepta: Usprawniano edycję danych pacjenta z poziomu okna e-Recepty/[F6]<br />
+    Pacjent. Po zmianie danych adresowych zostaną one zapisane na wszystkich <br />
+    realizacjach recept tego pacjenta.  <br />
+  - e-Recepta: Dodano blokadę sprzedaży poza terminem ważności recepty. W takim <br />
+    przypadku klawisz [F2] Realizuj będzie nieaktywny. Opcja domyślnie jest <br />
+	włączona. <br />
+  - Dodano możliwość wyłączenia pytania o aktualizacje karty pacjenta podczas <br />
+    realizacji e-Recepty (po kliknięciu w [F2] Realizuj z okna e-Recepty) <br />
+	Opcja domyślnie jest włączona. Dodano ikonę "odświeżania" karty pacjenta, <br />
+	która wyświetla się w oknie e-Recepty gdy wykryta zostanie różnica w danych <br />
+	między realizacją/kartą pacjenta a danymi zapisanymi na e-Recepcie. <br />
+  - e-Recepta: Poprawiono odświeżania ilości wydanych op./jedn. po powrocie z <br />
+    [F9] Realizacje.<br />
+  - e-Recepta: Dodano możliwość oznaczania rodzaju realizacji recept w oknie <br />
+    e-Recepty (menu kontekstowe) oraz przy zatwierdzaniu wybranego towaru. <br />
+	Funkcjonalność pozwala zdecydować w trakcie sprzedaży, czy recepty zostanie <br />
+	zakończona czy zrealizowana częściowo. <br />
+  - Operacje magazynowe - w kolumnie "Nazwa operacji" dodano ikony, które określają <br />
+    faktury sprzedaży z oznaczeniami JPK oraz faktury dla paragonów. Dodano mozliwość <br />
+	filtrowania po oznaczeniach JPK i fakturach do paragonów. Oba pola dodano do wydruku.<br />
+  - dla sprzedaży podstawowej przy wejściu do nagłówka wystawienia faktury VAT<br />
+    program sprawdza czy jakaś pozycja towarowa zawiera kod GTU. Jeśli zawiera wyświetla<br />
+	odpowiedni komunikat o możliwości przepisania kodu z kartoteki towarowej na dokument<br />
+	sprzedaży.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2020.09.30 [2020.3.8.7]<br />
+  - Dodano możliwość sortowania danych w "Kontroli dokumentu zakupu".<br />
+  - Możliwość przeniesienia towarów do kolejki zaraz po przyjęciu na magazyn.<br />
+  - Dodano możliwość zablokowania wysłania reklamacji, gdy ilość <br />
+    reklamowana mnijesza od 1.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2020.09.30 [2020.3.8.7]<br />
+  - Poprawiono eksport do NAV. Program błędnie przekazywał faktury sprzedaży z <br />
+    datą sprzedaży równą dacie wystawienia, przy właczonej opcji <br />
+	"Eksport do NAV - do eksportu dodaj faktury do paragonu".<br />
+<br />
+<h3>---------------------------- Zmiany w module APW23 -----------------------------</h3><br />
+2020.09.30 [2020.3.8.7]<br />
+  - Retaksacja recept: poprawiono wyliczanie dni od pierwszej sprzedaży dla <br />
+    recept całorocznych.  <br />
+  - Retaksacja recept: Poprawiono odświeżanie statusu rodzaju realizacji <br />
+    po wysłaniu DRR (dotyczy bazy danych Firebird) <br />
+  - Retaksacja recept: optymalizacja – zmniejszono ilość pobrań e-Recept z bazy <br />
+    danych.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2020.09.30 [2020.3.8.7]<br />
+ - Dodano opcję APW11.2.153 "Okno e-Recepty: Blokada sprzedaży poza okresem <br />
+   ważności recepty"<br />
+ - Dodano opcję APW11.2.154 "Okno e-Recepty: Sprawdzaj aktualność karty<br />
+   pacjenta przy wyborze recepty do realizacji"<br />
+   <br />
+ - Dodano opcję APW13.2.95 "Blokuj wysłanie reklamacji do dostawcy, <br />
+   gdy ilość reklamowana mniejsza od 1"<br />
+   <br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2020.09.28<br />
+  ApwPlus.exe [2020.3.8.7]<br />
+  - Uaktualniono strukturę bazy danych<br />
+<br />
+</body></html>

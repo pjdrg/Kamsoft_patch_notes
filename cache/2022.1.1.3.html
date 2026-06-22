@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2022.1.1.3</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2022.02.24<br />
+  CopyCloud [2022.1.1.3]<br />
+  - Poprawki komunikacji usługi z chmurą.<br />
+  - Dodano funkcjonalność przenoszenia kopii lokalnych do nowej lokalizacji <br />
+    przy zmianie folderu kopii lokalnych w ustawieniach usługi.<br />
+<br />
+  Slowniki.dll [2022.1.1.3]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+  Osozmok.dll [2022.1.1.0]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+  MVServer.exe [2022.1.1.3]<br />
+  - Obsługa automatu Fablox II. Dodano obsługę nowego separatora grupy dla<br />
+    kodów 2D odczytywanych przez automat.<br />
+<br />
+  ApwHarm.dll [2022.1.1.3]<br />
+  - Wdrożenie poprawki dla zadania aktualizacji oferty internetowej na stronę<br />
+    WWW. Zadanie podczas aktualizacji ceny dla przypadku nie znalezienia<br />
+    dostawy, poprawnie realizuje aktualizację produktu. Wcześniejsza wersja<br />
+    niepotrzebnie aktualizowała produkt w przypadku braku zmian na dostawach.<br />
+  - Wdrożono poprawkę dla zadania rozsyłania maila dla transportu.<br />
+    Dodano obsługę śledzenia paczek dla firmy kurierskiej DPD.<br />
+<br />
+  ApwiAp.dll [2022.1.1.3]<br />
+  - Wdrożono poprawkę dla procesu generowania listu przewozowego DHL.<br />
+  - Wdrożono poprawkę dla procesu rozsyłania maila dla transportu.<br />
+    Dodano obsługę śledzenia paczek dla firmy kurierskiej DPD.<br />
+<br />
+  WaUtil.exe [2022.1.1.3]<br />
+  - Wdrożono poprawkę dla tworzenia struktury danych dla systemu WMS.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2022.02.24 [2022.1.1.3]<br />
+  - Terminale płatnicze Polskie ePłatności: Optymalizacje w procesie obsługi<br />
+    transakcji kartą.<br />
+  - Programy Partnerskie: Prezentacja podsumowania salda punktów po wykonaniu<br />
+    szkolenia eLearning.<br />
+  - Okno e-Recepty: dodano ostrzeżenie o zbliżającym się terminie realizacji<br />
+    recepty. Od 7 dnia przed końcem ważności recepty zostanie wyświetlony<br />
+    budzik przy dacie realizacji do, z liczbową informacją o ilości dni jaka<br />
+    pozostałą na realizację recepty.<br />
+  - Poprawa edycji daty sprzedaży w operacjach magazynowych przy wystawianiu<br />
+    faktury V dla faktur zdefiniowanych przez aptekę.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2022.02.24 [2022.1.1.3]<br />
+  - Zmiana warunków aktywności przycisków odsyłania potwierdzeń do dokumentów,<br />
+    zablokowanie odsyłania potwierdzeń do obrazów dokumentów.<br />
+  - Dodanie informacji o konieczności przyjęcia faktury, podczas przyjmowania<br />
+    obrazu dokumentu.<br />
+  - Dodano obsługę parametru "Sprawdzaj poprawność wprowadzonego numeru<br />
+    aptecznego dla faktur zakupu".<br />
+  - APTIX - dodanie opcji odświeżania widoku inwentaryzacji po wczytaniu nowych<br />
+    skanów.<br />
+  - APTIX - uniemożliwienie dublowania skanów w weryfikacji dostawy podczas<br />
+    równoległej pracy na wielu stanowiskach.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW14 -----------------------------</h3><br />
+2022.02.24 [2022.1.1.3]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2022.02.24 [2022.1.1.3]<br />
+  - Środki pomocnicze: dodano generowanie numeru dokumentu na podstawie<br />
+    definicji na karcie refundatora.<br />
+    Numer dokumentu tworzony jest podczas zapisu raportu (wzór 13 i 14).<br />
+  - Na karcie refundatora (zakładka: 'Ustawienia') dodano możliwość<br />
+    zdefiniowania szablonu numeru dokumentu dla środków pomocniczych.<br />
+    Numer dokumentu będzie mógł zawierać:<br />
+      a) Numer kolejny,<br />
+      b) Miesiąc,<br />
+      c) Rok,<br />
+      d) Konto FK (z karty refundatora),<br />
+      e) Refundatora (nazwę),<br />
+      f) Id. Kamsoftu,<br />
+      g) Dopisek do numeru.<br />
+    Domyślnym szablonem jest 'Numer kolejny/Miesiąc/Rok'.<br />
+  - Poprawa eksportu do "Małej Księgowości". Raport źle przekazywał stawkę<br />
+    VAT 0%.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW23 -----------------------------</h3><br />
+2022.02.24 [2022.1.1.3]<br />
+  - Retaksacja recept: poprawiono wyświetlanie informacji o leku pierwotnie<br />
+    ordynowanym w edycji kodów recept.<br />
+  - Retaksacja recept: poprawiono wysyłanie DRR po edycji kodów recept.<br />
+    Wysyłany był zawsze DRR z pierwszej realizacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2022.02.24 [2022.1.1.3]<br />
+  - Dodano opcję: Apw13 Zakupy->Ustawienia globalne -> 100. Sprawdzaj poprawność<br />
+    wprowadzonego numeru aptecznego dla faktur zakupu.<br />
+  - Dodanie możliwości konfiguracji widoczności stanów magazynowych na<br />
+    urządzeniu mobilnym dla inwentaryzacji mobilnej. Wspólne -> 14 Aptix -><br />
+    2. Widoczność stanów magazynowych w inwentaryzacji na urządzeniu mobilnym.<br />
+  - Dodano uprawnienie: 'Edycja  szablonu numeru rozliczenia refundacji<br />
+    wyrobów medycznych na karcie refundatora'.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW42 -----------------------------</h3><br />
+2022.02.24 [2022.1.1.3]<br />
+  - W funkcji "Narzędzia -> Porządkownie danych -> Usuwanie danych związanych z<br />
+    KS-Omnipharm" dodano czyszczenie kolejki klienta KS-OmniPharm.<br />
+  - W funkcji "Narzędzia -> Porządkownie danych" dodano:<br />
+      a) Usuń stare ogłoszenia i wiadomości,<br />
+      b) Usuń starą historię zmian karty towaru,<br />
+      c) Usuń starą historię wykonanych zadań.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW45 -----------------------------</h3><br />
+2022.02.24 [2022.1.1.3]<br />
+  - Wdrożono poprawkę dla procesu wykrywania zdjęć i opisów.<br />
+    Poprawiono również wydajność dla tego procesu.<br />
+  - Wdrożono poprawkę dla procesu aktualizacji ceny.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW68 -----------------------------</h3><br />
+2022.02.24 [2022.1.1.3]<br />
+  - Aktualizacja pobieranych statusów z ZSMOPL, w związku z wdrożeniem wersji<br />
+    1.27.<br />
+<br />
+<h3>--------------------------------- ZMIANY.APTIX ---------------------------------</h3><br />
+2022.02.24<br />
+  - modyfikacja umożliwiająca wczytywanie skanów z numerami serii<br />
+    przekraczającymi dopuszczalny zakres (ORA-12899: wartość zbyt duża dla<br />
+    kolumny 'APW_USER'.'WPSK'.'SERIA').<br />
+  - poprawa błędu podczas odświeżania uruchomionej weryfikacji dostawy na bazie<br />
+    Oracle (The specified cast from a materialized 'System.Int32' type to the<br />
+    'System.String' type is not valid).<br />
+  - dodanie obsługi widoczności stanów magazynowych na urządzeniu mobilnym dla<br />
+    inwentaryzacji mobilnej.<br />
+<br />
+<h3>--------------------------------- Zmiany w EWD ---------------------------------</h3><br />
+2022.02.24<br />
+  - Rozszerzenie obsĹ‚ugi szyfrowanych poĹ‚Ä…czeĹ„ o TLS1.1 oraz TLS1.2.<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2022.02.24<br />
+  ApwPlus.exe [2022.1.1.3]<br />
+  - Uaktualniono strukturę bazy danych.<br />
+<br />
+</body></html>

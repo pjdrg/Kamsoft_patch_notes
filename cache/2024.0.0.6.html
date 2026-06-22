@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2024.0.0.6</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2023.11.09<br />
+  Slowniki.dll [2024.0.0.6]<br />
+  - Rozwiązano problem z wysyłką zamówień objawiający się komunikatem dotyczącym<br />
+    niezainicjowania podpisu podczas próby zapisania dokumentu do KS-EDE.<br />
+  - Do centralnej karty towaru dodano pole: "Blokada podziału opakowania".<br />
+  - Dodano przenoszenie znacznika "Blokada podziału opakowania" podczas<br />
+    zakładania karty lokalnej na podstawie CKT.<br />
+  - Dodano przenoszenie znacznika "Blokada podziału opakowania" podczas<br />
+    aktualizacji z Bufora CKT w "pajączku".<br />
+  - Dodano blokadę edycji pola "Blokada podziału opakowania" po przesłaniu<br />
+    z OmniPharm blokady edycji tego pola na karcie lokalnej.<br />
+<br />
+  ApwMain.exe [2024.0.0.6]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+  ApwFN.dll [2024.0.0.6]<br />
+  - Umożliwiono wykonanie zleceń aktualizacji kartotek dostawców i towarów,<br />
+    które zawierają nowe pola (np. blokada podziału opakowania).<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2023.11.09 [2024.0.0.6]<br />
+  - Poprawiono sortowanie sugestii sprzedaży pochodzących z KS-OmniPharm<br />
+    w przypadku gdy dla wybranego towaru jest zdefiniowana więcej niż jedna<br />
+    sugestia sprzedaży.<br />
+  - Pharmind GRID: Prezentacja punktów za zakup/sprzedaż z dokładnością do dwóch<br />
+    miejsc po przecinku.<br />
+  - Okno e-Recepty: dodano informację o dostępności synonimów,<br />
+    która wyświetla się w przypadku gdy na stanie nie ma zaordynowanego leku.<br />
+  - Poprawa weryfikacji realizacji recepty Rpw w postaci elektronicznej.<br />
+    Komunikat nie powinien się wyświetlać przy realizacji recepty weterynaryjnej<br />
+    i zapotrzebowania.<br />
+  - Okno wprowadzania kodów z recept: usunięto komunikat o konieczności podania<br />
+    numeru PESEL w przypadku realizacji recepty z uprawnieniem Senior w ramach<br />
+    przepisów o koordynacji.<br />
+  - Zadanie z Giełdy Pomysłów: W eZWM podczas realizacji zlecenia program<br />
+    automatycznie przepisuje wydawanym wyrobom numery serii z karty zakupu<br />
+    lub numery EAN z karty towaru.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW12 -----------------------------</h3><br />
+2023.11.09 [2024.0.0.6]<br />
+  - Rozwiązano problem z wysyłką zamówień objawiający się komunikatem dotyczącym<br />
+    niezainicjowania podpisu podczas próby zapisania dokumentu do KS-EDE.<br />
+  - Pharmind GRID: Prezentacja punktów za zakup/sprzedaż z dokładnością do dwóch<br />
+    miejsc po przecinku.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2023.11.09 [2024.0.0.6]<br />
+  - Modyfikacja w zakresie mobilnej weryfikacji dostawy KS-APTIX.<br />
+    Dodano dodatkowo kolumnę "Komunikat" na liście skanów.<br />
+    W kolumnie pojawia się opis błędu, który wskazuje przyczynę braku<br />
+    przyporządkowania skanu do pozycji faktury.<br />
+  - Pharmind GRID: Prezentacja punktów za zakup/sprzedaż z dokładnością do dwóch<br />
+    miejsc po przecinku.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW14 -----------------------------</h3><br />
+2023.11.09 [2024.0.0.6]<br />
+  - Modyfikacja w zakresie inwentaryzacji mobilnej KS-APTIX.<br />
+    Rozwiązano problem objawiający się nieprzypisywaniem skanów do dostaw<br />
+    z nieuzupełnionymi seriami w przypadku posiadania konfiguracji wymagającej<br />
+    wprowadzenia serii i daty ważności i/lub wymagającej skanowania kodu 2D<br />
+    dla produktów serializowanych.<br />
+  - Modyfikacja w zakresie inwentaryzacji mobilnej KS-APTIX.<br />
+    Dodano ostrzeżenie przed uruchomieniem inwentaryzacji mobilnej w przypadku<br />
+    zaznaczonej opcji "Obsługa kodów z karty towaru podczas remanentu czytnikiem<br />
+    kodów kreskowych".<br />
+  - Modyfikacja w zakresie inwentaryzacji mobilnej KS-APTIX.<br />
+    Rozwiązano problem objawiający się nieprzypisywaniem skanów do dostaw<br />
+    zerowych (wyprzedanych) starszych niż 3 miesiące dla inwentaryzacji<br />
+    częściowej.<br />
+  - Modyfikacja w zakresie mobilnej inwentaryzacji KS-APTIX.<br />
+    Dodano dodatkowo kolumnę "Komunikat" na liście skanów.<br />
+    W kolumnie pojawia się opis błędu, który wskazuje przyczynę braku<br />
+    przyporządkowania skanu do pozycji faktury.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2023.11.09 [2024.0.0.6]<br />
+  - Eksport do KS-FKW(xml) - rozwiązanie problemu z generowaniem raportu dla<br />
+    okresów zawierających ponad 1000 dokumentów księgowych. Problem objawiał<br />
+    się niekompletnym przekazywaniem dokumentów kasowych.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW23 -----------------------------</h3><br />
+2023.11.09 [2024.0.0.6]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW35 -----------------------------</h3><br />
+2023.11.09 [2024.0.0.6]<br />
+  - Dodano przegląd sugestii sprzedaży pochodzących z systemu KS-OmniPharm.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2023.11.09 [2024.0.0.6]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW42 -----------------------------</h3><br />
+2023.11.09 [2024.0.0.6]<br />
+  - Aktualizacja struktury bazy danych.<br />
+<br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2023.11.09 [2024.0.0.6]<br />
+  - Pharmind GRID: Prezentacja punktów za zakup/sprzedaż z dokładnością do dwóch<br />
+    miejsc po przecinku.<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2023.11.09<br />
+  ApwPlus [2024.0.0.6]<br />
+  - Aktualizacja struktury bazy danych.<br />
+<br />
+</body></html>

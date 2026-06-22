@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2020.2.0.6</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2020.03.11<br />
+  Slowniki.dll [2020.2.0.4]<br />
+  - Dodano pole Kod CN na kartę towaru, BLOZ oraz Centralną kartę towaru<br />
+<br />
+2020.03.06 <br />
+  Slowniki.dll [2020.2.0.3]<br />
+  - Poprawa informacji o ilości wstrzymanej na karcie towaru na formularzu <br />
+    dostaw.<br />
+<br />
+2020.03.05<br />
+  APWMAIN.EXE [2020.2.0.0]<br />
+  - Poprawki interface użytkownika.<br />
+  <br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2020.03.12 [2020.2.0.5]<br />
+  - eZWM - w przypadku zmiany hasła w SZOI z pominięciem eZWM, <br />
+    podczas realizacji zlecenia eZWM program poinformuje o niepoprawnym haśle na <br />
+    karcie pracownika i poprosi o wprowadzenie właściwego hasła w oknie <br />
+    zmiany hasła (eZWM). <br />
+  <br />
+2020.03.11 [2020.2.0.4]<br />
+  - e-Recepta: Poprawka w aktualizacji danych pacjenta, lekarza<br />
+    oraz świadczeniodawcy danymi z e-Recepty - uwzględnienie przy zapisie<br />
+    maksymalnej długości pól w bazie danych.<br />
+<h3>---------------------------- Zmiany w module APW12 -----------------------------</h3><br />
+2020.03.11 [2020.2.0.0]<br />
+  - Modyfikacja parametrów w oknie historii dystrybucji numerycznej.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2020.03.05 [2020.2.0.4]<br />
+  - W oknie "Pozycje dokumentu zakupu" dodano możliwość podglądu procentowej <br />
+    różnicy między bieżącą ceną zakupu po rabacie a ostatnią ceną zakupu.<br />
+    Włączenie tej kolumny w tym samym oknie przyciskiem: "Opcje".<br />
+<br />
+<h3>---------------------------- Zmiany w module APW14 -----------------------------</h3><br />
+2020.03.11 [2020.2.1.0]<br />
+  - Dodano obsługę kodu CN (Nomenklatura scalona). Kod ten pozwala na <br />
+    sklasyfikowanie towarów w obrocie międzynarodowym, tworząc system <br />
+    umożliwiający dokonanie identyfikacji towarów. Modyfikacja obejmuje:<br />
+    * funkcja aktualizacji bazy BLOZ: dodano aktualizację kodów CN. Aby <br />
+      utworzyć bufor towarów ze zmianą pola Kod CN, należy w oknie zaznaczania<br />
+      pól do aktualizacji zaznaczyć "PKWiU, KOD CN"<br />
+    * funkcja aktualizacji bazy towarów na podstawie bazy BLOZ: dodano <br />
+      aktualizację kodu CN na podstawie bazy BLOZ oraz centralnej bazy towarowej<br />
+    * funkcja Szybka poprawa towaru i buforowana poprawa towaru: dodano kolumnę <br />
+      kod CN oraz obsługę (edycja, przenoszenie z BLOZ, itp)<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2020.03.12 [2020.2.0.2]<br />
+  - Poprawa zapisu pliku eksportu zestawienia wyrobów medycznych do rozliczenia<br />
+    w KS-PPS.<br />
+  - Przy eksporcie zestawienia wyrobów medycznych do rozliczenia w KS-PPS na <br />
+    formularzu dokumentu dodano możliwość wyboru typu eksportu: standardowy <br />
+    oraz rozszeżony o informacje eZWM (dostępny dotychczas z poziomu archiwum <br />
+    raportów)<br />
+<br />
+<h3>---------------------------- Zmiany w module APW22 -----------------------------</h3><br />
+2020.03.04 [2020.2.0.0]<br />
+  - Zablokowano wejście do funkcji zarządzania centralnymi kartotekami towarów,<br />
+    dostawców i pacjentów dla aptek bez aktywnej licencji na KS-ZSA lub <br />
+    KS-OmniPharm.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW23 -----------------------------</h3><br />
+2020.03.12 [2020.2.1.0]<br />
+  - Retaksacja recept: rozbudowano filtr umożliwiając odfiltrowanie leków<br />
+    gotowych, robionych, psychotropów i narkotyków<br />
+<br />
+2020.03.06 [2020.2.0.1]<br />
+  - Retaksacja recept: poprawiono zapisywanie filtru<br />
+<br />
+<h3>---------------------------- Zmiany w module APW44 -----------------------------</h3><br />
+2020.03.11 [2020.2.0.1]  <br />
+  - Import BLOZ: dodano aktualizację pola Kod CN<br />
+<br />
+<h3>---------------------------- Zmiany w module APW68 -----------------------------</h3><br />
+2020.03.11 [2020.2.0.3]<br />
+  - Optymalizacja procesu generowania raportu obrotów i stanów dla bazy Oracle.<br />
+<br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2020.03.11 [2020.1.7.0]<br />
+- Nawiązywanie połączeń do serwerów OSOZ, ePruf: rozdzielenie funkcjonalności<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2020.03.10<br />
+  Apwplus.exe [2020.2.3.0]<br />
+  - Uaktualniono strukturę bazy danych<br />
+<br />
+2020.03.06<br />
+  Apwplus.exe [2020.2.2.0]<br />
+  - Uaktualniono strukturę bazy danych<br />
+<br />
+</body></html>

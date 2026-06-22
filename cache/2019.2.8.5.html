@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2019.2.8.5</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2019.07.09<br />
+  mvserver.exe [2019.3.0.3] <br />
+  - Dla automatów ROWA z protokołem WWKS2, dodano funkcję odczytu kodu EAN, <br />
+    serii i daty ważności z kodu QR podczas procesu ładowania automatu.<br />
+  apwharm.dll [2019.3.2.0]  <br />
+  - Poprawa algorytmu pobierania cen z cennika dla ofert z hurtowni<br />
+    oraz aptek własnych.<br />
+  - Poprawiono błąd występujący dla aktualizacji daty WWW ze względu na pracę z różnymi<br />
+    ofertami internetowymi. Produkty nie zmieniały poprawnie daty wysłania na<br />
+    stronę WWW. <br />
+  - Poprawa mechanizmu zarządzania ilością paczek do wysłania, poprawiono mechanizm<br />
+    dzielenia paczek, poprawiono mechanizm zliczania informacji o wysłanych elementach<br />
+    oraz poprawiono informacje które prezentują podsumowanie z wysyłki oferty internetowej.<br />
+  - Uwzględnienie "ilości w drodze" dla dystrybucji numerycznej, dla produktów bez kartoteki<br />
+    towarowej. Brak kartoteki mógł powodować ciągłe zamawianie tej samej ilości towaru,<br />
+    ze względu na brak możliwości wyliczenia ilości w drodze.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW12 -----------------------------</h3><br />
+2019.07.09 [2019.3.0.6]<br />
+  - poprawa automatycznego przyporządkowywania towaru do oferty dostawcy<br />
+  - uwzględnienie "ilości w drodze" dla dystrybucji numerycznej, <br />
+    dla produktów bez kartoteki towarowej. Brak kartoteki mógł powodować ciągłe <br />
+    zamawianie tej samej ilości towaru, ze względu na brak możliwości <br />
+    wyliczenia ilości w drodze.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2019.07.08 [2019.3.3.0]<br />
+   - W kreatorze raportu "Specyfikacji do faktury zakupu" (włączona<br />
+     opcja: apw13.2.64) dodano pola: "ZSMOPL" oraz "Podlega serializacji".<br />
+   - W "Kontroli dokumentów zakupu" dodano skróty klawiszowe:<br />
+     a) Ctrl+Z - ustawienie na karcie towaru: "Czy raportow. do ZSMOPL"<br />
+     b) Ctrl+S - ustawienie na karcie towaru: "Podlega serializacji"<br />
+<br />
+<h3>---------------------------- Zmiany w module APW45 -----------------------------</h3><br />
+2019.07.09 [2019.3.2.0]<br />
+  - Poprawa algorytmu pobierania cen z cennika dla ofert z hurtowni<br />
+    oraz aptek własnych.<br />
+  - Rozbudowano tryb pracy dla widoku dla oferty internetowej oraz kategorii<br />
+    o funkcje zabezpieczające. A dla kategorii cały tryb widoku został dodatkowo<br />
+    zaprojektowany od nowa.<br />
+  - Wdrożono mechanizm informacji prezentacji dla okien przeglądu kategorii,<br />
+    pozycji kategorii oraz oferty internetowej. Mechanizm informacji prezentuje<br />
+    informacje na jakiej ofercie pracujemy, czy dla danej oferty są aktywne<br />
+    parametry i czy oferta jest podpięta pod sklep internetowy. W zależności od<br />
+    tych parametrów odpowiednio blokujemy opcje.<br />
+  - Rozbudowano mechanizm obsługi zarządzania ukrytymi oraz dostępnymi produktami.<br />
+    Została dodana kontrola dla produktów ukrytych które można usuwać. A produkty<br />
+    dostępne można tylko ukrywać. Mechanizm zaznaczania wyróżnia innym kolorem produkt<br />
+    zaznaczony ukryty oraz dostępny. Dodano funkcję zaznaczani produktów zdublowanych<br />
+    ukrytych i dostępnych. Dodano funkcję zaznaczania wszystkich odfiltrowanych<br />
+    produktów oraz odznaczania wszystkich zaznaczonych produktów. Dodano mechanizm<br />
+    pilnowania oferty na której pracujemy oraz dodano mechanizm szybkiego przełączania<br />
+    się między pracą z produktami ukrytymi oraz dostępnymi.<br />
+  - Poprawiono błąd występujący dla aktualizacji daty WWW ze względu na pracę z różnymi<br />
+    ofertami internetowymi. Produkty nie zmieniały poprawnie daty wysłania na<br />
+    stronę WWW. <br />
+  - Poprawa mechanizmu zarządzania ilością paczek do wysłania, poprawiono mechanizm<br />
+    dzielenia paczek, poprawiono mechanizm zliczania informacji o wysłanych elementach<br />
+    oraz poprawiono informacje które prezentują podsumowanie z wysyłki oferty internetowej.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW68 -----------------------------</h3><br />
+2019.06.07 [2019.3.2.0]<br />
+  - Udostępniono MAR02 - moduł, który umożliwia, za pomocą harmonogramu zadań,<br />
+    automatyczne generowanie i wysyłanie raportów do ZSMOPL a także pobiera statusy<br />
+    przetwarzania raportów ze ZSMOPL. Opis funkcjonalności jest dostępny w apmanie <br />
+    w zakładce o systemie = "Instrukcja podłączenia systemu KS-AOW do ZSMOPL"<br />
+  - Zgodnie z nowelizacją art.86a Prawa Farmaceutycznego z dnia 19.06.2019<br />
+    zmienia się sposób przesyłania danych do ZSMOPL dla DPS, w kórych określono<br />
+    odbiorcę, nabywcę i płatnika. Zgodnie z komunikatem MZ do ZSMOPL będzie raportowany <br />
+    jako nabywca - pacjent.<br />
+  - Dodano możliwość anulowania raporów wycofanych, błędnych lub takie, które <br />
+    otrzymały potwierdzenie wysłania a nie ma ich na portalu ZSMOPL.<br />
+    Funkcję można wywołać prawym klawiszem myszy, będąc na pozycji danego raportu.<br />
+<br />
+</body></html>

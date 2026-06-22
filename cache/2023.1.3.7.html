@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2023.1.3.7</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2023.04.25<br />
+  Slowniki.dll [2023.1.3.7]<br />
+  - Optymalizacja działania usługi Podobniki.<br />
+  - Logowanie poświadczeniami ActiveDirectory: dodano sortowanie po nazwisku<br />
+    i imieniu w oknie wyboru pracowników podczas wskazywania osoby do powiązania<br />
+    z kontem ActiveDirectory.<br />
+<br />
+  Apwfn.dll [2023.1.3.7]<br />
+  - Zaktualizowano opisy opcji, uprawnień i ról w przeglądzie zleceń sterowania<br />
+    centralnego.<br />
+  - Przystosowano do pracy z KS-AOW w trybie ORACLE Direct.<br />
+<br />
+  ApwMain.exe [2023.1.3.7]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2023.04.25 [2023.1.3.7]<br />
+  - Poprawa weryfikacji wydawanej ilości leku podczas realizacji e-Recepty.<br />
+    Usunięto automatyczną weryfikację dla e-Recept, na których zamiast liczby<br />
+    opakowań podano ilość sztuk.<br />
+  - e-Recepta transgraniczna: poprawiono błąd, występujący po wprowadzeniu<br />
+    niepoprawnych danych pacjenta i zmianie zestawu danych służących do<br />
+    identyfikacji pacjenta, na zestaw który zawierał mniejszą ilość elementów.<br />
+    Operacja kończyła się komunikatem błędu "Pobieranie danych pacjenta<br />
+    zakończyło się niepowodzeniem".<br />
+<br />
+</body></html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2023.1.2.3</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2023.02.16<br />
+  Slowniki.dll [2023.1.2.3]<br />
+  - Wizytówka -> zakładka KOWAL. Rozszerzono funkcję testową dla konta Kowal.<br />
+    Chcąc teraz zweryfikować poprawność ustawień dla konta NMVS, program poprosi<br />
+    o zeskanowanie kodu 2D leku podlegającego serializacji by sprawdzić<br />
+    poprawność połączenia do NMVS.<br />
+  - Optymalizacja działania projektów pharmind GRID.<br />
+<br />
+  ApwHarm.dll [2023.1.2.3]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+  Zasoby.dll [2023.1.2.3]<br />
+  - Dodano opis do opcji APW11.12.12: "Domyślna odpowiedź dla unieważnienia<br />
+    ostatniej przeprowadzonej transakcji terminalowej na 'TAK'".<br />
+<br />
+  ZSMOPL.DLL [2023.1.0.0]<br />
+  - Aktualizacja biblioteki komunikacyjnej.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2023.02.16 [2023.1.2.3]<br />
+  - Sprzedaż wiązana: dodano oznaczenie potencjalnych towarów promocyjnych (P)<br />
+    przy wyborze towaru do sprzedaży.<br />
+  - Podstawowa sprzedaż leków: rozwiązano problem objawiający się brakiem<br />
+    podsumowania sprzedaży jeśli po wybraniu z kolejki towaru wraz zaliczką<br />
+    w poprawie sprzedaży usuniemy wszystkie pozycje towarów pozostawiając tylko<br />
+    pozycje rozliczenia zaliczek.<br />
+  - Rozwiązano problem objawiający się wystąpieniem błędu "index ... cannot be<br />
+    used in the specified plan" podczas odczytu pobranej e-Recepty na niektórych<br />
+    konfiguracjach Firebird.<br />
+  - Optymalizacja działania projektów pharmind GRID.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW12 -----------------------------</h3><br />
+2023.02.16 [2023.1.2.3]<br />
+  - Modyfikacja w zakresie Analizy potencjału towaru w zamówieniach.<br />
+    Zmodyfikowano algorytm potencjału w taki sposób, aby nie uwzględniał pozycji<br />
+    towarów, które znajdują się w zamówieniach niewysłanych.<br />
+  - Optymalizacja działania projektów pharmind GRID.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2023.02.16 [2023.1.2.3]<br />
+  - Uzupełniono blokadę możliwości poprawy terminu płatności na dokumentach<br />
+    zakupu. Blokada będzie uzależniona od uprawnienia (13-0006-06).<br />
+    Domyślnie brak blokady.<br />
+  - Optymalizacja działania projektów pharmind GRID.<br />
+  - Poprawiono wydruk metki utworzonej na podstawie własnego szablonu. Na wydruk<br />
+    nie przenosiły się dane z pól: Kod kreskowy oraz Kod EAN z karty towaru.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW14 -----------------------------</h3><br />
+2023.02.16 [2023.1.2.3]<br />
+  - Poprawa kart zakupu: rozwiązano problem objawiający się nieprawidłową<br />
+    weryfikacją ustawienia na karcie towaru znacznika raportowania do ZSMOPL<br />
+    podczas próby zapisu zmian na karcie zakupu na niektórych konfiguracjach.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2023.02.16 [2023.1.2.3]<br />
+  - Eksport do SAP3. Rozszerzono raport o przekazywanie danych dotyczących <br />
+    formy zapłaty Epruf.<br />
+  - Dostosowanie raportu "Faktura VAT" oraz "Zestawienie wewnętrzne"<br />
+    do sprzedaży z odpłatnością 20%. Raporty wywoływane są z poziomu<br />
+    "Refundacje -> Rozliczenia z NFZ do końca 2011 -> Faktura".<br />
+<br />
+<h3>---------------------------- Zmiany w module APW23 -----------------------------</h3><br />
+2023.02.16 [2023.1.2.3]<br />
+  - Rozwiązano problem objawiający się wystąpieniem błędu "index ... cannot be<br />
+    used in the specified plan" podczas odczytu pobranej e-Recepty na niektórych<br />
+    konfiguracjach Firebird.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2023.02.16 [2023.1.2.3]<br />
+  - Dodano opcję APW11.12.12: "Domyślna odpowiedź dla unieważnienia ostatniej<br />
+    przeprowadzonej transakcji terminalowej na 'TAK'" - dotyczy terminali PeP.<br />
+  - Optymalizacja działania projektów pharmind GRID.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW42 -----------------------------</h3><br />
+2023.02.16 [2023.1.2.3]<br />
+  - Dostosowanie raportu o stanie Oracle do wersji 21 XE.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW55 -----------------------------</h3><br />
+2023.02.16 [2023.1.2.3]<br />
+  - Optymalizacja działania projektów pharmind GRID.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW68 -----------------------------</h3><br />
+2023.02.16 [2023.1.2.3]<br />
+  - Dostosowanie modułu do wersji systemu ZSMOPL 1.29.2.<br />
+<br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2023.02.16 [2023.1.2.3]<br />
+  - Pharmind GRID: Optymalizacja raportowania stanów magazynowych otwarcia.<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2023.02.16<br />
+  ApwPlus [2023.1.2.3]<br />
+  - Aktualizacja struktury bazy danych.<br />
+<br />
+  ApwBase.dll [2023.1.2.3]<br />
+  - Uaktualniono bazę kart serwisowych.<br />
+<br />
+  IBPack.exe [2023.1.2.3]<br />
+  - Optymalizacja usuwania starych dokumentów.<br />
+<br />
+</body></html>

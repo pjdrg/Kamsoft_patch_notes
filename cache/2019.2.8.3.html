@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2019.2.8.3</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2019.07.02<br />
+  mvserver.exe [2019.3.0.2] <br />
+  - Poprawa działania szybkości synchronizacji stanów magazynowych dla automatów<br />
+    ROWA z protokołem WWKS2.<br />
+<br />
+2019.07.01<br />
+  slowniki.dll [2019.3.0.6]<br />
+  - Prezentacja promocji w zapytaniu o cenę nawet w przypadku, gdy dostawca <br />
+    podał niepełną informację dotyczącą promocji.<br />
+  - Na karcie towaru w oknie dotyczącym obsługi maski BLOZ dodano informację<br />
+    wyświetlaną w przypadku, gdy obsługa maski BLOZ została wyłączona<br />
+	globalnie w regułach optymalizacji zamówień.<br />
+  <br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2019.07.02 [2019.3.4.2]<br />
+  - Poprawa komunikacji z automatem do wydawania leków ROWA z systemem WWKS2. <br />
+    Automat nie wydawał leków, gdy towar w automacie miał pustą datę ważności.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW12 -----------------------------</h3><br />
+2019.07.02 [2019.3.0.5]<br />
+  - Wprowadzenie możliwości globalnego wyłączenia obsługi masek BLOZ w regułach <br />
+    optymalizacji zamówienia:<br />
+    W wersji Full Optymalizatora Zamówień wprowadzono możliwość wyłączenia obsługi <br />
+    masek BLOZ dla wszystkich towarów podczas optymalizacji zamówienia.<br />
+  - Prezentacja promocji w zapytaniu o cenę nawet w przypadku, gdy dostawca podał <br />
+    niepełną informację dotyczącą promocji.<br />
+    W przypadku, gdy dostawca nie poda pełnej informacji o cenie produktu w promocji <br />
+    algorytm nie jest w stanie policzyć ceny zakupu towaru. <br />
+    Do tej pory takie promocje nie były wyświetlane w oknie <br />
+    „Zapytanie o stan i cenę towaru”. Wprowadzono modyfikację, która wyświetla <br />
+    daną promocję. Od tej pory użytkownik może skorzystać z takiej promocji w <br />
+    module 11, co do tej pory nie było możliwe. W kolumnie ceny dla takiej pozycji <br />
+    promocji wyświetlany jest znak zapytania informujący o tym, że promocja istnieje, <br />
+    ale nie udało się policzyć dla niej ceny zakupu.<br />
+  - Prospekty - poprawa zatwierdzania pozycji prospektu dla ilości zamawianej.<br />
+    W pewnych sytuacjach, gdy nie naciśnięto Enter żeby zatwierdzić pozycję a<br />
+    kliknięto myszką to zatwierdzanie nie zapisywało wpisanej ilości do bazy.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2019.07.02 [2019.3.0.3]<br />
+ - Edycja zestawienia refundacyjnego: Dodano ostrzeżenia dla niewypełnionych<br />
+   pól: I część oraz V/VII część kodu resortowego oraz Regon świadczeniodawcy<br />
+ - Generowanie raportów dla JPK_FA. Dostosowanie raportu do nowej specyfikacji <br />
+   JPK_FA(2), która obowiązuje od 1.07.2019.<br />
+<br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2019.07.01 [2019.3.6.0]<br />
+  - Poprawiono przekazywanie historycznych danych zakupowych do KS-OmninPharm<br />
+<br />
+</body></html>

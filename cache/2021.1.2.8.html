@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2021.1.2.8</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2021.01.13<br />
+  Slowniki.dll [2021.1.2.8]<br />
+  - Zmiana hasła dla KOWAL. Dodano możliwość zmiany hasła poprzez hasło kierownika<br />
+    (nie trzeba pamiętać starego hasła do KOWAL). Zmiana tą będzie możliwa tylko <br />
+    koncie kierownika.<br />
+  - Dodanie funkcji, która będzie umożliwiała akceptację warunków licencji <br />
+    dla KS-MediVeris tylko na jednym stanowisku.<br />
+<br />
+2021.01.08<br />
+  OphOneRepoSvc.exe [2020.3.2.4]<br />
+  - KS-OmniPharm One - RepoCloud - optymalizacja raportowania statystyk<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2021.01.13 [2021.1.2.8]<br />
+  - e-Recepta: Poprawiono interpretację typu świadczeniodawcy (miejsca <br />
+    wystawienia dokumentu) dla recept wystawionych przez pielęgniarkę w ramach <br />
+    praktyki pielęgniarskiej.<br />
+  - e-Recepta: Optymalizacja zapytań SQL wyszukiwania towaru podczas odczytu<br />
+    recepty.<br />
+  - Dodano blokadę realizacji recept transgranicznych dla produktów leczniczych<br />
+    o kategorii dostępności Rp.z, produktów leczniczych recepturowych,  <br />
+    preparatów zawierających środki odurzające oraz substancje psychotropowe<br />
+<br />
+<h3>---------------------------- Zmiany w module APW14 -----------------------------</h3><br />
+2021.01.13 [2021.1.2.8]<br />
+  - Historia karty zakupu - usprawnienia w ustalaniu wartości początkowej na<br />
+    dokumencie zakupu.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2021.01.13 [2021.1.2.8]<br />
+  - Eksport do SKP. Zmiana formatu pliku eksportu z tekstowego na xml.<br />
+  - Eksport dla RaksSQL. Dodanie możliwości eksportu rejestru sprzedaży.<br />
+  - Eksport do KS-PPS. Poprawiono numer umowy z NFZ.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW23 -----------------------------</h3><br />
+2021.01.13 [2021.1.2.8]<br />
+  - Retaksacja recept: Poprawiono wyświetlanie zdublowanych DRR, które <br />
+    pokazywały się w przypadku gdy recepta wraz z DRR pobierana była z SIM <br />
+    (co wykonywane było dla niewysłanego DRR do SIM) <br />
+  - Retaksacja recept: Poprawiono wykazywanie korekty dodatniej. W zestawieniu <br />
+    brakowało realizacji wykonanych przez Alt+X.  <br />
+  - Retaksacja recept: Poprawiono przetwarzanie recept zrealizowanych w trybie<br />
+    awaryjnym.<br />
+  - Retaksacja recept: Optymalizacja zapytań SQL podczas tworzenia zestawienia.<br />
+  - Retaksacja recept: Usprawnienia użycia pamięci.<br />
+  - Wydruki z menu "Przychód / rozchód (Dz.U. 169/2006)": Optymalizacja zapytań<br />
+    SQL oraz tworzenia raportu. Usprawnienia w ustalaniu wartości początkowej<br />
+    na dokumencie zakupu w procesie wyliczania stanu magazynowego na dany dzień.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW68 -----------------------------</h3><br />
+2021.01.13 [2021.1.2.8]<br />
+  - Dostosowanie komunikatów błędów i ostrzeżeń do wersji systemu ZSMOPL 1.24<br />
+  - Dla raportu braków dodanie zabezpieczenie przed wysłaniem raportu z<br />
+    pozycją bez kodu EAN.<br />
+<br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2021.01.13 [2021.1.2.8]<br />
+  - Raportowanie transakcji do OSOZ: optymalizacja zapytań SQL.<br />
+<br />
+</body></html>

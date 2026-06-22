@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2020.0.1.3</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2019.10.10<br />
+  apwharm.dll [2020.0.2.0]<br />
+  - Zablokowanie przenoszenia na listę braków pozycji odrzuconych przez <br />
+    hurtownię dla zamówień generowanych przez automatyczną dystrybucję numeryczną. <br />
+    W przypadku gdy te pozycje trafiały na listę braków, były zamawiane w innych <br />
+    hurtowniach z pominięciem promocji, co powodowało sprzedaż bez rabatów<br />
+    wynikających z kontraktów.<br />
+  ApwHarmPush.dll [2020.0.2.0]<br />
+  - Zablokowanie przenoszenia na listę braków pozycji odrzuconych przez <br />
+    hurtownię dla zamówień generowanych przez automatyczną dystrybucję numeryczną. <br />
+    W przypadku gdy te pozycje trafiały na listę braków, były zamawiane w innych <br />
+    hurtowniach z pominięciem promocji, co powodowało sprzedaż bez rabatów<br />
+    wynikających z kontraktów.<br />
+<br />
+2019.10.08<br />
+  slowniki.dll [2020.0.0.8]<br />
+  - Zmiana sposobu liczenia ceny zakupu netto w oknie Zapytanie o Stan i Cenę<br />
+    towaru z uwzględnieniem wszystkich cen podanych przez hurtownie.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2019.10.03 [2020.0.2.5]<br />
+  - e-Recepta: dodano weryfikacjÄ™ sumarycznej iloĹ›ci jednostek z przepisanych <br />
+    na Rp. opakowaĹ„ <br />
+  - e-Recepta: poprawiono odczyt "daty realizacji od" dla Rp. na wyrĂłb medyczny.<br />
+    Program bĹ‚Ä™dnie odczytywaĹ‚ datÄ™ 1899-12-30<br />
+  - e-Recepta: Rozszerzono wydruk pakietu recept (Ctrl+P) o nazwÄ™ BLOZ<br />
+<br />
+<h3>---------------------------- Zmiany w module APW12 -----------------------------</h3><br />
+2019.10.10 [2020.0.0.4]<br />
+  - Dodanie weryfikacji uprawnienia do uruchomienia Optymalizatora zamĂłwieĹ„<br />
+  - PrzyĹ›pieszenie wczytywania listy brakĂłw w Optymalizatorze zamĂłwieĹ„ na bazie <br />
+    danych Oracle<br />
+  - Zablokowanie przenoszenia na listÄ™ brakĂłw pozycji odrzuconych przez hurtowniÄ™ <br />
+    dla zamĂłwieĹ„ generowanych przez automatycznÄ… dystrybucjÄ™ numerycznÄ…. <br />
+	W przypadku gdy te pozycje trafiaĹ‚y na listÄ™ brakĂłw, byĹ‚y zamawiane w innych hurtowniach z pominiÄ™ciem promocji, co powodowaĹ‚o sprzedaĹĽ bez rabatĂłw <br />
+	wynikajÄ…cych z kontraktĂłw.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2019.10.08 [2020.0.3.1]<br />
+    - UwzglÄ™dnienie blokady centralnej w blokowaniu <br />
+      ceny detalicznej w "Pozycjach dokumentu zakupu".<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2019.10.10 [2020.0.2.4]<br />
+  - Refundacja środków pomocniczych. Poprawiono eksport do KS-PPS:<br />
+    a) umowy NFZ (w przypadku błędu importu w PPS: "Nie istniejący numer umowy" <br />
+	należy sprawdzić, czy numer umowy wprowadzony w "Apw21->Refundacje-><br />
+	Środki pomocnicze->Umowy i aneksy->Karta->Nr umowy środ. pom." jest taka sam<br />
+	jak w "KS-PPS->Kontrakty->Umowy->Numer umowy". Uwaga: Myślniki, spacje mają znaczenie.<br />
+    b) miejsce wydania (w przypadku błędu importu w PPS: "Nieprawidłowy kod <br />
+	miejsca udzielenia świadczenia" należy sprawdzić, czy miejsce wydania <br />
+	w "Apw21->Refundacje->Środki pomocnicze->Umowy i aneksy->Karta->Miejsce wydania"<br />
+	jest takie same jak w "KS-PPS->Kontrakty->Umowy->Przegląd->Miejsca wykonywania <br />
+	usług->Numer".<br />
+   Eksport nie przewiduje danych dotyczących dokumentu potwierdzającego <br />
+   dodatkowe uprawnienie.<br />
+   Dodano możliwość zmiany domyślnej ścieżki zapisu eksportu CSV do KS-PPS (opcja: apw21.1.4).<br />
+<br />
+2019.10.04 [2020.0.2.3]<br />
+  - Refundacja środków pomocniczych. Poprawiono eksport (odpłatności, <br />
+    początku okresu limitu oraz uprawnienia IB) do KS-PPS.<br />
+	<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2019.10.08 [2020.0.1.1]<br />
+  - Zmiana nazwy opcji apw21.1.4 na "ĹšcieĹĽka zapisu eksportu CSV (lub DBF) do KS-PPS (lub KS-TSP)"<br />
+ <br />
+<h3>---------------------------- Zmiany w module APW44 -----------------------------</h3><br />
+ď»ż2019.10.08 [2020.0.1.1]  <br />
+  - Dodano aktualizacjÄ™ sekwencji po imporcie bazy towarĂłw w: <br />
+    APW44 - Komunikacja->NarzÄ™dzia->Synchronizacja bazy towarĂłw->Importuj<br />
+<br />
+<h3>---------------------------- Zmiany w module APW68 -----------------------------</h3><br />
+2019.10.10 [2020.0.0.8]<br />
+  - Dodanie kontroli poprawnego przekazywania dokumentĂłw MM z poprawnie <br />
+    uzupeĹ‚nionym rodzajem podmiotu oraz uzupeĹ‚nionym idetyfikatorem z rejestru P1.<br />
+  <br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2019.10.10 [2020.0.10.0]<br />
+  - Optymalizacja kolejnoĹ›ci wykonywania zadaĹ„<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2019.10.10<br />
+  Apwplus.exe [2020.0.11.0]<br />
+  - Uaktualniono strukturÄ™ bazy danych<br />
+<br />
+</body></html>

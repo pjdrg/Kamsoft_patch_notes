@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2025.4.3.4</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2025.12.18<br />
+  Slowniki.dll [2025.4.3.4]<br />
+  - Modyfikacja w zakresie tworzenia zamówienia. Dodano informację o systemie<br />
+    KS-AOW dla zamówień wygenerowanych w KS-AOW.<br />
+<br />
+  Zasoby.dll [2025.4.3.4]<br />
+  - Aktualizacja opisów opcji.<br />
+<br />
+  ApwFN.dll [2025.4.3.4]<br />
+  - Zaktualizowano listę opcji, uprawnień i ról w mechanizmie sterowania<br />
+    centralnego.<br />
+  - Okno "Komunikacja z centralą KS-ZSA" - dodano informację o tym, czy obsługa<br />
+    harmonogramu jest realizowana przez serwis KsZSAServA (opcja: "Raportownik<br />
+    w trybie usługi"). Możliwość realizacji harmonogramu przez serwis jest<br />
+    dostępna od KS-ZSA w wersji 2026.00.0.0.<br />
+<br />
+  ApwIap.dll [2025.4.3.4]<br />
+  - Zrealizowano optymalizację procesów związanych z realizacją zamówień<br />
+    internetowych. Zamówieniami internetowymi zarządzamy z poziomu modułu<br />
+    "APW45 - Apteka internetowa -> Zamówienia".<br />
+<br />
+  ApwHarm.dll [2025.4.3.4]<br />
+  - Modyfikacja w zakresie tworzenia zamówienia. Dodano informację o systemie<br />
+    KS-AOW dla zamówień wygenerowanych w KS-AOW.<br />
+  - Modyfikacja w zakresie zamówień automatycznych. Poprawiono proces tworzenia<br />
+    zamówienia uwzględniając zaokrąglenia wynikające z mnożnika na karcie<br />
+    towaru.<br />
+  - Zrealizowano optymalizację procesów w aplikacji ApwPlan – Harmonogram zadań<br />
+    dla obsługi procesów związanych z apteką internetową (APW45).<br />
+    Zadaniami dla ApwPlan zarządzamy z poziomu modułu "APW41 – Administrator -><br />
+    Ustawienia -> Plan zadań".<br />
+<br />
+  MvServer [2025.4.3.4]<br />
+  - Synchronizacja stanów magazynowych - optymalizacja procesu, synchronizacji<br />
+    dla automatów Gollmann. Rozwiązanie problemu synchronizacji stanów<br />
+    dla dokumentów zawierających więcej niż jedną pozycję z daną serią.<br />
+<br />
+  ApwControl [2025.4.3.4]<br />
+  - Do listy obsługiwanych serwisów dodano serwis "KS-ZSA - komunikacja apteki<br />
+    XXXXXX z centralą".<br />
+<br />
+  ApwMain, ApwPlan, ApwPlanWorker [2025.4.3.4]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2025.12.18 [2025.4.3.4]<br />
+  - Giełda Pomysłów: dodano obsługę skrótów klawiaturowych , Ctrl+A, Ctrl+X,<br />
+    Ctrl+C, Ctrl+V w oknie 'Kody e-recepty'.<br />
+  - e-Recepta: Optymalizacja przetwarzania recept po pobraniu z SIM.<br />
+  - Okno weryfikacji wydawanej ilości. Dodano pobieranie DRR z SIM<br />
+    przy podglądzie dokumentu w przypadku, gdy zapis DRR do bazy danych<br />
+    był wyłączony.<br />
+  - Dodano możliwość pracy na środowisku integracyjnym SIM w wersji<br />
+    ćwiczeniowej/edukacyjnej.<br />
+    Wymaga wyłączenia opcji APW11.2.179 "E-Recepta: Używaj symulatora SIM<br />
+    w wersji ćwiczeniowej oraz edukacyjnej".<br />
+<br />
+<h3>---------------------------- Zmiany w module APW12 -----------------------------</h3><br />
+2025.12.18 [2025.4.3.4]<br />
+  - Modyfikacja w zakresie tworzenia zamówienia. Dodano informację o systemie<br />
+    KS-AOW dla zamówień wygenerowanych w KS-AOW.<br />
+  - Modyfikacja w zakresie zamówień automatycznych. Poprawiono proces tworzenia<br />
+    zamówienia uwzględniając zaokrąglenia wynikające z mnożnika na karcie<br />
+    towaru.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2025.12.18 [2025.4.3.4]<br />
+  - Modyfikacja w zakresie tworzenia zamówienia. Dodano informację o systemie<br />
+    KS-AOW dla zamówień wygenerowanych w KS-AOW.<br />
+  - Modyfikacja w zakresie weryfikacji dostawy KS-APTIX. Zoptymalizowano czas<br />
+    wejścia do listy weryfikacji dostawy KS-APTIX.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2025.12.18 [2025.4.3.4]<br />
+  - Przekazanie danych w formacie Edi++ - rozwiązanie problemu przekazywania<br />
+    danych kontrahenta dla faktur zakupowych wystawionych na Grupę Vat.<br />
+    W pewnych przypadkach nie przekazywały się dane kontrahenta.<br />
+  - Przekazanie danych do NAV - rozwiązanie problemu z błędnym przekazaniem<br />
+    kwoty z formą płatności "przelew" do odpowiedniej kolumny danych.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW23 -----------------------------</h3><br />
+2025.12.18 [2025.4.3.4]<br />
+  - Retaksacja recept: Poprawa odświeżania informacji o pobraniu dokumentu stanu<br />
+    realizacji recepty z SIM po wysłaniu DRR.<br />
+  - Dodano możliwość pracy na środowisku integracyjnym SIM w wersji<br />
+    ćwiczeniowej/edukacyjnej.<br />
+    Wymaga wyłączenia opcji APW11.2.179 "E-Recepta: Używaj symulatora SIM<br />
+    w wersji ćwiczeniowej oraz edukacyjnej".<br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2025.12.18 [2025.4.3.4]<br />
+  - Dodano opcję APW11.2.179 "E-Recepta: Używaj symulatora SIM w wersji<br />
+    ćwiczeniowej oraz edukacyjnej".<br />
+<br />
+<h3>---------------------------- Zmiany w module APW42 -----------------------------</h3><br />
+2025.12.18 [2025.4.3.4]<br />
+  - W oknie "Kontrola spójności bazy danych" rozszerzono weryfikację o dodatkowy<br />
+    zakres danych, aby wykrywać kolejne potencjalne niespójności.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW44 -----------------------------</h3><br />
+2025.12.18 [2025.4.3.4]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW45 -----------------------------</h3><br />
+2025.12.18 [2025.4.3.4]<br />
+  - Rozwiązano problem z kontrolą krótkich dat ważności dla automatów<br />
+    generowania oferty internetowej. Ofertę internetową przygotowujemy z poziomu<br />
+    modułu "APW45 - Apteka internetowa -> Towary".<br />
+<br />
+<h3>---------------------------- Zmiany w module APW68 -----------------------------</h3><br />
+2025.12.18 [2025.4.3.4]<br />
+  - Generowanie raportu obrotów i stanów, rozwiązanie problemu ze wstrzymywaniem<br />
+    dostaw dla serii leków przeterminowanych. Brak wstrzymania serii generował<br />
+    nadmiarowy komunikat "Błąd(2): Dostępna ilość leku dla serii xxx jest > 0".<br />
+<br />
+<h3>--------------------------------- ZMIANY.IRAP ----------------------------------</h3><br />
+2025.12.18 [2025.4.3.4]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2025.12.18 [2025.4.3.4]<br />
+  - Pharmind grid: aktualizacja raportowania parametrów dotyczących działania<br />
+    zamówień automatycznych<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2025.12.18<br />
+  ApwPlus [2025.4.3.4]<br />
+  - Aktualizacja struktury bazy danych.<br />
+<br />
+  IBPack, DBCopy [2025.4.3.4]<br />
+  - Poprawiono wydajność operacji kopiowania danych.<br />
+<br />
+  WaUtil, UACUtil, OraRest [2025.4.3.4]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+</body></html>

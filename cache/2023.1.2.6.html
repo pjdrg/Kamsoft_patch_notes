@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2023.1.2.6</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2023.03.02<br />
+  Slowniki.dll [2023.1.2.6]<br />
+  - Pharmind GRID: rozszerzenie raportowania stanów magazynowych.<br />
+  - Optymalizacja działania usługi Podobniki.<br />
+  - Rozwiązano problem objawiający się niepoprawnym zarządzaniem listów<br />
+    przewozowych dla sprzedaży internetowej. Poprawiono prezentację zakładki<br />
+    "Inpost" w regułach dla listów przewozowych.<br />
+  - Na karcie towaru, w zakładce "Typy" dodano nowy wskaźnik "Wyłączony<br />
+    ze sprzedaży do weterynarii".<br />
+  - Na karcie BLOZ, w zakładce "Inne" dodano nowy wskaźnik "Wyłączony<br />
+    ze sprzedaży do weterynarii".<br />
+<br />
+  ApwMain.exe [2023.1.2.6]<br />
+  - Aktualizacja komunikatów z Giełdy Pomysłów dotyczących zmiany statusu<br />
+    pomysłu.<br />
+<br />
+  ApwiAp.dll [2023.1.2.6]<br />
+  - Rozwiązano problem objawiający się niepoprawnym pobieraniem<br />
+    magazynu/jednostki dla akcji automatycznych rezerwacji przy włączonej<br />
+    funkcji "Zarządzanie serwerami". Jeśli opcja "Zarządzanie serwerami" jest<br />
+    aktywna to magazyn/jednostka powinna być pobierana z ustawień serwera<br />
+    przypisanego do zamówienia internetowego. Funkcja "Zarządzanie serwerami"<br />
+    jest dostępna w module APW45 - Apteka Internetowa -> Ustawienia.<br />
+<br />
+  ApwHarm.dll [2023.1.2.6]<br />
+  - Rozwiązano problem objawiający się blokadą na realizacje automatycznych MM<br />
+    przy włączonych opcjach "Zarządzanie serwerami" (APW45 - Apteka Internetowa<br />
+    -> Ustawienia) oraz "Automatycznie generuj dokumenty MM, podczas rezerwacji<br />
+    zamówień" (APW45 - Apteka Internetowa -> Reguły -> Zamówienia).<br />
+  - Rozwiązano problem objawiający się niepoprawnym pobieraniem<br />
+    magazynu/jednostki dla akcji automatycznych rezerwacji przy włączonej<br />
+    funkcji "Zarządzanie serwerami". Jeśli opcja "Zarządzanie serwerami" jest<br />
+    aktywna to magazyn/jednostka powinna być pobierana z ustawień serwera<br />
+    przypisanego do zamówienia internetowego. Funkcja "Zarządzanie serwerami"<br />
+    jest dostępna w module APW45 - Apteka Internetowa -> Ustawienia.<br />
+  - Rozwiązano problem objawiający się niepoprawnym funkcjonowaniem zadania<br />
+    "Aktualizacja zamówień ze stroną sklepu WWW" w aplikacji Apwplan -<br />
+    Harmonogram Zadań dla trzeciej konfiguracji sklepu. Konfigurację dla sklepu<br />
+    trzeciego włączamy w module APW45 - Apteka Internetowa -> Ustawienia -><br />
+    Ustawienia -> Ogólne opcją "Włącz trzecie połączenie dla komunikacji".<br />
+<br />
+  Osozmok.dll [2023.1.0.0]<br />
+  - Pharmind GRID: rozszerzenie raportowania stanów magazynowych.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2023.03.02 [2023.1.2.6]<br />
+  - Terminale płatnicze PeP: modyfikacja sposobu doboru interfejsu sieciowego do<br />
+    komunikacji z terminalami PeP.<br />
+  - Pharmind GRID: rozszerzenie raportowania stanów magazynowych.<br />
+  - Rozwiązano problem objawiający się niepoprawnym ustawieniem pozycji w<br />
+    sprzedaży na rodzaj "na zamówienie (ręcznie ustawiane)" pod dokument<br />
+    rezerwacji internetowej. Teraz pozycje sprzedaży pod rezerwacją internetową<br />
+    przyjmują rodzaj "zamówione poprzez aptekę internetową".<br />
+  - Rozwiązano problem objawiający się wystąpieniem błędu "Field IDSPRZ not<br />
+    found" podczas wychodzenia z edycji faktury zbiorczej.<br />
+  - Dodano ostrzeżenie wyświetlające się przy realizacji recepty weterynaryjnej<br />
+    podczas wyboru towaru, który jest wyłączony ze sprzedaży do weterynarii.<br />
+    Podstawa prawna: Rozporządzenie wykonawcze komisji UE 2022/1255 z dnia<br />
+    19 lipca 2022 r. określające środki przeciwdrobnoustrojowe lub grupy środków<br />
+    przeciwdrobnoustrojowych zarezerwowane do leczenia niektórych zakażeń<br />
+    u ludzi zgodnie z rozporządzeniem Parlamentu Europejskiego i Rady UE 2019/6.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2023.03.02 [2023.1.2.6]<br />
+  - Pharmind GRID: rozszerzenie raportowania stanów magazynowych.<br />
+  - Uzależnienie możliwości edycji terminu płatności od uprawnienia 13-0006-06<br />
+    dla funkcji Dokumenty->[F12] Przegląd i poprawki->[F4] Popraw.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW14 -----------------------------</h3><br />
+2023.03.02 [2023.1.2.6]<br />
+  - Rozszerzono funkcję importującą dane z BLOZ oraz funkcję uaktualniającą<br />
+    karty towarów na podstawie BLOZ o obsługę nowego wskaźnika "Wyłączony<br />
+    ze sprzedaży do weterynarii". Aby zaktualizować podany wskaźnik z BLOZ<br />
+    należy w funkcji "Tworzenie bufora z aktualizacją" zaznaczyć pozycję <br />
+    "Ostrzeż., wskaź., droga podania, ilość w opak., DDD".<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2023.03.02 [2023.1.2.6]<br />
+  - Optymalizacja procesu generowania raportu JPK_MAG dla bazy Firebird.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2023.03.02 [2023.1.2.6]<br />
+  - Konfiguracja terminali płatniczych PeP na karcie stanowiska: dodano nowy,<br />
+    opcjonalny parametr "Podsieć". Parametr, jeśli jest wypełniony, ma wpływ na<br />
+    priorytetyzację wyboru interfejsu sieciowego do komunikacji z terminalem PeP<br />
+    pracującego w podanej podsieci w przypadku, gdy jest dostępnych w systemie<br />
+    więcej interfejsów sieciowych.<br />
+  - Terminale płatnicze PeP: modyfikacja sposobu doboru interfejsu sieciowego do<br />
+    komunikacji z terminalami PeP.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW44 -----------------------------</h3><br />
+2023.03.02 [2023.1.2.6]<br />
+  - Rozszerzono funkcję importującą dane z BLOZ o obsługę nowego wskaźnika <br />
+    "Wyłączony ze sprzedaży do weterynarii".<br />
+<br />
+<h3>---------------------------- Zmiany w module APW45 -----------------------------</h3><br />
+2023.03.02 [2023.1.2.6]<br />
+  - Rozwiązano problem objawiający się ukrywaniem w ofercie internetowej<br />
+    produktów, które mają ustawioną wartość "Musi być w ofercie" na karcie<br />
+    towarowej dla opcji "W ofercie apt. internetowej" oraz problem<br />
+    z niedodawaniem nowych produktów do oferty internetowej ręcznie z bazy<br />
+    aptecznej oraz z bazy BLOZ. Problem występował kiedy użytkownik pracował<br />
+    na wydzielonych ofertach internetowych z ustawioną opcją "Dla oferty<br />
+    internetowej globalnej korzystaj z produktów" na wartość "tylko<br />
+    produkty/kategorie przypisane do pełnej oferty internetowej" (APW45 - Apteka<br />
+    Internetowa -> Definicje -> Nagłówki ofert internetowych).<br />
+    Opcja "W ofercie apt. internetowej" dostępna jest z poziomu zakładki<br />
+    "Rabaty" na karcie aptecznej.<br />
+  - Rozwiązano problem objawiający się blokadą na realizacje automatycznych MM<br />
+    przy włączonych opcjach "Zarządzanie serwerami" (APW45 - Apteka Internetowa<br />
+    -> Ustawienia) oraz "Automatycznie generuj dokumenty MM, podczas rezerwacji<br />
+    zamówień" (APW45 - Apteka Internetowa -> Reguły -> Zamówienia).<br />
+<br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2023.03.02 [2023.1.2.6]<br />
+  - Pharmind GRID: rozszerzenie raportowania stanów magazynowych.<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2023.03.02<br />
+  ApwPlus [2023.1.2.6]<br />
+  - Aktualizacja struktury bazy danych.<br />
+<br />
+  ApwBase.dll [2023.1.2.6]<br />
+  - Uaktualniono bazę kart serwisowych.<br />
+<br />
+  IBPack.exe [2023.1.2.6]<br />
+  - Optymalizacja usuwania starych dokumentów.<br />
+<br />
+</body></html>

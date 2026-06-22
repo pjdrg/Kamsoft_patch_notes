@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2026.1.1.7</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2026.04.20<br />
+  Slowniki.dll [2026.1.1.7]<br />
+  - Rozbudowano okno dla zarządzania regułami listów przewozowych o obsługę<br />
+    usługi Pocztex dla Poczty Polskiej. Okno zarządzania listami przewozowymi<br />
+    jest dostępne z poziomu "APW45 - Apteka internetowa -> Towary -> Listy<br />
+    przewozowe".<br />
+<br />
+  ApwMain [2026.1.1.7]<br />
+  - Dodano funkcjonalność monitorowania zajętości przestrzeni bazy danych Oracle<br />
+    XE. Funkcjonalność widoczna będzie na dolnym pasku głównego okna KS-AOW<br />
+    po włączeniu opcji modułów Wspólne.2.55.<br />
+<br />
+  ApwHarm.dll [2026.1.1.7]<br />
+  - Rozszerzono import BLOZ o jednostki wielkości opakowań na podstawie danych<br />
+    z Rejestru Produktów Leczniczych (RPL). Informacje będą wykazywane na DRR.<br />
+  - Rozwiązano problem z zarządzaniem datą ważności dla generowania oferty<br />
+    internetowej w module APWPLAN. Ofertę internetową wysyłamy zadaniem<br />
+    "Aktualizuj ofertę internetową na stronę sklepu WWW".<br />
+<br />
+  ApwIap.dll [2026.1.1.7]<br />
+  - Dodano obsługę generowania listów przewozowych dla usługi Pocztex<br />
+    oraz zaktualizowano interfejsy komunikacyjne z E-Nadawcą.<br />
+    Listy przewozowe generujemy z poziomu modułu "APW45 - Apteka internetowa<br />
+    -> Zamówienia -> Drukuj".<br />
+<br />
+  Zasoby.dll [2026.1.1.7]<br />
+  - Aktualizacja opisów opcji.<br />
+<br />
+  ApwFN.dll [2026.1.1.4]<br />
+  - Zaktualizowano opisy opcji i uprawnień w przeglądzie zleceń z centrali<br />
+    KS-ZSA.<br />
+<br />
+  P1*.dll [2026.1.1.6], ApwOph.dll [2026.1.1.7]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2026.04.20 [2026.1.1.7]<br />
+  - Dodano obsługę danych o realizacjach wycofujących zwracanych z SIM<br />
+    wraz z e-Receptą (w SRR, DSR).<br />
+  - Usprawniono funkcjonalność zwalniania blokady e-Recepty. Wyeliminowano<br />
+    nadmiarowe próby zwolnienia blokady.<br />
+  - Dodano wykazywanie jednostek wielkości opakowania w DRR na podstawie danych<br />
+    z RPL. Wraz z możliwością realizacji 1 e-Recepty w różnych aptekach zostanie<br />
+    wprowadzony przez Centrum e-Zdrowia. wymóg podawania tych informacji na DRR.<br />
+  - Poprawiono precyzję wyliczenia ilości pozostałej do wydania.<br />
+  - Poprawiono wydruk wszystkich e-Recept wywoływanego w oknie e-Recepty.<br />
+    Brakowało informacji o ilości wydanej.<br />
+  - Zmiana adresu serwisu na potrzeby komunikacji z systemem KS-OmniPharm.<br />
+  - Dodano możliwość umieszczenia na wydruku sygnatury leku robionego<br />
+    ostrzeżenia o wpływie produktu leczniczego na sprawność psychofizyczną<br />
+    kierowców i osób obsługujących maszyny.<br />
+  - Zmieniono sposób wyświetlania komunikatu z SIM o zrealizowanej<br />
+    lub zablokowanej e-recepcie podczas próby wyjęcia jej z kolejki.<br />
+  - Wyszukiwanie w sprzedaży po kodzie z opakowania produktów nie podlegających<br />
+    serializacji (nie zawierających indywidualnego numeru opakowania).<br />
+  - Dla rejestru faktur sprzedaży wysłanych do KSeF dodano opcję ustawienia daty<br />
+    początkowej od kiedy dany rejestr ma być kontrolowany. W opcjach KSeF dodano<br />
+    możliwość definicji tej daty początkowej dla pacjentów oraz dla odbiorców.<br />
+  - Rozwiązano problem z określeniem formy płatności dla definicji własnych<br />
+    podczas tworzenia korekty faktury wystawianej do KSeF. Problem objawiał się<br />
+    komunikatem z pustą wartością dla węzła <OpisPlatnosci>.<br />
+  - Rozwiązano problem z brakiem przekazywania informacji o refundacji<br />
+    dla faktur sprzedaży gdzie zapłata za fakturę była równa 0 zł.<br />
+  - Raportowanie faktur i korekt sprzedaży do KS-OmniPharm – poprawiono<br />
+    raportowanie informacji o dostawcy centralnym.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW12 -----------------------------</h3><br />
+2026.04.20 [2026.1.1.7]<br />
+  - Lista braków - wykres sprzedaży wybranego towaru rozszerzono o obsługę<br />
+    wielomagazynowości.<br />
+  - Zmiana adresu serwisu na potrzeby komunikacji z systemem KS-OmniPharm.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2026.04.20 [2026.1.1.7]<br />
+  - Zadanie z giełdy pomysłów: Rozszerzono automatycznej przeceny wcześniejszych<br />
+    dostaw. Podczas zatwierdzania dokumentu wyświetlane jest okno prezentujące<br />
+    wynik automatycznej przeceny. Użytkownik widzi, które dostawy zostaną<br />
+    przecenione, a które pominięte, wraz z podaniem przyczyny i ma możliwość<br />
+    zmiany decyzji dla poszczególnych dostaw.<br />
+    Zwiększa to przejrzystość działania mechanizmu oraz kontrolę nad przebiegiem<br />
+    operacji. W oknie "Pozycje dokumentu zakupu", pod przyciskiem [Alt+F2] Inne<br />
+    -> Symulacja przeceny, dodano okno podglądu automatycznej przeceny przed<br />
+    zatwierdzeniem dokumentu. Dodano również opcje:<br />
+    * APW13.2.115 (domyślnie wyłączona) — umożliwia wykonanie przeceny<br />
+      dla dostaw poniżej kosztu zakupu,<br />
+    * APW13.2.116 (domyślnie wyłączona) — umożliwia wykonywanie przeceny<br />
+      na podstawie dokumentu MM.<br />
+    * APW13.2.117 (domyślnie: zawsze wyświetlaj) — umożliwia sterowanie<br />
+      wyświetlaniem okna podsumowania przeceny. Opcja zależna od ustawienia<br />
+      opcji APW13.2.35.<br />
+    Szczegóły w instrukcji "Automatyczna przecena podczas przyjmowania dostaw".<br />
+  - Dla użytkowników licencji pharmindXF PRO dodano możliwość podglądu pełnej<br />
+    listy faktur przypisanych do danego dostawcy dla funkcjonalności<br />
+    wyszukiwania faktur w KSeF/pharmindXF.<br />
+  - Dodano możliwość otwierania podglądu faktury w KSeF w osobnym, niezależnym<br />
+    oknie. Dzięki temu możesz jednocześnie pracować w programie i wygodnie<br />
+    porównywać dane, np. weryfikując fakturę z rejestru faktur zakupowych<br />
+    z dokumentem w KSeF.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW14 -----------------------------</h3><br />
+2026.04.20 [2026.1.1.7]<br />
+  - Rozszerzono import BLOZ o jednostki wielkości opakowań na podstawie danych<br />
+    z Rejestru Produktów Leczniczych (RPL). Informacje będą wykazywane na DRR.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2026.04.20 [2026.1.1.7]<br />
+  - Obroty personelu: uwzględniono kaucję zwrotną przy obliczaniu sumy zapłat.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW23 -----------------------------</h3><br />
+2026.04.20 [2026.1.1.7]<br />
+  - Dodano wykazywanie jednostek wielkości opakowania w DRR na podstawie danych<br />
+    z RPL. Wraz z możliwością realizacji 1 e-Recepty w różnych aptekach zostanie<br />
+    wprowadzony przez Centrum e-Zdrowia. wymóg podawania tych informacji na DRR.<br />
+  - W oknie "Ewidencja korekt i zwrotów" dodano filtr umożliwiający zawężenie<br />
+    wyświetlanych pozycji do korekt z otwartego lub zamkniętego okresu<br />
+    refundacyjnego.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2026.04.20 [2026.1.1.7]<br />
+  - Wizytówka apteki została rozbudowana o nową zakładkę Licencje Inne, gdzie<br />
+    została umieszczona informacja o licencji pharmindXF. Z poziomu tej zakładki<br />
+    oprócz podstawowych informacji o licencji można podmieniać licencje<br />
+    oraz dokonać rejestracji do pharmindXF PRO.<br />
+  - Opcje KSeF zostały rozbudowane o dwie daty kontrolne dla rejestru faktur<br />
+    sprzedaży wysłanych do KSeF dla pacjentów i odbiorców. Ustawienie tych dat<br />
+    pozwoli kontrolować okres od kiedy apteka chce kontrolować stan faktur,<br />
+    które mają być wysłane do KSeF.<br />
+  - Uprawnienia pracowników zostały rozbudowane o nowe uprawnienie: 13-0016<br />
+    Przeglądanie pełnego rejestru faktur KSeF /pharmindXF dla licencji<br />
+    pharmindXF PRO. Uprawnienie to wraz z posiadaniem licencji na pharmindXF PRO<br />
+    umożliwia pełny podgląd faktur dla danego dostawcy.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW42 -----------------------------</h3><br />
+2026.04.20 [2026.1.1.7]<br />
+  - Aktualizacja struktury bazy danych.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW44 -----------------------------</h3><br />
+2026.04.20 [2026.1.1.7]<br />
+  - Rozszerzono import BLOZ o jednostki wielkości opakowań na podstawie danych<br />
+    z Rejestru Produktów Leczniczych (RPL). Informacje będą wykazywane na DRR.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW45 -----------------------------</h3><br />
+2026.04.20 [2026.1.1.7]<br />
+  - Rozwiązano problem z zarządzaniem datą ważności dla generowania oferty<br />
+    internetowej w module APW45 – Apteka Internetowa. Ofertę internetową<br />
+    generujemy automatami "Odśwież ofertę" oraz "Aktualizuj ceny".<br />
+    Funkcje te są dostępne z poziomu "APW45 - Apteka internetowa -> Towary".<br />
+  - Zaktualizowano interfejsy komunikacyjne dla E-Nadawcy do wersji aktualnej<br />
+    dla listów przewozowych Poczty Polskiej.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW68 -----------------------------</h3><br />
+2026.04.20 [2026.1.1.7]<br />
+  - Zmiana komunikatu informującego o 7 dniach na wysłanie korekty raportu<br />
+    obrotów i stanów. Okres ten został wydłużony do 30 dni, zgodnie<br />
+    ze specyfikacją ZSMOPL v.1.43: "KM7 – wydłużamy możliwości zaraportowania<br />
+    korekty komunikatu do 30 dni".<br />
+<br />
+<h3>-------------------------------- Zmiany w iRap ---------------------------------</h3><br />
+2026.04.20 [2026.1.1.7]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2026.04.20 [2026.1.1.7]<br />
+  - Pharmind grid: obsługa nowej wersji komunikatu dot. pobierania listy towarów<br />
+    do raportowania stanów magazynowych.<br />
+<br />
+<h3>----------------------------- Zmiany w pharmindXF ------------------------------</h3><br />
+2026.04.20 [2026.4.9.1]<br />
+  - Dodano obsługę licencji pharmindXF PRO. Aby rozpocząć pracę z licencją<br />
+    pharmindXF PRO trzeba wykonać rejestrację z poziomu Wizytówki apteki.<br />
+    Posiadanie licencji pharmindXF PRO daje użytkownikowi m.in.:<br />
+    * automatyczne budowanie w chmurze rejestru metadanych faktur<br />
+      ustrukturyzowanych podatnika korzystającego z pharmindXF Pro,<br />
+    * budowany rejestr metadanych faktur w chmurze ma wyeliminować limity<br />
+      połączeń do i z KSeF.<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2026.04.20<br />
+  ApwPlus, WaUtil [2026.1.1.7]<br />
+  - Aktualizacja struktury bazy danych.<br />
+<br />
+  ApwBase.dll [2026.1.1.7]<br />
+  - Uaktualniono bazę kart serwisowych.<br />
+<br />
+</body></html>

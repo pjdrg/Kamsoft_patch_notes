@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2022.2.3.0</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2022.07.18<br />
+  Slowniki.dll [2022.2.3.0]<br />
+  - Na karcie dostawcy zmieniono nazwę opcji "Używaj kodów centralnych"<br />
+    na "Dostawca wykorzystuje do identyfikacji towarów CKT apteki".<br />
+<br />
+  Zasoby.dll [2022.2.3.0]<br />
+  - Uzupełnienie opisu opcji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2022.07.18 [2022.2.3.0]<br />
+  - KS-OmniPharm: wysyłka raportu synchronizacyjnego po wykonaniu raportu<br />
+    dobowego na drukarce fiskalnej.<br />
+  - KS-OmniPharm: poprawiono wysyłkę danych w przypadku usunięcia<br />
+    niezafiskalizowanej sprzedaży z poprzedniego dnia.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2022.07.18 [2022.2.3.0]<br />
+  - Dodano mechanizm automatycznego tworzenia brakujących kart towarowych<br />
+    podczas wczytywania dokumentu zakupu. Mechanizm włączany jest parametrem:<br />
+    "Automatyczne zakładanie kart towarowych" (Apw13.2.101).<br />
+    Karty towarowe zakładane są:<br />
+    a) na podstawie kartoteki centralnej, gdy:<br />
+      * apteka pracuje z bazą towarową w trybie kartotek centralnych lub<br />
+        mieszanych,<br />
+      * dostawca dokumentu zakupu na karcie dostawcy ma włączoną opcję<br />
+        "Dostawca wykorzystuje do identyfikacji towarów CKT apteki",<br />
+      * dokument zakupu zawiera numer CKT lub dokument zakupu nie zawiera<br />
+        numeru CKT, ale odnaleziono w CKT kartę po numerze BLOZ.<br />
+    b)  na podstawie bazy BLOZ, gdy:<br />
+      * apteka pracuje z bazą towarową w trybie kartotek lokalnych lub<br />
+        mieszanych,<br />
+      * dostawca dokumentu zakupu na karcie dostawcy ma wyłączoną opcję<br />
+        "Dostawca wykorzystuje do identyfikacji towarów CKT apteki",<br />
+      * dokument zakupu zawiera numer BLOZ.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW14 -----------------------------</h3><br />
+2022.07.18 [2022.2.3.0]<br />
+  - Poprawa kart zakupu - usprawnienia blokowania karty podczas aktualizacji<br />
+    danych.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2022.07.18 [2022.2.3.0]<br />
+  - Dodano parametr "Automatyczne zakładanie kart towarowych", który umożliwia<br />
+    sterowaniem włączaniem i wyłączaniem funkcji automatycznego zakładania kart<br />
+    towarowych podczas wczytywania dokumentu zakupu.<br />
+    Parametr domyślnie wyłączony.<br />
+<br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2022.07.18 [2022.2.3.0]<br />
+  - KS-OmniPharm: poprawiono odświeżanie opcji odpowiedzialnej za datę ostatniej<br />
+    wysyłki raportu statystycznego.<br />
+<br />
+</body></html>

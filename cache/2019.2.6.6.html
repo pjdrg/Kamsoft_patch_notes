@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2019.2.6.6</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2019.05.16<br />
+  apwharm.dll [2019.3.0.0]	<br />
+  - Poprawiono mechanizm zakładania pacjentów i odbiorców dla zamówień<br />
+    pobranych ze strony WWW.<br />
+  - Poprawiono zarządzanie domyślnym statusem dla rezerwacji zamówień<br />
+    w aptece internetowej.<br />
+  - Poprawiono zarządzanie datą ważności dla produktów z ręczną ceną,<br />
+    ceną z promocji oraz z ceną internetową z bazy aptecznej.<br />
+  - Poprawiono zarządzanie zdublowanymi produktami dla generatora oferty<br />
+  - Poprawiono wysyłanie zasobów dla produktów internetowych<br />
+  - Poprawiono zarządzanie parametrami dla wielu ofert dla <br />
+    aptecznego harmonogramu zadań.<br />
+<br />
+2019.05.15<br />
+  slowniki.dll [2019.3.0.2]<br />
+   - Doodano zakładkę 'Dane sprzedawcy dla ZSMOPL' na karcie Dostawcy <br />
+     w centralnej kartotece dostawców. Dodano funkcjonalność przenoszenie danych<br />
+	 dotyczących tej zakładki podczas zakładania lokalnej karty Dostawcy na <br />
+	 podstawie kartoteki centralnej.<br />
+   - Dodano pole 'Kraj' na karcie Dostawcy w Centralnej Kartotece Dostawców.<br />
+   - Kompendium Suplementów Diety:<br />
+	 - Dodano opcję pokazania tylko produktów z listy towarów, będących na<br />
+	   stanie. Opcja jest domyślnie aktywna.<br />
+	 - Dodano możliwość zmiany produktu porównywanego w oknie porównania KSD.<br />
+	 - Zaimplementowano możliwość dodania do listy towarów produktu bezpośrednio<br />
+	   z okna KSD.<br />
+	 - Dodano możliwość uruchomienia okna porównania KSD dla dowolnego produktu<br />
+	   z BLOZ.<br />
+	 - Dodano przycisk '[F10] Suplementy' na formularzu przeglądu Towarów oraz<br />
+	   oknie kartoteki BLOZ.<br />
+	 - Zaimplementowano automatyczne sprawdzenie i wyświetlenie informacji <br />
+	   o innych suplementach o zbliżonym składzie w oknie '[F2] Zamówienia' <br />
+	   oraz w oknie 'F12 Spr. w hurtowni'.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2019.05.16 [2019.3.1.2]<br />
+  - E-recepta: w oknie pakietu e-recept poprawiono wyświetlanie ilości <br />
+    wydanego w poprzednich realizacjach e-recepty leku<br />
+<br />
+<h3>---------------------------- Zmiany w module APW12 -----------------------------</h3><br />
+2019.05.16 [2019.3.0.0]<br />
+  - Dodano obsługę sortowania tabeli korekty norm (Normy->Korekta norm->Porządek+)<br />
+    Tabela jest sorotwana po nazwie oraz numerze towaru.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2019.05.15 [2019.3.0.4]<br />
+    - Programy partnerskie OSOZ: Dodanie obsługi raportowania danych <br />
+	  do OSOZ dla aptek z wielomagazynowością<br />
+<br />
+<h3>---------------------------- Zmiany w module APW14 -----------------------------</h3><br />
+2019.05.15 [2019.3.0.1]<br />
+   - Poprawa liczenia podsumowania w rozbiciu na stawki VAT dla dokumentów<br />
+     przeceny. Wartości były obliczane dla ilości zakupionych zamiast<br />
+	 aktualnych.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW31 -----------------------------</h3><br />
+2019.05.16 [2019.3.0.1]<br />
+  - Dodano możliwość określenia przyszłej daty płatności dla paczki przelewu <br />
+    w formacie: 'Elixir', 'Citi Handlowy', 'MiniBank' oraz 'Moja Firma Plus'<br />
+	(Bank Zachodni WBK S.A.). Dotychczas data waluty wypełniana była zawsze <br />
+	bieżącą datą generowania paczki przelewu.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW45 -----------------------------</h3><br />
+2019.05.16 [2019.3.0.0] <br />
+  - Poprawiono mechanizm zakładania pacjentów i odbiorców dla zamówień<br />
+    pobranych ze strony WWW.<br />
+  - Poprawiono zarządzanie domyślnym statusem dla rezerwacji zamówień<br />
+    w aptece internetowej.<br />
+  - Poprawiono zarządzanie datą ważności dla produktów z ręczną ceną,<br />
+    ceną z promocji oraz z ceną internetową z bazy aptecznej.<br />
+  - Poprawiono zarządzanie zdublowanymi produktami dla generatora oferty<br />
+  - Poprawiono wysyłanie zasobów dla produktów internetowych<br />
+  - Poprawiono czytanie zasobów na karcie internetowej<br />
+  - Poprawiono kopiowanie kategorii<br />
+  - Rozszerzono opcje do kopiowania kategorii o zarządzanie<br />
+    kopiowaniem kategorii z produktami lub bez produktów. <br />
+  - Poprawiono zarządzanie parametrami dla wielu ofert dla <br />
+    aptecznego harmonogramu zadań.<br />
+  - Rozszerzono filtr dla towarów internetowych o możliwość<br />
+    filtrowania produktów z blozem oraz bez bloza<br />
+  - Rozszerzono wydruków oferty internetowej o prezentację numeru bloz<br />
+    oraz wydruk teraz uwzględnia wszystkie opcje filtru oferty<br />
+    internetowej.    <br />
+<br />
+<h3>---------------------------- Zmiany w module APW68 -----------------------------</h3><br />
+2019.05.16 [2019.3.0.5]<br />
+  - MAR01 - Dostosowanie systemu do specyfikacji CSIOZ v.2.23, w której zmieniono<br />
+	status błędu TROSPOZ32 z błędu na ostrzeżenie. Ta zmiana powodowała, że<br />
+	raport przyjmował status błędny zamiast poprawny z ostrzeżeniami.<br />
+  - Poprawa wyświetlania informacji o braku REGONU, NIP czy identyfikatora <br />
+    z rejestru P2 dla kontrahenta. Brak tej informacji objawiał się brakiem pliku<br />
+    z logami ("Sprawdź plik z logami błędów w katalogu ... ").<br />
+  - Rozszerzenie informacji o numer klienta dla braku dokumentu źródłowego dla<br />
+    sprzedaży. Po dacie i numerze klienta łatwiej będzie można odnaleźć sprzedaż<br />
+	i wykonać poprawę (Sprzedaż podstawowa->Poprawa->Prawy klawisz menu-><br />
+	Specjalne->Zrób WZ dla zaznaczonej sprzedaży).<br />
+<br />
+<h3>--------------------------------- Zmiany w EWD ---------------------------------</h3><br />
+2019.05.13 [2019.02.0.0]<br />
+  KSPCSPluginContractsData.dll, KSPCSModelContracts.dll, <br />
+  KSPCSPluginWebServices.dll: <br />
+  - Dodanie obsługi przelogowywania do serwera. Podczas uruchamiania kontraktów <br />
+    w aptekach gdzie ApwPlan był włączony przez całą dobę, mógł występować <br />
+    problem z komunikacją usług. <br />
+  - Wykluczenie z raportu rozliczeniowego towarów skorygowanych do ilości zero. <br />
+    W raportach rozliczeniowych wyeliminowano towary, które zostały w całości <br />
+    zwrócone do dostawcy.<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2019.05.16<br />
+  Apwplus.exe [2019.3.2.0]<br />
+  - Uaktualniono strukturę bazy danych<br />
+<br />
+</body></html>

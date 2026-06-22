@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2023.1.5.3</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2023.07.06<br />
+  Slowniki.dll [2023.1.5.3]<br />
+  - Dodano pole "Informacje dodatkowe na metce" na karcie towaru kartoteki<br />
+    centralnej oraz uzupełnianie tego pola na karcie towarowej lokalnej<br />
+    przy zakładaniu jej na podstawie kartoteki centralnej.<br />
+<br />
+  ApwiAp.dll, APW_SC.exe [2023.1.5.3]<br />
+  - Zmiany związane z usunięciem opcji Wspólne.2.20 "Praca systemu według zasad<br />
+    ustawy o refundacji leków Dz.U. 122/2011".<br />
+<br />
+  Zasoby.dll [2023.1.5.3]<br />
+  - Aktualizacja opisów opcji.<br />
+<br />
+  ApwFn.dll [2023.1.5.3]<br />
+  - Zaktualizowano opisy opcji, uprawnień i ról w przeglądzie zleceń sterowania<br />
+    centralnego.<br />
+<br />
+  ApiService [2023.1.0.0]<br />
+  - Usprawniono działanie i stabilność usługi.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2023.07.06 [2023.1.5.3]<br />
+  - [Zadanie z Giełdy Pomysłów] Dodanie nowych danych na wydrukach kodów<br />
+    e-recept (Ctrl+D). Dodano m.in. numer wydruku, datę zamówienia,<br />
+    datę ważności recepty oraz rozszerzono informację o wydawanym leku.<br />
+  - Dodano oznaczenie dla paragonów skorygowanych oraz ostrzeżenie przy wyborze<br />
+    takiego paragonu w procesie wyboru paragonów do dokumentu zbiorczego.<br />
+  - Lista dostaw. Na formatce Informacyjnej o dostawie [F3] dodano informację<br />
+    czy dany dokument miał weryfikację kodów 2D podczas przyjęcia na magazyn<br />
+    w module zakupy.<br />
+  - Zmiany związane z usunięciem opcji Wspólne.2.20 "Praca systemu według zasad<br />
+    ustawy o refundacji leków Dz.U. 122/2011".<br />
+  - Pharmind GRID: raportowanie stanów magazynowych w nowym formacie.<br />
+  - Poprawa funkcji porównującej leki w oknie "Inny EAN".<br />
+    W niektórych przypadkach (syropy, zawiesiny) program niepoprawnie porównywał<br />
+    dawki leków i sugerował wydanie leku o większej dawce.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW12 -----------------------------</h3><br />
+2023.07.06 [2023.1.5.3]<br />
+  - Rozwiązano problem w zamówieniach łączonych objawiający się komunikatem<br />
+    np. "EConvertError: 'CENUZ' is not a valid integer value" po uruchomieniu<br />
+    funkcji F9 "Przenieś" nie będąc ustawionym na kolumnie reprezentującej<br />
+    dostawcę.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2023.07.06 [2023.1.5.3]<br />
+  - Wprowadzono możliwość blokady zatwierdzenia dokumentu wprowadzonego ręcznie<br />
+    (opcja APW13.2.103 "Kontrola terminu płatności dla dokumentów wprowadzonych<br />
+    ręcznie") jeśli wprowadzony termin płatności będzie wcześniejszy niż<br />
+    wynikający z karty dostawcy.<br />
+  - Zmieniono sposób ustalania terminu płatności podczas wczytywania dokumentu<br />
+    elektronicznego. Sposób ten można określić poprzez ustawienia opcji<br />
+    APW13.2.24 "Termin płatności za fakturę".<br />
+  - Zmiany związane z usunięciem opcji Wspólne.2.20 "Praca systemu według zasad<br />
+    ustawy o refundacji leków Dz.U. 122/2011".<br />
+  - Pharmind GRID: raportowanie stanów magazynowych w nowym formacie.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW14 -----------------------------</h3><br />
+2023.07.06 [2023.1.5.3]<br />
+  - Zmiany związane z usunięciem opcji Wspólne.2.20 "Praca systemu według zasad<br />
+    ustawy o refundacji leków Dz.U. 122/2011".<br />
+  - Zmiany związane z usunięciem opcji APW14.1.14 "Sposób aktualizacji cen<br />
+    urzędowych podczas przeceny na podstawie bazy BLOZ".<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2023.07.06 [2023.1.5.3]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW22 -----------------------------</h3><br />
+2023.07.06 [2023.1.5.3]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW23 -----------------------------</h3><br />
+2023.07.06 [2023.1.5.3]<br />
+  - Zmiany związane z usunięciem opcji Wspólne.2.20 "Praca systemu według zasad<br />
+    ustawy o refundacji leków Dz.U. 122/2011".<br />
+<br />
+<h3>---------------------------- Zmiany w module APW35 -----------------------------</h3><br />
+2023.07.06 [2023.1.5.3]<br />
+  - Zmiany związane z usunięciem opcji Wspólne.2.20 "Praca systemu według zasad<br />
+    ustawy o refundacji leków Dz.U. 122/2011".<br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2023.07.06 [2023.1.5.3]<br />
+  - Dodano nową opcję: APW13.2.103 "Kontrola terminu płatności dla dokumentów<br />
+    wprowadzonych ręcznie" (domyślna wyłączona).<br />
+  - Zmiana nazwy opcji: APW13.2.24 "Ignoruj termin płatności odczytany<br />
+    z dyskietki" na opcję "Termin płatności za fakturę".<br />
+  - Usunięto opcję Wspólne.2.20 "Praca systemu według zasad ustawy o refundacji<br />
+    leków Dz.U. 122/2011".<br />
+  - Usunięto opcję APW14.1.14 "Sposób aktualizacji cen urzędowych podczas<br />
+    przeceny na podstawie bazy BLOZ".<br />
+<br />
+<h3>---------------------------- Zmiany w module APW42 -----------------------------</h3><br />
+2023.07.06 [2023.1.5.3]<br />
+  - Aktualizacja struktury bazy danych.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW45 -----------------------------</h3><br />
+2023.07.06 [2023.1.5.3]<br />
+  - Zmiany związane z usunięciem opcji Wspólne.2.20 "Praca systemu według zasad<br />
+    ustawy o refundacji leków Dz.U. 122/2011".<br />
+<br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2023.07.06 [2023.1.5.3]<br />
+  - Pharmind GRID: raportowanie stanów magazynowych w nowym formacie.<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2023.07.06<br />
+  ApwPlus [2023.1.5.3]<br />
+  - Aktualizacja struktury bazy danych.<br />
+<br />
+</body></html>

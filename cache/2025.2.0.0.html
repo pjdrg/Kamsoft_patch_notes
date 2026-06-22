@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2025.2.0.0</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2025.05.15 [2025.2.0.0]<br />
+  - Dodano funkcjonalność logowania użytkownika serwisowego do systemu<br />
+    aptecznego przy pomocy kodu dostępu serwisowego KS-SDS.<br />
+<br />
+  Slowniki.dll [2025.2.0.0]<br />
+  - Dodano mechanizmy wersjonowania danych dla kartotek odbiorców, dostawców<br />
+    i towarów.<br />
+<br />
+  ApwHarm.dll [2025.2.0.0]<br />
+  - Modyfikacja w zadaniu komunikacji z dostawcami dotycząca odczytu nagłówków<br />
+    dokumentów oraz identyfikatorów sprzedawcy.<br />
+<br />
+  ApwIap.dll [2025.2.0.0]<br />
+  - Modyfikacja w zakresie KS-APTIX. Wprowadzono dodatkową informację<br />
+    dla urządzenia mobilnego informującą o wsparciu obsługi wczytywania skanów.<br />
+<br />
+  ApwMain, MvServer [2025.2.0.0]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2025.05.15 [2025.2.0.0]<br />
+  - Dodano obsługę wersjonowania danych słownikowych dla dokumentów sprzedaży.<br />
+    Elementy dokumentu takie jak dane kontrahentów, towarów po zatwierdzeniu<br />
+    dokumentu, nie będą możliwe do edycji.<br />
+  - Poprawiono weryfikację dat ważności recept znajdujących się w kolejce.<br />
+    Realizacja przeterminowanych recept zostanie zablokowana zgodnie<br />
+    z ustawieniem opcji modułu 1.2.153: Okno e-Recepty: Blokada sprzedaży poza<br />
+    okresem ważności recepty.<br />
+  - Raport kasowy - podczas filtrowania danych po refundatorze lub sprzedawcy<br />
+    sprzedaże z operacjami bezgotówkowymi nie będą uwzględniane, aby zapobiec<br />
+    zaburzeniom w wyliczeniach.<br />
+  - OSOZ: Poprawa wyświetlania informacji o lekach wstrzymanych i wycofanych.<br />
+  - Sprzedaż wiązana komplementarna wielokrotna – usunięto błąd związany<br />
+    z błędnym zapisem statystyk użycia.<br />
+  - Dodano możliwość usuwania pojedynczej pozycji z dokumentu w kolejce.<br />
+  - Dodano blokadę wprowadzania numeru NIP do paragonu zawierającego pozycję<br />
+    z lekiem przepisanym na receptę, który nie może być wydawany podmiotowi<br />
+    gospodarczemu.<br />
+  - Dodano kontrolę wersji minimalnej biblioteki P1Exports.dll służącej<br />
+    do realizacji e-Recept.<br />
+  - Modyfikacja w zakresie KS-APTIX. Wprowadzono dodatkową informację<br />
+    dla urządzenia mobilnego informującą o wsparciu obsługi wczytywania skanów.<br />
+  - Modyfikacja w zakresie KS-APTIX. Dodanie do procesu kompletacji ekspozycji<br />
+    możliwości wyboru serii i daty ważności dla zeskanowanych towarów z kodem<br />
+    EAN.<br />
+  - Poprawiono działanie funkcji korekt dokumentów magazynowych.<br />
+    Pozycje usunięte z dokumentu przed jego zatwierdzeniem nie będą<br />
+    już wyświetlane podczas wyboru pozycji do skorygowania.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW12 -----------------------------</h3><br />
+2025.05.15 [2025.2.0.0]<br />
+  - Przeglądanie listy braków: uwzględniono nowy rodzaj pozycji (pozycji<br />
+    z retaksacji – APW23). Nowy typ w kolumnie "Źródło" jest oznaczony<br />
+    liczbą [23], a w kolumnie "Przyczyna powstawania" jest oznaczony symbolem<br />
+    "RC23".<br />
+  - Reguły -> Listy braków: uwzględniono nowy rodzaj pozycji z listy braków<br />
+    w oknie "Reguły tworzenia listy braków" w sekcji "Automatyczne tworzenie<br />
+    listy braków". Dodano opcję: "Bierz ilość zamawianą z APW23 (jeśli różna<br />
+    od zera)".<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2025.05.15 [2025.2.0.0]<br />
+  - Dodano ostrzeżenie wyświetlane podczas przyjmowania towaru na stan magazynu<br />
+    przez technika, jeśli dokument zawiera lek zawierający substancje bardzo<br />
+    silnie działające, odurzające lub psychotropowe z grup I-P lub II-P.<br />
+  - Dodano obsługę wersjonowania danych słownikowych dla dokumentów zakupu.<br />
+    Elementy dokumentu takie jak dane kontrahentów, towarów po zatwierdzeniu<br />
+    dokumentu, nie będą możliwe do edycji.<br />
+  - Modyfikacja w zakresie pobierania dokumentów z pharmind EDI.<br />
+    Dodano możliwość włączenia pobierania automatycznego dokumentów do bufora.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW14 -----------------------------</h3><br />
+2025.05.15 [2025.2.0.0]<br />
+  - Dodano obsługę wersjonowania danych słownikowych dla dokumentów<br />
+    magazynowych. Elementy dokumentu takie jak dane kontrahentów, towarów<br />
+    po zatwierdzeniu dokumentu, nie będą możliwe do edycji.<br />
+  - Modyfikacja w zakresie KS-APTIX. Wprowadzono dodatkową informację<br />
+    dla urządzenia mobilnego informującą o wsparciu obsługi wczytywania skanów.<br />
+  - Różnice remanentowe/Kolektor/Czytnik kodów kreskowych - poprawa działania<br />
+    funkcjonalności skanowania kodów QR za pomocą czytnika.<br />
+    W niektórych przypadkach program nie potrafił dopasować odpowiedniej karty<br />
+    towaru.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW15 -----------------------------</h3><br />
+2025.05.15 [2025.2.0.0]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2025.05.15 [2025.2.0.0]<br />
+  - Poprawiono generowanie pozycji korygującej sprawozdanie refundacyjne.<br />
+    Program nie aktualizował poprawionych w module sprzedaży dat:<br />
+    przyjęcia/wykonania/wydania leku recepturowego.<br />
+  - Zaktualizowano eksporty danych do systemów FK o obsługę wersjonowania danych<br />
+    słownikowych dla dokumentów eksportów.<br />
+  - Zaktualizowano raport JPK o obsługę wersjonowania danych słownikowych<br />
+    dla dokumentów raportu.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW22 -----------------------------</h3><br />
+2025.05.15 [2025.2.0.0]<br />
+  - Zadanie z Giełdy Pomysłów: Dodanie możliwości ukrycia i przywracania miejsc<br />
+    składowania.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW23 -----------------------------</h3><br />
+2025.05.15 [2025.2.0.0]<br />
+  - Dodano kontrolę wersji minimalnej biblioteki P1Exports.dll służącej<br />
+    do realizacji e-Recept.<br />
+  - Zadanie z Giełdy Pomysłów - Kontrola sprzedaży -> Retaksacja recept: dodano<br />
+    funkcję [F12] Retaksacja recept. Funkcjonalność umożliwiająca dodawanie<br />
+    do listy braków towarów z recepty (lub towarów wydanych z recepty).<br />
+    Tak dodane towary będzie można przeglądać i używać na tych samych zasadach<br />
+    co towary dodawane do listy braków z poziomu APW11 -> lista braków<br />
+    ze sprzedaży. Dodatkowo do okna doszły 3 kolumny przedstawiające stany<br />
+    danego towaru i ewentualne wprowadzenie go do listy braków z retaksacji<br />
+    (lub z innych miejsc): "Ilość ogólna", "Lista braków (retaksacja)",<br />
+    "Lista braków (inne)".<br />
+<br />
+<h3>---------------------------- Zmiany w module APW24 -----------------------------</h3><br />
+2025.05.15 [2025.2.0.0]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW25 -----------------------------</h3><br />
+2025.05.15 [2025.2.0.0]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW31 -----------------------------</h3><br />
+2025.05.15 [2025.2.0.0]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW35 -----------------------------</h3><br />
+2025.05.15 [2025.2.0.0]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2025.05.15 [2025.2.0.0]<br />
+  - Poprawiono, opis wartości domyślnej parametru "Blokada sprzedaży<br />
+    dla Podmiotu gospodarczego pozycji na recepcie weterynaryjnej<br />
+    z adn. "ad usum propium". Wartość domyślna oznaczona była jako ustawiona,<br />
+    chociaż faktycznie domyślnie nie jest ustawiona.<br />
+  - Modyfikacja w zakresie KS-APTIX. Zmiany opcji dotyczące KS-APTIX dostępne<br />
+    są od razu na urządzeniu mobilnym.<br />
+  - Rozbudowano uprawnienie 11_0025. Aktualizacja daty sprzedaży, obejmuje teraz<br />
+    również aktualizację numeru klienta.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW42 -----------------------------</h3><br />
+2025.05.15 [2025.2.0.0]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW43 -----------------------------</h3><br />
+2025.05.15 [2025.2.0.0]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW44 -----------------------------</h3><br />
+2025.05.15 [2025.2.0.0]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW45 -----------------------------</h3><br />
+2025.05.15 [2025.2.0.0]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW55 -----------------------------</h3><br />
+2025.05.15 [2025.2.0.0]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW61 -----------------------------</h3><br />
+2025.05.15 [2025.2.0.0]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW68 -----------------------------</h3><br />
+2025.05.15 [2025.2.0.0]<br />
+  - Zaktualizowano generowanie raportów do ZSMOPL o obsługę wersjonowania danych<br />
+    słownikowych dla dokumentów raportu.<br />
+<br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2025.05.15 [2025.2.0.0]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2025.05.15<br />
+  ApwPlus [2025.2.0.0]<br />
+  - Rozbudowa struktury bazy danych związana z obsługą wersjonowania danych<br />
+    słownikowych.<br />
+<br />
+  ApwBase.dll [2025.2.0.0]<br />
+  - Uaktualniono bazę kart serwisowych.<br />
+<br />
+  DBCopy [2025.2.0.0]<br />
+  - Dodano możliwość włączania i wyłączania wyzwalaczy.<br />
+<br />
+  WaUtil [2025.2.0.0]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+</body></html>

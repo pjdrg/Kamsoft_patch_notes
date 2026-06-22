@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2022.1.0.0</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2022.01.11<br />
+  CopyCloud [2022.1.0.0]<br />
+  - Poprawka w odczycie prawa dostępu do usługi.<br />
+<br />
+  ApwMain.exe [2022.1.0.0]<br />
+  - Z Drugiego poziomu menu usunięto wewnętrzną funkcjonalność: "Pobieranie<br />
+    dokumentów DOZ" Zainteresowane apteki będą mogły nadal korzystać<br />
+    z funkcjonalności dodając skrót do aplikacji "RaportyDOZ.exe" udostępnionej<br />
+    w folderze \EXE\ systemu aptecznego.<br />
+<br />
+  Slowniki.dll [2022.1.0.0]<br />
+  - Dostosowano funkcjonalność ukrywania towarów do nowych opcji APW22.2.9,<br />
+    APW22.4.9, APW22.4.10.<br />
+  - Zmiany w wyświetlaniu punktów oraz treści w Rabatach za punkty.<br />
+<br />
+  OsozNews.dll [2022.1.0.0]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+  ApInetAp.dll [2022.1.0.0]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+  ApwHarm.dll [2022.1.0.0]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+  ApwHarmPush.dll [2022.1.0.0]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+  ApwiAp.dll [2022.1.0.0]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2022.01.11 [2022.1.0.0]<br />
+  - APTIX: wersja próbna mobilnej kompletacji towaru.<br />
+  - eZWM: poprawiono wyświetlenie komunikatu o niepowiązaniu towaru z umową NFZ.<br />
+  - Dodano obsługę e-Recepty transgranicznej - wersja zapoznawcza. <br />
+    Funkcjonalność będzie dostępna po opublikowaniu środowiska produkcyjnego <br />
+    przez Centrum e-Zdrowia. Sposób realizacji recept transgranicznych został <br />
+    opisany w instrukcji.<br />
+  - Zmiany w wyświetlaniu punktów oraz treści w Rabatach za punkty.<br />
+  - Zmiany i poprawki w mechanizmie zaliczek i rozliczeń:<br />
+    * Z paragonu z zaliczką na lek robiony usunięto pozycje ze składnikami leku<br />
+      robionego (został sam nagłówek, analogicznie jak na paragonie z lekiem<br />
+      robionym.<br />
+    * Z paragonu z rozliczeniem zaliczki usunięto pozycje z rozliczeniami<br />
+      składników leku robionego.<br />
+    * Poprawiono wydruk paragonu z rozliczeniem zaliczki leku robionego na <br />
+      drukarkach Mera Online i Novitus HD (na tych drukarkach pojawiał się błąd<br />
+      przy rozliczeniu zaliczki).<br />
+    * Specyfikacja sprzedaży tekstowa: usunięto składniki receptury z zaliczek<br />
+      i rozliczeń zaliczek leku robionego.<br />
+    * Specyfikacja sprzedaży graficzna: dodano do nazwy nagłówka zaliczki leku<br />
+      robionego oraz rozliczenia słówka [Zal] i [Rozl].<br />
+    * Dodano blokadę fiskalizacji niezłożonego leku robionego.<br />
+  - Dodano wyświetlanie podsumy i Razem do zapłaty na drukarce Novitus HDE<br />
+    Online i HDe >= 3.01.<br />
+  - Poprawiono problem ze znikaniem kwoty zaliczki z kolejki w przypadku<br />
+    pobrania kilku zaliczek dla jednego klienta i rozliczenia (usunięcia)<br />
+    jednej z nich.<br />
+  - Dodano blokadę dodania kolejnej pozycji do recepty z lekiem recepturowym.<br />
+  - Poprawiono działanie funkcji Ad100 - wykluczono z obliczeń opakowanie do<br />
+    receptury.<br />
+  - Poprawiono wydruk korekty FV dla Opieki na lek recepturowy (błędna kwota<br />
+    refundacji w tabelce Rozliczenie dla Opieki).<br />
+<br />
+<h3>---------------------------- Zmiany w module APW12 -----------------------------</h3><br />
+2022.01.11 [2022.1.0.0]<br />
+  - Zmiany w wyświetlaniu punktów oraz treści w Rabatach za punkty.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2022.01.11 [2022.1.0.0]<br />
+  - APTIX: wersja próbna mobilnej weryfikacji dostawy.<br />
+  - Poprawiono przyjęcie dokumentu zakupu na magazyn.<br />
+    Wyeliminowano problem z brakiem podsumowania i brakiem wpisu daty<br />
+    zatwierdzenia.<br />
+  - Zmiany w wyświetlaniu punktów oraz treści w Rabatach za punkty.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW14 -----------------------------</h3><br />
+2022.01.11 [2022.1.0.0]<br />
+  - APTIX: wersja próbna mobilnej inwentaryzacji.<br />
+  - Dostosowano funkcjonalność ukrywania towarów do nowych opcji APW22.2.9,<br />
+    APW22.4.9, APW22.4.10.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2022.01.11 [2022.1.0.0]<br />
+  - Poprawiono eksport do SAP generowany z poziomu edycji zestawienia<br />
+    refundacyjnego, dla opcji [F10] Wydruki - Faktura VAT (z uwzgl.korekt)<br />
+    i Faktura VAT. Eksport błędnie przekazywał daty dla poszczególnych wydruków.<br />
+  - Obsługa e-Recepty transgranicznej. Aktualizacja ewidencji recept, wydruków.<br />
+  - W przeglądzie pozycji zestawienia refundacyjnego poprawiono kontrolę<br />
+    ryczałtu za lek robiony.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW22 -----------------------------</h3><br />
+2022.01.11 [2022.1.0.0]<br />
+  - Dostosowano funkcjonalność ukrywania towarów do nowych opcji APW22.2.9,<br />
+    APW22.4.9, APW22.4.10: menu Kartoteki -> Towary -> Diagnostyka.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW23 -----------------------------</h3><br />
+2022.01.11 [2022.1.0.0]<br />
+  - Dodano obsługę e-Recepty transgranicznej. Funkcjonalność będzie dostępna po<br />
+    opublikowaniu środowiska produkcyjnego przez Centrum e-Zdrowia.<br />
+  - Zadanie z GP: Retaksacja recept: dodano możliwość poprawy kodów recepty,<br />
+    danych zamiennika, znacznika Nie zamieniać i Pro auctore/familiae.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2022.01.11 [2022.1.0.0]<br />
+  - APTIX: wersja próbna mobilnej weryfikacji dostawy, inwentaryzacji<br />
+    i kompletacji towaru.<br />
+  - Dodano opcję APW22 -> 2. Ustawienia globalne -> 9. Usuwanie kodów BLOZ i EAN<br />
+    podczas ukrywania karty towaru.<br />
+  - Dodano opcję APW22 -> 4. Kartoteki centralne -> 9. Zezwalaj na ukrywanie<br />
+    kart towarowych powiązanych z kartoteką centralną.<br />
+  - Dodano opcję APW22 -> 4. Kartoteki centralne -> 10. Usuwanie powiązania<br />
+    z kartą centralną podczas ukrywania karty towaru.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW42 -----------------------------</h3><br />
+2022.01.11 [2022.1.0.0]<br />
+  - Ukryj nieużywane karty towarów: dostosowano do nowych opcji APW22.2.9,<br />
+    APW22.4.9, APW22.4.10.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW44 -----------------------------</h3><br />
+2022.01.11 [2022.1.0.0]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW45 -----------------------------</h3><br />
+2022.01.11 [2022.1.0.0]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2022.01.11 [2022.1.0.0]<br />
+  - Zmiany w wyświetlaniu punktów oraz treści w Rabatach za punkty.<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2022.01.11<br />
+  ApwPlus.exe [2022.1.0.0]<br />
+  - Uaktualniono strukturę bazy danych.<br />
+<br />
+  Apwbase.dll [2022.1.0.0]<br />
+  - Uaktualniono bazę kart serwisowych.<br />
+<br />
+</body></html>

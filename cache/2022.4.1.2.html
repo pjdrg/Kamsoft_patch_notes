@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2022.4.1.2</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2022.12.29<br />
+  ApwHarm.dll [2022.4.1.2]<br />
+  - Rozwiązano problem objawiający się nie rozsyłaniem zaległych faktur PDF<br />
+    inicjowanych zadaniem "Wyślij e-mail do klientów dla zamówień internetowych"<br />
+    oraz zadaniem "Generuj wydruki dokumentów dla sprzedaży internetowej"<br />
+    w aplikacji ApwPlan – Harmonogram. Problem dotyczył sprzedaży z zamówień<br />
+    internetowych.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2022.12.29 [2022.4.1.2]<br />
+  - Rozwiązano problem blokady wystawienia faktury VAT dla przedsiębiorcy.<br />
+    W przypadku gdy sprzedaż rozpoczynała się od wskazania odbiorcy z NIP,<br />
+    system blokował możliwość wystawienia dokumentu faktury - blokada została<br />
+    usunięta.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2022.12.29 [2022.4.1.2]<br />
+  - Rozwiązano problem w weryfikacji dostawy objawiający się komunikatem<br />
+    "EPCSError: Access violation at address ...".<br />
+    Komunikat mógł pojawić się podczas próby wczytania skanów z kolektora<br />
+    z użyciem funkcji "[F7] Kolektor".<br />
+<br />
+</body></html>

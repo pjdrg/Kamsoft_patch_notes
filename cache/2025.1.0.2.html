@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2025.1.0.2</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2025.02.12<br />
+  Slowniki.dll [2025.1.0.2]<br />
+  - Dodano wskaźnik "Farmaceutyczna refund." na karcie BLOZ oraz karcie towaru.<br />
+<br />
+  P1*.dll [2025.1.0.2]<br />
+  - Dodano nową funkcjonalność, która umożliwia wystawianie refundowanych recept<br />
+    farmaceutycznych na produkty immunologiczne od 14 lutego 2025 r.<br />
+<br />
+  ApwFn.dll [2025.1.0.2]<br />
+  - Zaktualizowano opisy w zleceniach aktualizacji kartotek związane ze<br />
+    wskaźnikiem "recepta farmaceutyczna refundowana".<br />
+<br />
+  ApwMain, ApwPlan.exe, ApwPlanWorker.exe, WaUtil.exe [2025.1.0.2]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+  ApwHarm.dll [2025.1.0.2]<br />
+  - Rozbudowa importu BLOZ w zakresie informacji umożliwiającej wystawienie<br />
+    recepty refundowanej na wybrany produkt.<br />
+    Dodano wskaźnik "Farmaceutyczna refund." na karcie BLOZ.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2025.02.12 [2025.1.0.2]<br />
+  - Dodano nową funkcjonalność, która umożliwia wystawianie refundowanych recept<br />
+    farmaceutycznych na produkty immunologiczne od 14 lutego 2025 r.<br />
+  - Rozwiązanie problemu serializacji leków w kolejce dla funkcji F11 - Podziel.<br />
+    Po wykonaniu tej funkcji w sprzedaży nie było widać zielonych trójkątów<br />
+    i zawyżała się statystyka leków bez kodu.<br />
+  - Rozwiązano problem objawiający się możliwym wystąpieniem błędu "Field IDPACA<br />
+    not found" podczas naliczania opłaty nocnej w niektórych konfiguracjach<br />
+    systemu KS-AOW.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW12 -----------------------------</h3><br />
+2025.02.12 [2025.1.0.2]<br />
+  - KS-OmniPharm: rozszerzenie centralnego parametryzowania zamówień o możliwość<br />
+    określenia podziału leków z ceną urzędową pomiędzy dostawców.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2025.02.12 [2025.1.0.2]<br />
+  - Uzupełnienie wydruków dokumentu PZ o dane podmiotu Sprzedawcy.<br />
+    W przypadku przyjęcia faktury wystawionej przez podmiot będący Grupą VAT,<br />
+    brak było tej informacji na wydruku dokumentu PZ.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW14 -----------------------------</h3><br />
+2025.02.12 [2025.1.0.2]<br />
+  - Rozbudowa importu BLOZ oraz karty towaru w zakresie informacji<br />
+    umożliwiającej wystawienie recepty refundowanej na wybrany produkt.<br />
+    Dodano wskaźnik "Farmaceutyczna refund." na karcie BLOZ oraz karcie towaru.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2025.02.12 [2025.1.0.2]<br />
+  - Rozbudowano sprawozdanie refundacyjne o sprzedaż recept farmaceutycznych<br />
+    refundowanych.<br />
+  - Eksport do Optimy - dla rejestru dokumentów uzupełniono węzły dotyczące<br />
+    waluty.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW35 -----------------------------</h3><br />
+2025.02.12 [2025.1.0.2]<br />
+  - Rozwiązano problem powodujący niepoprawne wyświetlanie aktywnych cenników<br />
+    w strategii UCC.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW42 -----------------------------</h3><br />
+2025.02.12 [2025.1.0.2]<br />
+  - Aktualizacja struktury bazy danych.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW44 -----------------------------</h3><br />
+2025.02.12 [2025.1.0.2]<br />
+  - Rozbudowa importu BLOZ w zakresie informacji umożliwiającej wystawienie<br />
+    recepty refundowanej na wybrany produkt.<br />
+    Dodano wskaźnik "Farmaceutyczna refund." na karcie BLOZ.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW68 -----------------------------</h3><br />
+2025.02.12 [2025.1.0.2]<br />
+  - Aktualizacja statusów komunikatów obrotów i stanów do najnowszej wersji<br />
+    ZSMOPL 1.37.<br />
+<br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2025.02.12 [2025.1.0.2]<br />
+  - Pharmind grid: Optymalizacja procesu raportowania historycznych transakcji<br />
+    sprzedaży.<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2025.02.12<br />
+  ApwPlus [2025.1.0.2]<br />
+  - Aktualizacja struktury bazy danych.<br />
+<br />
+  ApwBase.dll [2025.1.0.2]<br />
+  - Uaktualniono bazę kart serwisowych.<br />
+<br />
+</body></html>

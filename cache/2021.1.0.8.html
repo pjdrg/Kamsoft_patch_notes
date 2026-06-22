@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2021.1.0.8</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2020.11.02<br />
+  slowniki.dll [2021.1.0.8]<br />
+  - Dodano informację o wymaganych polach w oknie zapotrzebowania na kartę<br />
+    towarową<br />
+  - Wdrożenie mechanizmów poprawiających skalowanie okna dla generowania<br />
+    listów przewozowych.<br />
+  - Wdrożenie modyfikacji poprawiającej pobieranie półki zapasowej z różnych<br />
+    lokalizacji na karcie towaru.<br />
+  apwharm.dll [2021.1.0.8] <br />
+  - Wdrożenie mechanizmów poprawiających skalowanie aptecznego harmonogramu zadań.<br />
+<br />
+2020.10.28<br />
+  slowniki.dll [2021.1.0.7]<br />
+  - Tabele zaokrągleń. Dodano blokadę edycji tabel zaokrągleń pochodzacych <br />
+    z innych systemow niż KS-AOW.<br />
+  - Wdrożenie mechanizmów poprawiających skalowanie okna dla generowania<br />
+    listów przewozowych.<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2020.11.02 [2021.1.0.8]<br />
+  - e-Recepta: Zmieniono ikonę komentarzy. Aby uwidocznić wystawienie komentarza <br />
+    do ikony dodano rysunek ołówka.<br />
+  - e-Recepta: Poprawiono wejście w listę DRR dla anulowanej recepty <br />
+    farmaceutycznej. W niektórych przypadkach występował błąd AccessViolation. <br />
+  - e-Recepta: Poprawiono weryfikację możliwości refundacji zamiennika w <br />
+    przypadku gdy na e-Recepcie podano wyłącznie kod BLOZ leku pierwotnie <br />
+    ordynowanego (EAN zerowy). <br />
+  - Poprawa błędu "Wystapił błąd podczas zatwierdzania transakcji (6.6)"<br />
+    pojawiającego się przy wydawaniu leku z automatu.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2020.11.02 [2021.1.0.8]<br />
+  - W Kontroli dokumentów zakupu dodano weryfikację dokumentu po <br />
+    kodzie EAN towaru.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2020.11.02 [2021.1.0.8]<br />
+  - Dla eksportów do programów księgowych WF-Wapro dodano możliwość <br />
+    przenoszenia oznaczeń dla JPK.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW23 -----------------------------</h3><br />
+2020.11.02 [2021.1.0.8]<br />
+  - Poprawiono numerację pozycji na wydruku w funkcji Przeglądanie sprzedaży<br />
+  - Poprawiono wyświetlanie ilości wydanej w funkcji Retaksacja leków. Małe <br />
+    liczby były wyświetlane w notacji naukowej, np. 0.00003 -> 3E-5<br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2020.11.02 [2021.1.0.8]<br />
+  - W oknie informacji o wybranej drukarce fiskalnej dodano listę funkcji, <br />
+    które wspiera dana drukarka<br />
+<br />
+<h3>---------------------------- Zmiany w module APW42 -----------------------------</h3><br />
+2020.11.02 [2021.1.0.8]<br />
+  - Dodano funkcję do usuwania nieaktywnych (ukrytych) cenników.<br />
+    Menu "Narzędzia -> Porządkowanie danych -> Usuń nieaktywne cenniki<br />
+<br />
+<h3>---------------------------- Zmiany w module APW45 -----------------------------</h3><br />
+2020.11.02 [2021.1.0.8]<br />
+  - Wdrożenie modyfikacji rozszerzajacej zarządzanie lokalizacją główna<br />
+    praz lokalizacją zapasową o mechanizmy usuwnania oraz dodawania nowych<br />
+    miejsc składowania.<br />
+  - Wdrożenie mechanizmów poprawiających skalowanie modułu apteki internetowej.<br />
+  - Wdrożenie modyfikacji poprawiającej wydruki zamówien internetowych o prezetację<br />
+    wielu półek z różnych miejsc składowania.<br />
+  - Wdrożenie modyfikacji poprawiającej pobieranie półki zapasowej z różnych<br />
+    lokalizacji na karcie towaru.<br />
+  - Wdrożenie nowej opcji "Aktualizacja kart półek". Funkcja poprawia przypisania<br />
+    półek do lokalizacji głównej lub zapasowej. Funkcja jest dostępna z poziomu<br />
+    modułu APW45 - Apteka Internetowa/Zestawienia/Zarządzanie półkami/Opcje.<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2020.11.02<br />
+  ibpack.exe [2021.1.0.8]<br />
+  - Uwzględnienie, przy obcięciu sprzedaży, częściowych realizacji recept.<br />
+  orapack.exe [2021.1.0.8]<br />
+  - Uwzględnienie, przy obcięciu sprzedaży, częściowych realizacji recept.<br />
+  <br />
+</body></html>

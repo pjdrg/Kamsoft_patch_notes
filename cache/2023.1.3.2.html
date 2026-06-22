@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2023.1.3.2</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2023.03.30<br />
+  Slowniki.dll [2023.1.3.2]<br />
+  - Usunięto komunikat informujący o naprawie istniejącej konfiguracji,<br />
+    który pojawiał się podczas przyjmowania nowego porozumienia.<br />
+  - Dodano w liście dostawców ostrzeżenie przed ukryciem karty dostawcy,<br />
+    która służy do obsługi Akcji sprzedażowej w module zamówień.<br />
+  - Aktualizacja protokołu komunikacji z OSOZ.<br />
+<br />
+  ApwiAp.dll [2023.1.3.2]<br />
+  - Rozwiązano problem kontrolowania adresu e-mail dla mechanizmu rozsyłania<br />
+    maili akcją "Wyślij e-mail z informacją o sprzedaży". Akcję rozsyłania maili<br />
+    uruchamiamy w module internetowym "APW45 - Apteka internetowa -> Zamówienia<br />
+    -> Drukuj" albo w programie ApwPlan - Harmonogram Zadań za pomocą zadania<br />
+    "Wyślij e-mail do klientów dla zamówień internetowych". Problem ujawniał się<br />
+    w momencie wpisania niepoprawnego adresu e-mail przez klienta internetowego,<br />
+    co powodowało przerwanie procesu rozesłania maili, pomimo że w kolejce<br />
+    do wysłania były jeszcze zamówienia, dla których powinny zostać wysłane<br />
+    wiadomości e-mail z potwierdzeniem sprzedaży.<br />
+  - Rozwiązano problem objawiający się niepoprawnym generowaniem wydruków<br />
+    dla ewidencji zamówień internetowych podczas pracy na wielu magazynach.<br />
+    Proces generowania wydruków dla ewidencji zamówień internetowych uruchamiamy<br />
+    akcjami "Ewidencja wybranego zamówienia" oraz "Ewidencja zrealizowanych<br />
+    zamówień złożonych w okresie czasu" w module internetowym "APW45 - Apteka<br />
+    internetowa -> Zamówienia -> Drukuj". Problem ujawniał się w momencie, kiedy<br />
+    przesunięcie zostało wykonane na różnej jednostce, ale na tym samym<br />
+    stanowisku, na którym była realizowana sprzedaż internetowa, wtedy na<br />
+    wydrukach ewidencji sprzedaży internetowej mogły pojawić się pozycje<br />
+    z przesunięcia.<br />
+<br />
+  Osozmok.dll [2023.1.3.0]<br />
+  - Aktualizacja protokołu komunikacji z OSOZ.<br />
+<br />
+  Resman.dll [2023.1.3.2]<br />
+  - Rozszerzono zestaw ikon dla programu ApMan.<br />
+<br />
+  Zasoby.dll [2023.1.3.2]<br />
+  - Aktualizacja opisów opcji.<br />
+<br />
+  ApwPlan.exe, ApwPlanWorker.exe, ApwMain.exe [2023.1.3.2]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+  PharmindexComplete.dll [2023.1.3.2]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+  KSDawkomat.dll [1.0.8486.27736]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2023.03.30 [2023.1.3.2]<br />
+  - Poprawa zakresu w oknie "Lista e-Recept pacjenta - częściowo<br />
+    zrealizowanych". Brakowało recept pacjenta, które zostały zrealizowane<br />
+    przez członka rodziny (osobę inną niż pacjent z e-Recepty).<br />
+  - eZWM: rozwiązano problem niepoprawnego wyliczenia refundacji dla zleceń<br />
+    z kodem sprzętu P.99 wystawionych w 2022.<br />
+  - Optymalizacja działania usługi Podobniki.<br />
+  - Aktualizacja protokołu komunikacji z OSOZ.<br />
+  - Dodano obsługę drukarki fiskalnej BONO Online<br />
+  - Dodano kolumnę z kodem EAN/GTIN na wydrukach dokumentów kosztowych<br />
+    i magazynowych. Drukowanie tej kolumny zależne jest od opcji APW11.3.1.51<br />
+    "Drukuj kolumnę z kodem EAN/GTIN na dokumentach kosztowych (wydruk<br />
+    tekstowy)" oraz APW11.3.1.52 "Drukuj kolumnę z kodem EAN/GTIN na dokumentach<br />
+    magazynowych (wydruk tekstowy)". W wydrukach graficznych pole zostało<br />
+    dodane na stałe. Można je usunąć tworząc własny szablon wydruku.<br />
+  - Dodano możliwość ustawiania daty ważności na lekach robionych. Mechanizm<br />
+    został dodany w oknie receptury pod przyciskiem [F6] Akt. godzin.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW12 -----------------------------</h3><br />
+2023.03.30 [2023.1.3.2]<br />
+  - Modyfikacja w strefie dostawców umożliwiająca przejście do listy promocji<br />
+    dostawcy wraz z aktualizacją dostępnych promocji. Zmiana ułatwia prezentację<br />
+    aktualnych promocji dostawcy.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW14 -----------------------------</h3><br />
+2023.03.30 [2023.1.3.2]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2023.03.30 [2023.1.3.2]<br />
+  - W zestawieniach środków pomocniczych w pozycji "Limit ilości" uwzględniono<br />
+    ilość środka pomocniczego przepisanego przez lekarza na zleceniu<br />
+    elektronicznym.<br />
+  - Rozszerzono wydruk Ewidencji leków recepturowych o kolumnę z datą ważności<br />
+    leku robionego.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW35 -----------------------------</h3><br />
+2023.03.30 [2023.1.3.2]<br />
+  - W cennikach dodano wyświetlenie informacji o pochodzeniu definicji cennika<br />
+    (kolumna "System źródłowy").<br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2023.03.30 [2023.1.3.2]<br />
+  - Zmiana komunikatu o braku uprawnień do poświadczania zgód.<br />
+  - Dodano nowe opcje:<br />
+    * APW11.3.1.51 "Drukuj kolumnę z kodem EAN/GTIN na dokumentach kosztowych<br />
+    (wydruk tekstowy)",<br />
+    * APW11.3.1.52 "Drukuj kolumnę z kodem EAN/GTIN na dokumentach magazynowych<br />
+    (wydruk tekstowy)".<br />
+<br />
+<h3>---------------------------- Zmiany w module APW42 -----------------------------</h3><br />
+2023.03.30 [2023.1.3.2]<br />
+  - Optymalizacja usuwania nieaktywnych cenników.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW45 -----------------------------</h3><br />
+2023.03.30 [2023.1.3.2]<br />
+  - Rozwiązano problem dla funkcji zarządzania ofertą internetową<br />
+    objawiający się komunikatem błędu w pracy z aktywnymi opcjami "Rozszerzona<br />
+    prezentacja oferty dla Apteki Internetowej" oraz "Wspólne zasoby dla różnych<br />
+    ofert internetowych". Opcje są dostępne w module internetowym "APW45 - <br />
+    Apteka internetowa -> Reguły -> Towary" w zakładach "Opcje dodatkowe"<br />
+    oraz "Zarządzanie zasobami". Problem ujawniał się podczas pracy z ofertą<br />
+    internetową w momencie, kiedy użytkownik wybierał tryb pracy z oferta<br />
+    internetową "Rozszerzona prezentacja (WERSJA I)" oraz pracował na bazie<br />
+    Firebird.<br />
+  - Rozwiązano problem dla mechanizmu zarządzania kategoriami internetowymi<br />
+    objawiający się komunikatem błędu podczas pracy z aktywną opcją "Wspólne<br />
+    zasoby dla różnych ofert internetowych". Opcja jest dostępna w module<br />
+    internetowym "APW45 - Apteka internetowa -> Reguły -> Towary" w zakładce<br />
+    "Zarządzanie zasobami". Problem ujawniał się podczas próby dodawania nowej<br />
+    pozycji oferty internetowej do kategorii akcją wywoływaną z poziomu "APW45 -<br />
+    Apteka internetowa -> Kategorie towarów -> [F6] Elementy -> [F2] Dodaj -><br />
+    Wybrany towar".<br />
+  - Rozwiązano problem dla mechanizmu dodawania nowej kategorii dla pracy<br />
+    z ofertą internetową globalną. Problem objawiał się niedostępnością dla nowo<br />
+    utworzonej kategorii w oknie przeglądu kategorii internetowych w momencie<br />
+    kiedy opcja "Dla oferty internetowej globalnej korzystaj z produktów:" była<br />
+    ustawiona na wartość "tylko produkty/kategorie przypisane do pełnej oferty<br />
+    internetowej". Opcja jest dostępna w module internetowym "APW45 - Apteka<br />
+    internetowa -> Definicje -> Nagłówki ofert internetowych".<br />
+  - Rozwiązano problem objawiający się niepoprawnym informowaniem użytkownika<br />
+    o blokadzie komunikacji SOAP w oknie zarządzania komunikacją internetową<br />
+    dla aktywnej opcji "Blokuj wymianę danych SOAP (max. jedno połączenie<br />
+    jednocześnie)". Opcja oraz okno z informacją o blokadzie są dostępne<br />
+    w module internetowym "APW45 - Apteka internetowa -> Komunikacja -> <br />
+    Ustawienia -> Ustawienia -> Ogólne".<br />
+  - Rozwiązano problem dla mechanizmu zarządzanie krajem dla usługi sieciowej<br />
+    eksportującej zamówienie z modułu "APW45 - Apteka internetowa" do sklepu<br />
+    internetowego firmy zewnętrznej. Eksport zamówień internetowych uruchamiamy<br />
+    akcją "Wyślij zamówienia na stronę WWW". Opcja jest dostępna w module<br />
+    internetowym "APW45 - Apteka Internetowa -> Komunikacja -> Wyślij/Pobierz<br />
+    zamówienia internetowe". Problem ujawniał się przekazywaniem niepoprawnych<br />
+    znaczników zamykających w sekcji dla opisu kraju w komunikacie usługi<br />
+    sieciowej "SetOrders".<br />
+<br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2023.03.30 [2023.1.3.2]<br />
+  - Aktualizacja protokołu komunikacji z OSOZ.<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2023.03.30<br />
+  ApwPlus [2023.1.3.2]<br />
+  - Aktualizacja struktury bazy danych.<br />
+  - Rozwiązano problem z wykonywaniem kopii bezpieczeństwa bazy EDE.<br />
+<br />
+  ApwBase.dll [2023.1.3.2]<br />
+  - Uaktualniono bazę kart serwisowych.<br />
+<br />
+  IBRest.exe [2023.1.3.2]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+</body></html>

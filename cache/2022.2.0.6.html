@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2022.2.0.6</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2022.04.07<br />
+  Slowniki.dll [2022.2.0.6]<br />
+  - Sprawdzenie statusu podmiotu podczas pobierania jego danych z bazy<br />
+    internetowej REGON do kartotek. Sygnalizowane jest obecnie zakończenie,<br />
+    wstrzymanie działalności czy wykreślenie z ewidencji.<br />
+  - Serwis farmaceuty - poprawki stabilności działania.<br />
+<br />
+  ApwiAp.dll [2022.2.0.6]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+  ApwHarm.dll [2022.2.0.6]<br />
+  - Wdrożenie  mechanizmu dla obsługi stanów minimalnych dla bazy aptecznej dla<br />
+    zadania aktualizacji oferty WWW.<br />
+  - Wdrożenie mechanizmu powtórnego sprawdzania czy produkt jest w bazie<br />
+    aptecznej jeśli nie było go w hurtowni dla zadania aktualizacji oferty WWW.<br />
+  - Wdrożono poprawki dla funkcjonalności liczenia ceny w przypadku kontroli<br />
+    marży minimalnej, podczas liczenia ceny drugiej dla cennika, źle podmieniał<br />
+    mechanizm źródło ceny  dla zadania aktualizacji oferty WWW.<br />
+  - Rozbudowano funkcję odkrywania produktów, funkcjonalność teraz wykorzystuje<br />
+    mechanizm pamiętania stanu z pierwszego sprawdzania dostępności na stanie<br />
+    apteki dla zadania aktualizacji oferty WWW.<br />
+  - Wdrożono poprawkę dla mechanizmu pomijania ukrywania produktów w przypadku<br />
+    jeśli produkt jest dostępny w aptece oraz w ofercie hurtowni ale nie jest<br />
+    produktem pochodzącym z aktualnej oferty hurtowni. Produkt taki nie jest<br />
+    teraz ukrywany dla funkcji odśwież produkt dla zadania aktualizacji oferty<br />
+    WWW.<br />
+  - Dodano funkcjonalności tworzenia linków śledzenia paczek dla firm<br />
+    kurierskich UPS, E-nadawcy i rozsyłania ich klientom zamówień aptek<br />
+    internetowych dla zadania wysyłania wiadomości e-mail dla klientów AI.<br />
+  - Rozszerzono zarządzanie stanami dla hurtowni o kontrolę stanów minimalnych<br />
+    na bazie aptecznej dla zadania aktualizacji stanów na stronie WWW.<br />
+<br />
+  PharmIndexComplete.dll [2022.4.1.1]<br />
+  - Optymalizacja procesów.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2022.04.07 [2022.2.0.6]<br />
+  - Sprawdzenie statusu podmiotu podczas pobierania jego danych z bazy<br />
+    internetowej REGON.<br />
+    Sygnalizowane jest obecnie zakończenie, wstrzymanie działalności czy<br />
+    wykreślenie z ewidencji.<br />
+  - Zadanie z Giełdy Pomysłów: Przepisywanie numeru telefonu z e-Recepty na<br />
+    kartę pacjenta.<br />
+  - Tworzenie faktury sprzedażowej zbiorczej. Odblokowano możliwość ustawiania<br />
+    faktury kredytowej na nagłówku dokumentu.<br />
+  - Poprawiono wyliczanie ceny detalicznej podczas nadawania uprawnienia IB<br />
+    dla recepty umieszczonej w kolejce.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2022.04.07 [2022.2.0.6]<br />
+  - Środki pomocnicze/Wnioski: poprawiono generowanie korekt w raportach z wzoru<br />
+    4 i 5.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW23 -----------------------------</h3><br />
+2022.04.07 [2022.2.0.6]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW45 -----------------------------</h3><br />
+2022.04.07 [2022.2.0.6]<br />
+  - Wdrożenie  mechanizmu dla obsługi stanów minimalnych dla bazy aptecznej.<br />
+  - Wdrożenie mechanizmu powtórnego sprawdzania czy produkt jest w bazie<br />
+    aptecznej jeśli nie było go w hurtowni.<br />
+  - Wdrożono poprawki dla funkcjonalności liczenia ceny w przypadku kontroli<br />
+    marży minimalnej, podczas liczenia ceny drugiej dla cennika, źle podmieniał<br />
+    mechanizm źródło ceny.<br />
+  - Rozbudowano funkcję odkrywania produktów, funkcjonalność teraz wykorzystuje<br />
+    mechanizm pamiętania stanu z pierwszego sprawdzania dostępności na stanie<br />
+    apteki.<br />
+  - Wdrożono poprawkę dla mechanizmu pomijania ukrywania produktów w przypadku<br />
+    jeśli produkt jest dostępny w aptece oraz w ofercie hurtowni ale nie jest<br />
+    produktem pochodzącym z aktualnej oferty hurtowni. Produkt taki nie jest<br />
+    teraz ukrywany dla funkcji odśwież produkt.<br />
+  - Wdrożono mechanizm sprawdzania dostępności produktów w hurtowni dla zamówień<br />
+    AI w przypadku braków produktów do rezerwacji. Osoba zarządzająca otrzyma<br />
+    odpowiednią informację na pozycji zamówienia AI w postaci ikony samochodu<br />
+    jeśli produkt jest dostępny w ofertach hurtowni.<br />
+  - Dodano funkcjonalności tworzenia linków śledzenia paczek dla firm<br />
+    kurierskich UPS, E-nadawcy i rozsyłania ich klientom zamówień aptek<br />
+    internetowych.<br />
+  - Poprawiono komunikaty dla zarządzania kurierem DHL dla funkcji drukowania<br />
+    listów przewozowych.<br />
+  - Rozszerzono zarządzanie stanami dla hurtowni o kontrolę stanów minimalnych<br />
+    na bazie aptecznej dla funkcji aktualizacji stanów na stronie WWW.<br />
+  - Rozbudowano mechanizm wyłapywania błędów z komunikacji ze stroną WWW<br />
+    o możliwość wyłapywania i prezentacji użytkownikowi miejsca z zapisanymi<br />
+    aktualnym logiami do analizy błędów z komunikacji WWW.<br />
+  - Rozbudowano mechanizm wyłapywania błędów z procesu importu zdjęć i opisów<br />
+    z plików o możliwość wyłapywania i prezentacji użytkownikowi pliku którego<br />
+    nie udało się zaczytać wraz z jego ścieżką i nazwą.<br />
+<br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2022.04.07 [2022.2.0.6]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2022.04.07<br />
+  ApwPlus.exe [2022.2.0.6]<br />
+  - Uaktualniono strukturę bazy danych.<br />
+<br />
+  Apwbase.dll [2022.2.0.6]<br />
+  - Uaktualniono bazę kart serwisowych.<br />
+<br />
+</body></html>

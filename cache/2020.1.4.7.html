@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2020.1.4.7</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2020.02.05<br />
+  slowniki.dll [2020.1.4.1]<br />
+  - Zablokowano wejście do funkcji zarządzania centralnymi kartotekami towarów,<br />
+    dostawców i pacjentów dla aptek bez aktywnej licencji na KS-ZSA lub KS-OmniPharm.<br />
+  apwharm.dll [2020.1.4.6]<br />
+  - Wdrożono mechanizm kontroli magazynu dla procesu pobierania zamówień.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2020.02.05 [2020.1.7.7]  <br />
+  - eZWM: poprawa zmiany hasła (błąd zapisu na bazie Oracle).<br />
+  - eZWM: nazwa świadczeniodawcy realizującego zlecenie z danych właściciela <br />
+    apteki (opcja: wspólne.2.47).<br />
+  - Ujednolicenie komunikatów błędów komunikacji z SIM.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2020.02.05 [2020.1.3.7]<br />
+  - Środki pomocnicze: wyróżnienie pozycji z nieprawidłową informacją o prawie <br />
+    do świadczeń dla zleceń eZWM. Prawo do świadczeń (element: "nfz:potw-upraw")<br />
+    musi być uzupełniony z taką samą wartością z jaką wprowadzono do <br />
+    systemu eZWM, czyli:<br />
+      - potwierdzono elektronicznie w NFZ<br />
+      - potwierdzono dokumentem<br />
+      - potwierdzono oświadczeniem<br />
+    Pozycję należy uzupełnić w Sprzedaży (apw11): "Sprzedaż->Akt kody.->Uprawn. do św." <br />
+    lub w Zestawieniach (apw21) (po wygenerowaniu raport, ale przed <br />
+    zapisem): "[F4] Edycja".<br />
+<br />
+<h3>---------------------------- Zmiany w module APW22 -----------------------------</h3><br />
+2020.02.05 [2020.1.0.0]<br />
+  - Zablokowano wejście do funkcji zarządzania centralnymi kartotekami towarów,<br />
+    dostawców i pacjentów dla aptek bez aktywnej licencji na KS-ZSA lub KS-OmniPharm.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2020.02.05 [2020.1.3.1]<br />
+  - Dodano opcję wspólne.2.47: "E-ZWM: Nazwa świadczeniodawcy realizującego <br />
+    zlecenie z danych właściciela apteki".<br />
+<br />
+<h3>---------------------------- Zmiany w module APW45 -----------------------------</h3><br />
+2020.02.04 [2020.1.4.5]<br />
+  - Wdrożono mechanizm kontroli magazynu dla procesu pobierania zamówień.<br />
+    Zmieniono dla tego mechanizmu prezentację zamówień w oknie przeglądania <br />
+    zamówień internetowych. Zamówienia internetowe z pdpiętym innym <br />
+    magazynem/jednostką aniżeli na tym na którym pracujemy są blokowane,<br />
+    wyszarzone oraz są tylko dostępne dla nich funkcje podglądu <br />
+    oraz podstawowa edycja. Dodatkowo mechanizm automatycznej <br />
+    rezerwacji oraz generowania automatycznych przesunięć ma<br />
+    możliwość automatycznego przelogowania się pomiędzy<br />
+    magazynami na którym pracuje.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW68 -----------------------------</h3><br />
+2020.02.05 [2020.1.3.4]<br />
+  - Poprawa funkcji wysyłania raportu braków. Podczas zapisu i wysyłki braków do<br />
+    ZSMOPL, program czasem przestał reagować i uniemożliwiał wysyłkę jak również<br />
+	zapis do bazy.<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2020.02.05<br />
+  Apwplus.exe [2020.1.22.0]<br />
+  - Uaktualniono strukturę bazy danych<br />
+<br />
+2020.02.03<br />
+  Apwplus.exe [2020.1.21.0]<br />
+  - Uaktualniono strukturę bazy danych<br />
+<br />
+</body></html>

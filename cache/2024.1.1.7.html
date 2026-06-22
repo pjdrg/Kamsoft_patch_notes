@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2024.1.1.7</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2024.08.12<br />
+  Slowniki.dll [2024.1.1.7]<br />
+  - Rozbudowano kartę towaru o znacznik pozwalający zablokować przyjęcie towaru<br />
+    na magazyn z mnożnikiem innym niż mnożnik lekospisowy wpisany na karcie.<br />
+<br />
+  APWHarm.dll [2024.1.1.7]<br />
+  - Zwiększenie poziomu bezpieczeństwa haseł użytkownika w obrębie systemu <br />
+    KS-AOW poprzez zaszyfrowanie automatycznej komunikacji z KS-EDE oraz <br />
+    modyfikację pliku konfiguracyjnego KS-EDE. Operacje przeprowadzane <br />
+    w systemie KS-EDE będą przeprowadzane zgodnie z uprawnieniami użytkownika <br />
+    KS-AOW wybranego do obsługi APWPlanu.<br />
+<br />
+  Apwfn.dll [2024.1.1.7]<br />
+  - Dodano opisy nowych parametrów i uprawnień zlecanych z KS-ZSA  <br />
+    <br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2024.08.12 [2024.1.1.7]<br />
+  - Zmieniono zakres archiwizacji dokumentów SRR w chmurze. W przypadku recept <br />
+    wystawionych w starym formacie, dla których nie podawano okresu kuracji, <br />
+    niemożliwe jest wyliczenie przez SIM wymaganych prawem informacji <br />
+    (o pozostałej do wydania ilości leku w bieżącym okresie kuracji w trakcie <br />
+    realizacji e-Recepty rocznej na okres kuracji przekraczający 120 dni). <br />
+    W związku z tym, dla tego typu przypadków program nie będzie archiwizował <br />
+    w RepoCloud dokumentów SRR o treści "Brak informacji o stanie realizacji <br />
+    recepty z SIM". <br />
+  - Poprawiono błąd pobierania e-Recepty w trybie edukacyjnym/ćwiczeniowym. Po <br />
+    wprowadzeniu archiwizacji SRR nie było możliwe pobranie recept z zestawu <br />
+    testowego.  <br />
+  - Rozwiązano problem z obcinaniem numeru serii dla towarów gdzie seria miała <br />
+    długość więcej niż 12 znaków dla funkcji [Ctrl+F10] Wyślij przy zapisywaniu <br />
+    dokumentów magazynowych na dysk lub Irap raporty on-line.<br />
+  - Rejestr operacji magazynowych - z tabeli rejestru dokumentów magazynowych <br />
+    usunięto kolumnę Numer KSeF. Kolumna będzie widoczna na panelu <br />
+    informacyjnym [Alt+F5] Info.<br />
+  - eZWM: Rozwiązano problem objawiający się nieprawidłowym wyświetleniem <br />
+    rodzaju uprawnienia w druku zlecenia w rubryce I.B.7.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW12 -----------------------------</h3><br />
+2024.08.12 [2024.1.1.7]<br />
+  - Zamówienia: dodano nową opcję do filtrów zamówień, filtr po fragmencie <br />
+    nazwy towaru. Filtr ma pomóc w szybszej identyfikacji szukanego towaru na <br />
+    liście zamówień.<br />
+  - Lista braków: rozwiązano problem z wyliczaniem ilości sprzedaży za okres <br />
+    w przypadku wyboru kilku okresów sprzedaży dla funkcji [Ctrl+F12 ] Sprzedaż.<br />
+    Funkcja w pewnych przypadkach źle pokazywała ilości dla ostatniej kolumny <br />
+    z okresem sprzedaży.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2024.08.12 [2024.1.1.7]<br />
+  - Dodano obsługę znacznika z karty towaru, który blokuje podczas przyjmowania <br />
+    towaru możliwość zmiany mnożnika na inny niż mnożnik lekospisowy z karty <br />
+    towaru<br />
+<br />
+<h3>---------------------------- Zmiany w module APW14 -----------------------------</h3><br />
+2024.08.12 [2024.1.1.7]<br />
+  - KS-OmniPharm: rozbudowano mechanizm przecen o możliwość wykluczenia <br />
+    z przecen dostaw towarów, których termin ważności jest krótszy niż X dni <br />
+    oraz opcję pomijającą dostawy, które mają cenę wyższą niż ta ustawiona <br />
+    w przecenie centralnej <br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2024.08.12 [2024.1.1.7]<br />
+  - W pliku .CSV generowanym dla Portalu świadczeniodawcy lub SZOI o otwarcie <br />
+    okresu rozliczeniowego poprawiono ilość znaków nr id root dla recept <br />
+    pro auctore pro familiae<br />
+<br />
+<h3>---------------------------- Zmiany w module APW23 -----------------------------</h3><br />
+2024.08.12 [2024.1.1.7]<br />
+  - Zmieniono zakres archiwizacji dokumentów SRR w chmurze. W przypadku recept <br />
+    wystawionych w starym formacie, dla których nie podawano okresu kuracji, <br />
+    niemożliwe jest wyliczenie przez SIM wymaganych prawem informacji <br />
+    (o pozostałej do wydania ilości leku w bieżącym okresie kuracji w trakcie <br />
+    realizacji e-Recepty rocznej na okres kuracji przekraczający 120 dni). <br />
+    W związku z tym, dla tego typu przypadków program nie będzie archiwizował <br />
+    w RepoCloud dokumentów SRR o treści "Brak informacji o stanie realizacji <br />
+    recepty z SIM". <br />
+<br />
+<h3>---------------------------- Zmiany w module APW42 -----------------------------</h3><br />
+2024.08.12 [2024.1.1.7]<br />
+  - Aktualizacja definicji indeksów.<br />
+<br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2024.07.11 [2024.1.1.7]<br />
+  - Pharmind grid: Rozszerzenie raportowania do pharmind informacji o stanie <br />
+    zamówień u dostawców  <br />
+    <br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2024.08.12<br />
+  ApwPlus [2024.1.1.7]<br />
+  - Zaktualizowano strukturę bazy danych.<br />
+  <br />
+</body></html>

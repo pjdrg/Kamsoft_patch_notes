@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2020.3.1.6</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2020.04.27<br />
+  APWMAIN.EXE [2020.3.1.6]<br />
+  - Poprawa dodawania aplikacji pod przyciski menu 2 poziomu.<br />
+<br />
+  apwOph.dll [2020.3.1.6]<br />
+  - Zaktualizowano komponenty bazodanowe.<br />
+  - Rozszerzono logowanie zdarzeń.<br />
+  - Poprawa działania wielowątkowego.<br />
+<br />
+  apwharm.dll [2020.3.1.6] <br />
+  - Poprawiono czyszczenie obiektu logowania zdarzeń dla procesu rezerwacji<br />
+    w zamówieniach internetowych.<br />
+  - Weryfikacja parametrów akcji sprzedażowych.<br />
+<br />
+2020.04.27<br />
+  Slowniki.dll [2020.3.1.6]<br />
+  - Wprowadzono poprawkę do przepisywania danych z bazy BLOZ przy przywracaniu<br />
+    ukrytych kart towarowych.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2020.04.27 [2020.3.1.6]<br />
+  - Optymalizacja zapisu recepty farmaceutycznej.<br />
+  - Poprawki w wywołaniu Asystenta Reglamentacji dla recept farmaceutycznych.<br />
+  - Dodanie możliwości identyfikacji sprzedaży na podstawie kodu 2D dla funkcji<br />
+    [F5] Weryfikacja kodu dla NMVS (Kowal).<br />
+  - KS-OMNIPHARM: Usługa "Weryfikacja odbiorcy" - możliwość blokady wystawienia<br />
+    faktury VAT na podstawie NIP nabywcy, płatnika albo odbiorcy wskazanego na<br />
+    dokumencie sprzedaży.<br />
+  <br />
+<h3>---------------------------- Zmiany w module APW12 -----------------------------</h3><br />
+2020.04.27 [2020.3.1.6]<br />
+  - dodanie do akcji sprzedażowych nazwy akcji w celu łatwiejszego rozróżnienia <br />
+    w przypadku wielu kontraktów jednego organizatora. Dane dostępne są również <br />
+	na informacji wyświetlanej w celu dokończenia konfiguracji<br />
+  - dodanie do konfiguracji akcji sprzedażowych możliwości blokady leków RX dla <br />
+    dystrybucji numerycznej. Jeżeli dana blokada zostanie włączona, leki RX <br />
+	zostaną przygotowane w osobnym zamówieniu, którego farmaceuta może ręcznie <br />
+	wysłać (brak automatycznej wysyłki)<br />
+  - dodanie możliwości wyboru hurtowni realizującej kontrakt podczas uruchomienia<br />
+    kontraktu oraz w trakcie jego trwania (dane dostępne bezpośrednio w kontrakcie)<br />
+  - dodanie automatycznego dokończenia konfiguracji akcji sprzedażowej kontraktu,<br />
+    podczas uruchomienia jak również podczas edycji. W przypadku braku błędów <br />
+	lub wymaganej interakcji z użytkownikiem, automat przeprowadzi niezbędne <br />
+	czynności takie jak uruchomienie dystrybucji numerycznej, pobranie promocji <br />
+	i wskazanie hurtowni realizującej (w przypadku wyboru jej podczas <br />
+	uruchomienia kontraktu).<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2020.04.27 [2020.3.1.6]<br />
+- W oknie "Pozycje dokumentu zakupu" w opcjach dodano możliwość wyboru rodzaju <br />
+  wyświetlenia marży.<br />
+  <br />
+<h3>---------------------------- Zmiany w module APW14 -----------------------------</h3><br />
+2020.04.27 [2020.3.1.6]<br />
+  - Poprawa przepisywania informacji "Wysyłanie odmów do GIF" na karcie leku<br />
+    podczas aktualizacji bazy BLOZ<br />
+<br />
+<h3>---------------------------- Zmiany w module APW15 -----------------------------</h3><br />
+2020.04.27 [2020.3.1.6]<br />
+  - Kompilacja modułu w związku ze zmianami tabeli pamięciowej<br />
+    w systemie KS-AOW.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2020.04.27 [2020.3.1.6] <br />
+  - Zaktualizowano komponenty bazodanowe.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW22 -----------------------------</h3><br />
+2020.04.27 [2020.3.1.6] <br />
+  - Zaktualizowano komponenty bazodanowe.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW24 -----------------------------</h3><br />
+2020.04.27 [2020.3.1.6] <br />
+  - Zaktualizowano komponenty bazodanowe.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW25 -----------------------------</h3><br />
+2020.04.27 [2020.3.1.6]<br />
+  - Kompilacja modułu w związku ze zmianami tabeli pamięciowej<br />
+    w systemie KS-AOW.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW31 -----------------------------</h3><br />
+2020.04.27 [2020.3.1.6] <br />
+  - Zaktualizowano komponenty bazodanowe.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW35 -----------------------------</h3><br />
+2020.04.27 [2020.3.1.6] <br />
+  - Zaktualizowano komponenty bazodanowe.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2020.04.27 [2020.3.1.6] <br />
+  - Zaktualizowano komponenty bazodanowe.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW42 -----------------------------</h3><br />
+2020.04.27 [2020.3.1.6] <br />
+  - Zaktualizowano komponenty bazodanowe.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW43 -----------------------------</h3><br />
+2020.04.27 [2020.3.1.6] <br />
+  - Zaktualizowano komponenty bazodanowe.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW44 -----------------------------</h3><br />
+2020.04.27 [2020.3.1.6]<br />
+  - Poprawa przepisywania informacji "Wysyłanie odmów do GIF" na karcie leku<br />
+    podczas aktualizacji bazy BLOZ<br />
+<br />
+<h3>---------------------------- Zmiany w module APW45 -----------------------------</h3><br />
+2020.04.27 [2020.3.1.6]<br />
+  - Poprawiono czyszczenie obiektu logowania zdarzeń dla procesu rezerwacji<br />
+    w zamówieniach internetowych.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW68 -----------------------------</h3><br />
+2020.04.27 [2020.3.1.6]<br />
+  - Poprawa działania filtrów dla operacji weryfikacji stanów magazynowych.<br />
+    Przy włączonym filtrze program wysyłał niekompletne pozycje dla tworzonej <br />
+	korekty.<br />
+  <br />
+<h3>--------------------------------- ZMIANY.IRAP ----------------------------------</h3><br />
+2020.04.27 [2020.3.1.6] <br />
+  - Zaktualizowano komponenty bazodanowe.<br />
+  - Rozszerzono logowanie zdarzeń.<br />
+  - Poprawa działania wielowątkowego.<br />
+  <br />
+</body></html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2025.3.0.4</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2025.09.02<br />
+  Slowniki.dll [2025.3.0.4]<br />
+  - Dodano obsługę przesyłek kurier standard dla firmy kurierskiej Inpost.<br />
+    W ramach tej funkcjonalności rozbudowano reguły listów przewozowych<br />
+    dla przewoźnika InPost o możliwość ustawienia szablonów dla rozmiarów<br />
+    przesyłek oraz rozbudowano zarządzanie ubezpieczeniem dla transportu.<br />
+    Reguły dla listów przewozowych są dostępne z poziomu modułu APW45 – Apteka<br />
+    Internetowa -> Reguły -> Listy Przewozowe -> InPost.<br />
+  - Dodano kontrolę poprawności kodu EAN podczas tworzenia zapotrzebowania<br />
+    na kartę towarową.<br />
+<br />
+  ApwIap.dll [2025.3.0.4]<br />
+  - Dodano obsługę przesyłek kurier standard dla firmy kurierskiej Inpost.<br />
+    W ramach tej funkcjonalności, funkcje odpowiadające za generowania listów<br />
+    przewozowych, pobieranie etykiet, generowanie protokołów dla kuriera<br />
+    obsługują przesyłki kurier standard dla firmy kurierskiej Inpost.<br />
+    Listy przewozowe generujemy oraz pobieramy etykiety z poziomu modułu<br />
+    APW45 – Apteka Internetowa -> Zamówienia -> Drukuj -> List przewozowy.<br />
+    Protokoły dla kuriera generujemy z poziomu modułu APW45 – Apteka Internetowa<br />
+    -> Listy przewozowe -> Eksport -> InPost – protokół przekazania.<br />
+<br />
+  ApwHarm.dll [2025.3.0.4]<br />
+  - MAR02 - Zadanie automatycznego generowania raportów do ZSMOPL. W zadaniu<br />
+    dodano funkcjonalność sprawdzającą niewygenerowane raporty za 7 ostatnich<br />
+    dni.<br />
+<br />
+  MVServer [2025.3.0.4]<br />
+  - Rozwiązano problem z działaniem parametru weryfikacji dokumentu z kodami 2D.<br />
+    W pewnych sytuacjach opcja ta nie robiła weryfikacji.<br />
+<br />
+  ApwOph.dll [2025.3.0.4]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2025.09.02 [2025.3.0.4]<br />
+  - eZWM: dodano możliwość realizacji zlecenia z poziomu kolejki.<br />
+  - W oknie "Lista e-Recept pacjenta - częściowo zrealizowanych w tej aptece<br />
+    w ciągu ostatniego roku" rozszerzono zakres wyszukiwania recept<br />
+    przeterminowanych do 3 lat. Opcja dostępna po zaznaczeniu pola "Pokaż<br />
+    przeterminowane recepty na liście".<br />
+  - KtoMaLek: optymalizacja zapytania SQL w procesie realizacji rezerwacji<br />
+    powiązanej z e-Receptą.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW12 -----------------------------</h3><br />
+2025.09.02 [2025.3.0.4]<br />
+  - Poprawiono zapis informacji o zapoznaniu się z samouczkiem dotyczącym listy<br />
+    zamówień.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2025.09.02 [2025.3.0.4]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW14 -----------------------------</h3><br />
+2025.09.02 [2025.3.0.4]<br />
+  - Zmodyfikowano sposób wyliczania zaokrągleń dla kwot znajdujących się<br />
+    na wydruku różnic remanentowych.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2025.09.02 [2025.3.0.4]<br />
+  - Przekazywanie danych do programu Wapro FaKiR/KaPeR - rozwiązanie problemu<br />
+    z błędnie działającą opcją wyboru rodzaju daty dla dokumentów zakupu.<br />
+    Pomimo zaznaczenia opcji "Data zakupu" program wybierał dokumenty tak samo<br />
+    jak dla opcji "Data wystawienia".<br />
+  - Przekazywanie danych do programu RaksSQL - dodanie opcji do przekazywania<br />
+    daty wystawienia faktury jako daty dowodu księgowego.<br />
+  - Przekazywanie danych do programu Oracle - rozwiązanie problemu z poprawnym<br />
+    przekazywaniem identyfikatora płatnika dla faktur sprzedaży.<br />
+  - Dodano weryfikację uprawnienia "21-0068 Wykonanie raportu dla systemu FK"<br />
+    dla funkcji: "Raport w formacie KS-FKW-XML (zip)".<br />
+<br />
+<h3>---------------------------- Zmiany w module APW23 -----------------------------</h3><br />
+2025.09.02 [2025.3.0.4]<br />
+  - Faktury z odchyleniem różnym od zera: zmodyfikowano sposób wyliczania<br />
+    odchyleń.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW24 -----------------------------</h3><br />
+2025.09.02 [2025.3.0.4]<br />
+  - Sumy dzienne/miesięczne/roczne: dodano opcję wyboru, która po zaznaczeniu<br />
+    uwzględni zaliczki podczas generowania raportu.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2025.09.02 [2025.3.0.4]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW42 -----------------------------</h3><br />
+2025.09.02 [2025.3.0.4]<br />
+  - Modyfikacja w zakresie KS-Aptix. Dodano możliwość usunięcia historycznych<br />
+    danych powstałych podczas weryfikacji dostawy i inwentaryzacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW45 -----------------------------</h3><br />
+2025.09.02 [2025.3.0.4]<br />
+  - Dodano obsługę przesyłek kurier standard dla firmy kurierskiej Inpost.<br />
+    W ramach tej funkcjonalności rozbudowano definicje dla przewoźnika InPost<br />
+    o możliwość ustawienia typu usługi kurier standard dla firmy kurierskiej<br />
+    Inpost. Definicje dla listów przewozowych są dostępne z poziomu modułu<br />
+    APW45 – Apteka Internetowa -> Definicje -> Formy transportu -> Przegląd<br />
+    i edycja.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW68 -----------------------------</h3><br />
+2025.09.02 [2025.3.0.4]<br />
+  - MAR03 - Weryfikacja stanów magazynowych. Rozwiązano problem z funkcją<br />
+    wyliczania stanów magazynowych gdzie nadmiarowo wybierały się transakcje<br />
+    dla towarów niepodlegających przekazywaniu do ZSMOPL, które nie miały<br />
+    przypisanej serii lub daty ważności.<br />
+<br />
+<h3>--------------------------------- ZMIANY.IRAP ----------------------------------</h3><br />
+2025.09.02 [2025.3.0.4]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2025.09.02 [2025.3.0.4]<br />
+  - Pharmind grid – raportowanie stanów magazynowych: optymalizacja.<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2025.09.02<br />
+  ApwPlus [2025.3.0.4]<br />
+  - Aktualizacja struktury bazy danych.<br />
+<br />
+  WaUtil [2025.3.0.4]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+</body></html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2021.1.4.2</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2021.03.09<br />
+  Slowniki.dll [2021.1.4.2]<br />
+  - Na karcie towaru i BLOZ dodano dodatkowe wskaźniki:  Zestaw p.wstrząs. <br />
+    dla lekarza, felczera, pielęgniarki/położnej.<br />
+  - Na kartotece centralnej dostawców na karcie "Inne" dodano znacznik:<br />
+    "W reklamacji dostawca wymaga informacji o rzeczywistym nr serii i dacie <br />
+    ważności towaru"<br />
+  - Dodano uprawnienie: 41-0049 Zarządzanie ustawieniami KS-OmniPharm One<br />
+    CopyCloud - Kopia w chmurze.<br />
+<br />
+  zasoby.dll [2021.1.4.2]<br />
+    - Dodano opisy dla nowych opcji.<br />
+  <br />
+  apwharm.dll [2021.1.4.2]<br />
+    - Usuń stare oferty: zabezpieczenie przed kasowaniem rekordu zerowego<br />
+      z tabeli OFWZ.<br />
+  <br />
+  apwfn.dll [2021.1.4.2]<br />
+    - Zaktualizowano listę opcji, uprawnień i ról w mechanizmie sterowania <br />
+      centralnego.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2021.03.09 [2021.1.4.2]<br />
+  - Dodano kontrolę wydawania leków z zestawu przeciwwstrząsowego na<br />
+    zapotrzebowanie wystawione przez pielęgniarki/położne. Po wyborze leku<br />
+    wchodzącego w skład zestawu przeciwwstrząsowego, który może być podany przez<br />
+    pielęgniarkę lub położną, a jest spoza obwieszczenia zawierającego wykaz<br />
+    substancji czynnych zawartych w lekach, które mogą ordynować pielęgniarki <br />
+    i położne, w zależności od ustawionej opcji pojawi się ostrzeżenie, blokada<br />
+    takiego wydania lub lek zostanie wydany bez ostrzeżenia <br />
+    (Opcja Apw11.2.158, domyśle ustawienie: Ostrzegaj).<br />
+  - Kategoryzacja GRUPEX: Zmiana opcji włączania/wyłączania funkcjonalności <br />
+    z globalnej na lokalną (na stanowisko).<br />
+  - Sprzedaż odręczna: poprawka w sprawdzaniu uprawnień do wydania leku podczas<br />
+    sprzedaży za pomocą czytnika kodów kreskowych.<br />
+  - Zlikwidowanie problemu z automatycznym przedstawieniem warunków transakcji<br />
+    bezpośrednio po zaakceptowaniu zmian przez pacjenta.<br />
+  - Ustawienie statusu "Rezerwacja usunięta w trakcie sprzedaży" dopiero po <br />
+    usunięciu ostatniej pozycji.<br />
+  - Ujednolicenie atrybutów wysyłanych w komunikacie stanRezerwacji dla różnych <br />
+    statusów - jeżeli atrybut jest wysyłany dla jakiegoś statusu, to powinien<br />
+    być również uwzględniony w statusach po nim następujących.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW12 -----------------------------</h3><br />
+2021.03.09 [2021.1.4.2]<br />
+  - Poprawa błędu na bazie Oracle w funkcjonalności automatycznej naprawy <br />
+    wiązania faktury z zamówieniem w analizie potencjału.<br />
+  - Poprawiono mechanizm zamknięcia modułu po okresie bezczynności: <br />
+    Opcje: Wspólne.5.8 oraz Wspólne.5.9.<br />
+  - Dodano mechanizm wylogowania aplikacji po okresie bezczynności.<br />
+    Opcja: Wspólne.5.23 (domyślnie opcja wyłączona).<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2021.03.09 [2021.1.4.2]<br />
+  - W Kontroli dokumentów zakupu dodano kolumnę "Miejsce składowania".  <br />
+  - W Kontroli dokumentów zakupu podświetlono datę ważności na czerwono, <br />
+    jeśli termin ważności jest krótszy niż czas określony opcją Apw13.2.20.<br />
+  - Poprawiono mechanizm zamknięcia modułu po okresie bezczynności: <br />
+    Opcje: Wspólne.5.8 oraz Wspólne.5.9.<br />
+  - Dodano mechanizm wylogowania aplikacji po okresie bezczynności.<br />
+    Opcja: Wspólne.5.23 (domyślnie opcja wyłączona).<br />
+<br />
+<h3>---------------------------- Zmiany w module APW14 -----------------------------</h3><br />
+2021.03.09 [2021.1.4.2]<br />
+  - W funkcji importu bazy BLOZ uwzględniono listę leków wchodzących w skład<br />
+    zestawu przeciwwstrząsowego, który może być podany przez lekarza, felczera,<br />
+    pielęgniarkę i położną.<br />
+  - W funkcji Aktualizacja listy leków z BLOZ ("pajączek") dodano obsługę<br />
+    listy leków wchodzących w skład zestawu przeciwwstrząsowego. Aktualizacja<br />
+    nowych pól po zaznaczeniu punktu "Ostrzeż., wskaź., droga podania, <br />
+    ilość w opak., DDD".<br />
+  - Poprawiono mechanizm zamknięcia modułu po okresie bezczynności: <br />
+    Opcje: Wspólne.5.8 oraz Wspólne.5.9.<br />
+  - Dodano mechanizm wylogowania aplikacji po okresie bezczynności.<br />
+    Opcja: Wspólne.5.23 (domyślnie opcja wyłączona).<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2021.03.09 [2021.1.4.2]<br />
+  - Poprawiono mechanizm zamknięcia modułu po okresie bezczynności: <br />
+    Opcje: Wspólne.5.8 oraz Wspólne.5.9.<br />
+  - Dodano mechanizm wylogowania aplikacji po okresie bezczynności.<br />
+    Opcja: Wspólne.5.23 (domyślnie opcja wyłączona).<br />
+<br />
+<h3>---------------------------- Zmiany w module APW22 -----------------------------</h3><br />
+2021.03.09 [2021.1.4.2]<br />
+  - Poprawiono mechanizm zamknięcia modułu po okresie bezczynności: <br />
+    Opcje: Wspólne.5.8 oraz Wspólne.5.9.<br />
+  - Dodano mechanizm wylogowania aplikacji po okresie bezczynności.<br />
+    Opcja: Wspólne.5.23 (domyślnie opcja wyłączona).<br />
+<br />
+<h3>---------------------------- Zmiany w module APW23 -----------------------------</h3><br />
+2021.03.09 [2021.1.4.2]<br />
+  - Poprawiono mechanizm zamknięcia modułu po okresie bezczynności: <br />
+    Opcje: Wspólne.5.8 oraz Wspólne.5.9.<br />
+  - Dodano mechanizm wylogowania aplikacji po okresie bezczynności.<br />
+    Opcja: Wspólne.5.23 (domyślnie opcja wyłączona).<br />
+  - Retaksacja: poprawki w wyświetlaniu informacji o zastosowanych filtrach,<br />
+    dodano brakującą informację o filtrze Leki.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW24 -----------------------------</h3><br />
+2021.03.09 [2021.1.4.2]<br />
+  - Poprawiono mechanizm zamknięcia modułu po okresie bezczynności: <br />
+    Opcje: Wspólne.5.8 oraz Wspólne.5.9.<br />
+  - Dodano mechanizm wylogowania aplikacji po okresie bezczynności.<br />
+    Opcja: Wspólne.5.23 (domyślnie opcja wyłączona).<br />
+<br />
+<h3>---------------------------- Zmiany w module APW25 -----------------------------</h3><br />
+2021.03.09 [2021.1.4.2]<br />
+  - Poprawiono mechanizm zamknięcia modułu po okresie bezczynności: <br />
+    Opcje: Wspólne.5.8 oraz Wspólne.5.9.<br />
+  - Dodano mechanizm wylogowania aplikacji po okresie bezczynności.<br />
+    Opcja: Wspólne.5.23 (domyślnie opcja wyłączona).<br />
+<br />
+<h3>---------------------------- Zmiany w module APW35 -----------------------------</h3><br />
+2021.03.09 [2021.1.4.2]<br />
+  - Poprawiono mechanizm zamknięcia modułu po okresie bezczynności: <br />
+    Opcje: Wspólne.5.8 oraz Wspólne.5.9.<br />
+  - Dodano mechanizm wylogowania aplikacji po okresie bezczynności.<br />
+    Opcja: Wspólne.5.23 (domyślnie opcja wyłączona).<br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2021.03.09 [2021.1.4.2]<br />
+  - Dodano opcję "Sprzedaż na zapotrzebowanie produktów z zestawu p.wstrząs<br />
+    spoza listy dla pielęg./położ." (Apw11.2.158, domyślnie: Ostrzegaj).<br />
+  - Poprawiono mechanizm zamknięcia modułu po okresie bezczynności: <br />
+    Opcje: Wspólne.5.8 oraz Wspólne.5.9.<br />
+  - Dodano mechanizm wylogowania aplikacji po okresie bezczynności.<br />
+    Opcja: Wspólne.5.23 (domyślnie opcja wyłączona).<br />
+  - Dodano uprawnienie: 41-0049 Zarządzanie ustawieniami KS-OmniPharm One<br />
+    CopyCloud - Kopia w chmurze.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW44 -----------------------------</h3><br />
+2021.03.09 [2021.1.4.2]<br />
+  - W funkcji importu bazy BLOZ uwzględniono listę leków wchodzących w skład<br />
+    zestawu przeciwwstrząsowego, który może być podany przez lekarza, felczera,<br />
+    pielęgniarkę i położną.<br />
+  - Poprawiono mechanizm zamknięcia modułu po okresie bezczynności: <br />
+    Opcje: Wspólne.5.8 oraz Wspólne.5.9.<br />
+  - Dodano mechanizm wylogowania aplikacji po okresie bezczynności.<br />
+    Opcja: Wspólne.5.23 (domyślnie opcja wyłączona).<br />
+<br />
+<h3>---------------------------- Zmiany w module APW61 -----------------------------</h3><br />
+2021.03.09 [2021.1.4.2]<br />
+  - Obsługa procesu przetwarzania danych osobowych w ramach realizacji<br />
+    elektronicznego zlecenia na zapotrzebowanie w wyroby medyczne (eZWM).<br />
+<br />
+<h3>---------------------------- Zmiany w module APW68 -----------------------------</h3><br />
+2021.03.09 [2021.1.4.2]<br />
+  - Poprawiono mechanizm zamknięcia modułu po okresie bezczynności: <br />
+    Opcje: Wspólne.5.8 oraz Wspólne.5.9.<br />
+  - Dodano mechanizm wylogowania aplikacji po okresie bezczynności.<br />
+    Opcja: Wspólne.5.23 (domyślnie opcja wyłączona).<br />
+<br />
+<h3>--------------------------------- Zmiany w EDE ---------------------------------</h3><br />
+2021.03.09<br />
+  - Usunięcie komunikatu o niewysłaniu potwierdzenia dostarczenia dokumentu <br />
+    podczas dodawania faktury do repozytorium w przypadku braku wymaganego <br />
+    potwierdzania przez dostawcę.<br />
+<br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2021.03.09 [2021.1.4.2]<br />
+  - Zlikwidowanie problemu z automatycznym przedstawieniem warunków transakcji<br />
+    bezpośrednio po zaakceptowaniu zmian przez pacjenta.<br />
+  - Ustawienie statusu "Rezerwacja usunięta w trakcie sprzedaży" dopiero po <br />
+    usunięciu ostatniej pozycji.<br />
+  - Ujednolicenie atrybutów wysyłanych w komunikacie stanRezerwacji dla różnych <br />
+    statusów - jeżeli atrybut jest wysyłany dla jakiegoś statusu, to powinien<br />
+    być również uwzględniony w statusach po nim następujących.<br />
+<br />
+</body></html>

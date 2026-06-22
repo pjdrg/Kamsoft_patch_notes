@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2021.2.0.6</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2021.06.16 <br />
+  ApwMain.exe [2021.2.0.6]<br />
+  - Poprawa interfejsów<br />
+<br />
+  Slowniki.dll [2021.2.0.6]<br />
+  - Do historii karty towaru dodano informacje o zmianach w powiązaniu <br />
+    z kartoteką CKT<br />
+  - Dodano mechanizm aktualizacji warunków promocji po zmianie powiązań pomiędzy <br />
+    kartoteką dostawców lokalną a centralną (promocje z KS-OmniPharm)<br />
+<br />
+  Zasoby.dll [2021.2.0.6]<br />
+  - Dodano nowe zasoby graficzne.  <br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2021.06.16 [2021.2.0.6]<br />
+  - Okno e-Recepty. Wprowadzono weryfikację danych adresowych pacjenta. <br />
+    W przypadku wykrycia braków, przy etykiecie pacjenta wyświetlony zostanie<br />
+    trójkącik z ostrzeżeniem. Dodatkowo przy braku nazwy miejscowości, kodu <br />
+    pocztowego, numeru domu- danych które wymagane są przez SIM, wyświetlone <br />
+    zostanie ostrzeżenie przy wyborze recepty do realizacji.<br />
+  - Poprawiono przepisywanie identyfikatora pacjenta holenderskiego na DRR. <br />
+    W przypadku użycia identyfikatora krajowego program zamieniał go na <br />
+    paszport.  <br />
+  - Przywrócono poprzednią formę zapisu wystawcy Dokumentu Realizacji Recepty. <br />
+    Dodano wyświetlanie numeru PESEL technika farmaceutycznego w części <br />
+    wizualnej DRR. Usunięto przedrostek z tytułem zawodowym.<br />
+  - Leki on-line: Poprawione anulowanie rezerwacji przy wielu magazynach.<br />
+  <br />
+<h3>---------------------------- Zmiany w module APW12 -----------------------------</h3><br />
+2021.06.16 [2021.2.0.6]<br />
+  - Modyfikacja synchronizacji parametrów sterowanych centralnie dla <br />
+    Optymalizatora zamówień<br />
+  - Zamówienia łączone, poprawa sortowania dla kolumny cena urzędowa.<br />
+  - Zamówienia łączone, poprawa algorytmu przypisywania ceny z promocji dla <br />
+    danego towaru.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2021.06.16 [2021.2.0.6]<br />
+  - Poprawa eksportu do SAP (wzór 3). Program błędnie przekazywał zbiorcze <br />
+    faktury sprzedaży płatne przelewem.<br />
+  - Poprawa obliczania zestawień zysków - wyodrębnienie usług, zaliczek<br />
+  <br />
+<h3>---------------------------- Zmiany w module APW22 -----------------------------</h3><br />
+2021.06.16 [2021.2.0.6]<br />
+  - Do historii karty towaru dodano informacje o zmianach w powiązaniu <br />
+    z kartoteką CKT<br />
+  - Dodano mechanizm aktualizacji warunków promocji po zmianie powiązań pomiędzy <br />
+    kartoteką dostawców lokalną a centralną (promocje z KS-OmniPharm)<br />
+    <br />
+<h3>---------------------------- Zmiany w module APW23 -----------------------------</h3><br />
+2021.06.16 [2021.2.0.6]<br />
+  - Poprawa w raporcie spójności danych KS-AOW i wysłanych DRR. W niektórych <br />
+    przypadkach wykazywana była różnica w kwocie zapłaconej, mimo że widoczne <br />
+    wartości były takie same. Błąd zaokrągleń liczb zmiennoprzecinkowych.<br />
+  - Retaksacja recept: Poprawa pozycjonowania zaznaczenia w dolnym przeglądzie<br />
+<br />
+<h3>---------------------------- Zmiany w module APW24 -----------------------------</h3><br />
+2021.06.16 [2021.2.0.6]<br />
+  - Poprawa obliczeń w zestawieniach "Analiza sprzedaży z podziałem na..",<br />
+    "Sprzedaż->Sumy", "Wskaźniki->Zyski". Ujednolicenie zestawień. Poprawa <br />
+    uwzględniania zaliczek i rozliczenia zaliczek, usług, korekt, zmniejszenie <br />
+    opłaty i opłaty nocnej.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW31 -----------------------------</h3><br />
+2021.06.16 [2021.2.0.6]<br />
+  - Poprawa wyświetlania w zestawieniu "Płatności za przyjęte faktury - faktury<br />
+    niezapłacone" faktur o wartości 0.01zł.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW68 -----------------------------</h3><br />
+2021.06.16 [2021.2.0.6]<br />
+  - Aktualizacja modułu do nowej wersji ZSMOPL 1.25. Poprawa statusu TROS57 <br />
+    z błędu na poprawny z ostrzeżeniem. Dla błędnie określonych raportów należy <br />
+    jeszcze raz pobrać status.<br />
+  - ZSMOPL łączenie raportów. Poprawa dołączania raportu częściowego w przypadku<br />
+    gdy na magazynie głównym nie było żadnych transakcji.<br />
+<br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2021.06.16 [2021.2.0.6]<br />
+  - Leki on-line: Poprawione anulowanie rezerwacji przy wielu magazynach.<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2021.06.16<br />
+  ApwPlus.exe [2021.2.0.6]<br />
+    - Uaktualniono strukturę bazy danych.<br />
+<br />
+  Apwbase.dll [2021.2.0.6]<br />
+    - Uaktualniono bazę kart serwisowych.<br />
+<br />
+</body></html>

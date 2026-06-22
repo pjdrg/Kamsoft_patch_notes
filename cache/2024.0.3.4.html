@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2024.0.3.4</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2024.03.07<br />
+  CopyCloud [2024.0.3.4]<br />
+  - Poprawiono problem z wysyłaniem do repozytorium w chmurze plików kopii<br />
+    o rozmiarach większych niż 8GB. W losowych przypadkach wysyłka kopii<br />
+    o rozmiarze większym niż 8GB powodowało zawieszenie się usługi.<br />
+  - Dodano funkcjonalność przeglądania lokalnych logów usługi z poziomu okna<br />
+    ustawień usługi, zakładka "Harmonogram".<br />
+<br />
+  ApiService [2024.0.0.0]<br />
+  - Modyfikacja w zakresie usług API. Poprawa wydajności i dostępności usługi<br />
+    poprzez dodanie obsługi usługi lokalnej.<br />
+<br />
+  Slowniki.dll [2024.0.3.4]<br />
+  - Dodano zapisywanie w historii zmian karty towarowej operacje zmiany kodu<br />
+    kreskowego na karcie towarowej w przypadku aktualizacji z bufora CKT.<br />
+  - Buforowa poprawa listy leków i przecena towarów – "Pajączek".<br />
+    Poprawiono problem gdy nie można było utworzyć buforów z buforowej bazy CKT<br />
+    po uprzednim usunięciu tych buforów.<br />
+  - Optymalizacja działania podobników oraz walidacji danych na potrzeby<br />
+    projektów pharmind GRID.<br />
+<br />
+  ApwMain [2024.0.3.4]<br />
+  - Przystosowano do obsługi zoptymalizowanego mechanizmu łączenia z bazą.<br />
+<br />
+  ApwHarm [2024.0.3.4]<br />
+  - Rozwiązano problem dotyczący nieprawidłowego zarządzania dostępnością<br />
+    produktów dla automatu odpowiedzialnego za przygotowanie oferty internetowej<br />
+    "Aktualizuj ceny" oraz "Odśwież ofertę". Problem występował w trybie pracy<br />
+    z ofertą internetową dla bazy aptecznej oraz oferty z hurtowni.<br />
+    Akcja jest wywoływana zadaniem "Aktualizacja oferty dla apteki internetowej"<br />
+    w aplikacji ApwPlan – Harmonogram zadań.<br />
+  - Rozwiązano problem dotyczący rozbieżności plików odpowiedzialnych<br />
+    za odświeżanie oferty oraz aktualizację cen dla pełnej oferty internetowej<br />
+    względem pracy tych funkcji dla pojedynczego produktu w ofercie<br />
+    internetowej. Akcja korzystająca z tych funkcji jest wywoływana zadaniem<br />
+    "Aktualizacja oferty dla apteki internetowej" w aplikacji<br />
+    ApwPlan – Harmonogram zadań.<br />
+  - Rozwiązano problem dotyczący nieprawidłowego zarządzania domyślnymi<br />
+    ilościami dla produktów dostępnych w hurtowni oraz dla bazy aptecznej<br />
+    dla wymiany danych ze strona sklepu WWW. Akcja jest wywoływana zadaniem<br />
+    "Aktualizacja oferty dla apteki internetowej" w aplikacji<br />
+    ApwPlan – Harmonogram zadań. Opcje "Domyślna ilość produktów dla bazy<br />
+    aptecznej" oraz "Domyślna ilość produktów dla hurtowni" zarządzające<br />
+    domyślną ilością są dostępne w module internetowym "APW45 - Apteka<br />
+    internetowa -> Reguły -> Towary".<br />
+  - Optymalizacja procesu generowania zamówień automatycznych.<br />
+<br />
+  Zasoby.dll [2024.0.3.4]<br />
+  - Aktualizacja opisów opcji.<br />
+<br />
+  ApwIap.dll, ApwPlan.exe, ApwPlanWorker.exe, WaUtil.exe [2024.0.3.4]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2024.03.07 [2024.0.3.4]<br />
+  - Rozwiązanie problemu wyświetlania daty operacji w funkcji "Operacje<br />
+    gotówkowe i bezgotówkowe" . Problem występował w przypadku faktur sprzedaży,<br />
+    w których zmieniono datę sprzedaży, podczas wystawiania dokumentu.<br />
+  - Widoczność towarów z innych jednostek organizacyjnych na liście w sprzedaży.<br />
+    Problem objawiał się tym, że w niektórych przypadkach w sprzedaży odręcznej<br />
+    na liście towarów pod F4 widoczne były towary z innych jednostek<br />
+    organizacyjnych.<br />
+  - Optymalizacja działania podobników oraz walidacji danych na potrzeby<br />
+    projektów pharmind GRID.<br />
+  - Operacje magazynowe: uwzględniono nową opcję definicji dokumentów<br />
+    finansowych "Wymagaj podania przyczyny powstawania dokumentu".<br />
+    W przypadku operacji opartej na własnym typie dokumentu, na którym ustawiono<br />
+    opcję, konieczne jest określenie przyczyny powstania (użycie funkcji:<br />
+    [F5] Przyczyna).<br />
+  - Wprowadzenie Asystenta KtoMaLek, który ułatwi i przyspieszy obsługę<br />
+    rezerwacji KtoMaLek.pl (wersja pilotażowa).<br />
+<br />
+<h3>---------------------------- Zmiany w module APW12 -----------------------------</h3><br />
+2024.03.07 [2024.0.3.4]<br />
+  - Optymalizacja procesu generowania zamówień automatycznych.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2024.03.07 [2024.0.3.4]<br />
+  - Dla faktur zakupu dodano możliwość dowolnej ilości zmiany numeru KSeF<br />
+    w przypadku braku licencji na pharmindXF.<br />
+  - Dodano informacje o wstrzymaniu całej dostawy podczas korekty dokumentu<br />
+    dostawy.<br />
+  - Zmieniono sposób ustalania terminu płatności podczas zatwierdzania korekty<br />
+    faktury. Sposób ten można określić poprzez ustawienia opcji APW13.2.107<br />
+    "Termin płatności za korektę".<br />
+  - Zadanie z Giełdy Pomysłów: W "Kontroli dokumentów zakupu" dodano kolumnę<br />
+    "Półka" (F12).<br />
+  - Rozszerzenie dokumentu weryfikacji dostawy dla APTIX o informacje<br />
+    pozwalające zlokalizować towar na magazynie.<br />
+  - Pharmind GRID: informowanie farmaceuty podczas przyjmowania faktury zakupu<br />
+    na magazyn o nieaktualnym numerze bloz na kartotece towaru.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW14 -----------------------------</h3><br />
+2024.03.07 [2024.0.3.4]<br />
+  - Dodano zapisywanie w historii zmian karty towarowej operacje zmiany kodu<br />
+    kreskowego na karcie towarowej w przypadku aktualizacji z bufora CKT.<br />
+  - Buforowa poprawa listy leków i przecena towarów – "Pajączek".<br />
+    Poprawiono problem gdy nie można było utworzyć buforów z buforowej bazy CKT<br />
+    po uprzednim usunięciu tych buforów.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2024.03.07 [2024.0.3.4]<br />
+  - Eksport do EDI++. Rozwiązano problem z błędnym przekazywaniem znaczników JPK<br />
+    dla faktur sprzedaży.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW23 -----------------------------</h3><br />
+2024.03.07 [2024.0.3.4]<br />
+  - Kontrola recept wielopozycyjnych - optymalizacja wykonania raportu.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW24 -----------------------------</h3><br />
+2024.03.07 [2024.0.3.4]<br />
+  - Sprzedaż -> Analiza sprzedaży z podziałem na… Leki:<br />
+    * Dodano kolumnę "Półka" do analizy ([F11] Widok -> Pokaż informację<br />
+      o półce),<br />
+    * Uwzględniono nową kolumnę "Półka" w wydruku,<br />
+    * Zmieniono organizację funkcji [F10] Wydruk – dodano możliwość wyboru<br />
+      rodzaju wydruku (wydruk podstawowy/wydruk rozszerzony) zamiast działania<br />
+      zgodnie z opcją modułu: APW24.1.7 "Wydruk graficzny Analizy sprzedaży<br />
+      leków".<br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2024.03.07 [2024.0.3.4]<br />
+  - Dodano nową opcję: APW13.2.107 "Termin płatności za korektę" z wariantami:<br />
+    * "Termin z dokumentu" (domyślny),<br />
+    * "Termin z karty dostawcy",<br />
+    * "Termin krótszy: z dokumentu lub z karty dostawcy".<br />
+  - Edycja definicji dokumentów finansowych -> [Ctrl+4] Inne – dodano opcję:<br />
+    "Wymagaj podania przyczyny powstawania dokumentu". Opcję można modyfikować<br />
+    wyłącznie dla dodanych, własnych definicji.<br />
+  - Opcje modułów: zablokowano możliwość edycji opcji: APW24.1.7 :Analizy<br />
+    sprzedaży leków".<br />
+<br />
+<h3>---------------------------- Zmiany w module APW42 -----------------------------</h3><br />
+2024.03.07 [2024.0.3.4]<br />
+  - Aktualizacja struktury bazy danych.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW45 -----------------------------</h3><br />
+2024.03.07 [2024.0.3.4]<br />
+  - Rozwiązano problem dotyczący nieprawidłowego zarządzania dostępnością<br />
+    produktów dla automatu odpowiedzialnego za przygotowanie oferty internetowej<br />
+    "Aktualizuj ceny" oraz "Odśwież ofertę". Problem występował w trybie pracy<br />
+    z ofertą internetową dla bazy aptecznej oraz oferty z hurtowni.<br />
+    Akcja jest wywoływana funkcjami "Aktualizuj ceny", "Odśwież ofertę"<br />
+    dla pracy z pełną ofertą int. oraz funkcjami "Aktualizuj cenę", "Odśwież<br />
+    produkt" dla pojedynczego produktu, funkcje są dostępna w module<br />
+    internetowym "APW45 - Apteka internetowa -> Towary".<br />
+  - Rozwiązano problem dotyczący rozbieżności plików odpowiedzialnych<br />
+    za odświeżanie oferty oraz aktualizację cen dla pełnej oferty internetowej<br />
+    względem pracy tych funkcji dla pojedynczego produktu w ofercie<br />
+    internetowej. Akcja korzystająca z tych funkcji jest wywoływana funkcjami<br />
+    "Aktualizuj ceny", "Odśwież ofertę" dla pracy z pełną ofertą int.<br />
+    oraz funkcjami "Aktualizuj cenę", "Odśwież produkt" dla pojedynczego<br />
+    produktu, funkcje są dostępna w module internetowym "APW45 - Apteka<br />
+    internetowa -> Towary".<br />
+  - Rozwiązano problem dotyczący nieprawidłowego zarządzania domyślnymi<br />
+    ilościami dla produktów dostępnych w hurtowni oraz dla bazy aptecznej<br />
+    dla wymiany danych ze strona sklepu WWW. Akcja jest wywoływana funkcją<br />
+    "Aktualizuj ofertę sklepu int." dostępną w module internetowym<br />
+    "APW45 - Apteka internetowa -> Komunikacja". Opcje "Domyślna ilość produktów<br />
+    dla bazy aptecznej" oraz "Domyślna ilość produktów dla hurtowni"<br />
+    zarządzające domyślną ilością są dostępne w module internetowym<br />
+    "APW45 - Apteka internetowa -> Reguły -> Towary".<br />
+<br />
+<h3>---------------------------- Zmiany w module APW68 -----------------------------</h3><br />
+2024.03.07 [2024.0.3.4]<br />
+  - Dla raportów łączonych rozwiązano problem objawiający się brakiem<br />
+    wyświetlania godziny utworzenia raportu. Godzina ta była wyświetlana jako<br />
+    00:00.<br />
+  - Dla raportów braków, pod prawym klawiszem myszy, dodano obsługę funkcji<br />
+    Zapisz w repozytorium. Funkcja ta pozawala zapisać w repozytorium KS-EDE<br />
+    brakujące zgłoszenia braków.<br />
+<br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2024.03.07 [2024.0.3.4]<br />
+  - Pharmind GRID: informowanie farmaceuty podczas przyjmowania faktury zakupu<br />
+    na magazyn o nieaktualnym numerze bloz na kartotece towaru.<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2024.03.07<br />
+  ApwBase.dll [2024.0.3.4]<br />
+  - Uaktualniono bazę kart serwisowych.<br />
+<br />
+  ApwPlus [2024.0.3.4]<br />
+  - Zaktualizowano strukturę bazy danych.<br />
+  - Optymalizacja sposobu łączenia się z bazą danych.<br />
+<br />
+</body></html>

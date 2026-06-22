@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2020.1.5.4</title>
+</head>
+<body>
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2020.02.13 [2020.1.8.5]  <br />
+  - Poprawki w oknie wprowadzania kodów recepty: zabezpieczono klawisz Powtórz<br />
+    przed przepisywaniem danych z ostatniej e-recepty. W wyniku tego działania<br />
+    program rozpoznawał receptę papierową jako e-receptę<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2020.02.13 [2020.1.3.10]<br />
+  - Rozszerzenie raportu dla księgowości w formacie XML o podsumowanie<br />
+    zaliczek wg stawek VAT oraz ewidencji zwrotów zaliczek.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW23 -----------------------------</h3><br />
+2020.02.13 [2020.1.3.2]<br />
+  - Rozszerzenie raportu zaliczek w ewidencji zaliczek i rozliczeń<br />
+    o podsumowanie zaliczek wg stawek VAT oraz ewidencji zwrotów zaliczek.<br />
+<br />
+<h3>--------------------------------- Zmiany w EWD ---------------------------------</h3><br />
+2020.02.13 [2020.0.1.1]<br />
+  KSPCSPluginContractsData.dll, KSPCSModelTaskLauncher.dll<br />
+  - Dodanie obsługi wyłączenia kontraktu<br />
+  - Dodanie obsługi zamykania wszystkich podległych procesów aplikacji <br />
+    nadzorowanej (np. okno raportu błędu Windows). W przypadku wystąpienia <br />
+    błędu w module KSPcs.exe ApwPlan jako aplikacja nadzorująca ten proces, <br />
+    zamykała go. W apteka gdzie włączone jest raportowanie błędów, dodatkowo <br />
+    pojawiały się okna ze zgłoszeniem błędu usługi KS-PCS Framework. Poprawiono<br />
+    więc nadzorowanie aplikacji KSPcs.exe i zamykanie aplikacji po napotkanym <br />
+    błędzie uwzględniając wyłączenie okien z raportem.<br />
+<br />
+2020.02.12 <br />
+  KSPushLib.dll [2020.0.1.0]<br />
+  - Poprawa stabilności usługi KSPush. Problem mógł się objawiać bezskuteczną <br />
+    próbą uruchomienia i połączenia do usługi KSPush. W takim przypadku, <br />
+    poprawka spowoduje restart aplikacji KSPush.<br />
+<br />
+</body></html>

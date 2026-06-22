@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2019.2.13.6</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2019.11.26<br />
+  slowniki.dll [2019.3.5.2]<br />
+  - Podczas ukrywania karty towarów z kartoteki towarów dodano czyszczenie pola<br />
+    ‘kod kreskowy’. Przy przywracaniu ukrytej karty towarowej dodano <br />
+	przepisywanie wartości z pola KODKR z BLOZ’a, towaru z karty <br />
+	przyporządkowywanej do bazy BLOZ.<br />
+<br />
+2019.11.25<br />
+  mvserver.exe [2019.3.1.1]  <br />
+    Poprawa procesu ładowania automatu dla automatów do wydawnia leków ROWA i Fablox. <br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2019.11.26 [2019.3.9.1]<br />
+  - Zablokowano możliwość wystawiania korekty do wcześniej wykonanej korekty<br />
+  - e-Recepta: Poprawka w weryfikacji daty ważności recept odnawialnych <br />
+    wystawionych przed dniem 2019-09-07.<br />
+    <br />
+<h3>---------------------------- Zmiany w module APW12 -----------------------------</h3><br />
+2019.10.17 [2019.3.1.2]<br />
+  - Dodanie możliwości generowania norm dla wszsytkich magazynów. W regułach norm<br />
+    został dodany parametr umożliwiający włączenie tego liczenia w przypadku<br />
+	licencji na wielomagazynowość.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW14 -----------------------------</h3><br />
+2019.11.25 [2019.3.1.6]<br />
+  - Dodano numer telefonu apteki w nagłówku wydruku protokołu <br />
+    wstrzymania/wycofania z obrotu produktu leczniczego lub wyrobu medycznego.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2019.11.25 [2019.3.2.6]<br />
+  - Pasek ogólny: zmieniono przyporządkowanie recept narkotycznych 100%:<br />
+    * w opcji "Wszystkie recepty" przeniesiono ją z bloku 100% do N (Rpw, Rpw.P)<br />
+    * w opcji "N (Rpw, Rpw.P)" dodano jeszcze recepty N 100%<br />
+    Pozostałe opcje pozostały bez zmian.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW23 -----------------------------</h3><br />
+2019.11.26 [2019.3.3.1]<br />
+  - Retaksacja recept: Poprawiono wyświetlanie realizacji dla recept <br />
+    pełnopłatnych (bez podanego numeru recepty). <br />
+	<br />
+<h3>---------------------------- Zmiany w module APW42 -----------------------------</h3><br />
+2019.11.26 [2019.3.3.1]<br />
+  - Rozszeżono funkcję 'Ukrywania nieużywanych kart towarowych' o czyszczenie<br />
+    pola 'Kod EAN' oraz pola 'Kod kreskowy'<br />
+<br />
+<h3>---------------------------- Zmiany w module APW68 -----------------------------</h3><br />
+2019.11.25 [2019.3.5.0]<br />
+  - Dodanie możliwości rozpoczęcia raportowania do ZSMOPL bez generowania IBO.<br />
+    Apteki rozpoczynające działalność ze stanem początkowym 0 oraz apteki <br />
+	zmieniające system apteczny na KAMSOFT a raportujące do ZSMOPL we <br />
+	wcześniejszym innym systemie, będa mogły teraz kontynuować raportowanie, bez <br />
+	konieczności tworzenia IBO.<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2019.11.25<br />
+  Apwplus.exe [2019.3.31.0]<br />
+  - Uaktualniono strukturę bazy danych<br />
+<br />
+</body></html>

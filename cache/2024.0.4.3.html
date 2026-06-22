@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2024.0.4.3</title>
+</head>
+<body>
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2024.04.15 [2024.0.4.3]<br />
+  - Rozwiązanie problemu objawiającego się wystąpieniem błędu SQL podczas próby<br />
+    sprzedaży towaru:<br />
+    * w przypadku Firebird - "SQL error code = -303 aritmetic exception, numeric<br />
+      overflow or string truncation numeric value is out of range",<br />
+    * w przypadku Oracle - "ORA-01438: value larger than specified precision<br />
+      allowed for this column" dla bazy Oracle.<br />
+    Błąd pojawiał się na losowych stanowiskach w aptece.<br />
+<br />
+</body></html>

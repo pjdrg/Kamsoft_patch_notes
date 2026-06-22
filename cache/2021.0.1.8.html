@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2021.0.1.8</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2020.09.14<br />
+  mvserver.exe [2021.0.1.8]<br />
+  - poprawiono zapamiętywanie parametru "Włącz rozróżnianie tych samych pozycji <br />
+    EAN/Seria na jednej fakturze" - automaty Fablox II / WWKS2.<br />
+<br />
+2020.09.11<br />
+  OphOneRepoSvc.exe [2020.3.1.1]<br />
+  - Poprawiono mechanizm ustawiania wskaźnika wysyłki podczas weryfikacji. <br />
+  <br />
+2020.09.09<br />
+  OphOneRepoSvc.exe [2020.3.0.9]<br />
+  - Poprawiono pracę w przypadku konfiguracji Oracle:<br />
+    * z użyciem InstantClient + alias Oracle<br />
+	* w konfiguracji z podaniem tylko adresu serwera<br />
+  - Usprawniono logowanie zdarzeń<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2020.09.14 [2021.0.1.8]<br />
+  - e-Recepta: Dodano ikonę białego trójkąta z wykrzyknikiem (uwaga) przy "dacie<br />
+    wystawienia/dacie realizacji od". Biały trójkąt zostanie wyświetlony w <br />
+    momencie realizacji recept całorocznych po upływie 30 dni od <br />
+    "daty wystawienia/daty realizacji od" w przypadku kiedy recepty nie <br />
+    zrealizowano w ciągu pierwszych 30 dni. Żółty trójkąt zostanie wyświetlony<br />
+    po upływie 30 dni od "daty wystawienia/daty realizacji od" w sytuacji gdy <br />
+    doszło do sprzedaży w ciągu pierwszych 30 dni. Po kliknięciu w ikonę <br />
+    wyświetli się stosowny komunikat zawierający datę pierwszej sprzedaży.   <br />
+  - e-Recepta:  W przypadku wysłania kolejnej wersji DRR program domyślnie <br />
+    ustawi rodzaj realizacji recepty na taki sam jak w poprzedzającej wersji <br />
+    dokumentu.<br />
+  - e-Recepta: Usunięto błąd przy wycofywaniu DRR na import docelowy. <br />
+    SIM odrzucał DRR wycofujący z komunikatem o braku numeru EAN na DRR.<br />
+  - e-Recepta: Dodano zmianę oznaczania braku oddziału NFZ na DRR wg wytycznych <br />
+    Centrum e-Zdrowia (zarówno w części wizualnej jak i technicznej). <br />
+    W sekcji Dane o ubezpieczeniu i uprawnieniach zastąpiono frazę <br />
+    "oddział NFZ : Brak danych" na "Płatnik: nie dotyczy".  <br />
+  - e-Recepta: Usprawniono powiększanie/pomniejszanie okna wizualizacji <br />
+    e-Recepty. Po osiągnięciu wysokości i szerokości przestrzeni roboczej okno <br />
+    przestanie rosnąć, pozostanie zwiększona jedynie wielkość wizualizacji <br />
+    e-Recepty w oknie.  <br />
+  - e-Recepta: Poprawiono błąd wyświetlania okna wizualizacji e-Recepty.<br />
+    Odnotowano przypadki w których okno wizualizacji e-Recepty przestało się <br />
+    wyświetlać na jednym stanowisku. <br />
+  - Lista DRR (okno "Dokumenty realizacji recepty"):  Dodano możliwość zmiany <br />
+    rodzaju realizacji recepty – opcja [F11] Zmień rodzaj DRR. Funkcjonalność <br />
+    pozwala m.in. zmienić status recepty z zamkniętej na częściowo zrealizowaną <br />
+    z poziomu okna e-Recepta\[F9] Realizacje<br />
+  - Lista DRR: Dodano kolumny data sprzedaży, numer klienta, numer recepty <br />
+    klienta.<br />
+  - eZWM - dodanie obsługi kodu dostępu do danych zlecenia poprzez <br />
+    podanie daty urodzenia pacjenta (w przypadku braku numeru PESEL).<br />
+	<br />
+<h3>---------------------------- Zmiany w module APW12 -----------------------------</h3><br />
+2020.09.14 [2021.0.1.8]<br />
+  - Optymalizacja prezentacji punktów z Programów Partnerskich przy tworzeniu <br />
+    zamówienia z oferty dostawcy.<br />
+	<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2020.09.14 [2021.0.1.8]<br />
+  - W Kontroli zakupów generowanie reklamacji z domyślnie ustawionym kodem <br />
+    przyczyny powstania reklamacji (kod ustalony w oknie "Pozycje reklamacji").<br />
+  <br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2020.09.14 [2021.0.1.8]<br />
+  - Poprawiono generowanie zestawienia refundacyjnego w formacie 2.8  <br />
+  - W oknie Edycji zestawienia refundacyjnego dodano możliwość wygenerowania<br />
+    pliku csv z listą recept do wczytania w Portalu Świadczeniodawcy w celu<br />
+    otwarcia zamkniętego okresu do korekty (Ctrl+F10 Przekaż do NFZ -> Plik csv <br />
+    do korekty (Portal Świadczeniodawcy)).<br />
+  - W oknie edycji zestawienia refundacyjnego dodano możliwość wpisania<br />
+    komentarza do realizacji. Komentarz ten zostanie przeniesiony do pliku CSV<br />
+  - W "Szablonach rachunków refundacyjnych" środków pomocniczych poprawiono <br />
+    generowanie not.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW23 -----------------------------</h3><br />
+2020.09.14 [2021.0.1.8]<br />
+  - Retaksacja recept: Dodano ikonę białego trójkąta z wykrzyknikiem (uwaga), <br />
+    wyświetlaną przy „dacie wystawienia/dacie realizacji od”. Biały trójkąt <br />
+    zostanie wyświetlony w momencie realizacji recept całorocznych po upływie <br />
+    30 dni od „daty wystawienia/daty realizacji od” w przypadku kiedy recepty <br />
+    nie zrealizowano w ciągu pierwszych 30 dni. Żółty trójkąt zostanie <br />
+    wyświetlony po upływie 30 dni od „daty wystawienia/daty realizacji od” <br />
+    w sytuacji gdy doszło do sprzedaży w ciągu pierwszych 30 dni. <br />
+    Po kliknięciu w ikonę wyświetli się stosowny komunikat zawierający datę <br />
+    pierwszej sprzedaży. Dodano stosowne filtry umożliwiające zawężenie zakresu <br />
+    danych dla recept całorocznych realizowanych po 30 dniach od <br />
+    „daty wystawienia/daty realizacji od” <br />
+	<br />
+<h3>---------------------------- Zmiany w module APW45 -----------------------------</h3><br />
+2020.09.14 [2021.0.1.8]<br />
+  - wdrożono poprawkę dla obsługi domyślnego parametru (płatności)<br />
+    dla automatycznych rezerwacji.<br />
+  - wdrożono poprawkę dla funkcji zliczającej ilość rezerwowanych<br />
+    zamówień internetowych.<br />
+  - wdrożono poprawkę dla prezentacji logów infromujących o problemach<br />
+    dla realizacji automatycznych rezerwacji internetowych.<br />
+  - wdrożyłem nową funkcjonalność, zarządzanie zamówieniami oraz pozycjami<br />
+    domyślnymi. Dodano fukcje tworzenia jak i edycji zamówień/pozycji <br />
+    domyślnych  dla apteki internetowej.<br />
+  - poprawiono prezentację okna z edycją zamówień internetowych w przypadku<br />
+    wyłączonej funkcji zarządzania wysłaniem maili do klientów.<br />
+	<br />
+<h3>---------------------------- Zmiany w module APW55 -----------------------------</h3><br />
+2020.09.14 [2021.0.1.8]<br />
+  - Programy Partnerskie: obsĹ‚uga eLearning<br />
+<br />
+<h3>---------------------------- Zmiany w module APW68 -----------------------------</h3><br />
+2020.09.14 [2021.0.1.8]<br />
+  - Oznaczenie kodu TROSPOZ80 jako ostrzeĹĽenie (Podano stan serii produktu <br />
+    przekraczajÄ…cy dozwolony limit.)<br />
+	<br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2020.09.14 [2021.0.1.8]<br />
+  - Programy Partnerskie: obsługa eLearning<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2020.09.14 <br />
+  ApwPlus.exe [2021.0.1.8]<br />
+  - Uaktualniono strukturę bazy danych<br />
+  <br />
+</body></html>

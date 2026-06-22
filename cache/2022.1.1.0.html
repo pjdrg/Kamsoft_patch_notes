@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2022.1.1.0</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2022.02.10<br />
+  Slowniki.dll [2022.1.1.0]<br />
+  - Umożliwiono zapytanie o stan i cenę towaru dla towarów z brakiem danych w<br />
+    lokalnej kartotece BLOZ.<br />
+  - Wizytówka zakładka KOWAL, wprowadzono zabezpieczenie danych logowania do<br />
+    konta KOWAL. Edycja będzie możliwa po naciśnięciu przycisku "Zmień dane<br />
+    logowania". Edycja danych będzie możliwa w przypadku braku aktywnych sesji<br />
+    na innych stanowiskach. Zabezpieczenie ma chronić przed przypadkową zmianą<br />
+    hasła.<br />
+  - Poprawiono funkcjonalność dodawania towarów do grup asortymentowych na<br />
+    podstawie kodu ATC (bądź jego początkowej części). Niepoprawnie dodawane<br />
+    były wszystkie towary z kartoteki towarów.<br />
+<br />
+  ApwMain.exe [2022.1.1.0]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+  OsozNews.dll [2022.1.1.0]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+  KSAppInsSvc.dll [2022.1.1.0]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+  Zasoby.dll [2022.1.1.0]<br />
+  - Dodano opis dla uprawnienia 11_0040 - możliwość edycji daty wystawienia dla<br />
+    faktury sprzedaży.<br />
+<br />
+  MVServer.exe [2022.1.1.0]<br />
+  - Automat Consis: poprawiono mechanizm ładowania towarów, który podwajał<br />
+    ilości zweryfikowane czytnikiem 2D w kontroli dokumentów zakupu.<br />
+<br />
+  KSOPH.dll [2022.1.1.0]<br />
+  - Dostosowano do nowej wersji modułu 22 Kartoteki.<br />
+<br />
+  Apwfn.dll [2022.1.1.0]<br />
+  - Zaktualizowano opisy opcji, uprawnień i ról w przeglądzie zleceń sterowania<br />
+    centralnego.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2022.02.10 [2022.1.1.0]<br />
+  - Dodano mechanizmy kontroli poprawności numeru dokumentu dla faktur sprzedaży.<br />
+  - Dodano możliwość edycji daty sprzedaży dla faktury niefiskalnej.<br />
+    Zablokowano możliwość edycji daty wystawienia. Edycja daty wystawienia<br />
+    będzie na dodatkowe uprawnienie 11_0040. Domyślnie uprawnienie wyłączone.<br />
+  - Poprawiono mechanizm tworzenia korekty, który generował korekty zerowe<br />
+    lub puste pozycje dla bazy Oracle.<br />
+  - Dodano zabezpieczenie przed możliwością tworzenia wielu korekt dla pozycji<br />
+    sprzedaży leku robionego.<br />
+  - Zadanie z Giełdy Pomysłów: Rozszerzono komunikat ostrzegający przed wydaniem<br />
+    leku z innym numerem EAN niż zaordynowany na e-Recepcie.<br />
+    Dodano do porównania, nazwę handlową, nazwę międzynarodową, dawkę i postać<br />
+    leku. Dodano (opcjonalną) blokadę wydania leku z inną nazwą międzynarodową.<br />
+  - Aktualizacja transformaty dla e-Recept w wersji PIK 1.3.2.<br />
+    Dodano wyświetlanie niektórych identyfikatorów pacjenta dla recept <br />
+    transgranicznych. Dodano obsługę identyfikatora tymczasowego zaświadczenia<br />
+    tożsamości cudzoziemca w Polsce (TZTC).<br />
+  - Blokada usuwania sprzedaży dla sprzedaży wystawionej przez operatora z<br />
+    niezdefiniowaną rolą biznesową lub rolą biznesową serwisanta.<br />
+  - Dodano możliwość realizacji e-Recepty na lek recepturowy od razu po jej<br />
+    odblokowaniu w oknie e-Recepty.<br />
+  - Poprawiono wykazywanie wydanej ilości opakowań na DRR przy zastosowaniu<br />
+    mnożnika lekospisowego.<br />
+  - Dodanie możliwości tworzenia nowych kartotek oraz dodawania do zamówienia<br />
+    produktów w Asystencie Sprzedaży Aptecznej oraz Komunikacie Aptecznym.<br />
+  - Leki robione: usprawnienia i poprawki w procesie sprzedaży.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2022.02.10 [2022.1.1.0]<br />
+  - Dodano mechanizmy kontroli poprawności numeru dokumentu dla faktur zakupu.<br />
+  - W oknie "Przeglądanie i poprawki wprowadzonych dokumentów" dodano możliwość<br />
+    ręcznego wprowadzenia daty zatwierdzenia dokumentu w przypadku, gdy data ta<br />
+    nie została ustawiona automatycznie (przycisk: "[F4] Popraw").<br />
+  - Dodanie możliwości tworzenia nowych kartotek oraz dodawania do zamówienia<br />
+    produktów w Asystencie Sprzedaży Aptecznej oraz Komunikacie Aptecznym.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2022.02.10 [2022.1.1.0]<br />
+  - Dodano obsługę komunikatu LEK 2.9 w zestawieniach refundacyjnych.<br />
+  - Eksport do RaksSQL, poprawiono przekazywanie pola "skrót" dla faktur<br />
+    sprzedaży.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW22 -----------------------------</h3><br />
+2022.02.10 [2022.1.1.0]<br />
+  - W mechanizmie automatycznego wiązania dostawców z kartoteką centralną<br />
+    (menu Kartoteki -> Dostawcy -> Powiązania z centralną bazą dostawców)<br />
+    dodano możliwość powiązania po kodach FK, NIP, REGON, identyfikator<br />
+    w rej. medycznym. Wybór kodu dostępny po wybraniu funkcji [F2] Powiąż<br />
+    automat.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW23 -----------------------------</h3><br />
+2022.02.10 [2022.1.1.0]<br />
+  - Zadanie z Giełdy Pomysłów: Retaksacja recept – dodano filtrowanie po osobie<br />
+    weryfikującej sprzedaż.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2022.02.10 [2022.1.1.0]<br />
+  - Dodano uprawnienie 11_0040 - Możliwość edycji daty wystawienia dla faktury<br />
+    sprzedaży. Domyślnie uprawnienie to będzie wyłączone.<br />
+  - Dodano opcję: APW11-Sprzedaż/2.Ustawienia globalne/165. Blokuj sprzedaż<br />
+    towaru z inną nazwą międzynarodową niż przepisano na e-Recepcie.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW68 -----------------------------</h3><br />
+2022.02.10 [2022.1.1.0]<br />
+  - Generowanie raportu obrotów i stanów - dodano mechanizm kontroli poprawności<br />
+    numerów dokumentów źródłowych.<br />
+<br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2022.02.10 [2022.1.1.0]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2022.02.10<br />
+  ApwPlus.exe [2022.1.1.0]<br />
+  - Uaktualniono strukturę bazy danych.<br />
+<br />
+  Apwbase.dll [2022.1.1.0]<br />
+  - Uaktualniono bazę kart serwisowych.<br />
+<br />
+</body></html>

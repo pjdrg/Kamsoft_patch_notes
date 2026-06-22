@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2020.3.11.6</title>
+</head>
+<body>
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2020.12.17 [2020.3.11.6]<br />
+  - Dodano obsługę uprawnień:<br />
+    * 11-0036 - Edycja faktur sprzedaży<br />
+    * 11-0037 - Usuwanie faktur sprzedaży<br />
+    * 11-0038 - Wystawianie faktur sprzedaży zbiorczych<br />
+    Uprawnienia te zostały domyślnie przepisane z uprawnienia 11-0006<br />
+  - Operacje magazynowe: optymalizacja zapytań SQL dla Oracle podczas operacji<br />
+    zatwierdzania/wydruku dokumentu FV/MM<br />
+  - e-Recepta: Nowa funkcjonalność ułatwiająca realizację e-recept, które <br />
+    zostały wcześniej pobrane z SIM! Od tej pory, po pobraniu e-Recept danego <br />
+    pacjenta do realizacji w ramach otwartej transakcji jest stały dostęp do <br />
+    pobranych dokumentów, niezależnie od tego czy realizacja sprzedaży została <br />
+    na chwilę przerwana np. chęcią weryfikacji dodatkowych informacji w innym <br />
+    miejscu systemu. Nie trzeba już w niektórych sytuacjach ponownie podawać <br />
+    klucza pakietu recept/recepty lub PIN-u i numeru PESEL pacjenta aby <br />
+    kontynuować sprzedaż dla pacjenta. Pełne możliwości nowej funkcjonalności, <br />
+    w tym możliwe scenariusze użycia, zostały opisane w instrukcji stanowiskowej<br />
+    "OBSŁUGA E-RECEPTY W SYSTEMIE KS-AOW" dostępnej z poziomu <br />
+    Menu głównego -> O systemie.<br />
+    - Okno e-Recepty: Poprawiono kopiowanie klucza e-Recepty [Ctrl+C] – funkcja<br />
+    oznaczała receptą jako częściowo zrealizowaną, co było nieoczekiwanym <br />
+    zachowaniem programu. <br />
+<br />
+<h3>---------------------------- Zmiany w module APW12 -----------------------------</h3><br />
+2020.12.16 [2020.3.11.6]<br />
+  - W prospektach KS-AOW dodano widoczność centralnych rekomendacji KS-Omnipharm<br />
+ <br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2020.12.17 [2020.3.11.6]<br />
+  - W Kontroli dokumentów zakupu poprawiono ostrzeżenie podczas <br />
+    skanowania kodu 2D tego samego opakowania.<br />
+   <br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2020.12.16 [2020.3.11.6]<br />
+  - Poprawiono sprawdzanie aktywności usługi "KS-OmniPharm One - RepoCloud"<br />
+  - Dodano możliwość ręcznego ustawienia daty ważności certyfikatu z KOWAL, <br />
+    w przypadku, gdy data zostanie źle rozpoznana przez automat.<br />
+  <br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2020.12.17<br />
+  ApwPlus.exe [2020.3.11.6]<br />
+  - Uaktualniono strukturę bazy danych<br />
+  - Przepisano domyślne uprawnienia dla funkcji w Apw11<br />
+  IbPack [2020.3.11.6]<br />
+  - Zaktualizowano do bieżącej struktury bazy danych.<br />
+  OraPack [2020.3.11.6]<br />
+  - Zaktualizowano do bieżącej struktury bazy danych.<br />
+<br />
+</body></html>

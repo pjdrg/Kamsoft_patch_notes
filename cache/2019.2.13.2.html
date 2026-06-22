@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2019.2.13.2</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2019.11.12<br />
+  wautil.exe [2019.3.0.2]<br />
+  - Aktualizacja bibliotek.<br />
+  apwharm.dll [2019.3.4.0]<br />
+  - Uwzględnienie zmiany daty sprzedaży na dokumencie w wysyłce raportów księgowych. <br />
+    Jeżeli użytkownik zmienił datę sprzedaży na dzień w którym raport księgowy został<br />
+    już wysłany, w kolejnym cyklu, raport zostanie wysłany ponownie.<br />
+  - dodanie dodatkowej weryfikacji czy dokument jest wczytany do systemu na podstawie<br />
+    NIP-u i numeru faktury. W przypadku gdy dostawca posiadał kilka oddziałów lecz faktury <br />
+    były wystawiane przez centralę, dochodziło do dublowania dokumentów w buforze. <br />
+  - poprawa wczytywania dokumentów faktur dostarczanych w imieniu innych podmiotów.<br />
+  ApwHarmPush.dll [2019.3.4.0]<br />
+  - Uwzględnienie zmiany daty sprzedaży na dokumencie w wysyłce raportów księgowych. <br />
+    Jeżeli użytkownik zmienił datę sprzedaży na dzień w którym raport księgowy został<br />
+    już wysłany, w kolejnym cyklu, raport zostanie wysłany ponownie.<br />
+  - dodanie dodatkowej weryfikacji czy dokument jest wczytany do systemu na podstawie<br />
+    NIP-u i numeru faktury. W przypadku gdy dostawca posiadał kilka oddziałów lecz faktury <br />
+    były wystawiane przez centralę, dochodziło do dublowania dokumentów w buforze. <br />
+  - poprawa wczytywania dokumentów faktur dostarczanych w imieniu innych podmiotów.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2019.11.14 [2019.3.8.4]<br />
+  - e-Recepta: poprawa realizacji e-Recept z holenderskim identyfikatorem <br />
+    pacjenta. Program na sztywno wykazywał w DRR "inny identyfikator w kraju",<br />
+    zamiast wskazanego typu identyfikatora - paszport/dowód osobisty; <br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2019.11.12 [2019.3.8.5]<br />
+	- Uwzględnienie zmiany daty sprzedaży na dokumencie w wysyłce <br />
+	  raportów księgowych. Jeżeli użytkownik zmienił datę sprzedaży na dzień <br />
+	  w którym raport księgowy został już wysłany, w kolejnym cyklu, <br />
+	  raport zostanie wysłany ponownie.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW14 -----------------------------</h3><br />
+2019.11.12 [2019.3.1.5]<br />
+  - Zabezpieczenie bufora remanentowego przed zatwierdzeniem różnic dla towarów<br />
+    raportowanych do ZSMOPL, które nie posiadają uzupełnionej serii bądź daty<br />
+	ważności.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2019.11.14 [2019.3.2.3]<br />
+  - Dostosowano eksport CSV do zmian w KS-PPS.<br />
+<br />
+2019.11.12 [2019.3.2.2]<br />
+  - Uwzględnienie zmiany daty sprzedaży na dokumencie w wysyłce raportów<br />
+    księgowych. Jeżeli użytkownik zmienił datę sprzedaży na dzień, w którym<br />
+    raport księgowy został już wysłany, w kolejnym cyklu, raport zostanie<br />
+    wysłany ponownie.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW23 -----------------------------</h3><br />
+2019.11.14 [2019.3.2.2]<br />
+  - Aktualizacja interfejsów<br />
+  <br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2019.11.14 [2019.3.15.1]<br />
+  - Aktualizacja interfejsów<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2019.11.14<br />
+  Apwplus.exe [2019.3.28.0]<br />
+  - Uaktualniono strukturę bazy danych<br />
+<br />
+2019.11.13<br />
+  Apwplus.exe [2019.3.27.0]<br />
+  - Uaktualniono strukturę bazy danych<br />
+<br />
+</body></html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2024.0.3.6</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2024.03.14<br />
+  Slowniki.dll, ApwIap.dll [2024.0.3.6]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2024.03.14 [2024.0.3.6]<br />
+  - Operacje magazynowe: rozwiązano problem objawiający się oznaczaniem faktury<br />
+    zbiorczej jako faktura (V).<br />
+  - Zamówienia: rozwiązano problem objawiający się samoistnym przewijaniem<br />
+    pozycji zamówienia po zaznaczeniu zamówienia.<br />
+  - Asystent KtoMaLek (wersja pilotażowa): optymalizacja obsługi rezerwacji<br />
+    KtoMaLek.pl.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2024.03.14 [2024.0.3.6]<br />
+  - Rozwiązano problem objawiający się zerowaniem daty wystawienia faktury<br />
+    zakupu w przypadku ręcznego uzupełniania (przy braku licencji na pharmindXF)<br />
+    numeru KSeF poprzez funkcję [Alt+F] Wyszukaj fakturę w KSeF.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2024.03.14 [2024.0.3.6]<br />
+  - Poprawiono generowanie pliku csv do korekty w funkcji Edycja zestawienia<br />
+    refundacyjnego. W niektórych przypadkach system ucinał część numeru root<br />
+    e-recepty.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW45 -----------------------------</h3><br />
+2024.03.14 [2024.0.3.6]<br />
+  - Rozwiązano problem dotyczący nieprawidłowego zarządzania komunikacją zwrotną<br />
+    dla funkcji generowania listów przewozowych DPD Services w przypadku<br />
+    wystąpienia nieprawidłowego statusu.<br />
+  - Rozwiązano problem dotyczący nieprawidłowego generowania automatycznych MM<br />
+    dla włączonej funkcji zarządzania serwerem w module "APW45 – Apteka<br />
+    Internetowa".<br />
+    Automatyczne MM w module "APW45 – Apteka Internetowa" są generowane<br />
+    po włączeniu opcji "Automatycznie generuj dokumenty MM, podczas rezerwacji<br />
+    zamówień".<br />
+<br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2024.03.14 [2024.0.3.6]<br />
+  - Pharmind GRID: optymalizacja procesu raportującego brakujące transakcje<br />
+    sprzedaży.<br />
+<br />
+</body></html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2020.1.0.3</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2019.11.05<br />
+  slowniki.dll [2020.1.1.1]<br />
+  - Dodano zabezpieczenie przed zapisem karty pacjenta jeśli są sprzeczne dane<br />
+    dotyczące pacjenta/odbiorcy.<br />
+  - Poprawa problemu podczas próby wydruku zgody PDO.<br />
+<br />
+2019.10.31<br />
+  mvserver.exe [2020.1.0.0]<br />
+  - Zaktualizowano komponenty bazodanowe i dostosowano do pracy z bazą danych<br />
+    Oracle 18 w trybie DIRECT<br />
+<br />
+2019.10.29<br />
+  slowniki.dll [2020.1.1.0]<br />
+  - Dodano znacznik 'Płać split payment'em' na karcie dostawcy.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2019.11.05 [2020.1.1.1]<br />
+  - Ujednolicenie prezentacji Ĺ‚Ä…cznej iloĹ›ci sztuk w ramce informacyjnej<br />
+    realizowanej e-recepty w oknie sprzedaĹĽy lekĂłw oraz w oknie e-Recepty.<br />
+  - Usprawnienia w informacji dotyczÄ…cej odpĹ‚atnoĹ›ci oraz uprawnienia<br />
+    dodatkowego w ramce informacyjnej realizowanej e-Recepty w oknie sprzedaĹĽy<br />
+    lekĂłw.<br />
+  - Dodano blokadÄ™ sprzedaĹĽy dla pacjentĂłw z uprawnieniami dodatkowymi (np. IB)<br />
+    w przypadku, gdy nie wypeĹ‚niono numeru dokumentu uprawniajÄ…cego do zniĹĽki.<br />
+    Blokada jest wĹ‚Ä…czona domyĹ›lnie i sterowana za pomocÄ… opcji Apw11.2.147<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2019.11.05 [2020.1.1.0]<br />
+    - Poprawa niepoprawnej ikonki przy dokumencie zablokowanym <br />
+      w oknie "PrzeglÄ…danie i poprawki wprowadzonych dokumentĂłw".<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2019.11.05 [2020.1.1.0]<br />
+  - Ze względu na zmiany w eksporcie do PPS, eksport możliwy jest z pozycji:<br />
+    "Refundacje->Środki pomocnicze->Archiwum raportów->Dokument->F12 Eksport".<br />
+<br />
+<h3>---------------------------- Zmiany w module APW24 -----------------------------</h3><br />
+2019.11.05 [2020.1.1.0]<br />
+  - Poprawa nazwy aplikacji<br />
+<br />
+<h3>---------------------------- Zmiany w module APW31 -----------------------------</h3><br />
+2019.20.29 [2020.1.1.0]<br />
+  - Dodano obsĹ‚ugÄ™ znacznika 'PĹ‚aÄ‡ Split Paymentem' z faktury przy generowaniu <br />
+    zapĹ‚ay przy pomocy polecenia Przelewu.<br />
+  <br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2019.11.05 [2020.1.1.0]<br />
+  - Dodano opcjÄ™ "Blokada sprzedaĹĽy dla Podmiotu gospodarczego pozycji poza OTC"<br />
+  - Dodano opcjÄ™ "Blokada sprzedaĹĽy dla Podmiotu gospodarczego pozycji na<br />
+    recepcie weterynaryjnej z adnotacjÄ… Ad usum proprium"<br />
+  - Dodano opcjÄ™ "Blokada dodawania paragonĂłw z zaliczkÄ… i rozliczeniem do <br />
+    faktury zbiorczej"<br />
+  - Dodano opcjÄ™ Apw11.2.147 - "Wymagaj podania numeru potwierdzajÄ…cego <br />
+    uprawnienia dodatkowe"<br />
+    <br />
+<h3>---------------------------- Zmiany w module APW45 -----------------------------</h3><br />
+2019.11.05 [2020.1.1.0]<br />
+  - Poprawa stabilności wersji 2020<br />
+<br />
+<h3>---------------------------- Zmiany w module APW68 -----------------------------</h3><br />
+2019.11.05 [2020.1.1.0]<br />
+  - Poprawa ostrzeĹĽenia o niewygenerowanym raporcie do ZSMOPL. System ostrzegaĹ‚ <br />
+    o braku raportu przy wykonaniu tylko operacji przeceny w danym dniu.<br />
+  - Dodanie ostrzeĹĽenia przed generowaniem korekty raportu do ZSMOPL powyĹĽej 7 dni.<br />
+    WysĹ‚anie takiej korekty generuje bĹ‚Ä…d KM7 - Przekroczono termin 7 dni na korektÄ™ komunikatu.<br />
+  - Dodanie kontroli poprawnoĹ›ci przesyĹ‚ania identyfikatora z rejestru aptek,<br />
+    hurtowni.<br />
+<br />
+</body></html>

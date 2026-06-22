@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2023.1.3.0</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2023.03.17<br />
+  Slowniki.dll [2023.1.3.0]<br />
+  - Dodano obsługę uprawnienia KS-Omnipharm - Kontrola realizacji zamówień.<br />
+  - Pharmind GRID: rozszerzenie raportowania stanów magazynowych.<br />
+  - Logowanie poświadczeniami ActiveDirectory - Dodano możliwość powiązania<br />
+    konta użytkownika ActiveDirectory z istniejącym już użytkownikiem systemu<br />
+    aptecznego oraz funkcjonalność pozwalającą użytkownikowi z odpowiednimi<br />
+    uprawnieniami korygować powiązanie konta w przypadku niewłaściwego<br />
+    przypisania użytkownika.<br />
+<br />
+  ApwHarm.dll [2023.1.3.0]<br />
+  - Zadanie "Komunikacja z dostawcami": rozwiązano problem objawiający się<br />
+    możliwym zatrzymaniem wykonywania zadania oraz blokady bazy danych podczas<br />
+    ponownego wczytywania dokumentów od dostawcy, które wcześniej zostały<br />
+    odrzucone przez odbiorcę dokumentu.<br />
+<br />
+  ApwiAp.dll [2023.1.3.0]<br />
+  - Dodano możliwość kompletacji rezerwacji z aplikacją mobilną KS-Aptix.<br />
+<br />
+  Apwfn.dll [2023.1.3.0]<br />
+  - Uaktualniono mechanizm wyświetlania zleceń kart towarowych o wskaźnik<br />
+    "Wyłączony ze sprz. weter."<br />
+<br />
+  ApwPlan.exe, ApwPlanWorker.exe, ApwHarmPush.dll, ApwControl.exe [2023.1.3.0]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2023.03.17 [2023.1.3.0]<br />
+  - Terminale płatnicze PeP: rozwiązano problem z nieprawidłowym obliczaniem<br />
+    maski podsieci oraz adresu dla rozgłaszania (broadcast) w niektórych<br />
+    konfiguracjach.<br />
+  - Terminale płatnicze PeP: modyfikacja sposobu doboru interfejsu sieciowego do<br />
+    komunikacji z terminalami PeP. Adres dla rozgłaszania przyjmuje wartość<br />
+    "255.255.255.255" jeśli w konfiguracji nie wypełniono parametru "Podsieć".<br />
+  - Terminale płatnicze SIX: optymalizacje w procesie obsługi transakcji kartą.<br />
+  - Pharmind GRID: rozszerzenie raportowania stanów magazynowych.<br />
+  - Dodano blokadę sprzedaży leku z uprawnieniem Senior w ramach realizacji <br />
+    e-Recepty wystawionej przez felczera. Program pozwoli wydać lek z <br />
+    pominięciem tego uprawnienia. <br />
+  - Dodano możliwość kompletacji rezerwacji z aplikacją mobilną KS-Aptix.<br />
+  - Wniosek: Dodano nowe uprawnienia (na liście uprawnień do wyboru) dla osób,<br />
+    o których mowa w art. 37b ust. 1 ustawy o pomocy obywatelom Ukrainy,<br />
+    w związku z konfliktem zbrojnym na terytorium tego państwa w zakresie<br />
+    wynikającym z art. 37 ust. 1 tej ustawy oraz dla osób, o których mowa<br />
+    w art. 2 ust. 1 pkt 3 lit. c ustawy o świadczeniach.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW12 -----------------------------</h3><br />
+2023.03.17 [2023.1.3.0]<br />
+  - Dodano obsługę uprawnienia KS-Omnipharm - Kontrola realizacji zamówień.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2023.03.17 [2023.1.3.0]<br />
+  - Dodano obsługę uprawnienia KS-Omnipharm - Kontrola realizacji zamówień.<br />
+  - Raportowanie zakupów do KS-Omnipharm: dodano informacje o upuście premiowym.<br />
+  - Pharmind GRID: rozszerzenie raportowania stanów magazynowych.<br />
+  - Uszczelnienie procesu uruchamiania weryfikacji mobilnej KS-Aptix.<br />
+    W szczególnym przypadku była możliwość dodania dokumentu, który był<br />
+    uruchomiony w innej weryfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW14 -----------------------------</h3><br />
+2023.03.17 [2023.1.3.0]<br />
+  - Pharmind GRID: rozszerzenie raportowania stanów magazynowych.<br />
+  - Dodano obsługę Inwentaryzacji częściowej z aplikacją mobilną KS-Aptix.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2023.03.17 [2023.1.3.0]<br />
+  - Eksport do SAP (wzór 3). Poprawiono przekazywanie kwot dla form płatności <br />
+    w przypadku płatności mieszanej.<br />
+  - Środki pomocnicze: w raportowaniu z NFZ: dodano obsługę nowych uprawnień<br />
+    dla osób, o których mowa w art. 37b ust. 1 ustawy o pomocy obywatelom<br />
+    Ukrainy, w związku z konfliktem zbrojnym na terytorium tego państwa<br />
+    w zakresie wynikającym z art. 37 ust. 1 tej ustawy oraz dla osób, o których<br />
+    mowa w art. 2 ust. 1 pkt 3 lit. c ustawy o świadczeniach.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW23 -----------------------------</h3><br />
+2023.03.17 [2023.1.3.0]<br />
+  - Rozbudowano zestawienie "Sprzedaż leków zawierających substancje<br />
+    psychoaktywne":<br />
+    * do przeglądu i wydruku dodano kolumnę z numerem jednostki organizacyjnej<br />
+      dla aptek z licencją na wielomagazynowość,<br />
+    * dodano filtr ograniczający przegląd i wydruk do pozycji z przekroczeniami.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2023.03.17 [2023.1.3.0]<br />
+  - Terminale płatnicze PeP: rozwiązano problem z nieprawidłowym obliczaniem<br />
+    maski podsieci oraz adresu dla rozgłaszania (broadcast) w niektórych<br />
+    konfiguracjach.<br />
+  - Terminale płatnicze PeP: modyfikacja sposobu doboru interfejsu sieciowego do<br />
+    komunikacji z terminalami PeP. Adres dla rozgłaszania przyjmuje wartość<br />
+    "255.255.255.255" jeśli w konfiguracji nie wypełniono parametru "Podsieć".<br />
+  - Konfiguracja terminali płatniczych SIX na karcie stanowiska: dodano obsługę<br />
+    opcjonalnego parametru "Podsieć". Parametr, jeśli jest wypełniony, ma wpływ<br />
+    na priorytetyzację wyboru interfejsu sieciowego do komunikacji z terminalem<br />
+    SIX pracującego w podanej podsieci w przypadku, gdy jest dostępnych<br />
+    w systemie więcej interfejsów sieciowych.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW45 -----------------------------</h3><br />
+2023.03.17 [2023.1.3.0]<br />
+  - Dodano możliwość kompletacji rezerwacji z aplikacją mobilną KS-Aptix.<br />
+<br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2023.03.17 [2023.1.3.0]<br />
+  - Raportowanie zakupów do KS-Omnipharm: dodano informacje o upuście premiowym.<br />
+  - Pharmind GRID: rozszerzenie raportowania stanów magazynowych.<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2023.03.17<br />
+  ApwPlus [2023.1.3.0]<br />
+  - Aktualizacja struktury bazy danych.<br />
+<br />
+  ApwBase.dll [2023.1.3.0]<br />
+  - Uaktualniono bazę kart serwisowych.<br />
+<br />
+</body></html>

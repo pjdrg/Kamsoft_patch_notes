@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2019.2.6.5</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2019.04.24<br />
+  slowniki.dll [2019.3.0.1]<br />
+  - Poprawa działania uprawnienia 00-0030. Wartość uprawnienia nie była brana<br />
+    pod uwagę podczas edycji karty towaru.<br />
+  - Poprawka odczytu parametrów sterowanych centralnie z Omnipharm. Parametry<br />
+    w pewnych przypadkach nie działały w formularzach słownikowych.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2019.05.14 [2019.3.1.1]<br />
+  - Dla procesów serializacji dodano obsługę wykrywania funkcji włączonego <br />
+    CapsLocka dla czytników 2D. Niektóre czytniki, głównie DataLogic, mają tą <br />
+    funkcjonalność co powodowało błędną interpretację kodów 2D.<br />
+	W module APW42 Serwis, dodano funkcję sprawdzania czytnika 2D i odpowiednią<br />
+	konfigurację dla czytnika podłączonego do danego stanowiska.<br />
+  - Dodano blokadę przyjęcia jedenastu zer w numerze PESEL pacjenta przy <br />
+    wpisywaniu kodów z recepty<br />
+  - Zmieniono działanie uprawnienia 11-0019 "Sprzedaż leków na receptę z grup <br />
+    A, N, I-P oraz II-P": sprzedaż tych leków była dostępna, w przypadku, gdy<br />
+    sprzedawca miał ustawione uprawnienie 11.1.12 "Dopuszczenie sprzedaży <br />
+    (z pytaniem) pozycji zablokowanych". W nowej wersji zostało to zablokowane.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2019.05.14 [2019.3.0.3]<br />
+    - W oknie edycji korekty poprawiono wyświetlenie nazwy hurtowni.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2019.05.14 [2019.3.3.0]<br />
+  - Dodanie parametru Wspólne.1.13: "Czytnik kodów 2D posiada funkcję<br />
+    rozpoznawania włączonego klawisza CapsLock". <br />
+    Ustawienie tej opcji spowoduje, że program po wykryciu włączonego CapsLock<br />
+    zamieni wielkość liter przed wysłaniem do NMVS.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW42 -----------------------------</h3><br />
+2019.05.14 [2019.3.0.0]<br />
+  - Dodano funkcję "Czytnik kodów 2D": Apw42->Testy->Czytnik kodów 2D. <br />
+    Nowa funkcja m.in. sprawdza, czy czytnik kodów 2D rozpoznaje włączony <br />
+    klawisz CapsLock. Po zeskanowaniu kodu 2D, umieszczonego na formatce, <br />
+    program podpowiada prawidłowe ustawienie opcji Wspólne.1.13: "Czytnik kodów <br />
+    2D posiada funkcję rozpoznawania włączonego klawisza CapsLock".<br />
+<br />
+<h3>---------------------------- Zmiany w module APW68 -----------------------------</h3><br />
+2019.05.14 [2019.3.0.4]<br />
+  - MAR01 - aktualizacja statusów przetwarzania dla pobranych komunikatów <br />
+    błędów. System niepoprawnie interpretował status dla raportu poprawnego z <br />
+	ostrzeżeniami.<br />
+  - Umożliwienie wysyłania raportów do ZSMOPL dla raportów zawierających <br />
+    korekty wewnętrzne na zmniejszenie stanów IR- dla pustych serii lub dat <br />
+    ważności. Blokada wygenerowanie raportu z pustą serię lub datą ważności <br />
+    miała ograniczyć występowanie błędu TROSPOZ71 czy TROSPOZ75.<br />
+  <br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2019.05.13<br />
+  IbPack.exe [2019.3.0.0] <br />
+  - Uaktualniono o nowe tabele<br />
+<br />
+</body></html>

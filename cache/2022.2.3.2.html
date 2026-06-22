@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2022.2.3.2</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2022.08.10<br />
+  Slowniki.dll [2022.2.3.2]<br />
+  - Dodano słownik rodzajów leku robionego.<br />
+  - Zmiana metody weryfikacji listy porozumień na sprawdzanie statusu.<br />
+  - Poprawa przyjmowania porozumienia.<br />
+<br />
+  Zasoby.dll [2022.2.3.2]<br />
+  - Aktualizacja opisów.<br />
+<br />
+  WaUtil.exe [2022.2.3.2]<br />
+  - Poprawka funkcjonalności podmiany licencji. Usunięto problem występujący<br />
+    przy przeszyfrowaniu dokumentów DRR.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2022.08.10 [2022.2.3.2]<br />
+  - Dodano możliwość ustawienia indywidualnej marży dla każdego rodzaju leku<br />
+    recepturowego pełnopłatnego.<br />
+  - Poprawiono wystawianie zapotrzebowania w przypadku, kiedy jest więcej niż<br />
+    jeden świadczeniodawca z tym samym numerem REGON.<br />
+  - Okno e-Recepty: poprawa przepisywania numeru telefonu pacjenta przy<br />
+    zakładaniu karty pacjenta (spinacz/załóż).<br />
+  - Okno e-Recepty: poprawa wyświetlania ikony wykazującej różnicę w danych<br />
+    pacjenta z e-Recepty i karty pacjenta.<br />
+  - Poprawa ostrzeżenia o próbie wydania innego leku niż zaordynowano<br />
+    na e-Recepcie. Program porównywał lek z e-Recepty do towaru wybranego<br />
+    w ramach sprzedaży wiązanej.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW12 -----------------------------</h3><br />
+2022.08.10 [2022.2.3.2]<br />
+  - Rozbudowa komunikatu KS-Omnipharm.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2022.08.10 [2022.2.3.2]<br />
+  - Zmiana metody weryfikacji listy porozumień na sprawdzanie statusu.<br />
+  - Poprawa przyjmowania porozumienia.<br />
+  - Optymalizacja procesu wczytywania skanów z kolektora APTIX w weryfikacji<br />
+    dostawy.<br />
+  - Optymalizacja procesu zmiany ilości odczytanej w weryfikacji dostawy.<br />
+  - Poprawa błędu występującego podczas wczytywania skanów w weryfikacji dostawy<br />
+    (ORACLE - przekroczono maksymalną liczbę kursorów).<br />
+<br />
+<h3>---------------------------- Zmiany w module APW14 -----------------------------</h3><br />
+2022.08.10 [2022.2.3.2]<br />
+  - Poprawiono funkcję wczytującą do systemu BLOZ-0.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2022.08.10 [2022.2.3.2]<br />
+  - Poprawa generowania raportu finansowego dokumentów fiskalnych Sprzedaż -><br />
+    Inne -> Zestawienie sprzedaży za okres. W raporcie z formami płatności<br />
+    nie były uwzględniane rozliczenia zaliczek zafiskalizowanych.<br />
+  - Zmieniono pobieranie ceny hurtowej podczas generowania zestawienia<br />
+    refundacyjnego: cena nie będzie pobierana z karty zakupu, a zostanie<br />
+    zapamiętana w momencie realizacji recepty na pozycji sprzedaży.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW22 -----------------------------</h3><br />
+2022.08.10 [2022.2.3.2]<br />
+  - Zmiana metody weryfikacji listy porozumień na sprawdzanie statusu.<br />
+  - Poprawa przyjmowania porozumienia.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW23 -----------------------------</h3><br />
+2022.08.10 [2022.2.3.2]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW24 -----------------------------</h3><br />
+2022.08.10 [2022.2.3.2]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2022.08.10 [2022.2.3.2]<br />
+  - Dodano edycję marż w ustawieniach rodzajów leku robionego pełnopłatnego.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW44 -----------------------------</h3><br />
+2022.08.10 [2022.2.3.2]<br />
+  - Poprawiono funkcję wczytującą do systemu BLOZ-0.<br />
+<br />
+<h3>--------------------------------- Zmiany w EDE ---------------------------------</h3><br />
+2022.08.10<br />
+  - Zmiana częstotliwości odświeżania danych podczas przyjmowania raportów<br />
+    księgowych.<br />
+  - Dodanie filtru na liście dokumentu. Przyspieszenie wywołania listy<br />
+    w przypadku dużych zbiorów danych.<br />
+  - Zmiana sposobu analizy treści porozumienia w zakresie rozpoznawania<br />
+    aktualnego stanu.<br />
+  - Dodanie zmian pozwalających uruchomić wersję współpracującą z aplikacjami<br />
+    internetowymi EDE.<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2022.08.10<br />
+  ApwPlus [2022.2.3.2]<br />
+  - Uaktualniono strukturę bazy danych.<br />
+  - Dodanie struktury KS-EDE 2.0.<br />
+<br />
+  Apwbase.dll [2022.2.3.2]<br />
+  - Uaktualniono bazę kart serwisowych.<br />
+<br />
+</body></html>

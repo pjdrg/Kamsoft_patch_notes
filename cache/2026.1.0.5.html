@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2026.1.0.5</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2026.02.26<br />
+  Slowniki.dll [2026.1.0.5]<br />
+  - Modyfikacja w zakresie Zamówień automatycznych. Dodano obsługę produktów<br />
+    sezonowych, dodano do historii zamówień automatycznych informacji<br />
+    o problemach z wysyłką zamówienia.<br />
+  - Modyfikacja w zakresie listy urządzeń mobilnych KS-APTIX.<br />
+    Umożliwiono dezaktywowanie wyłącznie jednego konta użytkownika w aplikacji<br />
+    mobilnej, zachowując możliwość dezaktywacji wszystkich użytkowników.<br />
+  - Rozwiązano problem objawiający się brakiem możliwości ponownego zapisu<br />
+    plików PDF w Serwisie Świadczeniodawcy.<br />
+  - Poprawa wyszukiwania w TurboBloz przywracanych kart towarów.<br />
+<br />
+  ApwHarm.dll [2026.1.0.5]<br />
+  - Modyfikacja w zakresie Zamówień automatycznych. Dodano obsługę produktów<br />
+    sezonowych, dodano do historii zamówień automatycznych informacji<br />
+    o problemach z wysyłką zamówienia.<br />
+  - Modyfikacja w zakresie zadania Komunikacji z dostawcami. Wczytywanie korekty<br />
+    faktury wyłącznie na postawie informacji zawartych w pliku.<br />
+    Rozwiązano problem objawiający się komunikatem "Funkcja nie jest<br />
+    zaimplementowana".<br />
+<br />
+  ApwPlan/ApwPlanWorker [2026.1.0.5]<br />
+  - Modyfikacja w zakresie Zamówień automatycznych. Wyłączono mechanizm<br />
+    komunikacji z usługą kontraktów NVC.<br />
+<br />
+  Zasoby.dll [2026.1.0.5]<br />
+  - Zaktualizowano opisy opcji.<br />
+<br />
+  Moduł integracyjny - sprzedaż samoobsługowa [2026.0.1.0]<br />
+  - Dodano kontrolę sprzedaży wyrobów medycznych oraz środków spożywczych<br />
+    specjalnego przeznaczenia żywieniowego.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2026.02.26 [2026.1.0.5]<br />
+  - Rozwiązano możliwy do wystąpienia problem który mógł się pojawić podczas<br />
+    tworzenia faktury ustrukturyzowanej dla faktury zbiorczej z mieszaną formą<br />
+    płatności. Błąd ujawniał się na etapie walidacji dokumentu względem schemy,<br />
+    na poziomie węzła odpowiedzialnego za formę płatności faktury.<br />
+  - Pharmind grid: Dostosowanie szerokości kolumny z punktami na listach wyboru<br />
+    towaru.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW12 -----------------------------</h3><br />
+2026.02.26 [2026.1.0.5]<br />
+  - Modyfikacja w zakresie Zamówień automatycznych. Dodano obsługę produktów<br />
+    sezonowych, dodano do historii zamówień automatycznych informacji<br />
+    o problemach z wysyłką zamówienia.<br />
+  - Prospekty zamówień KS-OmniPharm – usunięto błąd samoczynnego wstawiania<br />
+    wartości 0 do ilości do zakupu podczas edycji uwag, oraz umożliwiono<br />
+    ustawienie wartości pustej.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2026.02.26 [2026.1.0.5]<br />
+  - Dodano możliwość wczytywania faktur ustrukturyzowanych (KSeF) w oknie bufora<br />
+    dokumentów: "Dysk" -> "Wczytanie faktury". Korzystanie z nowej funkcji<br />
+    wymaga licencji na moduł KS EWD.<br />
+  - W oknie "Przeglądanie i poprawki wprowadzonych dokumentów" dodano<br />
+    nowy filtr, który pozwala zawęzić listę do faktur VAT, dla których pole<br />
+    "Status w KSeF" jest nieuzupełnione. Dzięki temu łatwiej i szybciej można<br />
+    wskazać dokumenty wymagające uzupełnienia numeru KSeF przed przygotowaniem<br />
+    zestawienia dla księgowości.<br />
+  - Modyfikacja w zakresie wczytywania korekt faktur. Wczytywanie korekty<br />
+    faktury wyłącznie na postawie informacji zawartych w pliku.<br />
+    Rozwiązano problem objawiający się komunikatem "Funkcja nie jest<br />
+    zaimplementowana".<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2026.02.26 [2026.1.0.5]<br />
+  - Raporty do księgowości -> Raport w formacie DBF został rozbudowany o nowe<br />
+    pole - numer KSeF. Numer ten będzie przekazywane dla faktur sprzedaży<br />
+    i zakupów.<br />
+  - Rejestry dokumentów finansowych: dodano w przeglądzie dokumentów numer KSeF<br />
+    oraz możliwość umieszczenia na wydruku graficznym rozszerzonym nowego pola.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2026.02.26 [2026.1.0.5]<br />
+  - Dodano opcje APW11.13 Kasy samoobsługowe: Zezwalaj na sprzedaż wyrobów<br />
+    medycznych (domyślnie włączona).<br />
+  - Dodano opcje APW11.13 Kasy samoobsługowe: Zezwalaj na sprzedaż środków<br />
+    spożywczych specjalnego przeznaczenia żywieniowego (domyślnie włączona).<br />
+<br />
+<h3>---------------------------- Zmiany w module APW42 -----------------------------</h3><br />
+2026.02.26 [2026.1.0.5]<br />
+  - poprawa tworzenia bazy ćwiczeniowej na Oracle 18.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW43 -----------------------------</h3><br />
+2026.02.26 [2026.1.0.5]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2026.02.26 [2026.1.0.5]<br />
+  - Modyfikacja w zakresie Zamówień automatycznych. Dodano obsługę produktów<br />
+    sezonowych.<br />
+  - Pharmind: optymalizacja komunikacji z usługami pharmind.<br />
+  - Pharmind: uzupełnienie raportowania brakujących danych z realizacji<br />
+    eRecepty.<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2026.02.26<br />
+  ApwPlus, WaUtil [2026.1.0.5]<br />
+  - Aktualizacja struktury bazy danych.<br />
+<br />
+  DBCopy [2026.1.0.5]<br />
+ - Poprawiono wydajność operacji kopiowania danych.<br />
+<br />
+</body></html>

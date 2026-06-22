@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2022.2.0.8</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2022.04.14<br />
+  Slowniki.dll [2022.2.0.8]<br />
+  - Możliwość wyświetlenia listy "Punktowane produkty i szkolenia" dla Programów<br />
+    Partnerskich.<br />
+<br />
+  ApwPlan.exe [2022.2.0.8]<br />
+  - Przeniesienie wykonywanych zadań harmonogramu do osobnego procesu.<br />
+<br />
+  ApwHarm.dll [2022.2.0.8]<br />
+  - Rozszerzenie akcji sprzedażowych o opcjonalną obsługę automatycznych<br />
+    zamówień z wykorzystaniem dystrybucji numerycznej.<br />
+<br />
+  ApwHarmPush.dll [2022.2.0.8]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2022.04.14 [2022.2.0.8]<br />
+  - eZWM/Wnioski: udostępniona została funkcjonalność umożliwiająca realizację<br />
+    zlecenia na wyroby medyczne osobom uprawnionym na mocy ustawy z dnia 12<br />
+    marca 2022r. o pomocy obywatelom Ukrainy w związku z konfliktem zbrojnym<br />
+    na terytorium tego państwa.<br />
+  - Usunięcie ostrzeżenia "Uwaga! Obcokrajowiec" dla pacjentów spoza UE.<br />
+    Przy realizacji e-Recepty wystawionej na pacjenta z Ukrainy, niepotrzebnie<br />
+    było wyświetlane okno informujące o potrzebie wypełnienia danych<br />
+    EKUZ/Poświadczenia NFZ/Cert.<br />
+  - Poprawiono przekazywanie typu identyfikatora pacjenta na DRR.<br />
+    Po wprowadzaniu przez CeZ podwójnych numerów "Root" określających ten sam<br />
+    typ identyfikatora tożsamości pacjenta z Norwegii/Holandii, konieczne<br />
+    stało się propagowanie tego numeru z e-Recepty na DRR.<br />
+    SIM nie rozpoznaje przypadku użycia tego samego typu identyfikatora pacjenta<br />
+    z zastosowaniem innego Root niż na e-Recepcie.<br />
+  - Nagłówek dokumentu faktury sprzedaży. Poprawiono ustawienie opcji faktura<br />
+    kredytowa dla form zapłaty niekredytowych.<br />
+  - Możliwość wyświetlenia listy "Punktowane produkty i szkolenia" dla Programów<br />
+    Partnerskich.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW12 -----------------------------</h3><br />
+2022.04.14 [2022.2.0.8]<br />
+  - Rozszerzenie akcji sprzedażowych o opcjonalną obsługę automatycznych<br />
+    zamówień z wykorzystaniem dystrybucji numerycznej.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2022.04.14 [2022.2.0.8]<br />
+  - Poprawa ponownego uruchomienia weryfikacji dostawy po zakończeniu<br />
+    weryfikacji innego dokumentu.<br />
+  - Zakończenie wersji próbnej APTIX.<br />
+  - Możliwość wyświetlenia listy "Punktowane produkty i szkolenia" dla Programów<br />
+    Partnerskich.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW14 -----------------------------</h3><br />
+2022.04.14 [2022.2.0.8]<br />
+  - Zakończenie wersji próbnej APTIX.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2022.04.14 [2022.2.0.8]<br />
+  - eZWM: dodano obsługę kodu UA uprawnienia do świadczeń dla zleceń na wyroby<br />
+    medyczne.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW23 -----------------------------</h3><br />
+2022.04.14 [2022.2.0.8]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2022.04.14 [2022.2.0.8]<br />
+  - Zakończenie wersji próbnej APTIX.<br />
+  - Terminale płatnicze SIX: poprawa funkcji testowania połączenia z terminalem.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW44 -----------------------------</h3><br />
+2022.04.14 [2022.2.0.8]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW55 -----------------------------</h3><br />
+2022.04.14 [2022.2.0.8]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+<h3>--------------------------------- ZMIANY.APTIX ---------------------------------</h3><br />
+2022.04.14<br />
+  - Poprawa błędu podczas uruchomienia APTIX w weryfikacji dostawy (Indeks<br />
+    wykraczał poza granice tablicy).<br />
+  - Zakończenie wersji próbnej APTIX.<br />
+<br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2022.04.14 [2022.2.0.8]<br />
+  - Możliwość wyświetlenia listy "Punktowane produkty i szkolenia" dla Programów<br />
+    Partnerskich.<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2022.04.14<br />
+  ApwPlus.exe [2022.2.0.8]<br />
+  - Uaktualniono strukturę bazy danych.<br />
+<br />
+  Apwbase.dll [2022.2.0.8]<br />
+  - Uaktualniono bazę kart serwisowych.<br />
+<br />
+  IBPack.exe [2022.2.0.8]<br />
+  - Poprawiono algorytm odchudzania bazy.<br />
+<br />
+  OraPack.exe [2022.2.0.8]<br />
+  - Poprawiono algorytm odchudzania bazy.<br />
+<br />
+</body></html>

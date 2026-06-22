@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2026.1.0.0</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2026.02.11<br />
+  Slowniki.dll [2026.1.0.0]<br />
+  - Rozszerzono kartotekę pacjenta o funkcjonalność definiowania szablonów<br />
+    opisów dodatkowych na fakturze ustrukturyzowanej.<br />
+    Użytkownik będzie mógł, na podstawie predefiniowanej listy pól,<br />
+    tworzyć własne szablony zawierające dodatkowe pola.<br />
+<br />
+  Zasoby.dll [2026.1.0.0]<br />
+  - Aktualizacja opisów opcji.<br />
+<br />
+  ApwIap.dll [2026.1.0.0]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2026.02.11 [2026.1.0.0]<br />
+  - Dodano funkcjonalność tworzenia korekty nagłówka faktury ustrukturyzowanej.<br />
+    W ramach tej funkcjonalności możliwa jest modyfikacja danych adresowych<br />
+    kontrahentów.<br />
+  - Dodano funkcjonalność uzupełniania faktur ustrukturyzowanych o informacje<br />
+    w sekcji "Opisy dodatkowe".<br />
+    Funkcjonalność umożliwia przekazywanie m.in. danych refundacyjnych,<br />
+    informacji o serii produktu oraz dacie jego ważności.<br />
+    Do przekazywania tych danych wykorzystywane będą szablony dostępne na kacie<br />
+    pacjenta.<br />
+  - Dodano zabezpieczenie przed przypadkowym wysłaniem faktury do KSeF<br />
+    w przypadku, gdy w ustawieniach opcja "Rodzaj wystawionej faktury dla osoby<br />
+    fizycznej / podmiotu z NIP-em" jest ustawiona na "Faktura papierowa".<br />
+  - Rozwiązano problem przekazywania pozycji ze stawką VAT 0% do faktury<br />
+    ustrukturyzowanej.<br />
+  - Rozwiązano problem z przekazywaniem danych konta bankowego niezgodnego<br />
+    z formatem TNrRB. Dotyczy przypadków kont które zawierały spacje jako<br />
+    separatory i tym samym mogły przekroczyć dopuszczalną dla pola długość<br />
+    znaków.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW12 -----------------------------</h3><br />
+2026.02.11 [2026.1.0.0]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2026.02.11 [2026.1.0.0]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2026.02.11 [2026.1.0.0]<br />
+  - Raport w formacie Comarch Optima XML (zakupy, sprzedaż): poprawiono sposób<br />
+    wyliczania wartości sprzedaży z raportów kas fiskalnych.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW23 -----------------------------</h3><br />
+2026.02.11 [2026.1.0.0]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW24 -----------------------------</h3><br />
+2026.02.11 [2026.1.0.0]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2026.02.11 [2026.1.0.0]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW45 -----------------------------</h3><br />
+2026.02.11 [2026.1.0.0]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>----------------------------- Zmiany w pharmindXF ------------------------------</h3><br />
+2026.02.11 [2026.2.6.1]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2026.02.11<br />
+  WaUtil [2026.1.0.0]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+</body></html>

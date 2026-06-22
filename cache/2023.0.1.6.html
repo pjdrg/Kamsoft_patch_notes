@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2023.0.1.6</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2022.10.20<br />
+  Slowniki.dll [2023.0.1.6]<br />
+  - Leki on-line: likwidująca systemu gwiazdek oceniającego wiarygodność<br />
+    pacjenta.<br />
+<br />
+  ApwHarm.dll [2023.0.1.6]<br />
+  - Poprawa wczytywania parametrów zamówień automatycznych na bazie FB3.0.<br />
+<br />
+  ApwHarmPush.dll [2023.0.1.6]<br />
+  - Poprawa wczytywania parametrów zamówień automatycznych na bazie FB3.0.<br />
+<br />
+  Zasoby.dll [2023.0.1.6]<br />
+  - Aktualizacja opisów opcji.<br />
+<br />
+  Osozmok.dll [2022.2.0.6]<br />
+  - Optymalizacja komunikacji z usługami dostarczającymi dane w ramach usług<br />
+    GRUPEX.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2022.10.20 [2023.0.1.6]<br />
+  - Rozbudowa funkcji Odszukaj w poprawie w sprzedaży podstawowej.<br />
+    Funkcja po odnalezieniu pierwszego rekordu pasującego do zadanego kryterium<br />
+    umożliwia za pomocą klawiszy Ctrl+n przejście do następnego rekordu<br />
+    spełniającego zadane kryterium.<br />
+    Funkcja działa dla pól: numer dokumentu, pesel, zapłata i nr towaru.<br />
+  - Rozszerzono wersję edukacyjną\ćwiczeniową e-Recepty o nowe pakiety recept.<br />
+    Kod pakietu: 100140010151673, 100240010151673, 100340010151673,<br />
+    100440010151673, 100540010151673.<br />
+  - Leki on-line: likwidująca systemu gwiazdek oceniającego wiarygodność<br />
+    pacjenta.<br />
+  - Leki on-line - rezerwacje: zmiana funkcjonalności klawisza "Zmień datę<br />
+    ważności".<br />
+  - Leki on-line - rezerwacje: zastąpienie "Rezerwuj z karty dostawy" funkcją<br />
+    "Edycja dostaw".<br />
+<br />
+<h3>---------------------------- Zmiany w module APW12 -----------------------------</h3><br />
+2022.10.20 [2023.0.1.6]<br />
+  - Poprawa wczytywania parametrów zamówień automatycznych na bazie FB3.0.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2022.10.20 [2023.0.1.6]<br />
+  - Poprawa wczytywania parametrów zamówień automatycznych na bazie FB3.0.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW14 -----------------------------</h3><br />
+2022.10.20 [2023.0.1.6]<br />
+  - Pomijanie skanów już wczytanych do systemu w inwentaryzacji i weryfikacji<br />
+    dostawy Aptix.<br />
+  - Poprawa wczytywania skanu w inwentaryzacji Aptix gdy wystąpi nieprzewidziany<br />
+    błąd. Skan wczytuje się jako nierozliczony i nie blokuje wczytywania<br />
+    pozostałych skanów.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2022.10.20 [2023.0.1.6]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW23 -----------------------------</h3><br />
+2022.10.20 [2023.0.1.6]<br />
+  - Rozszerzono wersję edukacyjną\ćwiczeniową e-Recepty o nowe pakiety recept.<br />
+    Kod pakietu: 100140010151673, 100240010151673, 100340010151673,<br />
+    100440010151673, 100540010151673.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2022.10.20 [2023.0.1.6]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW44 -----------------------------</h3><br />
+2022.10.20 [2023.0.1.6]<br />
+  - Usprawnienia w procesie zapisu danych raportu miesięcznych kosztów apteki.<br />
+<br />
+<h3>--------------------------------- ZMIANY.APTIX ---------------------------------</h3><br />
+2022.10.20<br />
+  - Poprawiono proces wysyłania skanów do systemu aptecznego.<br />
+  - Skrócono czas wczytywania dokumentu.<br />
+  - Dodano pasek postępu zapisu oraz przetwarzania dokumentu.<br />
+  - Przyśpieszono reakcję na skanowanie produktów (przy dużej liczbie towarów<br />
+    w dokumencie).<br />
+  - Zoptymalizowano obsługę komunikacji z systemem aptecznym w przypadku<br />
+    klientów z numerem klienta krótszym niż 6 cyfr.<br />
+  - Poprawiono wyświetlanie się nazwy w szczegółach skanu.<br />
+  - Dodano wyświetlenie informacji o pozostałej ilości skanów / opakowań<br />
+    w wersji LIGHT.<br />
+  - Dodano widoczny status rozpoczętych weryfikacji na liście dokumentów.<br />
+  - Dodano możliwość rozpoczęcia weryfikacji dostawy bezpośrednio z urządzenia<br />
+    oraz przełączania się na wcześniej weryfikowane dostawy.<br />
+  - Rozszerzono mechanizm odświeżania dokumentu na urządzeniu mobilnym<br />
+    o pobieranie nowych pozycji z dodawanych po stronie apteki dokumentów<br />
+    zakupu.<br />
+  - Usprawniono wyświetlanie komunikatów systemowych aplikacji o ostrzeżeniach<br />
+    i błędach.<br />
+  - Zoptymalizowano proces skanowania kodów QR oraz 2D. Dotyczy głównie odczytu<br />
+    kodów za pomocą kamery.<br />
+  - Zoptymalizowano wyświetlanie dokumentów z dużymi ilościami pozycji.<br />
+  - Poprawiono mechanizm parsowania daty ważności z kodów 2D.<br />
+    Domyślnie ustawiany jest ostatni dzień miesiąca z daty ważności.<br />
+<br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2022.10.20 [2023.0.1.6]<br />
+  - Poprawa wczytywania parametrów zamówień automatycznych na bazie FB3.0.<br />
+<br />
+</body></html>

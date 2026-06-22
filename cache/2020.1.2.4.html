@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2020.1.2.4</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2020.01.07<br />
+  mvserver.exe [2020.1.2.3]  <br />
+  - Poprawa algorytmu pomniejszania stanów dla towarów<br />
+    ręcznie wyjmowanych z automatu do wydawnia leków z protokołem WWKS2.<br />
+	<br />
+2020.01.05<br />
+  apwfn.dll [2020.0.0.5]<br />
+  - Zaktualizowano listę opcji, uprawnień i ról w mechanizmie sterowania <br />
+    centralnego.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2020.01.07 [2020.1.6.0]<br />
+  - Dodano do Wniosków pozycje umożliwiające wygenerowanie refundacji dla zleceń <br />
+    wg nowego wzoru:<br />
+    a) Typ identyfikatora - uzupełniany tylko wtedy, gdy identyfikatorem <br />
+       pacjenta nie jest PESEL. <br />
+       - w przypadku gdy identyfikatorem pacjenta jest paszport, należy <br />
+         na karcie pacjenta uzupełnić pozycję "Nr paszportu".<br />
+       - w przypadku gdy identyfikatorem pacjenta jest dowód osobisty, należy <br />
+         na karcie pacjenta uzupełnić pozycję "Dowód osobisty".<br />
+       - w przypadku gdy identyfikatorem pacjenta jest inny dokument, należy <br />
+         na karcie pacjenta uzupełnić pozycję "Nazwa innego dok." oraz "Seria <br />
+         i numer innego dok.".<br />
+    b) Uprawn. do św. - Potwierdzenie uprawnień do świadczeń:<br />
+       - Potwierdzenie elektroniczne w systemie NFZ<br />
+       - Potwierdzenie na podstawie dokumentu - pozycja wymaga uzupełnienia <br />
+         "Tytułu uprawnienia" oraz na karcie pacjenta zakładki: "Uprawnienie <br />
+         do świadczeń"   <br />
+       - potwierdzenie na podstawie oświadczenia - pozycja wymaga uzupełnienia <br />
+         "Tytułu uprawnienia" oraz "Osoby składającej oświadczenie" i "Daty <br />
+         oświadczenia".<br />
+    Pozycje należy uzupełnić dla zleceń wg nowego wzoru w przypadku, gdy <br />
+    zlecenie realizowane było poza modułem eZWM w KS-AOW (np. w aplikacji <br />
+    AP-ZZ).<br />
+    Pozycje te dostępne są również w poprawie pozycji („Akt. kody” w Sprzedaży).<br />
+  - e-Recepta: Poprawa obsługi e-Recept Pro Auctore i Pro Familiae. Dodano <br />
+    ustawianie wskaźnika ProAuctore/ProFamiliae oraz przepisywanie NPWZ w ID<br />
+    świadczeniodawcy. W przypadku problemów (z sprawozdaniem NFZ lub wycofaniem <br />
+    DRR) należy sprawdzić spójność danych między KS-AOW a SIM (poprawa <br />
+    sprzedaży/aktualizuj [ctrl+alt+R]) i wykonać korektę sprzedaży, jeżeli jest <br />
+    potrzebne ponowne przetworzenie e-Recepty. <br />
+  - e-Recepta: Rozszerzono funkcję przywracania DRR z SIM dostępnej w <br />
+    poprawie sprzedaży/aktualizuj [ctrl+alt+R]<br />
+  - e-Recepta: Wgrano nowa transformatę CSIOZ. Nowa wizualizacja e-Recept <br />
+    rozwiązuje problem sklejonych wyrazów, wyróżnia w nagłówku receptę<br />
+    Pro Aucrore i Pro Familiae, ujednolica kolejność danych w bloku narracyjnym.<br />
+  - Modyfikacje w przeglądzie faktur dostępnym z Poprawy sprzedaży:<br />
+    * dodano stosowną informację, jeśli faktura znajduje się w buforze<br />
+    * wyłączono możliwość usuwania i korygowania faktur będących w buforze<br />
+    * dodano informację "(V)" przy nazwie dokumentu dla faktur niefiskalnych            <br />
+    <br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2020.01.07 [2020.1.2.6]<br />
+  - W refundacji wyrobów medycznych uwzględniono dodatkowe elementy wymagane <br />
+    dla zleceń wg nowego wzoru.<br />
+  - W zestawieniu Zyski-> Marża zrealizowana ze sprzedaży uwzględniono<br />
+    parametry Apw21.2.32 Wyodrębnij zaliczki fiskalne z zestawienia zysków<br />
+    oraz Apw21.2.34 Wyodrębnij usługi z zestawienia zysków<br />
+  - Zestawienia refundacyjne:<br />
+    * poprawiono import raportu refundacyjnego<br />
+    * poprawiono wyświetlanie ostrzeżeń w przeglądzie zestawienia refundacyjnego<br />
+  <br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2020.01.07 [2020.1.2.7]<br />
+  - Rekompilacja w związku ze zmianą interfejsów do P1<br />
+<br />
+<h3>---------------------------- Zmiany w module APW42 -----------------------------</h3><br />
+2020.01.07 [2020.1.2.3]<br />
+  - Rekompilacja w zwiÄ…zku ze zmianÄ… interfejsĂłw do P1<br />
+  <br />
+<h3>---------------------------- Zmiany w module APW45 -----------------------------</h3><br />
+2020.01.07 [2020.1.3.1]<br />
+  - poprawiono błąd występujący w pracy z ofertą internetową<br />
+    w trybie z ograniczonym dostępem.<br />
+  - rozszerzono o możliwość zarządzania ofertą internetową zawierającą<br />
+    tylko nieprzypisane produkty w podstawowym trybie pracy z ofertą<br />
+    internetową.<br />
+  - ujednolicono zarządzanie pełną ofertą internetową dla funkcji:<br />
+    a) Kopiowania produktów między ofertami<br />
+    c) Przenoszenia produktów między ofertami     <br />
+<br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2020.01.07 [2020.1.4.0]<br />
+  - Poprawa kontroli pracy aplikacji tylko na jednym stanowisku w aptece<br />
+<br />
+<h3>----------------------------- ZMIANY.KS-MEDIVERIS ------------------------------</h3><br />
+2020.01.07 [2020.1.2.1]<br />
+  - Dodanie moĹĽliwoĹ›ci aktualizacji licencji KS-MediVeris na stanowisku<br />
+    klienta ze stanowiska serwera. Podmiana licencji KS-MediVeris ograniczy siÄ™ <br />
+	teraz tylko	do podmiany licencji na stanowisku serwera.<br />
+<br />
+</body></html>

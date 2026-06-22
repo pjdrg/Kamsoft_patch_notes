@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2026.0.3.9</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2026.01.15<br />
+  CopyCloud [2026.0.3.9]<br />
+  - Rozszerzono usługę o możliwość tworzenia kopii zapasowej.<br />
+<br />
+  Slowniki.dll [2026.0.3.9]<br />
+  - Kartoteka pacjent/odbiorca została rozszerzona o obsługę JST - Jednostek<br />
+    Samorządu Terytorialnego.<br />
+  - APW41 -> Wizytówka -> Zakładka e-Recepty -> [F5]Zainstaluj certyfikaty:<br />
+    rozszerzono funkcję służącą do instalacji certyfikatów P1. Dodano obsługę<br />
+    plików certyfikatów z dopiskiem "cacert" i rozszerzeniem ".pem"<br />
+    zgodnie z publikacją Centrum e-Zdrowia:<br />
+    https://ezdrowie.gov.pl/portal/artykul/aktualizacja-certyfikatu-ssl-systemu-p1-2024.<br />
+    System oprócz dotychczasowych plików *.crt (CCP1RootCA.crt,<br />
+    CCP1SubCATLS.crt, CCP1SubCAWSS.crt) obsługuje teraz także alternatywne<br />
+    nazwy: CCP1RootCA.cacert.pem, CCP1SubCATLS.cacert.pem,<br />
+    CCP1SubCAWSS.cacert.pem.<br />
+  - Modyfikacja w zakresie automatycznej aktualizacji bazy dostawców CBH.<br />
+    Ujednolicenie działania opcji z APW41 a prezentowanej w oknie z listą<br />
+    dostawców.<br />
+<br />
+  ApwMain [2026.0.3.9]<br />
+  - Test systemu aptecznego: rozszerzono czynność sprawdzającą "Sprawdzanie<br />
+    składników systemowych" o dodatkowe informacje dotyczące instalacji<br />
+    32-bitowego środowiska uruchomieniowego .NET Desktop Runtime 9 (x86).<br />
+    Dodano możliwość podjęcia próby instalacji poprzez narzędzie Windows Package<br />
+    Manager (winget), jeśli narzędzie jest zainstalowane oraz jeśli test<br />
+    jest uruchomiony z zaznaczoną opcją "Podejmuj próby naprawy wykrytych<br />
+    problemów podczas testu".<br />
+<br />
+  ApwHarm.dll, ApInetAp.dll [2026.0.3.9]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+  Zasoby.dll [2026.0.3.9]<br />
+  - Aktualizacja opisów opcji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2026.01.15 [2026.0.3.9]<br />
+  - Dodano obsługę autoryzacji do KSeF za pomocą certyfikatów.<br />
+  - Dodano mechanizmy dodawania podmiotów trzecich do faktury, zgodnych<br />
+    ze specyfikacją KSeF.<br />
+  - Zmieniono formatkę nagłówka dokumentu w związku z możliwością dodawania<br />
+    podmiotów trzecich.<br />
+  - Dodano obsługę trybu offline dla faktur wysyłanych do KSeF<br />
+  - Dodano możliwość drukowania faktur wysłanych do KSeF opatrzonych<br />
+    odpowiednimi kodami QR.<br />
+  - Okno e-Recepty farmaceutycznej. Dodano weryfikację przekroczenia<br />
+    120-dniowego okresu stosowania wynikającego z wprowadzonego dawkowania.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW12 -----------------------------</h3><br />
+2026.01.15 [2026.0.3.9]<br />
+  - Modyfikacja w zakresie zamówień automatycznych. Rozszerzenie opisów<br />
+    problemów z dokończeniem konfiguracji akcji sprzedażowej widocznych<br />
+    w historii zamówień automatycznych.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2026.01.15 [2026.0.3.9]<br />
+  - Dodano obsługę autoryzacji do KSeF za pomocą certyfikatów.<br />
+  - Dodano możliwość zaewidencjonowania "Numeru identyfikacyjnego z systemu UE<br />
+    dla Oświadczenia o Należytej Staranności (DDS)" – numeru referencyjnego<br />
+    nadawanego po złożeniu oświadczenia w unijnym systemie informacyjnym.<br />
+    Zmiana jest wymuszona wymaganiami rozporządzenia EUDR (UE) 2023/1115,<br />
+    które nakłada obowiązek złożenia DDS przed wprowadzeniem/wywozem wskazanych<br />
+    towarów oraz posługiwania się numerem referencyjnym tego oświadczenia<br />
+    w obiegu dokumentów (m.in. dla identyfikacji i kontroli zgodności).<br />
+    Miejsca w programie:<br />
+    * w oknie "Edycja pozycji" (zakładka "Dane uzupełniające") dodano pole<br />
+      "Numer DDS",<br />
+    * w oknie "Pozycje dokumentu zakupu" dodano obsługę pola w ścieżce:<br />
+      Ctrl+F2 -> Zmiany -> "Numer DDS".<br />
+<br />
+<h3>---------------------------- Zmiany w module APW14 -----------------------------</h3><br />
+2026.01.15 [2026.0.3.9]<br />
+  - Opcje modułów zakładka Wspólne -> KSeF - rozszerzono o konfigurację<br />
+    certyfikatu autoryzacyjnego i certyfikatu dla trybu offline.<br />
+    Dodano parametry: rodzaj wystawionej faktury dla osoby fizycznej<br />
+    nie prowadzącej działalności (bez NIP) oraz rodzaj wystawionej faktury<br />
+    dla podmiotów z NIP, które będą określały sposób wystawiania faktur.<br />
+  - KS-OmniPharm: rozbudowano mechanizm przecen o możliwość zawężenia<br />
+    przecenianych dostaw wyłącznie do takich, których termin ważności<br />
+    jest krótszy niż X dni.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2026.01.15 [2026.0.3.9]<br />
+  - Raport w formacie Comarch Optima XML (zakupy, sprzedaż): rozbudowano<br />
+    generowany raport o informacje związane z pobieraną kaucją za opakowania<br />
+    zwrotne.<br />
+  - Uwidocznienie kaucji w operacji gotówkowej zapłaty dostawcy:<br />
+    APW21 -> Inne -> Raporty – Inne -> Raport – zakończenie dnia.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW31 -----------------------------</h3><br />
+2026.01.15 [2026.0.3.9]<br />
+  - Uwidocznienie kaucji w operacji gotówkowej zapłaty dostawcy:<br />
+    APW31 -> Operacje kasowe -> Bilans -> Bilans rozliczeń z dostawcami,<br />
+    APW31 -> Operacje kasowe -> Raport Kasowy -> Część II: Rozchody.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2026.01.15 [2026.0.3.9]<br />
+  - Modyfikacja w zakresie automatycznej aktualizacji bazy dostawców CBH.<br />
+    Ujednolicenie działania opcji z APW41 a prezentowanej w oknie z listą<br />
+    dostawców.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW42 -----------------------------</h3><br />
+2026.01.15 [2026.0.3.9]<br />
+  - Dodano weryfikację zadanego numeru DRR w procedurze wycofującej DRR.<br />
+    Program w przypadku podania nieprawidłowego numeru lub numeru o niepoprawnej<br />
+    długości, wyświetlał nieczytelne dla użytkownika komunikaty o błędzie.<br />
+<br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2026.01.15 [2026.0.3.9]<br />
+  - Pharmind grid: aktualizacja raportów dot. jakości raportowanych danych.<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2026.01.15<br />
+  ApwPlus [2026.0.3.9]<br />
+  - Aktualizacja struktury bazy danych.<br />
+<br />
+  DBCopy, IBPack [2026.0.3.9]<br />
+  - Poprawiono wydajność operacji kopiowania danych.<br />
+<br />
+</body></html>

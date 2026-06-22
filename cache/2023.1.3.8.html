@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2023.1.3.8</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2023.05.10<br />
+  Slowniki.dll [2023.1.3.8]<br />
+  - Dodano obsługę nowego pola "Numer Zgody Prezesa" na karcie towarowej<br />
+    w zakładce [Ctrl+4] Inne.<br />
+  - Rozbudowa funkcjonalności reguły koszykowej.<br />
+  - Optymalizacja działania usługi Podobniki.<br />
+<br />
+  ZSMOPL.dll [2023.2.0.0]<br />
+  - Aktualizacja modułu w związku z dodaniem obsługi nowego pola "Numer Zgody<br />
+    Prezesa".<br />
+<br />
+  ApwHarm.dll [2023.1.3.8]<br />
+  - Aktualizacja modułu w związku z dodaniem obsługi nowego pola "Numer Zgody<br />
+    Prezesa" dla zadania ZSMOPL.MAR02 - automatyczna wysyłka raportów do ZSMOPL.<br />
+<br />
+  ApwMain.exe [2023.1.3.8]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2023.05.10 [2023.1.3.8]<br />
+  - Poprawa wyliczania statystyk dla NMVS/KOWAL dla przypadków sprzedaży,<br />
+    w których dokonano korekty dodatniej.<br />
+  - Dodanie obsługi nowego oznaczenia dla JPK - WSTO_EE:<br />
+    WSTO - Wewnątrzwspólnotowa sprzedaż towarów na odległość,<br />
+    EE - Usługi świadczone drogą elektroniczną.<br />
+  - Umożliwiono realizację recepty z uprawnieniem DN (dziecko nieubezpieczone)<br />
+    i uprawnieniem dodatkowym C (ciąża).<br />
+  - W związku z nowelizacją rozporządzenia w sprawie podstawowych warunków<br />
+    prowadzenia apteki dodano możliwość wybrania powodu straty lub nadwyżki<br />
+    przy wystawianiu dokumentów tego typu.<br />
+  - Pharmind GRID: Optymalizacja raportowania sprzedaży z "Operacji<br />
+    magazynowych".<br />
+  - Rozbudowa funkcjonalności reguły koszykowej.<br />
+  - Optymalizacja działania usługi Podobniki.<br />
+  - Poprawiono przekazywanie informacji o sprzedaży leków robionych do systemu<br />
+    KS-OmniPharm.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW12 -----------------------------</h3><br />
+2023.05.10 [2023.1.3.8]<br />
+  - Usunięcie błędu podczas wyświetlania pozycji prospektów dla aptek<br />
+    pracujących w trybie BLOZ.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2023.05.10 [2023.1.3.8]<br />
+  - Dodano obsługę nowego pola "Numer Zgody Prezesa" na karcie zakupu w zakładce<br />
+    [Ctrl+2] Uzupełniające.<br />
+  - Dodano obsługę wczytywania z FTP korekt dokumentów zakupu.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW14 -----------------------------</h3><br />
+2023.05.10 [2023.1.3.8]<br />
+  - Modyfikacja funkcji aktualizacji bazy leków z BLOZ: Na liście pól<br />
+    do aktualizacji rozbito pole "PKWiU, Kod CN, Kod GTU" na oddzielne pola.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2023.05.10 [2023.1.3.8]<br />
+  - Aktualizacja eksportów do FK, zawierających oznaczenia dla JPK.<br />
+    Do eksportów zostało dodane nowe oznaczenie WSTO_EE.<br />
+  - Usunięto możliwość wydruku usuniętych zestawień do NFZ.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2023.05.10 [2023.1.3.8]<br />
+  - Dodano okno do podglądu i edycji powodów strat i nadwyżek.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW68 -----------------------------</h3><br />
+2023.05.10 [2023.1.3.8]<br />
+  - Dostosowanie modułu do wersji systemu ZSMOPL 1.3. W wersji rozbudowano<br />
+    komunikat obrotów i stanów o "numer Zgody Prezesa".<br />
+    Numer zgody prezesa - wypełniany jest dla leków, które zostały zwolnione<br />
+    z obowiązku umieszczania na opakowaniu i w ulotce dołączanej do opakowania<br />
+    niektórych danych szczegółowych w języku polskim. Numer występuje w postaci<br />
+    ciągu znaków według wyznaczonego schematu:<br />
+    UR/Z/podstawa prawna zgody/kolejny numer/rok w postaci dwucyfrowej<br />
+    –> np.: UR/Z/4c/1/22.<br />
+    Dodano też obsługę nowego ostrzeżenia TROSPOZ86 - numer Zgody Prezesa<br />
+    nie został znaleziony w rejestrze produktów monitorowanych.<br />
+<br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2023.05.10 [2023.1.3.8]<br />
+  - Pharmind GRID: Optymalizacja raportowania sprzedaży z "Operacji<br />
+    magazynowych".<br />
+  - Rozbudowa funkcjonalności reguły koszykowej.<br />
+  - Optymalizacja działania usługi Podobniki.<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2023.05.10<br />
+  ApwPlus [2023.1.3.8]<br />
+  - Aktualizacja struktury bazy danych.<br />
+<br />
+  OraPack.exe [2023.1.3.8]<br />
+  - Rozwiązano problem objawiający się wystąpieniem błędu "Nie zainicjowano<br />
+    serwera KS-EDE" podczas odchudzenia bazy KS-EDE. Problem ujawniał się<br />
+    w momencie zaznaczenia opcji "Wykonaj archiwum KS i EDE, usuń schematy<br />
+    i utwórz ponownie".<br />
+<br />
+</body></html>

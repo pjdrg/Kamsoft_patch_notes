@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2019.2.9.7</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2019.08.13<br />
+  slowniki.dll [2019.3.2.4]<br />
+  - zwiększono wysokość okna zapytania o stan i cenę, tak by wyświetlić większą<br />
+    liczbę odpowiedzi z hurtowni.<br />
+<br />
+2019.08.05<br />
+  apwharm.dll [2019.3.2.5]<br />
+  - Poprawiono problem "Out of Bounds" dla zadania aktualizacji produktów<br />
+    na stronę WWW. Dla włączonych wspólnie opcji "Kiedy jest wysyłana<br />
+    pozycja dla kategorii, to zawsze wysyłaj powiązany produkt" oraz <br />
+    "Zawsze rozdzielaj na paczki" przy włączonej opcji wysyłaj kategorie<br />
+    mógł pojawić się komunikat "Out of Bounds".<br />
+  - Rozbudowano mechanizmy automatycznych aktualizacji oferty interentowej<br />
+    na stronę WWWW. Wdrożono nową opcję "Dla "Pełnej oferty int. program<br />
+    KS-AOW" korzystaj z produktów: niepowiązanych z ofertami internetowymi<br />
+    oraz wszystkich (powiązanych i niepowiązanych z ofertami internetowymi).". <br />
+    Opcja wpływa na następujące mechanizmy:<br />
+    a) czyszczenie oferty internetowej oraz pobierania oferty int./pobieranie<br />
+       kategorii i pozycji w automacie budowania oferty dla funkcji odśwież<br />
+       ofertę;<br />
+    b) prezentacji oferty internetowej w oknie przeglądania oferty;<br />
+    c) prezentacji kategorii w oknie przeglądania kategorii;<br />
+    d) odczyt oferty dla automatu aktualizacji cen;<br />
+    e) funkcje dla aktualizacji pojedynczego produktu: aktualizacja ceny/odśwież<br />
+       produkt;<br />
+    f) funkcje kopiowania/przenoszenia kategorii oraz produktów oferty int.<br />
+       pomiędzy ofertami internetowymi;<br />
+    g) funkcja dodawania nowych produktów do oferty internetowej;<br />
+    h) funkcja wysyłania oferty internetowej na stronę WWW;<br />
+    i) funkcja aktualizacji daty wysłania na stronę WWW produktów;<br />
+    j) funkcja zliczania produktów dla aktualizacji na stronę WWW; <br />
+<br />
+2019.08.01<br />
+  slowniki.dll [2019.3.2.3]<br />
+  - Dodano uprawnienie do korygowania zaliczek fiskalnych<br />
+<br />
+<h3>---------------------------- Zmiany w module APW45 -----------------------------</h3><br />
+2019.08.05 [2019.3.2.5]<br />
+  - Poprawiono filtrowanie oraz wydruk zamówień internetowych w oknie<br />
+    przeglądania zamówień (AWP11 - Sprzedaż -> ctrl+k oraz APW45 - Apteka<br />
+    Internetowa -> zamówienia) dla mechanizmu pracy z wieloma sklepami WWW.<br />
+  - Poprawiono problem "Out of Bounds" dla zadania aktualizacji produktów<br />
+    na stronę WWW. Dla włączonych wspólnie opcji "Kiedy jest wysyłana<br />
+    pozycja dla kategorii, to zawsze wysyłaj powiązany produkt" oraz <br />
+    "Zawsze rozdzielaj na paczki" przy włączonej opcji wysyłaj kategorie<br />
+    mógł pojawić się komunikat "Out of Bounds".<br />
+  - Wdrożono nową opcję "Dla "Pełnej oferty int. program KS-AOW" korzystaj<br />
+    z produktów: niepowiązanych z ofertami internetowymi/wszystkich <br />
+    (powiązanych i niepowiązanych z ofertami internetowymi).". <br />
+    Opcja wpływa na następujące mechanizmy:<br />
+    a) czyszczenie oferty internetowej oraz pobierania oferty int./pobieranie<br />
+       kategorii i pozycji w automacie budowania oferty dla funkcji odśwież<br />
+       ofertę;<br />
+    b) prezentacji oferty internetowej w oknie przeglądania oferty;<br />
+    c) prezentacji kategorii w oknie przeglądania kategorii;<br />
+    d) odczyt oferty dla automatu aktualizacji cen;<br />
+    e) funkcje dla aktualizacji pojedynczego produktu: aktualizacja ceny/odśwież<br />
+       produkt;<br />
+    f) funkcje kopiowania/przenoszenia kategorii oraz produktów oferty int.<br />
+       pomiędzy ofertami internetowymi;<br />
+    g) funkcja dodawania nowych produktów do oferty internetowej;<br />
+    h) funkcja wysyłania oferty internetowej na stronę WWW;<br />
+    i) funkcja aktualizacji daty wysłania na stronę WWW produktów;<br />
+    j) funkcja zliczania produktów dla aktualizacji na stronę WWW; <br />
+<br />
+<h3>---------------------------- Zmiany w module APW68 -----------------------------</h3><br />
+2019.08.13 [2019.3.3.0]<br />
+  - Dostosowanie programu do nowej specyfikacji v2.26. Kontrola serii <br />
+    i dat ważności dla wszsytkich rodzajów dokumentów oprócz IR-/IR+.<br />
+	Obsługa nowych reguł: TROS48, TROS49, TROSPOZ71, TROS19, TROSPOZ76, TROSPOZ77.<br />
+  - Poprawa oznaczenia raportów braków, które zostały wysłane do ZSMOPL.<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2019.08.01<br />
+  Apwplus.exe [2019.3.12.0]<br />
+  - Uaktualniono strukturę bazy danych<br />
+<br />
+2019.07.31<br />
+  Apwplus.exe [2019.3.11.0]<br />
+  - Uaktualniono strukturę bazy danych<br />
+<br />
+</body></html>

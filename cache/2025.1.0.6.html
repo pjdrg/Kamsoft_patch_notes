@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2025.1.0.6</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2025.02.27<br />
+  Slowniki.dll [2025.1.0.6]<br />
+  - Rekomendacje KS-OmniPharm – Modyfikacja funkcjonalności. Dodano możliwość<br />
+    definiowania rekomendacji w oparciu o grupy towarowe.<br />
+  - Poprawka funkcjonalności "Usuń PIN" dla Aptix. W niektórych sytuacjach<br />
+    podczas usuwania PIN'u Aptixa dla danego użytkownika system ustawiał hasło<br />
+    użytkownika na puste.<br />
+  - Podczas zmiany hasła użytkownika aptecznego dodano na bieżąco weryfikację<br />
+    jego poprawności.<br />
+  - Podczas ukrywania kart towarowych dodano sprawdzanie czy towar dla którego<br />
+    ukrywana jest karta nie znajduje się w kolejce/rezerwacji.<br />
+    Ukrycie takiej karty uniemożliwiało sprzedaż towaru z kolejki/rezerwacji.<br />
+  - Mechanizm kontroli interakcji między lekami - przystosowano do obsługi<br />
+    za pośrednictwem komunikacji z OSOZ. Kontrola interakcji nie wymaga<br />
+    już aktualizacji bazy danych przez dodatkowe pliki BLOZ.<br />
+  - Rozszerzenie funkcjonalności kursów szkoleniowych oraz ankiet pharmind.<br />
+<br />
+  ApwHarm.dll [2025.1.0.6]<br />
+  - Modyfikacja w zakresie zamówień automatycznych. Zwiększono skuteczność<br />
+    wysyłki raportów z procesu tworzenia i wysyłki zamówień automatycznych.<br />
+  - Komunikacja z dostawcami - Odmowy: rozbudowano zadanie o pobieranie odmów<br />
+    z bufora KS-OmniPharm.<br />
+<br />
+  ApwMain [2025.1.0.6]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+  ApwFn.dll [2025.1.0.3]<br />
+  - Uaktualniono opisy dla zleceń z KS-ZSA z aktualizacją opcji i uprawnień.<br />
+<br />
+  Moduł integracyjny - sprzedaż samoobsługowa [2025.0.2.1]<br />
+  - Zmodyfikowano algorytm wyszukiwania dostaw na podstawie zeskanowanego kodu<br />
+    kreskowego, aby priorytetowo wybierał te, które zawierają pełne opakowania.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2025.02.27 [2025.1.0.6]<br />
+  - Terminale płatnicze PeP: dodano możliwość wpisywania numeru PESEL oraz kodu<br />
+    recepty na terminalu, podczas korzystania z okna do wprowadzania kodów<br />
+    e-Recept. Funkcjonalność ta jest dostępna dla urządzeń, które obsługują<br />
+    wprowadzanie tekstu.<br />
+  - Dodano możliwość integracji terminali płatniczych operatora ING.<br />
+  - Poprawiono anulowanie e-Recepty farmaceutycznej przy wycofaniu DRR.<br />
+    W niektórych przypadkach SIM zwracał błąd "Nieprawidłowy rodzaj realizacji<br />
+    recepty".<br />
+  - Rekomendacje KS-OmniPharm – Modyfikacja funkcjonalności. Dodano możliwość<br />
+    definiowania rekomendacji w oparciu o grupy towarowe.<br />
+  - Pharmind grid: Raportowanie w transakcjach zakupu i sprzedaży informacji<br />
+    o cenie zakupu w hurtowni dla pozycji pochodzących z przesunięć MM-przychód.<br />
+  - Funkcje: "Sprawdzanie interakcji między lekami" (ALT+F3), "Automatyczna<br />
+    kontrola interakcji dla stałego pacjenta", "Automatyczna kontrola<br />
+    interakcji" - przystosowano do obsługi za pośrednictwem komunikacji z OSOZ.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW12 -----------------------------</h3><br />
+2025.02.27 [2025.1.0.6]<br />
+  - Modyfikacja w zakresie zamówień automatycznych. Zwiększono skuteczność<br />
+    wysyłki raportów z procesu tworzenia i wysyłki zamówień automatycznych.<br />
+  - Rekomendacje KS-OmniPharm – Modyfikacja funkcjonalności. Dodano możliwość<br />
+    definiowania rekomendacji w oparciu o grupy towarowe.<br />
+  - Komunikacja z dostawcami - Odmowy: rozbudowano zadanie o pobieranie odmów<br />
+    z bufora KS-OmniPharm.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2025.02.27 [2025.1.0.6]<br />
+  - Rozwiązano problem objawiający się możliwym wystąpieniem błędu "Próba<br />
+    zawołania commit bez otwarcia transakcji" podczas zatwierdzania dokumentu<br />
+    zakupu.<br />
+  - Rekomendacje KS-OmniPharm – Modyfikacja funkcjonalności. Dodano możliwość<br />
+    definiowania rekomendacji w oparciu o grupy towarowe.<br />
+  - Pharmind grid: Raportowanie w transakcjach zakupu i sprzedaży informacji<br />
+    o cenie zakupu w hurtowni dla pozycji pochodzących z przesunięć MM-przychód.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2025.02.27 [2025.1.0.6]<br />
+  - W raporcie towarowym zbiorczym poprawiono wyświetlanie zawartości listy<br />
+    towarów znajdujących się w kolejce.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW25 -----------------------------</h3><br />
+2025.02.27 [2025.1.0.6]<br />
+  - Opieka farmaceutyczna – kontrola interakcji między lekami - przystosowano<br />
+    do obsługi za pośrednictwem komunikacji z OSOZ.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2025.02.27 [2025.1.0.6]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2025.02.27 [2025.1.0.6]<br />
+  - Pharmind grid: Raportowanie w transakcjach zakupu i sprzedaży informacji<br />
+    o cenie zakupu w hurtowni dla pozycji pochodzących z przesunięć MM-przychód.<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2025.02.27<br />
+  ApwPlus [2025.1.0.6]<br />
+  - Aktualizacja struktury bazy danych.<br />
+<br />
+</body></html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2022.0.2.7</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2021.12.16<br />
+  CopyCloud [2021.2.4.7]<br />
+  - Poprawka w interfejsach.<br />
+<br />
+  Slowniki.dll [2022.0.2.7]<br />
+  - Centralna kartoteka dostawców - Na zakładce "Repozytorium EDE" karty<br />
+    dostawcy dodano kontrolki dotyczące dostarczania faktur elektronicznych.<br />
+<br />
+  ApwIap.dll [2022.0.2.7]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+  ApwHarm.dll [2022.0.2.7]<br />
+  - Poprawniono obsługę zarządzania sklepami dla zadania aktualizacji oferty.<br />
+    Wcześniej zadanie zawsze obsługiwało dwa sklepy WWW, mimo że w zadaniu był<br />
+    włączony tylko jeden wybrany sklep WWW.<br />
+  - Poprawnio opis z wykonywania zadania wysłania oferty na stronę WWW.<br />
+    Teraz otrzymujemy podsumowanie w apwplanie i raporcie apwplana jakiego<br />
+    rodzaju pozycje i w jakiej ilość zostały wysłane na stronę WWW.<br />
+<br />
+  ApwHarmPush.dll [2022.0.2.7]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+  ApwMain.exe [2022.0.2.7]<br />
+  - Poprawki w interfejsach.<br />
+<br />
+  MVServer.exe [2022.0.2.7]<br />
+  - Poprawa funkcji aktualizującej stany magazynowe po bezpośrednim wyciągnięciu<br />
+    leków z automatu ROWA. Niektóre automaty ROWA przesyłały błędną informację<br />
+    o numerze faktury i pozycji dla leków, których stan miał być zaktualizowany.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2021.12.16 [2022.0.2.7]<br />
+  - Modyfikacja mechanizmu mobilnej kompletacji towaru APTIX dla eRecepty.<br />
+  - e-Recepta i DRR: Dodano obsługę ident. pacjenta: tymczasowe zaświadczenie<br />
+    tożsamości cudzoziemca, książeczka żeglarska, prawo jazdy.<br />
+  - Dodano przepisywanie drugiego imienia na kartę pacjenta z e-Recepty.<br />
+    Umożliwiono poprawę drugiego imienia na DRR poprzez edycję karty pacjenta,<br />
+    powiązanej z daną realizacją.<br />
+  - Dodano obsługę pacjenta NN. Dla realizacji z ustawionym wskaźnikiem<br />
+    Pacjent NN (w kodach recept) nie będą generowane DRR.<br />
+  - Drukowanie kodów 2D e-recept na drukarce fiskalnej. Dodanie parametru, który<br />
+    będzie umożliwiał wydruk na drukarce zwykłej.<br />
+    Domyślnie parametr wyłączony: drukowanie bezpośrednio na drukarkę fiskalną.<br />
+    Parametr dotyczy drukarek fiskalnych obsługujących kody 2D.<br />
+  - Dodanie możliwości drukowania kodów 2D e-recept dla drukarki Bono Lan E.<br />
+  - Dodano kontrolę dla recept weterynaryjnych na narkotyki i psychotropy.<br />
+  - Dodano możliwość przyporządkowania szablonu wydruku dla dokumentów <br />
+    w Operacjach magazynowych. Konfigurację przeprowadza się na karcie definicji<br />
+    dokumentu finansowego, po wyborze szablonu będzie się on drukował <br />
+    niezależnie, czy ustawiono wydruki graficzne, czy tekstowe.<br />
+  - W szablonie wydruku faktury VAT dodano nowe pola z karty towaru: Nazwa, <br />
+    Postać, Dawka i Opakowanie<br />
+  - Poprawa wyświetlania ekranu w trybie szerokim w sprzedaży podstawowej dla<br />
+    stanowisk powyżej dziewiątego. Program w oknie sprzedaży przesuwał tekst<br />
+    w prawą stronę i ucinał przy tym ostatnie cyfry na kwotach przy lekach.<br />
+    Błąd też powodował brak trójkątów statusu zwrotnego z NMVS.<br />
+  - Formatka e-recepty, poprawa nieznikającego komunikatu po wydruku kodów<br />
+    e-recepty.<br />
+  - Wnioski/eZWM: <br />
+    * poprawiono liczenie refundacji w przypadku sprzedaży z dwóch dostaw.<br />
+    * poprawiono wybór miejsca wydania. Miejsce wydania pobierane będzie z umowy<br />
+      z NFZ, a nie z karty refundatora.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW12 -----------------------------</h3><br />
+2021.12.16 [2022.0.2.7]<br />
+  - Bufor norm. Poprawa błędu "List index out of bounds", występującego podczas<br />
+    wyliczania norm. Błąd się pojawiał przy włączonej opcji "Licz stany<br />
+    minimalne" oraz bez zaznaczenia algorytmu.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2021.12.16 [2022.0.2.7]<br />
+  - Dodano możliwość wprowadzania uwag/notatki do skanu w mobilnej weryfikacji<br />
+    dostawy APTIX.<br />
+  - KS-OmniPharm - dodatkowe informacje na dokumencie przekazywane do OPH<br />
+    gdy włączone są centralne płatności.<br />
+  - Dodana została obsługa uprawnień:<br />
+    * „Przegląd dokumentów w buforze”, która umożliwia podgląd dokumentu<br />
+      w buforze,<br />
+    * „Przegląd dokumentów w buforze” z uprawnieniem „Edycja dokumentu<br />
+      w buforze” umożliwia przeglądanie, tworzenie i edycję dokumentu w buforze,<br />
+    * „Przegląd dokumentów w buforze” przy braku uprawnienia do „Edycji<br />
+      dokumentu w buforze”, ale z uprawnieniem „Przyporządkowanie towaru”<br />
+      umożliwia przeglądanie i przyporządkowanie towaru z kartoteką towarową<br />
+      (umożliwia przyporządkowanie towaru w przypadku, gdy towar z dokumentu nie<br />
+      został powiązany automatycznie z kartoteką towarową podczas wczytywania<br />
+      dokumentu do bufora). Edycja dokumentu jest zablokowana.<br />
+      Zmiany mają umożliwić zdefiniowanie takich uprawnień, aby personel apteki<br />
+      mógł podejrzeć dokument, skontrolować, przyporządkować niepowiązane towary<br />
+      z kartoteką towarową, oraz zatwierdzić (przyjąć) dokument, bez możliwości<br />
+      wprowadzania zmian w samym dokumencie. Podczas aktualizacji skopiowane<br />
+      będą uprawnienia tak, aby zachować bieżący stan uprawnień.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW14 -----------------------------</h3><br />
+2021.12.16 [2022.0.2.7]<br />
+  - Dodano możliwość wprowadzania uwag/notatki do skanu w mobilnej<br />
+    inwentaryzacji APTIX.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW15 -----------------------------</h3><br />
+2021.12.16 [2022.0.2.7]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2021.12.16 [2022.0.2.7]<br />
+  - Zestawienie refundacyjne. Poprawa wydruku dla Faktur/Zestawienie wewnętrzne<br />
+    z opcją uwzględnienie korekt i bez tej opcji. Program w obu opcjach<br />
+    generował ten sam wydruk.<br />
+  - Sprzedaż -> Całość sprzedaży - poprawiono liczenie recept, nie wliczały się<br />
+    recepty bez oddziału NFZ<br />
+  - Eksport do Optimy. Dodanie możliwości eksportu opisów do banku dla<br />
+    dokumentów przychodu.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW23 -----------------------------</h3><br />
+2021.12.16 [2022.0.2.7]<br />
+  - e-Recepta: Dodano obsługę ident. pacjenta: książeczka żeglarska.<br />
+  - e-Recepta i DRR: Dodano obsługę ident. pacjenta: tymczasowe zaświadczenie<br />
+    tożsamości cudzoziemca.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW24 -----------------------------</h3><br />
+2021.12.16 [2022.0.2.7]<br />
+  - Struktura magazynu w zależności od czasu magazynowania - dodano filtr dla<br />
+    towatów OTC i Rx - zadanie z giełdy pomysłów.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW31 -----------------------------</h3><br />
+2021.12.16 [2022.0.2.7]<br />
+  - Poprawka sortowania w przeglądzie wystawionych dokumentów PP, KW i KP.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2021.12.16 [2022.0.2.7]<br />
+  - Poprawki w nazwach i ikonach opcji.<br />
+  - Dodanie opcji APW11 Sprzedaż->Wydruki->Inne - Wydruk kodów 2D e-recept na<br />
+    drukarce zwykłej (niefiskalnej).<br />
+  - Zmiany w uprawnieniach w module APW13:<br />
+    * zmieniono nazwę uprawnienia „Wprowadzanie i edycja dokumentów w buforze”<br />
+      na „Przegląd dokumentów w buforze”,<br />
+    * dodano uprawnienie „Edycja dokumentu w buforze”,<br />
+    * dodano uprawnienie „Przyporządkowanie towaru”.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW42 -----------------------------</h3><br />
+2021.12.16 [2022.0.2.7]<br />
+  - Dodano możliwość usunięcia nieaktywnych umów z NFZ:<br />
+    (Porządkowanie danych -> Usuń nieaktywne (ukryte) umowy UMX).<br />
+    Nowa funkcja ma na celu zmniejszenie rozmiaru bazy poprzez fizyczne<br />
+    usunięcie danych z umów nieaktywnych (ukrytych), a obowiązujących przed 2019<br />
+    rokiem.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW45 -----------------------------</h3><br />
+2021.12.16 [2022.0.2.7]<br />
+  - Dodano nową opcję "Nie aktualziuj ceny jeśli cena jest zerowa" dla reguł<br />
+    dla towarów. Opcja zarządza tylko funkcjonalnością zarządzania automatem<br />
+    do aktualziacji cen dla oferty apteki internetowej.<br />
+  - Poprawiono funckję wysyłania przyrostowego oferty dla działania na dwóch<br />
+    połączeniach WWW dla tej samej oferty. Wcześniej drugie połączneie<br />
+    nadpisywało datę datę aktualziacji dla pierwszej wysyłki na produktach<br />
+    w ofercie, co powodował wysłanie ciągle takiej samej oferty.<br />
+  - Poprawnio funkcje aktualizacji cen, źle była sprawdzana zmiana wyboru<br />
+    dostawy. Powodowało to że produkt pomimo braku jakichkolwiek zmian był<br />
+    zawsze aktualizowany.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW68 -----------------------------</h3><br />
+2021.12.16 [2022.0.2.7]<br />
+  - Generowanie raportu braków: W funkcji Dodaj z listy braków - zawężono<br />
+    wyświetlanie listy tylko do pozycji leków podlegających obowiązkowi<br />
+    zgłaszania braku.<br />
+<br />
+<h3>----------------------------- ZMIANY.KS-MEDIVERIS ------------------------------</h3><br />
+2021.12.16 [2022.0.2.7]<br />
+  - Wdrożenie interfejsu w wersji V4 dla użytkowników końcowych dla systemu<br />
+    PLMVS (KOWAL). Aktualnie PLMVS działa w wersji V3, która zostanie wyłączona<br />
+    pod koniec pierwszego kwartału 2022. Wdrożenie nowej wersji podyktowane jest<br />
+    zmianami systemowymi po stronie NMVS. Brak nowej wersji V4 uniemożliwiłby<br />
+    skuteczne podłączenie do systemu KOWAL a tym samym spełnianie obowiązków<br />
+    serializacyjnych.<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2021.12.16<br />
+  ApwPlus.exe [2022.0.2.7]<br />
+  - Uaktualniono strukturę bazy danych.<br />
+<br />
+</body></html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2025.1.0.0</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2025.02.04 [2025.1.0.0]<br />
+  - Przebudowano opcje związane z poziomem bezpieczeństwa w aptece. Usunięto<br />
+    opcję Wspólne.5.1 "Poziom bezpieczeństwa", co spowodowało automatyczne<br />
+    aktywowanie pozostałych ustawień, które wcześniej były od niej zależne.<br />
+    Dla aptek, które dotychczas korzystały z "podstawowego" poziomu<br />
+    bezpieczeństwa, ustawienia te zostały skonfigurowane w sposób zapewniający<br />
+    niezakłóconą pracę.<br />
+    Opcje objęte zmianą:<br />
+     * Wspólne.5.2 "Okres ważności hasła pracownika w dniach",<br />
+     * Wspólne.5.3 "Liczba możliwych logowań na to samo hasło",<br />
+     * Wspólne.5.4 "Liczba dni, po której pracownik będzie mógł zmienić hasło na<br />
+       wcześniej używane",<br />
+     * Wspólne.5.6 "Synchronizuj czas systemowy stacji roboczej z serwerem",<br />
+     * Wspólne.5.7 "Tolerancja synchronizacji czasu w minutach",<br />
+     * Wspólne.5.8 "Wyłącz uruchomiony moduł po określonym czasie bezczynności",<br />
+     * Wspólne.5.9 "Czas bezczynności po jakim nastąpi zamknięcie modułu",<br />
+     * Wspólne.5.10 "Wyświetlaj informacje w głównym oknie modułu",<br />
+     * Wspólne.5.11 "Wyświetlaj okno wyboru loginu podczas logowania",<br />
+     * Wspólne.5.12 "Minimalna długość hasła (w znakach)",<br />
+     * Wspólne.5.13 "Hasło musi zawierać małe i duże litery",<br />
+     * Wspólne.5.14 "Minimalna długość loginu użytkownika (w znakach)",<br />
+     * Wspólne.5.15 "W haśle nie mogę występować krotności znaków",<br />
+     * Wspólne.5.16 "Czas bezczynności, po którym nastąpi automatyczne<br />
+       wylogowanie użytkownika z programu Apman",<br />
+     * Wspólne.5.23 "Czas bezczynności, po którym nastąpi automatyczne<br />
+       wylogowanie użytkownika z programu".<br />
+<br />
+  - Zmieniono sposób wyboru personelu podczas logowania. Usunięto możliwość<br />
+    wyboru imienia i nazwiska personelu z rozwijanej listy (funkcja była rzadko<br />
+    używana). Pozostawiono możliwość wyboru loginu z listy.<br />
+<br />
+  - Przebudowano "Pasek bezpieczeństwa". Nowe kryteria bardziej precyzyjnie<br />
+    odzwierciedlają konfigurację ustawień bezpieczeństwa, co może skutkować<br />
+    zmianą wyświetlanych wartości procentowych.<br />
+<br />
+  Slowniki.dll [2025.1.0.0]<br />
+  - Kartoteka Pacjenta/Odbiorcy: na zakładce Info dodatkowe dodano opcję<br />
+    włączenia/wyłączenia wyświetlania listy "leków w kolejce" dla wybranego<br />
+    pacjenta. Opcję można wyłączyć podczas wyświetlania komunikatu: "W kolejce/<br />
+    rezerwacji są towary dla wybranego pacjenta".<br />
+<br />
+  ApwHarm.dll [2025.1.0.0]<br />
+  - Modyfikacja w zakresie zamówień automatycznych pharmind GRID.<br />
+    Obsługa nowego parametru minimalnego progu dla zamawiania na podstawie<br />
+    średniej sprzedaży.<br />
+<br />
+  OSOZMOK.dll [2025.1.0.0]<br />
+  - KtoMaLek: rozwiązano problem z niepoprawnym kodowaniem polskich znaków<br />
+    w nazwach rezerwowanych towarów.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2025.02.04 [2025.1.0.0]<br />
+  - Dodano możliwość wyłączenia funkcji sprawdzania leków w kolejce/rezerwacji<br />
+    dla wybranych pacjentów. Wyłączenie jest możliwe podczas wyświetlenia<br />
+    komunikatu: "W kolejce/rezerwacji są towary dla wybranego pacjenta".<br />
+  - KtoMaLek: rozbudowa procesu realizacji rezerwacji za pomocą "Asystenta<br />
+    sprzedaży".<br />
+  - Terminale płatnicze Polskie ePłatności: optymalizacja procesu generowania<br />
+    raportu zamknięcia dnia.<br />
+  - Terminale płatnicze eService: optymalizacja procesu generowania<br />
+    raportu zamknięcia dnia.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW12 -----------------------------</h3><br />
+2025.02.04 [2025.1.0.0]<br />
+  - Dodano blokady wystawiania, wysyłania zamówień na podmiot będący Grupą VAT.<br />
+    Blokada będzie się objawiała odpowiednim komunikatem.<br />
+  - Modyfikacja w zakresie zamówień automatycznych pharmind GRID. Obsługa nowego<br />
+    parametru minimalnego progu dla zamawiania na podstawie średniej sprzedaży.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2025.02.04 [2025.1.0.0]<br />
+  - Dodano nową wersję okna pobierania dokumentów od dostawców w którym widoczne<br />
+    są dokumenty od wielu dostawców jednocześnie. Dokumenty dostępne są w kanale<br />
+    KS-EWD oraz w pharmind EDI z którego korzysta wielu dostawców i nie wymaga<br />
+    konfiguracji po stronie apteki.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW14 -----------------------------</h3><br />
+2025.02.04 [2025.1.0.0]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW15 -----------------------------</h3><br />
+2025.02.04 [2025.1.0.0]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2025.02.04 [2025.1.0.0]<br />
+  - e-ZWM: Weryfikacja komunikatu ZPOZW została dostosowana do wersji 1.1.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW22 -----------------------------</h3><br />
+2025.02.04 [2025.1.0.0]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW23 -----------------------------</h3><br />
+2025.02.04 [2025.1.0.0]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW24 -----------------------------</h3><br />
+2025.02.04 [2025.1.0.0]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW25 -----------------------------</h3><br />
+2025.02.04 [2025.1.0.0]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW31 -----------------------------</h3><br />
+2025.02.04 [2025.1.0.0]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW35 -----------------------------</h3><br />
+2025.02.04 [2025.1.0.0]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2025.02.04 [2025.1.0.0]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW42 -----------------------------</h3><br />
+2025.02.04 [2025.1.0.0]<br />
+  - Rozwiązano problem powodujący wyświetlanie komunikatu "Record not found for<br />
+    user" podczas zmiany hasła w bazie Firebird.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW43 -----------------------------</h3><br />
+2025.02.04 [2025.1.0.0]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW44 -----------------------------</h3><br />
+2025.02.04 [2025.1.0.0]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW45 -----------------------------</h3><br />
+2025.02.04 [2025.1.0.0]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW55 -----------------------------</h3><br />
+2025.02.04 [2025.1.0.0]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW61 -----------------------------</h3><br />
+2025.02.04 [2025.1.0.0]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW68 -----------------------------</h3><br />
+2025.02.04 [2025.1.0.0]<br />
+  - W związku z pojawiającym się coraz częściej komunikatem błędu TROSPOZ78<br />
+    dla faktur wystawionych do paragonów zawierających lek przeterminowany,<br />
+    zmieniono sposób raportowania tych faktur. Faktura wystawiona do paragonu<br />
+    nie jest już traktowana jako obrót więc nie ma potrzeby jej raportowania.<br />
+    Obrót został już uwzględniony przy wystawieniu paragonu.<br />
+<br />
+<h3>--------------------------------- ZMIANY.IRAP ----------------------------------</h3><br />
+2025.02.04 [2025.1.0.0]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2025.02.04 [2025.1.0.0]<br />
+  - KtoMaLek: wysyłanie aktualnego stanu magazynowego towaru po zmianie BLOZid<br />
+    na karcie towaru.<br />
+  - Modyfikacja w zakresie zamówień automatycznych pharmind GRID. Obsługa nowego<br />
+    parametru minimalnego progu dla zamawiania na podstawie średniej sprzedaży.<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2025.02.04<br />
+  ApwPlus [2025.1.0.0]<br />
+  - Aktualizacja struktury bazy danych.<br />
+<br />
+  ApwBase.dll [2025.1.0.0]<br />
+  - Uaktualniono bazę kart serwisowych.<br />
+<br />
+</body></html>

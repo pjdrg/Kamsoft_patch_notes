@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2020.2.0.1</title>
+</head>
+<body>
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2020.02.27 [2020.2.0.1]<br />
+  - eZWM - dodano możliwość realizacji zleceń wyrobów "dwustronnych":<br />
+    W systemie eZWM nie ma raportujemy wyrobów obustronnych w jednej pozycji, <br />
+    jako wyrobu "obustronnego". W sprzedaż wyroby "dwustronne" realizujemy <br />
+    w dwóch pozycjach: lewa strona, prawa strona. <br />
+    Podczas realizacji/sprzedaży program automatycznie <br />
+    pierwszą pozycję sprzedaży zarejestruje jako lewostronną, a drugą jako <br />
+    prawostronną. W poprawie sprzedaży, przed zapłatą, można pozycje zamienić.<br />
+  - eZWM - dodano możliwość realizacji zleceń dla kodów: P.095 i P.096.<br />
+    Program wyświetli informację z wyborem realizowanego środka: <br />
+      dla P.095: P.095.S czy P.095.Z<br />
+      dla P.096: P.096.H czy P.096.Z<br />
+  - eZWM - przeniesienie "Identyfikatora" apteki z Wizytówki na kartę <br />
+    refundatora ("Identyfikator apteki w NFZ"). Istotne dla aptek, <br />
+    które są podwykonawcami. Identyfikator na Wizytówce nie będzie wykorzystany <br />
+    podczas realizacji zleceń w eZWM.<br />
+  - eZWM - na karcie refundatora (dla podwykonawców) poprawiono pobranie <br />
+    danych z UMX. Podczas pobrania danych z UMX program poprosi o wskazanie <br />
+    właściwej apteki. <br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2020.02.27 [2020.2.0.1]<br />
+  - Poprawa blokady mnożnika lekospisowego dla towarów CKT (opcja: apw13.2.91).<br />
+  - W Kontroli zakupów dodano kolumny informujące o sprzedaży.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2020.02.27 [2020.2.0.1]<br />
+  - Eksport zestawienia wyrobów medycznych do rozliczenia w KS-PPS. Poprawki<br />
+  - eZWM - przeniesienie "Identyfikatora" apteki z Wizytówki na kartę <br />
+    refundatora ("Identyfikator apteki w NFZ"). Istotne dla aptek, <br />
+    które są podwykonawcami. Identyfikator na Wizytówce nie będzie wykorzystany <br />
+    podczas realizacji zleceń w eZWM.<br />
+  - eZWM - na karcie refundatora (dla podwykonawców) poprawiono pobranie <br />
+    danych z UMX. Podczas pobrania danych z UMX program poprosi o wskazanie <br />
+    właściwej apteki. <br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2020.02.27 [2020.2.0.0]<br />
+  - Poprawiono zapis parametrów do pliku<br />
+<br />
+<h3>---------------------------- Zmiany w module APW68 -----------------------------</h3><br />
+2020.02.27 [2020.2.0.0]<br />
+  - Dodano możliwość raportowania faktur wystawionych na podstawie paragonu.<br />
+	Program automatycznie tworzy korektę do takiego paragonu i zaraportuje <br />
+	fakturę sprzedaży.<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2020.02.26<br />
+  Apwplus.exe [2020.2.1.0]<br />
+  - Uaktualniono strukturę bazy danych<br />
+<br />
+</body></html>

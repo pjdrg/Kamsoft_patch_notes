@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2020.3.10.7</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2020.11.10<br />
+  slowniki.dll [2020.3.10.7]<br />
+  - Dodanie podglądu listy materiałów edukacyjnych.<br />
+  apinetap.dll [2020.3.10.7]<br />
+  - Dodanie synchronizacji kartotek kontrahentów z repozytorium dokumentów<br />
+    EDE uwzględniającą konfigurację na wymianę faktur elektronicznych.<br />
+<br />
+2020.11.06<br />
+  apwharm.dll [2020.3.10.7]<br />
+  - wdrożono poprawkę dla mechanizmu informującego o wysłaniu wydruku<br />
+    dokumentu sprzedaży do klienta mailem oraz aktualizującego status<br />
+    zamówienia internetowego.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW12 -----------------------------</h3><br />
+2020.11.09 [2020.3.10.7]<br />
+  - modyfikacja strefy dostawców uwzględniająca obsługę materiałów edukacyjnych<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2020.11.02 [2020.3.10.7]<br />
+  - Dodanie synchronizacji kartotek kontrahentów z repozytorium dokumentów EDE <br />
+    uwzględniającą konfigurację na wymianę faktur elektronicznych.<br />
+	<br />
+<h3>---------------------------- Zmiany w module APW14 -----------------------------</h3><br />
+2020.11.09 [2020.3.10.7]<br />
+  - Remanent czytnikiem. Zmodyfikowano algorytm przyporządkowujący odczytany<br />
+    kod 2D do konkretnej karty zakupu. Obecnie wyszukuje karty zakupu<br />
+    zawierające kody EAN oraz w przypadku dostaw z kodami własnymi karty<br />
+    towarowe z danym EAN'em oraz przyporządkowane im karty zakupów, <br />
+    które posiadają daną serię.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW31 -----------------------------</h3><br />
+2020.11.09 [2020.3.10.7]<br />
+  - W pliku Polecenia Przelewu bankowości elektronicznej w formacie ELIXIR-0<br />
+    Santander, dodano NIP do pola Tytułem w celu weryfikacji Kontrahenta na <br />
+    białej liście podatników. Funkcjonalność dostępna po zaznaczeniu opcji:<br />
+    APW31 - Płatności.1.17. "Dodaj NIP do Polecenia Przelewu ELIXIR-0 w celu<br />
+    weryfikacji rachumku z Wykazem podatników VAT"<br />
+<br />
+<h3>---------------------------- Zmiany w module APW45 -----------------------------</h3><br />
+2020.11.06 [2020.3.10.7]<br />
+  - wdrożono poprawkę w mechanizmie skalowania dla okna zarządzania regułami<br />
+    synchronizacji oferty i zamówień internetowych.<br />
+  - wdrożono poprawkę dla mechanizmu informującego o wysłaniu wydruku<br />
+    dokumentu sprzedaży do klienta mailem oraz aktualizującego status<br />
+    zamówienia internetowego.<br />
+  - Wdrożono poprawkę dla mechanizmu odświeżania produktu. Występował błąd<br />
+    dla zapytania pobierajacego dane dla produktów niepowiązanych z baza<br />
+    apteczną.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW68 -----------------------------</h3><br />
+2020.11.09 [2020.3.10.7]<br />
+  - Dodano zabezpieczenie przed pojawianiem się błędu TRZB4 - "Podana data transakcji<br />
+    odnosi się do przyszłości", przy generowaniu raportu braków dla raportu utworzonego<br />
+    z listy braków z modułu Zamówienia.	<br />
+<br />
+<h3>----------------------------- ZMIANY.KS-MEDIVERIS ------------------------------</h3><br />
+2020.11.09 [2020.3.10.7]<br />
+  - Na wizytówce apteki w zakładce KOWAL, dodano obsługę automatycznego pobrania <br />
+    certyfikatu dla KOWAL. Po prawidłowym pobraniu i zainstalowaniu certyfikatu <br />
+	w systemie KS-AOW, program dodatkowo zapisuje plik certyfikatu oraz hasło <br />
+	do wskazanego katalogu.	<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2020.11.10<br />
+  ApwPlus.exe [2020.3.10.7]<br />
+  - Uaktualniono strukturę bazy danych<br />
+  <br />
+</body></html>

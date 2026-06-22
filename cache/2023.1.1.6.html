@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2023.1.1.6</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2023.02.02<br />
+  Slowniki.dll [2023.1.1.6]<br />
+  - Pharmind GRID: optymalizacja wysyłanych raportów sprzedaży i zakupów.<br />
+  - Dodano nowe uprawnienie "Zmiana terminu płatności w podsumowaniu dokumentu"<br />
+    (13-0006-06). Uprawnienie umożliwia zmianę terminu płatności podczas<br />
+    zatwierdzania dokumentu zakupu.<br />
+<br />
+  ApwMain.exe [2023.1.1.6]<br />
+  - Dodano obsługę powiadomień z Giełdy Pomysłów do programu KS-AOW.<br />
+    Klient zgłaszający pomysł nie zawsze aktywnie i na bieżąco zaglądał<br />
+    do serwisu by odpowiadać, komentować czy śledzić status swojego pomysłu.<br />
+    Wprowadzone powiadomienia pozwolą by użytkownik był informowany na bieżąco<br />
+    na jakim etapie jest dany pomysł, czy ma nowy komentarz lub czy zmienił<br />
+    status. Informacja o nowej wiadomości będzie wyświetlana w oknie ApMana,<br />
+    ikona 62-Giełda Pomysłów.<br />
+<br />
+  ApwIap.dll [2023.1.1.6]<br />
+  - Rozwiązano problem objawiający się występowaniem komunikatu o błędzie<br />
+    na bazie danych Oracle w momencie przygotowania oferty internetowej<br />
+    dla ofert z hurtowni. Problem dotyczył funkcji "Odśwież ofertę"<br />
+    wywoływaną z poziomu modułu APW45 - Apteka Internetowa -> Towary.<br />
+<br />
+  MVServer.exe [2023.1.1.6]<br />
+  - Synchronizacja stanu magazynu dla automatów Rowa. Rozwiązano problem<br />
+    z pojawianiem się na liście pozycji z data dokumentu 1899-12-30.<br />
+<br />
+  ApwPlan.exe [2023.1.1.6]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+  ApwPlanWorker.exe [2023.1.1.6]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+  ApwHarm.dll [2023.1.1.6]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+  ApwHarmPush.dll [2023.1.1.6]<br />
+  - Rozwiązano problem objawiający się utrzymywaniem w niektórych konfiguracjach<br />
+    otwartej transakcji bazodanowej przez cały okres działania aplikacji ApwPlan<br />
+    aż do zamknięcia aplikacji. Problem dotyczył bazy Firebird.<br />
+<br />
+  Resman.dll [2023.1.1.6]<br />
+  - Rozszerzono zestaw ikon dla programu ApMan.<br />
+<br />
+  Zasoby.dll [2023.1.1.6]<br />
+  - Dodano opis do opcji Apw13.2.102: "Wyświetlaj na karcie zakupu informację<br />
+    o cenie brutto z umowy NFZ na środki pomocnicze".<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2023.02.02 [2023.1.1.6]<br />
+  - KS-OmniPharm: poprawiono przekazywanie informacji o opłacie nocnej.<br />
+  - Pharmind GRID: optymalizacja wysyłanych raportów sprzedaży i zakupów.<br />
+  - Dodano drukowanie własnych form płatności na paragonie fiskalnym<br />
+    dla drukarek Elzab Mera Online.<br />
+  - Dodano wydruk potwierdzenia odrzucenia transakcji kartą dla terminali<br />
+    Elavon bez drukarki (wydruk na drukarce fiskalnej).<br />
+  - eZWM: dodano obsługę nowych potwierdzeń uprawnień osobom, o których mowa<br />
+    w art. 37b ust. 1 ustawy o pomocy obywatelom Ukrainy w związku z konfliktem<br />
+    zbrojnym na terytorium tego państwa w zakresie wynikającym z art. 37 ust. 1<br />
+    tej ustawy oraz osobom o których mowa w art. 2 ust. 1 pkt 3 lit. c ustawy<br />
+    o świadczeniach.<br />
+  - Dodano weryfikację wydania leku w ramach realizacji e-Recepty wystawionej<br />
+    przez Felczera.<br />
+  - Dodano obsługę e-Recept wystawionych na pacjenta z Sudanu.<br />
+  - Rozbudowa funkcjonalności KOMINów.<br />
+  - Dawkomat: dodano Alerty bezpieczeństwa Pharmindex znane już w module <br />
+    Pharmindex Complete. Użytkownicy systemu KS-AOW posiadający aktualną<br />
+    licencję na moduł Pharmindex Complete uzyskają dostęp do dodatkowej wiedzy<br />
+    o leku prezentowanej w polu Dawkomat w momencie wystawiania recepty<br />
+    farmaceutycznej. Będą się one znajdować tuż poniżej pól Dawkomatu. <br />
+    Alerty bezpieczeństwa to profil bezpieczeństwa leku przedstawiony<br />
+    w czytelnej, graficznej postaci. Pozwalają one na szybką weryfikację<br />
+    najważniejszych paramentów lekowych oraz możliwości zastosowania leku<br />
+    w określonych warunkach lub w szczególnych populacjach pacjentów.<br />
+    Dodatkowo koncentrują uwagę na tych właściwościach leku, o których warto<br />
+    poinformować pacjenta, aby stosował lek bezpiecznie i skutecznie.<br />
+    Alerty bezpieczeństwa Pharmindex:<br />
+      * wsparcie w procesie opieki nad pacjentem,<br />
+      * zwiększone bezpieczeństwo pacjenta,<br />
+      * oszczędność czasu.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW12 -----------------------------</h3><br />
+2023.02.02 [2023.1.1.6]<br />
+  - Rozszerzono format przekazywania danych o węzeł <id-towaru-ckt> dla<br />
+    zamówień przekazywanych do systemu centralnego.<br />
+    Węzeł ten będzie się pojawiał dla zamówień gdzie dostawca ma włączoną opcję<br />
+    "Dostawca wykorzystuje do identyfikacji towarów CKT apteki".<br />
+  - Rozbudowa funkcjonalności KOMINów.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2023.02.02 [2023.1.1.6]<br />
+  - Pharmind GRID: optymalizacja wysyłanych raportów sprzedaży i zakupów.<br />
+  - Dodano uprawnienie: "Zmiana terminu płatności w podsumowaniu dokumentu"<br />
+    (13-0006-06). Uprawnienie umożliwia zmianę terminu płatności podczas<br />
+    zatwierdzania dokumentu zakupu.<br />
+  - Zadanie z Giełdy Pomysłów: W oknie "Edycja pozycji" dodano informację<br />
+    o cenie brutto towaru wynikającej z umowy NFZ na środki pomocnicze (UMX).<br />
+    Cena uwzględnia mnożnik apteczny. Informacja widoczna jest po włączeniu<br />
+    opcji Apw13.2.102: "Wyświetlaj na karcie zakupu informację o cenie brutto<br />
+    z umowy NFZ na środki pomocnicze".<br />
+  - Rozbudowa funkcjonalności KOMINów.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2023.02.02 [2023.1.1.6]<br />
+  - Rozwiązano problem skutkujący komunikatem "Out of memory" pojawiający się<br />
+    sporadycznie podczas generowania zestawienia sprzedaży za długi okres czasu.<br />
+  - eZWM: dodano obsługę nowych potwierdzeń uprawnień osobom o których mowa<br />
+    w art. 37b ust. 1 ustawy o pomocy obywatelom Ukrainy w związku z konfliktem<br />
+    zbrojnym na terytorium tego państwa w zakresie wynikającym z art. 37 ust. 1<br />
+    tej ustawy oraz osobom o których mowa w art. 2 ust. 1 pkt 3 lit. c ustawy<br />
+    o świadczeniach.<br />
+  - Poprawiono raport "Raporty wzór Cefarm -> Rozchody". W przypadku, gdy dwa<br />
+    dokumenty różnych typów (np. przesunięcie i korekta) miały ten sam numer,<br />
+    to na wydruku były prezentowane jako jedna pozycja z sumowanymi kwotami.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW23 -----------------------------</h3><br />
+2023.02.02 [2023.1.1.6]<br />
+  - Dodano obsługę e-Recept wystawionych na pacjenta z Sudanu<br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2023.02.02 [2023.1.1.6]<br />
+  - Dodano opcję Apw13.2.102: "Wyświetlaj na karcie zakupu informację o cenie<br />
+    brutto z umowy NFZ na środki pomocnicze".<br />
+  - Rozbudowa funkcjonalności KOMINów.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW43 -----------------------------</h3><br />
+2023.02.02 [2023.1.1.6]<br />
+  - Rozwiązano problem powodujący nieprawidłowe wyświetlenie komunikatu<br />
+    o poprawnym wykonaniu archiwum w przypadku, gdy archiwum zawiera<br />
+    ostrzeżenia i błędy. Problem dotyczył bazy Oracle.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW45 -----------------------------</h3><br />
+2023.02.02 [2023.1.1.6]<br />
+  - Rozwiązano problem objawiający się występowaniem komunikatu o błędzie<br />
+    na bazie danych Oracle w momencie przygotowania oferty internetowej<br />
+    dla ofert z hurtowni. Problem dotyczył funkcji "Odśwież ofertę"<br />
+    wywoływaną z poziomu modułu APW45 - Apteka Internetowa -> Towary.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW55 -----------------------------</h3><br />
+2023.02.02 [2023.1.1.6]<br />
+  - Pharmind GRID: optymalizacja wysyłanych raportów sprzedaży i zakupów.<br />
+  - Rozbudowa funkcjonalności KOMINów.<br />
+<br />
+<h3>---------------------------------- ZMIANY.GP -----------------------------------</h3><br />
+2023.02.02 [2023.1.0.0]<br />
+  - Dodano obsługę powiadomień z Giełdy Pomysłów do programu KS-AOW.<br />
+    Po zmianach  statusu lub dodaniu komentarza przez administratora<br />
+    Giełdy Pomysłów generuje się powiadomienie push do systemu KS-AOW.<br />
+<br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2023.02.02 [2023.1.1.6]<br />
+  - Pharmind GRID: optymalizacja wysyłanych raportów sprzedaży i zakupów.<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2023.02.02<br />
+  ApwPlus [2023.1.1.6]<br />
+  - Aktualizacja struktury bazy danych.<br />
+<br />
+  ApwBase.dll [2023.1.1.6]<br />
+  - Uaktualniono bazę kart serwisowych.<br />
+<br />
+</body></html>

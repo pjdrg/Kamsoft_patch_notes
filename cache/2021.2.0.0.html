@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2021.2.0.0</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2021.05.19<br />
+  MVSERVER.exe [2021.2.0.0]<br />
+    - Optymalizacja procesu synchronizacji stanów dla bazy Oracle.<br />
+    - Dodanie możliwości kasowania miejsca składowania dla towaru.<br />
+<br />
+  Slowniki.dll [2021.2.0.0]<br />
+    - Dodano pole "Rodzaj podmiotu dla ZSMOPL" na karcie Pacjent/Odbiorca <br />
+      w kartotece centralnej.<br />
+    - Poprawa sprzedaży na pracownika na karcie towaru - usunięto zaliczki <br />
+      i rozliczenie zaliczek.<br />
+<br />
+  CopyCloud [2021.2.0.0]<br />
+    - Odtwarzanie bazy danych - poprawiono niewłaściwe wyświetlanie rozmiaru<br />
+      pliku przy pobieraniu z chmury dużych plików.<br />
+      Usługa pokazywała rozmiar 0B i odblokowywała możliwość odtworzenia bazy <br />
+      danych pomimo tego, że plik jeszcze nie został cały pobrany.<br />
+<br />
+  KSOPH.dll [2021.2.0.0]<br />
+    - Dodanie komunikatu do KS-Omnipharm przy zapisie odmowy w repozytorium<br />
+      KS-EDE i wysyłce odmowy do GIF.<br />
+<br />
+  Zasoby.dll [2021.2.0.0]<br />
+    - Uzupełnienie opisu opcji.<br />
+<br />
+  ApwMain.exe [2021.2.0.0]<br />
+    - Aktualizacja interfejsów.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2021.05.19 [2021.2.0.0]<br />
+  - Usunięcie zbędnej informacji wyświetlanej w GUI przy wysyłce komunikatu do<br />
+    KS-Omnipharm.<br />
+  - Sprzedaż podstawowa. Okno NMVS. Dodanie możliwości kopiowania danych <br />
+    poprzez Ctrl+C z okna zawierającego alerty i komunikaty z KOWAL-a.<br />
+  - eZWM - poprawiono liczenie refundacji dla kodu sprzętu: P.090, P.094, <br />
+    P.095, P.096 z uprawnieniem 47xx.<br />
+  - eZWM - przekazywanie do systemu eZWM informacji o numerze serii dla zleceń <br />
+    zaopatrzenia jednorazowego.<br />
+  - Poprwki błędów przy walidacji asynchronicznej.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW12 -----------------------------</h3><br />
+2021.05.19 [2021.2.0.0]<br />
+  - Poprawa rozliczenia sprzedaży, usunięto zaliczki i rozliczenie zaliczek na:<br />
+    * lista braków - wykres sprzedaży leku,<br />
+    * wykres rozchodu towaru,<br />
+    * sprzedaż leku po kliknięciu na słupek na wykresie.<br />
+  - Dodanie komunikatu do KS-Omnipharm przy zapisie odmowy w repozytorium KS-EDE<br />
+    i wysyłce odmowy do GIF.<br />
+  - Zamówienia łączone: poprawa błędu z przeskakiwaniem do ostatniej pozycji<br />
+    podczas wprowadzania ilości.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2021.05.19 [2021.2.0.0]<br />
+  - W "Kontroli dokumentów zakupu" zmieniono priorytet działania <br />
+    opcji "Weryfikacja w systemie NMVS". Nadrzędną staje się opcja w APW41. <br />
+    Zmienianie ręcznie opcji w oknie "Kontroli dokumentów zakupu" nie wypływa <br />
+    na opcję w APW41.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW14 -----------------------------</h3><br />
+2021.05.19 [2021.2.0.0]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2021.05.19 [2021.2.0.0]<br />
+  - Poprawa rozliczenia Produkcji na: Raport towarowy zbiorczy.<br />
+    Rozchód składników na produkcję był mylnie opisany jako przychód.<br />
+  - Poprawa eksportu do programu Fakt dla faktur sprzedaży.<br />
+  - Wyroby medyczne (środki pomocnicze): poprawiono mechanizm przepisywania <br />
+    powiązań produktów umowy z towarami aptecznymi na podstawie wskazanej umowy.<br />
+    Poprawiony mechanizm wiąże produkty po dodatkowych atrybutach <br />
+    towaru (nazwa, producent, model). Uruchamiany jest w momencie wczytywania <br />
+    nowej umowy (lub aneksu) lub ręcznie (po zaczytanej umowie) <br />
+    w oknie "Produkty handlowe środków pomocnicznych z umowy", przycisk Ctrl+P.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW23 -----------------------------</h3><br />
+2021.05.19 [2021.2.0.0]<br />
+  - Przegląd sprzedaży w okresie czasu, usunięto zaliczki i rozliczenie zaliczek.<br />
+  - Wydruk książki kontroli narkotyków i psychotropów: poprawka obcinania treści<br />
+    z kolumny uwagi.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW24 -----------------------------</h3><br />
+2021.05.19 [2021.2.0.0]<br />
+  - Dodano kolumnę BLOZ oraz wydruk graficzny na zestawieniu "Analiza sprzedaży<br />
+    leków".<br />
+<br />
+<h3>---------------------------- Zmiany w module APW25 -----------------------------</h3><br />
+2021.05.19 [2021.2.0.0]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2021.05.19 [2021.2.0.0]<br />
+  - Dodano opcję APW24.1.7 "Wydruk graficzny Analizy sprzedaży leków".<br />
+    Opcja domyślnie nieaktywna.<br />
+<br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2021.05.19 [2021.2.0.0]<br />
+  - Poprawki błędów przy walidacji asynchronicznej.<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2021.05.19<br />
+  Apwbase.dll [2021.2.0.0]<br />
+    - Uaktualniono bazę kart serwisowych.<br />
+<br />
+  ApwPlus.exe [2021.2.0.0]<br />
+    - Uaktualniono strukturŕ bazy danych.<br />
+<br />
+</body></html>

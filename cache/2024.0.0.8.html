@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2024.0.0.8</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2023.11.29<br />
+  Slowniki.dll [2024.0.0.8]<br />
+  - Dodano podgląd karty z bufora CKT. Dotychczas możliwe było tylko podejrzenie<br />
+    karty z kartoteki centralnej, przez co użytkownik nie widział co przyszło<br />
+    w buforze CKT.<br />
+  - Rozwiązano problem objawiający się potrzebą zmiany PINu dla aplikacji<br />
+    KS-Aptix przy zmianie hasła dla nowego użytkownika.<br />
+  - Dodano kopiowanie do schowka zawartości pól dostępnych na przeglądzie <br />
+    dostaw (klawisz [F6] Dostawy) na karcie towaru. Kopiowanie dostępne jest<br />
+    po wybraniu skrótu Ctrl+C lub naciśnięciu prawego klawisza myszy na wybranym<br />
+    polu przeglądu dostaw.<br />
+<br />
+  ApwMain.exe [2024.0.0.8]<br />
+  - Dodano automatyczne uruchamianie usługi KSPcsApiService oraz WSP<br />
+    na stanowisku na którym te usługi są zainstalowane.<br />
+<br />
+  ApwControl.exe [2024.0.0.8]<br />
+  - Dodano monitorowanie i podgląd działania usług ApiService oraz WSP.<br />
+<br />
+  ApwHarm.dll [2024.0.0.8]<br />
+  - Rozwiązano problem dotyczący nieprawidłowego zarządzania dostępnością<br />
+    produktów dla hurtowni dla automatu odpowiedzialnego za przygotowanie oferty<br />
+    internetowej "Aktualizuj ceny". Problem charakteryzował się ustawianiem<br />
+    dostępności na "nieznane" oraz ukrywaniem produktu. Akcja jest wywoływana<br />
+    zadaniem "Aktualizacja oferty dla apteki internetowej" w aplikacji<br />
+    ApwPlan – Harmonogram zadań.<br />
+  - Rozbudowano ustawienia dla eksportu oferty internetowej o opcję "Jeśli cena<br />
+    produktu jest równa zero, przekazuj cenę historyczna z oferty większą<br />
+    od zera". Włączenie tej opcji spowoduje omijanie wysyłania cen zerowych,<br />
+    jeśli cena aktualna produktu jest zerowa np. z powodu chwilowego braku<br />
+    dostępności. Opcja jest dostępna w module internetowym "APW45 - Apteka<br />
+    internetowa -> Komunikacja -> Ustawienia -> Ustawienia” w zakładce "Oferta".<br />
+    Akcja jest wywoływana zadaniem "Aktualizacja oferty dla apteki internetowej"<br />
+    w aplikacji ApwPlan – Harmonogram zadań.<br />
+  - Rozwiązano problem dotyczący nieprawidłowego zarządzania polem cena<br />
+    poprzednia w bazie internetowej. Problem objawiał się tym, że traciliśmy<br />
+    cenę historyczną dla oferty internetowej. Za zarządzanie ceny poprzedniej<br />
+    odpowiadają automaty do budowania oferty "Odśwież ofertę" oraz "Aktualizuj<br />
+    ceny".<br />
+  - Rozwiązano problem z zarządzaniem transakcjami bazodanowymi dla automatów<br />
+    "Aktualizuj cen" oraz "Odśwież ofertę". Funkcje te są wywoływane zadaniem<br />
+    "Aktualizacja oferty dla apteki internetowej" w aplikacji<br />
+    ApwPlan – Harmonogram zadań.<br />
+  - Rozwiązano problem z działaniem opcji "Jeśli nowa cena jest równa 0,<br />
+    to nie aktualizuj produktu dla akcji "Aktualizuj cen", a dla akcji "Odśwież<br />
+    ofertę" przywracaj cenę historyczną większą od zera.".<br />
+    Problem objawiał się tym, że opcja nie działała dla akcji "Odśwież ofertę".<br />
+    Akcja jest wywoływana zadaniem "Aktualizacja oferty dla apteki internetowej"<br />
+    w aplikacji ApwPlan – Harmonogram zadań.<br />
+<br />
+  ApwIap.dll, ApInetAp.dll [2024.0.0.8]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+  KSOPH.dll [2024.0.0.8]<br />
+  - Uzupełnienie danych o realizacji zamówienia w przypadku braku identyfikatora<br />
+    zewnętrznego pozycji zamówienia w komunikacie do KS-Omnipharm.<br />
+<br />
+  ApwFN.dll [2024.0.0.8]<br />
+  - Zaktualizowano opisy opcji i uprawnień w przeglądzie zleceń z centrali<br />
+    KS-ZSA.<br />
+  - Uaktualniono mechanizm wykonywania zleceń aktualizacji kartotek<br />
+    tak aby obsłużone było pole "Blokada podziału opakowania".<br />
+<br />
+  Wspolny.dll [2024.0.0.1]<br />
+  - Usunięto błąd pojawiający się podczas wyszukiwania towarów w CKT<br />
+    (Zapotrzebowania na karty -> F2 Dodaj -> F5 Szukaj w CKT).<br />
+<br />
+  Zasoby.dll [2024.0.0.8]<br />
+  - Aktualizacja opisów opcji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2023.11.29 [2024.0.0.8]<br />
+  - Poprawiono funkcję sprawdzającą niewysłane DRR podczas uruchamiania modułu<br />
+    sprzedaży. Wykluczono realizację recept wystawionych na pacjenta NN<br />
+    oraz realizację recept farmaceutycznych i transgranicznych - papierowych.<br />
+  - Poprawa sprzedaży z zamówienia na import docelowy (F12) leku<br />
+    nierefundowanego z odpłatnością ryczałtową. W niektórych przypadkach program<br />
+    nie używał tabeli marż urzędowych do wyliczenia ceny transakcji.<br />
+  - Poprawa weryfikacji surowca z grupy II-N, III-P, IV-P przy wyborze składnika<br />
+    receptury. W niektórych przypadkach program blokował wybór składnika<br />
+    dla e-Recepty, sądząc że realizowana jest recepta papierowa.<br />
+  - Poprawiono obliczanie zapłaty dla faktur VAT i korekt wystawionych od ceny<br />
+    netto.<br />
+  - Rozwiązano problem z dublowaniem się numerów ogólnych recept w przypadku<br />
+    korzystania z zaliczki zerowej realizowanej w dniu jej pobrania.<br />
+  - Operacje magazynowe: dodano w kolumnie "Nazwa operacji" wyświetlanie<br />
+    wybranej przyczyny powstania dla dokumentów nadwyżki/straty.<br />
+  - Pharmind GRID: Optymalizacja raportowania sprzedaży leków recepturowych.<br />
+  - Optymalizacja działania usługi Podobniki.<br />
+  - Dodano kopiowanie do schowka zawartości pól: Faktura, Seria, Kod kreskowy <br />
+    i Dostawca widocznych na liście dostaw po naciśnięciu klawisza F3. <br />
+    Kopiowanie dostępne jest po naciśnięciu prawym przyciskiem myszy na wybranej<br />
+    wartości.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2023.11.29 [2024.0.0.8]<br />
+  - KS-OmniPharm: uzupełniono przekazywane dane o informacje o wstrzymanych<br />
+    towarach.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW14 -----------------------------</h3><br />
+2023.11.29 [2024.0.0.8]<br />
+  - Poprawiono filtrowanie w buforowanej poprawie listy leków (Pajączek).<br />
+    W niektórych przypadkach wyświetlała się pusta lista po wybraniu<br />
+    "[F9] – Filtruj wg:".<br />
+  - Dodano podgląd karty z bufora CKT. Dotychczas możliwe było tylko podejrzenie<br />
+    karty z kartoteki centralnej, przez co użytkownik nie widział co przyszło<br />
+    w buforze CKT.<br />
+  - KS-OmniPharm: uzupełniono przekazywane dane o informacje o wstrzymanych<br />
+    towarach.<br />
+  - Modyfikacja w zakresie inwentaryzacji mobilnej KS-APTIX. Rozwiązano problem <br />
+    wczytywania bardzo dużej liczby skanów przez usługę ApiService.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2023.11.29 [2024.0.0.8]<br />
+  - Środki pomocnicze: rozwiązano problem objawiający się niepoprawnym<br />
+    komunikatem o niewprowadzonej ilości na zleceniu.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW22 -----------------------------</h3><br />
+2023.11.29 [2024.0.0.8]<br />
+  - Dodano podgląd karty z bufora CKT. Dotychczas możliwe było tylko podejrzenie<br />
+    karty z kartoteki centralnej, przez co użytkownik nie widział co przyszło<br />
+    w buforze CKT.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW23 -----------------------------</h3><br />
+2023.11.29 [2024.0.0.8]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2023.11.29 [2024.0.0.8]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW45 -----------------------------</h3><br />
+2023.11.29 [2024.0.0.8]<br />
+  - Rozwiązano problem dotyczący nieprawidłowego zarządzania dostępnością<br />
+    produktów dla hurtowni dla automatu odpowiedzialnego za przygotowanie oferty<br />
+    internetowej "Aktualizuj ceny". Problem charakteryzował się ustawianiem<br />
+    dostępności na "nieznane" oraz ukrywaniem produktu.<br />
+    Funkcja "Aktualizuj ceny" jest dostępna w module internetowym <br />
+    "APW45 - Apteka internetowa -> Towary".<br />
+  - Rozbudowano ustawienia dla eksportu oferty internetowej o opcję "Jeśli cena<br />
+    produktu jest równa zero, przekazuj cenę historyczna z oferty większą<br />
+    od zera". Włączenie tej opcji spowoduje omijanie wysyłania cen zerowych,<br />
+    jeśli cena aktualna produktu jest zerowa np. z powodu chwilowego braku<br />
+    dostępności. Opcja jest dostępna w module internetowym "APW45 - Apteka<br />
+    internetowa -> Komunikacja -> Ustawienia -> Ustawienia" w zakładce "Oferta".<br />
+  - Rozwiązano problem dotyczący nieprawidłowego zarządzania marżą na karcie<br />
+    internetowej. Problem dotyczył ustawiania marży na karcie aptecznej<br />
+    i jej widocznością w oknie "APW45 - Apteka internetowa -> Towary -> Karta<br />
+    Internetowa w sekcji "Zarządzanie marżą".<br />
+  - Rozwiązano problem dotyczący nieprawidłowego zarządzania polem cena<br />
+    poprzednia w bazie internetowej. Problem objawiał się tym, że traciliśmy<br />
+    cenę historyczną dla oferty internetowej. Za zarządzanie ceny poprzedniej<br />
+    odpowiadają automaty do budowania oferty "Odśwież ofertę" oraz "Aktualizuj<br />
+    ceny", funkcje te są dostępne module internetowym "APW45 - Apteka<br />
+    internetowa -> Towary".<br />
+  - Rozwiązano problem z zarządzaniem transakcjami bazodanowymi dla automatów<br />
+    "Aktualizuj cen" oraz "Odśwież ofertę". Akcje te są dostępne w module<br />
+    internetowym "APW45 - Apteka internetowa -> Towary".<br />
+  - Rozwiązano problem z działaniem opcji "Jeśli nowa cena jest równa 0, to nie<br />
+    aktualizuj produktu dla akcji "Aktualizuj cen", a dla akcji "Odśwież ofertę"<br />
+    przywracaj cenę historyczną większą od zera.". Problem objawiał się tym,<br />
+    że opcja nie działała dla akcji "Odśwież ofertę". Opcja ta jest dostępna<br />
+    w module internetowym "APW45 - Apteka internetowa -> Reguły -> Towary"<br />
+    w sekcji "Ustawienia".<br />
+<br />
+<h3>---------------------------- Zmiany w module APW68 -----------------------------</h3><br />
+2023.11.29 [2024.0.0.8]<br />
+  - Rozwiązano problem zapisu raportów do repozytorium KS-EDE.<br />
+    Podczas próby zapisu wyświetlało się ostrzeżenie, że raport nie zapisał się<br />
+    do repozytorium KS-EDE.<br />
+<br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2023.11.29 [2024.0.0.8]<br />
+  - Pharmind GRID: Raportowanie historycznych stanów magazynowych na 1-go dnia<br />
+    każdego miesiąca.<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2023.11.29<br />
+  ApwPlus [2024.0.0.8]<br />
+  - Aktualizacja struktury bazy danych.<br />
+<br />
+  IBRest [2024.0.0.8]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+</body></html>

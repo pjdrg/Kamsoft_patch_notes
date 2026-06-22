@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2024.0.3.7</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2024.03.26<br />
+  Slowniki.dll [2024.0.3.7]<br />
+  - Na karcie BLOZ rozszerzono informacje o wykazach G1 i G2<br />
+    (zakładka "[Ctrl+4] Status", Kategoria - Refundacja).<br />
+  - Na karcie towaru rozszerzono informacje o wykazach G1 i G2<br />
+    (zakładka "[Ctrl+3] Typy").<br />
+  - Zmiana warunków wyświetlania komunikatów z walidacji dostawców.<br />
+  - Pharmind NAVICON: dostęp do kontraktów.<br />
+<br />
+  ApwIap.dll [2024.0.3.7]<br />
+  - Rozwiązano problem dotyczący nieprawidłowego generowaniem automatycznych MM.<br />
+    Problem objawiał się tym, że w przypadku podwójnego wpisu w tabeli z normami<br />
+    dla towaru, program pobierał podwójną ilość do przesunięcia.<br />
+    Automatyczne MM w module APW45 – Apteka Internetowa są generowane<br />
+    po włączeniu opcji "Automatycznie generuj dokumenty MM, podczas rezerwacji<br />
+    zamówień" oraz poprzez APWPLAN i zadanie pobierania zamówień internetowych.<br />
+<br />
+  ApwHarm.dll [2024.0.3.7]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+  Zasoby.dll [2024.0.3.7]<br />
+  - Aktualizacja opisów opcji.<br />
+<br />
+  ApwFN.dll [2024.0.3.7]<br />
+  - Zmodyfikowano opisy zleceń kartoteki towarowej.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2024.03.26 [2024.0.3.7]<br />
+  - W związku z nowelizacją Ustawy o refundacji leków (Dz. U. z 2023 r. poz.<br />
+    1938) wprowadzającą nowe rozwiązania mające na celu zwiększenie udziału<br />
+    w rynku produktów leczniczych wytwarzanych w Polsce i pojawieniem się<br />
+    nowych wykazów G1 i G2 (leki lub substancja czynna wytworzona w Polsce)<br />
+    zmieniono sposób wyliczania zapłaty pacjenta dla pacjentów z uprawnieniami<br />
+    ZK, IW i PO. W przypadku sprzedaży leków z ww wykazów dla tych pacjentów<br />
+    zapłata zostanie obniżona odpowiednio o 10 lub 15%.<br />
+  - Zamówienie / lista braków ze sprzedaży: optymalizacja obsługi dopisywania<br />
+    nowej pozycji do listy.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW12 -----------------------------</h3><br />
+2024.03.26 [2024.0.3.7]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2024.03.26 [2024.0.3.7]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW14 -----------------------------</h3><br />
+2024.03.26 [2024.0.3.7]<br />
+  - Modyfikacja funkcji aktualizacji bazy leków z BLOZ: dodano import z BLOZ<br />
+    wykazów G1 i G2.<br />
+  - Zmieniono przegląd w funkcji "Buforowana poprawa listy leków" oraz "Szybka<br />
+    poprawa listy leków": usunięto kolumny "Ilość ryczałtowa" oraz "Ilość<br />
+    ryczałtowa niebieska".<br />
+<br />
+<h3>---------------------------- Zmiany w module APW15 -----------------------------</h3><br />
+2024.03.26 [2024.0.3.7]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW23 -----------------------------</h3><br />
+2024.03.26 [2024.0.3.7]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW35 -----------------------------</h3><br />
+2024.03.26 [2024.0.3.7]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2024.03.26 [2024.0.3.7]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW45 -----------------------------</h3><br />
+2024.03.26 [2024.0.3.7]<br />
+  - Rozwiązano problem dotyczący nieprawidłowego zachowania się programu<br />
+    po wykonaniu funkcji "Odśwież ofertę" w oknie APW45 – Apteka Internetowa<br />
+    -> Towary lub podczas realizacji zadania aktualizacji oferty w aplikacji<br />
+    APWPLAN z wykorzystaniem innej oferty niż podstawowa.<br />
+    Problem objawiał się tym, że aplikacja po wykonaniu funkcji "Odśwież ofertę"<br />
+    zwracała komunikat błędu podczas odświeżania zawartości danych.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW55 -----------------------------</h3><br />
+2024.03.26 [2024.0.3.7]<br />
+  - Pharmind NAVICON: dostęp do kontraktów.<br />
+<br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2024.03.26 [2024.0.3.7]<br />
+  - Pharmind NAVICON: dostęp do kontraktów.<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2024.03.26<br />
+  ApwBase.dll [2024.0.3.7]<br />
+  - Uaktualniono bazę kart serwisowych.<br />
+<br />
+</body></html>

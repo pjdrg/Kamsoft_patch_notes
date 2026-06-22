@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2026.2.0.0</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2026.05.14<br />
+  Slowniki.dll [2026.2.0.0]<br />
+  - Na karcie pacjent/odbiorca dodana została opcja: "Wymuszaj wystawianie<br />
+    faktur do KSeF".<br />
+  - Wprowadzono wyświetlanie Serwisu Apteki z wykorzystaniem nowej przeglądarki.<br />
+<br />
+  ApwMain [2026.2.0.0]<br />
+  - Uwzględniono wykonanie kopii bezpieczeństwa w usłudze CopyCloud we wskaźniku<br />
+    bezpieczeństwa (automatyczne tworzenie kopii zapasowych bazy danych).<br />
+  - Zmodyfikowano wskaźnik bezpieczeństwa dla ustawień opcji bezpieczeństwa:<br />
+    * dla parametru 5.9 "Czas bezczynności po jakim nastąpi zamknięcie modułu"<br />
+      maksymalna wartość została zmieniona z 5 na 60 minut, natomiast wartość<br />
+      punktowa liczona do wskaźnika została zmieniona z 4 na 2 punkty,<br />
+    * uwzględniono parametr 5.23 "Czas bezczynności, po którym nastąpi<br />
+      automatyczne wylogowanie użytkownika z programu" z maksymalną wartością<br />
+      ustaloną na 5 minut oraz wartością punktową liczoną do wskaźnika ustaloną<br />
+      na 2 punkty.<br />
+<br />
+  OSOZMOK.dll [2026.1.2.1]<br />
+  - Wprowadzono wyświetlanie Serwisu Apteki z wykorzystaniem nowej przeglądarki.<br />
+<br />
+  ApwOph.dll, ApInetAp.dll, ApwHarm.dll [2026.2.0.0]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2026.05.14 [2026.2.0.0]<br />
+  - Poprawiono sposób wyświetlania e-Recepty. Usunięto niedogodność, która mogła<br />
+    powodować brak widoczności części wizualnej dokumentu.<br />
+  - Dodano obsługę tworzenia dokumentów MM oraz kompletacji zamówień z innych<br />
+    aptek z wykorzystaniem mobilnej aplikacji KS Aptix.<br />
+  - Wprowadzono możliwość wystawiania i wysyłki faktur VAT do KSeF dla odbiorców<br />
+    posługujących się europejskim numerem NIP (NIP UE). Dzięki temu możliwa jest<br />
+    poprawna obsługa faktur dla kontrahentów zagranicznych z krajów Unii<br />
+    Europejskiej.<br />
+  - Wprowadzono możliwość wystawiania faktur VAT ze stawką 0% dla transakcji<br />
+    związanych z wewnątrzwspólnotową dostawą towarów (WDT) oraz eksportem<br />
+    towarów. Wystawienie powyższych faktur wymaga zdefiniowania nowego typu<br />
+    faktury z ustawioną odpowiednią stawką dla 0%.<br />
+  - Dla korekty nagłówka dodano możliwość korekty formy i daty płatności<br />
+    za fakturę. Zmiany formy płatności będą uwzględniane w raporcie kasowym.<br />
+  - Dodano możliwość wystawiania faktur do KSeF w przypadku, gdy nabywcą jest<br />
+    pacjent, a co najmniej jeden z odbiorców wymaga wystawiania faktur w KSeF<br />
+    oraz aktywna jest opcja: Wspólne -> KSeF -> Rodzaj wystawionej faktury<br />
+    dla osoby fizycznej nieprowadzącej działalności -> Faktura papierowa.<br />
+    Aby możliwe było wystawienie faktury do KSeF dla danego kontrahenta,<br />
+    na karcie pacjenta/odbiorcy należy zaznaczyć parametr: "Wymuszaj wystawianie<br />
+    faktur do KSeF".<br />
+  - Dla rejestru faktur zakupu wysłanych do KSeF (stan usług) dodano opcję<br />
+    ustawienia daty początkowej od kiedy dany rejestr ma być kontrolowany.<br />
+    W opcjach KSeF dodano możliwość definicji tej daty.<br />
+  - Wprowadzono wyświetlanie Serwisu Apteki z wykorzystaniem nowej przeglądarki.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW12 -----------------------------</h3><br />
+2026.05.14 [2026.2.0.0]<br />
+  - Modyfikacja w zakresie Optymalizatora zamówień. Rozwiązano problem<br />
+    objawiający się dublowaniem ilości w pozycji towaru z listy braków<br />
+    w przypadku posiadania ukrytej kart towaru z tym samym identyfikatorem<br />
+    BlozId co inna aktywna karta towaru.<br />
+  - Wprowadzono wyświetlanie Serwisu Apteki z wykorzystaniem nowej przeglądarki.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2026.05.14 [2026.2.0.0]<br />
+  - Zadanie z Giełdy pomysłów: W oknie "Wczytanie faktury lub przesunięcia"<br />
+    dodano przycisk "[F9] Opcje" umożliwiający konfigurację komunikatów<br />
+    wyświetlanych podczas wczytywania dokumentów. Użytkownik może określić<br />
+    m.in. czy program ma pytać o wczytanie dokumentu, pokazywać podsumowanie<br />
+    odczytu, pytać o usunięcie wczytanego pliku oraz w jaki sposób obsługiwać<br />
+    podgląd dokumentu.<br />
+  - Automatyczne przeceny: rozwiązano problem z nieprawidłowym działaniem<br />
+    przeceny dla dokumentów MM.<br />
+  - Dodano weryfikację numeru KSeF zarówno podczas przyjęcia dokumentu<br />
+    na magazyn, jak i podczas wprowadzania numeru KSeF w trakcie edycji<br />
+    dokumentu.<br />
+  - W buforze dokumentów zablokowano możliwość przeniesienie dokumentu<br />
+    jako kosztowego lub rabatowego, jeśli definicja dokumentu jest nieaktywna.<br />
+  - Udoskonalono przetwarzanie pozycji faktur z datą ważności 0001 01 01<br />
+    na etapie generowania danych do aplikacji mobilnej KS-APTIX, dla procesu<br />
+    weryfikacji dostaw.<br />
+  - Wprowadzono wyświetlanie Serwisu Apteki z wykorzystaniem nowej przeglądarki.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW14 -----------------------------</h3><br />
+2026.05.14 [2026.2.0.0]<br />
+  - Udoskonalono przetwarzanie pozycji faktur z datą ważności 0001 01 01<br />
+    na etapie generowania danych do aplikacji mobilnej KS-APTIX, dla procesu<br />
+    inwentaryzacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2026.05.14 [2026.2.0.0]<br />
+  - Raport sumaryczny: Modyfikacja sposobu wyliczania wartości dokumentów<br />
+    przychodu - z sumy wykluczono pozycje usług.<br />
+  - Raport w formacie EDI++ (Insert zakupy, sprzedaż): Rozszerzenie eksportu<br />
+    danych o informacje bankowe kontrahenta - nazwę banku oraz numer rachunku.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW23 -----------------------------</h3><br />
+2026.05.14 [2026.2.0.0]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2026.05.14 [2026.2.0.0]<br />
+  - W ustawieniach modułu dla KSeF zostały dodane nowe opcje:<br />
+    * Typ kontekstu logowania do KSeF (NIP, Identyfikator wewnętrzny),<br />
+    * Data początku kontroli statusu faktur zakupowych.<br />
+  - Dodano możliwość konfiguracji stanowiska zgodnie z posiadaną licencją<br />
+    na mobilną aplikację KS-APTIX, niezbędną do obsługi kompletacji zamówień<br />
+    i tworzenia dokumentów MM.<br />
+  - Zmieniono opis opcji APW.13.2.36 na "Automatyczna przecena: wybrany<br />
+    dostawca".<br />
+  - Zmieniono opis opcji APW.13.2.37 na "Automatyczna przecena: minimalna<br />
+    procentowa marża".<br />
+<br />
+<h3>---------------------------- Zmiany w module APW42 -----------------------------</h3><br />
+2026.05.14 [2026.2.0.0]<br />
+  - Aktualizacja struktury bazy danych.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW55 -----------------------------</h3><br />
+2026.05.14 [2026.2.0.0]<br />
+  - Wprowadzono wyświetlanie Serwisu Apteki z wykorzystaniem nowej przeglądarki.<br />
+<br />
+<h3>-------------------------------- Zmiany w iRap ---------------------------------</h3><br />
+2026.05.14 [2026.2.0.0]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2026.05.14 [2026.2.0.0]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>----------------------------- Zmiany w pharmindXF ------------------------------</h3><br />
+2026.05.14 [2026.5.5.1]<br />
+  - Dodano możliwość działania z KSeF w kontekście logowania poprzez<br />
+    Identyfikator wewnętrzny. Identyfikator wewnętrzny KSeF (IDWew) to unikalny<br />
+    kod w Krajowym Systemie e-Faktur, przypisany do konkretnego oddziału,<br />
+    zakładu lub jednostki organizacyjnej firmy, która nie posiada własnego NIP-u<br />
+    a pozwala na precyzyjne rozróżnianie faktur wewnątrz dużych firm.<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2026.05.14<br />
+  ApwPlus, WaUtil [2026.2.0.0]<br />
+  - Aktualizacja struktury bazy danych.<br />
+<br />
+  IbPack [2026.2.0.0] [2026.2.0.0]<br />
+  - Wprowadzono optymalizację procesu odchudzania bazy danych.<br />
+<br />
+  DbCopy [2026.2.0.0]<br />
+  - Wprowadzono optymalizację procesu kopiowania oraz dodano raport<br />
+    weryfikacyjny generowany po jego zakończeniu.<br />
+<br />
+  OraRest [2026.2.0.0]<br />
+  - Poprawiono skalowanie formularza do wpisywania hasła.<br />
+<br />
+</body></html>

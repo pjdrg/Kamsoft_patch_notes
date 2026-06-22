@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2019.2.10.1</title>
+</head>
+<body>
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2019.08.20 [2019.3.5.0]<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2019.08.20 [2019.3.6.0]<br />
+   - W "Kontroli dokumentów zakupu" dodano możliwość weryfikowania towaru<br />
+     w systemie NMVS. <br />
+     Jeśli jest włączona opcja "F8 - Weryfikacja w systemie NMVS", a:<br />
+     a) towar podlega serializacji i odczytano kod 2D, program zweryfikuje go<br />
+        w systemie NMVS.<br />
+     b) towar nie podlega serializacji, a kod 2D w systemie NMVS został <br />
+        zweryfikowany pozytywnie, program zaproponuje zaznaczenie na karcie <br />
+        towaru: "Podlega serializacji"<br />
+     c) towar nie podlega serializacji, a kod 2D w systemie NMVS został <br />
+        zweryfikowany negatywnie, program zweryfikuje kartę zakupu po polach: EAN <br />
+        (kod kreskowy z karty zakupu), seria i data ważności<br />
+     d) odczytano kod 1D, program nie zweryfikuje w systemie NMVS, <br />
+        zweryfikuje karty zakupu po EAN.<br />
+   - Zablokowano możliwość usunięcia pozycji na dokumencie zakupu <br />
+     w przypadku, gdy dokument został już przyjęty na magazyn. <br />
+     W "Pozycjach dokumentu zakupu", podczas próby usunięcia <br />
+     pozycji, program zaproponuje utworzenie korekty wewnętrznej "na minus". <br />
+   - Dodano obsługę parametru apw13.2.92: "Blokuj przyjmowanie faktur, <br />
+     jeśli towar, raportowany w ZSMOPL, nie ma uzupełnionej serii/daty ważności".<br />
+     Parametr domyślnie jest wyłączony.<br />
+     <br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2019.08.23 [2019.3.0.6]<br />
+  - Dostosowanie zestawień "Rozliczenie obrotu" (Rozliczenie podatku VAT) <br />
+    i "Rozliczenie fiskalne" do pracy w trybie wielomagazynowym.<br />
+  - Poprawiono aktualizowanie numeru DRR przy generowaniu korekty dla recept na <br />
+    leki recepturowe<br />
+  - Poprawiono nagłówki wydruków faktury refundacyjnej<br />
+  <br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2019.08.21 [2019.3.8.0]<br />
+  - Dodano uprawnienie: 41-0047 - Upoważnienie do zawierania umów i składania innych oświadczeń woli dotyczących Apteki<br />
+  - Dodano opcję w menu: APW41 -> Omnipharm -> Poświadczanie zgód PCA<br />
+<br />
+<h3>---------------------------- Zmiany w module APW68 -----------------------------</h3><br />
+2019.08.22 [2019.3.3.3]<br />
+  - Poprawka na wystąpienie błędu 'Invalid argument to time encode'.<br />
+  - Poprawka na wystąpienie błędu '... is not valid date and time'.<br />
+  - Dodana preambuła w pliku xml raportu ZSMOPL.<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2019.08.23<br />
+  Apwplus.exe [2019.3.14.0]<br />
+  - Uaktualniono strukturę bazy danych<br />
+<br />
+</body></html>

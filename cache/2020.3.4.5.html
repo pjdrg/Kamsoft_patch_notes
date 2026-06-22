@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2020.3.4.5</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2020.06.18<br />
+  apwharm.dll [2020.3.4.5]<br />
+  - Poprawiono zarządzanie domyślnymi ostrzeżeniami dla produktów  <br />
+    oferty internetowej dla zadania "Aktualizacja oferty dla Apteki<br />
+    Internetowej" w aptecznym harmonogramie zadań. <br />
+  slowniki.dll [2020.3.4.5]<br />
+  - Natychmiastowe zatrzymanie wątku ładowania danych kategoryzacji GRUPEX jeśli<br />
+    nastąpił proces zwalniania biblioteki dll i/lub nastąpił proces zamykania<br />
+    aplikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2020.06.23 [2020.3.4.5]<br />
+  - NMVS - poprawa wyświetlania informacji dla funkcji [F5] weryfikacja kodu.<br />
+    Program błędnie wyświetlał informację, że kod był sprzedany po procesie <br />
+	anulowaniu wycofania kodu w NMVS. <br />
+  - eZWM - dostosowanie do wersji 2.1.6.	<br />
+    Po planowanej w dniu 1.07.2020 aktualizacji systemu eZWM do wersji 2.1.6 <br />
+    możliwa będzie realizacja zlecenia comiesięcznego poprzez wysyłkę kurierską.<br />
+    W Sprzedaży (od 1.07.2020) podczas realizacji zlecenia dostępna będzie opcja <br />
+    odbioru wyrobu: "Kurier" (obok "Pacjenta" i "Innej osoby").<br />
+    Zaznaczenie tej opcji spowoduje obowiązek wygenerowania przez aptekę <br />
+    dokumentu potwierdzenia odbioru realizacji zlecenia zaraz po otrzymaniu <br />
+    informacji od kuriera o osobie, która odebrała wyrób medyczny. <br />
+    Dokument generowany jest w oknie eZWM, przycisk "[[Ctrl+P] Pokaż realizacje"-><br />
+    "Potwierdź realizację".<br />
+  - Rozwiązano problem "Błąd podczas sprawdzania ankiet" pojawiający się czasem<br />
+    na bazie Oracle w trybie Direct<br />
+	<br />
+<h3>---------------------------- Zmiany w module APW12 -----------------------------</h3><br />
+2020.06.23 [2020.3.4.5]<br />
+  - Lista braków. Poprawa wykonywania funkcji [Ctrl+F12] Sprzedaż. <br />
+    Podczas analizy sprzedaży program się zawieszał lub zamykał co <br />
+	uniemożliwiało wyświetlanie analizy sprzedaży za wybrany okres.<br />
+  - Prospekty. Poprawa wylicznia ilości sprzedaży towaru za okres.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2020.06.23 [2020.3.4.5]<br />
+  - Dodanie wysyłki zaległych potwierdzeń wymiany dokumentów eFV <br />
+    przed pobraniem nowych dokumentów<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2020.06.23 [2020.3.4.5]<br />
+  - Poprawa generowania eksportu do Optimy. Program nie uwzględniał <br />
+    MM-ek przychodzących z aptek zewnętrznych.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW23 -----------------------------</h3><br />
+2020.06.16 [2020.3.4.5]<br />
+  - Rozwiązano problem "Błąd podczas sprawdzania ankiet" pojawiający się czasem<br />
+    na bazie Oracle w trybie Direct<br />
+<br />
+<h3>---------------------------- Zmiany w module APW42 -----------------------------</h3><br />
+2020.06.19 [2020.3.4.5]<br />
+  - Konfiguracja iRap - weryfikacja zapobiegająca powstawaniu duplikatu apteki<br />
+    jeśli podczas edycji istniejącego zapisu zmianie uległ numer apteki.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW45 -----------------------------</h3><br />
+2020.06.18 [2020.3.4.4]<br />
+  - Poprawiono sprawdzanie dostawców dla analizy aptek własnych<br />
+    oraz ofert z hurtowni.<br />
+  - Poprawiono sprawdzanie stanów magazynowych oraz sprawdzanie<br />
+    dostępności produktów dla funkcji "[F12] Aktualizuj ceny"<br />
+    oraz "Aktualizuj cenę". Źle były sprawdzane stany dla funkcji<br />
+    budowania ceny na podstawie algorytmu oraz źle były sprawdzane<br />
+    stany dla produktów z ustawioną ceną na karcie towarowej. <br />
+  - Wdrożono mechanizm ukrywania produktów z przypisanym niewłaściwym<br />
+    numerem BLOZ dla funkcji "[F12] Aktualizuj ceny" oraz "Aktualizuj cenę".<br />
+  - Poprawiono mechanizm ukrywania produktów dla funkcji "[F12] Aktualizuj ceny"<br />
+    oraz "Aktualizuj cenę".<br />
+  - Poprawiono mechanizm wykrywania i ukrywania produktów bez przypisanego <br />
+    identyfikatora towaru z bazy aptecznej dla budowania oferty na podstawie <br />
+    bazy aptecznej, aptek własnych oraz hurtowni z wyłączonymi produktami bez <br />
+    numerów aptecznych dla funkcji "[F12] Aktualizuj ceny" oraz "Aktualizuj cenę".  <br />
+  - Wdrożono mechanizm przeliczający wartość dokumentów sprzedaży <br />
+    wygenerowanych dla apteki internetowej.<br />
+  - Poprawiono zarządzanie domyślnymi ostrzeżeniami dla produktów  <br />
+    oferty internetowej dla zadania "Aktualizacja oferty dla Apteki<br />
+    Internetowej" w aptecznym harmonogramie zadań. <br />
+  - Poprawiono zarządzanie zamówieniami ze statusem "Odebrane". Wcześniej<br />
+    tego typu blokowały gdy zostały usunięte pozycje, a pozostawał sam nagłówek<br />
+    zamówienia. Udostępniono również funkcje edycji pozycji oraz usuwania<br />
+    zamówienia dla tego typu zamówień oraz dodano funkcje sprawdzające czy <br />
+    istnieją pozycje dla takiego zamówienia.<br />
+  - Rozszerzono specyfikację wymiany danych o nowy znacznik xml'owy <br />
+    "userparameterstring" dla usługi eksportującej ofertę internetową<br />
+    na stronę WWW. Znacznik ten zawiera indywidualne parametry<br />
+    użytkownika dla produktu internetowego.<br />
+  - W oknie zarządzania opcjami dla wysłania oferty internetowej, dodano<br />
+    nową opcję "Wysyłanie parametrów użytkownika:". Opcja ta dostępne ma<br />
+    następujące pola wyboru:<br />
+    a) "nie wysyłaj parametrów" - znacznik XML "userparameterstring" nie będzie<br />
+       wysyłany z ofertą internetową na stronę WWW.<br />
+    b) "wartość z pola "Informacje o leku" (karta apteczna)" - znacznik XML<br />
+       "userparameterstring" będzie wysyłany na stronę WWW z ofertą internetową<br />
+       i będzie zawierał treść z zakładki "Informacje o leku" z karty towaru<br />
+       z bazy aptecznej.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW68 -----------------------------</h3><br />
+2020.06.23 [2020.3.4.5]<br />
+  - Dodanie obsługi pobierania statusu dla raportu braków. <br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2020.06.23<br />
+  ApwPlus [2020.3.4.5]<br />
+  - EDE: Uaktualniono strukturę bazy danych<br />
+<br />
+</body></html>

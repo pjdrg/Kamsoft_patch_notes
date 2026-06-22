@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2019.2.5.2</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2019.04.10<br />
+  slowniki.dll [2019.2.0.29]<br />
+  - Kartoteka dostawców: dodano zabezpieczenie przed wyświetlaniem podwójnych <br />
+    pozycji w kartotece, spowodowanych podwójnymi wpisami w Centralnej<br />
+    Kartotece Hurtowni<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2019.04.10 [2019.2.3.8]<br />
+  - E-Recepta: przywrócono przekazywanie informacji o czasie realizacji recepty <br />
+    w części technicznej DRR, po uzyskaniu potwierdzenia od CSIOZ <br />
+    o optymalizacji reguły REG.WER1940. ("Data realizacji nie może być <br />
+    późniejsza niż data systemowa"). Reguła restrykcyjnie kontrolowała lokalny <br />
+    czas realizacji recept z czasem systemu P1, często blokując możliwość <br />
+    przekazywania DRR do SIM. <br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2019.04.10 [2019.2.7.3]<br />
+   - Dodano ostrzeżenie o wprowadzanym nieprawidłowym numerze potwierdzenia <br />
+     na import docelowy: "Pozycje dokumentu zakupu"->[Ctrl F2] Zmiany-> <br />
+     Numer potwiedzenia na import docelowy". Numer wymagany jest w raportowaniu <br />
+     leków dla ZSMOPL i musi być zgodny z wymaganym formatem. Numer ten<br />
+     wprowadzany jest, gdy lek ma tymczasową zgodę Ministra Zdrowia na <br />
+     dopuszczenie do obrotu (dotyczy określonej serii)<br />
+<br />
+<h3>---------------------------- Zmiany w module APW23 -----------------------------</h3><br />
+2019.04.09 [2019.2.2.7]<br />
+  - W przeglądzie funkcji "Kontrola poprawności kodów kreskowych" usunięto<br />
+    wyświetlany znak "X" w kolumnie SIM dla sprzedaży na wniosek. Sprzedaże na <br />
+    wnioski na środki pomocnicze nie są przekazywane do SIM, więc ostrzeżenie <br />
+    pojawiało się niepotrzebnie.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW68 -----------------------------</h3><br />
+2019.04.10 [2019.2.2.3]<br />
+  - Odblokowanie możliwości generowania raportów do ZSMOPL za dni wcześniejsze <br />
+    w których raport nie został wygenerowany.<br />
+  - Poprawiono przekazywanie numeru dokumentu źródłowego dla sprzedaży. <br />
+    W niektórych przypadkach numer ten nie był przekazywany, co skutkowało <br />
+    wystąpieniem błędu "TROS18 - nie podano nr dokumentu sprzedaży, <br />
+	który odpowiada dokumentowu wydania magazynowego" w raporcie zwrotnym <br />
+    z ZSMOPL<br />
+  - Uzupełniono opis przyczyny korekty sprzedaży. Brak tej informacji powodował<br />
+    wystąpienie błędu "TROSPOZ43 - nie podano przyczyny korekty, która jest <br />
+    wymagana, jeśli transakcja jest korektą" w raporcie zwrotnym z ZSMOPL<br />
+  - Optymalizacja czasu generowania raportów dziennych do ZSMOPL<br />
+<br />
+</body></html>

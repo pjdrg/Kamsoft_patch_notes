@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2020.3.5.9</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2020.07.20<br />
+  slowniki.dll [2020.3.5.9]<br />
+  - Rozbudowano mechanizmy blokowania edycji pól na karcie towaru sterowane <br />
+    z poziomu KS-OmniPharm<br />
+  apwOph.dll [2020.3.5.9]<br />
+  - Poprawka na błąd konwersji łańcucha znaków na liczbę podczas ustalania ceny<br />
+    detalicznej przy imporcie MM.<br />
+<br />
+2020.07.17<br />
+  APWMAIN.EXE [2020.3.5.9]<br />
+  - Poprawka w komunikacji.<br />
+  <br />
+2020.07.16<br />
+  mvserver.exe [2020.3.5.9] <br />
+  - Dodano funkcję, która podczas załadunku rozróżniania pozycje na <br />
+    dokumencie dostawy z tym samym kodem EAN i serią. Opcja do włączenia<br />
+	w zakładce konfiguracja automatu.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2020.07.20 [2020.3.5.9]<br />
+  - OSOZ: Zmiany w sposobie wyświetlania KOMINa<br />
+  - eZWM: Realizacja zleceń na zaopatrzenie w wyroby medyczne od 1 lipca 2020 <br />
+    będzie rozliczana z OW NFZ, z którym apteka zawarła umowę. Obecna wersja<br />
+    zawiera zmiany upraszczające wybór refundatora dla zleceń na zaopatrzenie <br />
+    w wyroby medyczne tak, aby uniknąć niepotrzebnych korekt zestawień <br />
+    refundacyjnych.<br />
+    Podczas naciśnięcia na przycisk eZWM wyświetlona zostanie lista <br />
+    refundatorów z oddziałami NFZ z którymi apteka zawarła umowę. Lista nie <br />
+    wyświetli się, jeśli w aptece zdefiniowano tylko jednego refundatora. <br />
+    Jeżeli po 30 czerwca 2020 r. apteka realizowała zlecenia na zaopatrzenie <br />
+    w wyroby medyczne według tzw. wzoru eZWM, wskazując jako refundatora OW NFZ <br />
+    właściwy dla pacjenta, konieczna jest poprawa takich sprzedaży przed <br />
+    wysłaniem zestawienia refundacyjnego, czyli zmiana refundatora na oddział <br />
+    NFZ, z którym apteka zawarła umowę.<br />
+    Szczegółowy opis modyfikacji można znaleźć w instrukcji dostępnej <br />
+    z okna głównego KS-AOW (ApMan), w zakładce "O systemie": <br />
+    "Realizacja zleceń na zaopatrzenie w wyroby medyczne z wykorzystaniem <br />
+    modułu e-ZWM".	<br />
+  - eZWM: W poprawie sprzedaży dodano podgląd (z możliwością wydruku) <br />
+    zlecenia eZWM (skrót klawiszowy: Shift+Ctrl+P).<br />
+  - Zamówienia (F2): Dodano wydruk: "Wydruk podstawowy z uwagami"<br />
+  <br />
+<h3>---------------------------- Zmiany w module APW12 -----------------------------</h3><br />
+2020.07.16 [2020.3.5.9]<br />
+  - Prezentacja punktów OSOZ w dokumentach zamówień.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2020.07.17 [2020.3.5.9]<br />
+  - Przezentacja punktów z Programów Partnerskich w dokumentach zakupu<br />
+<br />
+<h3>---------------------------- Zmiany w module APW14 -----------------------------</h3><br />
+2020.07.17 [2020.3.5.9]<br />
+  - Rozbudowano mechanizmy blokowania edycji pól na karcie towaru sterowane <br />
+    z poziomu KS-OmniPharm<br />
+	<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2020.07.20 [2020.3.5.9]<br />
+  - Realizacja zleceń na zaopatrzenie w wyroby medyczne tzw. wzoru eZWM<br />
+    od 1 lipca 2020 będzie rozliczana z OW NFZ, z którym apteka zawarła umowę. <br />
+    Jeżeli po 30 czerwca 2020 r. apteka realizowała zlecenia na zaopatrzenie <br />
+    w wyroby medyczne według tzw. wzoru eZWM, wskazując jako refundatora OW NFZ <br />
+    właściwy dla pacjenta, konieczna jest poprawa takich sprzedaży przed wysłaniem <br />
+    zestawienia refundacyjnego, czyli zmiana refundatora na oddział NFZ, z którym <br />
+    apteka zawarła umowę. Program podczas generowania sprawozdania do NFZ <br />
+    za okres od 1 lipca 2020 zweryfikuje refundatora na zrealizowanych <br />
+    zleceniach i wskaże zlecenia, które należy poprawić.<br />
+    Szczegółowy opis modyfikacji można znaleźć w instrukcji dostępnej <br />
+    z okna głównego KS-AOW (ApMan), w zakładce "O systemie": <br />
+    "Realizacja zleceń na zaopatrzenie w wyroby medyczne z wykorzystaniem <br />
+    modułu e-ZWM".<br />
+    <br />
+<h3>---------------------------- Zmiany w module APW31 -----------------------------</h3><br />
+2020.07.17 [2020.3.5.9]<br />
+  - Poprawa zapisu pliku przelewu do bankowości elektronicznej. W niektórych<br />
+    przypadkach występował problem z dostępem do zapisywanego pliku.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW68 -----------------------------</h3><br />
+2020.07.16 [2020.3.5.9]<br />
+  - Dodano zabezpieczenie przed pojawianiem się błędu TRZB4 - "Podana data transakcji<br />
+    odnosi się do przyszłości", przy generowaniu raportu braków.<br />
+<br />
+<h3>--------------------------------- ZMIANY.IRAP ----------------------------------</h3><br />
+2020.07.20 [2020.3.5.9]<br />
+  - Poprawka na błąd konwersji łańcucha znaków na liczbę podczas ustalania ceny<br />
+    detalicznej przy imporcie MM.<br />
+<br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2020.07.16 [2020.3.5.9]<br />
+  Obsługa pobierania punktów OSOZ do prezentacji w zakupach<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2020.07.16<br />
+  ApwPlus [2020.3.5.9]<br />
+  - Uaktualniono strukturę bazy danych<br />
+<br />
+</body></html>

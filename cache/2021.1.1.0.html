@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2021.1.1.0</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2020.11.13<br />
+  OphOneRepoSvc.exe [2020.3.2.0]<br />
+    KS-OmniPharm One - Repozytorium dokumentów w chmurze (RepoCloud)<br />
+    Usługa ta umożliwia aptekom przechowywanie zaszyfrowanych elektronicznych<br />
+    dokumentów w chmurze tj. Dokumentów Realizacji Recept (DRR) oraz e-Recept<br />
+    Celem usługi jest:<br />
+    1. Podniesienie poziomu bezpieczeństwa dokumentów elektronicznych<br />
+      Minimalizację ryzyka utraty w wyniku np. usunięcia z bazy, ataku<br />
+      hakerskiego, zaszyfrowania dysków z bazą danych oprogramowaniem<br />
+      (np. typu ransomware, itp.)<br />
+    2. „Odchudzenie" bazy danych KS-AOW<br />
+      Domyślnie usuwane są z bazy KS-AOW DRR i e-Recepty starsze niż 3 miesiące<br />
+      (ten parametr można zmienić) po przeniesieniu ich do chmury<br />
+  apwharm.dll [2021.1.1.0]<br />
+  - Rozszerzono zadanie pobierania grup reglamentacyjnych o dodatkową funkcję<br />
+    pobierania grup leków z przedłużonym terminem ważności recept.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2020.11.16 [2021.1.1.0]<br />
+  - Rozszerzenie funkcjonalności modułu wyliczającego datę ważności recepty. <br />
+    Dodano mechanizm uwzględniający obwieszczenia zawierające leki z <br />
+    przedłużonym terminem ważności recept. <br />
+  - e-Recepta: Poprawiono błąd zmiany płci na kolejnych wersjach DRR w przypadku<br />
+    realizacji recept wystawionych na obcokrajowca. <br />
+  - e-Recepta: Poprawiono oznaczanie recept w oknie e-Recepty. <br />
+    W niektórych przypadkach skróty klawiaturowe Z/C/X przestawały działać.<br />
+  - e-Recepta: Poprawiono ukrywanie wizualizacji recepty wywołanej z poprawy <br />
+    sprzedaży [Ctrl + R]<br />
+  - e-Recepta: Poprawiono ukrywanie wizualizacji recepty po wywołaniu asystenta<br />
+    reglamentacji [Ctrl + Shift +R]<br />
+  - e-Recepta: Poprawiono zliczanie dni od daty wystawienia/daty realizacji od/<br />
+    daty pierwszej sprzedaży. Odnotowano przypadki e-Recept, które w datach <br />
+    zawierają część czasową różną od 00:00:00. W niektórych przypadkach <br />
+    powodowało to błędne wyliczenie ilości dni jaka minęła od <br />
+    daty wystawienia/daty realizacji od/ daty pierwszej sprzedaży - o 1 dzień.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2020.11.16 [2021.1.1.0]<br />
+  - Rozszerzenie funkcjonalności modułu wyliczającego datę ważności recepty. <br />
+    Dodano mechanizm uwzględniający obwieszczenia zawierające leki z <br />
+    przedłużonym terminem ważności recept.<br />
+  - Poprawiono eksport do NAV. Nie przekazywały się wszsytkie <br />
+    faktury sprzedażowe za dany okres.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW23 -----------------------------</h3><br />
+2020.11.16 [2021.1.1.0]<br />
+  - Rozszerzenie funkcjonalności modułu wyliczającego datę ważności recepty. <br />
+    Dodano mechanizm uwzględniający obwieszczenia zawierające leki z <br />
+    przedłużonym terminem ważności recept.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2020.11.16 [2021.1.1.0]<br />
+  - KS-OmniPharm One - Repozytorium dokumentów w chmurze (RepoCloud) - <br />
+    wersja komercyjna<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2020.11.13<br />
+  ApwPlus.exe [2021.1.1.0]<br />
+  - Uaktualniono strukturę bazy danych<br />
+  <br />
+</body></html>

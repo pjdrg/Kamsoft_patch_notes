@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2023.3.0.1</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2023.10.23<br />
+  Slowniki.dll [2023.3.0.1]<br />
+  - Kompilacja w związku ze zmianami w Apw12 i Apw13<br />
+<br />
+  ApiService:<br />
+  - Usprawniono działanie i stabilność usługi<br />
+<br />
+  ApwMain.exe [2023.3.0.1]<br />
+  - Aktualizacja w związku ze zmianami w KS-EDE<br />
+<br />
+  Apwharm.dll [2023.3.0.1]<br />
+  - Aktualizacja w związku ze zmianami w KS-EDE<br />
+<br />
+  ksinetap.dll [2023.3.0.1]<br />
+  - Modyfikacja w zakresie weryfikacji autentyczności usługi Portal KS-EWD. <br />
+    Zmodyfikowano treść komunikatu o możliwości podszywania się pod Portal <br />
+    KS-EWD w przypadku braku dostępności usługi.<br />
+<br />
+  Diagnozy [2023.3.0.1]<br />
+  - Diagnostyka kart towarowych: usunięto weryfikację kartotek z użyciem kodu <br />
+    PKWiU <br />
+    <br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2023.10.23 [2023.3.0.1]<br />
+  - Optymalizacja działania usługi Podobniki.<br />
+  - Dodano weryfikację konfiguracji karty refundatora oraz weryfikację numeru <br />
+    umowy NFZ przy potwierdzaniu poprawności danych DRR.<br />
+  - Poprawa sprzedaży z kolejki. W przypadku ustawiania recepty elektronicznej <br />
+    w kolejce, system w niektórych przypadkach nie przepisywał kodów resortowych <br />
+    gabinetu lekarskiego, co skutkowało zapisaniem pozycji w sprawozdaniu <br />
+    refundacyjnym jako realizacji recepty papierowej. <br />
+  - Modyfikacja w zakresie KS-Aptix. Rozszerzono mobilną kompletację pozycji <br />
+    e-recepty (KS-Aptix) o ilość brakującą na magazynie. Dodano ostrzeżenie <br />
+    o niewystarczającej ilości na magazynie.<br />
+  - Modyfikacja w zakresie aplikacji mobilnej KS-Aptix. Nowa funkcjonalność <br />
+    "Sprawdź produkt" umożliwia użytkownikowi wgląd do informacji o danym <br />
+    towarze bezpośrednio podczas pracy na magazynie czy na ekspozycji (regały <br />
+    z lekami dostępnymi dla pacjentów), bez konieczności podchodzenia do <br />
+    komputera. Modyfikacja pozwoli na weryfikację prawidłowości cen detalicznych<br />
+    leków wyeksponowanych na półkach apteki, sprawdzenie stanów magazynowych <br />
+    danego towaru, celem uzupełnienia go na półce ekspozycyjnej, zlokalizowanie<br />
+    fizycznie opakowań produktu z konkretnych dostaw (serii, dat ważności), <br />
+    sprawdzenie stanu magazynowego produktu przez farmaceutę, <br />
+    potwierdzenie/sprawdzenie ceny produktu przez farmaceutę,    <br />
+  - Zadanie z Giełdy Pomysłów: W eZWM, w oknie "F5 Ostatnia sprzedaż", dodano<br />
+    informację o ilości aktualnej towaru.<br />
+  - KS-MediVeris: Zmiana zachowania formatki wyświetlającej alerty. Formatka <br />
+    z obrazkiem, gdzie czytnik kodów odczytuje kod opakowania, pojawiająca się <br />
+    po zatwierdzeniu pozycji jako wynik weryfikacji kodów 2D w NMVS. Z formatki <br />
+    znika przycisk [Esc] Zamknij, a pojawia się nowy przycisk [F4] Nie <br />
+    sprzedawaj. Funkcjonalność ma ograniczyć pośpieszne naciskanie klawisza Esc <br />
+    i zamykanie okienka prezentującego alert. Nowo wprowadzona funkcja <br />
+    [F4] Nie sprzedawaj - pozwala wycofać się ze sprzedaży opakowania leku <br />
+    potencjalnie sfałszowanego i powrócić do listy z wyborem dostaw.    <br />
+  - Sprzedaż wiązana – wprowadzono nową akcję „promuj wszystkie towary określone <br />
+    w warunkach sprzedane z żądanej krotności”<br />
+  - W podstawowej sprzedaży dodano obsługę parametru "Blokada podziału <br />
+    opakowania" znajdującego się w zakładce [Ctrl+4] Inne na karcie towaru. Po<br />
+    włączeniu blokady na wybranym towarze niemożliwe będzie sprzedanie części<br />
+    opakowania.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW12 -----------------------------</h3><br />
+2023.10.23 [2023.3.0.1]<br />
+  - Modyfikacja w zakresie tworzenia zamówień z mnożnikiem lekospisowym. <br />
+    Zniesienie wymogu wskazania ilości zamawianej zgodnie z mnożnikiem <br />
+    lekospisowym w przypadku przenoszenia wielu pozycji z listy braków do <br />
+    zamówienia<br />
+  - Blokady zamawiania - wprowadzono możliwość wyjątku w blokadach zamawiania <br />
+    KS-Omnipharm dla zamówień z promocji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2023.10.23 [2023.3.0.1]<br />
+  - Zwiększenie szybkości działania filtrowania listy faktur dla bazy danych <br />
+    Oracle.<br />
+  - Zadanie z Giełdy Pomysłów: W Reklamacjach w oknie "Wybór pozycji <br />
+    z dokumentu" dodano informację o ilości aktualnej towaru.<br />
+  - Usunięcie błędu podczas odczytu centralnego rabatu na towar przy <br />
+    przyjęciu na magazyn.  <br />
+<br />
+<h3>---------------------------- Zmiany w module APW14 -----------------------------</h3><br />
+2023.10.23 [2023.3.0.1]<br />
+  - Kompilacja w związku ze zmianami w usłudze RepoCloud<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2023.10.23 [2023.3.0.1]<br />
+  - Eksport do KS-FKW(xml) - rozwiązanie problemu z generowaniem raportu dla <br />
+    okresów zawierających ponad 1000 dokumentów księgowych. Problem objawiał <br />
+    się z pojawianiem w pliku xml dwóch pozycji prologu.<br />
+    <br />
+<h3>---------------------------- Zmiany w module APW23 -----------------------------</h3><br />
+2023.10.23 [2023.3.0.1]<br />
+  - Kompilacja w związku ze zmianami w usłudze RepoCloud<br />
+<br />
+<h3>---------------------------- Zmiany w module APW35 -----------------------------</h3><br />
+2023.10.23 [2023.3.0.1]<br />
+  - W strategiach cenowych poprawiono filtrowanie aktywnych cenników.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2023.10.23 [2023.3.0.1]<br />
+  - Wizytówka, zakładka KOWAL: dodanie funkcji umożliwiającej zapis do pliku <br />
+    certyfikatu i hasła KOWAL. Funkcja ta będzie dostępna tylko dla użytkowników <br />
+    mających uprawnienie kierownika<br />
+<br />
+<h3>---------------------------- Zmiany w module APW43 -----------------------------</h3><br />
+2023.10.23 [2023.3.0.1]<br />
+  - Aktualizacja w związku ze zmianami w KS-EDE<br />
+<br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2023.10.23 [2023.3.0.1]<br />
+  - Kompilacja w związku ze zmianami w usłudze RepoCloud<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2023.10.23<br />
+  ApwPlus [2023.3.0.1]<br />
+  - Aktualizacja struktury bazy danych<br />
+  <br />
+  OraRest [2023.3.0.1]<br />
+  - Aktualizacja w związku ze zmianami w KS-EDE<br />
+<br />
+  OraPack [2023.3.0.1]  <br />
+  - Aktualizacja w związku ze zmianami w KS-EDE<br />
+<br />
+</body></html>

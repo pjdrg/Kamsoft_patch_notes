@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2019.2.11.3</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2019.10.02<br />
+  APWMAIN.EXE [2019.3.0.2]<br />
+  - Poprawka do aktualizacji.<br />
+  apwharm.dll [2019.3.2.9]<br />
+  - Modyfikacja dystrybucji numerycznej <br />
+    tak by przy pierwszym zamówieniu zamówić<br />
+    przynajmniej jedną sztukę towaru w sytuacji<br />
+    braku na magazynie<br />
+  - Modyfikacja dystrybucji numerycznej <br />
+    tak by towary w drodze uwzględniały<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2019.10.03 [2019.3.6.6]<br />
+  - e-Recepta: Usprawnienia w pracy z oknem e-Recepty:<br />
+    * Dodana kolumna Lp<br />
+    * Sygnalizacja kolorem statusu e-Recepty na liście pobranych recept<br />
+    * Poprawione wyświetlanie zawartości dla niestandardowych ustawień DPI<br />
+  - e-Recepta: Poprawione nieprawidłowe sygnalizowanie recepty papierowej jako<br />
+    recepty elektronicznej w przypadku naprzemiennej realizacji recepty papierowej <br />
+    oraz e-Recepty<br />
+  - e-Recepta: Poprawiony błąd SQL na bazie Firebird podczas próby pobrania e-Recepty<br />
+    z kodem EAN dłuższym niż 14 znaków<br />
+  - e-Recepta: Ignorowanie EAN składającego się z samych zer podczas automatycznego<br />
+    dobierania towaru oraz zaniechanie weryfikacji zgodności EAN z e-Recepty<br />
+    z EAN wybranego towaru podczas realizacji e-Recepty<br />
+<br />
+<h3>---------------------------- Zmiany w module APW12 -----------------------------</h3><br />
+2019.10.03 [2019.3.0.9]<br />
+  - dodanie przycisku Kontrakty do głównego menu modułu zamówień<br />
+  <br />
+<h3>---------------------------- Zmiany w module APW45 -----------------------------</h3><br />
+2019.10.02 [2019.3.2.7]<br />
+  - Rozszerznie zarządzania polem ulica dla towarów z bazy aptecznej.<br />
+  - Wdrożono obsługę kopiowania kategori do kategorii globalnej.<br />
+    Modyfikacja ta dotyczy funkcji kopiowania kategorii pomiędzy<br />
+    ofertami (APW45/Kategorie).     <br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2019.10.03<br />
+  Apwplus.exe [2019.3.22.0]<br />
+  - Uaktualniono strukturę bazy danych<br />
+<br />
+2019.09.25<br />
+  Apwplus.exe [2019.3.21.0]<br />
+  - Uaktualniono strukturę bazy danych<br />
+<br />
+2019.09.24<br />
+  Apwplus.exe [2019.3.20.0]<br />
+  - Uaktualniono strukturę bazy danych<br />
+<br />
+</body></html>

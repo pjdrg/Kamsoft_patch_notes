@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2020.3.7.6</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2020.09.02 <br />
+  apwharm.dll [2020.3.7.6]<br />
+  - Rozbudowano mechanizm automatycznych rezerwacji o zarządzanie nowymi<br />
+    warunkami:<br />
+    a) zarządzania płatnością<br />
+    b) zarządzanie statusem<br />
+    c) zarządzanie płatnością elektroniczną <br />
+   <br />
+  slowniki.dll[2020.3.7.6]<br />
+  - Poprawiono instalację certyfikatów e-recepty. Nie aktualizowały się <br />
+  daty ważności certyfikatów WSS i TLS. <br />
+  - Poprawiono instalację certyfikatu farmaceuty. Przy ponownej<br />
+    instalacji certyfikatów nie można było zmienić typu certyfikatu z <br />
+    kwalifikowanego na certyfikat ZUS- program pamiętał starą konfigurację.<br />
+  apwmain.exe [2020.3.7.6]<br />
+  - Poprawki w komunikacji<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2020.09.02 [2020.3.7.6]<br />
+  - e-Recepta: poprawiono odczyt krajowego identyfikatora pacjenta. Dochodziło <br />
+    do nadpisania danych w przypadku gdy na recepcie został dodatkowo <br />
+    (w części technicznej) podany był ident. pacjenta w systemie gabinetowym. <br />
+  - e-Recepta: poprawiono wycofywanie DRR przy usuwaniu pozycji z wielu dostaw. <br />
+    W niektórych przypadkach program usuwając wszystkie pozycje nie wycofywał <br />
+    wszystkich DRR.<br />
+  - Operacje magazynowe: poprawiony czas wykonania zapytań SQL podczas operacji<br />
+    zatwierdzania/wydruku dokumentu FV/MM.<br />
+  - W oknie do wprowadzania numeru PESEL dodano klawisz [F11] Powtórz, do <br />
+    wpisywania ostatniego numeru PESEL <br />
+  - W oknie e-Recepty dodano możliwość wywołania okna zamówień (Ctrl+F2) dla<br />
+    pozycji, które nie zostały przyporządkowane do lokalnej kartoteki towarów  <br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2020.09.02 [2020.3.7.6]<br />
+  - Do menu podręcznego pozycji dokumentu zakupu dodano funkcję: Zapisz ceny<br />
+    detaliczne do pliku CSV.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW23 -----------------------------</h3><br />
+2020.09.02 [2020.3.7.6]<br />
+  - Retaksacja recept: dodano kolumnę PRO (pro auctore/pro familiae);<br />
+  <br />
+<h3>---------------------------- Zmiany w module APW45 -----------------------------</h3><br />
+2020.09.02 [2020.3.7.6]<br />
+  - Dodano mechanizm zarządzjący źródłem uruchomienia okna z zamówieniami<br />
+    internetowymi (APW45 - Apteka Internetowa, APW11 - Sprzedaż/Podstawowa<br />
+    sprzedaż, APW11 - Sprzedaż/Operacje magazynowe.<br />
+  - Rozbudowano mechanizm automatycznych rezerwacji o zarządzanie nowymi<br />
+    warunkami:<br />
+    a) zarządzania płatnością<br />
+    b) zarządzanie statusem<br />
+    c) zarządzanie płatnością elektroniczną<br />
+  - Roździelpono grupową realizację na dwa tryby:<br />
+    a) tryb grupowego zaznaczania<br />
+    b) tryb grupowej realizacji<br />
+  - Dodano nowe udogodnienia do grupowej realizacji zamówień:<br />
+    a) podpowiedzi <br />
+    b) zliczanie <br />
+    c) informacje o trybie pracy<br />
+    d) poruszanie się po zamówieniach internetowych lepiej wspiera<br />
+       mechanizm grupowego zaznaczania<br />
+  - W operacjach magazynowych rozbudowano mechanizmu grupowej realizacji<br />
+    zamówień  internetowych o rozszerzone logowanie zdarzeń.<br />
+<br />
+</body></html>

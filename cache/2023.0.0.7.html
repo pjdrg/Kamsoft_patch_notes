@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2023.0.0.7</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2022.09.15<br />
+  CopyCloud [2022.3.0.7]<br />
+  - Poprawka ustawień usługi. Poprawiono wyszukiwanie folderu instalacji<br />
+    serwera FireBird w uzależnieniu od jego wersji FB 2.5. lub FB 3.0.<br />
+<br />
+  Slowniki.dll [2023.0.0.7]<br />
+  - Publikacja usługi "Produkty Podobne".<br />
+  - Poprawka do funkcjonalności logowania przy pomocy poświadczeń Active<br />
+    Directory.<br />
+<br />
+  Zasoby.dll [2023.0.0.7]<br />
+  - Aktualizacja opisów.<br />
+<br />
+  ApwHarm.dll [2023.0.0.7]<br />
+  - Wdrożono poprawkę dla zadania wysyłającego i generującego ofertę na stronę<br />
+    WWWW.<br />
+  - Rozbudowano mechanizm rozsyłania zamówień na stronę WWW o obsługę trzeciego<br />
+    sklepu WWW.<br />
+<br />
+  ApwiAp.dll [2023.0.0.7]<br />
+  - Wdrożono poprawkę dla zabezpieczenia numeru klienta dla generowania<br />
+    grupowego dokumentów sprzedaży z operacji magazynowych.<br />
+  - Wdrożono poprawkę dla zabezpieczenia przed sprzedażą zamówień, które jeszcze<br />
+    nie są w pełni zarezerwowanych dla generowania grupowego dokumentów<br />
+    sprzedaży z operacji magazynowych.<br />
+  - Wdrożono poprawkę dla zabezpieczenia magazynu dla generowania grupowego<br />
+    dokumentów sprzedaży z operacji magazynowych.<br />
+  - Wdrożono poprawkę dla zabezpieczenia przed sprzedażą zamówień, które są<br />
+    bez pozycji dla generowania grupowego dokumentów sprzedaży z operacji<br />
+    magazynowych.<br />
+  - Wdrożono kolorowanie zamówień dla trzeciego sklepu WWW w oknie<br />
+    z zamówieniami internetowymi.<br />
+  - Rozbudowano filtr dla przeglądu zamówień internetowych o obsługę sklepu<br />
+    trzeciego.<br />
+  - Rozbudowano opcje w oknie przeglądu zamówień internetowych o obsługę<br />
+    możliwości zmiany połączenia dla zamówień sklepu trzeciego.<br />
+  - Wdrożono poprawkę dla prezentacji ceny w oknie APW45/Zamówienia/Pakuj/<br />
+    Wybierz dostawę. Występował nieprawidłowy opis nagłówka dla ceny.<br />
+  - Wdrożono poprawkę dla prezentacji informacji w oknie z logowaniem<br />
+    z rezerwacji. Występował nieprawidłowy opis procesu rezerwacji w przypadku<br />
+    zamówień poprawnie już zarezerwowanych.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2022.09.15 [2023.0.0.7]<br />
+  - Publikacja usługi "Produkty Podobne". Pilotaż usługi będzie dostępny dla<br />
+    wybranych aptek.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2022.09.15 [2023.0.0.7]<br />
+  - Poprawiono błąd podczas przyjęcia dokumentu zakupu na magazyn.<br />
+    Błąd mógł powodować powrót dokumentu do bufora.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2022.09.15 [2023.0.0.7]<br />
+  - Dodano pytanie o nr korekty na wydruku "Zestawienia zbiorczego" dla korekty<br />
+    zestawienia refundacyjnego. Wydruk dostępny jest z poziomu Zestawienia<br />
+    refundacyjne - Edycja zestawienia refundacyjnego - F10 Wydruk.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW35 -----------------------------</h3><br />
+2022.09.15 [2023.0.0.7]<br />
+  - Dodano ograniczenie wpisania zbyt dużej wartości w pole "Cena ustalona"<br />
+    w definicji promocji. Wpisanie zbyt dużej wartości powodowało błąd podczas<br />
+    zapisu promocji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2022.09.15 [2023.0.0.7]<br />
+  - Dodanie opcji 'KS-OMNIPHARM - Usługa "Weryfikacja odbiorcy": Pozwól pominąć<br />
+    blokadę w przypadku odmowy'.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW45 -----------------------------</h3><br />
+2022.09.15 [2023.0.0.7]<br />
+  - Wdrożono poprawkę dla zarządzania rezerwacjami pozycji zamówienia<br />
+    internetowego. Błąd występował podczas rezerwacji z kilku dostaw w wyniku<br />
+    której powstawał za duży dokument rezerwacji dla zamówienia internetowego.<br />
+  - Wdrożono poprawkę dla skalowania okna z opcjami dla komunikacji ze sklepem<br />
+    WWW.<br />
+  - Wdrożono poprawkę dla zarządzania cenami urzędowymi dla ofert z hurtowni.<br />
+  - Wdrożono poprawkę dla zarządzania marżą ułamkową dla oferty internetowej.<br />
+  - Wdrożono poprawkę do zarządzania opcją "Funkcja pracuje w trybie pracy<br />
+    ze sklepem WWW". Opcja jest dostępna w "APW45/Reguły/Zamówienia/Ogólne".<br />
+    Opcja nie zmieniała ustawień poprawnie.<br />
+  - Wdrożono nową funkcjonalność obsługę trzeciego sklepu WWW (połączenia).<br />
+    Obsługa trzeciego sklepu jest dostępna z poziomu APW45/Komunikacja/<br />
+    Ustawienia/Ustawienia/Ogólne. Obsługę włączamy trzeciego sklepu za pomocą<br />
+    opcji "Włącz trzecie połączenie dla komunikacji" oraz ustawiamy wymagane<br />
+    opcje: adres serwera, hasło, zamówienie (identyfikator), korzystaj<br />
+    z parametrów połączenia.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW68 -----------------------------</h3><br />
+2022.09.15 [2023.0.0.7]<br />
+  - Poprawa błędu "EUniError: index KZAK_ID cannot be used in the specified<br />
+    plan" występująca podczas generowania raportów do ZSMOPL na bazie<br />
+    z Firebird 3.0.<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2022.09.15<br />
+  ApwPlus [2023.0.0.7]<br />
+  - Uaktualniono strukturę bazy danych.<br />
+<br />
+  Apwbase.dll [2023.0.0.7]<br />
+  - Uaktualniono bazę kart serwisowych.<br />
+<br />
+</body></html>

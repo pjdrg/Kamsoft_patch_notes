@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2019.2.9.6</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2019.07.30<br />
+  slowniki.dll [2019.3.2.2]<br />
+  - Do listy oddziałów NFZ dodano oddział X o nazwie 'Brak'. <br />
+<br />
+2019.07.30<br />
+  mvserver.exe [2019.3.0.5]<br />
+  - Dodano obsługę priorytetów dla komunikatów automatów do wydawania leków <br />
+    opartych o format WWKS2.<br />
+  apwharm.dll [2019.3.2.5]<br />
+  - Poprawiono mechanizm automatycznego generowania raporótw do ZSMOPL dla <br />
+    ZSMOPL.MAR02.<br />
+<br />
+2019.07.29<br />
+  apwharm.dll [2019.3.2.4]<br />
+  - Poprawiono mechanizm pracy z wieloma serwerami sklepów WWW <br />
+    dla funkcji automatycznej aktualizacji zamówień na stronę WWW.<br />
+<br />
+2019.07.26<br />
+  slowniki.dll [2019.3.2.1]<br />
+  - Na karcie pacjenta i dostawcy dodano informację jeśli jest pusta baza <br />
+	słownikowa państw. Informacja pojawia się przy wejściu w kontrolkę wyboru<br />
+	państwa.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2019.07.30 [2019.3.4.9]<br />
+  - e-Recepta: Okno wprowadzania kodów z recepty - usunięto weryfikację numeru <br />
+    NPWZ na e-receptach dla pielęgniarek i położnych. Program niesłusznie <br />
+    informował o błędnym NPWZ. <br />
+  - e-Recepta: poprawiono błąd obcinania numeru e-Recepty. Numer E-Recepta może <br />
+    być alfanumeryczny. Program -w oknie wprowadzania kodów z recepty - wycinał <br />
+    znaki "E" i "R" na pierwszej pozycji numeru e-Recepty, traktując je jako <br />
+    znak specjalny. W przypadku wystąpienia tego błędu numer powinien być <br />
+    poprawiony przez serwisanta na bazie danych. Edycja numeru e-Recepty w <br />
+    programie nie jest możliwa. <br />
+  - e-Recepta: poprawiono funkcją "[F11] Zatwierdź i zakończ wszystkie" w oknie<br />
+    "Potwierdzenie i podpis elektroniczny realizacji recept". Nie wszystkie <br />
+    recepty otrzymywały status "Zrealizowana". <br />
+  - e-Recepta: dodano możliwość ustawiania oddziału NFZ: X. <br />
+  - e-Recepta: umożliwienie poprawy danych lekarza (NPWZ) i świadczeniodawcy<br />
+    (REGON) z poziomu okna e-Recept - funkcja przypisz.  <br />
+  - e-Recepta: poprawiono wybór uprawnień z poziomu okna e-Recept. Występował <br />
+    błąd „List index out of bound (-1)” przy wyborze WP i  AZ.<br />
+  - e-Recepta: zablokowano w oknie e-Recepty zakładanie karty pacjenta gdy w <br />
+    kartotece istnieje ukryta karta z danym numerem PESEL<br />
+  - e-Recepta: poprawiono błąd w oknie e-Recepty, który występował przy <br />
+    zakładaniu świadczeniodawcy, gdy nazwa była zbyt długa.<br />
+  - Dodano kontrolę kolejności stawek ustawionych na podłączonym do drukarki<br />
+    fiskalnej stanowisku. Ostrzeżenie wyświetli się, jeśli kolejność stawek <br />
+	będzie inna niż 23,8,5,0. Pozycja stawki ZW nie będzie sprawdzana.<br />
+  - Poprawiono obsługę książki narkotyków i psychotropów przy przypisywaniu<br />
+    dostaw w zaliczkach zerowych <br />
+ <br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2019.07.30 [2019.3.5.0]<br />
+   - Informacja o akturze. Dodano pole wyświetlające datę zatwierdzenia<br />
+     faktury. Oznacza to datę i czas przyjęcia dokumentu z bufora.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW14 -----------------------------</h3><br />
+2019.07.30 [2019.3.1.2]<br />
+   - Poprawka do filtrowania listy leków z ilością.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2019.07.30 [2019.3.0.4]<br />
+ - Eksport danych do KS-FWK(xml). Poprawiono dokument KRFF dla zaznaczonej opcji<br />
+   "Dla sprzedaży przekazuj tylko faktury odbiorców".<br />
+ - Dla komunikatu o wersji demo modułu TaxFree dodano opcję "Nie wyświetlaj".<br />
+<br />
+<h3>---------------------------- Zmiany w module APW22 -----------------------------</h3><br />
+2019.07.29 [2019.3.0.0]<br />
+  - Poprawka problemu występujęcego dla zestawienia'Ceny ustalone towarów'<br />
+<br />
+<h3>---------------------------- Zmiany w module APW23 -----------------------------</h3><br />
+2019.07.31 [2019.3.1.4]<br />
+  - e-Recepta: Raport spójności recept z AOW i wysłanym DRR – poprawa błędu <br />
+    w weryfikacji NPWZ pielęgniarki/położnej. Raport błędnie odczytywał <br />
+    wartość NPWZ z DRR, przez co wykazywana byłą niespójność.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW45 -----------------------------</h3><br />
+2019.07.29 [2019.3.2.3]<br />
+  - Poprawiono mechanizm pracy z wieloma serwerami sklepów WWW dla funkcji<br />
+    wysyłania zamówień na stronę WWW oraz poprawiono prezentację zamówień<br />
+    internetowych w oknie zarządzania zamówieniami internetowymi.<br />
+<br />
+</body></html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2026.1.0.9</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2026.03.16<br />
+  CopyCloud [2026.1.0.9]<br />
+  - Umożliwiono pracę usługi w systemach bez bazy danych EDE.<br />
+<br />
+  Slowniki.dll, ApwHarm.dll [2026.1.0.9]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2026.03.16 [2026.1.0.9]<br />
+  - Zlecenia przesunięć MM z systemu KS-OmniPharm: dodano obsługę opcji<br />
+    zezwalającej aptece na zmianę proponowanej dostawy wskazanego towaru<br />
+    na inną.<br />
+  - Do okna wprowadzania dokumentu korygującego dodano informacje o dokumencie<br />
+    zakupu, z którego pochodzi korygowana pozycja.<br />
+  - Dodano funkcjonalność umożliwiającą ręczne ustalanie ceny zapłaty dla leków<br />
+    recepturowych pełnopłatnych. Wprowadzono także możliwość automatycznego<br />
+    nadawania ceny na podstawie pola "Cena ustalona" z karty towaru dla receptur<br />
+    zdefiniowanych na karcie. Więcej szczegółów w: "Podręcznik użytkownika<br />
+    KS-AOW" -> "APW11 Sprzedaż", rozdział "Sprzedaż leków recepturowych<br />
+    pełnopłatnych w dowolnej cenie".<br />
+  - Do wydruku korekty faktury w trybie graficznym i tekstowym dodano przyczynę<br />
+    korekty.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW12 -----------------------------</h3><br />
+2026.03.16 [2026.1.0.9]<br />
+  - Blokady zamawiania KS-OmniPharm: uszczelniono blokadę w przypadku dodawania<br />
+    pozycji zablokowanej centralnie do zamówienia z bazy BLOZ.<br />
+  - Pharmind grid: możliwość automatycznej poprawy ilości zamawianego towaru<br />
+    w procesie generowania zamówień dla towarów z kontraktami pochodzących<br />
+    z projektów grid.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW14 -----------------------------</h3><br />
+2026.03.16 [2026.1.0.9]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2026.03.16 [2026.1.0.9]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW68 -----------------------------</h3><br />
+2026.03.16 [2026.1.0.9]<br />
+  - Rozwiązano problem z pojawiającym się statusem TROSPOZ77 (stan wstrzymany<br />
+    serii nie może być większy od stanu wstrzymywanego produktu).<br />
+    Problem mógł się pojawić gdy na magazyn był przyjmowany dany towar<br />
+    i tego samego dnia zostało utworzone wstrzymanie tego towaru.<br />
+  - Rozwiązano problem z przekazywaniem REGON-u 14 znakowego dla podmiotu<br />
+    leczniczego (PW), jako identyfikator podmiotu druga strona.<br />
+<br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2026.03.16 [2026.1.0.9]<br />
+  - Pharmind: raportowanie informacji o realizacji recepty zagranicznej.<br />
+  - Pharmind grid: możliwość automatycznej poprawy ilości zamawianego towaru<br />
+    w procesie generowania zamówień dla towarów z kontraktami pochodzących<br />
+    z projektów grid.<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2026.03.16<br />
+  ApwPlus [2026.1.0.9]<br />
+  - Aktualizacja struktury bazy danych.<br />
+<br />
+</body></html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2023.1.0.6</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2022.12.01<br />
+  Slowniki.dll [2023.1.0.6]<br />
+  - Wdrożenie poprawki dla prezentacji okna dla zarządzania regułami listów<br />
+    przewozowych.<br />
+  - Dodanie dodatkowych wariantów sprzedaży wiązanej, gdzie promowane są towary<br />
+    warunkowe.<br />
+<br />
+  ApwMain.exe [2023.1.0.6]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+  MVServer.exe [2023.1.0.6]<br />
+  - Optymalizacja funkcji synchronizacji ilości w stanach magazynowych.<br />
+  - Poprawa funkcji załadunku towarów dla automatu Gollmann.<br />
+    W pierwszej kolejności załadunek odbywać się będzie na najstarszą dostawę<br />
+    zatwierdzoną z bufora.<br />
+<br />
+  ApwiAp.dll [2023.1.0.6]<br />
+  - Wdrożenie poprawki dla funkcji generowania nazwy dokumentów i ich odczytu<br />
+    z pliku dla sprzedaży internetowej dla operacji generowania dokumentów<br />
+    w formacie PDF z okna zamówień internetowych.<br />
+<br />
+  ApwHarm.dll [2023.1.0.6]<br />
+  - Wdrożenie poprawki dla funkcji generowania nazwy dokumentów i ich odczytu<br />
+    z pliku dla sprzedaży internetowej dla operacji generowania dokumentów<br />
+    w formacie PDF z akcji zadania generowania dokumentów PDF dla AI.<br />
+<br />
+  Osozmok.dll [2022.2.2.0]<br />
+  - Rozbudowa funkcjonalności Produktów Podobnych.<br />
+  - Dodanie obsługi kursów szkoleniowych i ankiet, skierowanych do konkretnych<br />
+    farmaceutów.<br />
+<br />
+  Zasoby.dll [2023.1.0.6]<br />
+  - Aktualizacja opisów opcji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2022.12.01 [2023.1.0.6]<br />
+  - Sprzedaż magazynowa, poprawa funkcji weryfikacji kodów QR przy realizacji<br />
+    zamówienia z apteki internetowej.<br />
+  - eZWM: poprawiono potwierdzenie dostarczenia przesyłki kurierskiej<br />
+    po realizacji wniosku.<br />
+  - Wdrożenie poprawki dla akcji wysłania komunikatów potwierdzeń sprzedaży<br />
+    dla apteki internetowej do raportownika OSOZ.<br />
+  - Wdrożenie poprawki dla funkcji generowania nazwy dokumentów i ich odczytu<br />
+    z pliku dla sprzedaży internetowej dla operacji generowania dokumentów<br />
+    w formacie PDF z okna zarządzania dokumentami faktur sprzedaży.<br />
+  - Dla drukarek Novitus dodano informację o kończącym się miejscu w pamięci<br />
+    na raporty dobowe. Informacja zacznie się pojawiać na 30 raportów do końca<br />
+    pamięci fiskalnej.<br />
+  - Rozbudowa funkcjonalności Produktów Podobnych.<br />
+  - Dodanie obsługi kursów szkoleniowych i ankiet, skierowanych do konkretnych<br />
+    farmaceutów.<br />
+  - Dodanie dodatkowych wariantów sprzedaży wiązanej, gdzie promowane są towary<br />
+    warunkowe.<br />
+  - Raportowanie transakcji dla ABD: Optymalizacje.<br />
+  - Poprawiono mechanizm tworzenia korekty, który generował korekty zerowe<br />
+    lub puste pozycje dla bazy Oracle.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW12 -----------------------------</h3><br />
+2022.12.01 [2023.1.0.6]<br />
+  - Zamówienia łączone na panelu informacyjnych poprawiono wyświetlanie ceny<br />
+    wg bloza buforowego.<br />
+  - Lista braków poprawa funkcji usuwania z listy braków wg warunku (zamówienia<br />
+    centralne).<br />
+  - Rozbudowa funkcjonalności Produktów Podobnych.<br />
+  - Dodanie obsługi kursów szkoleniowych i ankiet, skierowanych do konkretnych<br />
+    farmaceutów.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2022.12.01 [2023.1.0.6]<br />
+  - Rozbudowa funkcjonalności Produktów Podobnych.<br />
+  - Dodanie obsługi kursów szkoleniowych i ankiet, skierowanych do konkretnych<br />
+    farmaceutów.<br />
+  - Dokumenty w buforze - dodana, na ekranie pokazującym faktury gotowe<br />
+    do przyjęcia, informacja o ilości rezerwacji, których ta faktura dotyczy<br />
+    (pojawia się tylko wtedy, gdy ilość ta jest większa od zera).<br />
+  - Raportowanie transakcji dla ABD: Optymalizacje.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW14 -----------------------------</h3><br />
+2022.12.01 [2023.1.0.6]<br />
+  - Dodano podsumowanie podczas zatwierdzania inwentaryzacji. Podsumowanie<br />
+    zawiera informacje dotyczące różnicy wartości netto, ukrytych kart<br />
+    towarowych oraz nieuzupełnionej serii i daty ważności na kartach zakupowych.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW23 -----------------------------</h3><br />
+2022.12.01 [2023.1.0.6]<br />
+  - Poprawa wyświetlania paska postępu w retaksacji recept. Po zatwierdzaniu<br />
+    w oknie podglądu DRR i e-Recepty nie zwiększała się ilość zatwierdzonych<br />
+    recept.<br />
+  - Zadanie z Giełdy Pomysłów: W oknie ustawiania filtrów w funkcji Retaksacja <br />
+    recept dodano przycisk "Wyczyść" służący do resetowania filtrów.<br />
+  - Zadanie z Giełdy Pomysłów: W oknie retaksacji, w kolumnie Numer recepty <br />
+    dodano ikony symbolizujące receptę wystawioną przez pielęgniarkę/położną, <br />
+    farmaceutyczną, farmaceutyczną pro auctore oraz transgraniczną<br />
+  - Książka kontroli narkotyków i psychotropów - optymalizacja wydruku.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW31 -----------------------------</h3><br />
+2022.12.01 [2023.1.0.6]<br />
+  - KS-OmniPharm: Centralne płatności - dodano przekazywanie poleceń przelewów<br />
+    z podzieloną płatnością do centrali.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW35 -----------------------------</h3><br />
+2022.12.01 [2023.1.0.6]<br />
+  - Dodanie dodatkowych wariantów sprzedaży wiązanej, gdzie promowane są towary<br />
+    warunkowe.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2022.12.01 [2023.1.0.6]<br />
+  - W oknie Informacji o drukarce fiskalnej (Shift+F5 Info) dodano informację<br />
+    o liczbie wolnych raportów dobowych na drukarkach Elzab i Novitus.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW42 -----------------------------</h3><br />
+2022.12.01 [2023.1.0.6]<br />
+  - Dostosowanie raportu o stanie Oracle do wersji 21 XE.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW44 -----------------------------</h3><br />
+2022.12.01 [2023.1.0.6]<br />
+  - Raportowanie transakcji dla ABD: Optymalizacje.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW45 -----------------------------</h3><br />
+2022.12.01 [2023.1.0.6]<br />
+  - Wdrożenie poprawki dla prezentacji okna dla zarządzania regułami<br />
+    dla zamówień internetowych.<br />
+<br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2022.12.01 [2023.1.0.6]<br />
+  - Rozbudowa funkcjonalności Produktów Podobnych.<br />
+  - Dodanie obsługi kursów szkoleniowych i ankiet, skierowanych do konkretnych<br />
+    farmaceutów.<br />
+  - Optymalizacja raportowania błędów.<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2022.12.01<br />
+  ApwPlus [2023.1.0.6]<br />
+  - Uaktualniono strukturę bazy danych.<br />
+<br />
+  ApwBase.dll [2023.1.0.6]<br />
+  - Uaktualniono bazę kart serwisowych.<br />
+<br />
+</body></html>

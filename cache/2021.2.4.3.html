@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2021.2.4.3</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2021.11.25<br />
+  CopyCloud [2021.2.4.3]<br />
+  - Dodano funkcjonalność wykonywania pełnej kopii po ustalonej godzinie.<br />
+    Po zaznaczeniu parametru "Wykonaj pełną kopię tylko po godzinie:"<br />
+    i ustawieniu żądanej godziny (np. po zamknięciu apteki), usługa będzie<br />
+    oczegiwać na wykonanie pełnej kopii do wyznaczonej godziny.<br />
+  - Zmieniono funkcjonalność wykonywania kopii po błędzie bazy danych aby<br />
+    nie wykonywała się od razu pełna kopia lecz kopia tego samego poziomu.<br />
+    Jeśli ostatnio wykonywana była kopia interwałowa i zakończyła sie błędem<br />
+    bazy danych, to kolejna kopia również będzie wykonana jako interwałowa.<br />
+<br />
+  Slowniki.dll [2021.2.4.3]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+  ApwiAp.dll [2021.2.4.3]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+  Zasoby.dll [2021.2.4.3]<br />
+  - Uzupełnienie opisu opcji.<br />
+<br />
+  ApwMain.exe [2021.2.4.3]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+  WaUtil [2021.2.4.3]<br />
+  - Dodano opcję "Wymagana data ważnosci" dla zarzadzania widokiem stanów<br />
+    magazynowych apteki (WaUtil/Inne/Opcje).<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2021.11.25 [2021.2.4.3]<br />
+  - Dodano obsługę realizacji zleceń na wyroby chłonne i cewniki wg zasad, które<br />
+    obowiązywać będą od 1 grudnia:<br />
+     a) jeśli zlecenie realizowane jest poprzez Wniosek należy w oknie Wniosek<br />
+        wybrać kod sprzętu (F8) (np. P.100.PL), nacisnąć OK, wybrać towar (wybór<br />
+        towarów ograniczony będzie do wybranego we Wniosku kodu sprzętu),<br />
+        po naciśnięciu na "N.Pozycja" wyświetli się ponownie okno Wniosek,<br />
+        w którym możemy zmienić kod sprzętu na inny (np. P.100.WK).<br />
+     b) jeśli zlecenie realizowane jest poprzez eZWM wybór towarów ograniczony<br />
+        będzie do kodu ministerialnego (np. P.100).<br />
+        Przebieg realizacji nie zmienia się.<br />
+    Aneks do umowy (UMX) należy wgrać w module Zestawienia (APW21):<br />
+    "Refundacje->Środki pomocnicze wybierając funkcję Umowy i aneksy". <br />
+    Następnie należy powiązać nowe pozycje zawarte w umowie z pozycjami<br />
+    aptecznej bazy towarów (nowe pozycje nie powiążą się automatycznie<br />
+    na podstawie poprzedniej umowy, powiązanie należy wykonać ręcznie).<br />
+    W przypadku, gdy apteka/sklep realizuje zlecenia bez wczytanej umowy UMX <br />
+    powinna zaktualizować kody środków pomocniczych w module Komunikacja (apw44)<br />
+    "Narzędzia->Aktualizacja baz słownikowych->Słownik środków pomocniczych".<br />
+    Szczegóły w instrukcji: "Realizacja zleceń na wyroby medyczne<br />
+    od 1 grudnia 2021".<br />
+  - Dodano obsługę e-Recept z podaną ilością sztuk/jednostek zamiast ilości<br />
+    opakowań. <br />
+  - Zadanie z Giełdy Pomysłów: Rozszerzono funkcjonalność komentarzy o <br />
+    możliwość określania rodzaju komentarza. Komentarze typu „Ostrzeżenie” <br />
+    wyświetlane będą przy wyborze e-Recepty do realizacji. Komentarze typu <br />
+    "Uwaga" będą szczególnie wyróżnione w Reataksacji. Poprawiono widoczność <br />
+    komentarzy.<br />
+  - Zadanie z Giełdy Pomysłów: Dodanie możliwości wydruku kodów 2D e-recept<br />
+    na drukarkach fiskalnych. Obsługa wydruku kodów tylko dla drukarek<br />
+    obsługujących kody 2D: Mera+, Mera OnLine, Novitus HD.<br />
+  - Terminale płatnicze: usprawnienie komunikacji z terminalami Polskie<br />
+    ePłatności.<br />
+  - Terminale płatnicze: okno operacji bezgotówkowych: dodanie kolumn<br />
+    identyfikujących transakcję na terminalu płatniczym.<br />
+  - Zadanie z Giełdy Pomysłów: Na liście wyboru towarów do sprzedaży dodano <br />
+    ikonkę WM dla wyrobów medycznych.<br />
+  - Zmieniono sposób wyliczania liczby wolnych raportów dobowych dla drukarki<br />
+    Elzab Mera Plus. Drukarka ta w niektórych przypadkach zwracała do systemu<br />
+    niepoprawną wartość.<br />
+  - Wprowadzono nową wartość ryczałtu na lek robiony na rok 2022. Kwota <br />
+    ryczałtu zaktualizuje się automatycznie po uruchomieniu programu po <br />
+    1 stycznia 2022.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW12 -----------------------------</h3><br />
+2021.11.25 [2021.2.4.3]<br />
+  - Rozbudowa funkcjonalności usługi "Rabaty za punkty".<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2021.11.25 [2021.2.4.3]<br />
+  - Rozbudowa funkcjonalności usługi "Rabaty za punkty".<br />
+<br />
+<h3>---------------------------- Zmiany w module APW14 -----------------------------</h3><br />
+2021.11.25 [2021.2.4.3]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2021.11.25 [2021.2.4.3]<br />
+  - Przekazanie raportu do KS-FKW(xml) poprawiono algorytm generowania<br />
+    i zapisywania pliku xml dla raportów z bardzo duża ilością danych powyżej<br />
+    20Mb. Apteka generując taki raport dostawała komunikat o braku pamięci do<br />
+    wykonania operacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW23 -----------------------------</h3><br />
+2021.11.25 [2021.2.4.3]<br />
+  - Zadanie z Giełdy Pomysłów: Rozszerzono funkcjonalność komentarzy o<br />
+    możliwość określania rodzaju komentarza. Komentarze typu "Ostrzeżenie"<br />
+    wyświetlane będą przy wyborze  e-Recepty do realizacji. Komentarze typu<br />
+    "Uwaga" będą szczególnie wyróżnione w Reataksacji. Poprawiono widoczność<br />
+    komentarzy.<br />
+  - Zadanie z Giełdy Pomysłów (Retaksacja Recept): dodano pasek postępu<br />
+    pozwalający weryfikować ilość pracy jaka pozostała do wykonania.<br />
+  - Zadanie z Giełdy Pomysłów (Retaksacja Recept): dodano kolumny z ilością<br />
+    jednostek przepisaną na recepcie oraz ilością jednostek wydanych.<br />
+    Dodano możliwość filtrowania recepta w zależności od stosunku ilości<br />
+    opakować/jednostek wydanych do ilości przepisanej na recepcie.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2021.11.25 [2021.2.4.3]<br />
+  - Dodano możliwość konfigurowania wyświetlania komentarzy w zależności do<br />
+    rodzaju kumentarza, podczas wyboru recepty do realizacji w oknie e-Recept<br />
+  - Urządzenia fiskalne opcja [Shift+F5] Info - w rodzajach wydruków dodano<br />
+    informację o możliwości wydruku kodów 2D dla drukarki fiskalnej.<br />
+  - Zmieniono wartość domyślną opcji Apw11.2.160: "Filtruj listę towarów podczas<br />
+    realizacji zlecenia po wybranym kodzie sprzętu" na TAK.<br />
+  - Zmieniono wartość domyślną opcji Apw11.2.52: "Włącz obsługę kilku różnych<br />
+    środków pomocniczych na wniosku" na TAK.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW45 -----------------------------</h3><br />
+2021.11.25 [2021.2.4.3]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2021.11.25 [2021.2.4.3]<br />
+  - Rozbudowa funkcjonalności usługi "Rabaty za punkty".<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2021.11.25<br />
+  ApwPlus.exe [2021.2.4.3]<br />
+  - Uaktualniono strukturę bazy danych.<br />
+<br />
+</body></html>

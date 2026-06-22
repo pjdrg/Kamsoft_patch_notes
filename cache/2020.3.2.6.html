@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2020.3.2.6</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2020.05.25<br />
+  apwharm.dll [2020.3.2.6]<br />
+  - poprawiono problem z funkcją odśwież ofertę na bazie firebird<br />
+  - poprawiono problem z wysyłaniem zamówień na stronę WWW<br />
+  slowniki.dll [2020.3.2.6] <br />
+  - dodano uprawnienie 00-0036 do przeglądania statystyk wszystkich pracowników<br />
+    dla procesu serializacji dla KS-MediVeris.<br />
+   <br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2020.05.26 [2020.3.2.6]<br />
+  - W sprzedaży podstawowej w okienku NMVS dodano zakładkę KS-MediVeris <br />
+    statystyka procesu serializacji. Każdy farmaceuta będzie miał możliwość<br />
+	zobaczenia swojej statystyki za dowolny okres. Pracownik, który będzie miał <br />
+	nadane uprawnienie 00-0036 będzie mógł przeglądać statystyki wszystkich <br />
+	pracowników.<br />
+  - Dodano obsługę nowego rodzaju sortowania dla sugestii sprzedaży z systemu <br />
+    KS-OmniPharm „Sugeruj kolejność użytkownika (cała lista)”<br />
+  - Dodano obsługę opcji APW11.2.150 „Traktuj kolor rekomendacji jako nadrzędny<br />
+    w oknie wyboru towaru do sprzedaży"<br />
+  - Na liście towarów sugerowanych dodano ikonki: zalegacz, terminujący się, <br />
+    suplement diety <br />
+  - Poprawiono aktualizację numeru pacjenta w poprawie sprzedaży. Wcześniej <br />
+    aktualizowała się cała recepta, a w przypadku sprzedaży odręcznej cała<br />
+    lista. W tej chwili aktualizacja numeru na jednej pozycji zaktualizuje tę<br />
+    pozycję, inne z tym samym numerem oraz pozycje bez przypisanego pacjenta.<br />
+    Aktualizacja nie zmieni numeru już nadanego, a innego niż zmieniany na <br />
+    innej pozycji.<br />
+  - Poprawiono możliwość drukowania duplikatu dla faktur wystawionych przed<br />
+    1.01.2020 (wyłączono kontrolę Pacjent/Odbiorca)<br />
+  - Zoptymalizowano zapytania SQL przy wejściu w poprawę sprzedaży dla Oracle.<br />
+    W niektórych przypadkach wejście w poprawę trwało bardzo długo, szczególnie<br />
+    przy dużych bazach<br />
+  - Poprawiono sprzedaż leków robionych z uprawnieniami dodatkowymi. Program<br />
+    wyświetlał informację o pominięciu uprawnienia dodatkowego, natomiast nie<br />
+    kasował go i pomimo poprawnej kwoty zapłaty, do refundacji przekazywana<br />
+    była informacja o uprawnieniu dodatkowym.  <br />
+  - e-Recepta farmaceutyczna: dodano narzędzie ułatwiające zapis dawkowania. <br />
+    Szczegóły można znaleźć w instrukcji "Wystawianie i realizacja recepty <br />
+	farmaceutycznej".<br />
+  - e-Recepta farmaceutyczna: usunięto błąd EExternalException występujący przy<br />
+    próbie utworzenia recepty, która została przepisana na lek zawierające w <br />
+	nazwie znaki zastrzeżone w dokumentach xml.	<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2020.05.26 [2020.3.2.6]<br />
+  - Poprawa eksportu do Optimy. Program błędnie eksportował dokumenty przychodu.<br />
+  - Środki pomocnicze: dodano możliwość generowania korekt (na minus i plus) <br />
+    dla zaznaczonych pozycji. Wygenerowana korekta zapisywana jest buforze. <br />
+    Korekty w buforze można edytować dopóki nie są zapisane.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW23 -----------------------------</h3><br />
+2020.05.26 [2020.3.2.6]<br />
+  - W oknie Retaksacji recept dodano sortowanie po dacie wystawienia recepty<br />
+  - W oknie Poprawności kodów kreskowych uwzględniono pozycje wysłane do SIM<br />
+    ale wycofane. Takie pozycje pojawią się na zestawieniu, chyba że zostały<br />
+    skorygowane<br />
+  - Wydane odpowiedniki: poprawiono wyświetlanie danych odpowiednika <br />
+    w przypadku, gdy EAN odpowiednika był poprzedzony zerem<br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2020.05.26 [2020.3.2.6] <br />
+  - Dodano opcję APW11.2.150 „Traktuj kolor rekomendacji jako nadrzędny w oknie <br />
+    wyboru towaru do sprzedaży"<br />
+    Uwaga. Po włączeniu opcji kolor miejsca składowania może nie być widoczny <br />
+    dla towarów, które mają zdefiniowaną rekomendację z systemu KS-OmniPharm.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW45 -----------------------------</h3><br />
+2020.05.25 [2020.3.2.6]<br />
+ - poprawiono problem z funkcją odśwież pełną ofertę na bazie firebird<br />
+ - poprawiono problem z wysyłaniem zamówień na stronę WWW<br />
+ - poprawiono problem z funkcją odśwież pojedynczy produkt na bazie firebird<br />
+<br />
+<h3>----------------------------- ZMIANY.KS-MEDIVERIS ------------------------------</h3><br />
+2020.05.26 [2020.3.2.6]<br />
+  - Dodanie numeru wersji dla KS-MediVeris w głównym oknie apmana w zakładce -<br />
+    Wersje modułów. Wersja ta jest zgodna z numerem wersji zgłoszonej do KOWAL, <br />
+	która widnieje na stronie www.nmvo.pl z zakładce Użytkownicy końcowi.<br />
+<br />
+</body></html>

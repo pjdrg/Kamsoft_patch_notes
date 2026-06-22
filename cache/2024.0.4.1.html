@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2024.0.4.1</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2024.04.11<br />
+  Slowniki.dll [2024.0.4.1]<br />
+  - Aktualizacja baz słownikowych w związku z wprowadzeniem nowej<br />
+    funkcjonalności "Blokada sprzedaży leku z alertem".<br />
+  - Rozdzielenie na karcie pacjenta definicji dokumentu uprawnienia dodatkowego<br />
+    na dokument recepty i wniosku.<br />
+<br />
+  ApwHarm.dll [2024.0.4.1]<br />
+  - Modyfikacja weryfikacji połączenia do EDE w celu podniesienia poziomu<br />
+    bezpieczeństwa poprzez użycie nowszego protokołu TLS.<br />
+  - Rozwiązano problem dotyczący nieprawidłowego generowaniem serwerów dla<br />
+    konfiguracji sklepów WWW w module APW45 – Apteka Internetowa.<br />
+    Problem objawiał się tym, że pomimo wyłączonej konfiguracji sklepu WWW,<br />
+    program generował nową konfigurację serwera dla nieaktywnego sklepu WWW.<br />
+    Funkcja zarządzania konfiguracjami sklepu jest dostępna w module<br />
+    APW45 – Apteka Internetowa -> Komunikacja -> Ustawienia -> Konfiguracja<br />
+    sklepu.<br />
+<br />
+  ApwMain, Resman.dll, ApwIap.dll, ApwPlan.exe, ApwPlanWorker.exe,<br />
+  WaUtil.exe [2024.0.4.1]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+  Zasoby.dll [2024.0.4.1]<br />
+  - Aktualizacja opisów opcji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2024.04.11 [2024.0.4.1]<br />
+  - Zadanie z Giełdy Pomysłów: Blokada sprzedaży leku z alertem.<br />
+    W ramach tej funkcjonalności z formatki wyświetlającej alert znika klawisz<br />
+    [F2] Brak kodu 2D. W przypadku alertu użytkownik będzie mógł wybrać opcję<br />
+    [F3] Sprzedaj pomimo alertu (wymagane uprawnienie 11-0045)<br />
+    lub [F4] Nie sprzedawaj. W obu przypadkach jest możliwość dodania własnego<br />
+    komentarza do wybranej opcji. Z tego miejsca, program będzie umożliwiał<br />
+    wstrzymanie lub reklamację leku.<br />
+    Dodatkowo w oknie NMVS (Alt+M) zostaje dodana nowa zakładka [Ctrl+F4]<br />
+    Przegląd opakowań wstrzymanych do wyjaśnienia.<br />
+  - W ramach funkcjonalności pharmindXF dla faktury pierwotnej w opisie towaru<br />
+    uzupełniono zestaw danych: kod CN, PKWiU. Dla faktury korygującej,<br />
+    poprawiono wyświetlanie przyczyny korekty. Poprawiono wyświetlanie adresu<br />
+    sprzedawcy.<br />
+  - eZWM: Rozdzielenie na karcie pacjenta definicji dokumentu uprawnienia<br />
+    dodatkowego na dokument recepty i wniosku.<br />
+  - eZWM: dodano obsługę kodu sprzętu M.05.01.<br />
+  - Rozszerzenie funkcjonalności działania komunikatów wyświetlanych w modułach.<br />
+  - Zabezpieczenie przed brakiem identyfikatora Kamsoft odbiorcy dla zleceń<br />
+    przesunięć MM z KS-OmniPharm.<br />
+  - KtoMaLek: dostosowanie treści sugestii dla farmaceuty w trakcie obsługi<br />
+    rezerwacji pacjenta w przypadku aktywnego Asystenta KtoMaLek.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW12 -----------------------------</h3><br />
+2024.04.11 [2024.0.4.1]<br />
+  - Rozszerzenie funkcjonalności działania komunikatów wyświetlanych w modułach.<br />
+  - Dostosowanie interfejsów zamówień automatycznych oraz akcji sprzedażowych<br />
+    do nowych standardów.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2024.04.11 [2024.0.4.1]<br />
+  - Rozszerzenie funkcjonalności działania komunikatów wyświetlanych w modułach.<br />
+  - Dodanie obsługi skanowanych poprzez KS-Aptix kodów innych niż EAN podczas<br />
+    weryfikacji dostawy, w celu uniknięcia problemów z przypadkowymi skanami.<br />
+  - Dodanie możliwości usunięcia weryfikacji dostawy KS-Aptix z poziomu APW13.<br />
+  - Zmiana metody obsługi wyjątków podczas generowania raportów księgowych<br />
+    w celu zwiększenia bezawaryjności systemu.<br />
+  - Dostosowanie interfejsów zamówień automatycznych oraz akcji sprzedażowych<br />
+    do nowych standardów.<br />
+  - Aktualizacja interfejsów do komunikacji z pharmindXF.<br />
+  - Reklamacje - dodano nową przyczyny powstania reklamacji:<br />
+    "Wydanie/wygaśnięcie decyzji administracyjnej o objęciu refundacją".<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2024.04.11 [2024.0.4.1]<br />
+  - Modyfikacja weryfikacji połączenia do EDE w celu podniesienia poziomu<br />
+    bezpieczeństwa poprzez użycie nowszego protokołu TLS.<br />
+  - eZWM: Rozdzielenie na karcie pacjenta definicji dokumentu uprawnienia<br />
+    dodatkowego na dokument recepty i wniosku.<br />
+  - eZWM: dodano obsługę kodu sprzętu M.05.01.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW23 -----------------------------</h3><br />
+2024.04.11 [2024.0.4.1]<br />
+  - Rozszerzenie funkcjonalności działania komunikatów wyświetlanych w modułach.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2024.04.11 [2024.0.4.1]<br />
+  - Rozszerzenie funkcjonalności działania komunikatów wyświetlanych w modułach.<br />
+  - Modyfikacja weryfikacji połączenia do EDE w celu podniesienia poziomu<br />
+    bezpieczeństwa poprzez użycie nowszego protokołu TLS.<br />
+  - Dodanie uprawnienia 11-0045 "Możliwość potwierdzenia sprzedaży leku<br />
+    z alertem NMVS/KOWAL". Uprawnienie domyślnie wyłączone. Tylko pracownik<br />
+    mający to uprawnienie będzie mógł sprzedać lek, który podczas weryfikacji<br />
+    wyświetlił alert.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW45 -----------------------------</h3><br />
+2024.04.11 [2024.0.4.1]<br />
+  - Dodano nową funkcjonalność, która realizuje poprawę stawki podatku VAT<br />
+    na kartach internetowych. Funkcji jest dostępna w module<br />
+    APW45 – Apteka Internetowa -> Towary -> [F3] Karta -> Więcej poleceń -><br />
+    "Aktualizuj stawki podatku VAT (k. Int.)".<br />
+  - Rozwiązano problem dotyczący nieprawidłowego generowaniem serwerów dla<br />
+    konfiguracji sklepów WWW w module APW45 – Apteka Internetowa.<br />
+    Problem objawiał się tym, że pomimo wyłączonej konfiguracji sklepu WWW,<br />
+    program generował nową konfigurację serwera dla nieaktywnego sklepu WWW.<br />
+    Funkcja zarządzania konfiguracjami sklepu jest dostępna w module<br />
+    APW45 – Apteka Internetowa -> Komunikacja -> Ustawienia -> Konfiguracja<br />
+    sklepu.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW55 -----------------------------</h3><br />
+2024.04.11 [2024.0.4.1]<br />
+  - Rozszerzenie funkcjonalności działania komunikatów wyświetlanych w modułach.<br />
+  - Dostosowanie interfejsów zamówień automatycznych oraz akcji sprzedażowych<br />
+    do nowych standardów.<br />
+<br />
+<h3>--------------------------------- Zmiany w EDE ---------------------------------</h3><br />
+2024.04.11 [2024.1.0.1]<br />
+  - Zmiana metody obsługi wyjątków podczas generowania raportów księgowych<br />
+    w celu zwiększenia bezawaryjności systemu.<br />
+  - Rozszerzenie obsługi raportowania KSeF o obsługę daty i czasu.<br />
+  - Aktualizacja funkcjonalności wymiany porozumień.<br />
+<br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2024.04.11 [2024.0.4.1]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2024.04.11<br />
+  ApwPlus [2024.0.4.1]<br />
+  - Aktualizacja struktury bazy danych w związku z wprowadzeniem nowej<br />
+    funkcjonalności "Blokada sprzedaży leku z alertem".<br />
+  - Dodanie grupy dla kodu sprzętu M.05.01.<br />
+<br />
+  DBCopy [2024.0.4.1]<br />
+  - Rozwiązano problem objawiający się nieprawidłowym odczytaniem wartości z pól<br />
+    NUMBER(19) dla baz Oracle.<br />
+<br />
+  OraPack, OraRest [2024.0.4.1]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+</body></html>

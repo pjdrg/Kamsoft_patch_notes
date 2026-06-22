@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2023.1.0.7</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2022.12.08<br />
+  ApwPlan.exe [2023.1.0.7]<br />
+  - Dodana weryfikacja spójności lokalnej kopii systemu KS-AOW z plikami<br />
+    dostępnymi w katalogu sieciowym z możliwością przeprowadzenia automatycznej<br />
+    aktualizacji plików z katalogu sieciowego oraz wykonania automatycznego<br />
+    restartu ApwPlan jeśli będzie to wymagane.<br />
+<br />
+  ApwPlanWorker.exe [2023.1.0.7]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+  Slowniki.dll [2023.1.0.7]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+  ApwHarm.dll [2023.1.0.7]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2022.12.08 [2023.1.0.7]<br />
+  - Aptix - Zmiana wyglądu okien z kodem QR w zależności od typu licencji APTIX.<br />
+    Umożliwienie zamówienia bezpośrednio w programie subskrypcji na Aptix.<br />
+  - Poprawa mechanizmów przekazywania danych do KS-OmniPharm (raport<br />
+    synchronizacyjny, przekazywanie zaliczek zerowych, wskaźnik<br />
+    "na zamówienie/apteka internetowa").<br />
+<br />
+<h3>---------------------------- Zmiany w module APW12 -----------------------------</h3><br />
+2022.12.08 [2023.1.0.7]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2022.12.08 [2023.1.0.7]<br />
+  - Aptix - Zmiana wyglądu okien z kodem QR w zależności od typu licencji APTIX.<br />
+    Umożliwienie zamówienia bezpośrednio w programie subskrypcji na Aptix.<br />
+  - Aptix - Dodanie parametrów wymagalności serii i daty ważności w weryfikacji<br />
+    dostawy i inwentaryzacji.<br />
+  - Aptix - Dodanie parametrów wymagalności skanowania kodów 2D w weryfikacji<br />
+    dostawy i inwentaryzacji.<br />
+  - Aptix - Zabezpieczenie przed ponowną próbą wczytania tych samych skanów<br />
+    w weryfikacji dostawy i inwentaryzacji.<br />
+  - Aptix - Poprawa błędu z wczytywaniem skanów w weryfikacji dostawy: "Cannot<br />
+    perform this operation on closed dataset".<br />
+  - Aptix - Pobieranie informacji o serializacji dla towarów których nie było<br />
+    na liście dokumentów.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW14 -----------------------------</h3><br />
+2022.12.08 [2023.1.0.7]<br />
+  - Aptix - Zmiana wyglądu okien z kodem QR w zależności od typu licencji APTIX.<br />
+    Umożliwienie zamówienia bezpośrednio w programie subskrypcji na Aptix.<br />
+  - Aptix - Dodanie parametrów wymagalności serii i daty ważności w weryfikacji<br />
+    dostawy i inwentaryzacji.<br />
+  - Aptix - Dodanie parametrów wymagalności skanowania kodów 2D w weryfikacji<br />
+    dostawy i inwentaryzacji.<br />
+  - Aptix - Zabezpieczenie przed ponowną próbą wczytania tych samych skanów<br />
+    w weryfikacji dostawy i inwentaryzacji.<br />
+  - Aptix - Zabezpieczenie inwentaryzacji przed próbą wczytania tego samego<br />
+    unikalnego kodu 2D produktu ponownie.<br />
+  - Aptix - Pobieranie informacji o serializacji dla towarów których nie było<br />
+    na liście dokumentów.<br />
+  - Poprawiono aktualizacje kodu EAN oraz kodu kreskowego podczas aktualizacji<br />
+    kartoteki towarów na podstawie bufora CKT.<br />
+    Dotychczas aktualizacja na podstawie bufora CKT powodowała wpisanie kodu<br />
+    kreskowego do pola kodu EAN.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2022.12.08 [2023.1.0.7]<br />
+  - Aptix - Dodanie parametrów wymagalności serii i daty ważności w weryfikacji<br />
+    dostawy i inwentaryzacji.<br />
+  - Aptix - Dodanie parametrów wymagalności skanowania kodów 2D w weryfikacji<br />
+    dostawy i inwentaryzacji.<br />
+<br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2022.12.08 [2023.1.0.7]<br />
+  - Raportowanie transakcji sprzedaży do OSOZ - optymalizacja.<br />
+  - Poprawa mechanizmów przekazywania danych do KS-OmniPharm (wskaźnik<br />
+    "na zamówienie/apteka internetowa").<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2022.12.08<br />
+  ApwPlus [2023.1.0.7]<br />
+  - Aktualizacja struktury bazy danych.<br />
+<br />
+</body></html>

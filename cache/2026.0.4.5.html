@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2026.0.4.5</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2026.01.28<br />
+  ApwHarm.dll [2026.0.4.5]<br />
+  - Rozwiązano problem z kontrolą leków przeterminowanych w module<br />
+    ApwPlan – Harmonogram zadań. Problem występował z kontrolą krótkich dat<br />
+    ważności dla automatu przygotowującego ofertę internetową dla klienta.<br />
+    Produkty nie były ukrywane z krótką datą ważności. Ofertę internetową<br />
+    odświeżamy zadaniem "Aktualizuj ofertę internetową na stronę sklepu WWW"<br />
+    z włączoną opcją "Odświeżania oferty".<br />
+<br />
+  ApInetAp.dll, Slowniki.dll [2026.0.4.5]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2026.01.28 [2026.0.4.5]<br />
+  - Rozwiązano problem z nieprawidłowym wyświetlaniem stanu usług OmniPharmOne,<br />
+    w przypadku, gdy od dłuższego czasu nie była uruchomiona usługa CopyCloud.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW12 -----------------------------</h3><br />
+2026.01.28 [2026.0.4.5]<br />
+  - Wprowadzono obsługę protokołu SFTP jako bezpiecznej alternatywy dla<br />
+    dotychczas używanego protokołu FTP.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2026.01.28 [2026.0.4.5]<br />
+  - Wprowadzono obsługę protokołu SFTP jako bezpiecznej alternatywy dla<br />
+    dotychczas używanego protokołu FTP.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2026.01.28 [2026.0.4.5<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW45 -----------------------------</h3><br />
+2026.01.28 [2026.0.4.5]<br />
+  - Rozwiązano problem z kontrolą leków przeterminowanych w module<br />
+    APW45 – Apteka Internetowa. Problem występował z kontrolą krótkich dat<br />
+    ważności dla automatu przygotowującego ofertę internetową dla klienta.<br />
+    Produkty nie były ukrywane z krótką datą ważności.<br />
+    Ofertę internetową przygotowujemy akcją dostępną z poziomu modułu<br />
+    "APW45 - Apteka internetowa -> Towary -> Odśwież ofertę lub Karta -> Odśwież<br />
+    produkt".<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2026.01.28<br />
+  DBCopy [2026.0.4.5]<br />
+  - Poprawiono wydajność operacji kopiowania danych.<br />
+<br />
+</body></html>

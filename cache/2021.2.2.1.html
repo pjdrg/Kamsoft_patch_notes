@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2021.2.2.1</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2021.08.30<br />
+  Slowniki.dll [2021.2.2.1]<br />
+  - Drobne usprawnienia na zakładce "e-Recepta" w edycji danych pracownika.<br />
+<br />
+  ApwHarm.dll [2021.2.2.1]<br />
+  - Dodano możliwość pobierania wraz z zamówieniami klienta numeru listu<br />
+    przewozowego oraz numeru płatności elektornicznej.<br />
+<br />
+  ApwIap.dll [2021.2.2.1]<br />
+  - Dodano kontrolę numeru klienta oraz poprawności rezerwacji dla mechanizmu<br />
+    grupowej realizacji zamówień.<br />
+<br />
+  ApwMain.exe [2021.2.2.1]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+  WaUtil.exe [2021.2.2.1]<br />
+  - Dodano fukcję tworzącą strukturę bazy dla systemu WMS. Funkcja jest dostępna<br />
+    z poziomu Wautil/Inne/WMS/Przygotuj strukturę bazy danych.<br />
+<br />
+  Zasoby.dll [2021.2.2.1]<br />
+  - Uzupełnienie opisu opcji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2021.08.30 [2021.2.2.1]<br />
+  - Zadania z Giełdy Pomysłów: dodano dodatkowe ostrzeżenia przy wystawianiu<br />
+    faktury sprzedaży jeśli nabywcą jest pacjent z wypełnionym numerem NIP lub<br />
+    odbiorca bez uzupełnionego numeru NIP.<br />
+  - W oknie e-Recepty dodano ikonę "U" dla towarów z ceną urzędową oraz <br />
+    ikonę "WM" dla wyrobów medycznych.<br />
+  - Zadania z GIełdy Pomysłów: w Poprawie sprzedaży, w oknie wyszukiwania<br />
+    dodano przycisk F6 do wybierania numeru PESEL pacjenta z kartoteki<br />
+    pacjentów.<br />
+  - Operacje magazynowe: wysyłka dokumentu przez Irap oraz przez KS-Omnipharm<br />
+    nie wymaga już zmiany na karcie odbiorcy ustawienia formatu dokumentu na<br />
+    OSOZ-EDI, jeśli był ustawiony inny format.<br />
+  - Poprawa przepisywania kodu dostępności "OTC" z e-Recepty na DRR.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2021.08.30 [2021.2.2.1]<br />
+  - Dodano wysyłkę potwierdzenia odbioru towaru dla korekt (dostawca<br />
+    z ustawionym potwierdzaniem).<br />
+  - Dodano możliwość filtrowania dokumentów po dacie wystawienia (lista<br />
+    dokumentów do weryfikacji dostawy).<br />
+<br />
+<h3>---------------------------- Zmiany w module APW14 -----------------------------</h3><br />
+2021.08.30 [2021.2.2.1]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2021.08.30 [2021.2.2.1]<br />
+  - Poprawiono wydruk zestawienia recept farmaceutycznych: w niektórych<br />
+    wypadkach nie drukowała się podstawa wydania.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2021.08.30 [2021.2.2.1]<br />
+  - Plan zadań: drobne usprawnienia w oknie edycji zadania.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW44 -----------------------------</h3><br />
+2021.08.30 [2021.2.2.1]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW45 -----------------------------</h3><br />
+2021.08.30 [2021.2.2.1]<br />
+  - Rozszerzono specyfikacje wymiany danych o możliwość pobierania numeru listu<br />
+    przewozowego dla zamówień internetowych.<br />
+    Wykorzystywany w tym celu jest znacznik XML'a NRPAYED.<br />
+  - Rozszerzono specyfikacje wymiany danych o możliwość pobierania numeru<br />
+    płatności elektronicznej dla zamówień internetowych.<br />
+    Wykorzystywany w tym celu jest znacznik XML'a NRLETTER.<br />
+<br />
+<h3>--------------------------------- Zmiany w EDE ---------------------------------</h3><br />
+2021.08.30<br />
+  - Dodanie możliwości wymuszenia synchronizacji porozumień przez Portal KS-EWD.<br />
+  - Dodanie możliwości logowania na Portal KS-EWD zgodnie z wybranym oddziałem.<br />
+  - Modyfikacja wysyłki potwierdzenia otrzymania faktury - potwierdzający<br />
+    na podstawie licencji.<br />
+  - Dodanie możliwosći pobrania klucza do certyfikatu.<br />
+<br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2021.08.30 [2021.2.2.1]<br />
+  - Optymalizacja procesu raportowania stanów magazynowych do OSOZ.<br />
+  - KS-OmniPharm: rozbudowano komunikat ze sprzedażą historyczną o numer recepty<br />
+    w ramach klienta.<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2021.08.30<br />
+  ApwPlus.exe [2021.2.2.1]<br />
+  - Uaktualniono strukturę bazy danych.<br />
+  - Uaktualniono strukturę bazy danych KS-EDE.<br />
+  - Dodano strukturę tabel dla obsługi systemu WMS (WKSPN, WKSPP, WKSWN, WKSWP,<br />
+    WMSPN, WMSPP, WMSWN, WMSWP).<br />
+<br />
+  Apwbase.dll [2021.2.2.1]<br />
+    - Uaktualniono bazę kart serwisowych.<br />
+<br />
+</body></html>

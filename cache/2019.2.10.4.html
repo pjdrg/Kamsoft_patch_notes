@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2019.2.10.4</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2019.09.05<br />
+  apwharm.dll [2019.3.2.8]<br />
+  - Wdrożono poprawkę dla mechanizmu odmów <br />
+<br />
+2019.09.04<br />
+  slowniki.dll [2019.3.2.7]<br />
+  - Poprawka filtrowania w oknie przeglądu bazy BLOZ dla bazy danych Oracle.<br />
+  - Możliwość zestawienia w wybranych kategoriach suplementów diety <br />
+    z lekami OTC.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2019.09.05 [2019.3.6.1]<br />
+  - W przypadku wybrania uprawnienia dodatkowego i leku robionego pojawiał się <br />
+    komunikat z informacją, że pacjenci z uprawnieniami dodatkowymi ponoszą <br />
+    opłatę za leki robione i pytaniem, czy wyłączyć uprawnienia dodatkowe dla <br />
+    tej sprzedaży. W modyfikacji zmieniono pytanie na komunikat informujący <br />
+    o usunięciu uprawnień.<br />
+  - e-Recepta: usunięcie weryfikacji EAN przy wycenie leku recepturowego.<br />
+  - e-Recepta: poprawiono sprzedaż mieszaną e-Recept i recept papierowych. <br />
+    Na DRR e-Recepty pojawiał się nr recepty papierowej. Przez co dokumentu<br />
+    realizacji recepty nie dało przesłać się do SIM za pierwszym razem. <br />
+  - e-Recepta: zablokowano automatyczne wiązanie towarów z aptecznej bazy dla<br />
+    pozycji eRecepty z zerowym kodem EAN. <br />
+  - Dodano obsługę uprawnienia "Sprzedaż leków z grup A, N, I-P oraz II-P <br />
+    odręcznie"<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2019.09.03 [2019.3.8.0]<br />
+    - Split payment. Dodano obsługę adnotacji na fakturze o podzielonej <br />
+      płatności VAT. Jeśli adnotacja nie została przekazana w dokumencie zakupu, <br />
+      personel apteki może taka informację nanieść ręcznie w momencie przyjęcia <br />
+      dokumentu zakupu na magazyn.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW23 -----------------------------</h3><br />
+2019.09.02 [2019.3.1.6]<br />
+  - Poprawiono wyświetlanie taksacji recept na monitorach 4K, dodano zapisywanie<br />
+    ustawień okna taksacji<br />
+<br />
+<h3>---------------------------- Zmiany w module APW31 -----------------------------</h3><br />
+2019.09.05 [2019.3.1.1]<br />
+  - Dodano automatyczne zamykanie okna 'Wystawianie dokumentu pieniężnego' oraz<br />
+    'Wystawianie polecenia przelewu' po wykonaniu operacji wydruku.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW68 -----------------------------</h3><br />
+2019.09.05 [2019.3.3.5]<br />
+  - Poprawa wyświetlania raportów ZSMOPL przy użyciu funkcji [F3]-Pokaż raport.<br />
+<br />
+2019.08.27 [2019.3.3.4]<br />
+  - Poprawa łączenia komunikatów Bilansu Otwarcia.<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2019.09.05<br />
+  Apwplus.exe [2019.3.16.0]<br />
+  - Uaktualniono strukturę bazy danych<br />
+<br />
+</body></html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2025.1.1.7</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2025.04.17<br />
+  Slowniki.dll [2025.1.1.7]<br />
+  - Usunięcie maski w polu "kod pocztowy" na formularzu dostawcy w kartotekach <br />
+    centralnych. Zmiana ma na celu umożliwienie wpisania w centrali <br />
+    niestandardowego kodu pocztowego np. dostawcy zagranicznego.<br />
+  - Poprawa wydruku dostaw. Występował problem z wydrukiem, jeśli w nazwie <br />
+    towaru występuje znak specjalny.<br />
+  - Optymalizacja sposobu weryfikacji połączenia internetowego<br />
+<br />
+  ApwMain [2025.1.1.7]<br />
+  - Optymalizacja sposobu weryfikacji połączenia internetowego w testach <br />
+    systemu aptecznego<br />
+<br />
+  ApwIap.dll, KSOPH.dll [2025.1.1.7]<br />
+  - Optymalizacja obsługi żądań HTTP.<br />
+<br />
+  ApwHarm.dll [2025.1.1.7]<br />
+  - Optymalizacja sposobu weryfikacji połączenia internetowego w wysyłce <br />
+    raportów FK.<br />
+  - Zmiana w sposobie nawiązywania połączenia do hurtowni w zadaniu komunikacji <br />
+    z dostawcami uwzględniająca godziny szczytu.<br />
+<br />
+  ApwIap.dll [2025.1.1.7]<br />
+  - Rozwiązano problem nieprawidłowego zarządzania wyborem dostawy w oknie <br />
+    Pakuj. Okno zarządzające dostawami jest dostępne z poziomu <br />
+    "APW45 - Apteka internetowa ->Zamówienia ->Pakuj ->Wybierz dostawę".<br />
+  - Rozwiązano problem nieprawidłowego generowania wydań zewnętrznych dla <br />
+    zamówień z apteki internetowej z poziomu operacji magazynowych. Okno <br />
+    z funkcją generowania dokumentów wydań zewnętrznych jest dostępne z poziomu<br />
+    "APW11 - Sprzedaż ->Operacje magazynowe ->Zamówienia internetowe".<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2025.04.17 [2025.1.1.7]<br />
+  - Pharmind grid: Prezentacja informacji od organizatora projektu grid podczas <br />
+    dodawania towaru do dokumentu przesunięcia międzymagazynowego dla towarów,<br />
+    które wg organizatora nie powinny być przesuwane do innych aptek<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2025.04.17 [2025.1.1.7]<br />
+  - Dodano możliwość poprawy pozycji z poziomu APW13: Zakupy -> Przegląd -> <br />
+    [Shift+F4] Edycja pozycji. Wprowadzenie zmian podczas edycji karty zakupu <br />
+    skutkuje wygenerowaniem korekt lub dokumentu przeceny.<br />
+  - Poprawa usuwania pozycji reklamacji. Problem polegał na tym, że po usunięciu<br />
+    wstrzymanej pozycji z reklamacji nie był usuwany jej status wstrzymany.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW15 -----------------------------</h3><br />
+2025.04.17 [2025.1.1.7]<br />
+  - Rozwiązano problem dotyczący nieprawidłowego wyszukiwania po kodzie <br />
+    kreskowym produktów w cenniku aptecznym. Problem objawiał się niemożliwością<br />
+    wyszukiwania opakowań po kodzie kreskowym w cenniku. <br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2025.04.17 [2025.1.1.7]<br />
+  - Dodano możliwość pobrania umowy UMX za pomocą usługi udostępnionej przez <br />
+    NFZ. Opcja dostępna dla aptek posiadających bezpośrednią umowę z NFZ. <br />
+    Więcej szczegółów w "Podręczniku użytkownika KS-AOW", rozdział "Środki <br />
+    pomocnicze".<br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2025.04.17 [2025.1.1.7]<br />
+  - Wprowadzono funkcję umożliwiającą usunięcie czujnika z systemu KS-AOW. <br />
+    Operacja ta usuwa czujnik jedynie z systemu KS-AOW — sam czujnik pozostaje<br />
+    nadal dostępny w systemie Efento, a jego historia pomiarów nie zostaje <br />
+    utracona. Usunięcia można dokonać wyłącznie z poziomu konta kierownika. <br />
+    Funkcja ta jest szczególnie przydatna w przypadku błędnie skonfigurowanych <br />
+    czujników — pozwala na ich usunięcie i ponowne dodanie do systemu <br />
+    w prawidłowej konfiguracji.<br />
+  - Dodanie możliwości zmiany danych logowania dla konta administratora dla <br />
+    systemu pomiarowego. Funkcjonalność jest dostępna z poziomu konta <br />
+    kierownika.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW45 -----------------------------</h3><br />
+2025.04.17 [2025.1.1.7]<br />
+  - Rozwiązano problem dotyczący nieprawidłowego zarządzania kodem CN na karcie<br />
+    internetowej. Okno zarządzające kodem CN jest dostępne z poziomu <br />
+    "APW45 - Apteka internetowa-> Towary -> Karta internetowa".<br />
+<br />
+<h3>---------------------------- Zmiany w module APW68 -----------------------------</h3><br />
+2025.04.17 [2025.1.1.7]<br />
+  - Rozwiązanie problemu z przesyłaniem pozycji przeterminowanej dla faktury <br />
+    zbiorczej, która zawierała również pozycję sprzedaży z datą raportu. <br />
+    Raportowanie pozycji przeterminowanej generowało błąd - TROSPOZ78.<br />
+<br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2025.04.17 [2025.1.1.7]<br />
+  - Pharmind grid: Pobieranie informacji od organizatorów projektów grid do <br />
+    prezentacji podczas dodawania towaru do dokumentu przesunięcia <br />
+    międzymagazynowego, dla towarów które wg organizatora nie powinny być <br />
+    przesuwane do innych aptek.<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2025.04.17<br />
+  ApwPlus [2025.1.1.7]<br />
+  - Aktualizacja struktury bazy danych.<br />
+<br />
+</body></html>

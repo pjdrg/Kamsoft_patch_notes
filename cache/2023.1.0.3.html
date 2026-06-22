@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2023.1.0.3</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2022.11.17<br />
+  Slowniki.dll [2023.1.0.3]<br />
+  - Zmiany w dystrybucji numerycznej - zamówienia automatyczne.<br />
+  - Wizytówka->KOWAL->[F9] Pobierz certyfikat - dodanie zabezpieczenia przed<br />
+    pobraniem certyfikatu w przypadku jak jest nie opłacona faktura ProForma<br />
+    na KS-MediVeris oraz na stanowisku nie ma aktualnej licencji.<br />
+    W takim przypadku program wyłączał obsługę KS-MediVeris.<br />
+<br />
+  ApwMain.exe [2023.1.0.3]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+  WaUtil.exe [2023.1.0.3]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+  KSOPH.dll [2023.1.0.3]<br />
+  - Poprawka na możliwość wystąpienia błędu ORA-24816.<br />
+<br />
+  ApwHarm.dll [2023.1.0.3]<br />
+  - Zmiany w dystrybucji numerycznej - zamówienia automatyczne.<br />
+<br />
+  Zasoby.dll [2023.1.0.3]<br />
+  - Aktualizacja opisów opcji.<br />
+  - Dodano nowe zasoby graficzne.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2022.11.17 [2023.1.0.3]<br />
+  - Dodanie nowej aktywności dla farmaceutów – Ankiety.<br />
+  - Leki on-line: poprawione filtrowanie na formatce zamówień klientów.<br />
+  - Leki on-line: Umożliwienie kasowania pozycji zamówienia nawet przy blokadzie<br />
+    edycji gdy zamówienie dotyczy towaru, który nie jest przyporządkowany<br />
+    do żadnego będącego na stanie apteki.<br />
+  - Leki on-line: poprawienie błędu "Niezgodność ilości - powinny być wszystkie<br />
+    na liście" występującego przy ręcznym przypisywaniem towaru do zamówienia<br />
+    przed działaniem automatu, który na podstawie faktury robi rezerwacje.<br />
+  - Poprawa sprzedaży: optymalizacja i drobne usprawnienia wyszukiwania<br />
+    po kwocie zapłaty oraz po numerze towaru.<br />
+  - Poprawiono wydruk wyceny leku robionego na drukarce Novitus Bono Lan.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW12 -----------------------------</h3><br />
+2022.11.17 [2023.1.0.3]<br />
+  - Zmiany w dystrybucji numerycznej - zamówienia automatyczne.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2022.11.17 [2023.1.0.3]<br />
+  - Zmiany w dystrybucji numerycznej - zamówienia automatyczne.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW14 -----------------------------</h3><br />
+2022.11.17 [2023.1.0.3]<br />
+  - Dodano możliwość aktualizacji nazwy handlowej w procesie poprawy bazy leków<br />
+    na podstawie bazy BLOZ (Pajączek). Aktualizacja możliwa po zaznaczeniu opcji<br />
+    APW14.1.35: "Aktualizuj nazwę handlową przy aktualizacji nazwy z BLOZ".<br />
+    Opcja domyślnie nieaktywna.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2022.11.17 [2023.1.0.3]<br />
+  - Raporty do księgowości w formacie XML - poprawa wyliczania podsumowania<br />
+    dla raportu z kas fiskalnych.<br />
+  - Rozszerzono numer Regon świadczeniodawcy do 14-tu znaków na wydruku <br />
+    "Ewidencja zrealizowanych zapotrzebowań".<br />
+<br />
+<h3>---------------------------- Zmiany w module APW22 -----------------------------</h3><br />
+2022.11.17 [2023.1.0.3]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW23 -----------------------------</h3><br />
+2022.11.17 [2023.1.0.3]<br />
+  - Rozszerzono numer Regon świadczeniodawcy 14-tu znaków w filtrze Przeglądu<br />
+    sprzedaży.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2022.11.17 [2023.1.0.3]<br />
+  - dodano opcję APW14.1.35: "Aktualizuj nazwę handlową przy aktualizacji nazwy<br />
+    z BLOZ".<br />
+<br />
+<h3>---------------------------- Zmiany w module APW42 -----------------------------</h3><br />
+2022.11.17 [2023.1.0.3]<br />
+  - Rozszerzenie kontroli istnienia w bazie danych kluczy i indeksów o dodatkową<br />
+    kontrolę istnienia wyzwalaczy oraz procedur. Dodana weryfikacja poprawności<br />
+    indeksów oraz kluczy.<br />
+<br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2022.11.17 [2023.1.0.3]<br />
+  - Zmiany w dystrybucji numerycznej - zamówienia automatyczne.<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2022.11.17<br />
+  ApwPlus.exe [2023.1.0.3]<br />
+  - Uaktualniono strukturę bazy danych.<br />
+<br />
+  ApwBase.dll [2023.1.0.3]<br />
+  - Uaktualniono bazę kart serwisowych.<br />
+<br />
+  IBPack.exe [2023.1.0.3]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+</body></html>

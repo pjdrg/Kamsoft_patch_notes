@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2025.2.1.7</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2025.06.30<br />
+  ApwHarm.dll [2025.2.1.7]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2025.06.30 [2025.2.1.7]<br />
+  - Rozwiązano problem z pojawianiem się komunikatu o braku NIP/Pesel<br />
+    przy próbie wystawienia faktury na klienta indywidualnego.<br />
+    Komunikat w pewnych sytuacjach pojawiał się pomimo istnienia tej danej<br />
+    na karcie pacjenta.<br />
+  - Terminale płatnicze eService: dodano możliwość wpisywania numeru PESEL<br />
+    oraz kodu recepty na terminalu, podczas korzystania z okna do wprowadzania<br />
+    kodów e-Recept. Funkcjonalność ta jest dostępna dla urządzeń, które<br />
+    obsługują wprowadzanie tekstu.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2025.06.30 [2025.2.1.7]<br />
+  - Eksport do Wapro FaKiR, rozwiązano problem z parametrem rodzaj daty<br />
+    dla dokumentów zakupu. Dla faktur zakupu eksport niepoprawnie wybierał<br />
+    dokumenty z zadanego okresu uwzględniając parametr Data zakupu.<br />
+  - Eksport do Oracle, rozwiązano problem z pojawianiem się komunikatu "Field<br />
+    VERPL not found". Błąd pojawiał się dla niektórych pozycji sprzedaży<br />
+    w przypadku zaznaczenia opcji Przekaż sprzedaż paragonową.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2025.06.30 [2025.2.1.7]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW68 -----------------------------</h3><br />
+2025.06.30 [2025.2.1.7]<br />
+  - Raportowanie obrotów i stanów: dostosowano statusy zwrotne z ZSMOPL<br />
+    do wersji 1.39. Statusy są pobierane za pomocą MAR01.<br />
+<br />
+</body></html>

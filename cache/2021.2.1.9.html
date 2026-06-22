@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2021.2.1.9</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2021.08.16<br />
+  Slowniki.dll [2021.2.1.9]<br />
+  - Dodano możliwość sterowania nową defnicją transportu DHL dla reguł<br />
+    oraz defnicji transportu.<br />
+<br />
+  ApwPlan.exe [2021.2.1.9]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+  ApwHarm.dll [2021.2.1.9]<br />
+  - Dodano nową fukcjonalność rozsyłania automatycznego maili dla transportu.<br />
+<br />
+  WaUtil.exe [2021.2.1.9]<br />
+  - Dodano funkcje przygotowujące bazę danych pod komunikację z systemem<br />
+    zewnętrzyn WMS.<br />
+  - Dodano opcje do zarządzania aktywacją komunikacji systemu WMS.<br />
+<br />
+  apwfn.dll [2021.2.1.9]<br />
+  - Uaktualniono listę opisów opcji (zlecenia centralnego sterowania opcjami)<br />
+    w oknie przeglądu zleceń.<br />
+<br />
+  ApwIap.dll [2021.2.1.9]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+  Zasoby.dll [2021.2.1.9]<br />
+  - Uzupełnienie opisu opcji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2021.08.16 [2021.2.1.9]<br />
+  - Dodano możliwość blokowania realizacji zlecenia, gdy cena transakcji<br />
+    różni się od ceny wynikającej z umowy z NFZ (UMX). Opcja: Apw11.4.20.<br />
+  - Dodano obsługę funkcji ostrzegaj/blokuj w przypadku wystawienia dokumentu <br />
+    gotówkowego dla Odbiorcy na kwote większą od maksymalnej kwoty transakcji.<br />
+    Zachowanie funkcji zależne od ustawionego parametru Apw11.2.162.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2021.08.16 [2021.2.1.9]<br />
+  - Dodano nową fukcjonalność "Komunikacja z systemem WMS dla dokumentów<br />
+    przyjęć". Funkcjonalność jest domyślnie wyłączona z systemu KS-AOW.<br />
+    Funkcjonalość włączamy za pomocą wautila w trybie pracy expert.<br />
+  - Dodano obsługę funkcji ostrzegaj/blokuj w przypadku przyjęcia dokumentu<br />
+    gotówkowego na kwote większą od maksymalnej kwoty transakcji.<br />
+    Zachowanie funkcji zależne od ustawionego parametru Apw13.2.99.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW31 -----------------------------</h3><br />
+2021.08.16 [2021.2.1.9]<br />
+  - W widoku płatności dodano wyróżniki w postaci ikonek dla transakcji<br />
+    gotówkowych większych od maksymalnej kwoty transakcji gotówkowej.<br />
+    Wyświetlanie zależne ustawionej opcji Apw11.2.162 i Apw13.2.99.<br />
+  - Płatności za przyjęte faktury w opcji [F2] Zapłata - Wystaw KW dodano<br />
+    obsługę funkcji ostrzeżeń/blokady przy zapłacie na kwote większą od<br />
+    maksymalnej kwoty gotówkowej.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2021.08.16 [2021.2.1.9]<br />
+  - Do opcji Apw11.4.20 dodano możliwość blokowania realizacji zlecenia,<br />
+    gdy cena transakcji różni się od ceny wynikającej z umowy z NFZ (UMX).<br />
+  - Dodano opcje Apw11.2.162 - Sposób reakcji przy przekroczeniu maksymalnej<br />
+    kwoty transakcji gotówkowej.<br />
+  - Dodano opcję APW11.2.163 - Maksymalna kwota transakcji gotówkowej.<br />
+  - Dodano opcję APW13.2.99 - Sposób reakcji przy rejestracji płatności<br />
+    gotówkowej za dokument zakupu, którego wartość przekracza maksymalną kwotę<br />
+    transakcji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW45 -----------------------------</h3><br />
+2021.08.16 [2021.2.1.9]<br />
+  - Dodano nową funkcjonalność obsługa listów przerwozowych dla firmy<br />
+    kurierskiej DHL. W ramach funkcjonalności, mamy możliwość generowania<br />
+    listów przewozowych dla serwisu DHL24 (transport bezpośredni do klienta)<br />
+    oraz dla serwisu DHL PARCELSHOP (transport do punktów odbioru).<br />
+    Funkcjonalność dodatkowo umożliwia generowanie protokół odbioru dla firm<br />
+    kurierskich.<br />
+  - Dodano nową fukcjonalność rozsyłania maila dla transportu.Funkcjonalność<br />
+    jest zarządzana opcją w regułach dla zamówień zakładka inne (właczamy<br />
+    funkcjonalność). A w zakładce emial zarządzamy opcjami rozsyłania maila<br />
+    dla klienta.<br />
+  - Rozszerzono edycję treści maila o możliowść dodwania automatycznego linku<br />
+    dla śledzenia przesyłki dla klienta oraz dodano możliwość dodawania pola<br />
+    do treści typ transportu oraz wartości dla numeru listu przewozowego.<br />
+  - Dodano nową fukcjonalność "Komunikacja z systemem WMS dla zamówień<br />
+    internetowych". Funkcjonalność jest domyślnie wyłączona z systemu KS-AOW.<br />
+    Funkcjonalość włączamy za pomocą wautila w trybie pracy expert.<br />
+  - Dodano poprawkę dla mechanizmu przypisaywania kategorii nadrzędnej w trybie<br />
+    pracy z wieloma ofertami internetowymi.<br />
+<br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2021.08.16 [2021.2.1.9]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2021.08.16<br />
+  ApwPlus.exe [2021.2.1.9]<br />
+  - Uaktualniono strukturę bazy danych.<br />
+  - Rozszerzono pole odpowiedzialne za typ transportu.<br />
+<br />
+</body></html>

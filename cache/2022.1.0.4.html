@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2022.1.0.4</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2022.01.20<br />
+  Slowniki.dll [2022.1.0.4]<br />
+  - Modyfikacje w procesie wymiany porozumień w zakresie identyfikacji plików.<br />
+  - Drobne zmiany dla OSOZ.<br />
+<br />
+  Osozmok.dll [2022.1.0.4]<br />
+  - Zmiany w procesie autoryzacji do usług OSOZ.<br />
+<br />
+  ApwOph.dll [2022.1.0.4]<br />
+  - Import dokumentów: poprawka na możliwość wystąpienia błędu "A component<br />
+    named {x} already exists".<br />
+<br />
+  ApwHarm.dll [2022.1.0.4]<br />
+  - Modyfikacja zapisu dokumentu.<br />
+<br />
+  ApwHarmPush.dll [2022.1.0.4]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+  ApwMain.exe [2022.1.0.4]<br />
+  - Rozszerzono test systemu aptecznego o:<br />
+    * sprawdzanie możliwości zalogowania do serwisu uwierzytalniejącego<br />
+      KS-OmniPharm One,<br />
+    * sprawdzanie zgodności systemu operacyjnego z minimalnymi wymaganiami,<br />
+    * sprawdzanie obecności .NET Framework 4.6 lub nowszego.<br />
+<br />
+  APISERVICE<br />
+  - Poprawa weryfikacji w KOWAL na urządzeniu mobilnym.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2022.01.20 [2022.1.0.4]<br />
+  - Poprawiono wystawienie zapotrzebowania na psychotropy.<br />
+  - Dodano ostrzeżenie przy próbie wydania leku refundowanego zamiast<br />
+    zaordynowanego na e-Recepcie leku nierefundowanego.<br />
+  - Poprawiono funkcję Zmiany ceny detalicznej w sprzedaży podstawowej.<br />
+    Przy udzielaniu rabatu podczas sprzedaży [Shift+F12] w przypadku towaru<br />
+    z mnożnikiem aptecznym, blokowana była możliwość udzielenia rabatu z<br />
+    komunikatem: "Wartość rabatu przekracza miesięczny limit", mimo, że limit<br />
+    nie został przekroczony.<br />
+  - Poprawiono problem usuwania podsumowania zapłaty dla ostatniej sprzedaży<br />
+    zafiskalizowanej.<br />
+    Problem sie generował przy próbie usuwania wszystkich pozycji z faktury<br />
+    zbiorczej.<br />
+  - Poprawa działania funkcji ustawiającą formę płatności na formatce nagłówka<br />
+    dokumentu. Problem pojawiał się dla faktur, wystawionych do paragonów gdzie<br />
+    data wystawienia była większa od daty sprzedaży, podczas edycji/korekty<br />
+    takiej faktury.<br />
+  - Dodanie listy sald punktowych.<br />
+  - Drobne zmiany dla OSOZ.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW12 -----------------------------</h3><br />
+2022.01.20 [2022.1.0.4]<br />
+  - Lista braków: poprawiono funkcję sortowania po kolumnie ilośc ogólna.<br />
+  - Pozycje zamówienia: poprawiono opisy pojawiające sie po najechaniu myszką<br />
+    na nagłówki kolumn.<br />
+  - Drobne zmiany dla OSOZ.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2022.01.20 [2022.1.0.4]<br />
+  - Poprawa wyświetlania danych w mobilnej weryfikacji dostawy - usunięte<br />
+    pozycje faktur.<br />
+  - Modyfikacje w procesie wymiany porozumień w zakresie identyfikacji plików.<br />
+  - Zablokowanie możliwości odsyłania potwierdzeń do obrazów dokumentów.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW14 -----------------------------</h3><br />
+2022.01.20 [2022.1.0.4]<br />
+  - Poprawa wyświetlania danych w mobilnej inwentaryzacji - usunięte pozycje<br />
+    faktur.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2022.01.20 [2022.1.0.4]<br />
+  - Środki pomocnicze: poprawiono raport "Zestawienie od 01.09.2013".<br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2022.01.20 [2022.1.0.4]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW44 -----------------------------</h3><br />
+2022.01.20 [2022.1.0.4]<br />
+  - Rozszerzono test KS-EWD o sprawdzanie możliwości zalogowania do serwisu<br />
+    uwierzytalniejącego KS-OmniPharm One (menu KS-EWD -> Test połączenia).<br />
+<br />
+<h3>---------------------------- Zmiany w module APW68 -----------------------------</h3><br />
+2022.01.20 [2022.1.0.4]<br />
+  - Aktualizacja statusów pobieranych ze ZSMOPL dla komunikatów braków.<br />
+<br />
+<h3>--------------------------------- Zmiany w EDE ---------------------------------</h3><br />
+2022.01.20<br />
+  - Modyfikacje w procesie wysyłki potwierdzeń dokumentów.<br />
+  - Wprowadzenie odsyłania potwierdzeń na adres z karty dostawcy na którą<br />
+    pobrano dokument, w przypadku przepięcia dokumentu na inną kartę.<br />
+  - Modyfikacje w procesie wymiany porozumień w zakresie identyfikacji plików.<br />
+  - Zablokowanie możliwości odsyłania potwierdzeń do obrazów dokumentów.<br />
+  - Modyfikacja zapisu dokumentu, pozwalająca na wysłanie potwierdzenia<br />
+    otrzymania dokumentu dopiero po zapisaniu faktury do bazy.<br />
+<br />
+<h3>--------------------------------- ZMIANY.IRAP ----------------------------------</h3><br />
+2022.01.20 [2022.1.0.4]<br />
+  - Import dokumentów: poprawka na możliwość wystąpienia błędu "A component<br />
+    named {x} already exists".<br />
+<br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2022.01.20 [2022.1.0.4]<br />
+  - Drobne zmiany dla OSOZ.<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2022.01.20<br />
+  ApwPlus.exe [2022.1.0.4]<br />
+  - Uaktualniono strukturę bazy danych.<br />
+<br />
+  Apwbase.dll [2022.1.0.4]<br />
+  - Uaktualniono bazę kart serwisowych.<br />
+<br />
+</body></html>

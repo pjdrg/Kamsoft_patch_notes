@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2021.2.0.8</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2021.06.28<br />
+  Slowniki.dll [2021.2.0.8]<br />
+    - Kartoteka Klasy->Klasy pacjentów/odbiorców dodanie pola Konto w systemie FK,<br />
+      gdzie użytkownik będzie mógł wpisać identyfikator klasy pacjenta służący, <br />
+      po stronie KS-FKW do identyfikacji kontrahenta.<br />
+<br />
+  ApwHarm.dll [2021.2.0.8]<br />
+    - Aktualizacja modułu w związku z rozszerzeniem eksportu do KS-FKW o obsługę <br />
+      identyfikatora klasy pacjenta.<br />
+<br />
+  ApwMain.exe [2021.2.0.8]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2021.06.28 [2021.2.0.8]<br />
+  - Zadania z Giełdy Pomysłów: Generator kodów 2D/kreskowych do e-recepty.<br />
+    W okienku Kody e-Recepty dodano nowy przycisk [F12] Lista e-recept. Lista<br />
+    ta będzie zawierać listę e-Recept pacjenta wystawionych, częściowo <br />
+    zrealizowanych w danej aptece w ciągu ostatniego roku. Dodatkowo na formatce <br />
+    kodów e-Recept dodano możliwość generowania kodu kreskowego danej e-Recepty.<br />
+  - Dodanie funkcji kontroli poprawności skanowanych opakowań podlegających <br />
+    serializacji, podczas wykonania usunięcia lub korekty (zwrotu), dla <br />
+    sprzedaży, która zawiera kilka pozycji tego samego leku.<br />
+  - Usunięto wpisywanie domyślnego Oddziału NFZ na receptach papierowych.<br />
+  - KS-OmniPharm: usunieto problem z przekazywaniem danych sprzedażowych  <br />
+<br />
+<h3>---------------------------- Zmiany w module APW12 -----------------------------</h3><br />
+2021.06.28 [2021.2.0.8]<br />
+  - Lista braków - poprawa funkcji odczytującej Ilość w buforze. <br />
+    Funkcja źle odczytywała tą ilośc w przypadku towarów które jeszcze nie były <br />
+    w bazie towarowej.<br />
+  - Zamówienia łączone poprawa sortowania dla kolumny cena urzędowa.<br />
+  - Zamówienia łączone - poprawa funkcji przepisywania ceny z promocji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2021.06.28 [2021.2.0.8]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2021.06.28 [2021.2.0.8]<br />
+  - Eksport do KS-FKW został rozszerzony o dodatkową cechę dokumentu <br />
+    "fk-knt-klasa" zawierająy identyfikator klasy pacjenta.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW22 -----------------------------</h3><br />
+2021.06.28 [2021.2.0.8]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW24 -----------------------------</h3><br />
+2021.06.28 [2021.2.0.8]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2021.06.28 [2021.2.0.8]<br />
+  - Aktualizacja funkcji "Komunikacja z repozytorium KS-EDE". Funkcja została<br />
+    rozszerzona o obsługę identyfikatora klasy pacjenta.<br />
+<br />
+<h3>--------------------------------- Zmiany w EDE ---------------------------------</h3><br />
+2021.06.28<br />
+  - Poprawa działania zakańczania porozumienia. Wyeliminowanie sytuacji, <br />
+    w której proces zakończenia mógł zakończyć się niepowodzeniem.<br />
+  - Optymalizacja wydajności pobierania raportów księgowych.<br />
+  - Optymalizacja procesu automatycznego pobierania raportów księgowch.<br />
+  - Dodanie funkcjonalności informowania hurtowni o aptekach podpiętych przez <br />
+    sieć do danego porozumienia.<br />
+  - Dodanie funkcjonalności informowania hurtowni o fakcie zakończenia <br />
+    porozumienia przez odbiorcę.<br />
+  - Modyfikacja sposobu akceptacji i wyboru daty wysyłki potwierdzeń <br />
+    dostarczenia i otrzymania dokumentów.<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2021.06.28<br />
+  ApwPlus.exe [2021.2.0.8]<br />
+  - Uaktualniono strukturę bazy danych.<br />
+  <br />
+</body></html>

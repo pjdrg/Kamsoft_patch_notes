@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2022.2.2.9</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2022.07.14<br />
+  Slowniki.dll [2022.2.2.9]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+  ApwHarm.dll [2022.2.2.9]<br />
+  - Odblokowano pobieranie BLOZ przez APWPlan jeśli w systemie był BLOZ<br />
+    buforowy. Dotychczas jeśli w systemie istniał BLOZ buforowy APWPlan<br />
+    w ogóle nie pobierał BLOZA.<br />
+<br />
+  ApwiAp.dll [2022.2.2.9]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2022.07.14 [2022.2.2.9]<br />
+  - Dodanie nowej funkcji – rekomendacje KS-Omnipharm podczas przyjęcia<br />
+    na magazyn.<br />
+  - eZWM - dodano możliwość realizacji zlecenia w trybie rejestracji<br />
+    wstecznej (tryb awaryjny). W czasie niedostępności usługi eZWM,<br />
+    świadczeniodawcy realizujący zlecenia zarejestrują sprzedaż<br />
+    w systemie KS-AOW z pominięciem modułu eZWM, poprzez Wniosek.<br />
+    W momencie, gdy usługa obsługi zleceń na zaopatrzenie w wyroby medyczne<br />
+    jest dostępna, realizator zamiast wprowadzać ręcznie informacje o realizacji<br />
+    w aplikacji webowej AP-ZZ może poprzez Ctrl+R w poprawie sprzedaży<br />
+    potwierdzić realizację zlecenia w eZWM.<br />
+    Szczegóły w instrukcji: "Realizacja zleceń na zaopatrzenie w wyroby<br />
+    medyczne z wykorzystaniem moduły e-ZWM" (rozdział 16).<br />
+  - Wniosek - dodano możliwość pobrania informacji do nowego wniosku z wcześniej<br />
+    zrealizowanego wniosku. Dzięki tej funkcji podczas kolejnej wizyty pacjenta<br />
+    w celu realizacji zlecenia comiesięcznego nie będzie konieczności ponownego<br />
+    uzupełniania wniosku. W oknie "Wniosek" po naciśnięciu "[Alt+P] Przegląd"<br />
+    wyświetli się okno z listą zrealizowanych zleceń. Po wybraniu zlecenia<br />
+    nastąpi automatyczne wypełnienie Wniosku z poprzedniej realizacji.<br />
+  - Zadanie z Giełdy Pomysłów: Dodano możliwość zmiany osoby przyjmującej<br />
+    receptę na lek recepturowy oraz osoby wykonującej lek bezpośrednio<br />
+    w kolejce. Umożliwiono również zmianę godzin przyjęcia i wykonania.<br />
+    Dodano możliwość zmiany sekund w godzinach przyjęcia i wykonania.<br />
+  - Scalono okno do zmiany osoby przyjmującej, wykonującej i wydającej oraz<br />
+    okno zmiany godzin przyjęcia wykonania i wydania leku robionego.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW12 -----------------------------</h3><br />
+2022.07.14 [2022.2.2.9]<br />
+  - Dodanie nowej funkcji – rekomendacje KS-Omnipharm podczas przyjęcia<br />
+    na magazyn.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2022.07.14 [2022.2.2.9]<br />
+  - Dodanie nowej funkcji – rekomendacje KS-Omnipharm podczas przyjęcia<br />
+    na magazyn.<br />
+  - Dodanie samouczka dla weryfikacji dostawy APTIX<br />
+  - Poprawa wczytywania skanów przy użyciu aplikacji APTIX na bazie ORACLE<br />
+    (błąd ORA-00936 - brak wyrażenia).<br />
+<br />
+<h3>---------------------------- Zmiany w module APW14 -----------------------------</h3><br />
+2022.07.14 [2022.2.2.9]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW15 -----------------------------</h3><br />
+2022.07.14 [2022.2.2.9]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2022.07.14 [2022.2.2.9]<br />
+  - W edycji korekty zestawienia refundacyjnego dodano możliwość edycji sekund<br />
+    w godzinach przyjęcia recepty na lek recepturowy oraz godzinach wykonania<br />
+    i wydania leku robionego.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW23 -----------------------------</h3><br />
+2022.07.14 [2022.2.2.9]<br />
+  - Poprawa wywołania asystenta e-Recepty.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW42 -----------------------------</h3><br />
+2022.07.14 [2022.2.2.9]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW45 -----------------------------</h3><br />
+2022.07.14 [2022.2.2.9]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW68 -----------------------------</h3><br />
+2022.07.14 [2022.2.2.9]<br />
+  - MAR03 - weryfikacja stanów magazynowych. Poprawa zerowania stanów<br />
+    dla pozycji towaru, gdzie wykazywało ilość dla precyzji 5 miejsc<br />
+    po przecinku.<br />
+<br />
+<h3>--------------------------------- ZMIANY.APTIX ---------------------------------</h3><br />
+2022.07.14<br />
+  - Poprawiono wyświetlanie zeskanowanych pozycji po ponownym pobraniu danych<br />
+    na świeżo zainstalowanej aplikacji.<br />
+  - Poprawiono wyświetlanie ilości zeskanowanych pozycji.<br />
+  - Zoptymalizowano wczytywanie wyświetlanej listy produktów.<br />
+  - Zmieniono rodzaj i głośność sygnałów wydawanych podczas obsługi skanów.<br />
+  - Dodano nową funkcję obsługi zmiany ilości pozycji zeskanowanych z kodu 2d<br />
+    w trybie inwentaryzacji.<br />
+  - Poprawiono obsługę skanów dla nieprawidłowo sformatowanych kodów 2d.<br />
+  - Dodano opcję ręcznego dodawania skanów do danej pozycji.<br />
+  - Poprawiono mechanizm sprawdzania nowszej wersji aplikacji.<br />
+  - Zmieniono ikonę i komunikat przy przejściu do nowego dokumentu.<br />
+  - Poprawiono wyświetlanie się formatek na urządzeniach starszych.<br />
+  - Dodano opcję "Sprawdź, co nowego w Aptix" widoczną z poziomu ustawień<br />
+    aplikacji.<br />
+  - Dodano możliwość wielokrotnego skanowania towarów po kodzie 2d, które<br />
+    nie podlegają serializacji.<br />
+  - Usprawniono wczytywanie numeru serii i daty ważności z kodu 2d.<br />
+  - Poprawiono mechanizm skanowania z poziomu szczegółów pozycji.<br />
+  - Wyłączono weryfikację KOWAL podczas inwentaryzacji.<br />
+<br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2022.07.14 [2022.2.2.9]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2022.07.14<br />
+  ApwPlus.exe [2022.2.2.9]<br />
+  - Uaktualniono strukturę bazy danych.<br />
+<br />
+  Apwbase.dll [2022.2.2.9]<br />
+  - Uaktualniono bazę kart serwisowych.<br />
+<br />
+</body></html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2025.3.0.0</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2025.07.24<br />
+  ApwMain [2025.3.0.0]<br />
+  - Modyfikacja w zakresie testu połączenia KS-Aptix. Dodano informację<br />
+    o wymaganym zalogowaniu się użytkownika przed wykonaniem testu KS-Aptix.<br />
+  - Pasek bezpieczeństwa: dodano zmianę koloru paska bezpieczeństwa w zależności<br />
+    od stopnia jego wypełnienia.<br />
+<br />
+  KS-BDO<br />
+  - Zmodyfikowano opisy wskazówek dotyczących poziomu bezpieczeństwa.<br />
+<br />
+  ApwHarm.dll [2025.3.0.0]<br />
+  - Modyfikacja w zakresie wczytywania dokumentów z pharmind EDI.<br />
+    Zmiana w odczycie Wystawcy, Sprzedawcy oraz zapis informacji o powodzie<br />
+    braku wczytania dokumentu do systemu.<br />
+  - Modyfikacja w zakresie zamówień automatycznych pharmind GRID.<br />
+    Modyfikacja zapisu i wysyłki raportu, dodanie informacji do logów ApwPlan<br />
+    informacji o problemie podczas zapisu dokumentu w repozytorium dokumentów.<br />
+<br />
+  KSBDOApwDD.dll [2025.0.0.5], ApwHarmPush.dll [2025.3.0.0]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+  Slowniki.dll [2025.3.0.0]<br />
+  - Dodano możliwość filtrowania historii sprzedaży na karcie towaru<br />
+    z uwzględnieniem wybranego magazynu.<br />
+<br />
+  Zasoby.dll [2025.3.0.0]<br />
+  - Aktualizacja opisów opcji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2025.07.24 [2025.3.0.0]<br />
+  - Okno synonimów: poprawa pozycjonowania towarów sugerowanych do wydania<br />
+    (wyróżnionych gwiazdką). W niektórych przypadkach program odwrotnie sortował<br />
+    pozycje.<br />
+  - Dostosowanie programu do wersji usługi internetowej umożliwiającej<br />
+    realizację jednej e-Recepty w różnych aptekach, zgodnie z dokumentacją<br />
+    integracyjną systemu P1 w wersji W27 z dnia 2025-03-14.<br />
+    Funkcjonalność dostępna będzie dopiero po jej uruchomieniu przez Centrum<br />
+    e-Zdrowia. Opis procesu oraz scenariusze użycia zostaną opublikowane<br />
+    w instrukcji systemowej "E-Recepta P1 w systemie KS-AOW" po opublikowaniu<br />
+    przez Centrum e-Zdrowia terminu wdrożenia.<br />
+  - Dodano blokadę sprzedaży odręcznej leku recepturowego, zależną od ustawienia<br />
+    opcji APW11.2.178: "Sprzedaż odręczna leku recepturowego".<br />
+  - Terminale płatnicze Fiserv: dodano możliwość wpisywania numeru PESEL<br />
+    oraz kodu recepty na terminalu, podczas korzystania z okna do wprowadzania<br />
+    kodów e-Recept. Funkcjonalność ta jest dostępna dla urządzeń, które<br />
+    obsługują wprowadzanie tekstu.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW12 -----------------------------</h3><br />
+2025.07.24 [2025.3.0.0]<br />
+  - Modyfikacja w zakresie zamówień automatycznych pharmind GRID.<br />
+    Modyfikacja zapisu i wysyłki raportu, dodanie informacji do historii<br />
+    zamówień automatycznych informacji o problemie podczas konfiguracji<br />
+    powiązanej z nim akcji sprzedażowej, możliwość dodania kartoteki<br />
+    organizatora na podstawie centralnych kartotek dostawców przy konfiguracji<br />
+    mieszanej lub centralnej.<br />
+  - Modyfikacja w zakresie ofert. Zoptymalizowano sposób wczytywania ofert<br />
+    dostawców minimalizując liczbę operacji na bazie danych.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2025.07.24 [2025.3.0.0]<br />
+  - Modyfikacja w zakresie zamówień automatycznych pharmind GRID.<br />
+    Modyfikacja zapisu i wysyłki raportu, dodanie informacji do logów ApwPlan<br />
+    informacji o problemie podczas zapisu dokumentu w repozytorium dokumentów.<br />
+  - KS-OmniPharm: dodano obsługę nowego priorytetu ceny w ramach centralnych<br />
+    strategii marżowych "rekomendacja ceny - decyduje apteka".<br />
+  - Dodano obsługę nowej reguły w obrębie strategii cenowych: CSM - Cena<br />
+    rekomendowana ze Strategii Marżowej (KS-OmniPharm).<br />
+<br />
+<h3>---------------------------- Zmiany w module APW14 -----------------------------</h3><br />
+2025.07.24 [2025.3.0.0]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2025.07.24 [2025.3.0.0]<br />
+  - Raport w formacie NAV: poprawiono liczenie kosztu usługi.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW22 -----------------------------</h3><br />
+2025.07.24 [2025.3.0.0]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW23 -----------------------------</h3><br />
+2025.07.24 [2025.3.0.0]<br />
+  - Dostosowanie programu do wersji usługi internetowej umożliwiającej<br />
+    realizację jednej e-Recepty w różnych aptekach, zgodnie z dokumentacją<br />
+    integracyjną systemu P1 w wersji W27 z dnia 2025-03-14.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW35 -----------------------------</h3><br />
+2025.07.24 [2025.3.0.0]<br />
+  - KS-OmniPharm: dostosowano przegląd centralnych strategii marżowych<br />
+    do obsługi nowego priorytetu ceny "rekomendacja ceny - decyduje apteka"<br />
+    (menu KS-OmniPharm -> Strategie marżowe).<br />
+  - Strategie cenowe - dodano nową regułę CSM - Cena rekomendowana ze Strategii<br />
+    Marżowej (KS-OmniPharm). Pozwala ona aptece automatycznie stosować ceny<br />
+    rekomendowane wysterowanie z poziomu centrali KS-OmniPharm.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2025.07.24 [2025.3.0.0]<br />
+  - Dodano opcję APW11.2.177: "Obsługa częściowej realizacji e-Recepty w różnych<br />
+    aptekach". Opcja domyślnie jest włączona. Opcję należy wyłączyć w przypadku<br />
+    wystąpienia problemów z nową wersją usługi internetowej służącej<br />
+    do realizacji e-Recepty, po przywróceniu w SIM możliwości używania starych<br />
+    operacji przez Centrum e-Zdrowia.<br />
+  - Dodano opcję APW11.2.178: "Sprzedaż odręczna leku recepturowego". Dostępne<br />
+    ustawienia: Blokuj, Ostrzegaj, Nie blokuj. Domyślne ustawienie: Blokuj.<br />
+  - Dodano opcję APW13.2.113: "Automatycznie stosuj ceny rekomendowane<br />
+    z centralnych strategii marżowych".<br />
+  - Modyfikacja w zakresie pharmind APIM Porozumienia. Dodanie obsługi<br />
+    rozwiązania zawartego porozumienia.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW42 -----------------------------</h3><br />
+2025.07.24 [2025.3.0.0]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2025.07.24 [2025.3.0.0]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2025.07.24<br />
+  ApwPlus [2025.3.0.0]<br />
+  - Aktualizacja struktury bazy danych.<br />
+<br />
+  IBPack, OraPack [2025.3.0.0]<br />
+  - Dodanie komunikatu ostrzegającego przed wykonaniem obcięcia bazy,<br />
+    gdy istnieje otwarta książka narkotyczna.<br />
+<br />
+  WaUtil [2025.3.0.0]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+</body></html>

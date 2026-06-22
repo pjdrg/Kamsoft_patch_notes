@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2024.1.0.0</title>
+</head>
+<body>
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2024.05.21 [2024.1.0.0]<br />
+  - Dodano API do obsługi kas samoobsługowych<br />
+  - Dodano obsługę drukarki fiskalnej Novitus Point<br />
+  - Rozszerzono wydruk protokołu przekazania do utylizacji o nazwę <br />
+    międzynarodową oraz kolumnę z Rodzajem substancji czynnych i ich <br />
+    przeznaczeniem<br />
+  - Terminale płatnicze Polskie ePłatności: Dostosowanie integracji do obsługi <br />
+    terminala bezprzewodowego PAX A920<br />
+  - Podobniki: Rozwiązanie problemu długiego ładowania usługi<br />
+  - eZWM: dodano obsługę kodów sprzętu: N.09.01.00, N.10.01.00, N.11.01.00, <br />
+    N.12.01.00<br />
+  - Dodano archiwizację stanu realizacji recepty (SRR) - informacji przekazanych<br />
+    z SIM o pozostałej do wydania ilości leku zaordynowanego na recepcie na <br />
+    okres dłuższy niż 120 dni. Zgodnie z zapisami ustawy Prawo Farmaceutyczne <br />
+    art.96 a) ust. 7ab, od dnia 1 kwietnia 2024 r. wspomnianą ilość leku do <br />
+    wydania wylicza SIM. Dokumenty przechowywane będą w lokalnej bazie danych <br />
+    przez 7 dni, a w przypadku aktywnej usługi RepoCloud, dokumenty dodatkowo <br />
+    zostaną zarchiwizowane w chmurze przez okres 5 lat, co wydłuży ich <br />
+    dostępność w systemie KS-AOW. <br />
+  - Dodano opcję sterującą wyświetlaniem informacji o dostępności synonimu <br />
+    w oknie e-Recepty, która umożliwia ciągłe wyświetlanie informacji lub <br />
+    wyświetlanie informacji tylko w przypadku gdy nie ma na stanie <br />
+    wystarczającej ilości towaru do wydania w stosunku do ilości zaordynowanej.   <br />
+    Opcja: APW11.2.171: Wyświetlanie podpowiedzi o dostępności synonimu na <br />
+    stanie magazynowym w oknie e-Recepty. Wartość domyślna - weryfikuj gdy nie <br />
+    ma zaordynowanego towaru na stanie.     <br />
+  - Dodano wyróżnienie towarów sugerowanych w oknie e-Recepty oraz synonimów. <br />
+    Funkcjonalność wskazuje farmaceucie towary o łatwej dostępności. <br />
+    Opcja: APW11.2.172: Wyróżniaj towar sugerowany w oknie e-Recepty oraz na <br />
+    liście produktów o tej samej nazwie międzynarodowej. <br />
+    Wartość domyślna - opcja wyłączona.   <br />
+  - Modyfikacja okna podglądu wizualizacji e-Recepty. Dodano możliwość <br />
+    zgłoszenia błędnej recepty do Centrum e-Zdrowia (skrót klawiaturowy <br />
+    [Ctrl + B]). Funkcjonalność kopiuje do schowka numer recepty i otwiera <br />
+    formularz zgłoszeń przygotowany przez CeZ. W formularzu należy wkleić <br />
+    wcześniej skopiowany numer recepty, co umożliwi identyfikację dokumentu <br />
+    w CeZ.    <br />
+<br />
+<h3>---------------------------- Zmiany w module APW12 -----------------------------</h3><br />
+2024.05.21 [2024.1.0.0]<br />
+  - Aktualizacja modułu w związku ze zmianami dot. obsługi licencji na <br />
+    stanowiska samoobsługowe<br />
+  - Optymalizacja ilości danych przekazywanych przez system apteczny do <br />
+    KS-OmiPharm w zależności od świadczonych usług oraz opcjonalna możliwość <br />
+    ograniczenia przesyłania informacji o zamówieniach zainicjowanych w KS-AOW <br />
+   (usługa Zamówienia). <br />
+  - Usunięto problemy z kolorowaniem rekomendacji KS-Omnipharm dla prospektów <br />
+    KS-ZSA.  <br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2024.05.21 [2024.1.0.0]<br />
+  - Aktualizacja modułu w związku ze zmianami dot. obsługi licencji na <br />
+    stanowiska samoobsługowe<br />
+  - Modyfikacja w buforze kodów kreskowych. Podczas dodania towarów z cennika <br />
+    ukryto wybór cenników nieaktywnych<br />
+   <br />
+<h3>---------------------------- Zmiany w module APW14 -----------------------------</h3><br />
+2024.05.21 [2024.1.0.0]<br />
+  - Aktualizacja modułu w związku ze zmianami dot. obsługi licencji na <br />
+    stanowiska samoobsługowe  <br />
+  - KS-OmniPharm: dodano obsługę przecen centralnych z włączoną flagą priorytetu<br />
+    ceny z karty towaru<br />
+<br />
+<h3>---------------------------- Zmiany w module APW15 -----------------------------</h3><br />
+2024.05.21 [2024.1.0.0]<br />
+  - Aktualizacja modułu w związku ze zmianami dot. obsługi licencji na <br />
+    stanowiska samoobsługowe<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2024.05.21 [2024.1.0.0]<br />
+  - Aktualizacja modułu w związku ze zmianami dot. obsługi licencji na <br />
+    stanowiska samoobsługowe<br />
+<br />
+<h3>---------------------------- Zmiany w module APW22 -----------------------------</h3><br />
+2024.05.21 [2024.1.0.0]<br />
+  - Aktualizacja modułu w związku ze zmianami dot. obsługi licencji na <br />
+    stanowiska samoobsługowe<br />
+<br />
+<h3>---------------------------- Zmiany w module APW23 -----------------------------</h3><br />
+2024.05.21 [2024.1.0.0]<br />
+  - Aktualizacja modułu w związku ze zmianami dot. obsługi licencji na <br />
+    stanowiska samoobsługowe<br />
+  - Retaksacja Recept: dodano podgląd zarchiwizowanych dokumentów ze Stanem <br />
+    Realizacji Recepty  <br />
+<br />
+<h3>---------------------------- Zmiany w module APW24 -----------------------------</h3><br />
+2024.05.21 [2024.1.0.0]<br />
+  - Aktualizacja modułu w związku ze zmianami dot. obsługi licencji na <br />
+    stanowiska samoobsługowe<br />
+<br />
+<h3>---------------------------- Zmiany w module APW25 -----------------------------</h3><br />
+2024.05.21 [2024.1.0.0]<br />
+  - Aktualizacja modułu w związku ze zmianami dot. obsługi licencji na <br />
+    stanowiska samoobsługowe<br />
+<br />
+<h3>---------------------------- Zmiany w module APW31 -----------------------------</h3><br />
+2024.05.21 [2024.1.0.0]<br />
+  - Aktualizacja modułu w związku ze zmianami dot. obsługi licencji na <br />
+    stanowiska samoobsługowe<br />
+<br />
+<h3>---------------------------- Zmiany w module APW35 -----------------------------</h3><br />
+2024.05.21 [2024.1.0.0]<br />
+  - Aktualizacja modułu w związku ze zmianami dot. obsługi licencji na <br />
+    stanowiska samoobsługowe<br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2024.05.21 [2024.1.0.0]<br />
+  - Dodano zakładkę konfiguracji kas samoobsługowych do okna edycji stanowiska <br />
+  - pharmind APIM: Dodano możliwość zawierania kontraktów np. dla kas <br />
+    samoobsługowych. Opcja pojawi się w menu tylko dla aptek, które mają <br />
+    skonfigurowaną kasę samoobsługową lub licencję na stanowiska samoobsługowe<br />
+  - Dodano opcję sterującą wyświetlaniem informacji o dostępności synonimu <br />
+    w oknie e-Recepty, która umożliwia ciągłe wyświetlanie informacji lub <br />
+    wyświetlanie informacji tylko w przypadku gdy nie ma na stanie <br />
+    wystarczającej ilości towaru do wydania w stosunku do ilości zaordynowanej.   <br />
+    Opcja: APw11.2.171: Wyświetlanie podpowiedzi o dostępności synonimu na <br />
+    stanie magazynowym w oknie e-Recepty. Wartość domyślna - weryfikuj gdy nie <br />
+    ma zaordynowanego towaru na stanie.<br />
+  - Dodano wyróżnienie towarów sugerowanych w oknie e-Recepty oraz synonimów. <br />
+    Funkcjonalność wskazuje farmaceucie towary o łatwej dostępności. <br />
+    Opcja: APW11.2.172: Wyróżniaj towar sugerowany w oknie e-Recepty oraz na <br />
+    liście produktów o tej samej nazwie międzynarodowej. <br />
+    Wartość domyślna - opcja wyłączona.   <br />
+<br />
+<h3>---------------------------- Zmiany w module APW42 -----------------------------</h3><br />
+2024.05.21 [2024.1.0.0]<br />
+  - Aktualizacja modułu w związku ze zmianami dot. obsługi licencji na <br />
+    stanowiska samoobsługowe<br />
+<br />
+<h3>---------------------------- Zmiany w module APW43 -----------------------------</h3><br />
+2024.05.21 [2024.1.0.0]<br />
+  - Aktualizacja modułu w związku ze zmianami dot. obsługi licencji na <br />
+    stanowiska samoobsługowe<br />
+<br />
+<h3>---------------------------- Zmiany w module APW44 -----------------------------</h3><br />
+2024.05.21 [2024.1.0.0]<br />
+  - Aktualizacja modułu w związku ze zmianami dot. obsługi licencji na <br />
+    stanowiska samoobsługowe<br />
+<br />
+<h3>---------------------------- Zmiany w module APW45 -----------------------------</h3><br />
+2024.05.21 [2024.1.0.0]<br />
+  - Rozwiązano problem dotyczący nieprawidłowego działania automatu dla funkcji <br />
+    generowania oferty internetowej. Problem objawiał się tym, że automat <br />
+    odkrywał nieprawidłowo produkty dla podwójnej analizy bazy towarowej oraz <br />
+    ofert z hurtowni w przypadku braku dostępności produktu. Dodatkowo <br />
+    poprawiono zarządzanie rodzajem ceny, jeśli produkt miał ustawioną cenę <br />
+    bazową ręczną. Funkcje generowania oferty <br />
+    uruchamiamy w module APW45->Towary oraz w module APWPLAN – Harmonogram <br />
+    zadań w zadaniu Aktualizacja oferty dla Apteki Internetowej.<br />
+  - Rozwiązano problem dotyczący nieprawidłowego zarządzania marżą internetową <br />
+    z karty towarowej na karcie internetowej. Problem objawiał się tym, że próba<br />
+    ustawiania marży z karty towarowej na karcie internetowej powodowała <br />
+    utracenie tej zmiany, co doprowadzało do braku zapisu informacji o nowej <br />
+    marży na karcie internetowej. Mechanizm zarządzania marżą na karcie <br />
+    internetowej dostępny jest w funkcji Towary -> [F3] Karta/[F4] Zmień.<br />
+  - Rozwiązano problem dotyczący blokowania okna karty internetowej w przypadku <br />
+    przejścia do edycji z poziomu podglądu karty internetowej. Kartę internetową<br />
+    do podglądu uruchamiamy w funkcji Towary -> [F3] Karta -> <br />
+    [Ctrl+F3] Internetowa karta towaru.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW55 -----------------------------</h3><br />
+2024.05.21 [2024.1.0.0]<br />
+  - Aktualizacja modułu w związku ze zmianami dot. obsługi licencji na <br />
+    stanowiska samoobsługowe<br />
+<br />
+<h3>---------------------------- Zmiany w module APW61 -----------------------------</h3><br />
+2024.05.21 [2024.1.0.0]<br />
+  - Aktualizacja modułu w związku ze zmianami dot. obsługi licencji na <br />
+    stanowiska samoobsługowe<br />
+<br />
+<h3>---------------------------- Zmiany w module APW68 -----------------------------</h3><br />
+2024.05.21 [2024.1.0.0]<br />
+  - Aktualizacja modułu w związku ze zmianami dot. obsługi licencji na <br />
+    stanowiska samoobsługowe<br />
+<br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2024.05.21 [2024.1.0.0]<br />
+  - Aktualizacja modułu w związku ze zmianami dot. obsługi licencji na <br />
+    stanowiska samoobsługowe<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2024.05.21<br />
+  ApwPlus [2024.1.0.0]<br />
+  - Zaktualizowano strukturę bazy danych.<br />
+<br />
+  DBCopy [2024.1.0.0]<br />
+ - Dodano możliwość zatwierdzania transakcji o zdefiniowaną liczbę rekordów. <br />
+   Zmiana dotyczy bazy Firebird  <br />
+    <br />
+  OraRest [2024.1.0.0]<br />
+ - Rozwiązano problem, który powodował brak utworzenia schematu w przypadku, <br />
+   gdy hasło zawierało znaki specjalne, na przykład kropkę<br />
+<br />
+  ApwBase.dll [2024.1.0.0]<br />
+  - Aktualizacja modułu w związku ze zmianami dot. obsługi licencji na <br />
+    stanowiska samoobsługowe<br />
+<br />
+  Zasoby.dll [2024.1.0.0]<br />
+  - Aktualizacja zasobów graficznych<br />
+<br />
+  Slowniki.dll [2024.1.0.0]<br />
+ - Dodano obsługę licencji na stanowiska samoobsługowe  <br />
+<br />
+  ApwHarm.dll [2024.1.0.0]<br />
+  - Rozwiązano problem dotyczący nieprawidłowego działania automatu dla <br />
+   rezerwacji pozycji zamówień internetowych w momencie uruchomienia funkcji <br />
+   pobierania zamówień z włączonymi funkcjami "Mechanizm wiązania dostaw <br />
+   z pozycjami zamówienia po identyfikatorze zamówienia" oraz "Automatyczna <br />
+   rezerwacja po synchronizacji ze sklepem WWW" w modułach APW45 – Apteka <br />
+   Internetowa oraz w module APWPLAN – Harmonogram Zadań. Problem objawiał się <br />
+   tym, że automat do rezerwacji nie wykrywał poprawnie produktu do rezerwacji <br />
+   i kończył proces rezerwacji z komunikatem "Brak towarów do rezerwacji". <br />
+   Funkcje pobierania zamówień uruchamiamy w module APW45 – Apteka Internetowa <br />
+   ->Komunikacja oraz w module APWPLAN – Harmonogram zadań w zadaniu <br />
+   "Aktualizacja zamówień ze stroną sklepu WWW".  <br />
+<br />
+  ApwIap.dll [2024.1.0.0]<br />
+  - Aktualizacja modułu w związku ze zmianami dot. obsługi licencji na <br />
+    stanowiska samoobsługowe<br />
+   <br />
+</body></html>

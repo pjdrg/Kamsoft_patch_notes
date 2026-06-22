@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2022.2.0.0</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2022.03.17<br />
+  Slowniki.dll [2022.2.0.0]<br />
+  - Poprawa funkcji zapisu hasła KOWAL do bazy danych na wizytówce apteki<br />
+    w przypadku użycia opcji F4 Zmień dane logowania.<br />
+  - Dodano uprawnienie: 11-0041 - Akceptacja sprzedaży niepoprawnie podzielonego<br />
+    opakowania.<br />
+  - Dodano możliwość logowania do systemu AOW użytkownika za pomocą poświadczeń<br />
+    domenowych Active directory.<br />
+<br />
+  ApwMain.exe [2022.2.0.0]<br />
+  - Optymalizacja ładowania zawartości menu "O SYSTEMIE".<br />
+<br />
+  ApwiAp.dll [2022.2.0.0]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+  Zasoby.dll [2022.2.0.0]<br />
+  - Dodano nowe zasoby graficzne.<br />
+  - Uzupełnienie opisu opcji.<br />
+<br />
+  KSOPH.dll [2022.2.0.0]<br />
+  - Dodano obsługę komunikatu informującego w dokonanej płatności.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2022.03.17 [2022.2.0.0]<br />
+  - Sprzedaż podstawowa, poprawa wybierania ceny ustalonej z karty towaru<br />
+    podczas promocji, dla której ustawiony jest parametr - priorytet cena<br />
+    ustalona z karty towaru.<br />
+  - Zadanie z Giełdy Pomysłów: Dodano blokadę sprzedaży nieprawidłowo<br />
+    podzielonego opakowania (do tej pory było tylko ostrzeżenie).<br />
+    Blokada jest możliwa do wyłączenia przez nadanie uprawnienia 11-0041<br />
+    "Akceptacja sprzedaży niepoprawnie podzielonego opakowania".<br />
+  - Dodano możliwość skorygowania na fakturze VAT ceny sprzedaży oraz VAT-u.<br />
+    Korekta wartości jest możliwa tylko na sprzedażach pełnopłatnych bez recepty.<br />
+  - Poprawa wyświetlania Alert-ID dla komunikatów z KOWAL-a w zakładce <br />
+    "Leki sprzedane z alertami/ komunikatami."<br />
+  - Umożliwienie realizacji recept IN z jednoczesnym uprawnieniem S/C<br />
+  - Poprawiono generowanie Dokumentów Realizacji Recept, które były odrzucane <br />
+    przez SIM z komunikatem błędu: <br />
+    "Dokument nie jest zgodny ze Schematronem.<br />
+    (plCdaDrugDispenseRecordTarget): element hl7:id jest required [min 1x].)".<br />
+    Dane opiekuna nie zostaną przekazane na DRR w przypadku gdy<br />
+    na e-Recepcie podano komplet danych pacjenta (w tym PESEL pacjenta),<br />
+    a nie wykazano identyfikatora opiekuna.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW12 -----------------------------</h3><br />
+2022.03.17 [2022.2.0.0]<br />
+  - Bufor norm - poprawa liczenia norm przy zaznaczonej opcji licz stany<br />
+    minimalne.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2022.03.17 [2022.2.0.0]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW14 -----------------------------</h3><br />
+2022.03.17 [2022.2.0.0]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW15 -----------------------------</h3><br />
+2022.03.17 [2022.2.0.0]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2022.03.17 [2022.2.0.0]<br />
+  - Poprawa generowania eksportu do małej księgowości.<br />
+  - Dostosowanie modułu zestawień refundacyjnych do recept IN z jednoczesnym<br />
+    uprawnieniem S/C.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW22 -----------------------------</h3><br />
+2022.03.17 [2022.2.0.0]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW23 -----------------------------</h3><br />
+2022.03.17 [2022.2.0.0]<br />
+  - Raport spójności danych AOW i wysłanych DRR: Poprawiono odczyt płatnika<br />
+    oraz identyfikatora pacjenta z DRR w przypadku realizacji recept<br />
+    wystawionych dla obcokrajowca.<br />
+  - Raportowanie do GIF, poprawa wysyłki na mail przy użyciu protokołu SSL.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW24 -----------------------------</h3><br />
+2022.03.17 [2022.2.0.0]<br />
+  - Analiza sprzedaży, poprawa błędnie wyświetla ilość ogólną towaru w przypadku<br />
+    wielomagazynowości. Zestawienie nie uwzględniało parametru: "Tylko dane<br />
+    bieżącej jednostki organizacyjnej".<br />
+<br />
+<h3>---------------------------- Zmiany w module APW25 -----------------------------</h3><br />
+2022.03.17 [2022.2.0.0]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW31 -----------------------------</h3><br />
+2022.03.17 [2022.2.0.0]<br />
+  - KS-OmniPharm: dodano wysyłkę informacji o wykonanych płatnościach<br />
+    w przypadku aktywnej usługi centralnych płatności.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW35 -----------------------------</h3><br />
+2022.03.17 [2022.2.0.0]<br />
+  - Rozwinięcie opcji apw13.2.46 o wariant: 'Dostawy na zamówienie indywidualne,<br />
+    dokumenty MM i rezerwacje internetowe'. Opcja tak ustawiona spowoduje, że<br />
+    zamówienia internetowe nie będą brane pod uwagę podczas ustalania ceny<br />
+    detalicznej w strategii OSD (cena z ostatniej dostawy).<br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2022.03.17 [2022.2.0.0]<br />
+  - Rozwinięcie opcji apw13.2.46 o wariant: 'Dostawy na zamówienie indywidualne,<br />
+    dokumenty MM i rezerwacje internetowe'.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW42 -----------------------------</h3><br />
+2022.03.17 [2022.2.0.0]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW43 -----------------------------</h3><br />
+2022.03.17 [2022.2.0.0]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW44 -----------------------------</h3><br />
+2022.03.17 [2022.2.0.0]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW45 -----------------------------</h3><br />
+2022.03.17 [2022.2.0.0]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW55 -----------------------------</h3><br />
+2022.03.17 [2022.2.0.0]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW61 -----------------------------</h3><br />
+2022.03.17 [2022.2.0.0]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW68 -----------------------------</h3><br />
+2022.03.17 [2022.2.0.0]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2022.03.17 [2022.2.0.0]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2022.03.17<br />
+  ApwPlus.exe [2022.2.0.0]<br />
+  - Uaktualniono strukturę bazy danych.<br />
+<br />
+  Apwbase.dll [2022.2.0.0]<br />
+  - Uaktualniono bazę kart serwisowych.<br />
+<br />
+  IBPack.exe [2022.2.0.0]<br />
+  - Zaktualizowano do bieżącej struktury bazy danych.<br />
+<br />
+  OraPack.exe [2022.2.0.0]<br />
+  - Zaktualizowano do bieżącej struktury bazy danych.<br />
+<br />
+</body></html>

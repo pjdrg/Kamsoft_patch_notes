@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2025.2.1.5</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2025.06.23<br />
+  Slowniki.dll [2025.2.1.5]<br />
+  - Zaktualizowano silnik Chromium.<br />
+  - Karta towaru: poprawiono funkcjonalność dodawania składników leku robionego<br />
+    oraz działanie skrótów klawiaturowych.<br />
+<br />
+  ApwIap.dll [2025.2.1.5]<br />
+  - Rozwiązano problem dotyczący nieprawidłowego generowania dokumentów PDF<br />
+    dla zamówień internetowych. Problem objawiał się nadawaniem nieprawidłowej<br />
+    nazwy dla pliku PDF.  Ustawienia dla generowania plików PDF dla zamówień<br />
+    internetowych dostępne są z poziomu modułu "APW45 - Apteka internetowa<br />
+    -> E-mail". Funkcja odpowiedzialna za generowanie plików PDF jest dostępna<br />
+    w oknie do zarządzania zamówieniami internetowymi "APW45 - Apteka<br />
+    internetowa -> Zamówienia".<br />
+  - Przeprowadzono prace porządkowe oraz optymalizacyjne w funkcjach<br />
+    odpowiedzialnych za generowanie dokumentów PDF dla zamówień internetowych.<br />
+    Funkcje te są wykorzystywane przez akcję "Generuj fakturę dla zamówień",<br />
+    która jest dostępna z poziomu modułu "APW45 - Apteka internetowa<br />
+    -> Zamówienia -> Drukuj".<br />
+  - Rozwiązano problem dotyczący nieprawidłowego zarządzania magazynami<br />
+    dla wielomagazynowości dla procesów rezerwacji oraz przesunięć<br />
+    międzymagazynowych w module "APW45 - Apteka internetowa".<br />
+    Problem objawiał się brakiem realizacji automatycznych dokumentów rezerwacji<br />
+    po imporcie zamówień do systemu aptecznego KS-AOW ze strony sklepu<br />
+    internetowego. Funkcje pobierania zamówień uruchamiamy w module<br />
+    "APW45 – Apteka Internetowa -> Komunikacja" oraz w module<br />
+    "ApwPlan – Harmonogram zadań" w zadaniu "Aktualizacja zamówień ze stroną<br />
+    sklepu WWW".<br />
+  - Rozwiązano problem dotyczący nieprawidłowego sterowania źródłem połączenia<br />
+    komunikacyjnego sklepu WW dla zamówień internetowych. Problem objawiał się<br />
+    nieprawidłowym przypisaniem połączenia internetowego do zamówienia w oknie<br />
+    zamówień internetowych oraz w oknie edycji/podglądzie zamówień internetowych<br />
+    ("APW45 - Apteka internetowa -> Zamówienia), dodatkowo w mechanizmach<br />
+    zarządzaniu serwerami dla apteki internetowej ("APW45 – Apteka Internetowa<br />
+    -> Komunikacja").<br />
+<br />
+  ApwHarm.dll [2025.2.1.5]<br />
+  - Rozwiązano problem dotyczący nieprawidłowego zaokrąglania cen internetowych<br />
+    przez automat do generowania cen na karcie internetowej w module<br />
+    "ApwPlan – Harmonogram zadań". Funkcja odpowiedzialna za generowanie cen<br />
+    internetowych jest dostępna w zadaniu "Aktualizacja oferty dla Apteki<br />
+    Internetowej".<br />
+  - Rozwiązano problem dotyczący nieprawidłowego generowania dokumentów PDF<br />
+    w module "ApwPlan – Harmonogram zadań" dla zamówień internetowych.<br />
+    Problem objawiał się nadawaniem nieprawidłowej nazwy dla generowanego pliku<br />
+    PDF. Funkcja odpowiedzialna za generowanie plików PDF jest dostępna<br />
+    w zadaniu "Generuj wydruki dokumentów dla sprzedaży internetowej".<br />
+  - Rozwiązano problem dotyczący nieprawidłowego przekazywania informacji<br />
+    na stronę WWW o odpłatnościach dla oferty internetowej.<br />
+    Funkcja wysyłająca ofertę internetową na stronę WWW jest dostępna w module<br />
+    "ApwPlan – Harmonogram zadań" w zadaniu "Aktualizacja oferty dla Apteki<br />
+    Internetowej".<br />
+<br />
+  cefSubProcess.exe [2025.2.1.5]<br />
+  - Zaktualizowano silnik Chromium.<br />
+<br />
+  Zasoby.dll [2025.2.1.5]<br />
+  - Aktualizacja opisów opcji.<br />
+<br />
+  OSOZMOK.dll [2025.3.0.0]<br />
+  - Zaktualizowano silnik Chromium.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2025.06.23 [2025.2.1.5]<br />
+  - Poprawiono podgląd personelu realizującego receptę na lek recepturowy.<br />
+    Program błędnie wyświetlał dane personelu w przypadku ukrycia karty<br />
+    pracownika.<br />
+  - Poprawa edycji leku recepturowego w kolejce. Program nie odświeżał wartości<br />
+    zapłaty po dodaniu/usunięciu składnika receptury.<br />
+  - Dodano pole "Data wystawienia dokumentu pierwotnego" do kreatora raportów<br />
+    wydruku dokumentów korygujących.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW12 -----------------------------</h3><br />
+2025.06.23 [2025.2.1.5]<br />
+  - Pharmind grid: obsługa zamówień automatycznych: rozszerzenie konfiguracji<br />
+    o nowe parametry usługi.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2025.06.23 [2025.2.1.5]<br />
+  - Rozwiązano problem objawiający się możliwym wystąpieniem błędu Access<br />
+    Violation podczas zatwierdzenia dokumentów zakupu.<br />
+  - Rozwiązano problem z ustalaniem ceny detalicznej w strategii UCC.<br />
+    Program, w tej strategii, uwzględniał również cenniki nieaktywne.<br />
+  - Zablokowano możliwość zmiany daty przyjęcia dokumentu na datę przypadającą<br />
+    w okresie zamkniętym.<br />
+  - Rozwiązano problem z usuwaniem pliku dokumentu zakupu z dysku i FTP<br />
+    w przypadku nieudanego wczytania do systemu.<br />
+  - Pharmind grid: optymalizacja raportowania stanów magazynowych towarów<br />
+    po przyjęciu korekty faktury zakupu.<br />
+  - Modyfikacja w zakresie KS-APTIX. Przywrócono proces rozmieszczania towaru<br />
+    po zakończonej weryfikacji dostawy.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2025.06.23 [2025.2.1.5]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2025.06.23 [2025.2.1.5]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW43 -----------------------------</h3><br />
+2025.06.23 [2025.2.1.5]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW45 -----------------------------</h3><br />
+2025.06.23 [2025.2.1.5]<br />
+  - Rozwiązano problem dotyczący nieprawidłowego zaokrąglania cen internetowych<br />
+    przez automat do generowania cen dla oferty internetowej w module apteka<br />
+    internetowa. Akcje odpowiedzialne za generowanie cen "[F11] Odśwież ofertę"<br />
+    oraz "[F12] Aktualizuj ceny", dostępne są z poziomu modułu "APW45 - Apteka<br />
+    internetowa -> towary".<br />
+  - Przeprowadzono prace porządkowe oraz optymalizacyjne w oknie zarządzania<br />
+    regułami zamówień oraz cen dla apteki internetowej. Okna te są dostępne<br />
+    z poziomu "APW45 - Apteka internetowa -> Reguły -> Zamówienia"<br />
+    oraz "APW45 - Apteka internetowa -> Reguły -> towary".<br />
+  - Rozwiązano problem dotyczący nieprawidłowego przekazywania informacji<br />
+    na stronę WWW o odpłatnościach dla pozycji oferty apteki internetowej.<br />
+    Funkcja wysyłająca ofertę internetową na stronę WWW jest dostępna z poziomu<br />
+    "APW45 - Apteka internetowa -> Komunikacja".<br />
+  - Przeprowadzono prace porządkowe oraz optymalizacyjne w funkcjach<br />
+    odpowiedzialnych za generowanie cen oraz oferty internetowej dla modułu<br />
+    "APW45 - Apteka internetowa". Funkcje te są wykorzystywane przez akcje<br />
+    "[F11] Odśwież ofertę" oraz "[F12] Aktualizuj ceny", które są dostępne<br />
+    z poziomu modułu "APW45 - Apteka internetowa -> towary".<br />
+<br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2025.06.23 [2025.2.1.5]<br />
+  - Pharmind grid: optymalizacja raportowania stanów magazynowych towarów<br />
+    po przyjęciu korekty faktury zakupu.<br />
+  - Pharmind grid: obsługa zamówień automatycznych: rozszerzenie konfiguracji<br />
+    o nowe parametry usługi.<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2025.06.23<br />
+  ApwPlus [2025.2.1.5]<br />
+  - Aktualizacja struktury bazy danych.<br />
+<br />
+  OraPack, IBPack [2025.2.1.5]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+</body></html>

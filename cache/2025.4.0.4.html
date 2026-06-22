@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2025.4.0.4</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2025.10.01<br />
+  Slowniki.dll [2025.4.0.4]<br />
+  - Modyfikacja w zakresie obsługi zapisu plików PDF w Serwisie Farmaceuty.<br />
+  - Karta towaru / analiza sprzedaży - dodano funkcjonalność zapamiętywania<br />
+    ustawień filtra wybranego magazynu przez użytkownika (wielomagazynowość).<br />
+  - Na karcie klasycznej BLOZ dodano status: środek spożywczy wzbogacony<br />
+    (kategoria I).<br />
+<br />
+  ApwHarm.dll [2025.4.0.4]<br />
+  - Modyfikacja w zakresie zadania komunikacji z dostawcami. Skrócono czas<br />
+    oczekiwania na połączenie do dostawcy dla ApwPlanu, który nie działa<br />
+    całodobowo.<br />
+  - OSOZ: optymalizacja zadania pobierania komunikatów z informacjami<br />
+    dla farmaceutów.<br />
+<br />
+  Zasoby.dll [2025.4.0.4]<br />
+  - Aktualizacja opisów opcji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2025.10.01 [2025.4.0.4]<br />
+  - Udostępniono możliwość wystawiania e-paragonów. Funkcjonalność obsługi<br />
+    e-Paragonów będzie działać wyłącznie na wybranych drukarkach fiskalnych,<br />
+    które zapewniają wsparcie dla e-paragonów. W tej chwili funkcjonalność jest<br />
+    dostępna na drukarkach fiskalnych Elzab Mera Online. Ponadto, korzystanie<br />
+    z tej funkcjonalności może wiązać się z koniecznością uzyskania dodatkowych<br />
+    licencji lub uiszczenia opłat producentom drukarek fiskalnych.<br />
+  - Dodano obsługę protokołu ElzabSTX dla drukarki Elzab Mera Online.<br />
+  - Poprawa sprzedaży: zablokowano możliwość aktualizacji zafiskalizowanych<br />
+    pozycji sprzedaży do nowej lub bieżącej sprzedaży.<br />
+  - Pharmind grid: optymalizacja raportowania danych transakcji sprzedaży.<br />
+  - eZWM: Dodano obsługę kodu sprzętu N.13, oraz L.04.<br />
+  - eZWM: Rozwiązano problem objawiający się niepoprawnym działaniem pobierania <br />
+    zlecenia eZWM z powodu nieobsługiwanego wcześniej formatu daty.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW12 -----------------------------</h3><br />
+2025.10.01 [2025.4.0.4]<br />
+  - Pharmind grid: przekierowanie wejścia do kontraktów do nowego miejsca<br />
+    (pharmind Kontrakty).<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2025.10.01 [2025.4.0.4]<br />
+  - Rozwiązano problem objawiający się niepoprawnym zaokrąglaniem ceny<br />
+    detalicznej przy stosowaniu strategii UST, SPC i UCC.<br />
+  - Modyfikacja w zakresie KS-Aptix. Uproszczenie procesu wejścia w weryfikację<br />
+    dokumentu, który weryfikowany jest w grupie innych dokumentów.<br />
+    Użytkownik na podstawie wyświetlonego komunikatu może od razu wejść<br />
+    do wcześniej rozpoczętej weryfikacji wielu dokumentów.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2025.10.01 [2025.4.0.4]<br />
+  - Rozwiązano problem generowania raportu z rejestru zakupu dla opcji wybrany<br />
+    dostawca. Dla wybranego członka Grupy VAT pojawiały się też nadmiarowo<br />
+    dokumenty dla innych dostawców.<br />
+  - eZWM: dodano obsługę kodu sprzętu N.13, oraz L.04.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2025.10.01 [2025.4.0.4]<br />
+  - Dodano możliwość wyboru protokołu ElzabSTX w konfiguracji drukarki fiskalnej<br />
+    w edycji stanowiska.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW45 -----------------------------</h3><br />
+2025.10.01 [2025.4.0.4]<br />
+  - Rozwiązano problem dotyczący aktualizacji oferty internetowej na stronę WWW<br />
+    z włączonym parametrem weryfikacji dostaw. Aktualizację oferty internetowej<br />
+    na stronę WW uruchamiamy z poziomu modułu "APW45 - Apteka internetowa -><br />
+    Komunikacja", a parametr odpowiedzialny za weryfikacje dostaw ustawiamy<br />
+    w module "APW45 - Apteka internetowa -> Komunikacja -> Ustawienia -> Oferta<br />
+    -> Sprawdzaj zmiany na magazynie dla przyrostowego eksportu".<br />
+  - W generatorze cechy dodano informację: środek spożywczy wzbogacony<br />
+   (kategoria I).<br />
+<br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2025.10.01 [2025.4.0.4]<br />
+  - Pharmind grid: optymalizacja raportowania danych transakcji sprzedaży.<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2025.10.01 <br />
+  ApwPlus [2025.4.0.4]<br />
+  - Aktualizacja struktury bazy danych.<br />
+<br />
+</body></html>

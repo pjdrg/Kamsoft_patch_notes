@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2019.2.7.5</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2019.06.07<br />
+  slowniki.dll [2019.3.0.5]<br />
+  - Poprawka do aktualizacji kartoty dostawcy na podstawie Centralnej Kartoteki<br />
+    Dostawców<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2019.06.06 [2019.3.2.0]<br />
+   - W "Kontroli dokumentów zakupu" dodano kolumny:<br />
+     a) "Podlega serial." - pozycja ma charakter informacyjny, <br />
+     wartość pobrana z karty towaru: "Podlega serializacji".<br />
+     b) "Raport. do ZSMOPL" - pozycja ma charakter informacyjny, <br />
+     wartość pobrana z karty towaru: "Raportowany do ZSMOPL".<br />
+     W kolumnie "Seria" oraz "Data ważności" dodano ostrzeżenia <br />
+     w przypadku braku wartości dla towarów podlegających serializacji oraz<br />
+     dla towarów raportowanych do ZSMOPL.<br />
+   - W "Kontroli dokumentów zakupu" po zeskanowaniu z opakowania kodu 2D <br />
+     następuje weryfikacja po polach: EAN (kod kreskowy z karty zakupu), <br />
+     seria i data ważności.<br />
+   - W "Pozycjach dokumentu zakupu" po zeskanowaniu z opakowania kodu 2D <br />
+     następuje weryfikacja po polach: EAN (kod kreskowy z karty zakupu), <br />
+     seria i data ważności.<br />
+   - W "Edycji pozycji" po zeskanowaniu z opakowania kodu 2D <br />
+     następuje uzupełnienie pól: kod kreskowy, seria i data ważności.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW68 -----------------------------</h3><br />
+2019.06.07 [2019.3.1.0]<br />
+  - Dla generowanego raporu dodano zabezpieczenie przed odczytem błednego <br />
+    kodu EAN z bazy danych. Jeśli kod EAN zawierał literkę lub znak inny np " <br />
+	powodował występowanie błędu "EConvertError: '"' is not a valid integer value"<br />
+<br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2019.06.07 [2019.3.3.0]<br />
+  - OSOZ: Obsluga pobierania listy zaproszen do programów partnerskich<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2019.06.05<br />
+  Apwplus.exe [2019.3.6.0]<br />
+  - Uaktualniono strukturę bazy danych<br />
+<br />
+</body></html>

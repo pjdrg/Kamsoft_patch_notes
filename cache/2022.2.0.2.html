@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2022.2.0.2</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2022.03.24<br />
+  Slowniki.dll [2022.2.0.2]<br />
+  - Dodanie obsługi słownika terminów płatności.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2022.03.24 [2022.2.0.2]<br />
+  - Dodanie blokady możliwości wystawienia FV sprzedaży na podstawie rezerwacji,<br />
+    w przypadku kiedy Nabywca ma ten sam NIP co Apteka.<br />
+  - Dodanie blokady możliwości zmiany formy płatności dla faktur z dni<br />
+    poprzednich oraz z dnia bieżącego w zależności od włączonego uprawnienia<br />
+    11_0022 i 11_0022-1.<br />
+  - Dodanie funkcjonalności ograniczającej możliwość wskazywania terminów<br />
+    płatności przy wystawianiu faktury VAT. W zależności od ustawionej opcji<br />
+    użytkownik będzie miał możliwość wyboru terminów z listy rozwijanej,<br />
+    uzupełnianie na podstawie parametru globalnego lub uzupełnianie jak do tej<br />
+    pory - "ręcznie".<br />
+  - Sprzedaz podstawowa, poprawa wyświetlania trójkatów z procesu serializacji<br />
+    dla stanowisk o numerze > 10.<br />
+  - Terminale płatnicze: Polskie ePłatności - optymalizacja procesu transakcji.<br />
+  - Wycofano przeliczanie na DRR wydanej ilości opakowań z uwzględnieniem<br />
+    mnożnika lekospisowego. W przypadku gdy jedno opakowanie (jeden EAN) będzie<br />
+    sprzedawane w innych jednostkach, należy użyć mnożnika aptecznego.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW14 -----------------------------</h3><br />
+2022.03.24 [2022.2.0.2]<br />
+  - Poprawa wyświetlania ilości w automacie w opcji przeglądania i edycji karty<br />
+    zakupu. Pole wyswietla się tylko w przypadku gdy apteka obsługuje automat do<br />
+    wydawania leków.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2022.03.24 [2022.2.0.2]<br />
+  - Aktualizacja generowania raportu JPK_FA do wersji JPK_FA(4), która będzie<br />
+    obowiązywać od 1.04.2022.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW23 -----------------------------</h3><br />
+2022.03.24 [2022.2.0.2]<br />
+  - Wycofano przeliczanie na DRR wydanej ilości opakowań z uwzględnieniem<br />
+    mnożnika lekospisowego.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2022.03.24 [2022.2.0.2]<br />
+  - Na karcie definicji dokumentu finansowego w zakładce Inne dodano listę<br />
+    rozwijaną z wyborem domyślnego sposobu ustalania terminu płatności.<br />
+    Do wyboru następujące opcje: karta odbiorcy (domyślny, jak do tej pory),<br />
+    ze słownika i konfiguracja globalna. Obok listy rozwijanej dodano przycisk<br />
+    dla definicji terminów płatności.<br />
+    Wejście do słownika będzie na dodatkowe uprawnienie dla pracownika 11-0042.<br />
+<br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2022.03.24 [2022.2.0.2]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2022.03.24<br />
+  ApwPlus.exe [2022.2.0.2]<br />
+  - Dodanie pól związanych z obsługą terminów płatności.<br />
+<br />
+</body></html>

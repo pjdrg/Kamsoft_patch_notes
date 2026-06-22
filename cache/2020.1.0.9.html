@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2020.1.0.9</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2019.12.05<br />
+  mvserver.exe [2020.1.0.1]  <br />
+  - Poprawa procesu ładowania automatu dla automatów do wydawnia leków ROWA.<br />
+	Dodanie dodatkowych filtrów w magazynie stanów robota.<br />
+    <br />
+2019.12.05<br />
+  slowniki.dll [2020.1.2.2]<br />
+  - Podczas ukrywania karty towarów z kartoteki towarów dodano czyszczenie pola<br />
+    ‘kod kreskowy’. Przy przywracaniu ukrytej karty towarowej dodano <br />
+	przepisywanie wartości z pola KODKR z BLOZ’a, towaru z karty <br />
+	przyporządkowywanej do bazy BLOZ.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2019.12.05 [2020.1.3.0]<br />
+  - W funkcji "ZamkniÄ™cie dnia" wywoĹ‚ywanej po wykonaniu raportu dobowego<br />
+    zablokowano moĹĽliwoĹ›Ä‡ zmiany danych pobranych z drukarki fiskalnej. Dla<br />
+    drukarek Elzab Mera+ i Elzab Mera Online dodano odczyt sumy zapĹ‚at<br />
+  - RozwiÄ…zano problem fiskalizacji rozliczenia zaliczki zerowej na drukarce<br />
+    Elzab Mera Online: w przypadku fiskalizacji rozliczenia wykona siÄ™ korekta<br />
+    zaliczki i ponowna sprzedaĹĽ.<br />
+  - Dodano ostrzeĹĽenie o realizacji rp. na obcokrajowca z informacjÄ… o<br />
+    koniecznoĹ›ci zeskanowania dokumentu potwierdzajÄ…cego ubezpieczenie pacjenta. <br />
+  - Dodano moĹĽliwoĹ›Ä‡ wprowadzania daty waĹĽnoĹ›ci EKUZ dla realizacji rp. <br />
+    wystawionych na obcokrajowca. Data umieszczana jest w czÄ™Ĺ›ci wizualnej DRR. <br />
+  - UsuniÄ™to ostrzeĹĽenie o wymagalnoĹ›ci identyfikatora Ĺ›wiadczeniodawcy dla Rp. <br />
+    peĹ‚nopĹ‚atnych.    <br />
+  - W oknie informujÄ…cym o bĹ‚Ä™dzie komunikacji z SIM, dodano przycisk <br />
+    "SprawdĹş status SIM", ktĂłry wywoĹ‚uje stronÄ™ internetowÄ… z opublikowanÄ… <br />
+    informacjÄ… o statusie SIM (przekazanÄ… przez CSIOZ).<br />
+  - Poprawiono przyporzÄ…dkowanie towaru do zaliczki zerowej<br />
+  - Poprawiono obsĹ‚ugÄ™ zleceĹ„ na MM z KS-ZSA<br />
+  - Zablokowano moĹĽliwoĹ›Ä‡ wystawiania korekty do wczeĹ›niej wykonanej korekty<br />
+  - e-Recepta: Poprawka w weryfikacji daty waĹĽnoĹ›ci recept odnawialnych <br />
+    wystawionych przed dniem 2019-09-07.<br />
+  - e-Recepta: dodano moĹĽliwoĹ›Ä‡ realizacji e-Recept w trybie awaryjnym, na <br />
+    wypadek braku dostÄ™pu do SIM. SzczegĂłĹ‚y w instrukcji: "Realizacja e-recepty<br />
+    w przypadku braku poĹ‚Ä…czenia z SIM" <br />
+  - e-Recepta: dodano w oknie e-Recepty ostrzeĹĽenie po upĹ‚yniÄ™ciu 30 dni od <br />
+    daty wystawienia recepty. W takim przypadku pojawi siÄ™ ikona trĂłjkÄ…ta z <br />
+    wykrzyknikiem obok daty wystawienia- informujÄ…ca o koniecznoĹ›ci <br />
+    przeliczenia moĹĽliwej do wydania pacjentowi iloĹ›ci leku. <br />
+  - dodano obsĹ‚ugÄ™ rozszerzonej komunikacji dla automatu do wydawania lekĂłw <br />
+    Fablox.<br />
+  - dodano obsĹ‚ugÄ™ kodĂłw 2D dla lekĂłw wydawanych z automatu do wydawania lekĂłw <br />
+    w procesie serializacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW12 -----------------------------</h3><br />
+2019.12.05 [2020.1.2.1]<br />
+  - Poprawa bĹ‚Ä™dnego liczenia iloĹ›ci powiÄ…zanych pozycji w oknie Analizy <br />
+    PotencjaĹ‚u<br />
+  <br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2019.12.05 [2020.1.2.4]<br />
+  - Dostawy dla automatu do wydawania lekĂłw. Dodano dodatkowe zabezpieczenia <br />
+    przy wyborze towaru dla nowego WDR. Oznaczono na ĹĽĂłĹ‚to pozycje z najwiÄ™ksza <br />
+	iloĹ›ciÄ… zakupionÄ… w przypadku towarĂłw, ktĂłry jest na dokumencie dostawy <br />
+    kilka razy z tym samym EANem i seriÄ….<br />
+  - Dostawy dla automatu do wydawania lekĂłw. Poprawiono mechanizm wyboru <br />
+    towarĂłw dla nowego dokumentu. Dodano zabezpieczenie przed umieszczeniem<br />
+	dwĂłch tych samych towarĂłw na jednym dokumencie. Dodano moĹĽliwoĹ›Ä‡ podglÄ…du <br />
+	aktualnych stanĂłw w robocie w procesie zaĹ‚adunku robota.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW14 -----------------------------</h3><br />
+2019.11.25 [2020.1.2.2]<br />
+  - Dodano numer telefonu apteki w nagĹ‚Ăłwku wydruku protokoĹ‚u <br />
+    wstrzymania/wycofania z obrotu produktu leczniczego lub wyrobu medycznego.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2019.12.05 [2020.1.2.2]<br />
+  - Aktualizacja struktury generowania plików JPK_FA do wersji 3. Na formatce<br />
+    wyboru parametrów generowania plików JPK został dodany wybór wariantu<br />
+    formularza generowanego pliku JPK.<br />
+  - Pasek ogólny: zmieniono przyporządkowanie recept narkotycznych 100%:<br />
+    * w opcji "Wszystkie recepty" przeniesiono ją z bloku 100% do N (Rpw, Rpw.P)<br />
+    * w opcji "N (Rpw, Rpw.P)" dodano jeszcze recepty N 100%<br />
+    Pozostałe opcje pozostały bez zmian.<br />
+  - Poprawiono generowanie dokumentu JPK_FA. Przekazywała się nadmiarowo, <br />
+    szczególnie dla programu Varico, data z pola P_6.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW23 -----------------------------</h3><br />
+2019.12.05 [2020.1.2.2]<br />
+  - Retaksacja recept: Poprawiono wyświetlanie realizacji dla recept <br />
+    pełnopłatnych (bez podanego numeru recepty). <br />
+  - Dodano możliwość finalizacji e-Recepta zrealizowanych w trybie awaryjnym <br />
+    w oknach "Obecność kodów", "Poprawność kodów", "Retaksacja recept".<br />
+    <br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2019.12.05 [2020.1.2.2]<br />
+  - Dodano opcjÄ™ Apw11.7.16 - Rozszerzona obsĹ‚uga transmisji dla automatu Fablox<br />
+  <br />
+<h3>---------------------------- Zmiany w module APW42 -----------------------------</h3><br />
+2019.11.26 [2020.1.2.1]<br />
+  - RozszeĹĽono funkcjÄ™ 'Ukrywania nieuĹĽywanych kart towarowych' o czyszczenie<br />
+    pola 'Kod EAN' oraz pola 'Kod kreskowy'<br />
+	<br />
+<h3>---------------------------- Zmiany w module APW68 -----------------------------</h3><br />
+2019.12.05 [2020.1.2.1]<br />
+  - Poprawa wyboru daty dla generowanego raportu. W pewnych przypadkach <br />
+    wystÄ™powaĹ‚ bĹ‚Ä…d "Wybrana data nie moĹĽe byÄ‡ mniejsza od daty IBO <br />
+	ub pierwszego raportu." <br />
+  - Dodanie moĹĽliwoĹ›ci rozpoczÄ™cia raportowania do ZSMOPL bez generowania IBO.<br />
+    Apteki rozpoczynajÄ…ce dziaĹ‚alnoĹ›Ä‡ ze stanem poczÄ…tkowym 0 oraz apteki <br />
+	zmieniajÄ…ce system apteczny na KAMSOFT a raportujÄ…ce do ZSMOPL we <br />
+	wczeĹ›niejszym innym systemie, bÄ™da mogĹ‚y teraz kontynuowaÄ‡ raportowanie, bez <br />
+	koniecznoĹ›ci tworzenia IBO.<br />
+  - Poprawne zaraportowanie wĹ‚asnych dokumentĂłw zdefiniowanych na podstawie <br />
+    standardowej definicji Strata(nazwyĹĽka).<br />
+<br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2019.12.05 [2020.1.2.2]<br />
+  - Optymalizacja procesu raportowania do OSOZ dokumentu kolejki<br />
+  - Leki on-line: obsĹ‚uga rezerwacji towarĂłw po cenach promocyjnych ustalonych <br />
+    w module APW35 Strategie<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2019.12.05<br />
+  Apwplus.exe [2020.1.9.0]<br />
+  - Uaktualniono strukturÄ™ bazy danych<br />
+<br />
+</body></html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2024.0.1.5</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2023.12.21<br />
+  Slowniki.dll [2024.0.1.5]<br />
+  - Udostępniono informacje z wykazu limitów finansowania surowców<br />
+    (identyfikator i limit za 1g) na kartach BLOZ, karcie towaru oraz centralnej<br />
+    karcie towaru (zakładka [Ctrl+4] inne).<br />
+  - Dodano weryfikację poprawności wprowadzonych danych identyfikatora i limitu<br />
+    za 1g surowca. Wymagane jest podanie kompletu danych.<br />
+  - Dodano ostrzeżenie o konieczności prowadzenia jednostki aptecznej<br />
+    w gramach (g), gdy produkt znajduje się na wykazie limitów finansowania<br />
+    surowców.<br />
+  - Rozdzielenie znaczenia statusu BLOZ "Import docelowy" na osobne statusy<br />
+    dla towarów, które są dopuszczone do obrotu na podstawie:<br />
+    * zapotrzebowania dla indywidualnego pacjenta na sprowadzenie z zagranicy<br />
+      produktu leczniczego, który nie jest dopuszczony do obrotu w Polsce -<br />
+      tzw. import docelowy (na podstawie art. 4 ust. 1-3 ustawy z dnia<br />
+      6 września 2001 r. Prawo farmaceutyczne).<br />
+    * czasowej zgody MZ na sprowadzenie z zagranicy określonej ilości produktów<br />
+      nieposiadających pozwolenia na dopuszczenie do obrotu w Polsce -<br />
+      tzw. import interwencyjny (na podstawie art. 4 ust. 8 ustawy z dnia<br />
+      6 września 2001 r. Prawo farmaceutyczne),<br />
+    * czasowej zgody Prezesa URPLWMiPB na zwolnienie w całości albo w części<br />
+      z obowiązku sporządzania oznakowania opakowania i ulotki w j. polskim<br />
+      dla określonej ilości produktów sprowadzanych z zagranicy (na podstawie<br />
+      art. 4b, art. 4c pkt.1 ustawy z dnia 6 września 2001 r. Prawo<br />
+      farmaceutyczne).<br />
+<br />
+  ApwHarm.dll, ApwIap.dll, WaUtil.exe [2024.0.1.5]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+  Zasoby.dll [2024.0.1.5]<br />
+  - Aktualizacja opisów opcji.<br />
+<br />
+  ApwFN.dll [2024.0.1.5]<br />
+  - Uaktualniono mechanizm wykonywania zleceń aktualizacji kartotek, dodano<br />
+    obsługę nowych pól na karcie towaru.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2023.12.21 [2024.0.1.5]<br />
+  - Dostosowanie programu do zmiany przepisów prawa w zakresie wyliczenia<br />
+    zapłaty za refundowany lek recepturowy z uwzględnieniem limitów finansowania<br />
+    surowców, które obowiązywać będą od 1 stycznia 2024 (USTAWA z dnia<br />
+    17 sierpnia 2023 r. o zmianie ustawy o refundacji leków, środków spożywczych<br />
+    specjalnego przeznaczenia żywieniowego oraz wyrobów medycznych<br />
+    oraz niektórych innych ustaw).<br />
+  - Dodano obsługę realizacji zleceń na wyroby medyczne w związku<br />
+    z Rozporządzeniem Ministra Zdrowia z dnia 13 października 2023 r.<br />
+    zmieniające rozporządzenie w sprawie wykazu wyrobów medycznych<br />
+    wydawanych na zlecenie.<br />
+    Rozporządzenie wchodzi w życie z dniem 1 stycznia 2024.<br />
+    Szczegóły w instrukcji: "Realizacja zleceń na wyroby medyczne<br />
+    od 1 stycznia 2024".<br />
+<br />
+<h3>---------------------------- Zmiany w module APW12 -----------------------------</h3><br />
+2023.12.21 [2024.0.1.5]<br />
+  - Dodanie nowych statusów dla produktów dopuszczonych do obrotu na podstawie<br />
+    czasowych zgód MZ i Prezesa URPLWMiPB na formularzach zawierających<br />
+    "Status BLOZ".<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2023.12.21 [2024.0.1.5]<br />
+  - Odblokowanie dla korekt kontroli terminu płatności dla dokumentów<br />
+    wprowadzonych ręcznie (opcja: APW13.2.106).<br />
+  - Dodanie nowych statusów dla produktów dopuszczonych do obrotu na podstawie<br />
+    czasowych zgód MZ i Prezesa URPLWMiPB na formularzach zawierających<br />
+    "Status BLOZ".<br />
+<br />
+<h3>---------------------------- Zmiany w module APW14 -----------------------------</h3><br />
+2023.12.21 [2024.0.1.5]<br />
+  - Dodanie nowych statusów dla produktów dopuszczonych do obrotu na podstawie<br />
+    czasowych zgód MZ i Prezesa URPLWMiPB na formularzach zawierających<br />
+    "Status BLOZ".<br />
+<br />
+<h3>---------------------------- Zmiany w module APW15 -----------------------------</h3><br />
+2023.12.21 [2024.0.1.5]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2023.12.21 [2024.0.1.5]<br />
+  - Dodano obsługę realizacji zleceń na wyroby medyczne w związku<br />
+    z Rozporządzeniem Ministra Zdrowia z dnia 13 października 2023 r.<br />
+    zmieniające rozporządzenie w sprawie wykazu wyrobów medycznych<br />
+    wydawanych na zlecenie.<br />
+    Rozporządzenie wchodzi w życie z dniem 1 stycznia 2024.<br />
+    Szczegóły w instrukcji: "Realizacja zleceń na wyroby medyczne<br />
+    od 1 stycznia 2024".<br />
+<br />
+<h3>---------------------------- Zmiany w module APW23 -----------------------------</h3><br />
+2023.12.21 [2024.0.1.5]<br />
+  - Dodanie nowych statusów dla produktów dopuszczonych do obrotu na podstawie<br />
+    czasowych zgód MZ i Prezesa URPLWMiPB na formularzach zawierających<br />
+    "Status BLOZ".<br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2023.12.21 [2024.0.1.5]<br />
+  - Wprowadzono opcję APW13.2.106 "Wyłączenie korekt spod kontroli<br />
+    opcji APW13.2.103".<br />
+<br />
+<h3>---------------------------- Zmiany w module APW44 -----------------------------</h3><br />
+2023.12.21 [2024.0.1.5]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW45 -----------------------------</h3><br />
+2023.12.21 [2024.0.1.5]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2023.12.21 [2024.0.1.5]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2023.12.21<br />
+  ApwPlus [2024.0.1.5]<br />
+  - Aktualizacja struktury bazy danych.<br />
+<br />
+  pmsr.dbf<br />
+  - Udostępniono słownik wyrobów medycznych w wersji obowiązującej<br />
+    od 1 stycznia 2024r.<br />
+<br />
+</body></html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2025.0.1.3</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2024.12.12<br />
+  Slowniki.dll [2025.0.1.3]<br />
+  - Dodano uprawnienie [41-0052]: "Edycja definicji statusów postępu prac nad<br />
+    dokumentem zakupu".<br />
+  - Centralne tryby pracy kartoteki dostawców – uporządkowano pracę z lokalną<br />
+    kartoteką dostawców w kontekście trybów centralnych (tryb centralny<br />
+    oraz tryb mieszany) – blokada edycji części ogólnej dla kart powiązanych<br />
+    z baza centralną w trybie centralnym oraz opcjonalna blokada w trybie<br />
+    mieszanym. Ponadto umożliwiono dodawanie nowej karty dostawcy na podstawie<br />
+    Centralnej Bazy Hurtowni w trybie mieszanym.<br />
+<br />
+  KSOPH.dll [2025.0.1.3]<br />
+  - Odmowy centralnych zamówień KS-OmniPharm – rozbudowa przesyłanego komunikatu<br />
+    do KS-OmniPharm o informacje związane z błędem zapisu odmowy do repozytorium<br />
+    KS-EDE.<br />
+<br />
+  ApwHarm.dll [2025.0.1.3]<br />
+  - Zmodyfikowano pobieranie BLOZ tak aby nie był dodawany do BLOZ buforowego<br />
+    towar w przypadku gdy jego data obowiązywania jest z przyszłości,<br />
+    ale w zatwierdzonym BLOZ jest już towar o dokładnie takich samych danych.<br />
+<br />
+  ApwMain [2025.0.1.3]<br />
+  - Test systemu aptecznego: dodano test "Sprawdzanie połączenia z usługą<br />
+    KS-APTIX".<br />
+  - Test systemu aptecznego: rozszerzono test "Sprawdzanie zgodności wersji<br />
+    składników programu" o weryfikację zgodności wersji WSP.<br />
+<br />
+  ApInetAp.dll, ApwAkt.exe [2025.0.1.3]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+  CopyCloud [2025.0.1.2]<br />
+  – Poprawka do czyszczenia obszaru FRA Oracle. W niektórych konfiguracjach baz<br />
+    niekontenerowych zdarzało się, że usługa nie potrafiła wyczyścić obszaru FRA<br />
+    co mogło po jego przepełnieniu doprowadzić do zatrzymania serwera Oracle.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2024.12.12 [2025.0.1.3]<br />
+  - Zadanie z Giełdy Pomysłów - dodano możliwość wprowadzania adnotacji do DRR<br />
+    w oknie e-Recepty (w trakcie realizacji recepty) oraz przy zatwierdzaniu<br />
+    wydawanego leku (po wyborze dostawy). Funkcjonalność dostępna będzie<br />
+    pod skrótem klawiatury oraz w menu podręcznym: [Ctrl + A] Adnotacje.<br />
+  - KtoMaLek: Obsługa kart epruf w rezerwacjach z KtoMaLek.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW12 -----------------------------</h3><br />
+2024.12.12 [2025.0.1.3]<br />
+  - Odmowy centralnych zamówień KS-OmniPharm – rozbudowa przesyłanego komunikatu<br />
+    do KS-OmniPharm o informacje związane z błędem zapisu odmowy do repozytorium<br />
+    KS-EDE.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2024.12.12 [2025.0.1.3]<br />
+  - Rozwiązano problem podczas usuwania uruchomionych weryfikacji dostaw APTIX.<br />
+    Problem objawiał się usuwaniem za pomocą "[F8] Usuń" pojedynczych dokumentów<br />
+    zakupu z weryfikacji na Liście uruchomionych weryfikacji mobilnych KS-APTIX.<br />
+    Obecnie usuwana jest cała weryfikacja (wszystkie dokumenty w ramach tej<br />
+    weryfikacji).<br />
+  - Dodano możliwość rozliczenia wszystkich nierozliczonych skanów weryfikacji<br />
+    dostawy APTIX w oknie z listą skanów.<br />
+  - W oknie "Postęp prac nad dokumentem":<br />
+    * dodano możliwość podglądu definicji statusów postępu prac nad dokumentem<br />
+      zakupu za pomocą przycisku "[Ctrl+D] Definicje statusów",<br />
+    * umożliwiono edycję definicji statusów postępu prac nad dokumentem zakupu,<br />
+      jeśli użytkownik posiada uprawnienie [41-0052],<br />
+    * wprowadzono podgląd wszystkich statusów, przy czym statusy nieaktywne<br />
+      są wyświetlone kolorem szarym.<br />
+  - Dodano możliwość określenia Sprzedawcy przy ręcznym wystawianiu faktury,<br />
+    korekty wewnętrznej i kosztowej. Problem objawiał się, że podczas tworzenia<br />
+    takiego dokumentu gdzie kontrahentem jest członek Grupy VAT, nie można było<br />
+    określić Sprzedawcy.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW14 -----------------------------</h3><br />
+2024.12.12 [2025.0.1.3]<br />
+  - Dodano możliwość rozliczenia wszystkich nierozliczonych skanów<br />
+    inwentaryzacji APTIX w oknie z listą skanów.<br />
+  - Zmodyfikowano pobieranie BLOZ tak aby nie był dodawany do BLOZ buforowego<br />
+    towar w przypadku gdy jego data obowiązywania jest z przyszłości,<br />
+    ale w zatwierdzonym BLOZ jest już towar o dokładnie takich samych danych.<br />
+  – Leki wstrzymane. Optymalizacja działania. Poprawiono wyszukiwanie towarów,<br />
+    odświeżanie listy po zastosowaniu filtrów, wstrzymywanie i przywracanie<br />
+    z wstrzymania oraz niektóre wydruki. Funkcjonalności te wolno działały<br />
+    na bazach w których istniały rozbudowane kartoteki zakupów.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2024.12.12 [2025.0.1.3]<br />
+  - Dostosowanie wszystkich eksportów do obcych FK do prawidłowego przekazywania<br />
+    danych sprzedawcy dla faktur zakupu wystawionych przez podmiot będący<br />
+    członkiem Grupy VAT. Wprowadzone zmiany nie wpływają w żaden sposób<br />
+    na format przekazywanych danych.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2024.12.12 [2025.0.1.3]<br />
+  - W "Definicje statusów postępu prac nad dokumentem zakupu" uwzględniono<br />
+    uprawnienie [41-0052]: "Edycja definicji statusów postępu prac nad<br />
+    dokumentem zakupu".<br />
+<br />
+<h3>---------------------------- Zmiany w module APW42 -----------------------------</h3><br />
+2024.12.12 [2025.0.1.3]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW68 -----------------------------</h3><br />
+2024.12.12 [2025.0.1.3]<br />
+  - Rozwiązano problem z możliwym wystąpieniem statusu błędu TROSPOZ78<br />
+    związanego z przeterminowaną datą ważności produktu leczniczego,<br />
+    który mógł wystąpić podczas raportowania dokumentów - Leki przeterminowane.<br />
+<br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2024.12.12 [2025.0.1.3]<br />
+  - KtoMaLek: Obsługa kart epruf w rezerwacjach z KtoMaLek.<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2024.12.12<br />
+  ApwPlus [2025.0.1.3]<br />
+  - Aktualizacja struktury bazy danych.<br />
+<br />
+</body></html>

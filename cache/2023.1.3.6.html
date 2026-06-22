@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2023.1.3.6</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2023.04.17<br />
+  Slowniki.dll [2023.1.3.6]<br />
+  - Dodano w zapytaniu o stan i cenę towaru wyświetlanie promocji również<br />
+    gdy rabat ma wartość 0.<br />
+<br />
+  ApwMain.exe [2023.1.3.6]<br />
+  - Dodano linki do portali społecznościowych prezentujących działalność<br />
+    Kamsoft S.A.<br />
+<br />
+  ApwHarm.dll [2023.1.3.6]<br />
+  - Rozszerzenie importu danych BLOZ. Dodano informację o ilości substancji<br />
+    czynnej w opakowaniu.<br />
+<br />
+  ApwPlan.exe, ApwPlanWorker.exe [2023.1.3.6]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+  Zasoby.dll [2023.1.3.6]<br />
+  - Aktualizacja opisów opcji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2023.04.17 [2023.1.3.6]<br />
+  - [Zadanie z giełdy pomysłów] Weryfikacja wydawanej ilości leku podczas<br />
+    realizacji e-Recepty. Dodano automatyczne wyliczenie ilości pozostałej do<br />
+    wydania. Informacja dostępna będzie zarówno w oknie e-Recepty jak i w<br />
+    panelu e-Recepty widocznym podczas wyboru leku/dostawy. W przypadku<br />
+    przekroczenia zaordynowanej ilości leku, system wyrzuci komunikat z<br />
+    ostrzeżeniem w postaci zestawienia zawierającego dane leku zaordynowanego<br />
+    oraz dane leków wydanych i aktualnie wydawanych. W raporcie zostanie podana<br />
+    informacja o sposobie wyliczenia lub powód, który sprawił, że wyliczenie<br />
+    pozostałej ilości do wydania nie było możliwe. Zestawienie będzie również<br />
+    dostępne z poziomu okna e-Recepty/sprzedaży - pod skrótem [Shift+F7].<br />
+    Szczegóły funkcjonalności zostały opisane w instrukcji e-Recepty.<br />
+  - [Zadanie z giełdy pomysłów] Okno "Uwaga! Inny EAN": rozszerzono<br />
+    funkcjonalność ostrzeżenia o próbie wydania innego leku niż zaordynowany.<br />
+    Dodano rozpoznawanie odpowiedników, tych samych substancji czynnych,<br />
+    wielkości opakowania, postaci oraz dawki. Wprowadzono opis słowny,<br />
+    ułatwiający porównanie leku wydawanego z zaordynowanym. Przy próbie wydania<br />
+    leku o większej dawce okno przyjmuje charakter wystąpienia błędu, z czasowo<br />
+    niedostępnym klawiszem zatwierdzającym realizację. Ostrzeżenie będzie<br />
+    pokazywać się również po wskazaniu synonimu, za wyjątkiem przypadków,<br />
+    gdy wydawany jest odpowiednik o tej samej wielkości opakowania.<br />
+  - Okno "Uwaga! Inny EAN": Dodano ostrzeżenie przy zmianie synonimu.<br />
+    Zgłoszono przypadki gdy farmaceuta omyłkowo sięgał do półki po inny lek<br />
+    niż wskazany wcześniej synonim.<br />
+  - Poprawka w realizacji recept papierowych. Usunięto przepisywanie PESEL<br />
+    pacjenta oraz NPWZ lekarza z realizowanej wcześniej e-Recepty (w ramach<br />
+    tej samej transakcji).<br />
+  - Obsługa uprawnienia 11_0043 do przeglądania statystyk KOWAL/NMVS.<br />
+  - W komunikacji eZWM dodano mechanizm MTOM do przesyłania danych binarnych.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW12 -----------------------------</h3><br />
+2023.04.17 [2023.1.3.6]<br />
+  - Modyfikacja w podglądzie listy promocji zmieniająca domyślną akcję podglądu<br />
+    promocji (wywołaną przez podwójnie klikniecie lub zastosowanie Enter<br />
+    na wybranej pozycji z listy promocji) na zamawianie bezpośrednio z promocji.<br />
+  - Dodanie automatycznego ponawiania dokończenia konfiguracji Akcji<br />
+    sprzedażowych które nie zostały dokończone ręcznie.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW14 -----------------------------</h3><br />
+2023.04.17 [2023.1.3.6]<br />
+  - Rozszerzenie importu danych BLOZ. Dodano informację o ilości substancji<br />
+    czynnej w opakowaniu.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2023.04.17 [2023.1.3.6]<br />
+  - Dodano możliwość wykonania przeceny dostaw na podstawie umowy NFZ na środki<br />
+    pomocnicze (szczegóły w instrukcji: "Przecena na podstawie umowy z NFZ<br />
+    na środki pomocnicze").<br />
+    Przecena wykonywana jest dla dostaw towarów powiązanych z produktami umowy:<br />
+      * automatycznie podczas wczytywania umowy z NFZ,<br />
+      * ręcznie w Apw21 -> Refundacje -> Środki pomocnicze -> Umowy i aneksy -><br />
+        Produkty handlowe środków pomocniczych z umowy -> [F12] Przecena.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW23 -----------------------------</h3><br />
+2023.04.17 [2023.1.3.6]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW35 -----------------------------</h3><br />
+2023.04.17 [2023.1.3.6]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2023.04.17 [2023.1.3.6]<br />
+  - Dodanie uprawnienia 11_0043 do przeglądania statystyk KOWAL/NMVS.<br />
+  - Dodano nową opcję: APW21.2.1.53 "Przecena dostaw na podstawie umowy z NFZ<br />
+    na środki pomocnicze" (domyślnie wyłączona).<br />
+<br />
+<h3>---------------------------- Zmiany w module APW42 -----------------------------</h3><br />
+2023.04.17 [2023.1.3.6]<br />
+  - Optymalizacja usuwania starych cenników.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW44 -----------------------------</h3><br />
+2023.04.17 [2023.1.3.6]<br />
+  - Rozszerzenie importu danych BLOZ. Dodano informację o ilości substancji<br />
+    czynnej w opakowaniu.<br />
+<br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2023.04.17 [2023.1.3.6]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2023.04.17<br />
+  ApwPlus [2023.1.3.6]<br />
+  - Aktualizacja struktury bazy danych.<br />
+  - Rozszerzenie importu danych BLOZ. Dodano informację o ilości substancji<br />
+    czynnej w opakowaniu.<br />
+<br />
+  ApwBase.dll [2023.1.3.6]<br />
+  - Uaktualniono bazę kart serwisowych.<br />
+<br />
+</body></html>

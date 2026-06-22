@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2020.0.0.4</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+ď»ż2019.09.05<br />
+  apwharm.dll [2020.0.1.1]<br />
+  - WdroĹĽono poprawkÄ™ dla mechanizmu odmĂłw <br />
+<br />
+2019.09.04<br />
+  slowniki.dll [2020.0.0.3]<br />
+  - Poprawka filtrowania w oknie przeglÄ…du bazy BLOZ dla bazy danych Oracle.<br />
+  - MoĹĽliwoĹ›Ä‡ zestawienia w wybranych kategoriach suplementĂłw diety <br />
+    z lekami OTC.<br />
+<br />
+2019.08.29 <br />
+  apwharm.dll [2020.0.1.0]<br />
+  - WdroĹĽono poprawkÄ™ dla mechanizmu pakowania w Aptece Internetowej <br />
+  - WdroĹĽono poprawkÄ™ dla funkcji aktualizacji cen w Aptece Internetowej<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2019.09.05 [2020.0.1.1]<br />
+  - W przypadku wybrania uprawnienia dodatkowego i leku robionego pojawiaĹ‚ siÄ™ <br />
+    komunikat z informacjÄ…, ĹĽe pacjenci z uprawnieniami dodatkowymi ponoszÄ… <br />
+    opĹ‚atÄ™ za leki robione i pytaniem, czy wyĹ‚Ä…czyÄ‡ uprawnienia dodatkowe dla <br />
+    tej sprzedaĹĽy. W modyfikacji zmieniono pytanie na komunikat informujÄ…cy <br />
+    o usuniÄ™ciu uprawnieĹ„.<br />
+  - e-Recepta: usuniÄ™cie weryfikacji EAN przy wycenie leku recepturowego.<br />
+  - e-Recepta: poprawiono sprzedaĹĽ mieszanÄ… e-Recept i recept papierowych. <br />
+    Na DRR e-Recepty pojawiaĹ‚ siÄ™ nr recepty papierowej. Przez co dokumentu<br />
+    realizacji recepty nie daĹ‚o przesĹ‚aÄ‡ siÄ™ do SIM za pierwszym razem. <br />
+  - e-Recepta: zablokowano automatyczne wiÄ…zanie towarĂłw z aptecznej bazy dla<br />
+    pozycji eRecepty z zerowym kodem EAN. <br />
+  - Dodano obsĹ‚ugÄ™ uprawnienia "SprzedaĹĽ lekĂłw z grup A, N, I-P oraz II-P <br />
+    odrÄ™cznie"<br />
+	<br />
+2019.08.28 [2020.0.1.0]<br />
+  - Poprawiono wydruk faktury zbiorczej z rozliczeniem zaliczek (w tabeli <br />
+    z rozliczeniem zaliczek drukowaĹ‚a siÄ™ powielona nazwa z pierwszej zaliczki)<br />
+  - Poprawiono wydruk paragonu z rozliczeniem zaliczki dla lekĂłw robionych <br />
+    na drukarkach Mera Online<br />
+  - Zmiana w wydrukach faktur: ustawienie "Numer konta drukowany na fakturach" <br />
+    zostaĹ‚o rozszerzone o dwie nowe opcje:<br />
+    * Konto 1 (tylko forma zapĹ‚aty przelew), <br />
+    * Konto 2 (tylko forma zapĹ‚aty przelew). <br />
+    Nowa opcja pozwoli wydruk numeru konta na fakturze tylko w przypadku, gdy <br />
+    wybranÄ… formÄ… zapĹ‚aty bÄ™dzie przelew<br />
+  - Dodano kontrolÄ™ uprawnienia 11-0031 "Wystawienie FV dla nabywcĂłw z numerem <br />
+    NIP (firmy) przy tworzeniu dokumentu z poziomu operacji magazynowych. <br />
+  - Poprawiono wyĹ›wietlanie moduĹ‚u na monitorach 4K (e-Recepta, menu gĹ‚Ăłwne)<br />
+  - Poprawiona weryfikacja zdublowanych e-recept<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2019.09.03 [2020.0.3.0]<br />
+    - Split payment. Dodano obsĹ‚ugÄ™ adnotacji na fakturze o podzielonej <br />
+      pĹ‚atnoĹ›ci VAT. JeĹ›li adnotacja nie zostaĹ‚a przekazana w dokumencie zakupu, <br />
+      personel apteki moĹĽe taka informacjÄ™ nanieĹ›Ä‡ rÄ™cznie w momencie przyjÄ™cia <br />
+      dokumentu zakupu na magazyn.<br />
+<br />
+2019.08.29 [2020.0.2.0]<br />
+    - Automatyczne generowanie rezerwacji podczas wczytania dokumentu MM.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW23 -----------------------------</h3><br />
+2019.09.02 [2020.0.0.2]<br />
+  - Poprawiono wyĹ›wietlanie taksacji recept na monitorach 4K, dodano zapisywanie<br />
+    ustawieĹ„ okna taksacji<br />
+<br />
+<h3>---------------------------- Zmiany w module APW31 -----------------------------</h3><br />
+2019.09.05 [2020.0.0.1]<br />
+  - Dodano automatyczne zamykanie okna 'Wystawianie dokumentu pieniÄ™ĹĽnego' oraz<br />
+    'Wystawianie polecenia przelewu' po wykonaniu operacji wydruku.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW45 -----------------------------</h3><br />
+2019.08.29 [2020.0.1.0]<br />
+  - Wdrożono poprawkę dla mechanizmu pakowania w aptece internetowej <br />
+  - Wdrożono poprawkę dla funkcji aktualizacji cen w Aptece Internetowej<br />
+  - Poprawiono filtrowanie oraz wydruk zamówień internetowych w oknie<br />
+    przeglądania zamówień (AWP11 - Sprzedaż -> ctrl+k oraz APW45 - Apteka<br />
+    Internetowa -> zamówienia) dla mechanizmu pracy z wieloma sklepami WWW.<br />
+  - Poprawiono problem "Out of Bounds" dla zadania aktualizacji produktów<br />
+    na stronę WWW. Dla włączonych wspólnie opcji "Kiedy jest wysyłana<br />
+    pozycja dla kategorii, to zawsze wysyłaj powiązany produkt" oraz <br />
+    "Zawsze rozdzielaj na paczki" przy włączonej opcji wysyłaj kategorie<br />
+    mógł pojawić się komunikat "Out of Bounds".<br />
+  - Wdrożono nową opcję "Dla "Pełnej oferty int. program KS-AOW" korzystaj<br />
+    z produktów: niepowiązanych z ofertami internetowymi/wszystkich <br />
+    (powiązanych i niepowiązanych z ofertami internetowymi).". <br />
+    Opcja wpływa na następujące mechanizmy:<br />
+    a) czyszczenie oferty internetowej oraz pobierania oferty int./pobieranie<br />
+       kategorii i pozycji w automacie budowania oferty dla funkcji odśwież<br />
+       ofertę;<br />
+    b) prezentacji oferty internetowej w oknie przeglądania oferty;<br />
+    c) prezentacji kategorii w oknie przeglądania kategorii;<br />
+    d) odczyt oferty dla automatu aktualizacji cen;<br />
+    e) funkcje dla aktualizacji pojedynczego produktu: aktualizacja ceny/odśwież<br />
+       produkt;<br />
+    f) funkcje kopiowania/przenoszenia kategorii oraz produktów oferty int.<br />
+       pomiędzy ofertami internetowymi;<br />
+    g) funkcja dodawania nowych produktów do oferty internetowej;<br />
+    h) funkcja wysyłania oferty internetowej na stronę WWW;<br />
+    i) funkcja aktualizacji daty wysłania na stronę WWW produktów;<br />
+    j) funkcja zliczania produktów dla aktualizacji na stronę WWW; <br />
+<br />
+<h3>---------------------------- Zmiany w module APW68 -----------------------------</h3><br />
+2019.09.05 [2020.0.0.3]<br />
+  - Poprawa wyĹ›wietlania raportĂłw ZSMOPL przy uĹĽyciu funkcji [F3]-PokaĹĽ raport.<br />
+<br />
+2019.08.27 [2020.0.0.2]<br />
+  - Poprawa Ĺ‚Ä…czenia komunikatĂłw Bilansu Otwarcia.<br />
+  <br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2019.09.05<br />
+  Apwplus.exe [2020.0.4.0]<br />
+  - Uaktualniono strukturÄ™ bazy danych<br />
+<br />
+2019.08.26<br />
+  Apwplus.exe [2020.0.3.0]<br />
+  - Uaktualniono strukturÄ™ bazy danych<br />
+<br />
+</body></html>

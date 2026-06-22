@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2020.3.0.9</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2020.04.10  <br />
+  apwharm.dll [2020.3.0.9]  <br />
+  - Dodano nowe zadanie „Generuj wydruki dokumentów dla sprzedaży internetowej”<br />
+    dla automatyzacji procesu generowania wydruków dokumentów sprzedaży<br />
+    dla apteki internetowej.<br />
+  - Dodano nowe zadanie „Wyślij e-mail do klientów dla zamówień internetowych”<br />
+    dla automatyzacji procesu rozsyłania maili do klientów apteki internetowej.    <br />
+  - Dodano nowe opcje do zarządzania zadaniami „Generuj wydruki dokumentów<br />
+    dla sprzedaży internetowej” oraz „Wyślij e-mail do klientów dla zamówień<br />
+    internetowych”. Oby dwa zadania pracują w tym momencie na identycznych<br />
+    opcjach czasowych. Wspólny opis dostępnych funkcji dla tych zadań:<br />
+    a) „Ogranicz analizę zamówień internetowych ze względu na okres czasu”.<br />
+       Opcja włącza filtr ograniczający ilość analizowanych zamówień ze względu<br />
+       na okres czasu.<br />
+    b) „Uwzględnij okres analizy dla zamówień”. Opcja ustala zakres czasu wstecz<br />
+       dla analizy zamówień internetowych.<br />
+    c) „Analizuj wg daty”. Opcja ustala jaką datą zarządzamy dla funkcji<br />
+       ograniczający ilość analizowanych zamówień. Udostępniono możliwość<br />
+       zarządzania  datą założenia zamówienia przez klienta lub datą utworzenia<br />
+       zamówienia w module APW45 – Apteka Internetowa.<br />
+    d) „Zawsze analizuj aktualny dzień”. Opcja ustala czy w analizowany<br />
+       zakres czasu wchodzi aktualny dzień.<br />
+  - Poprawiono problem z wyskakującym oknem podczas generowania<br />
+    wydruków do pliku.<br />
+  - Poprawiono i rozszerzono logowanie zdarzeń z procesu wysyłania e-mail.<br />
+  - Poprawiono i rozszerzono logowanie zdarzeń z procesu generowania<br />
+    wydruków dokumentów sprzedaży.<br />
+  Apwplan.exe [2020.3.0.9]<br />
+  - Rozszerzono zarządzanie parametrami globalnymi dla poprawności wykonywania<br />
+    zadań:<br />
+    a) „Generuj wydruki dokumentów dla sprzedaży internetowej”<br />
+    b) „Wyślij e-mail do klientów dla zamówień internetowych”   <br />
+  <br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2020.04.10 [2020.3.0.9]<br />
+  - Dodano wywołanie Asystenta Reglamentacji [Ctrl+Shift+R] dla Rp. papierowych. <br />
+  - Dodano mechanizm tworzenia DRR dla leków OTC z grupy towarów <br />
+    reglamentowanych. <br />
+  - Dodano odczyt kodów QR z aplikacji VisiMed (Bezdotykowa recepta). <br />
+  - Dodano uprawnienie ograniczające ręczną zmianę numeru wystawianego <br />
+    dokumentu FV.<br />
+  - Usunięcie problemu z podmianą podtypu recepty lekarskiej na pielęgniarską. <br />
+    Problem występował po realizacji recept pielęgniarskich\kontynuacji na <br />
+	zlecenie lekarza.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW45 -----------------------------</h3><br />
+2020.04.10 [2020.3.0.9]<br />
+  - Poprawiono błąd związany z rezerwacją zamówień internetowych<br />
+    oraz ich sprzedażą.<br />
+  - Rozszerzono obsługę funkcji zabezpieczających jeśli główna opcja<br />
+    modyfikacji jest wyłączona „Aktywuj mechanizm wysyłania dokumentów<br />
+    sprzedaży”:<br />
+    (APW45/Zamówienia/Inne)<br />
+    a) Zabezpieczono funkcję "Generuj fakturę dla zamówienia"<br />
+       Dodałem dodatkowe zabezpieczenie dla funkcji generowania grupowo<br />
+       oraz pojedynczo wydruków dokumentów  sprzedaży.<br />
+    b) Zabezpieczono funkcję "Wyślij e-mail do klienta dla zamówienia".<br />
+    c) Dodałem dodatkowe zabezpieczenie dla funkcji generowania <br />
+       grupowo oraz pojedynczo wysyłania e-mail.<br />
+  - Poprawiono i rozszerzono logowanie zdarzeń z procesu generowania<br />
+    wydruków dokumentów  sprzedaży.<br />
+    (APW45/Zamówienia/Drukuj/Grupowo generuj faktury dla zamówień (zaznaczone))<br />
+  - Poprawiono problem z wyskakującym oknem podczas generowania<br />
+    wydruków do pliku.<br />
+    (APW45/Zamówienia/Drukuj/Grupowo generuj faktury dla zamówień (zaznaczone))<br />
+  - Poprawiono i rozszerzono logowanie zdarzeń z procesu wysyłania e-mail.<br />
+    (APW45/Zamówienia/Drukuj/Grupowo wysyłaj e-mail do klientów dla<br />
+     zamówień (zaznaczone))<br />
+  - Dodano nowe zadanie „Generuj wydruki dokumentów dla sprzedaży internetowej”<br />
+    dla automatyzacji procesu generowania wydruków dokumentów sprzedaży<br />
+    dla apteki internetowej. (APWPLAN)<br />
+  - Dodano nowe zadanie „Wyślij e-mail do klientów dla zamówień internetowych”<br />
+    dla automatyzacji procesu rozsyłania maili do klientów apteki internetowej.<br />
+    (APWPLAN)<br />
+  - Dodano nowe opcje do zarządzania zadaniami „Generuj wydruki dokumentów<br />
+    dla sprzedaży internetowej” oraz „Wyślij e-mail do klientów dla zamówień<br />
+    internetowych”. Oby dwa zadania pracują w tym momencie na identycznych<br />
+    opcjach czasowych. Wspólny opis dostępnych funkcji dla tych zadań:<br />
+    a) „Ogranicz analizę zamówień internetowych ze względu na okres czasu”.<br />
+       Opcja włącza filtr ograniczający ilość analizowanych zamówień ze względu<br />
+       na okres czasu.<br />
+    b) „Uwzględnij okres analizy dla zamówień”. Opcja ustala zakres czasu wstecz<br />
+       dla analizy zamówień internetowych.<br />
+    c) „Analizuj wg daty”. Opcja ustala jaką datą zarządzamy dla funkcji<br />
+       ograniczający ilość analizowanych zamówień. Udostępniono możliwość<br />
+       zarządzania  datą założenia zamówienia przez klienta lub datą utworzenia<br />
+       zamówienia w module APW45 – Apteka Internetowa.<br />
+    d) „Zawsze analizuj aktualny dzień”. Opcja ustala czy w analizowany<br />
+       zakres czasu wchodzi aktualny dzień.<br />
+  - Wdrożono poprawki dla okna zamówień internetowych w APW11:<br />
+    (APW11/Operacje magazynowe/[Ctrl+k]] Zamówienia Internetowe)  <br />
+    a) Poprawiono obsługę funkcji „Generuj fakturę dla zamówienia <br />
+       (podświetlone)”<br />
+    b) Poprawiono obsługę funkcji „Wyślij e-mail do klienta<br />
+       dla zamówienia (podświetlone)”<br />
+    c) Poprawiono obsługę funkcji „Grupowo generuj faktury <br />
+       dla zamówień (zaznaczone)”<br />
+    d) Poprawiono obsługę funkcji „Grupowo wysyłaj e-mail do klientów<br />
+       dla zamówień (zaznaczone)”  <br />
+  - Rozszerzono obsługę funkcji zabezpieczających jeśli opcja jest włączona<br />
+    „Aktywuj mechanizm wysyłania dokumentów sprzedaży”. Domyślnie jest wyłączona.<br />
+    Zawiera następujące zabezpieczenia:<br />
+    (APW45/Reguły/Zamówienia/Inne)<br />
+    a) Zabezpieczono zakładkę [APW45/Reguły/Zamówienia/E-mail].          <br />
+       Zakładka E-mail jest nie dostępna.<br />
+    b) Zabezpieczono zakładkę [APW45/Reguły/Zamówienia/Inne]<br />
+       Opcje do ustawiania faktur detalicznych i faktur VAT są zablokowane i wyłączone.<br />
+    c) Zabezpieczono okno [APW45/Zamówienia]<br />
+       Ikony dla wysyłania maili nie są obsługiwane.<br />
+       Ikony dla faktur Vat i dokumentów detalicznych nie są obsługiwane.<br />
+    d) Zabezpieczono funkcję [APW45/Zamówienia/Drukuj/Generuj fakturę dla zamówienia]<br />
+       Funkcja jest zablokowana.<br />
+    e) Zabezpieczono funkcję [APW45/Zamówienia/Drukuj/Wyślij e-mail do klienta<br />
+       dla zamówienia]. Funkcja jest zablokowana.<br />
+    f) Zabezpieczono okno [APW45/Zamówienia/Nowe lub Edycja]<br />
+       Opcje do ustawiania i podglądu rodzaju dokumentu sprzedaży, wysłania e-mail’a,<br />
+       informacji o wygenerowaniu wydruku oraz informacji o dacie wygenerowania<br />
+       wydruku są zablokowane i wyłączone.<br />
+    g) Zabezpieczono okno [APW45/Zamówienia/Filtr]<br />
+       Opcje do filtrowania rodzaju przypisanych dokumentów sprzedaży, wysłania<br />
+       e-mail’a są zablokowane i wyłączone.<br />
+    h) Zabezpieczono pobieranie zamówień [Usługa Sieciowa]<br />
+       Funkcja  pobierająca zamówienia dla pola w XML’u FVVAT nie obsługuje<br />
+       parametrów dla faktur detalicznych oraz faktur VAT sprzedaży – nie wydziela<br />
+       dokumentów, przypisuje wartość dla nieustawionego dokumentu sprzedaży<br />
+       oraz poprawiono ustawienie tego parametru w przypadku pracy z korektami<br />
+       zamówień oraz dokumentami detalicznymi.<br />
+  - Dodano możliwość filtrowania opcją „Zamówienia z dokumentem<br />
+    sprzedaży:” zamówień według rodzaju dokumentu za pomocą następujących opcji:<br />
+    a) <wszystkie><br />
+    b) z przypisanym dokumentem faktury VAT sprzedaży<br />
+    c) z przypisanym dokumentem detalicznym sprzedaży<br />
+    [APW45/Zamówienia/Filtr]<br />
+  - Dodano możliwość filtrowania opcją „Zamówienia dla których wysłano<br />
+    e-mail:” dla których zamówień został wysłany mail.<br />
+    [APW45/Zamówienia/Filtr]<br />
+  - Dodano możliwość grupowej realizacji generowania wydruków dokumentów<br />
+    sprzedaży dla zaznaczonych zamówień. Dodatkowo zaprojektowano okno<br />
+    do prezentacji logów z działa tej akcji.<br />
+    [APW45/Zamówienia/Drukuj/Grupowo generuj faktury dla zamówień (zaznaczone)]<br />
+  - Dodano możliwość grupowej realizacji wysyłania maili z podpiętymi wydrukami<br />
+    dokumentów sprzedaży dla zaznaczonych zamówień oraz zmiany statusu. <br />
+    Dodatkowo zaprojektowano okno do prezentacji logów z działa tej akcji.<br />
+    [APW45/Zamówienia/Drukuj/Grupowo wysyłaj e-mail do klientów<br />
+    dla zamówień (zaznaczone)]  <br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2020.04.10 <br />
+  IbPack.exe [2020.3.0.9] <br />
+  - Uaktualniono listę tabel<br />
+<br />
+  Apwplus.exe [2020.3.0.9]<br />
+  - Przepisano domyślne uprawnienia dla funkcji w Apw11<br />
+<br />
+</body></html>

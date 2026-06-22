@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2022.4.1.0</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2022.12.27<br />
+  Slowniki.dll [2022.4.1.0]<br />
+  - Na karcie towaru i BLOZ dodano odpłatność 20% oznaczoną symbolem D.<br />
+<br />
+  ApwHarm.dll [2022.4.1.0]<br />
+  - Rozwiązano problem objawiający się brakiem obsługi przez hurtownie<br />
+    potwierdzeń realizacji zamówień. Problem dotyczył tylko potwierdzeń<br />
+    zamówień, wygenerowanych przez systemy centralne.<br />
+<br />
+  ApwPlan.exe [2022.4.1.0]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+  ApwPlanWorker.exe [2022.4.1.0]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+  MVServer.exe [2022.4.1.0]<br />
+  - Synchronizacji stanu magazynu dla automatów Rowa. Rozwiązano problem<br />
+    z pojawianiem się pozycji bez daty dokumentu.<br />
+<br />
+  ApwiAp.dll [2022.4.1.0]<br />
+  - Rozwiązano problem objawiający się generowaniem nieprawidłowych nazw plików<br />
+    dla dokumentów sprzedaży w formacie pdf. Powodowało to problem z odczytem<br />
+    pliku do wydruku, podglądu oraz rozsyłania mailem. Problem dotyczył<br />
+    sprzedaży zamówień internetowych.<br />
+<br />
+  Apwfn.dll [2022.4.1.0]<br />
+  - Kontrola realizacji zleceń z centrali typu "Aktualizacja kart".<br />
+    Uwzględniono w opisach nowy rodzaj odpłatności 20%.<br />
+<br />
+  Zasoby.dll [2022.4.1.0]<br />
+  - Dodano opisy dla parametrów: Kontrola wystawienia FV do paragonu bez numeru<br />
+    NIP nabywcy oraz Kontrola zmiany typu recepty dla e-recepty umieszczonej<br />
+    w kolejce.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2022.12.27 [2022.4.1.0]<br />
+  - Dodano obsługę realizacji zleceń na wyroby medyczne w związku<br />
+    z Rozporządzeniem Ministra Zdrowia z dnia 27 października 2022 w sprawie<br />
+    wykazu wyrobów medycznych wydawanych na zlecenie (Dz. U. poz. 2319):<br />
+    a) dodano obsługę odpłatności 20% (oznaczoną na karcie towaru literą D).<br />
+       Nowa odpłatność dotyczy cewników hydrofilowych dla osób dorosłych (P.96)<br />
+       oraz wyrobów stomijnych (P.141).<br />
+    b) zaktualizowano słownik środków pomocniczych o kody obowiązujące<br />
+       w roku 2023: Między innymi wprowadzono kody dla produktów chłonnych<br />
+       dla P.100 i P.101: MCH1, MCH2, PM2, PP, PW.<br />
+    c) dostosowano moduł eZWM do wersji 2.1.6.1 usługi eZWM w NFZ.<br />
+    Rozporządzenie wchodzi w życie z dniem 1 stycznia 2023.<br />
+    Szczegóły w instrukcji: "Realizacja zleceń na wyroby medyczne<br />
+    od 1 stycznia 2023".<br />
+  - Rozwiązano problem powodujący nieprawidłowe wyliczanie refundacji<br />
+    w przypadkach łączenia leku z rezerwacji KML z e-receptą wystawioną na inny<br />
+    preparat z innym poziomem refundacji.<br />
+  - Przy braku automatycznej rezerwacji towaru dodano do komunikatu informację<br />
+    o powodzie jej braku, gdy jest nim próba rezerwacji narkotyku<br />
+    lub psychotropu.<br />
+  - Modyfikacja i rozbudowa nowej usługi "Podobniki" w zakresie integracji<br />
+    z modułem APW11. Usługa jest dostępna w wersji pilotażowej w wybranych<br />
+    aptekach.<br />
+  - Dodano nowy mechanizm kontroli wystawienia FV do paragonu bez numeru NIP<br />
+    nabywcy. Funkcja domyślnie blokuje wystawienie dokumentu.<br />
+    Ustawienie APW11-Sprzedaż.3.1.50 dopuszcza następujące opcje:<br />
+    blokuj, ostrzegaj.<br />
+  - Dodano mechanizm kontroli zmiany typu recepty dla e-recepty umieszczonej<br />
+    w kolejce. Funkcja domyślnie blokuje zmianę typu recepty.<br />
+    Ustawienie APW11-Sprzedaż.2.168 dopuszcza następujące opcje:<br />
+    blokuj, zezwalaj.<br />
+  - Rozwiązano problem objawiający się generowaniem nieprawidłowych nazw plików<br />
+    dla dokumentów sprzedaży w formacie pdf. Powodowało to problem z odczytem<br />
+    pliku do wydruku, podglądu oraz rozsyłania mailem. Problem dotyczył<br />
+    sprzedaży zamówień internetowych.<br />
+  - OKP: Dodano obsługę płatności za pomocą BLIK dla terminali Elavon. <br />
+    Funkcjonalność ta została dodana w wersji zapoznawczej i będzie uruchamiana <br />
+    przez Elavon w wybranych aptekach. W przypadku zainteresowania udziałem <br />
+    w pilotażu prosimy o kontakt z Elavon.<br />
+  - OKP: Poprawiono współpracę KS-AOW z terminalem Elavon ze zintegrowaną <br />
+    drukarką na której drukowane są potwierdzenia:<br />
+    a) wyeliminowano wydruk drugiej kopii dla klienta na drukarce fiskalnej,<br />
+    b) dodano komunikat z prośbą o oderwanie wydruku lub pytanie o wydruk kopii<br />
+       dla klienta po wydrukowaniu potwierdzenia dla sprzedawcy.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW12 -----------------------------</h3><br />
+2022.12.27 [2022.4.1.0]<br />
+  - Dla zamówień dodano funkcję umożliwiającą zmianę statusu dla starych<br />
+    zamówień, ze statusem "w drodze", których nie można było zmieniać<br />
+    bo były blokowane przez zapis w repozytorium dokumentów.<br />
+  - Rozwiązano problem objawiający się brakiem obsługi przez hurtownie<br />
+    potwierdzeń realizacji zamówień. Problem dotyczył tylko potwierdzeń<br />
+    zamówień, wygenerowanych przez systemy centralne.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2022.12.27 [2022.4.1.0]<br />
+  - Zablokowano możliwość ręcznego tworzenia dokumentów w przypadku, gdy<br />
+    program uruchomiony został z poziomu ZSA.<br />
+  - Rozwiązano problem objawiający się brakiem obsługi przez hurtownie<br />
+    potwierdzeń realizacji zamówień. Problem dotyczył tylko potwierdzeń<br />
+    zamówień, wygenerowanych przez systemy centralne.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW14 -----------------------------</h3><br />
+2022.12.27 [2022.4.1.0]<br />
+  - Dodano obsługę nowej odpłatności 20% w aktualizacji bazy BLOZ,<br />
+    oraz w aktualizacji bazy towarów na podstawie BLOZ.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2022.12.27 [2022.4.1.0]<br />
+  - Dodano obsługę nowej odpłatności 20% w raportach refundacyjnych<br />
+    środków pomocniczych.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW22 -----------------------------</h3><br />
+2022.12.27 [2022.4.1.0]<br />
+  - Dodano obsługę nowej odpłatności 20% w oknie "Warunki kwalifikujące<br />
+    do grupy asortymentowej".<br />
+<br />
+<h3>---------------------------- Zmiany w module APW23 -----------------------------</h3><br />
+2022.12.27 [2022.4.1.0]<br />
+  - Dodano obsługę nowej odpłatności 20% w "Kontroli poprawności kodów<br />
+    na receptach".<br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2022.12.27 [2022.4.1.0]<br />
+  - Dodano nowy parametr - Kontrola wystawienia FV do paragonu bez numeru NIP<br />
+    nabywcy. Wartość domyślna blokuj.<br />
+  - Dodano nowy parametr - Kontrola zmiany typu recepty dla e-recepty<br />
+    umieszczonej w kolejce. Wartość domyślna blokuj.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW44 -----------------------------</h3><br />
+2022.12.27 [2022.4.1.0]<br />
+  - Dodano obsługę odpłatności 20% w "Aktualizacji bazy BLOZ".<br />
+<br />
+<h3>---------------------------- Zmiany w module APW45 -----------------------------</h3><br />
+2022.12.27 [2022.4.1.0]<br />
+  - Rozwiązano problem objawiający się generowaniem nieprawidłowych nazw plików<br />
+    dla dokumentów sprzedaży w formacie pdf. Powodowało to problem z odczytem<br />
+    pliku do wydruku, podglądu oraz rozsyłania mailem. Problem dotyczył<br />
+    sprzedaży zamówień internetowych.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW55 -----------------------------</h3><br />
+2022.12.27 [2022.4.1.0]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2022.12.27 [2022.4.1.0]<br />
+  - Modyfikacja wygaszacza aptecznego KS-Promedin - dodanie obsługi nowych typów<br />
+    plików oraz wyłączenie rozciągania plansz do rozmiarów całego ekranu.<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2022.12.27<br />
+  ApwPlus [2022.4.1.0]<br />
+  - Aktualizacja struktury bazy danych.<br />
+<br />
+  ApwBase.dll [2022.4.1.0]<br />
+  - Uaktualniono bazę kart serwisowych.<br />
+<br />
+  pmsr.dbf<br />
+  - Aktualizacja bazy słownikowej środków pomocniczych.<br />
+<br />
+</body></html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2022.3.1.3</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2022.10.06<br />
+  ApwHarm.dll [2022.3.1.3]<br />
+  - Uwzględnianie wszystkich magazynów w algorytmie stanu towaru w Automatycznej<br />
+    dystrybucji numerycznej.<br />
+<br />
+  Zasoby.dll [2022.3.1.3]<br />
+  - Aktualizacja opisów opcji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2022.10.06 [2022.3.1.3]<br />
+  - Zadanie z Giełdy Pomysłów: Blokada wystawienia faktury do paragonu do kwoty<br />
+    450 zł brutto z NIP nabywcy. Zgodnie z art. 106e ust. 5 pkt 3 ustawy z dnia<br />
+    11 marca 2004 r. o podatku od towarów i usług paragon do kwoty 450 zł brutto<br />
+    z NIP nabywcy stanowi fakturę uproszczoną.<br />
+    https://www.gov.pl/web/finanse/nowe-zasady-wystawiania-faktur-do-paragonow<br />
+  - Zniesiono przepisywanie oddziału NFZ na kody recept papierowych z poprzednio<br />
+    realizowanej e-Recepty (w ramach bieżącej transakcji).<br />
+  - Dodano możliwość korzystania ze skrótów ctrl+c, ctrl+v w aktualizacji<br />
+    sprzedaży, w poprawie sprzedaży.<br />
+  - Poprawiono blokadę sprzedaży produktów leczniczych RX i OTC podmiotowi<br />
+    prowadzącemu aptekę: uwzględniono tworzenie faktury VAT na podstawie<br />
+    rezerwacji oraz tworzenie faktury zbiorczej.<br />
+  - Poprawiono funkcję blokady edycji kolejki podczas jej sprzedaży na innym<br />
+    stanowisku.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW12 -----------------------------</h3><br />
+2022.10.06 [2022.3.1.3]<br />
+  - Poprawa w procesie konfiguracji Akcji sprzedażowych - poprawa dodawania<br />
+    zadania Automatycznej dystrybucji numerycznej do ApwPlanu.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2022.10.06 [2022.3.1.3]<br />
+  - Poprawa w procesie konfiguracji Akcji sprzedażowych - poprawa dodawania<br />
+    zadania Automatycznej dystrybucji numerycznej do ApwPlanu.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW14 -----------------------------</h3><br />
+2022.10.06 [2022.3.1.3]<br />
+  - Poprawa wczytywania skanu w inwentaryzacji gdy jest to skan z samą notatką<br />
+    bez kodu kreskowego.<br />
+  - poprawa przeceny z bufora CKT przy zmianie stawki VAT. Dotychczas przecenie<br />
+    ulegały jedynie towary z grupy 1-5. Odblokowano zmiany stawek VAT<br />
+    i ewentualne obliczenie nowej ceny dla wyższych grup.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2022.10.06 [2022.3.1.3]<br />
+  - Ewidencja zrealizowanych zapotrzebowań: dodanie opcji filtra<br />
+    dla przeglądania i wydruku zapotrzebowań. Domyślnie filtr jest ustawiony<br />
+    na zrealizowane zapotrzebowania.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW31 -----------------------------</h3><br />
+2022.10.06 [2022.3.1.3]<br />
+  - Poprawka płatności SplitPayment. Poprawiono rozliczanie korekty ujemnej.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2022.10.06 [2022.3.1.3]<br />
+  - Dodanie możliwości usunięcia zadania Automatycznej dystrybucji numerycznej<br />
+    w przypadku braku aktywnych kontraktów z włączoną dystrybucją numeryczną.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW68 -----------------------------</h3><br />
+2022.10.06 [2022.3.1.3]<br />
+  - Poprawa funkcji pobierania statusu dla raportów stanów magazynowych.<br />
+<br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2022.10.06 [2022.3.1.3]<br />
+  - Programy Partnerskie: Optymalizacja raportowania stanów magazynowych.<br />
+  - Poprawa w procesie konfiguracji Akcji sprzedażowych - poprawa dodawania<br />
+    zadania Automatycznej dystrybucji numerycznej do ApwPlanu.<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2022.10.06<br />
+  ApwPlus.exe [2022.3.1.3]<br />
+  - Uaktualniono strukturę bazy danych.<br />
+<br />
+  Apwbase.dll [2022.3.1.3]<br />
+  - Uaktualniono bazę kart serwisowych.<br />
+<br />
+  IBPack.exe [2022.3.1.3]<br />
+  - Uaktualniono do najnowszej struktury bazy danych.<br />
+<br />
+  OraPack.exe [2022.3.1.3]<br />
+  - Uaktualniono do najnowszej struktury bazy danych.<br />
+<br />
+</body></html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2025.3.0.3</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2025.07.31<br />
+  ApwIap.dll [2025.3.0.3]<br />
+  - Rozwiązano problem dotyczący nieprawidłowego zarządzania ceną za transport<br />
+    dla firm kurierskich, jeśli ceną za transport steruje strona WWW<br />
+    w komunikacji z modułem "APW45 - Apteka internetowa". Problem objawiał się<br />
+    w oknie edycji zamówienia internetowego, gdy cena za transport była<br />
+    ustawiona na 0, a cena za pobraniem była większa od 0, to system KS-AOW<br />
+    podmieniał cenę otrzymaną przez system zewnętrzny na ceny ustawione<br />
+    na definicjach transportu w systemie KS-AOW, skutkiem takiego zachowania<br />
+    systemu było wyzerowaniem ceny za pobraniem. Okno odpowiedzialna za edycję<br />
+    zamówienia internetowego jest dostępne z poziomu APW45 - Apteka internetowa<br />
+    -> Zamówienia -> Zmień.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2025.07.31 [2025.3.0.3]<br />
+  - Okno weryfikacji wydawanej ilości: dodano datę wydania leku na listę<br />
+    realizacji, w celu usprawnienia weryfikacji podczas realizacji e-Recepty.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2025.07.31 [2025.3.0.3]<br />
+  - Rozwiązano problem objawiający się możliwym wystąpieniem błędu<br />
+    "EInvalidOperation: Cannot focus a disabled or invisible window" podczas<br />
+    wywoływania funkcji ustalania ceny detalicznej (Pozycje dokumentu zakupu -><br />
+    Edycja pozycji -> F5).<br />
+<br />
+</body></html>

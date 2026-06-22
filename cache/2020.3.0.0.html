@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2020.3.0.0</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2020.03.27<br />
+  Slowniki.dll [2020.3.0.0]<br />
+   - poprawa działania przycisku „Pobierz porozumienie” na karcie dostawcy.<br />
+   - Zmiany w oknie kartoteki pacjentów: Rozszerzono filtr o numer NIP.<br />
+   <br />
+  apwharm.dll [2020.3.0.0]<br />
+   - ujednolicenie zadań raportujących do KS-EDE<br />
+   - rozwiązanie problemu pojawiania się drugiego zadania komunikacji z KS-EDE<br />
+   - Zarządzany parametr od strony WWW rodzajem dokumentu <br />
+    (szczegółowo opisany w specyfikacji wymiany danych dla APW45):<br />
+    <fvvat> – znacznik dokumentu sprzedaży  <br />
+    Zarządzane wartości:<br />
+    a) 0 – Nieustalona<br />
+    b) 1 – Faktura VAT <br />
+    c) 2 – Dokument detaliczny<br />
+    d) 3 - Korekta dokumentu sprzedaży<br />
+    e) 4 - Korekta dokumentu rezerwacji<br />
+    f) 5 - Tylko korekta zamówienia internetowego<br />
+   - Poprawiono mechanizm zarządzania korektą dla funkcji wykonywania<br />
+    korekty dla zamówień internetowych.<br />
+   - Poprawiono zarządzanie statusem "Allegro" dla zarządzania importem<br />
+    oraz eksportem zamówień na stronę WWW.<br />
+   - Dodano mechanizmy kontrolne dla mechanizmu wysyłania dokumentów sprzedaży<br />
+   - Dodano mechanizmy kontrolne dla mechanizmu korekt internetowych<br />
+   - Dodano mechanizmy kontrolne dla mechanizmu wyodrębniania dokumenty <br />
+     sprzedaży dla Apteki Internetowej<br />
+   - Dodano obsługę wyboru połączenia dla zadania synchronizacji oferty<br />
+     internetowej.<br />
+   - Poprawniono zarządzanie magazynami dla generowania oferty internetowej<br />
+     oraz wysyłania oferty na stronę WWW.<br />
+  <br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2020.03.27 [2020.3.0.0]<br />
+  - Obsługa e-Recepty farmaceutycznej. Szczegółowy opis modyfikacji można <br />
+    znaleźć w instrukcji dostępnej z okna głównego KS-AOW (ApMan), w zakładce <br />
+    "O systemie": "e-Recepta Farmaceutyczna" <br />
+  - Przy tworzeniu korekty dodano komunikat informujący o tym, że korygowana<br />
+    pozycja znajduje się na zestawieniu refundacyjnym, w związku z czym należy<br />
+    wykonać również korektę zestawienia refundacyjnego<br />
+  - e-Recepta: wyeliminowanie znalezionych wycieków pamięci<br />
+  - W funkcji drukującej NIP na paragonie po naciśnięciu klawisza N tworzył się<br />
+    zawsze pacjent jednorazowy. Po zmianach pacjent jest wyszukiwany <br />
+    w kartotece pacjentów, a jeśli znajdzie się więcej kart z tym samym numerem<br />
+    NIP zostanie wyświetlona lista do wyboru<br />
+  <br />
+<h3>---------------------------- Zmiany w module APW12 -----------------------------</h3><br />
+2020.03.26 [2020.3.0.0]<br />
+  - Poprawa wyświetlania zawartości tabeli po użyciu filtrów w buforze norm.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2020.03.26 [2020.3.0.0]<br />
+  - W oknie "Wybierz dokument" dodano informację o osobie, która jako ostatnia <br />
+    zweryfikowała dokument.<br />
+  - Nomenklatura Scalona (CN):<br />
+     - Dodano odczytywanie kod CN z elektronicznych dokumentów zakupu.<br />
+       W przypadku braku kod CN w XML, kod pobrany zostanie z karty towaru.<br />
+     - dodano pozycję "Kod CN" w oknie "Edycja pozycji".<br />
+  - Usprawnienie procesu pobierania porozumień na wymianę faktur elektronicznych.<br />
+  - Dodanie możliwości automatyzacji procesu wersyfikacji porozumień dla aptek <br />
+    znajdujących się w sieci.<br />
+  <br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2020.03.27 [2020.3.0.0]<br />
+  - Eksport zestawienia wyrobów medycznych do rozliczenia w KS-PPS:<br />
+    Dodano możliwość wyboru eksportu zleceń: wszystkie lub bez zleceń eZWM. <br />
+    Decyduje opcja w apw41: apw21.2.51. <br />
+  - Rozszerzenie ewidencji Rp. farmaceutycznych o e-Recepty farmaceutyczne. <br />
+<br />
+<h3>---------------------------- Zmiany w module APW22 -----------------------------</h3><br />
+2020.03.27 [2020.3.0.0]<br />
+  - Aktualizacja w związku ze zmianami w slowniki.dll<br />
+<br />
+<h3>---------------------------- Zmiany w module APW23 -----------------------------</h3><br />
+2020.03.27 [2020.3.0.0]<br />
+  - Obsługa e-Recepty farmaceutycznej w retaksacji recept. Szczegółowy opis <br />
+    modyfikacji można znaleźć w instrukcji dostępnej z okna głównego KS-AOW <br />
+    (ApMan), w zakładce "O systemie": "e-Recepta Farmaceutyczna"<br />
+  - Retaksacja recept: wyeliminowanie znalezionych wycieków pamięci<br />
+<br />
+<h3>---------------------------- Zmiany w module APW25 -----------------------------</h3><br />
+2020.03.26 [2020.2.0.0]<br />
+  - Kompilacja modułu w związku ze zmianami w slowniki.dll<br />
+<br />
+<h3>---------------------------- Zmiany w module APW31 -----------------------------</h3><br />
+2020.03.27 [2020.3.0.0]<br />
+  - Aktualizacja w związku ze zmianami w slowniki.dll<br />
+<br />
+<h3>---------------------------- Zmiany w module APW45 -----------------------------</h3><br />
+2020.03.27 [2020.3.0.0]<br />
+  - Dodano możliwość ustawienia drugiego rodzaju dokumentu sprzedaży <br />
+    dla apteki internetowej (obsługa dokumentów detalicznych). W tym celu dodano <br />
+    możliwość ustawienia następujących nowych opcji:<br />
+    a) Definicja dla dokumentu faktura VAT<br />
+    b) Definicja dla dokumentu detalicznego<br />
+    (APW45/RegułyZamówienia/Inne)<br />
+  - Dodano opcję globalną do włączenia modyfikacji „Aktywuj mechanizm wysyłania <br />
+    dokumentów sprzedaży”. Domyślnie opcja jest wyłączona.<br />
+    (APW45/RegułyZamówienia/Inne)<br />
+  - Dodano konfigurację ścieżki dla dokumentów detalicznych.<br />
+    (APW45/RegułyZamówienia/E-mail)<br />
+  - Dodano obsługę zarządzanie ścieżkami za pomocą parametrów predefiniowanych<br />
+    dla generowania wydruków faktur sprzedaży VAT  i dokumentów detalicznych.<br />
+    (APW45/RegułyZamówienia/E-mail)<br />
+  - Dodano obsługę podglądu przygotowanych ścieżek za pomocą parametrów<br />
+    predefiniowanych dla generowania wydruków faktur sprzedaży VAT<br />
+    i dokumentów detalicznych.<br />
+    (APW45/RegułyZamówienia/E-mail)<br />
+  - Dodano obsługę zarządzania statusem zamówienia dla jakiego będzie<br />
+    można wykonywać operacje generowania wydruków oraz wysyłania maila.<br />
+    (APW45/RegułyZamówienia/E-mail)<br />
+  - Dodano obsługę zarządzania statusem zamówienia na jaki status<br />
+    zmieni się status zamówienia po prawidłowym wysłaniu maila do klienta.<br />
+    (APW45/RegułyZamówienia/E-mail)<br />
+  - Dodano obsługę domyślnych parametrów aptecznych apteki.<br />
+    (APW45/RegułyZamówienia/E-mail)<br />
+  - Dodano obsługę zarządzania parametrami predefiniowanymi dla wiadomości<br />
+    i nagłówka maila.<br />
+    (APW45/RegułyZamówienia/E-mail)<br />
+  - Dodano obsługę podglądu treści wiadomości oraz nagłówka maila <br />
+    przygotowanych za pomocą parametrów predefiniowanych.<br />
+    (APW45/RegułyZamówienia/E-mail)<br />
+  - Dodano możliwość wyłączania załącznika dla wysłanego maila.<br />
+    (APW45/RegułyZamówienia/E-mail)<br />
+  - Dodano do prezentacji dla zamówień które maja ustawiony rodzaj<br />
+    dokumentu „Faktura VAT” ikonę z tekstem „FV VAT”.<br />
+    (APW45/Zamówienia) <br />
+  - Dodano do prezentacji dla zamówień które maja ustawiony rodzaj<br />
+    dokumentu „Dokument detaliczny” ikonę z tekstem „FV FIZ”.<br />
+    (APW45/Zamówienia) <br />
+  - Dodatkowo na wydrukach zamówień również ten tekst jest drukowany<br />
+    w postaci obrazka pod kodem kreskowym zamówienia. <br />
+    (APW45/Zamówienia)<br />
+  - Poprawiono prezentację ikony  „koperty” dla zamówień dla których<br />
+    został poprawnie wysłany mail.<br />
+    (APW45/Zamówienia)<br />
+  - Funkcja już obsługuje predefiniowane ścieżki dla zapisywania <br />
+    wydruków faktur VAT oraz dokumentów  detalicznych.<br />
+    (APW45/Zamówienia/Drukuj/Generuj Fakturę dla zamówienia)<br />
+  - Funkcja już generuje dokumenty detaliczne.<br />
+    (APW45/Zamówienia/Drukuj/Generuj Fakturę dla zamówienia)<br />
+  - Rozszerzono obsługę o nowe przypadki w przekazywaniu informacji<br />
+    użytkownikowi o niemożliwości generowania dokumentów.<br />
+    (APW45/Zamówienia/Drukuj/Generuj Fakturę dla zamówienia)<br />
+  - Dodano obsługę pilnowania statusu zamówienia dla jakiego możemy<br />
+    wykonywać operacje tworzenia wydruków. <br />
+    (APW45/Zamówienia/Drukuj/Generuj Fakturę dla zamówienia)<br />
+  - Funkcja już obsługuje polskie znaki w treści oraz w nagłówku maila.<br />
+    (APW45/Zamówienia/Drukuj/Wyślij e-mail do klienta dla zamówienia) <br />
+  - Funkcja już obsługuje predefiniowane parametry dla treści<br />
+    i nagłówka maila.<br />
+    (APW45/Zamówienia/Drukuj/Wyślij e-mail do klienta dla zamówienia)<br />
+  - Funkcja wysyła już dokumenty detaliczne.<br />
+    (APW45/Zamówienia/Drukuj/Wyślij e-mail do klienta dla zamówienia)<br />
+  - Rozszerzono obsługę o nowe przypadki w przekazywaniu informacji<br />
+    użytkownikowi o niemożliwości generowania dokumentów.<br />
+    (APW45/Zamówienia/Drukuj/Wyślij e-mail do klienta dla zamówienia)<br />
+  - Dodano obsługę pilnowania statusu zamówienia dla jakiego możemy<br />
+    wykonywać operacje tworzenia wydruków.<br />
+    (APW45/Zamówienia/Drukuj/Wyślij e-mail do klienta dla zamówienia)<br />
+  - Dodano obsługę zmiany statusu zamówienia na nowy po prawidłowym <br />
+    wysłaniu zamówienia do klienta.<br />
+    (APW45/Zamówienia/Drukuj/Wyślij e-mail do klienta dla zamówienia)<br />
+  - Dodano funkcjonalność dla zarządzania rodzajem przypisanego<br />
+    dokumentu sprzedaży dla zamówienia internetowego.<br />
+    (APW45/Zamówienia/Nowe lub Edycja)<br />
+  - Dodano funkcjonalność dla zarządzania znacznikiem czy mail został<br />
+    poprawnie wysłany z dokumentem sprzedaży.<br />
+    (APW45/Zamówienia/Nowe lub Edycja)<br />
+  - Dodano funkcjonalność informującą czy wydruk dokumentu sprzedaży<br />
+    został wygenerowany dla zamówienia.<br />
+    (APW45/Zamówienia/Nowe lub Edycja) <br />
+  - Dodano funkcjonalność informującą prezentującą dokładną datę kiedy<br />
+    wydruk dokumentu sprzedaży został wygenerowany dla zamówienia.  <br />
+    (APW45/Zamówienia/Nowe lub Edycja)<br />
+  - Zaprojektowane okienko do zarządzania parametrami dla funkcji rozsyłania<br />
+    maila oraz generowania dokumentów elektronicznych dla apteki internetowej<br />
+    (APW45/Reguły/Zamówienia/E-mail)<br />
+  - Rozbudowa bazy danych o pole do zarządzania wysłania maila <br />
+    wraz z funkcjami zarządzającymi pole  w oknie (APW45/Zamówienia)<br />
+  - Wdrożenie funkcji generowania dokumentów elektronicznych<br />
+    w zdefiniowanym lub testowym (apw/transfer) katalogu <br />
+    (APW45/Zamówienia/Drukuj/Generuj fakturę dla zamówienia (podświetlone)).<br />
+  - Wdrożenie funkcji wysyłania maila z dokumentem elektronicznym<br />
+    (APW45/Zamówienia/Drukuj/Wyślij e-mail do klienta dla zamówienia (podświetlone)).<br />
+  - Wdrożenie funkcji testowania serwera SMTP <br />
+    (APW45/Reguły/Zamówienia/E-mail/Testuj serwer).<br />
+  - Wdrożenie funkcji testowania generowania dokumentów elektronicznych <br />
+    dla zadanego ręcznie identyfikatora zamówienia internetowego <br />
+    (APW45/Reguły/Zamówienia/E-mail/Generuj Fakturę).<br />
+  - Wdrożenie funkcji testowania wysyłania maila dla zadanego ręcznie identyfikatora<br />
+    zamówienia internetowego (APW45/Reguły/Zamówienia/E-mail/Wyślij E-mail).<br />
+  - Wdrożenie funkcji prezentacji dla których został mail wysłany w postaci <br />
+    ikony „koperty” przy zamówieniu internetowym (APW45/Zamówienia).<br />
+  - Zarządzany parametr od strony WWW rodzajem dokumentu <br />
+   (szczegółowo opisany w specyfikacji wymiany danych dla APW45):<br />
+   <fvvat> – znacznik dokumentu sprzedaży  <br />
+   Zarządzane wartości:<br />
+    a) 0 – Nieustalona<br />
+    b) 1 – Faktura VAT <br />
+    c) 2 – Dokument detaliczny<br />
+    d) 3 - Korekta dokumentu sprzedaży<br />
+    e) 4 - Korekta dokumentu rezerwacji<br />
+    f) 5 - Tylko korekta zamówienia internetowego<br />
+  - Rozszerzono obsługę filtórw dla zamówień internetowych<br />
+    o następujace opocje:<br />
+    a) dla jakich zamówień został wysłany mail do klienta<br />
+    b) dla jakich zamówień ma być wygenerowany dokument faktury VAT<br />
+    c) dla jakich zamówień ma być wygenerowany dokument dokument sprzedaży<br />
+    d) dla jakich zamówień została wygenerowana korekta faktury VAT<br />
+    d) dla jakich zamówień została wygenerowana korekta rezerwacji<br />
+    d) dla jakich zamówień została wygenerowana korekta zamówienia int.<br />
+  - Poprawiono mechanizm zarządzania korektą dla funkcji wykonywania<br />
+    korekty dla zamówień internetowych.<br />
+  - Poprawiono zarządzanie statusem "Allegro" dla zarządzania importem<br />
+    oraz eksportem zamówień na stronę WWW.<br />
+  - Dodano mechanizmy kontrolne dla mechanizmu wysyłania dokumentów sprzedaży<br />
+  - Dodano mechanizmy kontrolne dla mechanizmu korekt internetowych<br />
+  - Dodano mechanizmy kontrolne dla mechanizmu wyodrębniania dokumenty sprzedaży<br />
+    dla Apteki Internetowej<br />
+  - Dodano funkcje do analizy ostatnio wysłanej oferty na stronę WWW.<br />
+    Fukcja "Analizuj ofertę internetową".<br />
+    (APW45/Komunikacja/Ustawienia/Ustawienia/Oferta)<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2020.03.27<br />
+  Apwplus.exe [2020.3.0.0]<br />
+  - Uaktualniono strukturę bazy danych<br />
+  - zmiany w bazie danych KS-EDE<br />
+<br />
+</body></html>

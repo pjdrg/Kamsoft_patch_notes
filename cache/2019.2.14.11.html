@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2019.2.14.11</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2019.12.18 <br />
+  apwharm.dll [2019.3.5.0]<br />
+  - zoptymalizowno zapytania sql'owe operujące na ofercie internetowej <br />
+    dla baz danych Firebird i Oracle.<br />
+  - dodano nowe pole informujące o dostępności dla zasobów oraz dodano <br />
+    nowy indeks do bazy danych dla zarządzania zasobami internetowymi<br />
+  - ujednolicono zarządzanie różnymi ofertami internetowymi dla funkcji: <br />
+    zarządzania kategoriami, zarządzania ofertą internetową,<br />
+    zarządzanie wysyłką produktów<br />
+  - poprawiono zliczanie elementów wysłanych dla produktów <br />
+    niepowiązanych z żadną ofertą internetową<br />
+  - dodano i obsłużono nową opcję do zarządzania pełną oferą internetową <br />
+    "wszystkich niepowiązanych (pełna oferta int. + nieprzypisane produkty)" <br />
+    (APW45\Definicje\Nagłówki ofert internetowych).<br />
+  - dodano nową opcję dla okna przeglądania oferty internetowej <br />
+    oraz kategorii "Produkty nieprzypisane do oferty int." <br />
+    (APW45\Towary oraz APW45\Kategorie)<br />
+  - dodano nową opcję do zarządzania automatycznymi przesunięciami względem<br />
+    różnych połączeń internetowych "Funkcja pracuje w trybie pracy<br />
+    ze sklepem WWW (połączenia):" (APW45\Reguły\Zamówienia\Ogólne).<br />
+  - dodano nową opcję do kontroli automatycznych przesunięć "Aktywuj <br />
+    mechanizm kontroli automatycznych MM dla połączeń internetowych"<br />
+    (APW45\Reguły\Zamówienia\Inne).<br />
+  - dodano nową opcję do zarządzania jednostką i magazynem dla połączeń<br />
+    internetowych (APW45\Komunikacja -> konfiguracja połączeń).<br />
+  - dodano kontrolę do zarządzania automatycznych przesunięć względem<br />
+    sklepu i magazynu generowanych z apwplanu'u, rezerwacji w oknie<br />
+    przeglądu zamówień oraz dla funkcji pobierania zamówień.<br />
+  - dodano możliwość zarządzania sklep, jednostką oraz magazynem w oknie<br />
+    tworzenia oraz edycji zamówienia internetowego <br />
+    (APW45\Zamówienia -> Nowe/Zmień).<br />
+  APWPLAN.EXE[2019.3.5.0]<br />
+  - zaktualizowano harmonogram zadań do aktualnych źródeł.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2019.12.19 [2019.3.11.4]<br />
+  - "e-ZWM - pilotaż": poprawa odczytu kodu kreskowego <br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2019.12.19 [2019.3.9.0]<br />
+   - W korekcie dodano numer pozycji na fakturze.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW23 -----------------------------</h3><br />
+2019.12.19 [2019.3.3.5]<br />
+  - Dodano możliwość wywołania Asystenta e-Recepty w oknie retaksacji recept. <br />
+<br />
+<h3>---------------------------- Zmiany w module APW45 -----------------------------</h3><br />
+2019.12.18 [2019.3.3.1]<br />
+  - dodano ręczny mechanizm optymalizacji dla oferty internetowej<br />
+  - dodano ręczny mechanizm optymalizacji dla kategorii internetowych<br />
+  - dodano ręczny mechanizm optymalizacji dla zasobów internetowych<br />
+  - dodano automatyczny mechanizm optymalizacji dla oferty internetowej<br />
+  - dodano automatyczny mechanizm optymalizacji dla kategorii internetowych<br />
+  - dodano automatyczny mechanizm optymalizacji dla zasobów internetowych<br />
+  - zoptymalizowno zapytania sql'owe operujące na ofercie internetowej <br />
+    dla baz danych Firebird i Oracle.<br />
+  - dodano nowe pole informujące o dostępności dla zasobów oraz dodano <br />
+    nowy indeks do bazy danych dla zarządzania zasobami internetowymi<br />
+  - ujednolicono zarządzanie różnymi ofertami internetowymi dla funkcji: <br />
+    zarządzania kategoriami, zarządzania ofertą internetową,<br />
+    zarządzanie wysyłką produktów<br />
+  - poprawiono prezentację dla funkcję "Aktualizauj cechy" <br />
+    (APW45\Definicje\Definicje cech produktów).<br />
+  - poprawiono prezentację dla funkcję "Zarządzania definicjami cech" <br />
+    (APW45\Towary\Karta\Aktualizuj cechy).<br />
+  - poprawiono zliczanie elementów wysłanych dla produktów <br />
+    niepowiązanych z żadną ofertą internetową<br />
+  - dodano i obsłużono nową opcję do zarządzania pełną oferą internetową <br />
+    "wszystkich niepowiązanych (pełna oferta int. + nieprzypisane produkty)" <br />
+    (APW45\Definicje\Nagłówki ofert internetowych).<br />
+  - dodano nową opcję dla okna przeglądania oferty internetowej <br />
+    oraz kategorii "Produkty nieprzypisane do oferty int." <br />
+    (APW45\Towary oraz APW45\Kategorie)<br />
+  - poprawiono błąd pojawiający sie gdy użytkownik w oknie aktywowania oferty<br />
+    zrezygnuje z przeglądu oferty internetowej<br />
+  - dodano nową opcję do zarządzania automatycznymi przesunięciami względem<br />
+    różnych połączeń internetowych "Funkcja pracuje w trybie pracy<br />
+    ze sklepem WWW (połączenia):" (APW45\Reguły\Zamówienia\Ogólne).<br />
+  - dodano nową opcję do kontroli automatycznych przesunięć "Aktywuj <br />
+    mechanizm kontroli automatycznych MM dla połączeń internetowych"<br />
+    (APW45\Reguły\Zamówienia\Inne).<br />
+  - dodano nową opcję do zarządzania jednostką i magazynem dla połączeń<br />
+    internetowych (APW45\Komunikacja -> konfiguracja połączeń).<br />
+  - dodano kontrolę do zarządzania automatycznych przesunięć względem<br />
+    sklepu i magazynu generowanych z apwplanu'u, rezerwacji w oknie<br />
+    przeglądu zamówień oraz dla funkcji pobierania zamówień.<br />
+  - dodano możliwość zarządzania sklep, jednostką oraz magazynem w oknie<br />
+    tworzenia oraz edycji zamówienia internetowego <br />
+    (APW45\Zamówienia -> Nowe/Zmień).<br />
+<br />
+</body></html>

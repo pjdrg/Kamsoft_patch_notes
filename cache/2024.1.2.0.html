@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2024.1.2.0</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2024.09.10<br />
+  Slowniki.dll [2024.1.2.0]<br />
+  - Dodano słowniki związane z obsługą Grupy VAT.<br />
+  - Rozwiązano problem braku aktualizacji daty ważności certyfikatu z KOWAL<br />
+    po użyciu funkcji [F5] Zainstaluj certyfikat. W pewnych przypadkach ta data<br />
+    nie była aktualizowana co powodowało pojawianie się komunikatu w module<br />
+    Sprzedaż: "... za x-dni upływa ważność certyfikatu do KOWAL-a..".<br />
+  - Dodano możliwość weryfikacji limitu logistycznego podczas wysyłki zamówień<br />
+    do hurtowni (blokowanie wysyłki lub informacja o zbyt małej wartości<br />
+    zamówienia i możliwym doliczeniu opłaty logistycznej).<br />
+<br />
+  Zasoby.dll [2024.1.2.0]<br />
+  - Aktualizacja opisów związana z obsługą Grupy VAT.<br />
+<br />
+  Apwfn.dll [2024.1.2.0]<br />
+  - Dostosowano do obsługi grup VAT.<br />
+<br />
+  ApwHarm.dll, ApwIap.dll, WaUtil.exe [2024.1.2.0]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2024.09.10 [2024.1.2.0]<br />
+  - Dodano obsługę Grupy VAT w procesie wystawiania faktury sprzedaży na Członka<br />
+    / Grupę VAT. W trakcie wystawiania takiej faktury program, odpowiednim<br />
+    komunikatem, pomaga uzupełnić poprawnie nabywcę i odbiorcę faktury.<br />
+  - Modyfikacja sprzedaży wiązanej: rozwiązano problem związany z nieprawidłowym<br />
+    podpowiadaniem towaru sugerowanego w przypadku braku powiązania do kartoteki<br />
+    centralnej lub braku kodu BLOZ.<br />
+  - Modyfikacja sprzedaży wiązanej: rozwiązano problem związany z powtórnym<br />
+    zadziałaniem sprzedaży wiązanej podczas sprzedaży towarów z kolejki<br />
+    z włączoną fiskalizacją zaliczek. Powtórne zadziałanie sprzedaży wiązanej<br />
+    powodowało niezgodności w rozliczeniu zaliczek podczas sprzedaży towarów<br />
+    z kolejki.<br />
+  - Rozszerzono wersję edukacyjną o nowe recepty ćwiczeniowe dla pacjenta<br />
+    testowego PESEL: 40010151673, PIN: 1006, 1007, 1008, 1009, 1010.<br />
+  - Poprawiono weryfikację wydania leku ordynowanego przez pielęgniarkę o wyrób<br />
+    medyczny i ŚSSPŻ.<br />
+  - Poprawiono weryfikację wieku pacjenta w oknie e-Recepty przy realizacji<br />
+    recepty z uprawnieniem DZ.<br />
+  - eZWM: dodano obsługę kodu sprzętu M.04.<br />
+  - Apteka z wielomagazynowością: rozwiązano problem z nieprawidłowym ustaleniem<br />
+    ceny zakupu pierwotnej dla towarów z mnożnikiem lekospisowym różnym od 1<br />
+    podczas przenoszenia ich na inne magazyny za pomocą dokumentu MM.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW12 -----------------------------</h3><br />
+2024.09.10 [2024.1.2.0]<br />
+  - Dodano możliwość weryfikacji limitu logistycznego podczas wysyłki zamówień<br />
+    do hurtowni (blokowanie wysyłki lub informacja o zbyt małej wartości<br />
+    zamówienia i możliwym doliczeniu opłaty logistycznej).<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2024.09.10 [2024.1.2.0]<br />
+  - Dodano nowy mechanizm przyjmowania faktur wystawionych przez Członka / Grupę<br />
+    VAT. W przypadku przyjmowania takiej faktury po raz pierwszy program<br />
+    na podstawie Centralnej Bazy Hurtowni, zakłada całą strukturę Grupy VAT<br />
+    wraz z jej członkami, zakłada dostawców w lokalnej kartotece oraz wiąże<br />
+    Członków z już istniejącymi dostawcami. Zakładanie nowej struktury dla Grupy<br />
+    VAT jest uzależnione od uprawnienia 22-0043 oraz dwóch opcji: APW13.2.110<br />
+    oraz APW13.2.111.<br />
+  - Modyfikacja strategii centralnej: usunięto blokadę edycji ceny detalicznej<br />
+    przy wprowadzaniu na magazyn w przypadku niezadziałania strategii centralnej<br />
+    po zmianie ceny zakupu po rabacie (wcześniej strategia zadziałała i nałożona<br />
+    została blokada).<br />
+  - Z bufora dokumentów usunięto przycisk "F2 Dyskietka".<br />
+  - Zmieniono kolor statusu postępu prac nad dokumentem zarówno w buforze<br />
+    dokumentów, jak i w pozycjach dokumentu.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW14 -----------------------------</h3><br />
+2024.09.10 [2024.1.2.0]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2024.09.10 [2024.1.2.0]<br />
+  - Eksport do KS-FKW(xml) rozszerzono o przekazywanie informacji o fakturach<br />
+    przyjętych, wystawionych przez Członków / Grupę VAT.<br />
+  - Eksport do KS-FKW(xml). Dla dokumentu "Różnice Remanentowe" dodano dodatkowe<br />
+    węzły z wyliczeniem kwot: nadwyżki inwentaryzacyjnej, niedoboru<br />
+    inwentaryzacyjnego i różnicy inwentaryzacyjnej.<br />
+  - eZWM: dodano obsługę kodu sprzętu M.04.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW22 -----------------------------</h3><br />
+2024.09.10 [2024.1.2.0]<br />
+  - W menu Kartoteki dodano nową funkcjonalność - Grupy VAT.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW23 -----------------------------</h3><br />
+2024.09.10 [2024.1.2.0]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW24 -----------------------------</h3><br />
+2024.09.10 [2024.1.2.0]<br />
+  - W generatorze tabel poprawiono wyświetlenie informacji o raportach<br />
+    zaktualizowanych.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW35 -----------------------------</h3><br />
+2024.09.10 [2024.1.2.0]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2024.09.10 [2024.1.2.0]<br />
+  - Dodano nowe uprawnienie 22-0043 Zakładanie kartoteki dostawców dla Grup VAT<br />
+    i ich Członków na podstawie Centralnej Bazy Hurtowni. Domyślnie opcja jest<br />
+    przepisywania z uprawnienia 22-0003 Przeglądanie i edycja bazy dostawców.<br />
+  - Dodano nowe opcje związane z przyjmowaniem faktur wystawionych przez Członka<br />
+    / Grupę VAT w przypadku braku uprawnienia 22-0043:<br />
+    * APW13.2.110 - Sposób postępowania w przypadku braku możliwości utworzenia<br />
+      kartoteki dostawcy dla Grupy VAT. Domyślnie: "Blokuj proces",<br />
+    * APW13.2.111 - Sposób postępowania w procesie przyjęcia dokumentu<br />
+      na magazyn w przypadku negatywnej weryfikacji kontrahenta należącego<br />
+      do Grupy VAT: Domyślnie: "Blokuj".<br />
+  - Ustawienie opcji APW13.2.108 "Wyświetlaj postęp prac nad dokumentem zakupu"<br />
+    na domyślnie włączoną.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW42 -----------------------------</h3><br />
+2024.09.10 [2024.1.2.0]<br />
+  - Narzędzia -> Porządkowanie danych -> Usuwanie danych związanych<br />
+    z KS-OmniPharm -> Centralna kartoteka dostawców – dodano usuwanie informacji<br />
+    związanych z grupami VAT.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW43 -----------------------------</h3><br />
+2024.09.10 [2024.1.2.0]<br />
+  - Rozwiązano problem, który powodował brak tworzenia kopii bazy danych<br />
+    w przypadku, gdy hasło zawierało znaki specjalne. Problem dotyczył bazy<br />
+    Oracle.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW44 -----------------------------</h3><br />
+2024.09.10 [2024.1.2.0]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW45 -----------------------------</h3><br />
+2024.09.10 [2024.1.2.0]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW55 -----------------------------</h3><br />
+2024.09.10 [2024.1.2.0]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>--------------------------------- Zmiany w EDE ---------------------------------</h3><br />
+2024.09.10 [2024.2.3.0]<br />
+  - Udostępnienie obsługi Grup VAT.<br />
+  - Poprawa mechanizmu zmiany przeterminowanego hasła w przypadku gdy system<br />
+    wymusza zmianę.<br />
+  - Naprawienie problemu zamykającej się aplikacji AOW po uruchomieniu funkcji<br />
+    związanej z EDE.<br />
+  - Dostosowanie komunikacji przekazywania JPK do aktualnych wymogów<br />
+    ministerstwa.<br />
+<br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2024.09.10 [2024.1.2.0]<br />
+  - Pharmind grid: Raportowanie stanów magazynowych – optymalizacja zapytań SQL.<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2024.09.10<br />
+  ApwPlus [2024.1.2.0]<br />
+  - Aktualizacja bazy danych związana z obsługą Grupy VAT.<br />
+<br />
+  ApwBase.dll [2024.1.2.0]<br />
+  - Uaktualniono bazę kart serwisowych.<br />
+<br />
+</body></html>

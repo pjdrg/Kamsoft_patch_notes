@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2025.0.1.0</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2024.11.25 [2025.0.1.0]<br />
+  - Zmieniono algorytm szyfrowania haseł do baz danych przechowywanych w pliku<br />
+    Apman.ini.<br />
+<br />
+  Slowniki.dll [2025.0.1.0]<br />
+  - Na definicji rodzaju leku recepturowego umożliwiono wskazanie sposobu<br />
+    wykonania leku robionego w warunkach aseptycznych.<br />
+    Do tej pory informacja ta była ustalana przez program na podstawie wysokości<br />
+    kwoty Taxy Laborum.<br />
+  - Rozwiązano problem dotyczący nieprawidłowego zarządzania usługami definicji<br />
+    transportu dla DPD Services. Problem objawiał się niemożliwością wybrania<br />
+    typu usługi "Nieokreślona". Definicje transportu są dostępne z poziomu<br />
+    "APW45 - Apteka internetowa -> Definicje -> Formy transportu -> Przeglądanie<br />
+    i edycja".<br />
+  - Centralne blokady towarów i dostawców KS-OmniPharm: przebudowano mechanizm<br />
+    działania blokad. Dodano blokady w oparciu o grupy asortymentowe<br />
+    KS-OmniPharm umożliwiające dynamiczną zmianę blokady w przypadku zmiany<br />
+    składu grupy asortymentowej zawierającej blokowane towary bez konieczności<br />
+    zmiany definicji samej blokady.<br />
+<br />
+  ApwIap.dll [2025.0.1.0]<br />
+  - Rozwiązano problem nieprawidłowego zarządzania punktami odbioru dla firmy<br />
+    kurierskiej DPD z ustawionym typem usługi "Usługa POP" na definicji<br />
+    transportu. Problem objawiał brakiem możliwości wybrania punktu odbioru<br />
+    dla transportu i występował w oknie zarządzania zamówieniem internetowym<br />
+    wywoływanym z poziomu "APW45 - Apteka internetowa -> Zamówienia".<br />
+  - Rozwiązano problem nieprawidłowego zarządzania cenami za transport<br />
+    w momencie, kiedy zarządza nimi strona WWW. Problem objawiał zerowanie cen<br />
+    za transport i występował w oknie zarządzania zamówieniem internetowym<br />
+    wywoływanym z poziomu "APW45 - Apteka internetowa -> Zamówienia".<br />
+<br />
+  KSOPH.dll [2025.0.1.0]<br />
+  - KS-OmniPharm: poprawiono przekazywanie informacji o dokumentach w przypadku<br />
+    aktywnej usługi "Zarządzanie płatnościami".<br />
+<br />
+  Apwfn.dll [2025.0.1.0]<br />
+  - Zaktualizowano opisy opcji i uprawnień w przeglądzie zleceń z centrali<br />
+    KS-ZSA.<br />
+  - Zatwierdzanie zlecenia "Zmiana opcji systemu": dodano informację<br />
+    do dziennika o zmianach opcji.<br />
+<br />
+  ApwHarm.dll [2025.0.1.0]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+  Zasoby.dll [2025.0.1.0]<br />
+  - Aktualizacja opisów opcji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2024.11.25 [2025.0.1.0]<br />
+  - Modyfikacja generatora DRR. Informacja o sposobie wykonania leku w warunkach<br />
+    aseptycznych na DRR, będzie wypełniania w zależności od definicji rodzaju<br />
+    leku recepturowego.<br />
+  - Dodano weryfikację słuszności zamknięcia e-Recepty w oknie potwierdzenia<br />
+    i podpisu DRR. Program ostrzeże farmaceutę w przypadku próby zamknięcia<br />
+    recepty gdy ilość wydana będzie mniejsza od ilości zaordynowanej.<br />
+  - eZWM: Rozwiązano problem objawiający się nieprawidłowym wyświetleniem<br />
+    kryterium przyznawania wyrobu medycznego w druku zlecenia w rubryce I.C.11.<br />
+  - Zadanie z Giełdy Pomysłów - "Leki w kolejce". W sprzedaży podstawowej<br />
+    przy wyborze kontekstu pacjenta (funkcją F6 z kartoteki, w oknie kodów<br />
+    czy przy realizacji e-recepty) system sprawdzi i nam zakomunikuje,<br />
+    jeśli coś czeka w kolejce, rezerwacji czy zamówieniu dla tego pacjenta.<br />
+    Wyświetli się okno z podglądem listy tych leków. Bezpośrednio z tego okna<br />
+    będzie możliwości realizowania sprzedaże tych leków.<br />
+    Funkcjonalność ma zapobiegać pozostawianiu niezrealizowanych wpisów<br />
+    w kolejce, rezerwacji czy zamówieniu. Wpisy takie zostają gdy sprzedaż<br />
+    odbyła się pomijając realizacje kolejki, rezerwacji czy zamówienia.<br />
+  - Dodanie mechanizmu wykluczającego sprawdzenie pozycji z lekami<br />
+    przeterminowanymi dla typu dokumentów mających własną definicję "Leki<br />
+    przeterminowane". Podczas zatwierdzania takiego dokumentu pojawiał się<br />
+    komunikat o konieczności usunięcia tych leków z listy w celu poprawnego<br />
+    zaraportowania do ZSMOPL.<br />
+  - Optymalizacja zapytań SQL wykonywanych przy pobieraniu e-Recepty.<br />
+    W niektórych konfiguracjach, włączenie opcji APW11.2.174 "Wyświetlanie<br />
+    podpowiedzi o dostępności towarów zalegających i towarów z krótkim terminem<br />
+    ważności" powodowało znaczne spowolnienie działania programu.<br />
+  - Sugestie sprzedaży KS-OmniPharm: zmiana w prezentowaniu korzyści pacjenta.<br />
+    Korzyść pacjenta prezentowana jest z uwzględnieniem wielkości opakowania<br />
+    towaru sugerowanego względem towaru pierwotnego.<br />
+  - KS-OmniPharm: poprawiono przekazywanie informacji o sprzedaży leków<br />
+    robionych.<br />
+  - Centralne blokady towarów i dostawców KS-OmniPharm: przebudowano mechanizm<br />
+    działania blokad. Dodano blokady w oparciu o grupy asortymentowe<br />
+    KS-OmniPharm umożliwiające dynamiczną zmianę blokady w przypadku zmiany<br />
+    składu grupy asortymentowej zawierającej blokowane towary bez konieczności<br />
+    zmiany definicji samej blokady.<br />
+  - Wprowadzono nową wartość ryczałtu na lek recepturowy, która będzie <br />
+    obowiązywać od 1 stycznia 2025. Nowa wartość to 0.5% minimalnego <br />
+    wynagrodzenia, które zmienia się od tej daty. Nowa wartość ryczałtu <br />
+    wynosi 23,30 zł. Kwota ryczałtu zaktualizuje się automatycznie po <br />
+    uruchomieniu programu po 1 stycznia 2025.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW12 -----------------------------</h3><br />
+2024.11.25 [2025.0.1.0]<br />
+  - Odmowy -> Wyślij do GIF: usunięto błąd występujący w przypadku zaznaczenia<br />
+    opcji wysłania "wszystkich niewysłanych odmów z produktami zagrożonymi<br />
+    brakiem dostępności", gdy do wysłania była więcej niż jedna odmowa.<br />
+  - Centralne blokady towarów i dostawców KS-OmniPharm: przebudowano mechanizm<br />
+    działania blokad. Dodano blokady w oparciu o grupy asortymentowe<br />
+    KS-OmniPharm umożliwiające dynamiczną zmianę blokady w przypadku zmiany<br />
+    składu grupy asortymentowej zawierającej blokowane towary bez konieczności<br />
+    zmiany definicji samej blokady.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2024.11.25 [2025.0.1.0]<br />
+  - W nagłówku okna "Pozycje dokumentu zakupu" oraz w nagłówku dokumentu<br />
+    korygującego dodano pole "Data sprzedaży". Zmiany te umożliwiają<br />
+    ewidencjonowanie daty sprzedaży, co jest wymagane do prawidłowego<br />
+    raportowania w JPK CIT, zgodnie z przepisami obowiązującymi od 1 stycznia<br />
+    2025 roku.<br />
+  - Dodano możliwość określenia Sprzedawcy przy ręcznym wystawianiu korekty do<br />
+    faktury zakupu. Problem pojawiał się, że podczas tworzenia korekt do faktury<br />
+    wystawionej przez członka Grupy VAT (wystawionej przed okresem obowiązywania<br />
+    Grupy VAT), nie można teraz było określić tego Sprzedawcy dla tej korekty.<br />
+  - KS-OmniPharm: poprawiono przekazywanie informacji o korektach zakupu.<br />
+  - Centralne blokady towarów i dostawców KS-OmniPharm: przebudowano mechanizm<br />
+    działania blokad. Dodano blokady w oparciu o grupy asortymentowe<br />
+    KS-OmniPharm umożliwiające dynamiczną zmianę blokady w przypadku zmiany<br />
+    składu grupy asortymentowej zawierającej blokowane towary bez konieczności<br />
+    zmiany definicji samej blokady.<br />
+  - KS-OmniPharm: poprawiono przekazywanie informacji o dokumentach w przypadku<br />
+    aktywnej usługi "Zarządzanie płatnościami".<br />
+<br />
+<h3>---------------------------- Zmiany w module APW14 -----------------------------</h3><br />
+2024.11.25 [2025.0.1.0]<br />
+  - KS-OmniPharm: poprawiono przekazywanie informacji o korektach wewnętrznych<br />
+    i aktualizacjach kart zakupu.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW15 -----------------------------</h3><br />
+2024.11.25 [2025.0.1.0]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2024.11.25 [2025.0.1.0]<br />
+  - Dostosowanie raportowania JPK_FA do obsługi faktur wystawianych przez Grupę<br />
+    VAT. Aktualizacja umożliwi poprawne przekazywanie danych sprzedawcy<br />
+    (podatnika zidentyfikowanego na potrzeby podatku).<br />
+  - "Raport do FK w formacie DBF" został dostosowany aby poprawnie przekazywać<br />
+    faktury zakupu wystawione przez członków Grupy VAT. Do raportu doszły nowe<br />
+    kolumny związane z podmiotem będącym Grupą VAT.<br />
+  - W raporcie do księgowości KS-FKW (xml) dodano węzeł <data-sprzedazy><br />
+    dla faktur zakupu.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW22 -----------------------------</h3><br />
+2024.11.25 [2025.0.1.0]<br />
+  - Centralne blokady towarów i dostawców KS-OmniPharm: przebudowano mechanizm<br />
+    działania blokad. Dodano blokady w oparciu o grupy asortymentowe<br />
+    KS-OmniPharm umożliwiające dynamiczną zmianę blokady w przypadku zmiany<br />
+    składu grupy asortymentowej zawierającej blokowane towary bez konieczności<br />
+    zmiany definicji samej blokady.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW23 -----------------------------</h3><br />
+2024.11.25 [2025.0.1.0]<br />
+  - Modyfikacja generatora DRR. Informacja o sposobie wykonania leku w warunkach<br />
+    aseptycznych na DRR, będzie wypełniania w zależności od definicji rodzaju<br />
+    leku recepturowego.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW24 -----------------------------</h3><br />
+2024.11.25 [2025.0.1.0]<br />
+  - Wydruk w Generatorze raportów. Rozszerzono kolumnę LP (do 5 cyfr)<br />
+    jeśli wydruk zawiera więcej pozycji niż 9999. W kolumnie LP dla wartości<br />
+    większej niż 9999 ostatnia cyfra była na wydruku obcinana.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW25 -----------------------------</h3><br />
+2024.11.25 [2025.0.1.0]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW31 -----------------------------</h3><br />
+2024.11.25 [2025.0.1.0]<br />
+  - KS-OmniPharm: poprawiono przekazywanie informacji o dokumentach w przypadku<br />
+    aktywnej usługi "Zarządzanie płatnościami".<br />
+<br />
+<h3>---------------------------- Zmiany w module APW35 -----------------------------</h3><br />
+2024.11.25 [2025.0.1.0]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2024.11.25 [2025.0.1.0]<br />
+  - Na definicji rodzaju leku recepturowego umożliwiono wskazanie sposobu<br />
+    wykonania leku robionego w warunkach aseptycznych.<br />
+    Do tej pory informacja ta była ustalana przez program na podstawie wysokości<br />
+    kwoty Taxy Laborum.<br />
+  - Opcje modułów -> APW44 – Komunikacja -> 3. Konto pocztowe apteki:<br />
+    a) Przystosowano mechanizm autoryzacji do obsługi kont innych niż GMAIL.<br />
+       W oknie "Autoryzacja" konieczne jest wypełnienie nowych pól: "Zakresy"<br />
+       i "Adres wysyłki". Dla kont GMAIL nie będzie potrzeby wykonywania<br />
+       ponownej autoryzacji, wartości te będą domyślnie wypełnione.<br />
+    b) Rozdzielono funkcje do testowania poczty: osobno dla testów klienta<br />
+       poczty (nową funkcją: "Testuj program pocztowy") oraz wysyłania poczty<br />
+       automatycznie przez program według ustawień. Ponadto podczas testów można<br />
+       wskazać dowolny adres docelowy.<br />
+  - Ustawienia -> Plan zadań -> [F10] Alerty: usunięto możliwość konfiguracji<br />
+    poczty (harmonogram zadań korzysta (tak jak do tej pory) z głównej<br />
+    konfiguracji poczty apteki). Zamiast tego dodano funkcję "[F4] Test E-mail".<br />
+  - Opcje modułów: dodano funkcję wyświetlania historii zmian opcji (klawisz<br />
+    "[Alt+F12] Historia").<br />
+<br />
+<h3>---------------------------- Zmiany w module APW42 -----------------------------</h3><br />
+2024.11.25 [2025.0.1.0]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW43 -----------------------------</h3><br />
+2024.11.25 [2025.0.1.0]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW44 -----------------------------</h3><br />
+2024.11.25 [2025.0.1.0]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW45 -----------------------------</h3><br />
+2024.11.25 [2025.0.1.0]<br />
+  - Przystosowano moduł do obsługi wysyłki poczty z wykorzystaniem autoryzacji<br />
+    oAuth2.0 do wysyłania poczty użyto wyłącznie podstawowego mechanizmu<br />
+    rozsyłania poczty (rezygnacja z alternatywnego mechanizmu).<br />
+  - Reguły -> Zamówienia -> Zakładka: E-mail: dostosowano konfigurację poczty<br />
+    do obsługi autoryzacji oAuth2. (dodatkowa opcja "Metoda uwierzytelniania"<br />
+    i "Autoryzacja").<br />
+  - Rozwiązano problem dotyczący nieprawidłowego skalowania okna edycji reguł<br />
+    dla zamówień internetowych. Okno jest dostępne z poziomu "APW45 - Apteka<br />
+    internetowa -> Reguły -> Zamówienia".<br />
+<br />
+<h3>---------------------------- Zmiany w module APW55 -----------------------------</h3><br />
+2024.11.25 [2025.0.1.0]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW61 -----------------------------</h3><br />
+2024.11.25 [2025.0.1.0]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW68 -----------------------------</h3><br />
+2024.11.25 [2025.0.1.0]<br />
+  - Dostosowanie funkcjonalności raportowania komunikatów obrotów i stanów<br />
+    do wersji ZSMOPL 1.35, która wprowadziła nowe modyfikacje dla reguł<br />
+    walidacyjnych. Aktualizacja modułu rozwiązuje problem z prawidłowym<br />
+    zaraportowaniem transakcji "Leków przeterminowanych" generujący błąd<br />
+    TROSPOZ78 - "Wprowadzono nieprawidłową datę ważności serii lub produkt<br />
+    jest przeterminowany".<br />
+<br />
+<h3>--------------------------------- ZMIANY.APTIX ---------------------------------</h3><br />
+2024.11.25 [2025.0.0.0]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>--------------------------------- Zmiany w EDE ---------------------------------</h3><br />
+2024.11.25 [2024.2.3.3]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>--------------------------------- ZMIANY.IRAP ----------------------------------</h3><br />
+2024.11.25 [2025.0.1.0]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2024.11.25 [2025.0.1.0]<br />
+  - KS-OmniPharm: poprawiono przekazywanie informacji o sprzedaży leków<br />
+    robionych.<br />
+  - Pharmind grid: optymalizacja raportowania stanów magazynowych kart zakupu.<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2024.11.25<br />
+  ApwPlus [2025.0.1.0]<br />
+  - Aktualizacja struktury bazy danych.<br />
+  - Dodano na definicji rodzaju leku recepturowego pole przechowujące informację<br />
+    o sposobie wykonana leku robionego w warunkach aseptycznych.<br />
+<br />
+  ApwBase.dll [2025.0.1.0]<br />
+  - Uaktualniono bazę kart serwisowych.<br />
+<br />
+</body></html>

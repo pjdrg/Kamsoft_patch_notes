@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2020.1.5.7</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2020.02.19<br />
+  Apwplan.exe [2020.1.5.0]<br />
+  - selektywne uruchamianie procesu KSPCS.exe ograniczone do aptek, <br />
+    które korzystają z usługi (np. uczestniczą w kontraktach producenckich)<br />
+  apwharm.dll [2020.1.5.0]<br />
+  - Wdrożono poprawkę dla analizy powtarzających się produktów dla zadania <br />
+    odśwież ofertę.<br />
+  - Wdrożono poprawkę dla procesu ukrywania produktów dla zadania odśwież<br />
+    ofertę. Produkty które mają ustawioną cechę "produkt musi być <br />
+    w ofercie", są teraz lepiej pilnowane przed ukryciem dla automatu<br />
+    odświeżania oferty interentowej.<br />
+  - Wdrożono modyfikację "Sumowania stanów dla aptek własnych oraz apteki lokalnej".<br />
+    Funkcjonalność umożliwia wysyłanie stanów zsumowanych stanów magazynowych<br />
+    ze wszystkich ofert dla aptek własnych oraz apteki lokalnej w komunikacji<br />
+    SOAP ze sklepem WWW w znaczniku "currentamount". Funkcja jest aktywowana<br />
+    w regułach dla towarów opcją "Sumowanie stanów magazynowych dla aptek własnych".<br />
+<br />
+<h3>---------------------------- Zmiany w module APW45 -----------------------------</h3><br />
+2020.02.19 [2020.1.5.0]<br />
+  - Wdrożono poprawkę dla analizy powtarzających się produktów dla zadania <br />
+    odśwież ofertę.<br />
+  - Wdrożono poprawkę dla procesu ukrywania produktów dla zadania odśwież<br />
+    ofertę. Produkty które mają ustawioną cechę "produkt musi być <br />
+    w ofercie", są teraz lepiej pilnowane przed ukryciem dla automatu<br />
+    odświeżania oferty interentowej.<br />
+  - Wdrożono modyfikację "Aktualizacja zasobów (zdjęcia i opisów) z plików".<br />
+    Funkcjonalność umożliwia aktualizację zasobów w bazie danych na podstawie<br />
+    aktualnych danych ze zdjęciami lub opisami umieszczonych w katalogu z zasobami<br />
+    przygotowanymi do importu dla modułu APW45 - Apteki internetowej.<br />
+  - Wdrożono modyfikację "Sumowania stanów dla aptek własnych oraz apteki lokalnej".<br />
+    Funkcjonalność umożliwia wysyłanie stanów zsumowanych stanów magazynowych<br />
+    ze wszystkich ofert dla aptek własnych oraz apteki lokalnej w komunikacji<br />
+    SOAP ze sklepem WWW w znaczniku "currentamount". Funkcja jest aktywowana<br />
+    w regułach dla towarów opcją "Sumowanie stanów magazynowych dla aptek własnych".<br />
+  - Wdrożono modyfikację "Rozbudowa wydruków zamówień internetowych o kod kreskowy<br />
+    oraz daty i podpisy przekazania dokumentu". Funkcja jest aktywowana<br />
+    w regułach dla zamówień opcją "Drukuj stopke rozszerz.". <br />
+<br />
+modyfikacji "Ujednolicenie obsługi ofert i promocji. <br />
+    Dodanie dat początku i końca obowiązywania oferty" dla funkcji<br />
+    odświeżania oferty, aktualizacji ceny oraz ukrywania produktów<br />
+    dla apteki internetowej.<br />
+<br />
+<h3>--------------------------------- Zmiany w EWD ---------------------------------</h3><br />
+2020.02.19 <br />
+  KSPushLib.dll [2020.0.2.0] <br />
+  - Automatyczne przestawienie usługi z trybu automatycznego na tryb <br />
+    uruchamiania ręcznego<br />
+<br />
+  KSPCSControllerContracts.dll, KSPCSModelContracts.dll, <br />
+  KSPCSViewWeb.dll [2020.0.2.0] <br />
+  - Dodanie obsługi akceptacji regulaminu usługi KS-PCS<br />
+<br />
+</body></html>

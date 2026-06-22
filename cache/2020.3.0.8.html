@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2020.3.0.8</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2020.04.09<br />
+  APWMAIN.EXE [2020.3.0.8]<br />
+  - Poprawiono linki do stron otwieranych z menu Internet.<br />
+  - Reorganizacja menu plików pomocy.<br />
+<br />
+2020.04.09<br />
+  Slowniki.dll [2020.3.0.8]<br />
+  - Dodano wyszukiwanie świadczeniodawcy w bazie GUS po REGON na karcie<br />
+    świadczeniodawcy. <br />
+  - Poprawka pobierania danych z GUS po REGON na karcie Pacjent/Odbiorca jeśli<br />
+    użytkownik wpisał długi REGON 14 znakowy.<br />
+  - Dodano pole Kod GTU na kartę towaru, BLOZ oraz centralną kartę towaru, <br />
+    do ‘zapotrzebowanie na karty towarów’.<br />
+  - Walidacja pola REGON na wizytówce: Ograniczenie ilości znaków do 14, <br />
+    Dozwolone tylko cyfry<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2020.04.09 [2020.3.0.8]<br />
+  - Poprawa wywołania Asystenta Reglamentacji z poziomu okna sprzedaży. <br />
+    Usunięto błąd zakończony komunikatem "EConvertError. '-' in not a valid <br />
+	integer value"<br />
+<br />
+<h3>---------------------------- Zmiany w module APW12 -----------------------------</h3><br />
+2020.04.09 [2020.3.0.8]<br />
+  - Poprawki związane z blokadami zamawiania KS-Omnipharm<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2020.04.09 [2020.3.0.8]<br />
+- Leki on-line: możliwość ograniczenia rezerwacji towarów ze względu na minimalny <br />
+  stan magazynowy<br />
+- Leki on-line: możliwość wyłączenia magazynu z raportowania do KtoMaLek.pl<br />
+<br />
+<h3>---------------------------- Zmiany w module APW14 -----------------------------</h3><br />
+2020.04.09 [2020.3.0.8]<br />
+  - Dodano obsługę kodów GTU w 'Poprawa listy leków i przecena towarów'<br />
+    (pajączku): aktualizacje z BLOZ’a do Bufora leków, poprawa bufora leków,<br />
+    tworzenie bufora, Szybka poprawa listy leków, zatwierdzanie bufora (korekta<br />
+    leków)<br />
+<h3>---------------------------- Zmiany w module APW22 -----------------------------</h3><br />
+2020.04.09 [2020.3.0.8]<br />
+  - Dodano pole Kod GTU na kartę towaru, BLOZ oraz centralną kartę towaru, <br />
+    do ‘zapotrzebowanie na karty towarów’.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW68 -----------------------------</h3><br />
+2020.04.09 [2020.3.0.8]<br />
+  - Dodano obsługę nowego rodzaju transakcji dla obrotów i stanów: <br />
+    INW inwentaryzacja, która zastąpi dotychczasowe rodzaje transakcji IR+ i IR-.<br />
+	Wszystkie predefiniowane rodzaje dokumentów, które były zdefiniowane jako <br />
+	rodzaj transakcji dla ZSMOPL IR+/IR- zostały zastąpione przez INW. W przypadku <br />
+    własnych definicji dokumentów finansowych zdefiniowanych jako IR-/IR+ <br />
+    zaleca się zmiana na INW.	<br />
+  - Dodano możliwość generowania komunikatu braków do ZSMOPL dla wszystkich <br />
+    pozycji braków z hurtowni z modułu Zamówienia.<br />
+	<br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2020.04.09 [2020.3.0.8]<br />
+  - Leki on-line: możliwość ograniczeni  a rezerwacji towarów ze względu na <br />
+    minimalny stan magazynowy<br />
+  - Leki on-line: możliwość wyłączenia magazynu z raportowania do KtoMaLek.pl<br />
+<br />
+</body></html>

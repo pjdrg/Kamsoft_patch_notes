@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2023.1.0.0</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2022.11.03<br />
+  Slowniki.dll [2023.1.0.0]<br />
+  - Dodano nową kartę BLOZ produktu - to rewolucyjne i nowoczesne podejście<br />
+    do danych o produkcie. Najważniejsze cechy nowej karty:<br />
+    * ograniczona do najważniejszych informacji o produkcie,<br />
+    * czytelna, kompletna, tabela uprawnień z informacją o wskazaniach<br />
+      i dopłacie pacjenta,<br />
+    * brak zakładek i konieczności przełączania się pomiędzy widokami,<br />
+    * informacje o danych historycznych i zmianach dot. produktu w wybranej<br />
+      dacie.<br />
+<br />
+  ApwMain.exe [2023.1.0.0]<br />
+  - Poprawa funkcji Pobierz klucz aktywacyjny licencji. Funkcja podczas<br />
+    sprawdzania licencji dla KS-MediVeris zawieszała się, co uniemożliwiało<br />
+    pobranie klucza licencji aptecznej.<br />
+<br />
+  ApwOph.dll [2023.1.0.0]<br />
+  - Dodano obsługę przeceny VAT dla mechanizmu przecen centralnych<br />
+    z KS-OmniPharm.<br />
+<br />
+  ApwiAp.dll [2023.1.0.0]<br />
+  - Wdrożono funkcje rozbudowującą generowanie automatycznych PDF dla dokumentów<br />
+    sprzedaży internetowych o duplikaty, korekty oraz archiwum dokumentów.<br />
+    Dotyczy funkcji "Generuj fakturę dla dokumentów sprzedaży", dostępnej<br />
+    z poziomu Apw45 lub apw11 -> zamówienia internetowe (Ctrl+k).<br />
+<br />
+  ApwHarm.dll [2023.1.0.0]<br />
+  - Wdrożono funkcje rozbudowującą generowanie automatycznych PDF dla dokumentów<br />
+    sprzedaży internetowych o duplikaty, korekty oraz archiwum dokumentów.<br />
+    Dotyczy zadania "Generuj wydruki dokumentów dla sprzedaży internetowej".<br />
+<br />
+  WaUtil.exe [2023.1.0.0]<br />
+  - Poprawka na wystąpienie błędu "violation of FOREIGN KEY constraint<br />
+    FK_HPERS_PERS on table HPERS" podczas instalacji nowej apteki.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2022.11.03 [2023.1.0.0]<br />
+  - Dodano opcję Pokaż wszystkie paragony z numerem NIP dla filtra w Przeglądzie<br />
+    paragonów.<br />
+  - Dodano mechanizm sprawdzający z komunikatem o wygenerowaniu dokumentów<br />
+    sprzedaży dla zamówień internetowych. Komunikat pojawia się przy wyjściu <br />
+    z podstawowej sprzedaży w trybie pracy z generowaniem plików PDF sprzedaży<br />
+    w podstawowej sprzedaży dla apteki internetowej.<br />
+  - Rozszerzono prezentację wydzielonych dokumentów sprzedaży dla apteki<br />
+    internetowej w [F9] Dokumenty dostępnej z podstawowej sprzedaży funkcji<br />
+    popraw.<br />
+  - Rozbudowano okno generowania i podglądu faktur dla zamówień internetowych<br />
+    w podstawowej sprzedaży i operacjach magazynowych o funkcje generowania<br />
+    plików PDF oraz podgląd plików PDF. Dodano również pole E-mail, które jest<br />
+    wypełniane mailem klienta internetowego. Okno również obsługuje teraz<br />
+    dokumenty wydzielone dla apteki internetowej.<br />
+  - Dodano prezentację ikony w operacjach magazynowych dla dokumentów sprzedaży,<br />
+    dla których wygenerowano plik PDF.<br />
+  - Rozbudowano filtr w operacjach magazynowych o regułę "Pokaż tylko faktury<br />
+    bez wygenerowanego pliku PDF".<br />
+  - Zadanie z Giełdy Pomysłów: Dodano wyliczanie terminu ważności recept na <br />
+    liście częściowo zrealizowanych recept pacjenta. Domyślnie przeterminowane<br />
+    recepty będą ukryte.<br />
+  - Nowa wersja dawkomatu e-Recept farmaceutycznych. Optymalizacja działania.<br />
+    Dodano możliwość "polubienia".<br />
+  - Leki on-line - rezerwacje: dodana możliwość rejestracji/edycji komentarza<br />
+    wewnętrznego do zamówienia.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2022.11.03 [2023.1.0.0]<br />
+  - Dodano możliwość przeliczenia odchylenia zatwierdzonych dokumentów zakupu.<br />
+    W oknie "Przeglądanie i poprawki wprowadzonych dokumentów" zaznaczyć<br />
+    kursorem pozycję z dokumentem do ponownego przeliczenia i nacisnąć na<br />
+    Ctrl+F12.<br />
+  - Dodano w korekcie dokumentu zakupu kolumny z ilością wstrzymanego towaru.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW14 -----------------------------</h3><br />
+2022.11.03 [2023.1.0.0]<br />
+  - Dodano obsługę przeceny VAT dla mechanizmu przecen centralnych<br />
+    z KS-OmniPharm.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2022.11.03 [2023.1.0.0]<br />
+  - Dodanie nowej funkcji eksportu danych dla programu FK Oracle.<br />
+  - Poprawiono raport refundacyjny środków pomocniczych TZMO (wzór 8).<br />
+<br />
+<h3>---------------------------- Zmiany w module APW23 -----------------------------</h3><br />
+2022.11.03 [2023.1.0.0]<br />
+  - Zadanie z Giełdy Pomysłów: Zatwierdzanie w retaksacji recept.<br />
+    Funkcjonalność umożliwia dwuetapową weryfikację zrealizowanych recept.<br />
+    W ramach tego procesu system będzie ostrzegał przy generowaniu sprawozdania<br />
+    refundacyjnego o niezatwierdzonych realizacjach w retaksacji recept.<br />
+    Więcej informacji można uzyskać w instrukcji e-Recepty.<br />
+  - Zadanie z Giełdy Pomysłów: Możliwość podglądu e-Recepty wraz z jej<br />
+    wszystkimi realizacjami w przeglądzie sprzedaży.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW31 -----------------------------</h3><br />
+2022.11.03 [2023.1.0.0]<br />
+  - Dodano blokadę usuwania zapłat dokonanych przez centralę w KS-OmniPharm.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2022.11.03 [2023.1.0.0]<br />
+  - Dodano weryfikację NPWZ farmaceuty na karcie personelu.<br />
+  - Dodano weryfikację certyfikatu TLS przy instalacji certyfikatów P1<br />
+    na wizytówce.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW44 -----------------------------</h3><br />
+2022.11.03 [2023.1.0.0]<br />
+  - Poprawa funkcji Pobierz aktualną licencję. Funkcja podczas sprawdzania<br />
+    licencji dla KS-MediVeris zawieszała się, co uniemożliwiało pobranie<br />
+    aktualnej licencji aptecznej.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW45 -----------------------------</h3><br />
+2022.11.03 [2023.1.0.0]<br />
+  - Wdrożono poprawkę dla funkcji naprawy identyfikatorów towaru dla oferty<br />
+    internetowej. Funkcja Apw45/Reguły/Towary/Opcje dodatkowe "Poprawa powiązań<br />
+    produktów w ofercie internetowej z bazą apteczną".<br />
+  - Dodano opcje "Rozszerz nazwę pliku dla duplikatów" dla generowania<br />
+    duplikatów dokumentów PDF. Opcja jest dostępna w regułach dla zamówień<br />
+    zakładka e-mail.<br />
+  - Dodano opcje "Włącz generowanie archiwum", "Katalog dla archiwum",<br />
+    "Rozszerz nazwę pliku zarchiwizowanego" dla zarządzania archiwum dokumentów<br />
+    PDF. Opcje są dostępne w regułach dla zamówień zakładka e-mail.<br />
+  - Dodano opcję "Analizuj" dla generowania analizy sprawdzania poprawności<br />
+    wygenerowania dokumentów PDF. Opcja jest dostępna w regułach dla zamówień<br />
+    zakładka e-mail.<br />
+  - Dodano opcję "Generuj faktury zakupu PDF dla podstawowej sprzedaży"<br />
+    włączającą mechanizm generowania faktur PDF w podstawowej sprzedaży.<br />
+    Opcja jest dostępna w regułach dla zamówień zakładka e-mail.<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2022.11.03<br />
+  ApwPlus.exe [2023.1.0.0]<br />
+  - Uaktualniono strukturę bazy danych.<br />
+<br />
+  ApwBase.dll [2023.1.0.0]<br />
+  - Uaktualniono bazę kart serwisowych.<br />
+<br />
+</body></html>

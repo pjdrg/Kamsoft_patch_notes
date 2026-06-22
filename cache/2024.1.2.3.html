@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2024.1.2.3</title>
+</head>
+<body>
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2024.10.16 [2024.1.2.3]<br />
+  - Rozwiązano problem wydrukiem duplikatu faktury z pozycją na fakturze <br />
+    zawierającą lek przeterminowany. Program blokował próbę wydrukowania <br />
+    takiej faktury. <br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2024.10.16 [2024.1.2.3]<br />
+  - W procesie ręcznego przyjęcia faktury zakupu na dostawcę należącego do <br />
+    Grupy VAT, zmieniono działanie funkcji sugerującej ustawienie powiązania <br />
+    z Grupą VAT. Funkcja będzie wyświetlała stosowny komunikat sprawdzając datę <br />
+    obowiązywania Grupy VAT w oparciu o datę wystawienia a nie datę przyjęcia.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW14 -----------------------------</h3><br />
+2024.10.16 [2024.1.2.3]<br />
+  - W celu lepszej identyfikacji danej pozycji w buforze różnic remanentowych <br />
+    rozszerzono komunikat występujący przy zatwierdzaniu dokumentu informujący, <br />
+    że na dokumencie są pozycje z lekiem przeterminowanym. Rozszerzony komunikat<br />
+    będzie zawierał dodatkowe informacje o serii i dacie ważności.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2024.10.16 [2024.1.2.3]<br />
+  - Dla przekazywania raportu w formacie KS-FKW-XML (zip), rozwiązano problem <br />
+    z brakiem faktur dla pacjentów. W definicji zadania program błędnie <br />
+    odczytywał opcje "Dla sprzedaży przekazuj tylko faktury dla odbiorców".<br />
+<br />
+</body></html>

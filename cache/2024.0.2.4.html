@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2024.0.2.4</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2024.01.30<br />
+  CopyCloud [2024.0.2.4]<br />
+  - Komercyjna wersja CopyCloud dla systemów z bazą danych Oracle.<br />
+<br />
+  Slowniki.dll [2024.0.2.4]<br />
+  - Na karcie odbiorcy dodano znacznik zgody na na wystawianie faktur do KSeF.<br />
+    Znacznik ten będzie obowiązywał w okresie przejściowym przed wejściem<br />
+    obowiązku KSeF. Podmiot odbierający fakturę musi wyrazić zgodę<br />
+    na wystawienie mu faktur w KSeF.<br />
+  - Obsługa zamienników w funkcji sprawdzania dostępności towaru w hurtowni<br />
+    poprzez system KS-OmniPharm.<br />
+  - Rozwiązano problem polegający na sporadycznym duplikowaniu się rezerwacji.<br />
+  - Optymalizacja działania usługi Podobniki.<br />
+  - Usprawnienie działania walidacji kartotek dostawców.<br />
+<br />
+  P1*.dll [2024.0.2.4]<br />
+  - Poprawiono w części technicznej DRR referencję do pozycji e-Recepty<br />
+    farmaceutycznej.<br />
+<br />
+  ApwMain.exe [2024.0.2.4]<br />
+  - Główne okno programu – dla aptek realizujących szczepienia, udostępniono<br />
+    na poziomie 2 przycisk wywołujący program KS-PPS Rozliczenie kontraktu NFZ.<br />
+<br />
+  ApwHarm.dll [2024.0.2.4]<br />
+  - Rozwiązano problem dotyczący nieprawidłowego zarządzania rodzajem ceny<br />
+    dla automatu odpowiedzialnego za przygotowanie oferty internetowej<br />
+    "Aktualizuj ceny" oraz "Odśwież ofertę". Problem charakteryzował się<br />
+    ustawianiem dostępności na "Hurtownię", pomimo że produkt był dostępny<br />
+    w aptece w trybie pracy tylko z ofertami z hurtowni. Akcja jest wywoływana<br />
+    zadaniem "Aktualizacja oferty dla apteki internetowej" w aplikacji<br />
+    ApwPlan – Harmonogram zadań.<br />
+<br />
+  Zasoby.dll [2024.0.2.4]<br />
+  - Aktualizacja opisów opcji dla pharmind XF.<br />
+<br />
+  KSUSInstaller.exe [2024.0.2.1]<br />
+  - Poprawiono problem występujący podczas nieudanej próby pobierania nowej<br />
+    wersji aktualizatora aptecznego. Problem objawiał się tym, że jeśli<br />
+    nie udało się pobrać z serwera aktualizacji nowej wersji aktualizatora<br />
+    to system apteczny pozostawał w stanie z usuniętym aktualizatorem.<br />
+<br />
+  OSOZMOK.dll [2024.1.2.0]<br />
+  - Uwierzytelnianie wieloskładnikowe (MFA) w Serwisie Apteki.<br />
+<br />
+  ApwHarmPush.dll, ApwiAp.dll, ApwOph.dll, WaUtil.exe [2024.0.2.4]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2024.01.30 [2024.0.2.4]<br />
+  - System KS-AOW został dostosowany do wymogów KSeF w zakresie wystawiania<br />
+    i przyjmowania faktur ustrukturyzowanych w aptekach.<br />
+    KS-AOW przystosowano również do współpracy z produktem pharmind XF, który<br />
+    będzie wspierał użytkowników końcowych w realizacji procesu obiegu faktur<br />
+    ustrukturyzowanych pomiędzy przedsiębiorstwem a systemem KSeF dostarczanym<br />
+    przez Ministerstwo Finansów. Pharmind XF to rozwiązanie zintegrowane<br />
+    z systemami dziedzinowymi produkcji KAMSOFT S.A. w zakresie komunikacji<br />
+    z KSeF, które umożliwia wymianę faktur ustrukturyzowanych z innymi<br />
+    uczestnikami rynku.<br />
+  - Operacje magazynowe: rozwiązano problem dotyczący nieprawidłowego<br />
+    generowania dokumentów faktur sprzedaży dla zamówień internetowych.<br />
+    Problem charakteryzował się tym, że dla przypadku jeśli wygenerowaliśmy<br />
+    fakturę sprzedaży dla apteki internetowej, a w następnej kolejności<br />
+    dokument MM to zamiast dokumentu MM była wymuszana sprzedaż na fakturę.<br />
+  - Rozwiązano problem polegający na sporadycznym duplikowaniu się rezerwacji.<br />
+  - [Zadanie z giełdy pomysłów] Skanowanie kodu kreskowego pakietu/e-Recepty<br />
+    bezpośrednio w oknie e-Recepty (z pominięciem [F4] Pobierz recepty).<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2024.01.30 [2024.0.2.4]<br />
+  - Integracja modułu z rozwiązaniem pharmind XF w zakresie przyjmowania faktur<br />
+    ustrukturyzowanych od dostawców obsługujących KSeF.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW14 -----------------------------</h3><br />
+2024.01.30 [2024.0.2.4]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2024.01.30 [2024.0.2.4]<br />
+  - Aktualizacja eksportu do KS-FKW (XML): format został rozszerzony o pola<br />
+    związane z KSeF.<br />
+  - Edycja zestawienia refundacyjnego: rozszerzono weryfikację dopłaty pacjenta.<br />
+    W przypadku wyliczenia innej dopłaty (na aktualnych danych z karty BLOZ)<br />
+    niż wykazano w sprawozdaniu refundacyjnym, program w ostrzeżeniu wypisze<br />
+    dane karty BLOZ (identyfikator surowca, limit) oraz dane towaru,<br />
+    jeżeli będą się różniły od tych z karty BLOZ. Dodatkowo rozwiązano problem<br />
+    błędnej weryfikacji dopłaty, w przypadku gdy w aptece istniała stara karta<br />
+    towarowa (o takim samym kodzie EAN) z pustym limitem i niepodpiętym kodem<br />
+    BLOZ.<br />
+  - e-ZWM: Dodano możliwość weryfikacji komunikatu ZPOZW pod względem różnic<br />
+    pomiędzy sprzedażą w KS-AOW a zarejestrowaną w e-ZWM:<br />
+    a) Refundacje -> Środki pomocnicze -> Zestawienie wniosków (wzór 13),<br />
+    b) Refundacje -> Środki pomocnicze -> Archiwum raportów -> Dokument (wzór 13).<br />
+    Funkcja dostępna jest pod skrótem klawiaturowym CTRL+W.<br />
+    Więcej szczegółów w instrukcji: "Rozliczanie świadczeń na zaopatrzenie<br />
+    w wyroby medyczne z NFZ od 1 stycznia 2024".<br />
+<br />
+<h3>---------------------------- Zmiany w module APW23 -----------------------------</h3><br />
+2024.01.30 [2024.0.2.4]<br />
+  - [Zadanie z giełdy pomysłów] W retaksacji recept dodano filtrowanie leków<br />
+    z wykazu A.<br />
+  - [Zadanie z giełdy pomysłów] W retaksacji recept dodano filtrowanie<br />
+    umożliwiające wykrycie realizacji pacjenta z kartą EKUZ lub poświadczeniem<br />
+    NFZ. Dodano filtr po numerze oddziału NFZ lub kodzie kraju oraz filtr<br />
+    wykazujący realizacje z innym dokumentem potwierdzającym uprawnienie<br />
+    pacjenta UE niż wskazano na e-Recepcie.<br />
+  - [Zadanie z giełdy pomysłów] W retaksacji recept dodano filtrowanie po grupie<br />
+    asortymentowej.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW31 -----------------------------</h3><br />
+2024.01.30 [2024.0.2.4]<br />
+  - Płatności dostawców i odbiorców: rozdzielono zapamiętywanie ustawionego<br />
+    sortowania dla obu zestawień.<br />
+  - Płatności dostawców: dodano informację o zapłacie za fakturę z sieci<br />
+    przy płatności z KS-OmniPharm.<br />
+  - Płatności dostawców: dodano blokadę edycji płatności z zamkniętych okresów.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2024.01.30 [2024.0.2.4]<br />
+  - Dodanie opcji związanych z obsługą pharmind XF i procesów związanych z KSeF.<br />
+  - Optymalizacja działania usługi Podobniki.<br />
+  - Usprawnienie działania walidacji kartotek dostawców.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW42 -----------------------------</h3><br />
+2024.01.30 [2024.0.2.4]<br />
+  - Aktualizacja struktury bazy danych.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW45 -----------------------------</h3><br />
+2024.01.30 [2024.0.2.4]<br />
+  - Rozwiązano problem dotyczący nieprawidłowego zarządzania rodzajem ceny<br />
+    dla automatu odpowiedzialnego za przygotowanie oferty internetowej<br />
+    "Aktualizuj ceny" oraz "Odśwież ofertę". Problem charakteryzował się<br />
+    ustawianiem dostępności na "Hurtownię", pomimo że produkt był dostępny<br />
+    w aptece w trybie pracy tylko z ofertami z hurtowni.<br />
+    Funkcja "Aktualizuj ceny" oraz "Odśwież ofertę" jest dostępna w module<br />
+    internetowym "APW45 - Apteka internetowa -> Towary".<br />
+  - Rozwiązano problem dotyczący nieprawidłowego generowania dokumentów faktur<br />
+    sprzedaży dla zamówień internetowych. Problem charakteryzował się tym,<br />
+    że dla przypadku jeśli wygenerowaliśmy fakturę sprzedaży dla apteki<br />
+    internetowej, a w następnej kolejności dokument MM to zamiast dokumentu MM<br />
+    była wymuszana sprzedaż na fakturę. Problem występował w operacjach<br />
+    magazynowych w module APW11 - Sprzedaż.<br />
+  - Rozwiązano problem dotyczący nieprawidłowego przekazywania daty ostatniego<br />
+    importu zamówień w nagłówku komunikacji dla zamówień internetowych<br />
+    w porównaniu do specyfikacji wymiany danych dla modułu APW45 - Apteka<br />
+    Internetowa. Opcja "Przekazuj w komunikacji datę ostatniego importu<br />
+    zamówień" jest dostępne w module internetowym "APW45 - Apteka internetowa -><br />
+    Komunikacja -> Ustawienia -> Ustawienia" w zakładce "Zamówienia".<br />
+<br />
+<h3>---------------------------- Zmiany w module APW68 -----------------------------</h3><br />
+2024.01.30 [2024.0.2.4]<br />
+  - Dostosowano raportowanie leków bez kodu EAN, które mają w BLOZ-ie zaznaczoną<br />
+    zgodę MZ (import interwencyjny).<br />
+<br />
+<h3>--------------------------------- Zmiany w EDE ---------------------------------</h3><br />
+2024.01.30 [2024.0.0.0]<br />
+  - Rozwiązanie problemu z ręcznym zakańczaniem porozumienia w aptekach.<br />
+<br />
+<h3>--------------------------------- ZMIANY.IRAP ----------------------------------</h3><br />
+2024.01.30 [2024.0.2.4]<br />
+  - Rejestry dokumentów finansowych: rozwiązano problem objawiający się<br />
+    wystąpieniem komunikatu "Field ODCHK not found" podczas otwierania<br />
+    oraz generowania raportu.<br />
+<br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2024.01.30 [2024.0.2.4]<br />
+  - Komunikaty dla farmaceutów: zmiana źródła pobierania danych o towarach<br />
+    na TurboBLOZ.<br />
+  - Pharmind GRID: optymalizacja raportowania stanów magazynowych towarów.<br />
+  - Pharmind GRID: odbiór informacji o konieczności uzupełnienia numeru rachunku<br />
+    konta bankowego w ustawieniach projektów pharmind GRID.<br />
+  - Rozwiązano problem polegający na sporadycznym duplikowaniu się rezerwacji.<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2024.01.30<br />
+  ApwPlus [2024.0.2.4]<br />
+  - Aktualizacja struktury bazy danych związana z obsługą pharmind XF.<br />
+<br />
+  IBRest, UacUtil [2024.0.2.4]<br />
+  - Dostosowanie systemu aptecznego do instalacji z niedomyślnym hasłem<br />
+    na użytkownika SYSDBA w przypadku instalacji systemu na bazie Firebird.<br />
+<br />
+</body></html>

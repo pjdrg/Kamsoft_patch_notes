@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2022.4.0.5</title>
+</head>
+<body>
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2022.11.29 [2022.4.0.5]<br />
+  - W związku z zapowiedzianą przez CeZ zmianą typu komunikatów zwrotnych<br />
+    systemu SIM z ostrzeżenia na błąd, która ma nastąpić z początkiem <br />
+    grudnia br. – dodaliśmy na czas przejściowy, wymuszanie wyświetlania<br />
+    ostrzeżeń dla następujących reguł:<br />
+    * REG.WER.4888 – Braku kodu oddziału NFZ na karcie refundatora, z którym<br />
+      podpisano umowę na refundację.<br />
+    * REG.WER.301 – NPWZ pracownika wystawiającego dokument nie występuje w CWPM.<br />
+    * REG.WER.2029 – Nieaktywne prawo wykonywania zawodu farmaceuty.<br />
+    W przypadku wystąpienia komunikatu REG.WER.4888 po wysłaniu DRR, należy<br />
+    wskazać poprawny oddział NFZ na karcie refundatora powiązanego ze sprzedażą,<br />
+    dla której SIM zwrócił ostrzeżenie.<br />
+    W przypadku komunikatów REG.WER.301 i REG.WER.2029, należy uzupełnić<br />
+    lub zweryfikować poprawność NPWZ sprzedawcy i skontaktować się z OIA w celu<br />
+    wyjaśnienia problemu.<br />
+    Modyfikacja dotyczy aptek, które mają wyłączone wyświetlanie ostrzeżeń SIM.<br />
+  - Wprowadzono nową wartość ryczałtu na lek robiony na rok 2023. Kwota ryczałtu<br />
+    zaktualizuje się automatycznie po uruchomieniu programu po 1 stycznia 2023.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW23 -----------------------------</h3><br />
+2022.11.29 [2022.4.0.5]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+</body></html>

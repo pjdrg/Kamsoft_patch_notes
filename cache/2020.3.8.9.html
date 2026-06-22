@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2020.3.8.9</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2020.10.05<br />
+  mvserver [2020.3.8.9]<br />
+  - rozszerzono komunikację KS-AOW-automat Fablox II dla automatycznego <br />
+    załadunku towarów.<br />
+  <br />
+  APWMAIN.EXE [2020.3.8.9]<br />
+  - Zmiana znaczenia wartości parametru 'Uruchamiaj program iRap - Raporty<br />
+    on-line przy starcie programu ApMan'.<br />
+  <br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2020.10.05 [2020.3.8.9]<br />
+  - e-Recepta: Poprawa DRR z uprawnieniam dodatkowy. Przy braku płatnika DRR był<br />
+    odrzucany przez SIM z komunikatem błedu informującym o niezgodności z <br />
+    schematronem.<br />
+  - Dodano obsługę opcji APW11-Sprzedaż.2.155 - wyświetlaj komunikat o oznaczaniu <br />
+    dotyczące dostaw, świadczenia usług i procedur dla JPK.<br />
+  - Poprawiono czas wejścia do operacji magazynowych dla bazy Oracle.<br />
+  - Dodano obsługę warunku "Data ważności" w promocjach<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2020.10.05 [2020.3.8.9]<br />
+  - W buforze kodów kreskowych dla zaznaczonej opcji "Pomiń drukowanie etykiet <br />
+    dla leków podlegających serializacji" podczas dodawania pozycji do bufora <br />
+    nie będą nadawane własne kody kreskowe dla leków podlagających serializacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW23 -----------------------------</h3><br />
+2020.10.05 [2020.3.8.9]<br />
+  - Retaksacja recept: Zablokowano klawisz "[Ctrl+F11] Zatwierdź" w oknie <br />
+    podglądu recepty ([f4] Recepta). Funkcjonalność powinna być dostępna i <br />
+    używana w przypadku oznaczenia rodzaju realizacji recepty w trakcie <br />
+    sprzedaży (APW11). <br />
+<br />
+<h3>---------------------------- Zmiany w module APW35 -----------------------------</h3><br />
+2020.10.05 [2020.3.8.9]<br />
+  - Dodano nowy warunek do promocji: "Data ważności"<br />
+  - Do warunku "Dni tygodnia" dodano możliwość wykluczenia dni świątecznych<br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2020.10.05 [2020.3.8.9]<br />
+  - Dodano opcję APW11-Sprzedaż.2.155 - wyświetlaj komunikat o oznaczaniu <br />
+    dotyczące dostaw, świadczenia usług i procedur dla JPK.<br />
+  - Zmiana znaczenia wartości parametru 'Uruchamiaj program iRap - Raporty<br />
+    on-line przy starcie programu ApMan'.<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2020.10.05<br />
+  ApwPlus.exe [2020.3.8.7]<br />
+  - Uaktualniono strukturę bazy danych<br />
+<br />
+</body></html>

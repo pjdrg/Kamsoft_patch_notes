@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2020.3.2.4</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2020.05.18<br />
+  apwharm.dll [2020.3.2.4]<br />
+  - Wdrożono mechanizm kontroli pełnych opakowań dla funkcji:<br />
+    a) pakowania<br />
+    b) rezerwacji<br />
+    c) automatycznych przesunięć<br />
+    Funkcjonalnośc wymaga włączenia opcji "Aktywuj mechanizm kontroli pełnych<br />
+    opakowań w procesach apteki interentowej" (Apw45/Reguły/Zamówienia/Inne).<br />
+  - Rozbudowano i zoptymalizowano mechanizm sprzątania oferty internetowej <br />
+    z produktów które w niej być nie powinny dla funkcji odśwież ofertę w procesie<br />
+    analizowania bazy aptecznej.<br />
+  - Wdrożono mechanizm zarządzania oddzielnie wieloma konfiguracjami wydruków oraz maili<br />
+    dla wielu kofiguracji serwerów w module APW45 - Apteka Interenowa. Funkcjonalność<br />
+    wymaga włączenia mechanizmu "Zarządzania serwerami" oraz mechanizmu "Rozsyłania<br />
+    dokumentów sprzedaży mailem" dla apteki internetowej.<br />
+  - Poprawiono zarządzanie parametrami dla przechowywania ścieżek dla zapisywania<br />
+    wydruków dokumentów detalicznych oraz faktur sprzedaży VAT.<br />
+  - dodanie synchronizacji danych z Portalem KS-EWD raz na dobę <br />
+    (w zadaniu komunikacji z dostawcami) niezależnie od uruchomionej komunikacji Push.  <br />
+  APWMAIN.EXE [2020.3.2.4]<br />
+  - Do formatki odczytującej aktualne wersje modułów dodano odczytu wersji <br />
+    produktu KS-MediVeris. <br />
+  SLOWNIKI.DLL [2020.3.2.4]<br />
+  - dodano uprawnienia dostępu do kart pracownika<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2020.05.21 [2020.3.2.4]<br />
+  - e-Recepta: W oknie e-Recepty dodano menu kontekstowe (dostępne po kliknięciu<br />
+     prawym klawiszem myszki) na pozycje recept, z opcjami: <br />
+	 Zamówienia/Synonimy/Drukuj specyfikacje<br />
+  - e-Recepta: Dodano informację NIE ZAMIENIAĆ wyświetlaną na czerwono pod <br />
+    wizualizacją e-Recepty. Dodano komunikat informujący o adnotacji <br />
+    NIE ZAMIENIAĆ po kliknięciu w [F2] Realizuj (w oknie e-Recepty) <br />
+  - e-Recepta: Poprawka w realizacji recept „Pro f/a wyst. przez farm.” - przy <br />
+    zmianie odpłatności [ESC] (po [F2] realizuj) dochodziło do wyczyszczenia <br />
+	wsk. Pro Auctore/Pro Familiae i zmiany rodzaju Rp. na Biała.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2020.05.20 [2020.3.2.4]<br />
+- Poprawa możliwości potwierdzania zamówień do producenta. <br />
+  Problem mógł się objawiać komunikatem "Potwierdzać można tylko zamówienia <br />
+  otrzymane od producenta.<br />
+- W "Edycji pozycji" dodano możliwość rozdzielenia stawek VAT na VAT zakupu <br />
+  i VAT sprzedaży (skrót klawiszowy: Ctrl+R).<br />
+  Zmiana umożliwi wprowadzenie różnych stawek VAT zakupu i sprzedaży.<br />
+- EDE - usprawnienie mechanizmu akceptacji porozumień na wymianę faktur <br />
+  elektronicznych w sieci aptek, poprzez umożliwienie automatycznej akceptacji <br />
+  certyfikatu sieci.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2020.05.21 [2020.3.2.4]<br />
+  - Dodanie możliwości generowania eksportów do Optimy w zależności od wybranej <br />
+    jednostki organizacyjnej. W przypadku gdy apteka ma więcej niż jedną<br />
+	jednostkę organizacyjną, przed wygenerowaniem eksportu jest dodany wybór <br />
+	jednostki dla której ma być wykonany eksport.<br />
+  - Poprawa weryfikacji NPWZ e-Recept „Pro f/a wyst. przez farm.” na zestawieniu <br />
+    refundacyjnym <br />
+	<br />
+<h3>---------------------------- Zmiany w module APW23 -----------------------------</h3><br />
+2020.05.20 [2020.3.2.4]<br />
+  - Uwzględnienie recept „Pro f/a wyst. przez farm.” w raporcie spójności danych<br />
+    AOW i wysłanych DRR <br />
+<br />
+<h3>---------------------------- Zmiany w module APW45 -----------------------------</h3><br />
+2020.05.18 [2020.3.2.4]<br />
+ - Rozbudowano mechanizm zarządzania zasobami dla apteki interentowej<br />
+   z plików o nowe tryby pracy:<br />
+    a) rozszerzaj tylko o nowe zasoby<br />
+    b) aktualizuj istniejące zasoby według daty aktualizacji pliku <br />
+     oraz rozszerzaj o nowe zasoby<br />
+    c) aktualizuj istniejące zasoby oraz rozszerzaj o nowe zasoby<br />
+     działa to:<br />
+ - Dla zarządzania zasobami dodano wsparcie dla funkcji zarządzani wspólnymi<br />
+   zasobami.<br />
+ - Wdrożono mechanizm kontroli pełnych opakowań dla funkcji:<br />
+    a) pakowania<br />
+    b) rezerwacji<br />
+    c) automatycznych przesunięć<br />
+   Funkcjonalnośc wymaga włączenia opcji "Aktywuj mechanizm kontroli pełnych<br />
+   opakowań w procesach apteki interentowej" (Apw45/Reguły/Zamówienia/Inne).<br />
+ - Dodano automatyzację ścieżki i trybu pracy dla pobierania zasobów z plików.<br />
+ - Rozbudowano i zoptymalizowano mechanizm sprzątania oferty internetowej <br />
+   z produktów które w niej być nie powinny dla funkcji odśwież ofertę w procesie<br />
+   analizowania bazy aptecznej.<br />
+ - Wdrożono mechanizm zarządzania oddzielnie wieloma konfiguracjami wydruków oraz maili<br />
+   dla wielu kofiguracji serwerów w module APW45 - Apteka Interenowa. Funkcjonalność<br />
+   wymaga włączenia mechanizmu "Zarządzania serwerami" oraz mechanizmu "Rozsyłania<br />
+   dokumentów sprzedaży mailem" dla apteki internetowej.<br />
+ - Poprawiono zarządzanie parametrami dla przechowywania ścieżek dla zapisywania<br />
+   wydruków dokumentów detalicznych oraz faktur sprzedaży VAT.<br />
+ - Rozbudowano zarządzanie serwerami o rodzaj wykorzytywanych parametrów dla rozsyłania<br />
+   maili. Rodzaj konfiguracji opcji dzieli konfiguracje na pracujące w trybie <br />
+   różnych połaczeń internetowych oraz w trybie róznych konfiguracji serwerów.<br />
+ - Wdrożono funkcję jednokrotnej poprawy parametrów modułu APW45 - Apteka Internetowa.<br />
+ - Wdrożono prametr który przechowuje logi dla funkcji jednokrotnej poprawy <br />
+   parametrów modułu APW45 - Apteka Internetowa.<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2020.05.21<br />
+  ApwPlus [2020.3.2.4]:<br />
+  - Uaktualniono strukturę bazy danych<br />
+<br />
+</body></html>

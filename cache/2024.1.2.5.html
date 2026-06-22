@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2024.1.2.5</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2024.10.24<br />
+  ApwHarm.dll [2024.1.2.5]<br />
+  - Rozwiązano problem dotyczący nieprawidłowego kontrolowania zakresów<br />
+    temperatury dla zadania "Aktualizacja oferty dla apteki internetowej"<br />
+    w aplikacji ApwPlan – Harmonogram zadań z włączoną opcją aktualizacji cen.<br />
+    Kontrolę zakresów temperatury włączamy opcją "Przechowywane w temperaturze"<br />
+    w regułach budowania oferty internetowej w module APW45 – Apteka Internetowa<br />
+    -> Reguły -> Towary.<br />
+<br />
+  ApwIap.dll [2024.1.2.5]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2024.10.24 [2024.1.2.5]<br />
+  - Usunięto nadmiarowy komunikat wyświetlający się podczas przyjmowania faktury<br />
+    zakupu, gdy dostawca jest członkiem Grupy VAT, ale faktura została<br />
+    wystawiona przed początkiem obowiązywania grupy VAT. Faktura zostanie<br />
+    przyjęta w trybie bez obsługi Grupy VAT.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW45 -----------------------------</h3><br />
+2024.10.24 [2024.1.2.5]<br />
+  - Rozwiązano problem dotyczący nieprawidłowego kontrolowania zakresów<br />
+    temperatury dla automatu aktualizującego ceny w ofercie apteki internetowej.<br />
+    Funkcje aktualizujące ceny są dostępna w module APW45 – Apteka Internetowa<br />
+    -> Towary i są to "[F12] Aktualizuj ceny" dostępna z okna głównego<br />
+    oraz "Aktualizuj cenę" która jest dostępna z poziomu "[F3] Karta".<br />
+    Kontrolę zakresów temperatury włączamy opcją "Przechowywane w temperaturze"<br />
+    w regułach budowania oferty internetowej w module APW45 – Apteka Internetowa<br />
+    -> Reguły -> Towary.<br />
+<br />
+</body></html>

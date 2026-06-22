@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2024.1.1.1</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2024.07.11<br />
+  Slowniki.dll [2024.1.1.1]<br />
+  - Pharmind grid: w raportach transakcji zakupu/sprzedaży dodano wysyłanie<br />
+    dodatkowych informacji o numerze stanowiska i numerze magazynu.<br />
+<br />
+  Zasoby.dll [2024.1.1.1]<br />
+  - Aktualizacja opisów opcji.<br />
+  <br />
+  CopyCloud [2024.1.1.1]<br />
+  - W wersji usługi CopyCloud dla baz danych Oracle dodano czyszczenie obszaru<br />
+    FRA. Przepełnienie obszaru FRA nagromadzonymi kopiami, powodowało<br />
+    w niektórych przypadkach zatrzymanie serwera bazodanowego Oracle.<br />
+  - W wersji usługi CopyCloud dla baz danych Oracle dodano możliwość<br />
+    skonfigurowania usługi w systemach bazodanowych Oracle opartych<br />
+    o konfiguracje po adresie IP.<br />
+<br />
+  P1*.dll [2024.1.1.1]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+  <br />
+  ApwMain [2024.1.1.1]<br />
+  - Giełda pomysłów - zmiana mechanizmów automatycznego logowania do serwisu.<br />
+<br />
+  ApwIap.dll, ApwHarm.dll, ApwHarmPush.dll, ApwPlan/ApwPlanWorker,<br />
+  Apw_sc, KSOPH.dll, Events.dll, MvServer, ApwControl [2024.1.1.1]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+  <br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2024.07.11 [2024.1.1.1]<br />
+  - eZWM: dodano obsługę kodu sprzętu N.04.02.<br />
+  - Pharmind grid: w raportach transakcji zakupu/sprzedaży dodano wysyłanie<br />
+    dodatkowych informacji o numerze stanowiska i numerze magazynu.<br />
+  - Poprawa opisu wydawanego produktu na DRR. Z powodu ograniczeń technicznych<br />
+    SIM, nie ma możliwości zmiany podczas realizacji kwalifikatora: rodzaj leku.<br />
+    Dlatego konieczne jest jego przepisanie na DRR.<br />
+    Jako że, nie zawsze ta informacja jest poprawna na recepcie, a tym samym<br />
+    nie będzie zgodna z rodzajem wydanego leku, to zdecydowano na zmianę zapisu<br />
+    w DRR. Teraz opis wskazuje na rodzaj produkt jaki zaordynowano<br />
+    na e-Recepcie: "Wydano na podstawie recepty na lek gotowy / wyrób medyczny /<br />
+    ŚSSPŻ".<br />
+  - Poprawiono odczyt dawkowania z e-Recept w nowym formacie.<br />
+  - Dodano ostrzeżenie/pytanie przy próbie wyłączenia pobierania z SIM<br />
+    informacji o możliwej do wydania ilości leku.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW12 -----------------------------</h3><br />
+2024.07.11 [2024.1.1.1]<br />
+  - Modyfikacja w Optymalizatorze Zamówień. Rozwiązano problem wykluczenia grupy<br />
+    asortymentowej od dostawcy dla towarów znajdujących się w wielu grupach.<br />
+  - Przekazywanie cen zakupu z zamówień KS-OmniPharm.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2024.07.11 [2024.1.1.1]<br />
+  - Zadanie z Giełdy Pomysłów: "Oznaczenie faktury gotowej do przyjęcia"<br />
+    oraz "Oznaczenie faktury w buforze". W ramach nowych funkcjonalności,<br />
+    po włączeniu opcji Apw13.2.108, zostanie uruchomiona możliwość oznaczania<br />
+    postępu prac nad dokumentem zakupu.<br />
+    Więcej szczegółów w "Podręczniku użytkownika KS-AOW".<br />
+  - Modyfikacja w zakresie generowania weryfikacji dostawy KS-Aptix<br />
+    oraz przyśpieszenie wczytywania skanów.<br />
+  - Pharmind grid: w raportach transakcji zakupu/sprzedaży dodano wysyłanie<br />
+    dodatkowych informacji o numerze stanowiska i numerze magazynu.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW14 -----------------------------</h3><br />
+2024.07.11 [2024.1.1.1]<br />
+  - Modyfikacja w zakresie generowania inwentaryzacji KS-Aptix<br />
+    oraz przyśpieszenie wczytywania skanów.<br />
+    <br />
+<h3>---------------------------- Zmiany w module APW15 -----------------------------</h3><br />
+2024.07.11 [2024.1.1.1]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2024.07.11 [2024.1.1.1]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW22 -----------------------------</h3><br />
+2024.07.11 [2024.1.1.1]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW23 -----------------------------</h3><br />
+2024.07.11 [2024.1.1.1]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW24 -----------------------------</h3><br />
+2024.07.11 [2024.1.1.1]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW25 -----------------------------</h3><br />
+2024.07.11 [2024.1.1.1]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW31 -----------------------------</h3><br />
+2024.07.11 [2024.1.1.1]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW35 -----------------------------</h3><br />
+2024.07.11 [2024.1.1.1]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2024.07.11 [2024.1.1.1]<br />
+  - W Definicjach dodano: "Statusy postępu prac nad dokumentem zakupu".<br />
+  - Dodano nową opcję Apw13.2.108: "Wyświetlaj postęp prac nad dokumentem<br />
+    zakupu" (domyślnie wyłączona).<br />
+  - Dodano nową opcję Apw13.2.109: "Ostrzegaj, podczas przyjęcia dokumentu,<br />
+    gdy dokument ma status inny niż "Gotowy do przyjęcia"" z wariantami:<br />
+    * Brak reakcji (domyślnie),<br />
+    * Ostrzegaj,<br />
+    * Blokuj.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW42 -----------------------------</h3><br />
+2024.07.11 [2024.1.1.1]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW43 -----------------------------</h3><br />
+2024.07.11 [2024.1.1.1]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW44 -----------------------------</h3><br />
+2024.07.11 [2024.1.1.1]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW45 -----------------------------</h3><br />
+2024.07.11 [2024.1.1.1]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW55 -----------------------------</h3><br />
+2024.07.11 [2024.1.1.1]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW61 -----------------------------</h3><br />
+2024.07.11 [2024.1.1.1]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW68 -----------------------------</h3><br />
+2024.07.11 [2024.1.1.1]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>--------------------------------- ZMIANY.APTIX ---------------------------------</h3><br />
+2024.07.11 <br />
+  - Dodano funkcjonalność uzupełnienia ekspozycji.<br />
+<br />
+<h3>--------------------------------- ZMIANY.IRAP ----------------------------------</h3><br />
+2024.07.11 [2024.1.1.1]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+<br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2024.07.11 [2024.1.1.1]<br />
+  - Pharmind grid: w raportach transakcji zakupu/sprzedaży dodano wysyłanie<br />
+    dodatkowych informacji o numerze stanowiska i numerze magazynu.<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2024.07.11 <br />
+  ApwPlus [2024.1.1.1]<br />
+  - Zaktualizowano strukturę bazy danych.<br />
+<br />
+  DBCopy, IBPack, IBRest, OraPack, OraRest, WaUtil [2024.1.1.1]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+  <br />
+</body></html>

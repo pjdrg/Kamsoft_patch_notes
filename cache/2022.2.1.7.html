@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2022.2.1.7</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2022.05.26<br />
+  Slowniki.dll [2022.2.1.7]<br />
+  - Dodano obsługę nowej formy płatności: Bon Sodexo.<br />
+  - Logowanie poświadczeniami domenowymi ActiveDirectory - dodano wymuszenie<br />
+    ustawienia hasła dla nowego użytkownika.<br />
+<br />
+  ApwPlan.exe [2022.2.1.7]<br />
+  - Optymalizacja odświeżania harmonogramu zadań.<br />
+<br />
+  ApwControl.exe [2022.2.1.7]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+  MVServer.exe [2022.2.1.7]<br />
+  - Fablox II - poprawiono proces ładowania towarów do automatu.<br />
+<br />
+  Zasoby.dll [2022.2.1.7]<br />
+  - Dodano opisy dla opcji związanych z obsługą bonów Sodexo i obsługą<br />
+    definicji serwerów FTP/SFTP.<br />
+<br />
+  Apwfn.dll [2022.2.1.6]<br />
+  - Zaktualizowano opisy opcji, uprawnień i ról w przeglądzie zleceń sterowania<br />
+    centralnego.<br />
+  - Zaktualizowano opisy modyfikowanych pól w przeglądzie zlecenia aktualizacji<br />
+    kart dostawców.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2022.05.26 [2022.2.1.7]<br />
+  - KtoMaLek: Usunięcie komunikatów ostrzegających podczas odrzucania<br />
+    przeterminowanych rezerwacji.<br />
+  - KtoMaLek: Poprawa raportowania aktualnych stanów magazynowych w związku z<br />
+    usunięciem rezerwacji z kolejek.<br />
+  - Poprawiono sortowanie pozycji rezerwacji tworzonej na podstawie zamówienia<br />
+    internetowego.<br />
+  - Dodanie obsługi zapłaty bonem Sodexo. Domyślnie forma płatności jest<br />
+    nieaktywna.<br />
+  - Optymalizacja e-Recepty transgranicznej.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2022.05.26 [2022.2.1.7]<br />
+  - Zmiana metod rozpoznawania stron porozumienia podczas wymiany porozumień.<br />
+  - Poprawa odsyłania potwierdzeń na adres dostawcy, w przypadku przepinania<br />
+    przyjętego dokumentu na inną kartę dostawcy.<br />
+  - Poprawa dat przesyłanych w procesie potwierdzania dostarczenia, przyjęcia<br />
+    i odbioru towaru.<br />
+  - Zmiana metody uwierzytelniania certyfikatów. Ograniczenie ilości pytań<br />
+    kierowanych do użytkownika.<br />
+  - Modyfikacja domyślnych ustawień filtrów listy dokumentów, otwieranej<br />
+    bezpośrednio z aplikacji innych niż EDE.<br />
+  - Poprawiono przyjęcie dokumentu zakupu na magazyn.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW14 -----------------------------</h3><br />
+2022.05.26 [2022.2.1.7]<br />
+  - Poprawa przeceny VAT na podstawie BLOZ gdy przeceniany towar znajduje się<br />
+    w kolejce a jego stan magazynowy jest zerowy.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2022.05.26 [2022.2.1.7]<br />
+  - Dodano możliwość raportowania zestawienia zapłat bonami Sodexo.<br />
+    Menu->Inne->Generowanie zestawienia zapłat bonami Sodexo.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW23 -----------------------------</h3><br />
+2022.05.26 [2022.2.1.7]<br />
+  - Optymalizacja e-Recepty transgranicznej.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2022.05.26 [2022.2.1.7]<br />
+  - Dodano możliwość definicji listy serwerów FTP/SFTP dla raportów<br />
+    księgowych tworzonych w trybie wsadowym.<br />
+<br />
+<h3>--------------------------------- Zmiany w EDE ---------------------------------</h3><br />
+2022.05.26<br />
+  - Zmiana metod rozpoznawania stron porozumienia podczas wymiany porozumień.<br />
+  - Poprawa odsyłania potwierdzeń na adres dostawcy, w przypadku przepinania<br />
+    przyjętego dokumentu na inną kartę dostawcy.<br />
+  - Poprawa procesu odrzucania przez hurtownię aktywnych porozumień.<br />
+  - Poprawa dat przesyłanych w procesie potwierdzania dostarczenia, przyjęcia<br />
+    i odbioru towaru.<br />
+  - Zmiana metody uwierzytelniania certyfikatów. Ograniczenie ilości pytań<br />
+    kierowanych do użytkownika.<br />
+  - Zmiana jednej z metod potwierdzania przyjęcia raportu księgowego, w zakresie<br />
+    przesyłanych poświadczeń.<br />
+  - Modyfikacja domyślnych ustawień filtrów listy dokumentów, otwieranej<br />
+    bezpośrednio z aplikacji innych niż EDE.<br />
+  - Poprawiono przyjęcie dokumentu zakupu na magazyn.<br />
+<br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2022.05.26 [2022.2.1.7]<br />
+  - KtoMaLek: Poprawa raportowania aktualnych stanów magazynowych w związku z<br />
+    usunięciem rezerwacji z kolejek.<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2022.05.26<br />
+  ApwPlus.exe [2022.2.1.7]<br />
+  - Uaktualniono strukturę bazy danych.<br />
+<br />
+  Apwbase.dll [2022.2.1.7]<br />
+  - Uaktualniono bazę kart serwisowych.<br />
+<br />
+  IBPack.exe [2022.2.1.7]<br />
+  - Optymalizacja usuwania danych.<br />
+<br />
+  OraPack.exe [2022.2.1.7]<br />
+  - Optymalizacja usuwania danych.<br />
+<br />
+</body></html>

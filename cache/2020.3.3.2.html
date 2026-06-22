@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2020.3.3.2</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2020.06.02<br />
+  apwharm.dll [2020.3.3.2]<br />
+  - Wdrożono mechanizm zarządzania ostrzeżeniami dla leków <br />
+    dla mechanizów automatycznego odświeżania oferty<br />
+    oraz automatycznego odświeżania cen.<br />
+  - dodanie obsługi nowych ustawień z karty dostawcy w zakresie<br />
+    faktur elektronicznych<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2020.06.03 [2020.3.3.2]<br />
+  - W funkcji przeglądanie paragonów dodano filtry umożliwiające zawężanie <br />
+    zakresu przeglądanych danych.<br />
+  - W okienku NMVS dodano możliwość usunięcia błędnego alertu zgłoszonego przez<br />
+    KOWAL. O błędnych alertach KOWAL informuję aptekę poprzez mail. Status kodu <br />
+	z błędnym alertem zostaje anulowany a kod przechodzi do kolejki do wysłania<br />
+	do NMVS.<br />
+  - e-Recepta: Poprawiono odczyt kodów Qr. Skanery Datalogic, w niektórych <br />
+    przypadkach wprowadzają do kodu blok ECIEncoding, co powodowało błedny <br />
+	w pobieraniu recept.<br />
+  - W funkcji Poprawa, F7 Filtr dodano możliwość filtrowania po wybranym <br />
+    numerze PESEL<br />
+  - Poprawiono problem, który objawiał się dołączaniem pierwszej recepty w dniu,<br />
+    jeśli była sprzedana z rezerwacji, do dnia poprzedniego<br />
+  - Poprawiono problem, który powodował ustawienie odpłatności N zamiast P,<br />
+    przy przypisywaniu e-recepty do sprzedaży w kolejce<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2020.06.03 [2020.3.3.2]<br />
+  - Poprawiono błąd, podczas przyjęcia na magazyn, przełączania się formy <br />
+    płatności z dokumentu niekredytowego na kredytowy.<br />
+  - Dodanie obsługi nowych ustawień z karty dostawcy w zakresie faktur <br />
+    elektronicznych.<br />
+  - Poprawiono zmianę numeru rezerwacji w oknie "Edycja pozycji"	<br />
+  - Dodano mozliwość zmiany numeru rezerwacji w oknie "Pozycje dokumentu zakupu"<br />
+    (przycisk: Ctrl+F2 Zmiany).<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2020.06.03 [2020.3.3.2]<br />
+  - Środki pomocnicze. Poprawiono błąd związany z komunikatem:<br />
+    "Identyfikator osoby musi wystąpić nie może przekraczać 30 znaków".<br />
+<br />
+<h3>---------------------------- Zmiany w module APW45 -----------------------------</h3><br />
+2020.06.02 [2020.3.3.2]<br />
+ - Poprawiono generowanie dokumentów detalicznych dla mechanizmu <br />
+   zarządzania oddzielnie wieloma konfiguracjami wydruków oraz maili<br />
+   dla wielu kofiguracji serwerów w module APW45 - Apteka Interenowa.<br />
+ - Wdrożono mechanizm zarządzania ostrzeżeniami leków, które mają wpływać<br />
+   na budowanie oferty dla apteki internetowej oraz aktualziacji cen.<br />
+   Domyślnie opcja jest włączona i żadne produkty z ustawionymi ostrzeżeniami<br />
+   nie zostaną dopuszczone do oferty internetowej. Ostrzeżniami zarządzamy<br />
+   opcją "Blokada ostrzeżeń dla leków", dostępną w APW45/Reguły/Towary<br />
+   w sekcji "Zarządzanie automatem do budowania oferty".<br />
+<br />
+<h3>---------------------------- Zmiany w module APW68 -----------------------------</h3><br />
+2020.06.03 [2020.3.3.2]<br />
+  - Optymalizacja procesu generowania raportu stanów magazynowych dla bazy Oracle.<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2020.06.02<br />
+  ApwPlus [2020.3.3.2]<br />
+  - Uaktualniono strukturę bazy danych<br />
+<br />
+</body></html>

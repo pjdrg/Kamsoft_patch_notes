@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2024.0.3.0</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2024.02.22<br />
+  ApwFN.dll [2024.0.3.0]<br />
+  - Uaktualniono mechanizm wykonywania zleceń.<br />
+<br />
+  Zasoby.dll [2024.0.3.0]<br />
+  - Aktualizacja opisów opcji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2024.02.22 [2024.0.3.0]<br />
+  - Dodano automatyczną zmianę taxy laborum przy uruchomieniu APW11 - Sprzedaż.<br />
+    Funkcja zadziała jednorazowo, od 2.03.2024 roku.<br />
+    Po zalogowaniu pojawi się pytanie, czy oprócz zmiany wartości taxy<br />
+    (12.33 -> 31.81 oraz 24.66 -> 63.63) dla leków recepturowych refundowanych,<br />
+    zmienić również dla leków pełnopłatnych.<br />
+    Dodatkowo, wraz ze zmianą taxy zostanie zmieniony parametr APW11.6.1.7<br />
+    "Maksymalna kwota marży dla refundowanych leków recepturowych" na 63.63 zł.<br />
+    W razie potrzeby można zmienić wartość ww wartości ręcznie, za pomocą opcji<br />
+    znajdujących się w module Apw41 Administrator -> Opcje modułów -><br />
+    APW11 - Sprzedaż -> 6. Receptura -> 3. Tabela leków refundowanych<br />
+    i 4. Tabela leków pełnopłatnych, a także 1. Leki refundowane -><br />
+    7. Maksymalna kwota marży dla refundowanych leków recepturowych.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2024.02.22 [2024.0.3.0]<br />
+  - Uwzględniono nowe wartości taxy laborum w kontroli zestawienia<br />
+    refundacyjnego<br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2024.02.22 [2024.0.3.0]<br />
+  - Wyłączono nieużywane opcje APW11.6.5.9 oraz APW11.6.6.3.<br />
+<br />
+</body></html>

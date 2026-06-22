@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2021.2.1.7</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2021.08.05<br />
+  Slowniki.dll [2021.2.1.7]<br />
+  - Wprowadzenie nowej licencji KS-OmniPharm "Kontrola sprzedaży dla podmiotów".<br />
+<br />
+  Zasoby.dll [2021.2.1.7]<br />
+  - Uzupełnienie opisu opcji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2021.08.05 [2021.2.1.7]<br />
+  - Sprzedaż wiązana: poprawa weryfikacji warunków sprzedaży wiązanej<br />
+    w przypadku braku karty towaru w kartotece lokalnej.<br />
+  - Operacje magazynowe: blokada wystawiania MM na osobę fizyczną.<br />
+  - KtoMaLek: przebudowa procesu prezentacji informacji dla farmaceutów w module<br />
+    sprzedaży.<br />
+  - KS-OmniPharm: wprowadzona weryfikacja sprzedaży podczas próby wystawienia<br />
+    faktury VAT na podstawie konfiguracji usługi "Kontrola sprzedaży".<br />
+  - Podstawowa sprzedaż leków: usprawnienia w procesie inicjalizacji sprzedaży.<br />
+  - Poprawa wybierania dostawy za pomocą czytnika kodów. W przypadku kilku <br />
+    pozycji z tą samą serią program wybierał dostawę z ilością mniejszą niż 1.<br />
+    Po zmianie algorytm będzie wybierał dostawę z ilością > 1 z zachowanie<br />
+    odpowiednich opcji dla pobierania partii zakupu do sprzedaży (data ważności/<br />
+    data zakupu).<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2021.08.05 [2021.2.1.7]<br />
+  - Generowanie raportów JPK_MAG.<br />
+    Uzupełnienie nagłówka dokumentu o element - Poczta.<br />
+    Poprawiono generowanie raporów JPK_FA/MAG z zapisem do KS-EDE.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW23 -----------------------------</h3><br />
+2021.08.05 [2021.2.1.7]<br />
+  - Wydruki z menu "Przychód / rozchód (Dz.U. 169/2006)" oraz z menu <br />
+    "Przychód / rozchód (wzór uproszczony)": usprawnienia w ustalaniu wartości<br />
+    wyliczenia stanu magazynowego na dany dzień.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2021.08.05 [2021.2.1.7]<br />
+  - Dodanie parametru APW11.3.1.43 "Blokada sprzedaży na zapotrzebowanie bez<br />
+    wystawienia faktury".<br />
+  - Dodanie parametru APW11.3.1.44 "Blokada sprzedaży na receptę weterynaryjną<br />
+    ad usum proprium bez wystawienia faktury".<br />
+  - Dodanie parametru APW11.3.1.45 "Blokada zmiany nabywcy w dniu kolejnym<br />
+    następującym po wystawieniu faktury".<br />
+  - Dodanie parametru APW11.3.1.46 "Usługa "Kontrola sprzedaży dla podmiotów":<br />
+    Pozwól pominąć blokadę w przypadku odmowy".<br />
+<br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2021.08.05 [2021.2.1.7]<br />
+  - KtoMaLek: przebudowa procesu prezentacji informacji dla farmaceutów w module<br />
+    sprzedaży.<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2021.08.05<br />
+  ApwPlus.exe [2021.2.1.7]<br />
+  - Uaktualniono strukturę bazy danych.<br />
+<br />
+</body></html>

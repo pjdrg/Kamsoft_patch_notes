@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2024.1.2.6</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2024.10.30<br />
+  Slowniki.dll [2024.1.2.6]<br />
+  - Dodano uprawnienie [42-0057] Zmiana haseł do bazy danych.<br />
+  - Optymalizacja procesu wczytywania parametrów zamówień automatycznych<br />
+    pharmind GRID.<br />
+<br />
+  ApwHarm.dll [2024.1.2.6]<br />
+  - Optymalizacja procesu wczytywania parametrów zamówień automatycznych<br />
+    pharmind GRID.<br />
+<br />
+  Zasoby.dll [2024.1.2.6]<br />
+  - Aktualizacja opisów opcji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2024.10.30 [2024.1.2.6]<br />
+  - Okno e-Recepty: dodano informację (w postaci ikony przecinających się<br />
+    strzałek) o leku zaordynowanym, znajdującym się na liście towarów,<br />
+    które powinny być zmienione przy wydaniu na inny towar w ramach Sugestii<br />
+    Sprzedaży (KS-OmniPharm). Opcja będzie domyślnie wyłączona.<br />
+  - Okno e-Recepty: dodano informację o dostępności synonimu, który jest towarem<br />
+    zalegającym lub towarem z krótkim terminem ważności. Opcja będzie domyślnie<br />
+    włączona.<br />
+  - Rozwiązano problem wyświetlania się komunikatu zawierającego obszerną listę<br />
+    leków przeterminowanych pojawiającego się podczas zatwierdzania dokumentu<br />
+    magazynowego. Komunikat ten pojawia się gdy na zatwierdzanym dokumencie są<br />
+    pozycje z lekami przeterminowanymi.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW12 -----------------------------</h3><br />
+2024.10.30 [2024.1.2.6]<br />
+  - Rozwiązano problem z wyliczeniem ilości w drodze w oknie listy braków.<br />
+  - Optymalizacja procesu wczytywania parametrów zamówień automatycznych<br />
+    pharmind GRID.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2024.10.30 [2024.1.2.6]<br />
+  - Rozwiązano problem wyświetlania się komunikatu zawierającego obszerną listę<br />
+    leków przeterminowanych pojawiającego się podczas zatwierdzania przyjęcia<br />
+    dokumentu. Komunikat ten pojawia się gdy na zatwierdzanym dokumencie są<br />
+    pozycje z lekami przeterminowanymi.<br />
+  - Giełda pomysłów: w reklamacjach dodano usprawnienie umożliwiające<br />
+    automatyczne uzupełnienie danych (faktyczny numer serii i faktyczna<br />
+    data ważności) po zeskanowaniu kodu 2D reklamowanego towaru, zamiast<br />
+    ręcznego wprowadzania wartości.<br />
+  - Optymalizacja procesu wczytywania parametrów zamówień automatycznych<br />
+    pharmind GRID.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW14 -----------------------------</h3><br />
+2024.10.30 [2024.1.2.6]<br />
+  - Dodano możliwość zatwierdzania dokumentu różnic remanentowych zawierający<br />
+    pozycję leku przeterminowanego, gdzie następuje zerowanie serii, czyli<br />
+    ilość faktyczna = 0. W ostatniej wersji pozycja taka była blokowana bo<br />
+    po wysyłce do ZSMOPL generowała błąd TROSPOZ78.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2024.10.30 [2024.1.2.6]<br />
+  - Dodano opcję APW11.2.173: Wyróżniaj towar do zamiany w ramach sugestii<br />
+    sprzedaży w oknie e-Recepty.<br />
+  - Dodano opcję APW11.2.174: Okno e-Recepty: Wyświetlanie podpowiedzi<br />
+    o dostępności towarów zalegających i towarów z krótkim terminem ważności.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW42 -----------------------------</h3><br />
+2024.10.30 [2024.1.2.6]<br />
+  - Dodano funkcję umożliwiającą zmianę haseł bazodanowych.<br />
+    Funkcja jest dostępna dla użytkowników posiadających uprawnienie<br />
+    "42-0057 Zmiana haseł do bazy danych" w lokalizacji:<br />
+    Apw42 -> Narzędzia -> Zmiana haseł do bazy danych.<br />
+    Zmiana hasła powinna być wykonywana po zamknięciu wszystkich <br />
+    programów łączących się z bazą danych.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW68 -----------------------------</h3><br />
+2024.10.30 [2024.1.2.6]<br />
+  - Dostosowanie funkcji generowania raportu obrotów i stanów do przesyłania<br />
+    dokumentu różnic remanentowych zawierająca pozycję leku przeterminowanego<br />
+    gdzie następuję zerowanie serii.<br />
+<br />
+<h3>--------------------------------- Zmiany w EDE ---------------------------------</h3><br />
+2024.10.30 [2024.2.3.1]<br />
+  - Eksport do KS-FKW(xml) do sekcji kartoteka kontrahenta został dodany nowy<br />
+    węzeł "nr-fk", w którym będzie przekazywany identyfikator kontrahenta<br />
+    w systemie FK.<br />
+<br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2024.10.30 [2024.1.2.6]<br />
+  - Pharmind grid: Optymalizacja serwisowego procesu raportowania brakujących<br />
+    transakcji sprzedaży.<br />
+  - Pharmind grid: Optymalizacja planu zapytania SQL w funkcjonalności obsługi<br />
+    komunikatów dla farmaceutów.<br />
+  - Optymalizacja procesu wczytywania parametrów zamówień automatycznych<br />
+    pharmind GRID.<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2024.10.30<br />
+  ApwPlus [2024.1.2.6]<br />
+  - Zaktualizowano strukturę bazy danych.<br />
+<br />
+</body></html>

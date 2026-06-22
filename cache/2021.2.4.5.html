@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2021.2.4.5</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2021.12.01<br />
+  ApwHarm.dll [2021.2.4.5]<br />
+  - Poprawiono mechanizm wysyłania kategorii w paczkach na stronę WWW dla <br />
+    funkcji wysłania oferty internetowej. Wcześniej nie wysyłało wszystkich <br />
+    pozycji dla kategorii przy włączonej opcji dzielenia na paczki. <br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2021.12.01 [2021.2.4.5]<br />
+  - eZWM/Wniosek:<br />
+    * Zoptymalizowano zapytanie filtrujące listę towarów podczas realizacji <br />
+      zlecenia (opcja Apw11.2.160).<br />
+    * Poprawiono ostrzeżenie o maksymalnej cenie detalicznej wynikającej <br />
+      z umowy.<br />
+    * Należy pamiętać, aby podczas realizacji zlecenia (zarówno poprzez eZWM <br />
+      jak i Wniosek) operować ceną detaliczną za sztukę. Jeżeli jednostką <br />
+      apteczną jest opakowanie, należy ustalić odpowiednie wartości dla pola <br />
+      Mnożnik apteczny na kartach towarów lub uzupełnić pole Mnożnik lekospisowy<br />
+      podczas przyjęcia towaru. W przeciwnym razie cena zostanie obliczona za <br />
+      opakowanie, a nie tak jak powinno być, czyli za sztukę.   <br />
+<br />
+<h3>---------------------------- Zmiany w module APW23 -----------------------------</h3><br />
+2021.12.01 [2021.2.4.5]<br />
+  - Retaksacja Recept: poprawa paska postępu. Program błędnie zliczał recepty <br />
+    w przypadku włączonego zakresu (filtra) na realizacje niezweryfikowane. <br />
+<br />
+<h3>---------------------------- Zmiany w module APW45 -----------------------------</h3><br />
+2021.12.01 [2021.2.4.5]<br />
+  - Poprawiono mechanizm wysyłania kategorii w paczkach na stronę WWW.<br />
+    Wcześniej nie wysyłało wszystkich pozycji dla kategorii przy włączonej<br />
+    opcji dzielenia na paczki.<br />
+  - Poprawiono dla mechanizmu zarządzania serwerami możliwość prezentacji<br />
+    zamówień z zakodowanym adresem serwera oraz poprawiono mechanizm zmiany<br />
+    przypisanego serwera, tak żeby jego zmiana zmieniała jego identyfikator<br />
+    serwera, a nie zakodowany adres serwera w trybie pracy z zarządzaniem<br />
+    serwerami. <br />
+<br />
+</body></html>
