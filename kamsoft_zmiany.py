@@ -157,7 +157,7 @@ def discover(lata, force=False, pg=6, ng=6, mg=4):
 HEADER_RE = re.compile(r"-{3,}.*?miany.*?-{0,}", re.IGNORECASE)
 DASHES_RE = re.compile(r"[-—=]{2,}")
 MODULE_RE = re.compile(r"\b(APW\d+|KS-[A-Z]+)\b")
-ANCHOR_RE = re.compile(r"^\s*(\d{4}\.\d{2}\.\d{2}|\S+\.(dll|exe|ocx)\b|\[\d|-\s)", re.I)
+ANCHOR_RE = re.compile(r"^\s*(\d{4}\.\d{2}\.\d{2}|\S+\.(dll|exe|ocx)\b|\[\d|[-*]\s)", re.I)
 
 
 def reflow(lines):
@@ -232,10 +232,16 @@ def build_dataset(meta):
         except Exception as e:
             print(f"  ! parse {wersja}: {e}")
             continue
+        # Data publikacji = najnowsza data RRRR.MM.DD w tresci changeloga
+        # (Kamsoft pisze ja pod naglowkiem). Fallback: data pobrania z meta.
+        wszystkie_daty = []
+        for s in sekcje:
+            wszystkie_daty += re.findall(r"(?<!\d\.)\b(\d{4}\.\d{2}\.\d{2})(?!\.\d)", s["body"])
+        data_pub = max(wszystkie_daty) if wszystkie_daty else meta.get(wersja, "")
         rows.append({
             "wersja": wersja,
             "tytul": tytul,
-            "data": meta.get(wersja, ""),
+            "data": data_pub,
             "sekcje": sekcje,
         })
     rows.sort(key=lambda r: version_key(r["wersja"]), reverse=True)
@@ -324,6 +330,12 @@ HTML_TMPL = r"""<!doctype html>
   ul.chg li:last-child{margin-bottom:0}
   ul.chg li::before{content:"";position:absolute;left:4px;top:.62em;
     width:6px;height:6px;border-radius:50%;background:var(--bullet)}
+  ul.sub{list-style:none;margin:7px 0 4px;padding:0}
+  ul.sub li{position:relative;padding-left:18px;margin:0 0 6px;
+    line-height:1.55;color:var(--soft)}
+  ul.sub li:last-child{margin-bottom:2px}
+  ul.sub li::before{content:"";position:absolute;left:3px;top:.62em;
+    width:5px;height:5px;border-radius:1px;background:var(--mut)}
   .cont{padding-left:20px;color:var(--soft);line-height:1.6;margin:0 0 8px}
   mark{background:var(--hit);color:#111;border-radius:3px;padding:0 2px}
   .empty{color:var(--mut);text-align:center;padding:60px 0}
@@ -367,14 +379,21 @@ if(!saved){
 applyTheme(saved);
 tbtn.onclick = ()=>applyTheme(root.getAttribute("data-theme") === "dark" ? "light" : "dark");
 
-/* ---------- przeczytane (NOWE = nieodznaczone) ---------- */
+/* ---------- NOWE = opublikowane w ostatnich N dni i nieodznaczone ---------- */
+const NOWE_DNI = __NOWEDNI__;
 let read = new Set();
 try{ read = new Set(JSON.parse(localStorage.getItem("ksaow-read") || "[]")); }catch(e){}
 function saveRead(){ try{ localStorage.setItem("ksaow-read", JSON.stringify([...read])); }catch(e){} }
-function isNew(v){ return !read.has(v.wersja); }
-function toggleRead(ver){ if(read.has(ver)) read.delete(ver); else read.add(ver); saveRead(); render(); }
+function recent(v){
+  if(!v.data) return false;
+  const d = new Date(v.data.replace(/\./g, "-") + "T00:00:00");
+  if(isNaN(d)) return false;
+  return (Date.now() - d.getTime()) <= NOWE_DNI * 86400000;
+}
+function isNew(v){ return recent(v) && !read.has(v.wersja); }
+function toggleRead(ver){ read.has(ver) ? read.delete(ver) : read.add(ver); saveRead(); render(); }
 document.getElementById("markall").onclick = ()=>{
-  DATA.forEach(v => read.add(v.wersja)); saveRead(); render();
+  DATA.forEach(v => { if(recent(v)) read.add(v.wersja); }); saveRead(); render();
 };
 
 /* ---------- panel lat ---------- */
@@ -426,33 +445,41 @@ const reFile = /\.(dll|exe|ocx)\b/i;
 
 /* zamien tekst body (1 logiczna pozycja / linia) na strukture data->plik->bullety */
 function renderBody(body, term){
-  const lines = body.split("\n").filter(l => l.trim() !== "");
-  let html = "", openUl = false, openGrp = false;
-  const closeUl = ()=>{ if(openUl){ html += "</ul>"; openUl = false; } };
-  const closeGrp = ()=>{ closeUl(); if(openGrp){ html += "</div>"; openGrp = false; } };
+  const lines = body.split("\n").map(l => l.trim()).filter(Boolean);
+  let html = "", inGrp = false, inUl = false, inSub = false, liOpen = false;
+  const closeSub = ()=>{ if(inSub){ html += "</ul>"; inSub = false; } };
+  const closeLi  = ()=>{ closeSub(); if(liOpen){ html += "</li>"; liOpen = false; } };
+  const closeUl  = ()=>{ closeLi(); if(inUl){ html += "</ul>"; inUl = false; } };
+  const closeGrp = ()=>{ closeUl(); if(inGrp){ html += "</div>"; inGrp = false; } };
+  const ensureGrp = ()=>{ if(!inGrp){ html += `<div class="grp">`; inGrp = true; } };
 
-  for(const ln of lines){
-    const s = ln.trim();
+  for(const s of lines){
     if(reDate.test(s)){
       closeGrp();
-      let head = s, ver = "";
-      const m = s.match(reVer);
+      let head = s, ver = ""; const m = s.match(reVer);
       if(m){ ver = m[1]; head = s.replace(reVer,"").trim(); }
       html += `<div class="grp"><div class="dt">${hl(head,term)}` +
               (ver?` <span class="ver-in">[${esc(ver)}]</span>`:``) + `</div>`;
-      openGrp = true;
-    } else if(reFile.test(s) && !s.startsWith("-")){
-      closeUl();
-      if(!openGrp){ html += `<div class="grp">`; openGrp = true; }
+      inGrp = true;
+    } else if(reFile.test(s) && !/^[-*]/.test(s)){
+      closeUl(); ensureGrp();
       html += `<div class="file">${hl(s,term)}</div>`;
-    } else if(s.startsWith("-")){
-      if(!openGrp){ html += `<div class="grp">`; openGrp = true; }
-      if(!openUl){ html += `<ul class="chg">`; openUl = true; }
-      html += `<li>${hl(s.replace(/^-\s*/,""),term)}</li>`;
+    } else if(/^-\s?/.test(s)){
+      ensureGrp();
+      if(!inUl){ html += `<ul class="chg">`; inUl = true; }
+      closeLi();
+      html += `<li>${hl(s.replace(/^-\s*/,""),term)}`;   // li zostaje otwarte na pod-punkty
+      liOpen = true;
+    } else if(/^\*\s?/.test(s)){
+      ensureGrp();
+      if(!inUl){ html += `<ul class="chg">`; inUl = true; }
+      if(!liOpen){ html += `<li>`; liOpen = true; }       // pod-punkt bez rodzica
+      if(!inSub){ html += `<ul class="sub">`; inSub = true; }
+      html += `<li>${hl(s.replace(/^\*\s*/,""),term)}</li>`;
     } else {
-      if(!openGrp){ html += `<div class="grp">`; openGrp = true; }
-      closeUl();
-      html += `<div class="cont">${hl(s,term)}</div>`;
+      ensureGrp();
+      if(liOpen){ closeSub(); html += ` ${hl(s,term)}`; }
+      else { closeUl(); html += `<div class="cont">${hl(s,term)}</div>`; }
     }
   }
   closeGrp();
@@ -470,6 +497,7 @@ function render(){
   DATA.forEach(v => {
     if(!selYears.has(v.wersja.split(".")[0])) return;
     const vNew = isNew(v);
+    const vRecent = recent(v);
     if(onew && !vNew) return;
     const secs = v.sekcje.filter(s => {
       if(mod && (s.module||"Ogolne") !== mod) return false;
@@ -486,11 +514,13 @@ function render(){
       `<span class="vname">${esc(v.wersja)}</span>` +
       (vNew ? `<span class="badge new">NOWE</span>` : ``) +
       `<span class="vmeta">${secs.length} ${secs.length===1?"modul":"modulow"}${v.data?` &middot; ${v.data}`:``}</span>`;
-    const mb = document.createElement("button");
-    mb.className = "mark";
-    mb.textContent = vNew ? "✓ przeczytane" : "↺ nowe";
-    mb.onclick = (e)=>{ e.preventDefault(); e.stopPropagation(); toggleRead(v.wersja); };
-    sum.appendChild(mb);
+    if(vRecent){
+      const mb = document.createElement("button");
+      mb.className = "mark";
+      mb.textContent = read.has(v.wersja) ? "↺ przywróc" : "✓ przeczytane";
+      mb.onclick = (e)=>{ e.preventDefault(); e.stopPropagation(); toggleRead(v.wersja); };
+      sum.appendChild(mb);
+    }
     d.appendChild(sum);
 
     secs.forEach(s => {
@@ -522,13 +552,12 @@ render();
 """
 
 
-def generate_html(rows, out_path=None):
+def generate_html(rows, out_path=None, nowe_dni=7):
     payload = []
     for r in rows:
         payload.append({
             "wersja": r["wersja"],
             "data": r["data"],
-            "nowe": r.get("nowe", False),
             "sekcje": [{"name": s["name"], "module": s.get("module", "Ogolne"),
                         "body": s["body"]} for s in r["sekcje"]],
         })
@@ -536,6 +565,7 @@ def generate_html(rows, out_path=None):
     html = (HTML_TMPL
             .replace("__NVER__", str(len(rows)))
             .replace("__BUILD__", build)
+            .replace("__NOWEDNI__", str(nowe_dni))
             .replace("__DATA__", json.dumps(payload, ensure_ascii=False)))
     target = Path(out_path) if out_path else OUT
     target.write_text(html, "utf-8")
@@ -563,6 +593,8 @@ def main():
                     help="pobierz ponownie nawet to co jest w cache")
     ap.add_argument("--out", default=None,
                     help="nazwa pliku wyjsciowego (np. index.html dla GitHub Pages)")
+    ap.add_argument("--nowe-dni", type=int, default=7, dest="nowe_dni",
+                    help="ile dni od publikacji wersja jest oznaczona jako NOWE (domyslnie 7)")
     args = ap.parse_args()
 
     lata = args.lata if args.lata else list(range(args.do_roku, args.od_roku - 1, -1))
@@ -579,7 +611,7 @@ def main():
         print("Brak danych. Sprobuj np.: --od-roku 2019")
         sys.exit(1)
 
-    out = generate_html(rows, args.out)
+    out = generate_html(rows, args.out, args.nowe_dni)
     print(f"\nGotowe: {out}  ({len(rows)} wersji)")
 
 
