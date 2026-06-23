@@ -273,23 +273,22 @@ HTML_TMPL = r"""<!doctype html>
   body{margin:0;background:var(--bg);color:var(--txt);
     font:15px/1.55 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
   header{position:sticky;top:0;z-index:5;background:var(--hdrbg);
-    backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:14px 18px}
-  h1{font-size:16px;margin:0 0 10px;font-weight:600;letter-spacing:.2px;
-    display:flex;align-items:center;gap:8px}
-  h1 small{color:var(--mut);font-weight:400}
-  .controls{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+    backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:7px 12px}
+  .bar{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
   input,select,button{background:var(--panel2);color:var(--txt);border:1px solid var(--line);
-    border-radius:8px;padding:8px 10px;font-size:14px;outline:none}
+    border-radius:7px;padding:5px 8px;font-size:13px;outline:none;line-height:1.2}
   input:focus,select:focus{border-color:var(--acc)}
-  #q{flex:1;min-width:220px}
+  #q{flex:1 1 180px;min-width:140px}
   button{cursor:pointer}
   button:hover{border-color:var(--acc)}
-  #theme{margin-left:auto;font-size:13px;min-width:96px}
-  .chk{display:flex;align-items:center;gap:6px;color:var(--mut);font-size:13px;user-select:none}
-  /* panel lat */
-  .years{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 10px}
+  #theme{padding:5px 8px;font-size:14px;line-height:1}
+  .chk{display:flex;align-items:center;gap:5px;color:var(--mut);font-size:12px;
+    user-select:none;white-space:nowrap}
+  .count{color:var(--mut);font-size:12px;white-space:nowrap;margin-left:auto}
+  /* lata – kompaktowe, w tym samym rzedzie */
+  .years{display:flex;gap:4px;flex-wrap:wrap;align-items:center}
   .ybtn{background:var(--panel2);border:1px solid var(--line);color:var(--mut);
-    border-radius:20px;padding:5px 12px;font-size:13px;font-weight:600;cursor:pointer}
+    border-radius:20px;padding:4px 9px;font-size:12px;font-weight:600;cursor:pointer;line-height:1.1}
   .ybtn.on{background:color-mix(in srgb,var(--acc) 16%,transparent);
     border-color:var(--acc);color:var(--acc)}
   .ybtn.ghost{font-weight:400;color:var(--mut)}
@@ -339,24 +338,22 @@ HTML_TMPL = r"""<!doctype html>
   .cont{padding-left:20px;color:var(--soft);line-height:1.6;margin:0 0 8px}
   mark{background:var(--hit);color:#111;border-radius:3px;padding:0 2px}
   .empty{color:var(--mut);text-align:center;padding:60px 0}
-  .count{color:var(--mut);font-size:12px;margin:6px 2px}
   footer{color:var(--mut);font-size:11px;text-align:center;padding:24px}
 </style>
 </head>
 <body>
 <header>
-  <h1>Zmiany KS-AOW <small>— przegladarka changelogow &middot; __NVER__ wersji</small>
-    <button id="theme" title="Przelacz motyw">&#9790; Ciemny</button></h1>
-  <div class="years" id="years"></div>
-  <div class="controls">
-    <input id="q" placeholder="Szukaj (np. ZSMOPL, KSeF, APW21, refundacja)…" autocomplete="off">
-    <select id="mod"><option value="">— wszystkie moduly —</option></select>
-    <label class="chk"><input type="checkbox" id="onlynew"> tylko nowe</label>
-    <button id="markall" title="Oznacz wszystkie jako przeczytane">Odznacz wszystkie</button>
-    <button id="expand">Rozwin</button>
-    <button id="collapse">Zwin</button>
+  <div class="bar">
+    <input id="q" placeholder="Szukaj (ZSMOPL, KSeF, APW21…)" autocomplete="off">
+    <select id="mod"><option value="">moduły</option></select>
+    <div class="years" id="years"></div>
+    <label class="chk"><input type="checkbox" id="onlynew"> nowe</label>
+    <button id="markall" title="Oznacz wszystkie jako przeczytane">Odznacz</button>
+    <button id="expand" title="Rozwiń wszystkie">Rozwiń</button>
+    <button id="collapse" title="Zwiń wszystkie">Zwiń</button>
+    <button id="theme" title="Przełącz motyw">&#9790;</button>
+    <span class="count" id="count"></span>
   </div>
-  <div class="count" id="count"></div>
 </header>
 <main id="app"></main>
 <footer>Wygenerowano __BUILD__ &middot; zrodlo: aktualizator-aow.kamsoft.pl</footer>
@@ -368,7 +365,8 @@ const DATA = __DATA__;
 const root = document.documentElement, tbtn = document.getElementById("theme");
 function applyTheme(t){
   root.setAttribute("data-theme", t);
-  tbtn.innerHTML = t === "dark" ? "&#9790; Ciemny" : "&#9728; Jasny";
+  tbtn.innerHTML = t === "dark" ? "&#9790;" : "&#9728;";
+  tbtn.title = t === "dark" ? "Motyw ciemny — kliknij dla jasnego" : "Motyw jasny — kliknij dla ciemnego";
   try{ localStorage.setItem("ksaow-theme", t); }catch(e){}
 }
 let saved = null;
