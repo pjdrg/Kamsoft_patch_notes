@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2026.2.1.4</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2026.07.16 <br />
+  Slowniki.dll [2026.2.1.4]<br />
+  - Rozwiązano problem z prezentacją okna do zarządzania opcjami dla listów<br />
+    przewozowych. Okno jest dostępne z poziomu modułu "APW45 - Apteka<br />
+    internetowa -> Reguły -> Listy przewozowe".<br />
+<br />
+  Zasoby.dll [2026.2.1.4]<br />
+  - Aktualizacja opisów opcji.<br />
+  <br />
+  ApwFN.dll [2026.2.1.4]<br />
+  - Dla zleceń uprawnień i opcji, zaktualizowano ich opisy by zapewnić zgodność<br />
+    z aktualną lista opcji i uprawnień.<br />
+<br />
+  APWIAP.DLL [2026.2.1.4]<br />
+  - Rozwiązano problem z zarządzania pakowaniem zamówień internetowych.<br />
+    Problem był spowodowany błędnym pobieraniem ilości do pakowania oraz drugi<br />
+    problem był z wyborem dostawy w oknie pakuj spowodowany złą prezentacją<br />
+    danych na bazie Oracle. Okno Pakowania jest dostępne z poziomu modułu<br />
+    "APW45 - Apteka internetowa -> Zamówienia -> Pakuj".<br />
+<br />
+  ApwHarm.dll [2026.2.1.4]<br />
+  - Rozwiązano problem z zarządzaniem typem dokumentu dla funkcji poobierania<br />
+    zamówień internetowych dla zadania pobierania zamówień ze strony<br />
+    internetowej. "Zarządzanie półkami". Zamówienia pobieramy zadaniem "Pobierz<br />
+    zamówienia ze strony WWW" z aplikacji APWPLAN – Harmonogram zadań.<br />
+<br />
+  ApwMain, Wautil, ApwControl, ApwHarmPush, ApwPlan, ApwPlanWorker, pharmindXF,<br />
+  MVServer, Apw_SC [2026.2.1.4]<br />
+  - Dostosowanie interfejsów do wprowadzonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2026.07.16 [2026.2.1.4]<br />
+  - Dodano możliwość nieprzekazywania danych apteki jako Podmiot3 w fakturze<br />
+    ustrukturyzowanej wysyłanej do KSeF, jeżeli adres sprzedawcy jest identyczny<br />
+    z adresem apteki (miejsca wykonywania sprzedaży).<br />
+  - Zoptymalizowano proces wystawiania korekty w operacjach magazynowych.<br />
+    W pewnych sytuacjach proces generowania korekty trwał kilka minut.<br />
+  - W operacjach magazynowych dla korekty przywrócono widoczność klawisza<br />
+    wydruku dla faktury KSeF.<br />
+  - Rozwiązano problem z przekazywaniem formy płatności dla faktury<br />
+    ustrukturyzowanej do KSeF. W opisie formy zapłaty przekazywało się "korekta<br />
+    zaliczki na lek" zamiast "gotówka". Problem dotyczył faktur powstałych<br />
+    przy wyciąganiu z kolejki i pobraniu niefiskalnej zaliczki (opcja APW11.4.15<br />
+    wyłączona; brak faktury zaliczkowej).<br />
+  - Modyfikacja w zakresie KS-APTIX: rozwiązano problem przerywania wczytywania<br />
+    paczek skanów zawierających niepoprawne dane np. niepoprawny kod EAN<br />
+    lub zbyt długi numer serii. Wprowadzono usprawnienia pozwalające<br />
+    na przetwarzaniu całej paczki skanów nawet w sytuacji, gdy pojedynczy skan<br />
+    nie może zostać zapisany. Funkcjonalność wprowadzona w celu zwiększenia<br />
+    stabilności pracy systemu podczas obsługi dużych wolumenów skanów.<br />
+  - Modyfikacja w zakresie KS-APTIX: zmodyfikowano sposób wczytywania korekt<br />
+    skanów zwiększającą wydajność procesu.<br />
+  - Modyfikacja w zakresie KS-APTIX: dodano możliwość jednoczesnego<br />
+    przetwarzania wielu paczek skanów, co przyspiesza proces obsługi<br />
+    kompletacji.<br />
+  - Zoptymalizowano proces serializacji leków po fiskalizacji. Przy dużych<br />
+    bazach proces wycofywania kodów w NMVS/KOWAL po fiskalizacji potrafił trwać<br />
+    kilkanaście sekund.<br />
+  - Dodano integrację z usługą pharmind EDI umożliwiającą elektroniczną wymianę<br />
+    dokumentów z dostawcami. Funkcjonalność wspiera proces składania zamówień<br />
+    oraz obsługę list braków.<br />
+  - Dodano obsługę kodów GS1 Digital Link odczytywanych z opakowania produktów.<br />
+  - Rozwiązano problem z rozdzielaniem dokumentów finansowych przypisanych<br />
+    do zamówień internetowych w momencie generowania dokumentów sprzedaży.<br />
+    Dokumenty sprzedaży generujemy w oknie "Ctrl+K" z poziomu "APW11-Sprzedaż -><br />
+    Operacje magazynowe" oraz z poziomu "APW11-Sprzedaż -> Podstawowa sprzedaż".<br />
+  - Rozwiązano problem z wolnym wykonywaniem analizy dla ZSMOPL sprawdzania<br />
+    obrotu za dzień. Analiza wykonywana jest podczas uruchamiania modułu<br />
+    APW11 – Sprzedaż.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW12 -----------------------------</h3><br />
+2026.07.16 [2026.2.1.4]<br />
+  - Prospekty KS-ZSA – Dodano zabezpieczenie w czasie zatwierdzania prospektu<br />
+    w przypadku błędu podczas ładowania wymaganych komponentów.<br />
+  - Dodano integrację z usługą pharmind EDI umożliwiającą elektroniczną wymianę<br />
+    dokumentów z dostawcami. Funkcjonalność wspiera proces składania zamówień<br />
+    oraz obsługę list braków.<br />
+  - Modyfikacja w zakresie zamówień automatycznych pharmind GRID: przyśpieszono<br />
+    proces aktualizacji promocji podczas procesu konfiguracji akcji<br />
+    sprzedażowej.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2026.07.16 [2026.2.1.4]<br />
+  - Modyfikacja w zakresie KS-APTIX: rozwiązano problem przerywania wczytywania<br />
+    paczek skanów zawierających niepoprawne dane np. niepoprawny kod EAN<br />
+    lub zbyt długi numer serii. Wprowadzono usprawnienia pozwalające<br />
+    na przetwarzaniu całej paczki skanów nawet w sytuacji, gdy pojedynczy skan<br />
+    nie może zostać zapisany. Funkcjonalność wprowadzona w celu zwiększenia<br />
+    stabilności pracy systemu podczas obsługi dużych wolumenów skanów.<br />
+  - Modyfikacja w zakresie KS-APTIX: zmodyfikowano sposób wczytywania korekt<br />
+    skanów zwiększającą wydajność procesu.<br />
+  - Modyfikacja w zakresie KS-APTIX: dodano możliwość jednoczesnego<br />
+    przetwarzania wielu paczek skanów, co przyspiesza proces obsługi dostaw.<br />
+  - Modyfikacja w zakresie KS-APTIX: rozbudowano okno listy skanów, dodano<br />
+    filtrowanie skanów po kluczowych parametrach: EAN, odczytany kod, numer<br />
+    i nazwa towaru, numer serii oraz notatka, dodano nowe statusy wskazujące,<br />
+    że skan pierwotny został usunięty.<br />
+  - Karta zakupu: poprawiono wyświetlanie ceny z cennika przypisanego<br />
+    do strategii marżowej z KS-OmniPharm.<br />
+  - Dodano integrację z usługą pharmind EDI umożliwiającą elektroniczną wymianę<br />
+    dokumentów z dostawcami. Funkcjonalność wspiera proces składania reklamacji.<br />
+  - Dodano obsługę kodów GS1 Digital Link odczytywanych z opakowania produktów.<br />
+  - Modyfikacja w zakresie zamówień automatycznych pharmind GRID: przyśpieszono<br />
+    proces aktualizacji promocji podczas procesu konfiguracji akcji<br />
+    sprzedażowej.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW14 -----------------------------</h3><br />
+2026.07.16 [2026.2.1.4]<br />
+  - Modyfikacja w zakresie KS-APTIX: rozwiązano problem przerywania wczytywania<br />
+    paczek skanów zawierających niepoprawne dane np. niepoprawny kod EAN<br />
+    lub zbyt długi numer serii. Wprowadzono usprawnienia pozwalające<br />
+    na przetwarzaniu całej paczki skanów nawet w sytuacji, gdy pojedynczy skan<br />
+    nie może zostać zapisany. Funkcjonalność wprowadzona w celu zwiększenia<br />
+    stabilności pracy systemu podczas obsługi dużych wolumenów skanów.<br />
+  - Modyfikacja w zakresie KS-APTIX: zmodyfikowano sposób wczytywania korekt<br />
+    skanów zwiększającą wydajność procesu.<br />
+  - Modyfikacja w zakresie KS-APTIX: Dodano możliwość jednoczesnego<br />
+    przetwarzania wielu paczek skanów, co przyspiesza proces obsługi<br />
+    inwentaryzacji.<br />
+  - Modyfikacja w zakresie KS-APTIX: rozbudowano okno listy skanów, dodano<br />
+    filtrowanie skanów po kluczowych parametrach: EAN, odczytany kod, numer<br />
+    i nazwa towaru, numer serii oraz notatka, dodano nowe statusy wskazujące,<br />
+    że skan pierwotny został usunięty.<br />
+  - Dodano blokadę możliwości zmiany mnożnika lekospisowego w aktualizacji karty<br />
+    zakupu w uzależnieniu od opcji oraz uprawnień.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW15 -----------------------------</h3><br />
+2026.07.16 [2026.2.1.4]<br />
+  - Dostosowanie interfejsĂłw do wprowadzonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2026.07.16 [2026.2.1.4]<br />
+  - Rozwiązano problem z przekazywaniem pozycji dla dokumentu rozchodu podczas<br />
+    tworzenia raportu JPK_MAG. Program dla tego typu dokumentu nie przekazywał<br />
+    wartości wierszy.<br />
+  - Rozwiązano problem w rejestrze dokumentów zakupu, program nieprawidłowo<br />
+    uwzględniał grupy VAT w podsumowaniu.<br />
+  - Raport w formacie SAP (wzór 3): rozbudowano generowany raport o informacje<br />
+    związane z pobieraną kaucją za opakowania zwrotne.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW22 -----------------------------</h3><br />
+2026.07.16 [2026.2.1.4]<br />
+  - Dostosowanie interfejsĂłw do wprowadzonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW23 -----------------------------</h3><br />
+2026.07.16 [2026.2.1.4]<br />
+  - Dostosowanie interfejsów do wprowadzonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW24 -----------------------------</h3><br />
+2026.07.16 [2026.2.1.4]<br />
+  - Dostosowanie interfejsów do wprowadzonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW25 -----------------------------</h3><br />
+2026.07.16 [2026.2.1.4]<br />
+  - Dostosowanie interfejsĂłw do wprowadzonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW31 -----------------------------</h3><br />
+2026.07.16 [2026.2.1.4]<br />
+  - Dostosowanie interfejsów do wprowadzonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW35 -----------------------------</h3><br />
+2026.07.16 [2026.2.1.4]<br />
+  - Dostosowano do strategii marżowych z KS-OmniPharm opartych o nowy warunek<br />
+    UCC - ceny na podstawie cenników.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2026.07.16 [2026.2.1.4]<br />
+  - Wspólne -> KSeF: dodano opcję nieprzekazywania apteki jako Podmiot3<br />
+    w fakturze ustrukturyzowanej do KSeF, gdy adres sprzedawcy jest taki sam<br />
+    jak adres miejsca sprzedaży (apteki).<br />
+<br />
+<h3>---------------------------- Zmiany w module APW42 -----------------------------</h3><br />
+2026.07.16 [2026.2.1.4]<br />
+  - Dostosowanie interfejsów do wprowadzonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW43 -----------------------------</h3><br />
+2026.07.16 [2026.2.1.4]<br />
+  - Dostosowanie interfejsów do wprowadzonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW44 -----------------------------</h3><br />
+2026.07.16 [2026.2.1.4]<br />
+  - Dostosowanie interfejsów do wprowadzonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW45 -----------------------------</h3><br />
+2026.07.16 [2026.2.1.4]<br />
+  - Rozwiązano problem z prezentacją półek w oknie "Zarządzanie półkami".<br />
+    Okno jest dostępne z poziomu modułu "APW45 - Apteka internetowa -><br />
+    Zestawienia -> Zarządzanie półkami".<br />
+  - Modyfikacja w zakresie zamówień automatycznych pharmind GRID: przyśpieszono<br />
+    proces aktualizacji promocji podczas procesu konfiguracji akcji<br />
+    sprzedażowej.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW55 -----------------------------</h3><br />
+2026.07.16 [2026.2.1.4]<br />
+  - Dostosowanie interfejsów do wprowadzonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW61 -----------------------------</h3><br />
+2026.07.16 [2026.2.1.4]<br />
+  - Dostosowanie interfejsĂłw do wprowadzonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW68 -----------------------------</h3><br />
+2026.07.16 [2026.2.1.4]<br />
+  - Dostosowanie interfejsów do wprowadzonych modyfikacji.<br />
+<br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2026.07.16 [2026.2.1.4]<br />
+  - Modyfikacja w zakresie zamówień automatycznych pharmind GRID: przyśpieszono<br />
+    proces aktualizacji promocji podczas procesu konfiguracji akcji<br />
+    sprzedażowej.<br />
+<br />
+<h3>----------------------------- Zmiany w pharmindXF ------------------------------</h3><br />
+2026.07.16 [2026.6.15.1]<br />
+  - Dostosowanie interfejsów do wprowadzonych modyfikacji.<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2026.07.16 <br />
+  ApwPlus [2026.2.1.4]<br />
+  - Aktualizacja struktury bazy danych.<br />
+  <br />
+<br />
+</body></html>
