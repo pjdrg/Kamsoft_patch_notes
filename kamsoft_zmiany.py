@@ -47,27 +47,50 @@ SESSION.headers.update({"User-Agent": "kamsoft-zmiany-viewer/1.0"})
 # odczytany jako CP1250 i ponownie zapisany jako UTF-8. Efekt: "Ĺ‚" zamiast "ł",
 # "Ä…" zamiast "ą", "Ăł" zamiast "ó". Poprawiamy to odwracajac operacje:
 # zakoduj z powrotem w CP1250 (lub latin-1) i zdekoduj jako UTF-8.
-PODEJRZANE = re.compile(r"[ÃÄÅĹĂÂ][\u0080-\u00BF\u0141-\u017C\u2013\u2014\u2018-\u201E\u2020\u2021\u2026]")
+# Zbiory znakow budujemy z tablic kodowych, zeby nie pomylic sie recznie:
+#  - "lead"  = bajty 0xC2-0xEF (poczatki sekwencji UTF-8) widziane w danym kodowaniu
+#  - "cont"  = bajty 0x80-0xBF (kontynuacje sekwencji UTF-8) widziane w danym kodowaniu
+def _zbior(enc, od, do):
+    znaki = []
+    for b in range(od, do + 1):
+        try:
+            znaki.append(bytes([b]).decode(enc))
+        except UnicodeDecodeError:
+            pass
+    return "".join(znaki)
 
 
-def _ile_podejrzanych(tekst):
-    return len(PODEJRZANE.findall(tekst))
+def _wzorzec(enc):
+    lead = _zbior(enc, 0xC2, 0xEF)
+    cont = _zbior(enc, 0x80, 0xBF)
+    return re.compile(f"[{re.escape(lead)}][{re.escape(cont)}]{{1,3}}")
+
+
+_WZORCE = [(enc, _wzorzec(enc)) for enc in ("cp1250", "latin-1")]
+
+# Naprawa jest akceptowana tylko gdy wynik miesci sie w sensownym zakresie
+# (lacinka + polskie znaki + typografia). Chroni przed przypadkowa zamiana
+# poprawnego tekstu w cyrylice/greke.
+_ROZSADNE = re.compile(r"^[\u0000-\u024F\u2010-\u203A\u20AC]*$")
 
 
 def fix_mojibake(tekst):
-    """Zwraca naprawiony tekst, jesli wykryto podwojne kodowanie.
-    Gdy tekst jest poprawny — zwraca go bez zmian (bezpieczne dla dobrych stron)."""
-    przed = _ile_podejrzanych(tekst)
-    if przed == 0:
+    """Naprawia podwojnie zakodowany tekst FRAGMENT PO FRAGMENCIE.
+    Dzieki temu dziala tez na stronach, ktore mieszaja tekst poprawny ze zepsutym
+    (naprawa calosci naraz zawodzila na takich stronach)."""
+    if not tekst:
         return tekst
-    for kodowanie in ("cp1250", "latin-1"):
-        try:
-            kandydat = tekst.encode(kodowanie).decode("utf-8")
-        except (UnicodeEncodeError, UnicodeDecodeError):
-            continue
-        # akceptuj tylko jesli faktycznie ubylo podejrzanych sekwencji
-        if _ile_podejrzanych(kandydat) < przed:
+    for enc, wzor in _WZORCE:
+        def napraw(m):
+            frag = m.group(0)
+            try:
+                kandydat = frag.encode(enc).decode("utf-8")
+            except (UnicodeEncodeError, UnicodeDecodeError):
+                return frag
+            if not _ROZSADNE.match(kandydat):
+                return frag          # np. wyszla cyrylica -> to nie byl mojibake
             return kandydat
+        tekst = wzor.sub(napraw, tekst)
     return tekst
 
 
