@@ -41,6 +41,37 @@ SESSION.headers.update({"User-Agent": "kamsoft-zmiany-viewer/1.0"})
 
 
 # --------------------------------------------------------------------------- #
+#  Naprawa podwojnie zakodowanego tekstu (mojibake)
+# --------------------------------------------------------------------------- #
+# Czesc stron Kamsoftu jest opublikowana juz zepsuta: tekst UTF-8 zostal u nich
+# odczytany jako CP1250 i ponownie zapisany jako UTF-8. Efekt: "Ĺ‚" zamiast "ł",
+# "Ä…" zamiast "ą", "Ăł" zamiast "ó". Poprawiamy to odwracajac operacje:
+# zakoduj z powrotem w CP1250 (lub latin-1) i zdekoduj jako UTF-8.
+PODEJRZANE = re.compile(r"[ÃÄÅĹĂÂ][\u0080-\u00BF\u0141-\u017C\u2013\u2014\u2018-\u201E\u2020\u2021\u2026]")
+
+
+def _ile_podejrzanych(tekst):
+    return len(PODEJRZANE.findall(tekst))
+
+
+def fix_mojibake(tekst):
+    """Zwraca naprawiony tekst, jesli wykryto podwojne kodowanie.
+    Gdy tekst jest poprawny — zwraca go bez zmian (bezpieczne dla dobrych stron)."""
+    przed = _ile_podejrzanych(tekst)
+    if przed == 0:
+        return tekst
+    for kodowanie in ("cp1250", "latin-1"):
+        try:
+            kandydat = tekst.encode(kodowanie).decode("utf-8")
+        except (UnicodeEncodeError, UnicodeDecodeError):
+            continue
+        # akceptuj tylko jesli faktycznie ubylo podejrzanych sekwencji
+        if _ile_podejrzanych(kandydat) < przed:
+            return kandydat
+    return tekst
+
+
+# --------------------------------------------------------------------------- #
 #  Pobieranie / odkrywanie wersji
 # --------------------------------------------------------------------------- #
 def fetch_one(rok, wersja, timeout=15):
@@ -52,7 +83,6 @@ def fetch_one(rok, wersja, timeout=15):
         print(f"  ! {wersja}: blad sieci ({e})")
         return None
     # Kamsoft serwuje UTF-8, ale bez naglowka charset -> requests zgaduje ISO-8859-1.
-    # Wymuszamy UTF-8, inaczej polskie znaki robia sie mojibake (oĂ³lne, RozwiÄzano...).
     r.encoding = "utf-8"
     if r.status_code == 200 and "miany" in r.text:
         return r.text
@@ -179,12 +209,13 @@ def parse_changelog(html):
     """Zwraca: (tytul, [ {name, module, body} ])  — tolerancyjnie, na bazie tekstu."""
     soup = BeautifulSoup(html, "html.parser")
     title_tag = soup.find("title")
-    tytul = title_tag.get_text(strip=True) if title_tag else ""
+    tytul = fix_mojibake(title_tag.get_text(strip=True)) if title_tag else ""
+    # naprawa stron opublikowanych przez Kamsoft z podwojnym kodowaniem
+    text = fix_mojibake(soup.get_text("\n"))
     if not tytul:
-        m = re.search(r"Zmiany w KS-AOW\s+[\d.]+", soup.get_text(" "))
+        m = re.search(r"Zmiany w KS-AOW\s+[\d.]+", text)
         tytul = m.group(0) if m else "Zmiany KS-AOW"
 
-    text = soup.get_text("\n")
     sekcje = []
     cur = {"name": "Ogolne", "module": "", "lines": []}
 
@@ -414,9 +445,10 @@ function renderYears(){
     ybar.appendChild(all);
   }
 }
+
 renderYears();
 
-/* ---------- filtry ---------- */
+/* ---------- filtry: moduly ---------- */
 const mods = new Set();
 DATA.forEach(v => v.sekcje.forEach(s => mods.add(s.module || "Ogolne")));
 const sel = document.getElementById("mod");
@@ -543,6 +575,7 @@ document.getElementById("expand").onclick = ()=>document.querySelectorAll("detai
 document.getElementById("collapse").onclick = ()=>document.querySelectorAll("details.ver").forEach(d=>d.open=false);
 let t; q.oninput = ()=>{clearTimeout(t);t=setTimeout(render,120);};
 sel.onchange = render; onlynew.onchange = render;
+
 render();
 </script>
 </body>
