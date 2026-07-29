@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2026.2.1.8</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2026.07.29<br />
+  Slowniki.dll [2026.2.1.8]<br />
+  - Dodano komunikaty informujące o konfiguracji logowania użytkowników<br />
+    do KS-AOW niezgodnej z zaleceniami CERT Polska w zakresie bezpieczeństwa<br />
+    logowania się użytkowników do systemów informatycznych.<br />
+    Wymienione w komunikacie opcje zostaną wyłączone w wydaniu KS-AOW 2027.<br />
+  - Poprawiono kopiowanie tekstu z wykorzystaniem prawego przycisku myszy<br />
+    w oknach notatek i adnotacji.<br />
+  - Na karcie pracownika dodano możliwość konfiguracji drugiego składnika<br />
+    uwierzytelniania wieloskładnikowego (MFA) metodą TOTP (jednorazowe hasła<br />
+    czasowe z aplikacji authenticator).<br />
+<br />
+  ApwIap.dll [2026.2.1.8]<br />
+  - Rozwiązano problem dla komunikacji z system WMS. Problem występował podczas<br />
+    przekazywania zamówień internetowych do systemu WMS z poziomu modułu<br />
+    "APW45 - Apteka internetowa -> Zamówienia".<br />
+<br />
+  ApwHarm.dll [2026.2.1.8]<br />
+  - Rozwiązano problem dla komunikacji z system WMS dla ApwPlan – Harmonogram<br />
+    zadań. Problem występował podczas przekazywania zamówień internetowych<br />
+    do systemu WMS zadaniem "Komunikacja z system WMS".<br />
+<br />
+  Zasoby.dll [2026.2.1.8]<br />
+  - Aktualizacja opisów opcji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2026.07.29 [2026.2.1.8]<br />
+  - Raport w formacie Comarch Optima XML (zakupy, sprzedaż): rozbudowano<br />
+    funkcjonalność automatycznego generowania raportu (AutoOptima)<br />
+    o nowy parametr THISMONTH, umożliwiający wygenerowanie raportu za okres<br />
+    od początku bieżącego miesiąca do dnia poprzedzającego dzień jego wykonania.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2026.07.29 [2026.2.1.8]<br />
+  - Dostosowanie interfejsów do wdrożonych modyfikacji.<br />
+  - Dodano opcje wymuszające konfigurację uwierzytelniania wieloskładnikowego<br />
+    (MFA) dla użytkowników KS-AOW:<br />
+    * Wspólne.5.29 "Wymagaj logowania z wykorzystaniem uwierzytelniania<br />
+      wieloskładnikowego" - domyślnie wyłączona<br />
+    * Wspólne.5.30 "Zezwalaj na pominięcie obowiązkowej konfiguracji<br />
+      uwierzytelniania wieloskładnikowego do wskazanego dnia".<br />
+<br />
+<h3>---------------------------- Zmiany w module APW45 -----------------------------</h3><br />
+2026.07.29 [2026.2.1.8]<br />
+  - Rozwiązano problem dla komunikacji z system WMS. Problem występował podczas<br />
+    przekazywania zamówień internetowych do systemu WMS z poziomu modułu<br />
+    "APW45 - Apteka internetowa -> Zamówienia".<br />
+<br />
+</body></html>
