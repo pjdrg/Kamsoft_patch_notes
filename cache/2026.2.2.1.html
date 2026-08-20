@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2026.2.2.1</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2026.08.20<br />
+  Slowniki.dll [2026.2.2.1]<br />
+  - Zaktualizowano przeglądarkę wykorzystywaną do wyświetlania serwisów WWW.<br />
+<br />
+  ApwHarm.dll [2026.2.2.1]<br />
+  - Modyfikacja w zakresie zamówień automatycznych pharmind GRID: dodano<br />
+    możliwość wyboru podziału zamówienia zgodnie z regułami Automatycznego<br />
+    Tworzenia Zamówień (Optymalizator Zamówień). Dzięki temu apteka może<br />
+    automatycznie przygotowywać zamówienia z zachowaniem przyjętych zasad<br />
+    optymalizacji i podziału zamówień.<br />
+  - Zmodyfikowano zadanie komunikacji z dostawcami o obsługę dokumentów członka<br />
+    grupy VAT. Rozszerzenie umożliwia prawidłowe prowadzenie procesów związanych<br />
+    z rozliczeniami podmiotów należących do grup VAT i odpowiednie odfiltrowanie<br />
+    wczytanych już dokumentów.<br />
+<br />
+  Zasoby.dll [2026.2.2.1]<br />
+  - Zaktualizowano opisy opcji.<br />
+<br />
+  ApwMain, ApwHarmPush.dll, ApwIap.dll, ApwPlan, ApwPlanWorker [2026.2.2.1]<br />
+  - Dostosowanie interfejsów do wprowadzonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2026.08.20 [2026.2.2.1]<br />
+  - KS-OmniPharm, Sprzedaż wiązana: optymalizacja sprzedaży wiązanej poprzez<br />
+    dodanie opcji w definicji wyłączającej podpowiedzi dla farmaceuty<br />
+    dla sprzedaży wiązanej w przypadku niespełnionych warunków.<br />
+  - Zaktualizowano przeglądarkę wykorzystywaną do wyświetlania serwisów WWW.<br />
+  - Rozbudowano funkcjonalność tworzenia faktur zbiorczych o możliwość<br />
+    automatycznego ustalania formy płatności na podstawie dokumentów<br />
+    uwzględnionych na fakturze.<br />
+  - Rozwiązano problem generowania nieprawidłowych wartości kaucji podczas<br />
+    rozliczania kasy w systemie zmianowym.<br />
+  - Rozwiązano problem nieprawidłowego przeliczania cen podczas realizacji<br />
+    dokumentu rezerwacji w niektórych konfiguracjach systemu.<br />
+  - Rozszerzono integrację z usługą pharmind EDI umożliwiającą elektroniczną<br />
+    wymianę dokumentów z dostawcami o funkcjonalność wersjonowania list braków.<br />
+  - Rozszerzono obsługę realizacji zleceń eZWM o logowanie z wykorzystaniem<br />
+    uwierzytelniania dwuskładnikowego (TOTP). Dla kont NFZ z włączonym MFA/TOTP<br />
+    system podczas logowania wymaga podania jednorazowego kodu z aplikacji<br />
+    uwierzytelniającej (np. Microsoft Authenticator lub Google Authenticator).<br />
+    Po pomyślnym uwierzytelnieniu sesja jest zapamiętywana do czasu upływu<br />
+    jej ważności. Zmiana została wprowadzona w związku z wymaganiami Centrali<br />
+    NFZ dotyczącymi wdrożenia uwierzytelniania wieloskładnikowego (MFA/TOTP)<br />
+    w interfejsach API systemu eZWM.<br />
+  - Rozbudowano mechanizm ustalania cen leków recepturowych pełnopłatnych (100%)<br />
+    o możliwość zablokowania stosowania dowolnych cen. Domyślnie funkcja<br />
+    ustalania indywidualnej ceny jest wyłączona, co ogranicza możliwość zmiany<br />
+    ceny podczas sprzedaży lub przygotowania leku recepturowego. Apteka może<br />
+    włączyć tę funkcję w module APW41 Administrator -> Sprzedaż -> Receptura -><br />
+    Leki pełnopłatne -> "Dowolne ceny dla leków pełnopłatnych (100%)".<br />
+    Szczegółowe informacje dotyczące stosowania tej opcji znajdują się w jej<br />
+    opisie.<br />
+  - Dodano funkcjonalność, która umożliwia ponowną zmianę formy płatności<br />
+    poprzez wystawienie korekty do wcześniej utworzonej korekty nagłówka.<br />
+    Pozwala to zachować spójną historię zmian dokumentu oraz poprawnie<br />
+    odzwierciedlić kolejne modyfikacje formy płatności. Jednocześnie zablokowano<br />
+    możliwość wystawiania kolejnych korekt nagłówka zmieniających formę<br />
+    płatności bezpośrednio do faktury pierwotnej, jeśli istnieje już korekta<br />
+    tego typu. Dzięki temu wyeliminowano ryzyko powstawania niespójności<br />
+    w rozliczeniach i raportach.<br />
+  - Rozwiązanie problemu z prawidłowym działaniem opcji APW11 Sprzedaż -> 2.40<br />
+    przy tworzeniu dokumentów magazynowych wystawianych na inną jednostkę<br />
+    organizacyjną. Program mimo wyłączonej opcji pytał czy zatwierdzić każdy<br />
+    dokument.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW12 -----------------------------</h3><br />
+2026.08.20 [2026.2.2.1]<br />
+  - Modyfikacja w zakresie zamówień automatycznych pharmind GRID: dodano<br />
+    możliwość wyboru podziału zamówienia zgodnie z regułami Automatycznego<br />
+    Tworzenia Zamówień (Optymalizator Zamówień). Dzięki temu apteka może<br />
+    automatycznie przygotowywać zamówienia z zachowaniem przyjętych zasad<br />
+    optymalizacji i podziału zamówień.<br />
+  - Rozszerzono integrację z usługą pharmind EDI umożliwiającą elektroniczną<br />
+    wymianę dokumentów z dostawcami o funkcjonalność wersjonowania list braków.<br />
+  - KS-OmniPharm, Prospekty: dodano kolumnę ilość wg trendu, która uwzględnia<br />
+    dynamiczne zmiany sprzedaży poprzez wyznaczenie trendu i jego zaufania.<br />
+  - Zaktualizowano przeglądarkę wykorzystywaną do wyświetlania serwisów WWW.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2026.08.20 [2026.2.2.1]<br />
+  - Modyfikacja w zakresie zamówień automatycznych pharmind GRID: dodano<br />
+    możliwość wyboru podziału zamówienia zgodnie z regułami Automatycznego<br />
+    Tworzenia Zamówień (Optymalizator Zamówień). Dzięki temu apteka może<br />
+    automatycznie przygotowywać zamówienia z zachowaniem przyjętych zasad<br />
+    optymalizacji i podziału zamówień.<br />
+  - Rozbudowano okno listy faktur pharmind EDI. Dodano możliwość filtrowania<br />
+    wyświetlanych dokumentów do faktur nie starszych niż wskazana liczba dni,<br />
+    co znacząco przyspiesza prezentację pozycji i poprawia komfort pracy<br />
+    przy dużej liczbie dokumentów.<br />
+  - Zmodyfikowano okno listy faktur pharmind EDI o obsługę dokumentów członka<br />
+    grupy VAT. Rozszerzenie umożliwia prawidłowe prowadzenie procesów związanych<br />
+    z rozliczeniami podmiotów należących do grup VAT i odpowiednie odfiltrowanie<br />
+    wczytanych już dokumentów.<br />
+  - Rozszerzono integrację z usługą pharmind EDI umożliwiającą elektroniczną<br />
+    wymianę dokumentów z dostawcami o funkcjonalność wersjonowania potwierdzeń<br />
+    reklamacji.<br />
+  - Zaktualizowano przeglądarkę wykorzystywaną do wyświetlania serwisów WWW.<br />
+  - Rozwiązano problem z błędem występującym przy wczytywaniu dokumentów zakupu,<br />
+    związanym z odświeżaniem statusu harmonogramu w tle.<br />
+  - Rozwiązano problem objawiający się tym, że po potwierdzeniu dodania nowego<br />
+    leku do listy towarów monitorowanych NMVS podczas weryfikacji dostawy<br />
+    czytnikiem 2D, przy sprzedaży nie pojawiało się okno z obowiązkiem<br />
+    zeskanowania kodu QR z opakowania. Po aktualizacji lek dodany w ten sposób<br />
+    jest od razu prawidłowo monitorowany przy sprzedaży — bez konieczności<br />
+    ręcznego ponownego dodawania go z listy NMVS w APW11.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW14 -----------------------------</h3><br />
+2026.08.20 [2026.2.2.1]<br />
+  - Dostosowanie interfejsów do wprowadzonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2026.08.20 [2026.2.2.1]<br />
+  - Zestawienie sprzedaży zafiskalizowanej: rozwiązano problem z możliwością<br />
+    wystąpienia błędu Access Violation podczas wydruku zestawienia<br />
+    oraz nieprawidłowym umieszczeniem stopki.<br />
+  - Raport w formacie Comarch Optima XML (zakupy, sprzedaż): rozbudowano<br />
+    funkcjonalność automatycznego generowania raportu (AutoOptima) o nowy<br />
+    parametr THISMONTH, umożliwiający wygenerowanie raportu za okres od początku<br />
+    bieżącego miesiąca do dnia poprzedzającego dzień jego wykonania.<br />
+  - Wyłączono próbę wysyłki raportu do ABD podczas tworzenia zestawienia<br />
+    refundacyjnego.<br />
+  - Raport w formacie Comarch Optima XML (zakupy, sprzedaż): rozwiązano problem<br />
+    umieszczania w raporcie zdublowanych wpisów refundacji na niektórych<br />
+    konfiguracjach systemu.<br />
+  - Na karcie refundatora, w zakładce Konto NFZ,  dodano opcję "Uwierzytelnianie<br />
+    dwuskładnikowe (TOTP)" dla kont wykorzystywanych do komunikacji z usługami<br />
+    NFZ. Rozszerzono obsługę wysyłki zestawień refundacyjnych recept do NFZ<br />
+    o logowanie z wykorzystaniem uwierzytelniania dwuskładnikowego (TOTP).<br />
+    Dla kont NFZ z włączonym MFA/TOTP system podczas logowania wymaga podania<br />
+    jednorazowego kodu z aplikacji uwierzytelniającej (np. Microsoft<br />
+    Authenticator lub Google Authenticator). Zmiana została wprowadzona<br />
+    w związku z wymaganiami Centrali NFZ dotyczącymi wdrożenia uwierzytelniania<br />
+    wieloskładnikowego (MFA/TOTP) w interfejsie dostępowym do systemów OW NFZ.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW22 -----------------------------</h3><br />
+2026.08.20 [2026.2.2.1]<br />
+  - Dostosowanie interfejsów do wprowadzonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW23 -----------------------------</h3><br />
+2026.08.20 [2026.2.2.1]<br />
+  - Książka kontroli narkotyków i psychotropów: rozwiązano problem<br />
+    z nieprawidłowym umieszczeniem stopki na wydruku dokumentu.<br />
+  - Zaktualizowano przeglądarkę wykorzystywaną do wyświetlania serwisów WWW.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2026.08.20 [2026.2.2.1]<br />
+  - Oznaczono opcję "APW21.2.13 Przy tworzeniu zestawienia refundacyjnego<br />
+    wykonuj raport miesięczny ABD" jako nieaktywna.<br />
+  - Na karcie pracownika, w zakładce Konto NFZ, dodano opcję "Uwierzytelnianie<br />
+    dwuskładnikowe (TOTP)" dla kont wykorzystywanych do komunikacji z usługami<br />
+    NFZ. Po włączeniu tej opcji podczas logowania do usług NFZ (m.in. eZWM<br />
+    oraz wysyłki zestawień refundacyjnych recept) system KS-AOW wymaga podania<br />
+    jednorazowego kodu generowanego przez aplikację uwierzytelniającą.<br />
+    Obsługa kodu TOTP została również uwzględniona w funkcji testowania<br />
+    połączenia. Zmiana wynika z komunikatu Centrali NFZ dotyczącego wdrożenia<br />
+    uwierzytelniania wieloskładnikowego (MFA/TOTP) w interfejsie dostępowym<br />
+    do systemów OW NFZ oraz eZWM. Korzystanie z funkcji wymaga wcześniejszego<br />
+    skonfigurowania MFA/TOTP dla konta użytkownika w Portalu<br />
+    Świadczeniodawcy/SZOI. Do czasu wprowadzenia obowiązkowego uwierzytelniania<br />
+    wieloskładnikowego przez NFZ (planowanego na IV kwartał 2026 r.) funkcja<br />
+    pozostaje opcjonalna. Dla kont bez włączonej opcji TOTP proces logowania<br />
+    działa bez zmian, z wykorzystaniem loginu i hasła. Kody TOTP generowane są<br />
+    przez zewnętrzne aplikacje uwierzytelniające (np. Microsoft Authenticator<br />
+    lub Google Authenticator). System KS-AOW nie generuje kodów QR ani nie służy<br />
+    do konfiguracji MFA, która odbywa się w Portalu Świadczeniodawcy/SZOI.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW42 -----------------------------</h3><br />
+2026.08.20 [2026.2.2.1]<br />
+  - Dostosowanie interfejsów do wprowadzonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW45 -----------------------------</h3><br />
+2026.08.20 [2026.2.2.1]<br />
+  - Modyfikacja w zakresie zamówień automatycznych pharmind GRID: dodano<br />
+    możliwość wyboru podziału zamówienia zgodnie z regułami Automatycznego<br />
+    Tworzenia Zamówień (Optymalizator Zamówień). Dzięki temu apteka może<br />
+    automatycznie przygotowywać zamówienia z zachowaniem przyjętych zasad<br />
+    optymalizacji i podziału zamówień.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW55 -----------------------------</h3><br />
+2026.08.20 [2026.2.2.1]<br />
+  - Zaktualizowano przeglądarkę wykorzystywaną do wyświetlania serwisów WWW.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW68 -----------------------------</h3><br />
+2026.08.20 [2026.2.2.1]<br />
+  - Rozwiązano problem z pojawiającym się komunikatem o braku dokumentu<br />
+    magazynowego dla transakcji sprzedaży leku, na który została pobrana<br />
+    zaliczka. Komunikat mógł pojawiać się w przypadku leków sprzedanych<br />
+    na fakturę na odbiorcę.<br />
+<br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2026.08.20 [2026.2.2.1]<br />
+  - Modyfikacja w zakresie zamówień automatycznych pharmind GRID: dodano<br />
+    możliwość wyboru podziału zamówienia zgodnie z regułami Automatycznego<br />
+    Tworzenia Zamówień (Optymalizator Zamówień). Dzięki temu apteka może<br />
+    automatycznie przygotowywać zamówienia z zachowaniem przyjętych zasad<br />
+    optymalizacji i podziału zamówień.<br />
+  - Modyfikacja w zakresie zamówień automatycznych pharmind GRID: wprowadzono<br />
+    usprawnienia zwiększające niezawodność procesów związanych z automatyczną<br />
+    realizacją zamówień.<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2026.08.20<br />
+  ApwPlus, WaUtil, DBCopy, IBPack [2026.2.2.1]<br />
+  - Zaktualizowano strukturę bazy danych.<br />
+<br />
+  OraPack [2026.2.2.1]<br />
+  - Optymalizacja obcięcia bazy.<br />
+<br />
+</body></html>
