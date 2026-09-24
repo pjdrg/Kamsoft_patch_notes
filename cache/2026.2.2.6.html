@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2026.2.2.6</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2026.09.24<br />
+  APWHarm.dll [2026.2.2.6]<br />
+  - Rozwiązano problem objawiający się brakiem przypisywania karty towaru <br />
+    w procesie wczytywania oferty, w przypadku gdy istniała druga karta towaru <br />
+    z tym samym BlozId lecz jest usunięta.<br />
+  - Dodano narzędzie expdp.exe do wykonywania kopii bazy danych w APWPlanie.<br />
+  - W zamówieniach automatycznych pharmind GRID wprowadzono obsługę blokady <br />
+    zamawiania towarów w punkcie aptecznym w przypadku włączenia blokady <br />
+    wydawania leków nieprzeznaczonych do sprzedaży w punkcie aptecznym.<br />
+  - Dodano możliwość składania jednego zamówienia obejmującego produkty <br />
+    znajdujące się w kilku równolegle prowadzonych promocjach danego producenta.<br />
+  - Rozwiązano problem komunikacji z systemem WMS.<br />
+<br />
+  Slowniki.dll [2026.2.2.6]<br />
+  - Definicje dokumentów pieniężnych: rozszerzono definicję dokumentu <br />
+    pieniężnego o nowe pole: "Forma płatności wg KSeF".<br />
+<br />
+  Apwiap.dll [2026.2.2.6]<br />
+  - Dostosowanie interfejsów do wprowadzonych modyfikacji.<br />
+  <br />
+  CopyCloud [2026.2.2.6]<br />
+  - W usłudze Kopii zapasowej dla Oracle wymieniono narzędzie do wykonywania <br />
+    kopii z przestarzałego exp.exe na Expdp.exe.<br />
+<br />
+  RepoCloud [2026.2.2.6]<br />
+  - Optymalizacja działania usługi.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2026.09.24 [2026.2.2.6]<br />
+  - Giełda pomysłów KS-OmniPharm: w mechanizmie promocji (usługa Strategii <br />
+    cenowych w KS-OmniPharm) dodano obsługę nowego warunku "cena zakupu netto".<br />
+  - Dodano mechanizm mapowania form płatności na wartości zgodne ze standardem<br />
+    KSeF 2.0 podczas wystawiania faktur sprzedaży do KSeF.<br />
+  - Uwzględniono kaucję za opakowanie zwrotne podczas przenoszenia salda [F6] <br />
+    w Operacjach gotówkowych i bezgotówkowych.<br />
+  - Poprawiono algorytm wyliczający wartość składnika leku robionego dla recept <br />
+    pełnopłatnych.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW12 -----------------------------</h3><br />
+2026.09.24 [2026.2.2.6]<br />
+  - W zamówieniach automatycznych pharmind GRID wprowadzono obsługę blokady <br />
+    zamawiania towarów w punkcie aptecznym w przypadku włączenia blokady <br />
+    wydawania leków nieprzeznaczonych do sprzedaży w punkcie aptecznym.<br />
+  - Dodano możliwość składania jednego zamówienia obejmującego produkty <br />
+    znajdujące się w kilku równolegle prowadzonych promocjach danego producenta.<br />
+  - Rozwiązano problem objawiający się brakiem przypisywania karty towaru <br />
+    w procesie wczytywania oferty, w przypadku gdy istniała druga karta towaru <br />
+    z tym samym BlozId, lecz karta ta była usunięta.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2026.09.24 [2026.2.2.6]<br />
+  - Funkcja "Kontrola dokumentów zakupu":<br />
+    * dodano możliwość ręcznego wprowadzania kodu 2D ([F5] Kod ręczny). Gdy <br />
+      kod 2D na opakowaniu jest uszkodzony lub nieczytelny, można wpisać dane <br />
+      ręcznie (EAN, seria, data ważności, numer opakowania) albo wkleić kod 2D.<br />
+    * rozwiązano problem objawiający się nieprawidłowym rozłożeniem odczytanych<br />
+      ilości na kilku pozycjach tego samego leku o tym samym EAN, serii i dacie <br />
+      ważności.<br />
+  - Rozwiązano problem objawiający się niepoprawnym wyliczeniem stanu <br />
+    magazynowego po korekcie cenowej (rabatowej) dotyczącej tylko części <br />
+    dostawy. <br />
+  - KS-APTIX: dodano możliwość uzupełniania półki na karcie towaru i zakupu <br />
+    z aplikacji mobilnej KS-APTIX.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW14 -----------------------------</h3><br />
+2026.09.24 [2026.2.2.6]<br />
+  - Arkusz różnic inwentaryzacyjnych w aptece – poprawiono algorytm liczenia, <br />
+    wcześniej niepotrzebnie uwzględniane były usunięte dokumenty.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2026.09.24 [2026.2.2.6]<br />
+  - Generowanie dokumentów do JPK: dodano domyślne parametry wariantu <br />
+    formularza dla raportu JPK_MAG. Obecnie domyślnym wariantem jest <br />
+    JPK_MAG (1).<br />
+  - Wyłączono wymagalność kodu świadczeniodawcy z konta NFZ przy wysyłce <br />
+    refundacji recept. Identyfikator przy przekazaniu pliku pobierany jest <br />
+    z karty refundatora (Identyfikator w NFZ).<br />
+<br />
+<h3>---------------------------- Zmiany w module APW35 -----------------------------</h3><br />
+2026.09.24 [2026.2.2.6]<br />
+  - Giełda pomysłów KS-OmniPharm: dodano nowy warunek do mechanizmu promocji: <br />
+    "cena zakupu netto" pozwalający, aby promocja zadziałała tylko wówczas, gdy <br />
+    cena zakupu netto po rabacie mieści się w określonych widełkach.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2026.09.24 [2026.2.2.6]<br />
+  - Na definicji dokumentu pieniężnego dodano nowe pole "Forma płatności wg <br />
+    KSeF", które umożliwia przypisanie odpowiedniej formy płatności zgodnej ze <br />
+    standardem KSeF 2.0 do własnej definicji dokumentu pieniężnego.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW43 -----------------------------</h3><br />
+2026.09.24 [2026.2.2.6]<br />
+  - Dodano narzędzie Expdp.exe do wykonywania kopii bazy danych.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW45 -----------------------------</h3><br />
+2026.09.24 [2026.2.2.6]<br />
+  - Rozwiązano problem z automatyczną synchronizacją po zmianie statusu <br />
+    zamówienia.<br />
+  - Rozwiązano problem z automatycznym usuwaniem nieaktualnych zamówień.<br />
+  - Rozwiązano problem z generowaniem dokumentów wydzielonych dla sprzedaży <br />
+    apteki internetowej.<br />
+  - Rozwiązano problem z zarządzaniem parametrami modułu APW45.<br />
+  - Rozwiązano problem z zarządzaniem komunikacją z różnymi konfiguracjami <br />
+    sklepów WWW.<br />
+  - Rozwiązano problem wydajności procesu synchronizacji zamówień <br />
+    ze sklepem WWW.<br />
+  - Rozwiązano problem z zarządzaniem półkami, ich edycją oraz konfiguracją. <br />
+    "APW45 -> Definicje -> Zarządzanie półkami".<br />
+<br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2026.09.24 [2026.2.2.6]<br />
+  - Pharmind grid: optymalizacja raportowania danych transakcyjnych.<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2026.09.24<br />
+  ApwPlus [2026.2.2.6]<br />
+  - Aktualizacja struktury bazy danych.<br />
+<br />
+  OraRest [2026.2.2.6]<br />
+  - Dodano jako domyślne narzędzie Impdp.exe do odtwarzania kopii bazy danych.<br />
+<br />
+  OraPack [2026.2.2.6]<br />
+  - Dodano narzędzie Expdp.exe oraz Impdp.exe do wykonywania operacji na bazie <br />
+    danych.<br />
+<br />
+</body></html>
