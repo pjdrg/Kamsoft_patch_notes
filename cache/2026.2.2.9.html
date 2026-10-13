@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2026.2.2.9</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2026.10.13<br />
+  APWIAP.DLL [2026.2.2.9]<br />
+  - Aktualizacja interfejsów.<br />
+<br />
+  ApwHarm.dll [2026.2.2.9]<br />
+  - Rozwiązano problem z zadaniem komunikacji z systemem WMS. Problem dotyczył <br />
+    złej kontroli dla wysyłania zamówień wymagających NIP do systemu WMS. <br />
+<br />
+  RepoCloud [2026.2.2.9]<br />
+  - Optymalizacja działania usługi.<br />
+  - Poprawa działania usługi w kontekście włączonego mechanizmu inteligentnej <br />
+    kontroli systemu Windows 11.<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2026.10.13 [2026.2.2.9]<br />
+  - eZWM: Rozwiązano problem objawiający się brakiem na dokumencie realizacji <br />
+    (cz. IV) części wydanych wyrobów, gdy na sprzedaży ten sam wyrób występował <br />
+    ponownie po innym towarze.<br />
+  - eZWM: Modyfikacja wprowadzania kodu UDI i numeru seryjnego przy zakończeniu<br />
+    realizacji zlecenia. Brak wprowadzenia kodu UDI zapisuje serię lub EAN <br />
+    z kartoteki.<br />
+  - Rozwiązano problem objawiający się tym, że częściowa sprzedaż pozycji <br />
+    z rezerwacji utworzonej na podstawie własnej kopii definicji dokumentu od <br />
+    razu trafiała do sprzedaży już zatwierdzonej.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW14 -----------------------------</h3><br />
+2026.10.13 [2026.2.2.9]<br />
+  - Rozbudowano funkcjonalność inwentaryzacji częściowej oraz integrację <br />
+    z KS-Aptix. Usprawniono import skanów, filtrowanie towarów i kart zakupu, <br />
+    zarządzanie listą pozycji przeznaczonych do inwentaryzacji oraz obsługę <br />
+    skrótów klawiszowych, co przyspiesza i ułatwia przeprowadzanie <br />
+    inwentaryzacji.<br />
+  - Bufor przeceny - zoptymalizowano, przyspieszono działanie filtrów. Problem <br />
+    był szczególnie widoczny podczas operacji wyrównywania cen w ramach jednego<br />
+    towaru przy dużej liście towarów w buforze.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2026.10.13 [2026.2.2.9]<br />
+  - Rozwiązano problem objawiający się komunikatem "Nie znaleziono sesji <br />
+    o podanym tokenie" przy pobieraniu komunikatu zwrotnego z NFZ.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW23 -----------------------------</h3><br />
+2026.10.13 [2026.2.2.9]<br />
+  - Dostosowanie interfejsów do wprowadzonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW31 -----------------------------</h3><br />
+2026.10.13 [2026.2.2.9]<br />
+  - Dostosowanie interfejsów do wprowadzonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2026.10.13 [2026.2.2.9]<br />
+  - Dostosowanie interfejsów do wprowadzonych modyfikacji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW45 -----------------------------</h3><br />
+2026.10.13 [2026.2.2.9]<br />
+  - Rozwiązano problem z kontrolą półek i jej zakresów obwiązywania dla <br />
+    składowania głównego, zapasowego oraz standardowego. Problem objawiał się <br />
+    brakiem odpowiedniej kontroli z poziomu dodawania, edycji nowej półki. <br />
+    Okno zarządzania półkami jest dostępne z menu "Zestawienia -> Zarządzanie <br />
+    półkami".<br />
+  - Rozwiązano problem z migracją słownika półek do nowych mechanizmów pracy <br />
+    ze słownikiem półek. Słownikiem półek dostępny jest z menu "Zestawienia -> <br />
+    Zarządzanie półkami”.<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2026.10.13<br />
+  ApwPlus [2026.2.2.9]<br />
+  - Aktualizacja struktury bazy danych.<br />
+<br />
+  Wautil [2026.2.2.9]<br />
+  - Rozwiązano problem z importem danych z systemu AMAX. Problem występował <br />
+    podczas parowania karty dostawcy z fakturą zakupu, faktury pomimo <br />
+    ustawionych dostawców w systemie AMAX nie były wiązane z karta dostawcy.<br />
+<br />
+</body></html>
