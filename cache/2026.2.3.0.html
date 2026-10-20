@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2026.2.3.0</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2026.10.20<br />
+  ApwMain [2026.2.3.0]<br />
+  - Test systemu aptecznego: rozszerzono czynność sprawdzającą "Sprawdzanie<br />
+    składników systemowych" o dodatkowe informacje dotyczące instalacji<br />
+    32-bitowego środowiska uruchomieniowego .NET Desktop Runtime 10 (x86).<br />
+    Dodano możliwość podjęcia próby instalacji poprzez narzędzie Windows Package<br />
+    Manager (winget), jeśli narzędzie jest zainstalowane oraz jeśli test<br />
+    jest uruchomiony z zaznaczoną opcją "Podejmuj próby naprawy wykrytych<br />
+    problemów podczas testu".<br />
+<br />
+  ApwHarm.dll [2026.2.3.0]<br />
+  - Usunięto problem powodujący wyświetlanie błędnego komunikatu "Nie udało się<br />
+    skonfigurować folderu eksportu Data Pump" podczas tworzenia kopii zapasowej<br />
+    w Planie zadań z wykorzystaniem expdp.exe, pomimo poprawnej konfiguracji.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2026.10.20 [2026.2.3.0]<br />
+  - Protokół sporządzenia leku recepturowego. Wprowadzono możliwość<br />
+    dokumentowania procesu sporządzania leków recepturowych na podstawie danych<br />
+    zarejestrowanych podczas sprzedaży, takich jak dane apteki, recepty,<br />
+    lekarza, pacjenta oraz skład leku. W podglądzie raportu można edytować treść<br />
+    protokołu, w tym wybrać nazwę z kartoteki towaru albo wpisać własną<br />
+    oraz uzupełnić pozostałe dane. Protokół można potem wydrukować albo zapisać<br />
+    do pliku. Funkcjonalność wspiera realizację obowiązku dokumentowania procesu<br />
+    sporządzania leków recepturowych zgodnie z zasadami dobrej praktyki<br />
+    sporządzania leków w aptece. Dostęp do funkcji: Okno receptury -> [Ctrl+F10]<br />
+    Drukuj -> Protokół sporządzenia leku recepturowego.<br />
+    Więcej informacji w "Podręczniku użytkownika KS-AOW" -> "APW11 Sprzedaż" -><br />
+    "1.23.4. Protokół sporządzenia leku".<br />
+<br />
+<h3>---------------------------- Zmiany w module APW12 -----------------------------</h3><br />
+2026.10.20 [2026.2.3.0]<br />
+  - KS-OmniPharm Prospekty - Usunięcie fałszywego zera w kolumnie ilość wg<br />
+    trendu oraz zmiana nazwy i czytelniejszy format wskaźnika jakości trendu.<br />
+    Etykieta "Zaufanie do trendu" została zmieniona na "Przewidywalność trendu"<br />
+    (nazwa lepiej oddaje sens wskaźnika).<br />
+<br />
+<h3>---------------------------- Zmiany w module APW31 -----------------------------</h3><br />
+2026.10.20 [2026.2.3.0]<br />
+  - Dostosowanie interfejsów do wprowadzonych modyfikacji.<br />
+<br />
+</body></html>
