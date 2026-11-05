@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2026.3.0.0</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2026.11.05<br />
+  RepoCloud [2026.3.0.0]<br />
+  - Aktualizacja komponentów i bibliotek wykorzystywanych przez usługę.<br />
+<br />
+  Slowniki.dll [2026.3.0.0]<br />
+  - Modyfikacja w zakresie KS-APTIX: dodano obsługę uwierzytelniania<br />
+    wieloskładnikowego w aplikacji mobilnej KS-APTIX.<br />
+  - Modyfikacja w zakresie KS-APTIX: Poprawa w zapisie lokalizacji wysyłanej<br />
+    z KS-APTIX na bazie danych Oracle.<br />
+<br />
+  ApwIap.dll [2026.3.0.0]<br />
+  - Rozwiązano problem z zarządzaniem klientem dla kuriera Dpd Services.<br />
+    Problem dotyczył środowiska testowego sandbox (demo) w przypadku braku<br />
+    ustawień identyfikatora klienta. Listy przewozowe konfigurujemy z poziomu<br />
+    modułu APW45 – Apteka Internetowa -> Reguły -> Listy przewozowe.<br />
+<br />
+  ApwHarm.dll [2026.3.0.0]<br />
+  - Rozwiązano problem z zarządzaniem datą ważności oraz krótkich data produktów<br />
+    dla funkcji  generowania oferty internetowej w module APWPLAN.<br />
+    Problem objawiał się niepoprawnym ukrywaniem i odkrywaniem produktów<br />
+    w ofercie internetowej Ofertę internetową aktualizujemy zadaniem "Aktualizuj<br />
+    ofertę internetową na stronę sklepu WWW".<br />
+  - Rozwiązano problem z zadaniem "Komunikacja z systemem WMS". Problem dotyczył<br />
+    kontroli wysyłania zamówień wymagających NIP do systemu WMS.<br />
+    Zadanie zarządzamy z poziomu modułu APW41 – Administrator -> Plan Zadań.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2026.11.05 [2026.3.0.0]<br />
+  - Zoptymalizowano komunikację z NMVS podczas sprzedaży oraz wysyłanie danych<br />
+    apteki do OSOZ.<br />
+  - Zaktualizowano działanie usługi Podobniki.<br />
+  - W protokole sporządzenia leku recepturowego dla składników można przed<br />
+    wydrukiem wybrać nazwę międzynarodową albo handlową.<br />
+    Nazwa opakowania proponowana jest w polu "Opakowanie" i może zostać<br />
+    zmieniona w podglądzie.<br />
+  - Rozwiązano problem objawiający się ucinaniem nazwy apteki w protokole<br />
+    sporządzenia leku recepturowego, gdy nazwa z wizytówki zajmuje więcej niż<br />
+    jedną linię. Nazwa jest teraz widoczna w całości.<br />
+  - Poprawiono mechanizm pobierania zaliczki podczas umieszczania towarów<br />
+    w kolejce.<br />
+  - Poprawiono mechanizm wydruków tekstowych, eliminując problem generowania<br />
+    dodatkowej pustej strony na drukarkach igłowych w niektórych przypadkach.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW12 -----------------------------</h3><br />
+2026.11.05 [2026.3.0.0]<br />
+  - Poprawiono działanie opcji "Uwzględnij sprzedaż na zamówienie" podczas<br />
+    tworzenia listy braków na podstawie sprzedaży.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW13 -----------------------------</h3><br />
+2026.11.05 [2026.3.0.0]<br />
+  - Zoptymalizowano uruchamianie komunikacji z NMVS.<br />
+  - Rozszerzono kontrolę leków bardzo silnie działających, odurzających<br />
+    i psychotropowych z grupy I-P i II-P. Technik dostaje ostrzeżenie<br />
+    albo blokadę przy przyjęciu korekty oraz przy zmianie ilości, serii<br />
+    lub daty ważności na przyjętym dokumencie.<br />
+  - Nadawanie numeru KPZ dla korekty. Przy wydruku korekty bez numeru<br />
+    magazynowego program proponuje numer KPZ.<br />
+  - Przyspieszono komunikację z NMVS podczas sprzedaży<br />
+    oraz wysyłanie danych apteki do OSOZ.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW14 -----------------------------</h3><br />
+2026.11.05 [2026.3.0.0]<br />
+  - Rozszerzono kontrolę leków bardzo silnie działających, odurzających<br />
+    i psychotropowych z grupy I-P i II-P. Technik dostaje ostrzeżenie<br />
+    albo blokadę przy zmianie ilości, serii lub daty ważności na karcie zakupu.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2026.11.05 [2026.3.0.0]<br />
+  - Rozwiązano problem w "Rejestrze sprzedaży szczegółowym", objawiający się<br />
+    komunikatem "Zbyt mało pamięci do wykonania operacji" podczas generowania<br />
+    zestawienia. W przypadku obszernych zestawień program automatycznie<br />
+    proponuje zapis danych do pliku CSV.<br />
+  - Rozszerzono oznaczenia E dla e-recept transgranicznych na wydruku "Paska<br />
+    ogólnego".<br />
+<br />
+<h3>---------------------------- Zmiany w module APW22 -----------------------------</h3><br />
+2026.11.05 [2026.3.0.0]<br />
+  - Dodano uprawnienie do przeglądania i edycji formularza "Ceny ustalone<br />
+    towarów"<br />
+<br />
+<h3>---------------------------- Zmiany w module APW23 -----------------------------</h3><br />
+2026.11.05 [2026.3.0.0]<br />
+  - Rozbudowano ewidencję zaliczek i rozliczeń o możliwość wyświetlania leków<br />
+    recepturowych wraz z ich składnikami, na które pobrano zaliczkę.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2026.11.05 [2026.3.0.0]<br />
+  - Modyfikacja w zakresie porozumień pharmind APIM: uproszczono proces<br />
+    tworzenia wniosku oraz zautomatyzowano proces pobierania certyfikatu<br />
+    do złożonego wniosku.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW45 -----------------------------</h3><br />
+2026.11.05 [2026.3.0.0]<br />
+  - Rozwiązano problem z zarządzaniem datą ważności oraz krótkich data produktów<br />
+    dla funkcji generowania oferty internetowej w module APW45 – Apteka<br />
+    Internetowa. Problem objawiał się niepoprawnym ukrywaniem i odkrywaniem<br />
+    produktów w ofercie internetowej. Ofertę internetową generujemy automatami<br />
+    "Odśwież ofertę" oraz "Aktualizuj ceny". Funkcje te są dostępne z poziomu<br />
+    "APW45 - Apteka internetowa -> Towary".<br />
+<br />
+<h3>---------------------------- Zmiany w module APW68 -----------------------------</h3><br />
+2026.11.05 [2026.3.0.0]<br />
+  - Zadanie z Giełdy Pomysłów: dodano możliwość filtrowania dokumentów według<br />
+    typu (OSMT/ZBMT) w oknie raportowania obrotów i stanów do ZSMOPL.<br />
+<br />
+<h3>-------------------------------- Zmiany w iRap ---------------------------------</h3><br />
+2026.11.05 [2026.3.0.0]<br />
+  - Dostosowanie interfejsów do wprowadzonych modyfikacji.<br />
+<br />
+<h3>------------------------------ Zmiany w APW_ISOZ -------------------------------</h3><br />
+2026.11.05 [2026.3.0.0]<br />
+  - Dostosowanie interfejsów do wprowadzonych modyfikacji.<br />
+<br />
+</body></html>
