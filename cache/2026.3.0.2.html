@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zmiany w KS-AOW 2026.3.0.2</title>
+</head>
+<body>
+<h3>----------------------- Zmiany ogólne w systemie KS-AOW ------------------------</h3><br />
+2026.11.09<br />
+  Slowniki.dll [2026.3.0.2]<br />
+  - Na karcie pracownika, w zakładce "Konto NFZ", dodano pole "Klucz TOTP"<br />
+    dla obu kont NFZ. Należy w nim wprowadzić klucz konfiguracyjny udostępniany<br />
+    podczas aktywacji uwierzytelniania dwuskładnikowego w Portalu<br />
+    Świadczeniodawcy lub SZOI (wyświetlany pod kodem QR), a nie jednorazowy<br />
+    6-cyfrowy kod z aplikacji uwierzytelniającej.<br />
+  - Rozwiązano problem objawiający się przysłanianiem listy transakcji<br />
+    w przypadku wyłączonych Podobników, zminimalizowanych do paska.<br />
+<br />
+  ApwIap.dll [2026.3.0.2]<br />
+  - Rozwiązano problem dla wydruków ewidencji zrealizowanych zamówień<br />
+    internetowych. Problem dotyczył braku dostosowania wydruku do aktualnych<br />
+    wymogów dla sprzedaży wysyłkowej. Wydruki dla ewidencji zamówień<br />
+    internetowych generujemy z poziomu modułu APW45 – Apteka Internetowa -><br />
+    Zamówienia -> Drukuj.<br />
+<br />
+  Zasoby.dll [2026.3.0.2]<br />
+  - Zaktualizowano opisy opcji.<br />
+<br />
+<br />
+<h3>---------------------------- Zmiany w module APW11 -----------------------------</h3><br />
+2026.11.09 [2026.3.0.2]<br />
+  - Usprawniono uwierzytelnianie dwuskładnikowe podczas realizacji zleceń eZWM.<br />
+    Jeśli na karcie pracownika zapisano klucz TOTP, program automatycznie<br />
+    generuje wymagany 6-cyfrowy kod jednorazowy. W przeciwnym razie możliwe jest<br />
+    ręczne wprowadzenie kodu. Od 30 listopada 2026 r. uwierzytelnianie kodem<br />
+    TOTP będzie obowiązkowe. Wymagane będzie zapisanie klucza TOTP na karcie<br />
+    pracownika lub każdorazowe ręczne wprowadzenie 6-cyfrowego kodu.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW21 -----------------------------</h3><br />
+2026.11.09 [2026.3.0.2]<br />
+  - Usprawniono uwierzytelnianie dwuskładnikowe podczas rozliczania refundacji<br />
+    recept za pośrednictwem usług NFZ. Jeśli na karcie pracownika zapisano klucz<br />
+    TOTP, program automatycznie generuje wymagany 6-cyfrowy kod jednorazowy.<br />
+    W przeciwnym razie możliwe jest ręczne wprowadzenie kodu. Od 16 listopada<br />
+    2026 r. uwierzytelnianie kodem TOTP będzie obowiązkowe. Wymagane będzie<br />
+    zapisanie klucza TOTP na karcie pracownika lub każdorazowe ręczne<br />
+    wprowadzenie 6-cyfrowego kodu.<br />
+<br />
+<h3>---------------------------- Zmiany w module APW41 -----------------------------</h3><br />
+2026.11.09 [2026.3.0.2]<br />
+  - Zmiana ustawienia domyślnego dla parametru Wspólne.2.52: "Włącz logowanie<br />
+    do usług NFZ z użyciem drugiego konta (e-ZWM, refundacja recept)".<br />
+<br />
+<h3>------------------------ Zmiany w modułach serwisowych -------------------------</h3><br />
+2026.11.09<br />
+  ApwPlus [2026.3.0.2]<br />
+  - Zaktualizowano strukturę bazy danych.<br />
+<br />
+</body></html>
